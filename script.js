@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Retire la classe 'visible' pour le cacher
         dropdownContent.classList.remove('visible');
     });
-});
-*/
+});*/
+
 // On attend que le DOM (Document Object Model) soit entièrement chargé avant d'exécuter le script
 document.addEventListener('DOMContentLoaded', () => {
 
