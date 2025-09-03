@@ -1,0 +1,339 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* En-tête */
+h1 {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 2.2rem;
+    margin-bottom: 0;
+    border-bottom: 5px solid #3498db;
+}
+
+/* Conteneur des formules */
+.formula-container {
+    padding: 30px;
+}
+
+/* Titres */
+h2 {
+    color: #e74c3c;
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+h3 {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin: 20px 0 15px;
+    padding-left: 15px;
+    border-left: 4px solid #3498db;
+}
+
+/* Liste ordonnée */
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 10px;
+}
+
+ol li {
+    counter-increment: item;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 40px;
+}
+
+ol li:before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #3498db;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Sous-titres */
+strong u {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    display: block;
+    margin: 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* Paragraphes */
+p {
+    margin: 18px 0;
+    line-height: 1.7;
+}
+
+/* Styles pour MathJax */
+.MathJax {
+    outline: none;
+    margin: 15px 0;
+}
+
+.mjx-chtml {
+    font-size: 1.15em !important;
+    padding: 5px 0;
+}
+
+/* Section de notation */
+p strong {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: block;
+    margin: 20px 0 15px;
+    padding-left: 10px;
+    border-left: 3px solid #2c3e50;
+}
+
+/* Styles pour les théorèmes */
+.theorem-content {
+    margin: 20px 0;
+}
+
+.theorem-case {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #3498db;
+}
+.theoreme {
+    background-color: #e8f6f3;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 5px solid #27ae60;
+}
+
+.theoreme-titre {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.theoreme-titre:before {
+    content: "a)";
+    background: #27ae60;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.case-title {
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.math-display {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Styles pour les exemples */
+.example {
+    background-color: #e8f4fc;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 5px solid #3498db;
+}
+
+.example-title {
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.solution {
+    background-color: #e8f6f3;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 5px solid #27ae60;
+}
+
+.solution-title {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.step {
+    margin: 15px 0;
+    padding-left: 20px;
+    border-left: 3px solid #27ae60;
+}
+
+.step-title {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    .formula-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    ol li {
+        padding-left: 35px;
+    }
+
+    ol li:before {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .mjx-chtml {
+        font-size: 1.05em !important;
+        overflow-x: auto;
+    }
+
+    .example {
+        padding: 20px;
+    }
+    
+    .theoreme-titre:before {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        padding: 15px;
+    }
+
+    .formula-container {
+        padding: 15px;
+    }
+
+    ol li {
+        padding-left: 30px;
+    }
+
+    ol li:before {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+
+    .mjx-chtml {
+        font-size: 1em !important;
+    }
+
+    .example {
+        padding: 15px;
+    }
+
+    .theorem-case {
+        padding-left: 15px;
+    }
+    
+    .theoreme-titre:before {
+        width: 22px;
+        height: 22px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation pour le chargement des formules */
+.MathJax {
+    transition: opacity 0.3s ease;
+}
+
+/* Amélioration de la lisibilité pour les formules complexes */
+.mjx-merror {
+    background-color: transparent !important;
+    color: #e74c3c !important;
+}
+
+/* Style pour les formules en display mode (centrées) */
+.MJXc-display {
+    margin: 20px 0 !important;
+    padding: 15px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Style pour les cases (environnement cases) */
+.mjx-cases {
+    padding: 10px 0;
+}
