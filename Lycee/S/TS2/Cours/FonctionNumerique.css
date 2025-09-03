@@ -7,7 +7,7 @@ body {
 }
 
 /* Titres */
-/*h1 {
+h1 {
     text-align: center;
     color: #0056b3;
     font-size: 2em;
@@ -23,6 +23,7 @@ h2 {
     padding-bottom: 5px;
 }
 
+/*
 h3 {
     color: #5cb85c;
     margin-top: 20px;
