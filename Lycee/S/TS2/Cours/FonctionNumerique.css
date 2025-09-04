@@ -45,26 +45,13 @@ h3 {
     /* Empêche le texte de passer à la ligne */
 }
 
-@media (max-width: 768px) {
-
-    /* ... (vos autres styles réactifs) ... */
-    .formula-pair {
-        flex-direction: column;
-        /* Organise les éléments en colonne sur les téléphones */
-        gap: 0;
-        /* Réinitialise l'espace entre les éléments */
-    }
-}
-
-/*
-.formula-pair:hover,
 .formula-item:hover {
     transform: scale(1.01);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Centrer les formules */
-/*.formula-pair p,
+.formula-pair p,
 .formula-item p {
     text-align: center;
     margin: 8px 0;
@@ -114,7 +101,7 @@ h3 {
 }
 
 /* ✅ Responsive mobile */
-/*@media (max-width: 600px) {
+@media (max-width: 600px) {
     body {
         padding: 10px;
         font-size: 14px;
@@ -141,4 +128,4 @@ h3 {
         padding: 10px;
         font-size: 0.9em;
     }
-}*/
+}
