@@ -137,6 +137,7 @@ h3 {
     .etape {
         margin-left: -10px;
         /* Rapproche l'élément du bord gauche */
+        padding-right: 10px;
         width: calc(100% + 40px);
         /* Ajuste la largeur pour compenser le décalage */
     }
