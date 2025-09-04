@@ -33,7 +33,7 @@ h3 {
 /* ✅ Formules mathématiques */
 .formula-item {
     background: #e4e0e0;
-    border-left: 5px solid #ff0011;
+    border-left: 5px solid #ffff00;
     padding: 12px 15px;
     margin: 12px 0px;
     border-radius: 10px;
@@ -51,7 +51,6 @@ h3 {
 }
 
 /* Centrer les formules */
-.formula-pair p,
 .formula-item p {
     text-align: center;
     margin: 8px 0;
@@ -119,13 +118,25 @@ h3 {
         font-size: 1.1em;
     }
 
-    .formula-pair,
+    /* Diminuer le padding de la liste OL sur les petits écrans */
+    ol {
+        padding-left: 10px;
+    }
+
+    /* Ajuster le padding de l'élément LI pour l'icône et le texte */
+    ol li {
+        padding-left: 30px;
+    }
+
+    /* Diminuer la marge gauche des éléments de formule */
     .formula-item,
     .theoreme,
     .exemple,
     .solution,
     .etape {
-        padding: 10px;
-        font-size: 0.9em;
+        margin-left: -20px;
+        /* Rapproche l'élément du bord gauche */
+        width: calc(100% + 40px);
+        /* Ajuste la largeur pour compenser le décalage */
     }
 }
