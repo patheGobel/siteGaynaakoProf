@@ -1,4 +1,6 @@
-/* Style global */
+/* =========================
+   STYLE GLOBAL
+========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +10,7 @@ body {
     line-height: 1.7;
 }
 
-/* Titres principaux */
+/* TITRES */
 h1 {
     text-align: center;
     font-size: 2rem;
@@ -16,7 +18,14 @@ h1 {
     color: #222;
 }
 
-/* Sections */
+h2,
+h3 {
+    color: #b30000;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 .section {
     margin-bottom: 30px;
     padding: 15px;
@@ -34,29 +43,41 @@ h1 {
     text-decoration: underline;
 }
 
-/* Chaque formule ou élément */
+/* Sous-titres */
+.section-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* =========================
+   FORMULES
+========================= */
 .formula-item {
     padding: 10px 15px;
     margin-bottom: 10px;
-    border-left: 4px solid #cc001b;
+    border-left: 4px solid #0077cc;
     background: #f1f7fd;
     border-radius: 6px;
     font-size: 1.1rem;
-    /* Empêche le débordement sur mobile */
     overflow-x: auto;
+    /* Scroll horizontal si la formule déborde */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne forcé */
     -webkit-overflow-scrolling: touch;
-    /* scroll fluide sur iOS/Android */
+    /* Scroll fluide sur Android/iOS */
 }
 
+/* Centrer les paragraphes */
 .formula-item p {
     margin: 0;
     padding: 0;
     text-align: center;
-    white-space: nowrap;
-    /* force la formule sur une ligne */
 }
 
-/* Cas particuliers (théorèmes, remarques) */
+/* =========================
+   THÉORÈMES / REMARQUES
+========================= */
 .theorem {
     padding: 12px 15px;
     margin: 15px 0;
@@ -75,9 +96,118 @@ h1 {
     font-weight: bold;
 }
 
-/* Alignement des math */
-p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+/* =========================
+   EXEMPLES / SOLUTIONS
+========================= */
+.example {
+    margin: 20px 0;
+    padding: 12px 15px;
+    background: #fff4e6;
+    border-left: 5px solid #ff6600;
+    border-radius: 6px;
+}
+
+.example-title {
+    font-weight: bold;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.solution {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eaf7ff;
+    border-left: 4px solid #0077cc;
+    border-radius: 6px;
+}
+
+.solution-title {
+    font-weight: bold;
+    color: #0077cc;
+    margin-bottom: 8px;
+}
+
+.step {
+    margin-bottom: 8px;
+}
+
+.step-title {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   MEDIA QUERIES POUR MOBILE
+========================= */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .formula-item,
+    .theorem,
+    .remark,
+    .example,
+    .solution {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .formula-item p {
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+   OPTIONNEL : MODE SOMBRE (Android) 
+========================= */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #121212;
+        color: #e0e0e0;
+    }
+
+    .section,
+    .formula-item,
+    .theorem,
+    .example,
+    .solution {
+        background: #1e1e1e;
+        color: #e0e0e0;
+        border-left-color: #03a9f4;
+    }
+
+    .section-title {
+        color: #ff5252;
+    }
+
+    .example-title {
+        color: #ff9800;
+    }
+
+    .solution-title {
+        color: #03a9f4;
+    }
 }
