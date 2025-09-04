@@ -1,144 +1,71 @@
-/* Arrière-plan avec léger dégradé */
+/* Style global */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 15px;
-    color: rgb(51, 51, 51);
+    padding: 20px;
+    background: linear-gradient(to right, #f8f9fa, #eef3f7);
+    color: #333;
+    line-height: 1.7;
 }
 
-/* Titres */
+/* Titres principaux */
 h1 {
     text-align: center;
-    color: #0056b3;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #ccc;
+    color: #222;
 }
 
-h2 {
-    color: #d9534f;
-    margin-top: 25px;
-    font-size: 1.5em;
-    border-bottom: 3px solid #f0ad4e;
-    padding-bottom: 5px;
-}
-
-
-h3 {
-    color: #5cb85c;
-    margin-top: 20px;
-    font-size: 1.25em;
-}
-
-/* ✅ Formules mathématiques */
-.formula-item {
-    background: #e4e0e0;
-    border-left: 5px solid #ff0011;
-    padding: 12px 15px;
-    margin: 12px 0px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow-x: auto;
-    /* Ajoute une barre de défilement horizontale si nécessaire */
-    white-space: nowrap;
-    /* Empêche le texte de passer à la ligne */
-}
-
-.formula-item:hover {
-    transform: scale(1.01);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Centrer les formules */
-.formula-item p {
-    text-align: center;
-    margin: 8px 0;
-}
-
-/* Blocs stylisés */
-/*.theoreme,
-.exemple,
-.solution,
-.etape {
+/* Sections */
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
     border-radius: 12px;
-    padding: 14px;
+    background: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres internes */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #b30000;
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
+
+/* Chaque formule ou élément */
+.formula-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #0077cc;
+    background: #f1f7fd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+/* Cas particuliers (théorèmes, remarques) */
+.theorem {
+    padding: 12px 15px;
     margin: 15px 0;
-    font-size: 1em;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s;
-}
-
-.theoreme {
-    background: #e6f2ff;
-    border-left: 6px solid #0056b3;
-}
-
-.exemple {
-    background: #fff3e6;
-    border-left: 6px solid #f0ad4e;
-}
-
-.solution {
-    background: #e6ffe6;
-    border-left: 6px solid #5cb85c;
-}
-
-.etape {
-    background: #f9f9f9;
-    border-left: 6px solid #999;
+    border-left: 5px solid #28a745;
+    background: #e9f7ef;
+    border-radius: 6px;
     font-style: italic;
 }
 
-/* Effet au survol */
-/*.theoreme:hover,
-.exemple:hover,
-.solution:hover,
-.etape:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+.remark {
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-left: 5px solid #ffc107;
+    background: #fff8e5;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-/* ✅ Responsive mobile */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 1.6em;
-    }
-
-    h2 {
-        font-size: 1.3em;
-    }
-
-    h3 {
-        font-size: 1.1em;
-    }
-
-    /* Diminuer le padding de la liste OL sur les petits écrans */
-    ol {
-        padding-left: 20px;
-        padding-right: 10px;
-    }
-
-    /* Ajuster le padding de l'élément LI pour l'icône et le texte */
-    ol li {
-        padding-left: 30px;
-    }
-
-    /* Diminuer la marge gauche des éléments de formule */
-    .formula-item,
-    .theoreme,
-    .exemple,
-    .solution,
-    .etape {
-        margin-left: -10px;
-        /* Rapproche l'élément du bord gauche */
-        padding-right: 10px;
-        width: calc(100% + 40px);
-        /* Ajuste la largeur pour compenser le décalage */
-    }
+/* Alignement des math */
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
