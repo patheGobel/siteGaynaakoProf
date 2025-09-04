@@ -22,215 +22,212 @@
     <div class="container">
         <h1>Fonction Numérique</h1>
 
-        <div class="formula-container">
-            <h2>A. LIMITES-CONTINUITÉ</h2>
-            <h3>I. Limites</h3>
+        <!-- Section A -->
+        <div class="section">
+            <div class="section-title">LIMITES-CONTINUITÉ</div>
 
-            <!-- Section limites usuelles -->
-            <div class="section">
-                <div class="section-title"><strong><u>Quelques limites usuelles</u></strong></div>
+            <!-- Sous-section I -->
+            <div class="subsection">
+                <div class="subsection-title">Limites</div>
 
-                <div class="formula-item">
-                    <p>\[\forall n\in\mathbb{N}^{*} \lim_{x \to +\infty} x^{n}=+\infty \]</p>
-                </div>
+                <!-- 1. Limites usuelles -->
+                <div class="subsubsection">
+                    <div class="subsubsection-title">Quelques limites usuelles</div>
 
-                <div class="formula-item">
-                    <p>\[\lim_{x \to +\infty} \frac{1}{x^{n}}=0^{+} \]</p>
-                </div>
+                    <div class="formula-item">
+                        <p>\[\forall n\in\mathbb{N}^{*} \lim_{x \to +\infty} x^{n}=+\infty \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \forall n\in\mathbb{N}^{*}
+                            \lim_{x \to -\infty} x^{n} =
+                            \begin{cases}
+                            +\infty \text{ si \(n\) est pair}\\
+                            -\infty \text{ si \(n\) est pair}
+                            \end{cases}
+                            \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[\lim_{x \to -\infty} \frac{1}{x^{n}}=
+                            \begin{cases}
+                            0^{+} \text{ si \(n\) est pair}\\
+                            0^{-} \text{ si \(n\) est pair}
+                            \end{cases}\]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to +\infty} \sqrt{x}=+\infty \text{ , } \lim_{x \to +\infty}
+                            \frac{1}{\sqrt{x}}=0^{+} \]
 
-                <div class="formula-item">
-                    <p>\[ \forall n\in\mathbb{N}^{*}
-                        \lim_{x \to -\infty} x^{n} =
-                        \begin{cases}
-                        +\infty \text{ si \(n\) est pair}\\
-                        -\infty \text{ si \(n\) est impair}
-                        \end{cases}
-                        \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[
-                        \lim_{x \to -\infty} \frac{1}{x^{n}}=
-                        \begin{cases}
-                        0^{+} \text{ si \(n\) est pair}\\
-                        0^{-} \text{ si \(n\) est impair}
-                        \end{cases}
-                        \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to +\infty} \sqrt{x}=+\infty \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to +\infty} \frac{1}{\sqrt{x}}=0^{+} \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to a^{+}} \frac{1}{x-a}=+\infty \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to a^{-}} \frac{1}{x-a}=-\infty \]</p>
-                </div>
-
-                <div class="section-subtitle"><strong>Autre Notation</strong></div>
-
-                <div class="formula-item">
-                    <p>\[( x\rightarrow a^{+} ) \iff ( x\rightarrow a_{>} ) \]</p>
-                </div>
-                <div class="formula-item">
-                    <p>\[( x\rightarrow a^{-} ) \iff ( x\rightarrow a_{<} ) \]</p>
-                </div>
-
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to a^{+}} f(x)=+\infty \text{ se note aussi } \lim_{x \to a_{>}} f(x)=+\infty \]
-                    </p>
-                </div>
-                <div class="formula-item">
-                    <p>\[ \lim_{x \to a^{-}} f(x)=-\infty \text{ se note aussi } \lim_{x \to a_{<}} f(x)=-\infty \]</p>
-                </div>
-            </div>
-
-            <!-- Section théorèmes -->
-            <div class="section">
-                <div class="section-title"><strong><u>Quelques théorèmes sur les limites</u></strong></div>
-
-                <div class="theoreme">
-                    <div class="theoreme-titre">Théorème de comparaison</div>
-                    <div class="theorem-content">
-
-                        <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle $]a; +\infty[$
-                            de $\mathbb{R}$.</p>
-
-                        <div class="theorem-case">
-                            <div class="case-title">Cas 1 : Limite en $+\infty$</div>
-                            <div class="math-display">
-                                \[ \lim_{x \to +\infty} f(x) = +\infty \Rightarrow \lim_{x \to +\infty} g(x) = +\infty.
-                                \]
-                            </div>
-                            <div class="math-display">
-                                \[ \lim_{x \to +\infty} g(x) = -\infty \Rightarrow \lim_{x \to +\infty} f(x) = -\infty.
-                                \]
-                            </div>
+                            \[ \lim_{x \to a^{+}} \frac{1}{x-a}=+\infty \text{ , } \lim_{x \to a^{-}}
+                            \frac{1}{x-a}=-\infty \]</p>
+                    </div>
+                    <div style="text-align: center;"><b>Autre Notation</b></div>
+                    <div class="formula-item">
+                        <p>\[( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow
+                            a^{-} ) \Leftrightarrow ( x\rightarrow a_{<} ) \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to a^{+}} f(x)=+\infty \text{ se note aussi } \lim_{x \to a_{>}} f(x)=+\infty \]
+                        </p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to a^{-}} f(x)=-\infty \text{ se note aussi } \lim_{x \to a_{<}} f(x)=-\infty
+                                \]</p>
+                    </div>
+                    <!-- Exemple 1 -->
+                    <div class="example">
+                        <div class="example-title">Exemple 1</div>
+                        <div class="math-display">
+                            \[ \text{Soit } f(x) = -x + \sin x \text{. Calculer } \lim_{x \to +\infty} f(x) \]
                         </div>
 
-                        <div class="theorem-case">
-                            <div class="case-title">Cas 2 : Limite en $-\infty$</div>
-                            <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle
-                                $]-\infty;\beta[$ de $\mathbb{R}$.</p>
-                            <div class="math-display">
-                                \[ \lim_{x \to -\infty} f(x) = +\infty \Rightarrow \lim_{x \to -\infty} g(x) = +\infty.
-                                \]
-                            </div>
-                            <div class="math-display">
-                                \[ \lim_{x \to -\infty} g(x) = -\infty \Rightarrow \lim_{x \to -\infty} f(x) = -\infty.
-                                \]
-                            </div>
-                        </div>
+                        <div class="solution">
+                            <div class="solution-title">Solution</div>
 
-                        <div class="theorem-case">
-                            <div class="case-title">Cas 3 : Limite en un point $x_0$</div>
-                            <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle $]a;\beta[$
-                                de $\mathbb{R}$ et $x_0 \in ]a;\beta[$.</p>
-                            <div class="math-display">
-                                \[ \lim_{x \to x_0} f(x) = +\infty \Rightarrow \lim_{x \to x_0} g(x) = +\infty. \]
+                            <div class="step">
+                                <div class="step-title">Étape 1 : Encadrement de la fonction</div>
+                                <div class="math-display">
+                                    \[
+                                    \begin{aligned}
+                                    \text{Pour tout } x, \sin x \leq 1 &\implies -x + \sin x \leq 1 - x\\
+                                    &\implies f(x) \leq 1 - x
+                                    \end{aligned}
+                                    \]
+                                </div>
                             </div>
-                            <div class="math-display">
-                                \[ \lim_{x \to x_0} g(x) = -\infty \Rightarrow \lim_{x \to x_0} f(x) = -\infty. \]
+
+                            <div class="step">
+                                <div class="step-title">Étape 2 : Définition de la fonction de comparaison</div>
+                                <div class="math-display">
+                                    \[ \text{Posons } g(x) = 1 - x \text{, donc } f(x) \leq g(x) \]
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-title">Étape 3 : Calcul de la limite de comparaison</div>
+                                <div class="math-display">
+                                    \[ \lim_{x \to +\infty} g(x) = \lim_{x \to +\infty} (1 - x) = -\infty \]
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-title">Étape 4 : Application du théorème</div>
+                                <div class="math-display">
+                                    \[ \text{Or, } \lim_{x \to +\infty} g(x) = -\infty \text{, donc } \lim_{x \to
+                                    +\infty} f(x) = -\infty \]
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Exemple 1 -->
-            <div class="example">
-                <div class="example-title">Exemple 1</div>
-                <div class="math-display">
-                    \[ \text{Soit } f(x) = -x + \sin x \text{. Calculer } \lim_{x \to +\infty} f(x) \]
-                </div>
-
-                <div class="solution">
-                    <div class="solution-title">Solution</div>
-
-                    <div class="step">
-                        <div class="step-title">Étape 1 : Encadrement de la fonction</div>
-                        <div class="math-display">
-                            \[
-                            \begin{aligned}
-                            \text{Pour tout } x, \sin x \leq 1 &\implies -x + \sin x \leq 1 - x\\
-                            &\implies f(x) \leq 1 - x
-                            \end{aligned}
-                            \]
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-title">Étape 2 : Définition de la fonction de comparaison</div>
-                        <div class="math-display">
-                            \[ \text{Posons } g(x) = 1 - x \text{, donc } f(x) \leq g(x) \]
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-title">Étape 3 : Calcul de la limite de comparaison</div>
-                        <div class="math-display">
-                            \[ \lim_{x \to +\infty} g(x) = \lim_{x \to +\infty} (1 - x) = -\infty \]
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-title">Étape 4 : Application du théorème</div>
-                        <div class="math-display">
-                            \[ \text{Or, } \lim_{x \to +\infty} g(x) = -\infty \text{, donc } \lim_{x \to +\infty} f(x)
-                            = -\infty \]
-                        </div>
+                    <div class="example">
+                        <div class="example-title">Exemple 1</div>
+                        geghfehzhbhbd
+                        ecdzeneceuz
+                        ceazucbtaux
+                        caezucxbnq
                     </div>
                 </div>
-            </div>
 
-            <!-- Exemple 2 -->
-            <div class="example">
-                <div class="example-title">Exemple 2</div>
-                <div class="math-display">
-                    \[ \text{Soit } g(x) = \frac{\sqrt{1 + x^{2}}}{x^{2}} \text{. Calculer } \lim_{x \to 0} g(x) \]
-                </div>
+                <!-- 2. Théorèmes -->
+                <div class="subsubsection">
+                    <div class="subsubsection-title">Quelques théorèmes sur les limites</div>
 
-                <div class="solution">
-                    <div class="solution-title">Solution</div>
+                    <div class="theoreme">
+                        <!-- a. theoreme-titre -->
+                        <div class="theoreme-titre">Théorème de comparaison</div>
+                        <div class="theorem-content">
+                            <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle $]a;
+                                +\infty[$
+                                de $\mathbb{R}$.</p>
 
-                    <div class="step">
-                        <div class="step-title">Étape 1 : Encadrement de la fonction</div>
-                        <div class="math-display">
-                            \[ \text{Posons } f(x) = \frac{1}{x^{2}}\]
-                            \[ \text{Comme, pour tout } x \neq 0, \text{ on a } 1 \leq \sqrt{1 + x^{2}} \]
+                            <div class="theorem-case">
+                                <div class="case-title">Cas 1 : Limite en $+\infty$</div>
+                                <div class="math-display">
+                                    \[ \lim_{x \to +\infty} f(x) = +\infty \Rightarrow \lim_{x \to +\infty} g(x)
+                                    =
+                                    +\infty \]
+                                </div>
+                                <div class="math-display">
+                                    \[ \lim_{x \to +\infty} g(x) = -\infty \Rightarrow \lim_{x \to +\infty} f(x)
+                                    =
+                                    -\infty \]
+                                </div>
+                            </div>
+
+                            <div class="theorem-case">
+                                <div class="case-title">Cas 2 : Limite en $-\infty$</div>
+                                <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle
+                                    $]-\infty;\beta[$
+                                    de $\mathbb{R}$.</p>
+                                <div class="math-display">
+                                    \[ \lim_{x \to -\infty} f(x) = +\infty \Rightarrow \lim_{x \to -\infty} g(x)
+                                    =
+                                    +\infty \]
+                                </div>
+                                <div class="math-display">
+                                    \[ \lim_{x \to -\infty} g(x) = -\infty \Rightarrow \lim_{x \to -\infty} f(x)
+                                    =
+                                    -\infty \]
+                                </div>
+                            </div>
+
+                            <div class="theorem-case">
+                                <div class="case-title">Cas 3 : Limite en un point $x_0$</div>
+                                <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle
+                                    $]a;\beta[$
+                                    de $\mathbb{R}$ et $x_0 \in ]a;\beta[$.</p>
+                                <div class="math-display">
+                                    \[ \lim_{x \to x_0} f(x) = +\infty \Rightarrow \lim_{x \to x_0} g(x) =
+                                    +\infty \]
+                                </div>
+                                <div class="math-display">
+                                    \[ \lim_{x \to x_0} g(x) = -\infty \Rightarrow \lim_{x \to x_0} f(x) =
+                                    -\infty \]
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <!-- b. theoreme-titre -->
+                        <div class="theoreme-titre">Théorème d'encadrement ou théorème des gendarmes</div>
+                        <div class="theorem-content">
+                            <p>Soient \( f \), \( g \) et \( h \) trois fonctions définies sur un intervalle \( I \)
+                                au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty
+                                \).
+                            </p>
+                            <p> \[
+                                \text{ Si \( \forall x\in I \) }
+                                \begin{cases}
+                                \quad g(x) \leq f(x)\leq h(x) \\
+                                \lim_{x \to \alpha}g(x)=\lim_{x \to \alpha}h(x)=\ell,
+                                \end{cases}
+                                \text{ alors } \lim_{x \to \alpha}f(x)=\ell
+                                \] </p>
+                            <!-- Exercice d'application du théorème des gendarmes -->
+                            <div class="exerciceapp">
+                                <div class="exerciceapp-title">Exercice d'application 1</div>
+                                <div class="math-display">
+                                    \[ \text{Calculer} \lim_{x \to +\infty} \frac{x-\sin x}{x^{2}} \]
+                                </div>
 
-                    <div class="step">
-                        <div class="step-title">Étape 2 : Inégalité entre les fonctions</div>
-                        <div class="math-display">
-                            \[ \text{Donc, pour tout } x \neq 0, f(x) \geq g(x) \]
+                                <div class="correction">
+                                    <div class="correction-title">Correction 1</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="step">
-                        <div class="step-title">Étape 3 : Calcul de la limite de comparaison</div>
-                        <div class="math-display">
-                            \[ \lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{1}{x^{2}} = +\infty \]
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-title">Étape 4 : Application du théorème</div>
-                        <div class="math-display">
-                            \[ \text{Or, } \lim_{x \to 0} f(x) = +\infty \text{, donc } \lim_{x \to 0} g(x) = +\infty \]
-                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Sous-section II -->
+            <div class="subsection">
+                <div class="subsection-title">Continuité</div>
+                <!-- Contenu Continuité ici -->
+            </div>
+        </div>
+
+        <!-- Section B -->
+        <div class="section">
+            <div class="section-title">Dérivées</div>
+            <!-- Contenu Dérivées ici -->
         </div>
     </div>
 </body>
