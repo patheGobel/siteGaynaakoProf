@@ -42,6 +42,18 @@ h1 {
     background: #f1f7fd;
     border-radius: 6px;
     font-size: 1.1rem;
+    /* Empêche le débordement sur mobile */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* scroll fluide sur iOS/Android */
+}
+
+.formula-item p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    /* force la formule sur une ligne */
 }
 
 /* Cas particuliers (théorèmes, remarques) */
