@@ -121,7 +121,7 @@ h3 {
     /* Diminuer le padding de la liste OL sur les petits écrans */
     ol {
         padding-left: 20px;
-        padding-right: 100px;
+        padding-right: 10px;
     }
 
     /* Ajuster le padding de l'élément LI pour l'icône et le texte */
