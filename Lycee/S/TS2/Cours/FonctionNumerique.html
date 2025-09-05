@@ -118,6 +118,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--Exemple 2-->
                     <div class="example">
                         <div class="example-title">Exemple 1</div>
                         geghfehzhbhbd
@@ -130,7 +131,6 @@
                 <!-- 2. Théorèmes -->
                 <div class="subsubsection">
                     <div class="subsubsection-title">Quelques théorèmes sur les limites</div>
-
                     <div class="theoreme">
                         <!-- a. theoreme-titre -->
                         <div class="theoreme-titre">Théorème de comparaison</div>
@@ -245,16 +245,193 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- c. limites -->
+                        <div class="theoreme-titre">Théorème du changement de variable</div>
+                        <div class="theorem-content">
+                            <p>\[ \lim_{x \to x_{0}}f(x)=\lim_{t \to 0}f(x_{0}+t) \]</p>
+                            <p>\[ \lim_{x \to +\infty}f(x)=\lim_{X \to 0^{+}}f \left( \frac{1}{X} \right) \]</p>
+                            <p>\[ \lim_{x \to -\infty}f(x)=\lim_{X \to 0^{-}}f \left( \frac{1}{X} \right) \]</p>
+                            <div style="text-align: center;"><b>Preuve[Exercice]</b></div>
+                        </div>
                     </div>
                 </div>
+                <!--3.Limites de fonctions trigonométriques-->
+                <div class="subsubsection">
+                    <div class="subsubsection-title">Limites de fonctions trigonométriques</div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to 0} \frac{\sin x}{x}=1 \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to 0} \frac{\tan x}{x}=1 \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p> \[ \lim_{x \to 0} \frac{1-\cos x}{x^{2}}=\frac{1}{2} \]</p>
+                    </div>
+                    <div class="formula-item">
+                        <p>\[ \lim_{x \to 0} \frac{\cos x -1 }{x}=0 \]</p>
+                    </div>
+                    <div class="exerciceapp">
+                        <div class="exerciceapp-title">Exercice d'application 3</div>
+                        <div class="math-display">
+                            <p>\[ \lim_{x \to +\infty}x\sin \frac{1}{x} \]</p>
+                            <p>\[ \lim_{x \to +\infty}x\tan \frac{3}{x} \]</p>
+                            <p>\[ \lim_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \]</p>
+                        </div>
 
+                        <button class="toggle-correction-btn">Afficher la Correction</button>
+                        <div class="correction-content" style="display: none;">
+                            <div class="correction">
+                                <div class="correction-title">Correction 3</div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--4.Interprétations géométriques des limites-->
+                <div class="subsubsection">
+                    <div class="subsubsection-title">Interprétations géométriques des limites</div>
+                    <div class="theoreme">
+                        <p>Les limites peuvent être interprétées géométriquement de plusieurs manières en fonction du
+                            contexte.
+                            Voici quelques exemples typiques :</p>
+                        <!--a)Asymptote horizontale (AH)[Parllèle à \((ox)\)]-->
+                        <div class="theoreme-titre">Asymptote horizontale (AH)[Parllèle à \((ox)\)]</div>
+                        <div class="theorem-content">
+                            <p>\(
+                                \text{ Une fonction } f \text{ a une asymptote horizontale en } y = \ell \text{
+                                lorsque} \lim\limits_{x \to +\infty} f(x) = \ell \text{ ou } \lim\limits_{x \to +\infty}
+                                f(x) = \ell
+                                \)
+                            </p>
+                            <p> Si \( \lim\limits_{x \to +\infty} f(x) = \ell \) On dit que: \( y = \ell \) est une AH à
+                                \((C_{f})\) en \( +\infty \)</p>
+                            <p> Si \( \lim\limits_{x \to -\infty} f(x) = \ell \) On dit que: \( y = \ell \) est une AH à
+                                \((C_{f})\) en \( -\infty \)</p>
+                            <p>Cela signifie que la courbe de la fonction se rapproche de la droite \( y = \ell \) à
+                                mesure que \( x \to +\infty \) ou \( x \to -\infty \).</p>
+                            <!-- Exemple 3 -->
+                            <div class="example">
+                                <div class="example-title">Exemple 3</div>
+                                <div class="math-display">
+                                    Déterminer l'AH de
+                                    \(
+                                    f(x) = \frac{2x^2}{x^2 + 1}
+                                    \)
+                                </div>
+
+                                <div class="solution">
+                                    <div class="solution-title">Solution 3</div>
+                                    \[
+                                    \lim_{x \to +\infty} f(x) = 2, \quad \lim_{x \to -\infty} f(x) = 2.
+                                    \]
+                                    La courbe de la fonction se rapproche de la droite \( y = 2 \) à mesure que \( x \to
+                                    +\infty \) ou \( x \to -\infty \).
+                                </div>
+                            </div>
+                        </div>
+                        <!--b)Asymptote verticale (AV)[Parallèle à \((oy)\)]-->
+                        <div class="theoreme-titre">Asymptote verticale (AV)[Parallèle à \((oy)\)]</div>
+                        <div class="theorem-content">
+                            <p>Soit \( x = a \in \mathbb{R} \)\( \text{ si }\lim\limits_{x \to a} f(x) = \pm\infty
+                                \text{ alors
+                                \(x = a\) est une AV à \(C_{f}\)}\)
+                                Cela signifie que la courbe de la fonction tend vers l'infini lorsque \( x \) approche
+                                \( a \) par la droite (ou la gauche).</p>
+                            <!-- Exemple 4 -->
+                            <div class="example">
+                                <div class="example-title">Exemple 4</div>
+                                <div class="math-display">
+                                    <p>Déterminer de l'AV de \( f \) tel que
+                                        \( f(x) = \frac{1}{x} \)</p>
+                                </div>
+
+                                <div class="solution">
+                                    <div class="solution-title">Solution 4</div>
+                                    <p>\[
+                                        \lim_{x \to 0^{+}} f(x) = +\infty \quad \text{et} \quad \lim_{x \to 0^{-}} f(x)
+                                        =
+                                        -\infty,
+                                        \]</p>
+                                    <p>ce qui signifie que la fonction a une asymptote verticale en \( x = 0 \).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--c)Asymptote oblique (AO)-->
+                        <div class="theoreme-titre">Asymptote oblique (AO)</div>
+                        <div class="theorem-content">
+                            <p>Si \( \lim\limits_{x \to +\infty} (f(x)-(ax+b)) = 0 \) alors \(y = ax+b\) est une
+                                AO
+                                à \((C_{f})\) en \( +\infty \) </p>
+
+                            <p>Si \( \lim\limits_{x \to -\infty} (f(x)-(ax+b)) = 0 \) alors \(y = ax+b\) est une
+                                AO
+                                à \((C_{f})\) en \( -\infty \) </p>
+                            <p>Cette méthode est utilisée pour montrer que \(y=ax+b\) est est une AO</p>
+                            <!-- Exemple 5 -->
+                            <div class="example">
+                                <div class="example-title">Exemple 5</div>
+                                <div class="math-display">
+                                    <p>Soit \( f(x) = \frac{x^2 + 2x + 1}{x} \) une fonction et \( (C_{f}) \) sa courbe
+                                        représentative.
+                                        Montrer que \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \)</p>
+                                </div>
+
+                                <div class="solution">
+                                    <div class="solution-title">Solution 5</div>
+                                    <p>\( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \) si
+                                        \(\lim\limits_{x \to +\infty}\left[ f(x)-y\right] =0 \)
+                                        En effet
+                                        \[
+                                        f(x) = \frac{x^2 + 2x + 1}{x}, \quad \lim_{x \to +\infty} \left( f(x) - (x + 2)
+                                        \right) = 0.
+                                        \]
+                                        La courbe de la fonction se rapproche de la droite \( y = x + 2 \) pour \( x \to
+                                        +\infty \).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--d)Propriété 1[Autre façon de montrer que \( y = ax + b \) est une AO]-->
+                        <div class="theoreme-titre">Propriété 1[Autre façon de montrer que \( y = ax + b \) est une AO]
+                        </div>
+                        <div class="theorem-content">
+                            Soit \( f \) une fonction, \( a, b \) un réel et \( (C_{f}) \) sa courbe représentative .
+                            <p>\(\text{Si }\lim\limits_{x \to +\infty}f(x)=\pm\infty
+                                \text{ et }
+                                \lim\limits_{x \to +\infty}\frac{f(x)}{x}=a
+                                \text{ et }
+                                \lim\limits_{x \to +\infty}\left( f(x)-ax\right) =b
+                                \textbf{ alors }
+                                y = ax + b \text{ est une AO à } (C_{f})\quad en\quad +\infty.
+                                \)</p>
+                            <b>NB</b>
+
+                            Cette propriété reste valable lorsque \( x\rightarrow -\infty\)
+
+                            On aura \( y = ax + b \) est une AO à \( (C_{f}) \) en \(-\infty\)
+                        </div>
+                        <!--e)Branche parabolique de direction (oy)-->
+                        <div class="theoreme-titre">Branche parabolique de direction (oy)</div>
+                        <div class="theorem-content">
+                            <p></p>
+                        </div>
+                        <!--f)Branche parabolique de direction (ox)-->
+                        <div class="theoreme-titre">Branche parabolique de direction (ox)</div>
+                        <div class="theorem-content">
+                            <p></p>
+                        </div>
+                        <!--g)Branche parabolique de direction \(y = ax\) (a réel)-->
+                        <div class="theoreme-titre">Branche parabolique de direction \(y = ax\) (a réel)</div>
+                        <div class="theorem-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Sous-section II -->
                 <div class="subsection">
                     <div class="subsection-title">Continuité</div>
                     <!-- Contenu Continuité ici -->
                 </div>
             </div>
-
             <!-- Section B -->
             <div class="section">
                 <div class="section-title">Dérivées</div>
