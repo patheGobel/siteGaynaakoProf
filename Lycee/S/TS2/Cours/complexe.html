@@ -21,30 +21,90 @@
 <body>
     <div class="container">
         <h1>Introduction aux Nombres Complexes</h1>
-        Les nombres complexes, que nous allons explorer dans ce cours, ont une origine intrigante liée à la résolution
-        des équations polynomiales. Au cours de l'histoire des mathématiques, des énigmes telles que la résolution de
-        l'équation cubique $x^3 + ax^2 + bx + c = 0$ ont captivé l'attention des mathématiciens.
+        <p>Les nombres complexes, que nous allons explorer dans ce cours, ont une origine intrigante liée à la
+            résolution
+            des équations polynomiales. Au cours de l'histoire des mathématiques, des énigmes telles que la résolution
+            de
+            l'équation cubique $x^3 + ax^2 + bx + c = 0$ ont captivé l'attention des mathématiciens.</p>
 
-        Au XVIe siècle, l'équation cubique a été résolue par le mathématicien italien Niccolò Fontana, également connu
-        sous le nom de Tartaglia. Cependant, il est intéressant de noter que la tentative de résolution de certaines
-        équations cubiques conduisit à l'introduction des nombres complexes.
+        <p>Au XVIe siècle, l'équation cubique a été résolue par le mathématicien italien Niccolò Fontana, également
+            connu
+            sous le nom de Tartaglia. Cependant, il est intéressant de noter que la tentative de résolution de certaines
+            équations cubiques conduisit à l'introduction des nombres complexes.</p>
 
-        L'équation $x^2 + 1 = 0$, apparemment insoluble dans l'ensemble des nombres réels, était une pierre
-        d'achoppement dans la résolution des équations cubiques. Pourtant, pour surmonter cette difficulté, les
-        mathématiciens du XVIe siècle, tels que Gerolamo Cardano et Rafael Bombelli, ont introduit une unité imaginaire,
-        notée $i$, qui était la solution de l'équation $i^2 = -1$. Cette innovation a été la première étape vers la
-        création de l'ensemble des nombres complexes.
+        <p>L'équation $x^2 + 1 = 0$, apparemment insoluble dans l'ensemble des nombres réels, était une pierre
+            d'achoppement dans la résolution des équations cubiques. Pourtant, pour surmonter cette difficulté, les
+            mathématiciens du XVIe siècle, tels que Gerolamo Cardano et Rafael Bombelli, ont introduit une unité
+            imaginaire,
+            notée $i$, qui était la solution de l'équation $i^2 = -1$. Cette innovation a été la première étape vers la
+            création de l'ensemble des nombres complexes.</p>
 
-        Ainsi, les nombres complexes ne sont pas seulement une extension abstraite des nombres réels, mais ils ont
-        émergé de la nécessité de résoudre des problèmes concrets en algèbre. Dans ce cours, nous explorerons les
-        propriétés fascinantes et les applications puissantes des nombres complexes.
+        <p> Ainsi, les nombres complexes ne sont pas seulement une extension abstraite des nombres réels, mais ils ont
+            émergé de la nécessité de résoudre des problèmes concrets en algèbre. Dans ce cours, nous explorerons les
+            propriétés fascinantes et les applications puissantes des nombres complexes.</p>
 
-        Préparez-vous à plonger dans le monde fascinant des nombres complexes, où l'imagination des mathématiciens a
-        transcendé les limites des nombres réels pour créer un outil puissant et élégant.
+        <p>Préparez-vous à plonger dans le monde fascinant des nombres complexes, où l'imagination des mathématiciens a
+            transcendé les limites des nombres réels pour créer un outil puissant et élégant.</p>
 
         <!-- I. Définition et notations -->
         <div class="section">
             <div class="section-title">I. Définition et notations</div>
+            <p>On appelle ensemble des nombres complexes l'ensemble noté $\mathbb{C}$ qui :</p>
+            <ul class="triangle-list">
+                <li>contient l'ensemble des réels \( \mathbb{R} \) : \( \mathbb{R} \subset \mathbb{C} \)</li>
+                <li>est muni de l'addition et de la multiplication, possédant les mêmes propriétés
+                    que \( \mathbb{R} \) (commutativité, associativité, élément neutre, élément symétrique,
+                    distributivité, etc.)</li>
+                <li>contient un élément noté \( i \) vérifiant \( i^{2} = -1 \)</li>
+            </ul>
+            <h3>Forme Algébrique d'un Nombre Complexe</h3>
+            <ul class="bullet-list">
+                <li>
+                    Tout nombre complexe \( z \in \mathbb{C} \) s'écrit, de façon algébrique, sous la forme
+                    \( z = a + ib \), où \( a \) et \( b \) sont des nombres réels.
+                    <br> \( a \) est appelé la partie réelle de \( z \), notée \( \mathcal{R}e(z)=a \),
+                    et \( b \) est appelé la partie imaginaire de \( z \), notée \( \mathcal{I}m(z)=b \).
+                </li>
+
+                <li>
+                    Le nombre complexe \( z=a+ib \) est réel si, et seulement si, \( b=0 \),
+                    c'est-à-dire \( \mathcal{I}m(z)=0 \).
+                </li>
+
+                <li>
+                    Le nombre complexe \( z=a+ib \) est imaginaire pur si, et seulement si, \( a=0 \),
+                    c'est-à-dire \( \mathcal{R}e(z)=0 \).
+                </li>
+
+                <li>
+                    Le nombre complexe \( z=a+ib \) est nul si, et seulement si :
+                    \(
+                    \begin{cases}
+                    a=0\\
+                    b=0
+                    \end{cases}\implies\\
+                    \begin{cases}
+                    \mathcal{R}e(z)=0\\
+                    \mathcal{I}m(z)=0
+                    \end{cases}
+                    \)
+                </li>
+
+                <li>
+                    Soient $z$ et $z'$ deux nombres complexes tels que $z=a+ib$ et $z'=a'+ib'$, alors $z=z'$ si, et
+                    seulement si,
+                    \(
+                    \begin{cases}
+                    a=a'\\
+                    b=b'
+                    \end{cases}\implies\\
+                    \begin{cases}
+                    \mathcal{R}e(z)=\mathcal{R}e(z')\\
+                    \mathcal{I}m(z)=\mathcal{I}m(z')
+                    \end{cases}
+                    \)
+                </li>
+            </ul>
             <div class="remark">Remarque</div>
             <div class="example">Exemple</div>
             <div class="example">Exemple</div>

@@ -1,0 +1,12 @@
+ ul.triangle-list {
+     list-style: none;
+     /* enlever les puces normales */
+     padding-left: 0;
+ }
+
+ ul.triangle-list li::before {
+     content: "► ";
+     /* équivalent à \blacktriangleright */
+     color: black;
+     margin-right: 6px;
+ }
