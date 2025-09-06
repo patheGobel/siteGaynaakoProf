@@ -2,102 +2,132 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introduction aux Nombres Complexes</title>
-  <link rel="stylesheet" href="complexe.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction aux Nombres Complexes</title>
+    <link rel="stylesheet" href="complexe.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Introduction aux Nombres Complexes</h1>
+    <div class="container">
+        <h1>Introduction aux Nombres Complexes</h1>
+        Les nombres complexes, que nous allons explorer dans ce cours, ont une origine intrigante liée à la résolution
+        des équations polynomiales. Au cours de l'histoire des mathématiques, des énigmes telles que la résolution de
+        l'équation cubique $x^3 + ax^2 + bx + c = 0$ ont captivé l'attention des mathématiciens.
 
-    <!-- I. Définition et notations -->
-    <div class="section">
-      <div class="section-title">I. Définition et notations</div>
-      <div class="remark">Remarque</div>
-      <div class="example">Exemple</div>
-      <div class="example">Exemple</div>
+        Au XVIe siècle, l'équation cubique a été résolue par le mathématicien italien Niccolò Fontana, également connu
+        sous le nom de Tartaglia. Cependant, il est intéressant de noter que la tentative de résolution de certaines
+        équations cubiques conduisit à l'introduction des nombres complexes.
+
+        L'équation $x^2 + 1 = 0$, apparemment insoluble dans l'ensemble des nombres réels, était une pierre
+        d'achoppement dans la résolution des équations cubiques. Pourtant, pour surmonter cette difficulté, les
+        mathématiciens du XVIe siècle, tels que Gerolamo Cardano et Rafael Bombelli, ont introduit une unité imaginaire,
+        notée $i$, qui était la solution de l'équation $i^2 = -1$. Cette innovation a été la première étape vers la
+        création de l'ensemble des nombres complexes.
+
+        Ainsi, les nombres complexes ne sont pas seulement une extension abstraite des nombres réels, mais ils ont
+        émergé de la nécessité de résoudre des problèmes concrets en algèbre. Dans ce cours, nous explorerons les
+        propriétés fascinantes et les applications puissantes des nombres complexes.
+
+        Préparez-vous à plonger dans le monde fascinant des nombres complexes, où l'imagination des mathématiciens a
+        transcendé les limites des nombres réels pour créer un outil puissant et élégant.
+
+        <!-- I. Définition et notations -->
+        <div class="section">
+            <div class="section-title">I. Définition et notations</div>
+            <div class="remark">Remarque</div>
+            <div class="example">Exemple</div>
+            <div class="example">Exemple</div>
+        </div>
+
+        <!-- II. Conjugué -->
+        <div class="section">
+            <div class="section-title">II. Conjugué d'un Nombre Complexe</div>
+            <div class="subsection">1. Définition</div>
+            <div class="example">Exemple</div>
+            <div class="subsection">2. Propriétés</div>
+            <div class="example">Exemple</div>
+        </div>
+
+        <!-- III. Représentation graphique -->
+        <div class="section">
+            <div class="section-title">III. Représentation graphique d'un Nombre Complexe</div>
+            <div class="example">Exemple</div>
+        </div>
+
+        <!-- IV. Module -->
+        <div class="section">
+            <div class="section-title">IV. Module d'un Nombre Complexe</div>
+            <div class="subsection">1. Définition</div>
+            <div class="subsection">2. Propriétés</div>
+            <div class="example">Exemple</div>
+            <div class="exercise">Exercice 1.a 1.b 1.c 1.d (CIAM SE PAGE 2010)</div>
+        </div>
+
+        <!-- V. Argument -->
+        <div class="section">
+            <div class="section-title">V. Argument d'un nombre complexe non nul</div>
+            <div class="subsection">1. Définition</div>
+            <div class="exercise">Exercice 1.e 1.f 1.g (CIAM SE PAGE 2012)</div>
+            <div class="application-exercise">Exercice d’application</div>
+            <div class="subsection">2. Propriétés</div>
+            <div class="application-exercise">Exercice d’application</div>
+            <div class="remark">Remarque</div>
+        </div>
+
+        <!-- VI. Formes -->
+        <div class="section">
+            <div class="section-title">VI. Forme d'un nombre complexe</div>
+            <div class="subsection">1. Forme algébrique</div>
+            <div class="example">Exemple</div>
+            <div class="subsection">2. Forme trigonométrique</div>
+            <div class="example">Exemple</div>
+            <div class="solution">Solution</div>
+            <div class="subsection">3. Forme exponentielle</div>
+            <div class="subsubsection">a. Définition</div>
+            <div class="subsubsection">b. Propriétés</div>
+            <div class="application-exercise">Exercice d’application</div>
+            <div class="correction">Correction</div>
+        </div>
+
+        <!-- VII. Formules -->
+        <div class="section">
+            <div class="section-title">VII. Formule de Moivre – Formule d’Euler</div>
+            <div class="subsection">1. Formule de Moivre</div>
+            <div class="subsection">2. Formule d’Euler</div>
+            <div class="subsection">3. Linéariser des expressions trigonométriques</div>
+            <div class="example">Exemple</div>
+            <div class="solution">Solution</div>
+        </div>
+
+        <!-- VIII. Équations -->
+        <div class="section">
+            <div class="section-title">VIII. Résolution d’équations dans C</div>
+            <div class="subsection">1. Racines nièmes (n ≥ 2)</div>
+            <div class="subsubsection">a. Racine n-ième de l’unité</div>
+            <div class="subsubsection">b. Racine n-ième d’un nombre complexe</div>
+            <div class="example">Exemple</div>
+            <div class="subsubsection">c. Propriétés</div>
+            <div class="subsubsection">d. Racine carrée d’un nombre complexe</div>
+        </div>
+
+        <!-- IX. Interprétation géométrique -->
+        <div class="section">
+            <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
+            <div class="subsection">Interprétation de |(d - c) / (b - a)|</div>
+        </div>
+
     </div>
-
-    <!-- II. Conjugué -->
-    <div class="section">
-      <div class="section-title">II. Conjugué d'un Nombre Complexe</div>
-      <div class="subsection">1. Définition</div>
-      <div class="example">Exemple</div>
-      <div class="subsection">2. Propriétés</div>
-      <div class="example">Exemple</div>
-    </div>
-
-    <!-- III. Représentation graphique -->
-    <div class="section">
-      <div class="section-title">III. Représentation graphique d'un Nombre Complexe</div>
-      <div class="example">Exemple</div>
-    </div>
-
-    <!-- IV. Module -->
-    <div class="section">
-      <div class="section-title">IV. Module d'un Nombre Complexe</div>
-      <div class="subsection">1. Définition</div>
-      <div class="subsection">2. Propriétés</div>
-      <div class="example">Exemple</div>
-      <div class="exercise">Exercice 1.a 1.b 1.c 1.d (CIAM SE PAGE 2010)</div>
-    </div>
-
-    <!-- V. Argument -->
-    <div class="section">
-      <div class="section-title">V. Argument d'un nombre complexe non nul</div>
-      <div class="subsection">1. Définition</div>
-      <div class="exercise">Exercice 1.e 1.f 1.g (CIAM SE PAGE 2012)</div>
-      <div class="application-exercise">Exercice d’application</div>
-      <div class="subsection">2. Propriétés</div>
-      <div class="application-exercise">Exercice d’application</div>
-      <div class="remark">Remarque</div>
-    </div>
-
-    <!-- VI. Formes -->
-    <div class="section">
-      <div class="section-title">VI. Forme d'un nombre complexe</div>
-      <div class="subsection">1. Forme algébrique</div>
-      <div class="example">Exemple</div>
-      <div class="subsection">2. Forme trigonométrique</div>
-      <div class="example">Exemple</div>
-      <div class="solution">Solution</div>
-      <div class="subsection">3. Forme exponentielle</div>
-      <div class="subsubsection">a. Définition</div>
-      <div class="subsubsection">b. Propriétés</div>
-      <div class="application-exercise">Exercice d’application</div>
-      <div class="correction">Correction</div>
-    </div>
-
-    <!-- VII. Formules -->
-    <div class="section">
-      <div class="section-title">VII. Formule de Moivre – Formule d’Euler</div>
-      <div class="subsection">1. Formule de Moivre</div>
-      <div class="subsection">2. Formule d’Euler</div>
-      <div class="subsection">3. Linéariser des expressions trigonométriques</div>
-      <div class="example">Exemple</div>
-      <div class="solution">Solution</div>
-    </div>
-
-    <!-- VIII. Équations -->
-    <div class="section">
-      <div class="section-title">VIII. Résolution d’équations dans C</div>
-      <div class="subsection">1. Racines nièmes (n ≥ 2)</div>
-      <div class="subsubsection">a. Racine n-ième de l’unité</div>
-      <div class="subsubsection">b. Racine n-ième d’un nombre complexe</div>
-      <div class="example">Exemple</div>
-      <div class="subsubsection">c. Propriétés</div>
-      <div class="subsubsection">d. Racine carrée d’un nombre complexe</div>
-    </div>
-
-    <!-- IX. Interprétation géométrique -->
-    <div class="section">
-      <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
-      <div class="subsection">Interprétation de |(d - c) / (b - a)|</div>
-    </div>
-
-  </div>
 </body>
 
 </html>
