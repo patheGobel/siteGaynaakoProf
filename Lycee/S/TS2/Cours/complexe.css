@@ -94,7 +94,7 @@
  }
 
  /* Numérotation automatique */
- .definition ::before {
+ .definition::before {
      content: "Définition " counter(definition-counter) " : ";
      font-weight: bold;
      color: #0c9816;
@@ -171,7 +171,7 @@
      /* centre horizontalement les images */
      gap: 20px;
      /* espace entre les images */
-     margin: 20px 0;
+     margin: 10px 0;
      flex-wrap: wrap;
      /* permet de passer en vertical si écran trop petit */
  }
@@ -183,6 +183,13 @@
      /* conserve les proportions */
  }
 
+ img.solution1 {
+     width: 200px;
+     /* ou width:50%; */
+     height: auto;
+     /* garde les proportions */
+     display: block;
+ }
 
  /*
  ul.bullet-list {
