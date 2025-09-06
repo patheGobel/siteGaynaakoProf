@@ -2,18 +2,28 @@
  body {
      counter-reset: exemple-counter;
  }
-/* Style pour le titre principal de la leçon */
-h1 {
-    font-size: 2.5rem;               /* Grand titre */
-    font-weight: bold;                /* Gras */
-    color: #1d3557;                   /* Bleu foncé élégant */
-    text-align: center;               /* Centré */
-    margin-top: 30px;                 /* Espacement au-dessus */
-    margin-bottom: 30px;              /* Espacement en dessous */
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Légère ombre portée */
-    border-bottom: 3px solid #e63946; /* Ligne rouge sous le titre */
-    padding-bottom: 10px;             /* Décalage avec la ligne */
-}
+
+ /* Style pour le titre principal de la leçon */
+ h1 {
+     font-size: 2.5rem;
+     /* Grand titre */
+     font-weight: bold;
+     /* Gras */
+     color: #1d3557;
+     /* Bleu foncé élégant */
+     text-align: center;
+     /* Centré */
+     margin-top: 30px;
+     /* Espacement au-dessus */
+     margin-bottom: 30px;
+     /* Espacement en dessous */
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+     /* Légère ombre portée */
+     border-bottom: 3px solid #e63946;
+     /* Ligne rouge sous le titre */
+     padding-bottom: 10px;
+     /* Décalage avec la ligne */
+ }
 
  /* Style pour les titres de section */
  .section-title {
@@ -37,6 +47,24 @@ h1 {
      /* Coins arrondis */
      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
      /* Légère ombre */
+ }
+
+ /* Style pour les titres de subsection */
+ .subsection-title {
+     font-size: 1.3rem;
+     /* Taille légèrement plus petite que le h1 */
+     font-weight: bold;
+     /* Gras */
+     color: #db5661;
+     /* Rouge vif pour rappeler le style des sections */
+     margin-top: 20px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     border-left: 5px solid #db5661;
+     /* Ligne décorative à gauche */
+     padding-left: 8px;
+     /* Décalage du texte par rapport à la ligne */
  }
 
  ul.triangle-list {
@@ -135,6 +163,26 @@ h1 {
      color: #ff8c00;
      /* rouge-orange pour le numéro */
  }
+
+ .plan-container {
+     display: flex;
+     /* active le mode flex */
+     justify-content: center;
+     /* centre horizontalement les images */
+     gap: 20px;
+     /* espace entre les images */
+     margin: 20px 0;
+     flex-wrap: wrap;
+     /* permet de passer en vertical si écran trop petit */
+ }
+
+ .planComplex {
+     width: 45%;
+     /* chaque image prend 45% de la largeur du conteneur */
+     height: auto;
+     /* conserve les proportions */
+ }
+
 
  /*
  ul.bullet-list {
