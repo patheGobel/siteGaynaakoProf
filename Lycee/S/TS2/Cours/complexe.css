@@ -1,3 +1,8 @@
+ /* Initialisation du compteur */
+ body {
+     counter-reset: exemple-counter;
+ }
+
  ul.triangle-list {
      list-style: none;
      /* enlever les puces normales */
@@ -7,6 +12,43 @@
  ul.triangle-list li::before {
      content: "► ";
      /* équivalent à \blacktriangleright */
-     color: black;
+     color: rgb(219, 37, 37);
      margin-right: 6px;
  }
+
+ /* Style pour les exemples */
+ .example {
+     counter-increment: exemple-counter;
+     font-weight: bold;
+     color: #0077cc;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #0077cc;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .example::before {
+     content: "Exemple " counter(exemple-counter) " : ";
+     font-weight: bold;
+     color: #e63946;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /*
+ ul.bullet-list {
+     list-style: none;
+     padding-left: 0;
+ }
+ */
+
+ /*
+ ul.bullet-list li::before {
+     content: "• ";
+     font-size: 1.2em;
+     color: #e63946;
+     
+ margin-right: 6px;
+ }*/
