@@ -1,7 +1,9 @@
  /* Initialisation du compteur */
  body {
-     counter-reset: exemple-counter;
+     counter-reset:
+         definition-counter exemple-counter remark-counter propriete-counter exercise-counter application-exercise-counter;
  }
+
 
  /* Style pour le titre principal de la leçon */
  h1 {
@@ -117,6 +119,48 @@
  /* Numérotation automatique */
  .example::before {
      content: "Exemple " counter(exemple-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les exercise */
+ .exercise {
+     counter-increment: exercise-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .exercise::before {
+     content: "Exercice " counter(exercise-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les application-exercise */
+ .application-exercise {
+     counter-increment: application-exercise-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .application-exercise::before {
+     content: "Exerice Application " counter(application-exercise-counter) " : ";
      font-weight: bold;
      color: #0c9816;
      /* Rouge pour bien marquer le numéro */
