@@ -2,6 +2,42 @@
  body {
      counter-reset: exemple-counter;
  }
+/* Style pour le titre principal de la leçon */
+h1 {
+    font-size: 2.5rem;               /* Grand titre */
+    font-weight: bold;                /* Gras */
+    color: #1d3557;                   /* Bleu foncé élégant */
+    text-align: center;               /* Centré */
+    margin-top: 30px;                 /* Espacement au-dessus */
+    margin-bottom: 30px;              /* Espacement en dessous */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Légère ombre portée */
+    border-bottom: 3px solid #e63946; /* Ligne rouge sous le titre */
+    padding-bottom: 10px;             /* Décalage avec la ligne */
+}
+
+ /* Style pour les titres de section */
+ .section-title {
+     font-size: 1.6rem;
+     /* Taille plus grande */
+     font-weight: bold;
+     /* Gras */
+     color: #e63946;
+     /* Rouge pour attirer l'attention */
+     border-left: 6px solid #e63946;
+     /* Ligne verticale colorée à gauche */
+     padding-left: 12px;
+     /* Décalage du texte par rapport à la ligne */
+     margin-top: 30px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     background-color: #ffe6e6;
+     /* Fond très léger */
+     border-radius: 5px;
+     /* Coins arrondis */
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+     /* Légère ombre */
+ }
 
  ul.triangle-list {
      list-style: none;
@@ -16,14 +52,35 @@
      margin-right: 6px;
  }
 
+ /* Style pour les definition */
+ .definition {
+     counter-increment: definition-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .definition ::before {
+     content: "Définition " counter(definition-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
  /* Style pour les exemples */
  .example {
      counter-increment: exemple-counter;
      font-weight: bold;
-     color: #0077cc;
+     color: #049320;
      margin-top: 20px;
      margin-bottom: 10px;
-     border-left: 4px solid #0077cc;
+     border-left: 4px solid #05aa18;
      padding-left: 10px;
      font-size: 1.1rem;
      position: relative;
@@ -33,8 +90,50 @@
  .example::before {
      content: "Exemple " counter(exemple-counter) " : ";
      font-weight: bold;
-     color: #e63946;
+     color: #0c9816;
      /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les remarques */
+ .remark {
+     counter-increment: remark-counter;
+     font-weight: bold;
+     color: #ff8c00;
+     /* orange */
+     margin-top: 15px;
+     margin-bottom: 10px;
+     border-left: 4px solid #ff8c00;
+     padding-left: 10px;
+     font-size: 1rem;
+ }
+
+ /* Numérotation automatique des remarques */
+ .remark::before {
+     content: "Remarque " counter(remark-counter) " : ";
+     font-weight: bold;
+     color: #ff8c00;
+     /* rouge-orange pour le numéro */
+ }
+
+ /* Style pour les propriete */
+ .propriete {
+     counter-increment: propriete-counter;
+     font-weight: bold;
+     color: #ff8c00;
+     /* orange */
+     margin-top: 15px;
+     margin-bottom: 10px;
+     border-left: 4px solid #ff8c00;
+     padding-left: 10px;
+     font-size: 1rem;
+ }
+
+ /* Numérotation automatique des propriete */
+ .propriete::before {
+     content: "Propriété " counter(propriete-counter) " : ";
+     font-weight: bold;
+     color: #ff8c00;
+     /* rouge-orange pour le numéro */
  }
 
  /*
