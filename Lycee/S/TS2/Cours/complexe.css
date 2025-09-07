@@ -4,7 +4,6 @@
          definition-counter exemple-counter remark-counter propriete-counter exercise-counter application-exercise-counter;
  }
 
-
  /* Style pour le titre principal de la leçon */
  h1 {
      font-size: 2.5rem;
@@ -64,6 +63,23 @@
      margin-bottom: 15px;
      /* Espacement en dessous */
      border-left: 5px solid #db5661;
+     /* Ligne décorative à gauche */
+     padding-left: 8px;
+     /* Décalage du texte par rapport à la ligne */
+ }
+ /* Style pour les titres de subsubsection-title */
+ .subsubsection-title {
+     font-size: 1.3rem;
+     /* Taille légèrement plus petite que le h1 */
+     font-weight: bold;
+     /* Gras */
+     color: #d98289;
+     /* Rouge vif pour rappeler le style des sections */
+     margin-top: 20px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     border-left: 5px solid #d98289;
      /* Ligne décorative à gauche */
      padding-left: 8px;
      /* Décalage du texte par rapport à la ligne */

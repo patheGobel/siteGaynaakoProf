@@ -21,7 +21,7 @@
 
 <body>
     <div class="container">
-        <h1>Introduction aux Nombres Complexes</h1>
+        <h1>Introduction Aux Nombres Complexes</h1>
         <p>Les nombres complexes, que nous allons explorer dans ce cours, ont une origine intrigante liée à la
             résolution
             des équations polynomiales. Au cours de l'histoire des mathématiques, des énigmes telles que la résolution
@@ -275,12 +275,12 @@
             <div class="section-title">IV. Module d'un Nombre Complexe</div>
             <div>
                 <div class="definition"></div>
-            </div>
-            Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine
-            $(0,0)$ dans le plan complexe.
+                Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine
+                $(0,0)$ dans le plan complexe.
 
-            Le module d'un nombre complexe $z = a + ib$ est défini comme :
-            \[ |z| = \sqrt{a^2 + b^2} \]
+                Le module d'un nombre complexe $z = a + ib$ est défini comme :
+                \[ |z| = \sqrt{a^2 + b^2} \]
+            </div>
             <div class="propriete"></div>
             <p>Le module d'un nombre complexe possède plusieurs propriétés importantes :</p>
             <ul>
@@ -442,24 +442,386 @@
         <!-- VII. Formules -->
         <div class="section">
             <div class="section-title">VII. Formule de Moivre - Formule d'Euler</div>
-            <div class="subsection-title">1. Formule de Moivre</div>
-            <div class="subsection-title">2. Formule d'Euler</div>
+            <div>
+                <div class="subsection-title">1. Formule de Moivre</div>
+                <p>A partir de la forme trigonométrique d'un nombre complexe on peut déduire la formule de Moivre.<br>
+                </p>
+                <p>$\forall \theta \in \mathbb{R}$ et $n \in \mathbb{Z}$,</p>
+                <p>$(cos(\theta)+isin(\theta))^{n}=cos(n\theta)+isin(n\theta)$</p>
+                <p>$(cos(\theta)-isin(\theta))^{n}=cos(n\theta)-isin(n\theta)$</p>
+            </div>
+            <div>
+                <div class="subsection-title">2. Formule d'Euler</div>
+                <p>A partir de la forme exponentielle d'un nombre complexe on peut déduire les formules d'Euler.</p>
+                <p>$cos(\theta)\frac{e^{i\theta}+e^{-i\theta}}{2}$</p>
+                <p>$sin(\theta)\frac{e^{i\theta}-e^{-i\theta}}{2i}$</p>
+                <p>$cos(n\theta)=\frac{e^{ni\theta}+e^{-ni\theta}}{2}$</p>
+                <p>$sin(n\theta)=\frac{e^{ni\theta}-e^{-ni\theta}}{2i}$</p>
+            </div>
             <div cclass="subsection-title">3. Linéariser des expressions trigonométriques</div>
-            <div class="example"></div>
-            <div class="solution">Solution</div>
+            <div>
+                <div class="example"></div>
+                <p>Linéariser $sin^{3}(x)$ et $cos^{3}(x)$</p>
+            </div>
+            <div>
+                <div class="solution">Solution</div>
+                <p>$cos^{3}(x)=\frac{1}{4}cos(3x)+\frac{3}{4}cos(x)$</p>
+                <p>$sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$</p>
+            </div>
         </div>
 
         <!-- VIII. Équations -->
         <div class="section">
             <div class="section-title">VIII. Résolution déquations dans C</div>
             <div class="subsection-title">1. Racines nièmes (n ≥ 2)</div>
-            <div class="subsubsection">a. Racine n-ième de l'unité</div>
-            <div class="subsubsection">b. Racine n-ième d'un nombre complexe</div>
-            <div class="example"></div>
-            <div class="propriete"></div>
-            <div class="subsubsection">d. Racine carrée d'un nombre complexe</div>
-        </div>
+            <div class="subsubsection-title">a. Racine n-ième de l'unité</div>
+            <p>Les <b>racines n-ièmes de l'unité</b> sont les solutions complexes de l'équation suivante :\(z^n = 1,\)
+                où \(n \in \mathbb{N}^*\) est un entier naturel non nul.</p>
 
+            <p> Elles sont appelées ainsi car leur module est toujours égal à \(1\), ce qui signifie qu'elles
+                appartiennent
+                au cercle unité dans le plan complexe.</p>
+            <p><b>Formule générale :</b> Les \(n\) racines n-ièmes de l'unité sont données par :<br>
+                \(
+                z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right),
+                \text{ où } k \in \{0, 1, 2, \ldots, n-1\}
+                \)</p>
+            <p><b>Interprétation :</b>Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de
+                l'origine, dans le sens trigonométrique (sens anti-horaire). </p>
+            <div>
+                <div class="example"></div>
+                Résoudre \( z^3 = 1, \) dans \( \mathbb{C} \).
+            </div>
+            <div>
+                <div class="solution">Solution</div>
+                Les \(3\) racines cubiques de l'unité sont données par la formule générale :
+                \[
+                z_k = e^{i\frac{2k\pi}{3}} = \cos\left(\frac{2k\pi}{3}\right) + i\sin\left(\frac{2k\pi}{3}\right), \quad
+                k \in \{0, 1, 2\}.
+                \]
+
+                <p>Calcul des racines :</p>
+                <ol>
+                    <li><b>Pour \(k = 0\) :</b> \[
+                        z_0 = e^{i\frac{2\cdot 0\pi}{3}} = e^{i0} = 1.
+                        \]</li>
+                    <li><b>pour \(k = 1\) :</b> \[z_1 = e^{i\frac{2\cdot 1\pi}{3}} = e^{i\frac{2\pi}{3}} =
+                        \cos\left(\frac{2\pi}{3}\right) +
+                        i\sin\left(\frac{2\pi}{3}\right) = -\frac{1}{2} + i\frac{\sqrt{3}}{2}.\]</li>
+                    <li><b>Pour \(k = 2\) :</b> \[
+                        z_2 = e^{i\frac{2\cdot 2\pi}{3}} = e^{i\frac{4\pi}{3}} = \cos\left(\frac{4\pi}{3}\right) +
+                        i\sin\left(\frac{4\pi}{3}\right) = -\frac{1}{2} - i\frac{\sqrt{3}}{2}.
+                        \]</li>
+                </ol>
+                <p><b>Résultat : </b>Les \(3\) racines cubiques de l'unité sont :
+                    \[
+                    z_0 = 1, \quad z_1 = -\frac{1}{2} + i\frac{\sqrt{3}}{2}, \quad z_2 = -\frac{1}{2} -
+                    i\frac{\sqrt{3}}{2}.
+                    \]</p>
+                <p><b>Représentation graphique dans le plan complexe :</b></p>
+                <img src="images/solution10.png" class="solution1" alt="Solution">
+                <p>Les racines cubiques de l'unité forment les sommets d'un triangle équilatéral inscrit dans le cercle
+                    unité dans le plan complexe.</p>
+            </div>
+            <div>
+                <div class="example"></div>
+                Resoudre \( z^4 = 1, \) dans $\mathbb{C}$
+            </div>
+            <div>
+                <div class="solution">Solution</div>
+                <p>Calcul des racines :</p>
+                <ol>
+                    <li><b>Pour \(k = 0\) :</b> \(
+                        z_0 = e^{i\frac{2\cdot 0\pi}{4}} = e^{i0} = 1.
+                        \)</li>
+                    <li><b>Pour \(k = 1\) :</b> \(
+                        z_1 = e^{i\frac{2\cdot 1\pi}{4}} = e^{i\frac{\pi}{2}} = \cos\left(\frac{\pi}{2}\right) +
+                        i\sin\left(\frac{\pi}{2}\right) = i.
+                        \)</li>
+                    <li><b>Pour \(k = 2\) :</b> \(
+                        z_2 = e^{i\frac{2\cdot 2\pi}{4}} = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
+                        \)</li>
+                    <li><b>Pour \(k = 3\) :</b> \(
+                        z_3 = e^{i\frac{2\cdot 3\pi}{4}} = e^{i\frac{3\pi}{2}} = \cos\left(\frac{3\pi}{2}\right) +
+                        i\sin\left(\frac{3\pi}{2}\right) = -i.
+                        \)</li>
+                </ol>
+                <p><b>Résultat :</b>Les \(4\) racines quatrièmes de l'unité sont :
+                    \[
+                    z_0 = 1, \quad z_1 = i, \quad z_2 = -1, \quad z_3 = -i.
+                    \]</p>
+                <p><b>Représentation graphique dans le plan complexe :</b></p>
+                <img src="images/solution11.png" class="solution1" alt="Solution">
+                <p>Les racines quatrièmes de l'unité forment les sommets d'un carré inscrit dans le cercle unité dans le
+                    plan complexe.</p>
+            </div>
+            <div>
+                <div class="subsubsection-title">b. Racine n-ième d'un nombre complexe</div>
+                <p>Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.</p>
+                <p>L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.</p>
+                <p>$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.</p>
+            </div>
+            <div>
+                <div class="example"></div>
+                Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$
+            </div>
+            <di>
+                <div class="solution">Solution</div>
+                $U=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|U|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec
+                $\theta=\frac{\pi}{4}$
+            </di>
+            <div>
+                <div class="propriete"></div>
+                <p>Soit $z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi)}{n}}$</p>
+                Les racines $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$ sont
+                représentées dans le plan complexe par les points $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ;
+                $M_{5}$ ; ... ; $M_{k-1}$ qui sont les sommets d'un polygone régulier inscrit dans le cercle de rayon
+                $\sqrt[n]{|U|}$.
+            </div>
+            <div class="subsubsection-title">d. Racine carrée d'un nombre complexe</div>
+            Soit \( z \in \mathbb{C} \), un nombre complexe écrit sous la forme \( z = a + bi \) avec \( a, b \in
+            \mathbb{R} \).
+            Trouver les racines carrées de \( z \), c'est résoudre l'équation \( z = w^2 \), où \( w = x + yi \) est un
+            nombre complexe, avec \( x, y \in \mathbb{R} \).
+
+            En développant \( w^2 \), on obtient :
+            \[
+            (x + yi)^2 = x^2 - y^2 + 2xyi = a + bi.
+            \]
+
+            Cela donne le système suivant :
+            \[
+            \begin{cases}
+            x^2 - y^2 = a, \\
+            2xy = b.
+            \end{cases}
+            \]
+
+            Par ailleurs, puisque \( z = w^2 \), on a \( |z| = |w^2| \). Comme \( |w^2| = |w|^2 \), il en résulte que :
+            \[
+            x^2 + y^2 = \sqrt{a^2 + b^2}.
+            \]
+
+            Ainsi, on obtient un système de trois équations :
+            \[
+            \begin{cases}
+            x^2 - y^2 = a, \\
+            2xy = b, \\
+            x^2 + y^2 = \sqrt{a^2 + b^2}.
+            \end{cases}
+            \]
+
+            Ce système peut être utilisé pour déterminer les valeurs de \( x \) et \( y \), et ainsi les deux racines
+            carrées de \( z \) :
+            \[
+            w_1 = x + yi \quad \text{et} \quad w_2 = -x - yi.
+            \]
+        </div>
+        <div>
+            <div class="example"></div>
+            Trouvons les racines carrées de \( z = 3 + 4i \).
+        </div>
+        <div>
+            <div class="solution">Solution</div>
+            <p><b>Étape 1 : Établir le système d'équations</b></p>
+            <p>Le nombre complexe \( z = 3 + 4i \) est écrit sous la forme \( z = a + bi \), avec \( a = 3 \) et \( b =
+                4 \).
+
+                Le système à résoudre est :
+                \[
+                \begin{cases}
+                x^2 - y^2 = a, \\
+                2xy = b, \\
+                x^2 + y^2 = \sqrt{a^2 + b^2}.
+                \end{cases}
+                \]
+
+                Calculons \( \sqrt{a^2 + b^2} \) :
+                \[
+                \sqrt{a^2 + b^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.
+                \]
+
+                Ainsi, le système devient :
+                \[
+                \begin{cases}
+                x^2 - y^2 = 3, \\
+                2xy = 4, \\
+                x^2 + y^2 = 5.
+                \end{cases}\implies
+                \begin{cases}
+                x^2 - y^2 = 3, \\
+                x^2 + y^2 = 5,\\
+                2xy = 4.
+                \end{cases}\implies
+                \begin{cases}
+                x^2 = 4, \\
+                y^2 = 1,\\
+                2xy = 4.
+                \end{cases}\implies
+                \begin{cases}
+                x = 2 \textbf{ ou } x = -2, \\
+                y = 1 \textbf{ ou } y = -1,\\
+                2xy = 4.
+                \end{cases}
+                \]</p>
+            <p><b>Étape 2 : Résoudre le système</b></p>
+            De \( x^2 + y^2 = 5 \) et \( x^2 - y^2 = 3 \), additionnons les deux équations :
+            \[
+            2x^2 = 8 \implies x^2 = 4 \implies x = \pm 2.
+            \]
+
+            Si \( x = 2 \), utilisons \( 2xy = 4 \) pour trouver \( y \) :
+            \[
+            2(2)y = 4 \implies y = 1.
+            \]
+
+            Si \( x = -2 \), alors \( 2(-2)y = 4 \) donne :
+            \[
+            y = -1.
+            \]
+            <p><b>Étape 3 : Les solutions</b></p>
+            Les deux solutions sont :
+            \[
+            w_1 = x + yi = 2 + i, \quad w_2 = -x - yi = -2 - i.
+            \]
+            <p><b>Résultat final :</b></p>
+            Les racines carrées de \( z = 3 + 4i \) sont :
+            \[
+            w_1 = 2 + i \quad \text{et} \quad w_2 = -2 - i.
+            \]
+            <p><b>Résoudre dans \( \mathbb{C} \) l'équation \( z^2 - (1 + i)z + i = 0 \).</b></p>
+            <p><b>1.Trouver \( \sqrt{\Delta} \) en utilisant la méthode \( z = w^2 \) :</b></p>
+            On cherche \( \sqrt{\Delta} \), où \( \Delta = -2i \), en résolvant \( w^2 = -2i \).
+            Posons \( w = x + yi \), avec \( x, y \in \mathbb{R} \). Alors :
+            \[
+            (x + yi)^2 = x^2 - y^2 + 2xyi = -2i.
+            \]
+
+            Cela donne le système suivant :
+            \[
+            \begin{cases}
+            x^2 - y^2 = 0, \\
+            2xy = -2.
+            \end{cases}
+            \]
+            <p><b>Résolution :</b></p>
+            <ul>
+                <li>De \( x^2 - y^2 = 0 \), on a \( x^2 = y^2 \), donc \( y = \pm x \).</li>
+                <li>Substituons \( y = x \) dans \( 2xy = -2 \) :</li>
+                \[
+                2x(x) = -2 \implies 2x^2 = -2 \implies x^2 = 1 \implies x = \pm 1.
+                \]
+                Si \( x = 1 \), alors \( y = 1 \).
+                Si \( x = -1 \), alors \( y = -1 \).
+            </ul>
+            <p><b>Les solutions pour \( w \) sont :</b></p>
+            \[
+            w_1 = 1 - i \quad \text{et} \quad w_2 = -1 + i.
+            \]
+
+            Ainsi, \( \sqrt{\Delta} = 1 - i \) ou \( \sqrt{\Delta} = -1 + i \).
+            <p><b>2.Appliquer la formule des solutions :</b></p>
+            Les solutions de l'équation quadratique sont données par :
+            \[
+            z = \frac{-b \pm \sqrt{\Delta}}{2a}.
+            \]
+            <ul>
+                <li>Pour \( \sqrt{\Delta} = 1 - i \) :
+                    \[
+                    z_1 = \frac{-(-1 - i) + (1 - i)}{2} = \frac{1 + i + 1 - i}{2} = \frac{2}{2} = 1.
+                    \]</li>
+                <li>Pour \( \sqrt{\Delta} = -1 + i \) :
+                    \[
+                    z_2 = \frac{-(-1 - i) - (-1 + i)}{2} = \frac{1 + i - (-1 + i)}{2} = \frac{1 + i + 1 - i}{2} =
+                    \frac{2i}{2} = i.
+                    \]</li>
+            </ul>
+            <p><b>Résultat final :</b></p>
+            Les solutions de \( z^2 - (1 + i)z + i = 0 \) sont :
+            \[
+            z_1 = 1 \quad \text{et} \quad z_2 = i.
+            \]
+        </div>
+        <div>
+            <div class="example"></div>
+            Soit $(E)$ l'équation définie par $(E)$ :
+            \[
+            z^3 - 3z^2 + (3 - i)z - 2(1 - i) = 0.
+            \]
+            <ol>
+                <li>Montrer que $(E)$ admet une solution réelle à déterminer.</li>
+                <li>Résoudre $(E)$.</li>
+            </ol>
+        </div>
+        <div>
+            <div class="solution">Solution</div>
+            <ol>
+                <li>Soit $z = a$ la solution réelle de $(E)$.</li>
+                Donc,
+                \[
+                a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0
+                \]
+                \[
+                \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0
+                \]
+                \[
+                \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0.
+                \]
+
+                Cela implique :
+                \[
+                \begin{cases}
+                a^3 - 3a^2 + 3a - 2 = 0 \\
+                2 - a = 0
+                \end{cases}
+                \]
+
+                \[
+                \implies
+                \begin{cases}
+                a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\
+                a = 2 \quad (2)
+                \end{cases}
+                \]
+
+                $a = 2$ vérifie aussi l'équation $(1)$, donc $2$ est la solution réelle cherchée.
+                <li>L’équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
+                    En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$, $b$ et $c$.
+
+                    On a :
+                    \[
+                    (z - 2)(z^2 - z + 1 - i) = 0 \iff z = 2 \quad \text{ou} \quad z^2 - z + 1 - i = 0.
+                    \]
+
+                    Soit l'équation $z^2 - z + 1 - i = 0$, alors :
+                    \[
+                    \Delta = (1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
+                    \]
+
+                    Donc :
+                    \[
+                    z_1 = \frac{1 - 1 - 2i}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + 1 + 2i}{2} = 1 + i.
+                    \]
+
+                    D'où :
+                    \[
+                    S_C = \{2; -i; 1 + i\}.
+                    \]
+                    
+
+                    \[
+                    \begin{array}{|c|c|c|c|c|}
+                    \hline
+                    & 1 & 1 & 1 & 1 \\
+                    \hline
+                    -1 & \times & -1 & 0 & -1 \\
+                    \hline
+                    & 1 & 0 & 1 & 0 \\
+                    \hline
+                    \end{array}
+                    \]</li>
+            </ol>
+        </div>
         <!-- IX. Interprétation géométrique -->
         <div class="section">
             <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
