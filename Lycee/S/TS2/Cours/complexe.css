@@ -166,6 +166,26 @@
      /* Rouge pour bien marquer le numéro */
  }
 
+ /* Style pour les correction application-exercise */
+ .correction {
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+     display: none;
+ }
+
+ /* Numérotation automatique */
+ .correction::before {
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
  /* Style pour les remarques */
  .remark {
      counter-increment: remark-counter;

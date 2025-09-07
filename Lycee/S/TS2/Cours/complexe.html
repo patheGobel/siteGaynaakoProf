@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction aux Nombres Complexes</title>
     <link rel="stylesheet" href="complexe.css">
+    <script src="complexe.js"></script>
     <script>
         MathJax = {
             tex: {
@@ -321,6 +322,10 @@
                     Soit A, B et C les affixes respectives \(1-3i\) ; \(4+5i\) ; \(-3+2i\).
                     <li>Calculer: \(AB\) ; \(AC\) ; \(BC\).</li>
                 </ol>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
             </div>
         </div>
 
@@ -361,12 +366,20 @@
                         $z_C \neq z_A$ $\arg(z_A-z_B)=(\vec{u},\overrightarrow{AB})$</li>
                     <li>$\arg(\frac{z_C-z_A}{z_B-z_A})=(\widehat{\overrightarrow{AB},\overrightarrow{AC}})$</li>
                 </ul>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
             </div>
             <div>
                 <div class="application-exercise"></div>
                 <p>Déterminer l'argument des nombres complexes suivnats</p>
                 <p>$z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$</p>
                 <p>$z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$</p>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
             </div>
             <div>
                 <div class="remark"></div>
@@ -381,24 +394,57 @@
         <!-- VI. Formes -->
         <div class="section">
             <div class="section-title">VI. Forme d'un nombre complexe</div>
-            <div class="subsection">1. Forme algébrique</div>
-            <div class="example"></div>
-            <div class="subsection">2. Forme trigonométrique</div>
-            <div class="example"></div>
+            <div class="subsection-title">1. Forme algébrique</div>
+            Soit $a$ et $b$ des réels, l'écriture $z=a+ib$ est appélé forme algébrique du nombre complexe.
+            <div>
+                <div class="example"></div>
+                Donner la forme algébrique dans chaque cas
+            </div>
+            <div class="subsection-title">2. Forme trigonométrique</div>
+            <p>Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme trigonométrique d'un nombre
+                complexe
+                l'écriture suivante:</p>
+            <p>$z=|z|(cos(\theta)+isin(\theta)) \text{ Avec }
+                \begin{cases}cos(\theta)=\frac{Re(z)}{|z|}\\sin(\theta)=\frac{Im(z)}{|z|}\end{cases}$</p>
+            <div>
+                <div class="example"></div>
+                Donner la forme trigonométrique des nombres complexes suivantes:
+                $z_{1}=1+i\sqrt{3}$ ; $z_{2}=-\sqrt{3}+3i$ ; $z_{3}=\frac{-\sqrt{2}}{1-i}$
+            </div>
             <div class="solution"></div>
-            <div class="subsection">3. Forme exponentielle</div>
-            <div class="definition"></div>
-            <div class="propriete"></div>
-            <div class="application-exercise"></div>
-            <div class="correction"></div>
+            <div class="subsection-title">3. Forme exponentielle</div>
+            <div>
+                <div class="definition"></div>
+                <p>On pose $cos(\theta)+isin(\theta)=e^{i\theta}$</p>
+                <p>Soit z un nombre complexe non nul d'argument $\theta$ i.e $\arg(z)=\theta$.</p>
+                <p>On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$</p>
+            </div>
+            <div>
+                <div class="propriete"></div>
+                <p>Soit $z_{1}=e^{i\theta_{1}}$ et $z_{2}=e^{i\theta_{1}}$ on a:</p>
+                <p>$z=e^{i\theta_{1}} \times e^{i\theta_{2}} = e^{i(\theta_{1}+\theta_{2})}$</p>
+                <p>$z=\frac{e^{i\theta_{1}}}{e^{i\theta_{2}}} = e^{i(\theta_{1}-\theta_{2})}$</p>
+                <p>$z=\frac{1}{e^{i\theta}} = e^{-i\theta}$</p>
+                <p>$z^{n}=(e^{i\theta_{1}})^{n}=e^{in\theta_{1}}$</p>
+            </div>
+            <div>
+                <div class="application-exercise"></div>
+                <p>Donne la forme exponentielle des nombres complexes suivants:</p>
+                <p>$z_{1}=-\sqrt{3}+i$ ; $z_{2}=-\sqrt{6}+i\sqrt{2}$ et $z_{3}=1+i\sqrt{3}$</p>
+
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
+            </div>
         </div>
 
         <!-- VII. Formules -->
         <div class="section">
             <div class="section-title">VII. Formule de Moivre - Formule d'Euler</div>
-            <div class="subsection">1. Formule de Moivre</div>
-            <div class="subsection">2. Formule d'Euler</div>
-            <div class="subsection">3. Linéariser des expressions trigonométriques</div>
+            <div class="subsection-title">1. Formule de Moivre</div>
+            <div class="subsection-title">2. Formule d'Euler</div>
+            <div cclass="subsection-title">3. Linéariser des expressions trigonométriques</div>
             <div class="example"></div>
             <div class="solution">Solution</div>
         </div>
@@ -406,7 +452,7 @@
         <!-- VIII. Équations -->
         <div class="section">
             <div class="section-title">VIII. Résolution déquations dans C</div>
-            <div class="subsection">1. Racines nièmes (n ≥ 2)</div>
+            <div class="subsection-title">1. Racines nièmes (n ≥ 2)</div>
             <div class="subsubsection">a. Racine n-ième de l'unité</div>
             <div class="subsubsection">b. Racine n-ième d'un nombre complexe</div>
             <div class="example"></div>
