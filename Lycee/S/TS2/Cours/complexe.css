@@ -270,7 +270,9 @@
      /* garde les proportions */
      display: block;
  }
-
+ p b {
+    color: red;
+  }
  /*
  ul.bullet-list {
      list-style: none;

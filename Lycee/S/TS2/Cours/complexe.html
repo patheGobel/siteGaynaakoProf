@@ -785,7 +785,7 @@
                 \]
 
                 $a = 2$ vérifie aussi l'équation $(1)$, donc $2$ est la solution réelle cherchée.
-                <li>L’équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
+                <li>L'équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
                     En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$, $b$ et $c$.
 
                     On a :
@@ -807,7 +807,7 @@
                     \[
                     S_C = \{2; -i; 1 + i\}.
                     \]
-                    
+
 
                     \[
                     \begin{array}{|c|c|c|c|c|}
@@ -825,9 +825,66 @@
         <!-- IX. Interprétation géométrique -->
         <div class="section">
             <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
-            <div class="subsection">Interprétation de |(d - c) / (b - a)|</div>
+            <div>
+                <div class="subsection-title">Interprétation de \(\dfrac{\left|(d - c)\right|}{\left|(b - a)\right|}\)
+                </div>
+                Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$
+                \( \left|\dfrac{d-c}{b-a}\right|=\dfrac{CD}{AB} \)<br>
+                \( \arg\left(\frac{d-c}{b-a}\right)=(\overrightarrow{AB},\overrightarrow{CD}) \)
+                <p><b>Réel</b></p>
+                <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{+}$ alors
+                    $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=0
+                    [2\pi]$</p>
+                <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{-}$ alors
+                    $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=\pi
+                    [2\pi]$</p>
+                <p><b>imaginaire pur</b></p>
+                <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{+}$ alors $\widehat{(\vec{AB},\vec{CD})}=\dfrac{\pi}{2}
+                    [2\pi]$
+                </p>
+                <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{-}$ alors $\widehat{(\vec{AB},\vec{CD})}=-\dfrac{\pi}{2}
+                    [2\pi]$
+                </p>
+            </div>
+            <div>
+                <div class="example"></div>
+                <p>Soit $Z=\frac{iz+2}{z+i}$ un nombre complexe</p>
+                <p>Détermine l'ensemble des points M tel que: $|Z'|=1$ puis $|Z'|=2$</p>
+            </div>
+            <div>
+                <div class="solution"></div>
+                <p>$|Z'|=|\frac{i(z-2i)}{z+i}|$</p>
+                <p>Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:</p>
+                <p>$|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=\left|
+                    \frac{MB}{MA}\right| $</p>
+                <p>Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$</p>
+                <p>L'ensemble des points $M$ tel que $|Z'|=1$ est la médiatrice $[AB]$</p>
+            </div>
         </div>
-
+        <div>
+            <div class="subsection-title">Configurations géométriques</div>
+            <ul>
+                <li><b>Condition d'alignement: </b><br>
+                    $A(a)$, $B(b)$ et $C(c)$ sont alignés si et seulement si $(b -
+                    a)(\overline{c} - \overline{a})$ est réel.</li>
+                <li><b>Condition d'orthogonalité: </b><br>
+                    Les droites $(AB)$ et $(AC)$ sont orthogonales si et seulement si $(b - a)(\overline{c} -
+                    \overline{a})$ est imaginaire pur.
+                </li>
+                <li><b>Condition de cocyclicité: </b><br></li>
+                <li><b>Triangle équilatéral: </b><br>
+                    Les points $A(a)$, $B(b)$ et $C(c)$ forment un triangle équilatéral direct si, et seulement si :
+                    \[
+                    a + j b + j^2 c = 0.
+                    \]</li>
+                <li><b>Barycentre: </b><br>
+                    Si $G$ est le barycentre des points $M_k$ d'affixe $z_k$, affectés des coefficients $x_k$, alors
+                    l'affixe de $G$ est :
+                    \[
+                    \frac{1}{\sum_{k=1}^n x_k} \left( \sum_{k=1}^n x_k z_k \right).
+                    \]</li>
+            </ul>
+        </div>
     </div>
 </body>
 
