@@ -1,7 +1,7 @@
  /* Initialisation du compteur */
  body {
      counter-reset:
-         definition-counter exemple-counter remark-counter propriete-counter exercise-counter application-exercise-counter;
+         definition-counter exemple-counter solution-counter remark-counter propriete-counter exercise-counter application-exercise-counter;
  }
 
  /* Style pour le titre principal de la leçon */
@@ -67,6 +67,7 @@
      padding-left: 8px;
      /* Décalage du texte par rapport à la ligne */
  }
+
  /* Style pour les titres de subsubsection-title */
  .subsubsection-title {
      font-size: 1.3rem;
@@ -135,6 +136,27 @@
  /* Numérotation automatique */
  .example::before {
      content: "Exemple " counter(exemple-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /*Solution Exemple*/
+ .solution {
+     counter-increment: solution-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .solution::before {
+     content: "Solution " counter(solution-counter) " : ";
      font-weight: bold;
      color: #0c9816;
      /* Rouge pour bien marquer le numéro */
@@ -270,9 +292,11 @@
      /* garde les proportions */
      display: block;
  }
+
  p b {
-    color: red;
-  }
+     color: red;
+ }
+
  /*
  ul.bullet-list {
      list-style: none;
