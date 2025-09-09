@@ -896,14 +896,41 @@
                 <li><b>Condition de cocyclicité de 4 points: </b><br>Soient A, B, C, et D quatre points distincts du
                     plan. Alors A, B, C, et
                     D sont cocycliques ou alignés si et seulement si on a l'égalité d'angles orientés:
-                    $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}=\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
+                    $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
+                    \widehat{(\overrightarrow{DB},\overrightarrow{DC})}
                     [2\pi]$ ou
-                    $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}=\pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
-                    [2\pi]$</li>
+                    $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
+                    \pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
+                    [2\pi]$<br>
+                </li>
                 <b><u>$1^{er}$CAS:</u></b>
                 <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}=\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
                     [2\pi]$</p>
                 <img src="images/solution12.png" class="solution1" alt="Solution">
+                <p>Ceci se traduit par : \[
+                    \begin{aligned}
+                    \arg \left( \frac{c-a}{b-a} \right) \equiv \arg \left( \frac{c-d}{b-d} \right) \pmod{2\pi} &\iff
+                    \arg \left( \frac{c-a}{b-a} \right) - \arg \left( \frac{c-d}{b-d} \right) \equiv 0 \pmod{2\pi}\\
+                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \right]
+                    \equiv
+                    0 \pmod{2\pi}\\
+                    &\iff \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \in \mathbb{R}^{*+}
+                    \end{aligned}
+                    \]</p>
+                <b><u>$1^{er}$CAS:</u></b>
+                <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
+                    \pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
+                    [2\pi]$</p>
+                <img src="images/solution13.png" class="solution1" alt="Solution">
+                <p>Cecil se traduit par :\[
+                    \begin{aligned}
+                    \arg \left( \frac{c-a}{b-a} \right) \equiv \pi - \arg \left( \frac{b-d}{c-d} \right) \pmod{2\pi}&\iff \arg \left( \frac{c-a}{b-a} \right) + \arg \left( \frac{b-d}{c-d} \right) - \pi \equiv 0
+                    \pmod{2\pi}\\
+                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \times (-1)
+                    \right] \equiv 0 \pmod{2\pi}\\
+                    &\iff \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \in \mathbb{R}^*_{-}
+                    \end{aligned}
+                    \]</p>
                 <li><b>Triangle équilatéral: </b><br>
                     Les points $A(a)$, $B(b)$ et $C(c)$ forment un triangle équilatéral direct si, et seulement si :
                     \[
