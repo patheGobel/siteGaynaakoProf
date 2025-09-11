@@ -356,10 +356,11 @@
                 <p>Soit z un nombre complexe non nul sur le repère othonormal $(O,\vec{u},\vec{v})$</p>
                 <p>L'argument du nombre complexe $z = a + ib$ non nul est l'angle en radian que
                     le
-                    vecteur correspondant à $z$ forme avec l'axe des abscisses dans le plan complexe.</p>
+                    vecteur correspondant à $z$ forme avec l'axe des abscisses(axe des réels) dans le plan complexe.</p>
                 <p>On note généralement
-                    $arg(z)=mes(\widehat{\vec{u},\vec{OM}})$</p>
-                <p>En notant $\theta$ on a : $\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et
+                    $arg(z)=mes(\widehat{\vec{u},\overrightarrow{OM}})$</p>
+                <p>En notant $(\widehat{\vec{u},\overrightarrow{OM}})=\theta$ on a :
+                    $\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et
                     $\sin(\theta)=\frac{\mathcal{I}m(z)}{|z|}$
                 </p>
                 <p><b>Rappel</b></p>
@@ -367,11 +368,23 @@
                 <p>Cercles trigonométrie</p>
             </div>
             <div>
+                <div class="propriete"></div>
+                Soient $M$ et $M'$ et $A$, $B$, $C$ et $D$ quatre
+                points distincts dans le plan complexe d'affixes
+                respectifs $z$, $z'$, $a$, $b$, $c$ et $d$ on a :
+                <ol>
+                    <li>$(\overrightarrow{OM},\overrightarrow{OM'})=\arg\left(\dfrac{z'}{z}\right)[2\pi]$</li>
+                    <li>$(\vec{e_1},\overrightarrow{AB})=\arg(b-a)[2\pi]$</li>
+                    <li>$(\overrightarrow{AB},\overrightarrow{AC})=\arg\left(\dfrac{c-a}{b-a}\right)[2\pi]$</li>
+                    <li>$(\overrightarrow{AB},\overrightarrow{CD})=\arg\left(\dfrac{d-c}{b-a}\right)[2\pi]$</li>
+                </ol>
+            </div>
+            <div>
                 <div class="exercise"></div>
                 Exercice 1.e 1.f 1.g (CIAM SE PAGE 2012)
             </div>
             <div>
-                <div class="application-exercise"></div>
+                <div class="propriete"></div>
                 <p>Soit z et z' deux nombrs complexes ,et $n\in \mathbb{N}$</p>
                 <ul>
                     <li>\( \arg(z_1 \cdot z_2) = \arg(z_1) + \arg(z_2)[2\pi] \)</li>
@@ -385,10 +398,6 @@
                         $z_C \neq z_A$ $\arg(z_A-z_B)=(\vec{u},\overrightarrow{AB})$</li>
                     <li>$\arg(\frac{z_C-z_A}{z_B-z_A})=(\widehat{\overrightarrow{AB},\overrightarrow{AC}})$</li>
                 </ul>
-                <button class="toggle-correction">Afficher la correction</button>
-                <div class="correction">
-                    Voici la correction détaillée...
-                </div>
             </div>
             <div>
                 <div class="application-exercise"></div>
@@ -491,400 +500,298 @@
                 <p>$sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$</p>
             </div>
         </div>
-
-        <!-- VIII. Équations -->
+        <!-- VIII. Résolution déquations dans Cs -->
         <div class="section">
             <div class="section-title">VIII. Résolution déquations dans C</div>
-            <div class="subsection-title">1. Racines nièmes (n ≥ 2)</div>
-            <div class="subsubsection-title">a. Racine n-ième de l'unité</div>
-            <p>Les <b>racines n-ièmes de l'unité</b> sont les solutions complexes de l'équation suivante :\(z^n = 1,\)
-                où \(n \in \mathbb{N}^*\) est un entier naturel non nul.</p>
-
-            <p> Elles sont appelées ainsi car leur module est toujours égal à \(1\), ce qui signifie qu'elles
-                appartiennent
-                au cercle unité dans le plan complexe.</p>
-            <p><b>Formule générale :</b> Les \(n\) racines n-ièmes de l'unité sont données par :<br>
-                \(
-                z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right),
-                \text{ où } k \in \{0, 1, 2, \ldots, n-1\}
-                \)</p>
-            <p><b>Interprétation :</b>Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de
-                l'origine, dans le sens trigonométrique (sens anti-horaire). </p>
             <div>
-                <div class="example"></div>
-                Résoudre \( z^3 = 1, \) dans \( \mathbb{C} \).
-            </div>
-            <div>
-                <div class="solution"></div>
-                Les \(3\) racines cubiques de l'unité sont données par la formule générale :
-                \[
-                z_k = e^{i\frac{2k\pi}{3}} = \cos\left(\frac{2k\pi}{3}\right) + i\sin\left(\frac{2k\pi}{3}\right), \quad
-                k \in \{0, 1, 2\}.
-                \]
+                <div class="subsection-title">1. Racines nièmes (n ≥ 2)</div>
+                <div>
+                    <div class="subsubsection-title">a. Racine n-ième de l'unité</div>
+                    <p>Les <b>racines n-ièmes de l'unité</b> sont les solutions complexes de l'équation suivante :\(z^n
+                        =
+                        1,\)
+                        où \(n \in \mathbb{N}^*\) est un entier naturel non nul.</p>
 
-                <p>Calcul des racines :</p>
-                <ol>
-                    <li><b>Pour \(k = 0\) :</b> \[
-                        z_0 = e^{i\frac{2\cdot 0\pi}{3}} = e^{i0} = 1.
-                        \]</li>
-                    <li><b>pour \(k = 1\) :</b> \[z_1 = e^{i\frac{2\cdot 1\pi}{3}} = e^{i\frac{2\pi}{3}} =
-                        \cos\left(\frac{2\pi}{3}\right) +
-                        i\sin\left(\frac{2\pi}{3}\right) = -\frac{1}{2} + i\frac{\sqrt{3}}{2}.\]</li>
-                    <li><b>Pour \(k = 2\) :</b> \[
-                        z_2 = e^{i\frac{2\cdot 2\pi}{3}} = e^{i\frac{4\pi}{3}} = \cos\left(\frac{4\pi}{3}\right) +
-                        i\sin\left(\frac{4\pi}{3}\right) = -\frac{1}{2} - i\frac{\sqrt{3}}{2}.
-                        \]</li>
-                </ol>
-                <p><b>Résultat : </b>Les \(3\) racines cubiques de l'unité sont :
-                    \[
-                    z_0 = 1, \quad z_1 = -\frac{1}{2} + i\frac{\sqrt{3}}{2}, \quad z_2 = -\frac{1}{2} -
-                    i\frac{\sqrt{3}}{2}.
-                    \]</p>
-                <p><b>Représentation graphique dans le plan complexe :</b></p>
-                <img src="images/solution10.png" class="solution1" alt="Solution">
-                <p>Les racines cubiques de l'unité forment les sommets d'un triangle équilatéral inscrit dans le cercle
-                    unité dans le plan complexe.</p>
-            </div>
-            <div>
-                <div class="example"></div>
-                Resoudre \( z^4 = 1, \) dans $\mathbb{C}$
-            </div>
-            <div>
-                <div class="solution"></div>
-                <p>Calcul des racines :</p>
-                <ol>
-                    <li><b>Pour \(k = 0\) :</b> \(
-                        z_0 = e^{i\frac{2\cdot 0\pi}{4}} = e^{i0} = 1.
-                        \)</li>
-                    <li><b>Pour \(k = 1\) :</b> \(
-                        z_1 = e^{i\frac{2\cdot 1\pi}{4}} = e^{i\frac{\pi}{2}} = \cos\left(\frac{\pi}{2}\right) +
-                        i\sin\left(\frac{\pi}{2}\right) = i.
-                        \)</li>
-                    <li><b>Pour \(k = 2\) :</b> \(
-                        z_2 = e^{i\frac{2\cdot 2\pi}{4}} = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
-                        \)</li>
-                    <li><b>Pour \(k = 3\) :</b> \(
-                        z_3 = e^{i\frac{2\cdot 3\pi}{4}} = e^{i\frac{3\pi}{2}} = \cos\left(\frac{3\pi}{2}\right) +
-                        i\sin\left(\frac{3\pi}{2}\right) = -i.
-                        \)</li>
-                </ol>
-                <p><b>Résultat :</b>Les \(4\) racines quatrièmes de l'unité sont :
-                    \[
-                    z_0 = 1, \quad z_1 = i, \quad z_2 = -1, \quad z_3 = -i.
-                    \]</p>
-                <p><b>Représentation graphique dans le plan complexe :</b></p>
-                <img src="images/solution11.png" class="solution1" alt="Solution">
-                <p>Les racines quatrièmes de l'unité forment les sommets d'un carré inscrit dans le cercle unité dans le
-                    plan complexe.</p>
-            </div>
-            <div>
-                <div class="subsubsection-title">b. Racine n-ième d'un nombre complexe</div>
-                <p>Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.</p>
-                <p>L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.</p>
-                <p>$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.</p>
-            </div>
-            <div>
-                <div class="example"></div>
-                Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$
-            </div>
-            <di>
-                <div class="solution"></div>
-                $U=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|U|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec
-                $\theta=\frac{\pi}{4}$
-            </di>
-            <div>
-                <div class="propriete"></div>
-                <p>Soit $z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi)}{n}}$</p>
-                Les racines $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$ sont
-                représentées dans le plan complexe par les points $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ;
-                $M_{5}$ ; ... ; $M_{k-1}$ qui sont les sommets d'un polygone régulier inscrit dans le cercle de rayon
-                $\sqrt[n]{|U|}$.
-            </div>
-            <div class="subsubsection-title">d. Racine carrée d'un nombre complexe</div>
-            Soit \( z \in \mathbb{C} \), un nombre complexe écrit sous la forme \( z = a + bi \) avec \( a, b \in
-            \mathbb{R} \).
-            Trouver les racines carrées de \( z \), c'est résoudre l'équation \( z = w^2 \), où \( w = x + yi \) est un
-            nombre complexe, avec \( x, y \in \mathbb{R} \).
+                    <p> Elles sont appelées ainsi car leur module est toujours égal à \(1\), ce qui signifie qu'elles
+                        appartiennent
+                        au cercle unité dans le plan complexe.</p>
+                    <p><b>Formule générale :</b> Les \(n\) racines n-ièmes de l'unité sont données par :<br>
+                        \(
+                        z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) +
+                        i\sin\left(\frac{2k\pi}{n}\right),
+                        \text{ où } k \in \{0, 1, 2, \ldots, n-1\}
+                        \)</p>
+                    <p><b>Interprétation :</b>Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de
+                        l'origine, dans le sens trigonométrique (sens anti-horaire). </p>
+                    <div>
+                        <div class="example"></div>
+                        Résoudre \( z^3 = 1, \) dans \( \mathbb{C} \).
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                        Les \(3\) racines cubiques de l'unité sont données par la formule générale :
+                        \[
+                        z_k = e^{i\frac{2k\pi}{3}} = \cos\left(\frac{2k\pi}{3}\right) +
+                        i\sin\left(\frac{2k\pi}{3}\right),
+                        \quad
+                        k \in \{0, 1, 2\}.
+                        \]
 
-            En développant \( w^2 \), on obtient :
-            \[
-            (x + yi)^2 = x^2 - y^2 + 2xyi = a + bi.
-            \]
-
-            Cela donne le système suivant :
-            \[
-            \begin{cases}
-            x^2 - y^2 = a, \\
-            2xy = b.
-            \end{cases}
-            \]
-
-            Par ailleurs, puisque \( z = w^2 \), on a \( |z| = |w^2| \). Comme \( |w^2| = |w|^2 \), il en résulte que :
-            \[
-            x^2 + y^2 = \sqrt{a^2 + b^2}.
-            \]
-
-            Ainsi, on obtient un système de trois équations :
-            \[
-            \begin{cases}
-            x^2 - y^2 = a, \\
-            2xy = b, \\
-            x^2 + y^2 = \sqrt{a^2 + b^2}.
-            \end{cases}
-            \]
-
-            Ce système peut être utilisé pour déterminer les valeurs de \( x \) et \( y \), et ainsi les deux racines
-            carrées de \( z \) :
-            \[
-            w_1 = x + yi \quad \text{et} \quad w_2 = -x - yi.
-            \]
-        </div>
-        <div>
-            <div class="example"></div>
-            Trouvons les racines carrées de \( z = 3 + 4i \).
-        </div>
-        <div>
-            <div class="solution"></div>
-            <p><b>Étape 1 : Établir le système d'équations</b></p>
-            <p>Le nombre complexe \( z = 3 + 4i \) est écrit sous la forme \( z = a + bi \), avec \( a = 3 \) et \( b =
-                4 \).
-
-                Le système à résoudre est :
-                \[
-                \begin{cases}
-                x^2 - y^2 = a, \\
-                2xy = b, \\
-                x^2 + y^2 = \sqrt{a^2 + b^2}.
-                \end{cases}
-                \]
-
-                Calculons \( \sqrt{a^2 + b^2} \) :
-                \[
-                \sqrt{a^2 + b^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.
-                \]
-
-                Ainsi, le système devient :
-                \[
-                \begin{cases}
-                x^2 - y^2 = 3, \\
-                2xy = 4, \\
-                x^2 + y^2 = 5.
-                \end{cases}\implies
-                \begin{cases}
-                x^2 - y^2 = 3, \\
-                x^2 + y^2 = 5,\\
-                2xy = 4.
-                \end{cases}\implies
-                \begin{cases}
-                x^2 = 4, \\
-                y^2 = 1,\\
-                2xy = 4.
-                \end{cases}\implies
-                \begin{cases}
-                x = 2 \textbf{ ou } x = -2, \\
-                y = 1 \textbf{ ou } y = -1,\\
-                2xy = 4.
-                \end{cases}
-                \]</p>
-            <p><b>Étape 2 : Résoudre le système</b></p>
-            De \( x^2 + y^2 = 5 \) et \( x^2 - y^2 = 3 \), additionnons les deux équations :
-            \[
-            2x^2 = 8 \implies x^2 = 4 \implies x = \pm 2.
-            \]
-
-            Si \( x = 2 \), utilisons \( 2xy = 4 \) pour trouver \( y \) :
-            \[
-            2(2)y = 4 \implies y = 1.
-            \]
-
-            Si \( x = -2 \), alors \( 2(-2)y = 4 \) donne :
-            \[
-            y = -1.
-            \]
-            <p><b>Étape 3 : Les solutions</b></p>
-            Les deux solutions sont :
-            \[
-            w_1 = x + yi = 2 + i, \quad w_2 = -x - yi = -2 - i.
-            \]
-            <p><b>Résultat final :</b></p>
-            Les racines carrées de \( z = 3 + 4i \) sont :
-            \[
-            w_1 = 2 + i \quad \text{et} \quad w_2 = -2 - i.
-            \]
-            <p><b>Résoudre dans \( \mathbb{C} \) l'équation \( z^2 - (1 + i)z + i = 0 \).</b></p>
-            <p><b>1.Trouver \( \sqrt{\Delta} \) en utilisant la méthode \( z = w^2 \) :</b></p>
-            On cherche \( \sqrt{\Delta} \), où \( \Delta = -2i \), en résolvant \( w^2 = -2i \).
-            Posons \( w = x + yi \), avec \( x, y \in \mathbb{R} \). Alors :
-            \[
-            (x + yi)^2 = x^2 - y^2 + 2xyi = -2i.
-            \]
-
-            Cela donne le système suivant :
-            \[
-            \begin{cases}
-            x^2 - y^2 = 0, \\
-            2xy = -2.
-            \end{cases}
-            \]
-            <p><b>Résolution :</b></p>
-            <ul>
-                <li>De \( x^2 - y^2 = 0 \), on a \( x^2 = y^2 \), donc \( y = \pm x \).</li>
-                <li>Substituons \( y = x \) dans \( 2xy = -2 \) :</li>
-                \[
-                2x(x) = -2 \implies 2x^2 = -2 \implies x^2 = 1 \implies x = \pm 1.
-                \]
-                Si \( x = 1 \), alors \( y = 1 \).
-                Si \( x = -1 \), alors \( y = -1 \).
-            </ul>
-            <p><b>Les solutions pour \( w \) sont :</b></p>
-            \[
-            w_1 = 1 - i \quad \text{et} \quad w_2 = -1 + i.
-            \]
-
-            Ainsi, \( \sqrt{\Delta} = 1 - i \) ou \( \sqrt{\Delta} = -1 + i \).
-            <p><b>2.Appliquer la formule des solutions :</b></p>
-            Les solutions de l'équation quadratique sont données par :
-            \[
-            z = \frac{-b \pm \sqrt{\Delta}}{2a}.
-            \]
-            <ul>
-                <li>Pour \( \sqrt{\Delta} = 1 - i \) :
-                    \[
-                    z_1 = \frac{-(-1 - i) + (1 - i)}{2} = \frac{1 + i + 1 - i}{2} = \frac{2}{2} = 1.
-                    \]</li>
-                <li>Pour \( \sqrt{\Delta} = -1 + i \) :
-                    \[
-                    z_2 = \frac{-(-1 - i) - (-1 + i)}{2} = \frac{1 + i - (-1 + i)}{2} = \frac{1 + i + 1 - i}{2} =
-                    \frac{2i}{2} = i.
-                    \]</li>
-            </ul>
-            <p><b>Résultat final :</b></p>
-            Les solutions de \( z^2 - (1 + i)z + i = 0 \) sont :
-            \[
-            z_1 = 1 \quad \text{et} \quad z_2 = i.
-            \]
-        </div>
-        <div>
-            <div class="example"></div>
-            Soit $(E)$ l'équation définie par $(E)$ :
-            \[
-            z^3 - 3z^2 + (3 - i)z - 2(1 - i) = 0.
-            \]
-            <ol>
-                <li>Montrer que $(E)$ admet une solution réelle à déterminer.</li>
-                <li>Résoudre $(E)$.</li>
-            </ol>
-        </div>
-        <div>
-            <div class="solution"></div>
-            <ol>
-                <li>Soit $z = a$ la solution réelle de $(E)$.</li>
-                Donc,
-                \[
-                a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0
-                \]
-                \[
-                \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0
-                \]
-                \[
-                \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0.
-                \]
-
-                Cela implique :
-                \[
-                \begin{cases}
-                a^3 - 3a^2 + 3a - 2 = 0 \\
-                2 - a = 0
-                \end{cases}
-                \]
-
-                \[
-                \implies
-                \begin{cases}
-                a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\
-                a = 2 \quad (2)
-                \end{cases}
-                \]
-
-                $a = 2$ vérifie aussi l'équation $(1)$, donc $2$ est la solution réelle cherchée.
-                <li>L'équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
-                    En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$, $b$ et $c$.
-
-                    On a :
-                    \[
-                    (z - 2)(z^2 - z + 1 - i) = 0 \iff z = 2 \quad \text{ou} \quad z^2 - z + 1 - i = 0.
-                    \]
-
-                    Soit l'équation $z^2 - z + 1 - i = 0$, alors :
-                    \[
-                    \Delta = (1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
-                    \]
-
-                    Donc :
-                    \[
-                    z_1 = \frac{1 - 1 - 2i}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + 1 + 2i}{2} = 1 + i.
-                    \]
-
-                    D'où :
-                    \[
-                    S_C = \{2; -i; 1 + i\}.
-                    \]
-
-
-                    \[
-                    \begin{array}{|c|c|c|c|c|}
-                    \hline
-                    & 1 & 1 & 1 & 1 \\
-                    \hline
-                    -1 & \times & -1 & 0 & -1 \\
-                    \hline
-                    & 1 & 0 & 1 & 0 \\
-                    \hline
-                    \end{array}
-                    \]</li>
-            </ol>
-        </div>
-        <!-- IX. Interprétation géométrique -->
-        <div class="section">
-            <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
-            <div>
-                <div class="subsection-title">Interprétation de \(\dfrac{\left|(d - c)\right|}{\left|(b - a)\right|}\)
+                        <p>Calcul des racines :</p>
+                        <ol>
+                            <li><b>Pour \(k = 0\) :</b> \[
+                                z_0 = e^{i\frac{2\cdot 0\pi}{3}} = e^{i0} = 1.
+                                \]</li>
+                            <li><b>pour \(k = 1\) :</b> \[z_1 = e^{i\frac{2\cdot 1\pi}{3}} = e^{i\frac{2\pi}{3}} =
+                                \cos\left(\frac{2\pi}{3}\right) +
+                                i\sin\left(\frac{2\pi}{3}\right) = -\frac{1}{2} + i\frac{\sqrt{3}}{2}.\]</li>
+                            <li><b>Pour \(k = 2\) :</b> \[
+                                z_2 = e^{i\frac{2\cdot 2\pi}{3}} = e^{i\frac{4\pi}{3}} = \cos\left(\frac{4\pi}{3}\right)
+                                +
+                                i\sin\left(\frac{4\pi}{3}\right) = -\frac{1}{2} - i\frac{\sqrt{3}}{2}.
+                                \]</li>
+                        </ol>
+                        <p><b>Résultat : </b>Les \(3\) racines cubiques de l'unité sont :
+                            \[
+                            z_0 = 1, \quad z_1 = -\frac{1}{2} + i\frac{\sqrt{3}}{2}, \quad z_2 = -\frac{1}{2} -
+                            i\frac{\sqrt{3}}{2}.
+                            \]</p>
+                        <p><b>Représentation graphique dans le plan complexe :</b></p>
+                        <img src="images/solution10.png" class="solution1" alt="Solution">
+                        <p>Les racines cubiques de l'unité forment les sommets d'un triangle équilatéral inscrit dans le
+                            cercle
+                            unité dans le plan complexe.</p>
+                    </div>
+                    <div>
+                        <div class="example"></div>
+                        Resoudre \( z^4 = 1, \) dans $\mathbb{C}$
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                        <p>Calcul des racines :</p>
+                        <ol>
+                            <li><b>Pour \(k = 0\) :</b> \(
+                                z_0 = e^{i\frac{2\cdot 0\pi}{4}} = e^{i0} = 1.
+                                \)</li>
+                            <li><b>Pour \(k = 1\) :</b> \(
+                                z_1 = e^{i\frac{2\cdot 1\pi}{4}} = e^{i\frac{\pi}{2}} = \cos\left(\frac{\pi}{2}\right) +
+                                i\sin\left(\frac{\pi}{2}\right) = i.
+                                \)</li>
+                            <li><b>Pour \(k = 2\) :</b> \(
+                                z_2 = e^{i\frac{2\cdot 2\pi}{4}} = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
+                                \)</li>
+                            <li><b>Pour \(k = 3\) :</b> \(
+                                z_3 = e^{i\frac{2\cdot 3\pi}{4}} = e^{i\frac{3\pi}{2}} = \cos\left(\frac{3\pi}{2}\right)
+                                +
+                                i\sin\left(\frac{3\pi}{2}\right) = -i.
+                                \)</li>
+                        </ol>
+                        <p><b>Résultat :</b>Les \(4\) racines quatrièmes de l'unité sont :
+                            \[
+                            z_0 = 1, \quad z_1 = i, \quad z_2 = -1, \quad z_3 = -i.
+                            \]</p>
+                        <p><b>Représentation graphique dans le plan complexe :</b></p>
+                        <img src="images/solution11.png" class="solution1" alt="Solution">
+                        <p>Les racines quatrièmes de l'unité forment les sommets d'un carré inscrit dans le cercle unité
+                            dans le
+                            plan complexe.</p>
+                    </div>
                 </div>
-                Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$
-                \( \left|\dfrac{d-c}{b-a}\right|=\dfrac{CD}{AB} \)<br>
-                \( \arg\left(\frac{d-c}{b-a}\right)=(\overrightarrow{AB},\overrightarrow{CD}) \)
-                <p><b>Réel</b></p>
-                <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{+}$ alors
-                    $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=0
-                    [2\pi]$</p>
-                <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{-}$ alors
-                    $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=\pi
-                    [2\pi]$</p>
-                <p><b>imaginaire pur</b></p>
-                <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{+}$ alors $\widehat{(\vec{AB},\vec{CD})}=\dfrac{\pi}{2}
-                    [2\pi]$
-                </p>
-                <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{-}$ alors $\widehat{(\vec{AB},\vec{CD})}=-\dfrac{\pi}{2}
-                    [2\pi]$
-                </p>
+                <div>
+                    <div class="subsubsection-title">b. Racine n-ième d'un nombre complexe</div>
+                    <p>Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.</p>
+                    <p>L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.</p>
+                    <p>$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.</p>
+                    <div>
+                        <div class="example"></div>
+                        Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                        $U=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|U|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec
+                        $\theta=\frac{\pi}{4}$
+                    </div>
+                    <div>
+                        <div class="propriete"></div>
+                        <p>Soit $z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi)}{n}}$</p>
+                        Les racines $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$ sont
+                        représentées dans le plan complexe par les points $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ;
+                        $M_{4}$ ;
+                        $M_{5}$ ; ... ; $M_{k-1}$ qui sont les sommets d'un polygone régulier inscrit dans le cercle de
+                        rayon
+                        $\sqrt[n]{|U|}$.
+                    </div>
+                </div>
             </div>
             <div>
-                <div class="example"></div>
-                <p>Soit $Z=\frac{iz+2}{z+i}$ un nombre complexe</p>
-                <p>Détermine l'ensemble des points M tel que: $|Z'|=1$ puis $|Z'|=2$</p>
-            </div>
-            <div>
-                <div class="solution"></div>
-                <p>$|Z'|=|\frac{i(z-2i)}{z+i}|$</p>
-                <p>Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:</p>
-                <p>$|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=\left|
-                    \frac{MB}{MA}\right| $</p>
-                <p>Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$</p>
-                <p>L'ensemble des points $M$ tel que $|Z'|=1$ est la médiatrice $[AB]$</p>
+                <div class="subsection-title">2. Résolution d'équation</div>
+                <div>
+                    <div class="example"></div>
+                    Soit $(E)$ l'équation définie par $(E)$ :
+                    \[
+                    z^3 - 3z^2 + (3 - i)z - 2(1 - i) = 0.
+                    \]
+                    <ol>
+                        <li>Montrer que $(E)$ admet une solution réelle à déterminer.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                    <ol>
+                        <li>Soit $z = a$ la solution réelle de $(E)$.</li>
+                        Donc,
+                        \[
+                        a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0
+                        \]
+                        \[
+                        \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0
+                        \]
+                        \[
+                        \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0.
+                        \]
+
+                        Cela implique :
+                        \[
+                        \begin{cases}
+                        a^3 - 3a^2 + 3a - 2 = 0 \\
+                        2 - a = 0
+                        \end{cases}
+                        \]
+
+                        \[
+                        \implies
+                        \begin{cases}
+                        a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\
+                        a = 2 \quad (2)
+                        \end{cases}
+                        \]
+
+                        $a = 2$ vérifie aussi l'équation $(1)$, donc $2$ est la solution réelle cherchée.
+                        <li>L'équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
+                            En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$,
+                            $b$ et
+                            $c$.
+
+                            On a :
+                            \[
+                            (z - 2)(z^2 - z + 1 - i) = 0 \iff z = 2 \quad \text{ou} \quad z^2 - z + 1 - i = 0.
+                            \]
+
+                            Soit l'équation $z^2 - z + 1 - i = 0$, alors :
+                            \[
+                            \Delta = (1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
+                            \]
+
+                            Donc :
+                            \[
+                            z_1 = \frac{1 - 1 - 2i}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + 1 + 2i}{2} = 1 +
+                            i.
+                            \]
+
+                            D'où :
+                            \[
+                            S_C = \{2; -i; 1 + i\}.
+                            \]
+
+
+                            \[
+                            \begin{array}{|c|c|c|c|c|}
+                            \hline
+                            & 1 & 1 & 1 & 1 \\
+                            \hline
+                            -1 & \times & -1 & 0 & -1 \\
+                            \hline
+                            & 1 & 0 & 1 & 0 \\
+                            \hline
+                            \end{array}
+                            \]</li>
+                    </ol>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- IX. Interprétation géométrique -->
+    <div class="section">
+        <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
         <div>
-            <div class="subsection-title">Configurations géométriques</div>
+            <div class="subsection-title">1.Angles orientés et argument.</div>
+            <p>Le plan complexe est rapporté à un repère Le plan complexe est rapporté à un repère
+                $(O;\vec{e_1};\vec{e_2})$</p>
+            <p>On sait que si le nombre complexe $z$ est non nul
+                alors : $(\vec{e_1},\overrightarrow{OM})=\arg(z)[2\pi]$</p>
+            <p>Soit $z$ et $z'$ deux complexes non nuls d'images
+                respectives $M$ et $M'$, on a:
+                $\begin{aligned}
+                (\overrightarrow{OM},\overrightarrow{OM'})&=(\overrightarrow{OM},\vec{e_1})+(\vec{e_1},\overrightarrow{OM})[2\pi]\\
+                &=-(\vec{e_1},\overrightarrow{OM})+(\vec{e_1},\overrightarrow{OM})[2\pi]\\
+                &=( \arg(z)-\arg(z') )[2\pi]\\
+                &=\arg\left(\frac{z'}{z}\right)[2\pi]
+                \end{aligned}
+                $</p>
+        </div>
+        <div>
+            <div class="exercise"></div>
+            <ol>
+                <li>Soient $A$ et $B$ deux points dans le plan complexe
+                    d'affixes respectifs $a$ et $b$.<br> Montrer que
+                    $(\vec{e_1},\overrightarrow{AB})=\arg(b-a)[2\pi]$</li><br>
+                <li>Soient $A$, $B$ et $C$ trois points distincts dans le plan complexe
+                    d'affixes respectifs $a$, $b$ et $c$.<br> Montrer que
+                    $(\overrightarrow{AB},\overrightarrow{AC})=\arg\left(\dfrac{c-a}{b-a}\right)[2\pi]$</li>
+                <li>Soient $A$, $B$, $C$ et $D$ quatre points distincts dans le
+                    plan complexe d'affixes respectifs $a$, $b$, $c$ et $d$.<br>Montrer que
+                    $(\overrightarrow{AB},\overrightarrow{CD})=\arg\left(\dfrac{d-c}{b-a}\right)[2\pi]$</li><br>
+            </ol>
+        </div>
+        <div>
+            <div class="propriete"></div>
+            Soient $M$ et $M'$ et $A$, $B$, $C$ et $D$ quatre
+            points distincts dans le plan complexe d'affixes
+            respectifs $z$, $z'$, $a$, $b$, $c$ et $d$ on a :
+            <ol>
+                <li>$(\overrightarrow{OM},\overrightarrow{OM'})=\arg\left(\dfrac{z'}{z}\right)[2\pi]$</li>
+                <li>$(\vec{e_1},\overrightarrow{AB})=\arg(b-a)[2\pi]$</li>
+                <li>$(\overrightarrow{AB},\overrightarrow{AC})=\arg\left(\dfrac{c-a}{b-a}\right)[2\pi]$</li>
+                <li>$(\overrightarrow{AB},\overrightarrow{CD})=\arg\left(\dfrac{d-c}{b-a}\right)[2\pi]$</li>
+            </ol>
+        </div>
+        Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$
+        \( \left|\dfrac{d-c}{b-a}\right|=\dfrac{CD}{AB} \)<br>
+        \( \arg\left(\frac{d-c}{b-a}\right)=(\overrightarrow{AB},\overrightarrow{CD}) \)
+        <p><b>Réel</b></p>
+        <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{+}$ alors
+            $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=0
+            [2\pi]$</p>
+        <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{-}$ alors
+            $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=\pi
+            [2\pi]$</p>
+        <p><b>imaginaire pur</b></p>
+        <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{+}$ alors
+            $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=\dfrac{\pi}{2}
+            [2\pi]$
+        </p>
+        <p>Si $\dfrac{d-c}{b-a} \in i\mathbb{R}^{*}_{-}$ alors
+            $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=-\dfrac{\pi}{2}
+            [2\pi]$
+        </p>
+
+        <div>
+            <div class="example"></div>
+            <p>Soit $Z=\frac{iz+2}{z+i}$ un nombre complexe</p>
+            <p>Détermine l'ensemble des points M tel que: $|Z'|=1$ puis $|Z'|=2$</p>
+        </div>
+        <div>
+            <div class="solution"></div>
+            <p>$|Z'|=|\frac{i(z-2i)}{z+i}|$</p>
+            <p>Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:</p>
+            <p>$|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=\left|
+                \frac{MB}{MA}\right| $</p>
+            <p>Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$</p>
+            <p>L'ensemble des points $M$ tel que $|Z'|=1$ est la médiatrice $[AB]$</p>
+        </div>
+        <div>
+            <div class="subsection-title">2.Configurations géométriques</div>
             <ul>
                 <li><b>Condition d'alignement: </b><br>
                     $A(a)$, $B(b)$ et $C(c)$ sont alignés si et seulement si $(b -
@@ -924,9 +831,12 @@
                 <img src="images/solution13.png" class="solution1" alt="Solution">
                 <p>Cecil se traduit par :\[
                     \begin{aligned}
-                    \arg \left( \frac{c-a}{b-a} \right) \equiv \pi - \arg \left( \frac{b-d}{c-d} \right) \pmod{2\pi}&\iff \arg \left( \frac{c-a}{b-a} \right) + \arg \left( \frac{b-d}{c-d} \right) - \pi \equiv 0
+                    \arg \left( \frac{c-a}{b-a} \right) \equiv \pi - \arg \left( \frac{b-d}{c-d} \right)
+                    \pmod{2\pi}&\iff \arg \left( \frac{c-a}{b-a} \right) + \arg \left( \frac{b-d}{c-d} \right) - \pi
+                    \equiv 0
                     \pmod{2\pi}\\
-                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \times (-1)
+                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \times
+                    (-1)
                     \right] \equiv 0 \pmod{2\pi}\\
                     &\iff \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \in \mathbb{R}^*_{-}
                     \end{aligned}
@@ -944,6 +854,7 @@
                     \]</li>
             </ul>
         </div>
+    </div>
     </div>
 </body>
 
