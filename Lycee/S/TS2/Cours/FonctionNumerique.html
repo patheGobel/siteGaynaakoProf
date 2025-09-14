@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fonction Numérique - Limites et Continuité</title>
-    <link rel="stylesheet" href="FonctionNumerique.css">
+    <title>Fonction Numérique</title>
+    <link rel="stylesheet" href="">
     <script>
         MathJax = {
             tex: {
@@ -21,424 +21,516 @@
 <body>
     <div class="container">
         <h1>Fonction Numérique</h1>
-
-        <!-- Section A -->
-        <div class="section">
-            <div class="section-title">LIMITES-CONTINUITÉ</div>
-
-            <!-- Sous-section I -->
-            <div class="subsection">
-                <div class="subsection-title">Limites</div>
-
-                <!-- 1. Limites usuelles -->
-                <div class="subsubsection">
-                    <div class="subsubsection-title">Quelques limites usuelles</div>
-
-                    <div class="formula-item">
-                        <p>\[\forall n\in\mathbb{N}^{*} \lim_{x \to +\infty} x^{n}=+\infty \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \forall n\in\mathbb{N}^{*}
-                            \lim_{x \to -\infty} x^{n} =
-                            \begin{cases}
-                            +\infty \text{ si \(n\) est pair}\\
-                            -\infty \text{ si \(n\) est pair}
-                            \end{cases}
-                            \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[\lim_{x \to -\infty} \frac{1}{x^{n}}=
-                            \begin{cases}
-                            0^{+} \text{ si \(n\) est pair}\\
-                            0^{-} \text{ si \(n\) est pair}
-                            \end{cases}\]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to +\infty} \sqrt{x}=+\infty \text{ , } \lim_{x \to +\infty}
-                            \frac{1}{\sqrt{x}}=0^{+} \]
-
-                            \[ \lim_{x \to a^{+}} \frac{1}{x-a}=+\infty \text{ , } \lim_{x \to a^{-}}
-                            \frac{1}{x-a}=-\infty \]</p>
-                    </div>
-                    <div style="text-align: center;"><b>Autre Notation</b></div>
-                    <div class="formula-item">
-                        <p>\[( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow
-                            a^{-} ) \Leftrightarrow ( x\rightarrow a_{<} ) \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to a^{+}} f(x)=+\infty \text{ se note aussi } \lim_{x \to a_{>}} f(x)=+\infty \]
-                        </p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to a^{-}} f(x)=-\infty \text{ se note aussi } \lim_{x \to a_{<}} f(x)=-\infty
-                                \]</p>
-                    </div>
-                    <!-- Exemple 1 -->
-                    <div class="example">
-                        <div class="example-title">Exemple 1</div>
-                        <div class="math-display">
-                            \[ \text{Soit } f(x) = -x + \sin x \text{. Calculer } \lim_{x \to +\infty} f(x) \]
-                        </div>
-
-                        <div class="solution">
-                            <div class="solution-title">Solution</div>
-
-                            <div class="step">
-                                <div class="step-title">Étape 1 : Encadrement de la fonction</div>
-                                <div class="math-display">
-                                    \[
-                                    \begin{aligned}
-                                    \text{Pour tout } x, \sin x \leq 1 &\implies -x + \sin x \leq 1 - x\\
-                                    &\implies f(x) \leq 1 - x
-                                    \end{aligned}
-                                    \]
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-title">Étape 2 : Définition de la fonction de comparaison</div>
-                                <div class="math-display">
-                                    \[ \text{Posons } g(x) = 1 - x \text{, donc } f(x) \leq g(x) \]
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-title">Étape 3 : Calcul de la limite de comparaison</div>
-                                <div class="math-display">
-                                    \[ \lim_{x \to +\infty} g(x) = \lim_{x \to +\infty} (1 - x) = -\infty \]
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-title">Étape 4 : Application du théorème</div>
-                                <div class="math-display">
-                                    \[ \text{Or, } \lim_{x \to +\infty} g(x) = -\infty \text{, donc } \lim_{x \to
-                                    +\infty} f(x) = -\infty \]
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Exemple 2-->
-                    <div class="example">
-                        <div class="example-title">Exemple 1</div>
-                        geghfehzhbhbd
-                        ecdzeneceuz
-                        ceazucbtaux
-                        caezucxbnq
-                    </div>
+        <!-- A.LIMITES-CONTINUITÉ -->
+        <div class="sectionAB">
+            <div class="sectionAB-title">A.LIMITES-CONTINUITÉ</div>
+            <!-- I. Définition et notations -->
+            <div class="section">
+                <div class="section-title">I.Limites</div>
+                <!--1.Quelques limites usuelles-->
+                <div>
+                    <div class="subsection-title">1.Quelques limites usuelles</div>
+                    <p></p>
                 </div>
-
-                <!-- 2. Théorèmes -->
-                <div class="subsubsection">
-                    <div class="subsubsection-title">Quelques théorèmes sur les limites</div>
-                    <div class="theoreme">
-                        <!-- a. theoreme-titre -->
-                        <div class="theoreme-titre">Théorème de comparaison</div>
-                        <div class="theorem-content">
-                            <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle $]a;
-                                +\infty[$
-                                de $\mathbb{R}$.</p>
-
-                            <div class="theorem-case">
-                                <div class="case-title">Cas 1 : Limite en $+\infty$</div>
-                                <div class="math-display">
-                                    \[ \lim_{x \to +\infty} f(x) = +\infty \Rightarrow \lim_{x \to +\infty} g(x)
-                                    =
-                                    +\infty \]
-                                </div>
-                                <div class="math-display">
-                                    \[ \lim_{x \to +\infty} g(x) = -\infty \Rightarrow \lim_{x \to +\infty} f(x)
-                                    =
-                                    -\infty \]
-                                </div>
-                            </div>
-
-                            <div class="theorem-case">
-                                <div class="case-title">Cas 2 : Limite en $-\infty$</div>
-                                <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle
-                                    $]-\infty;\beta[$
-                                    de $\mathbb{R}$.</p>
-                                <div class="math-display">
-                                    \[ \lim_{x \to -\infty} f(x) = +\infty \Rightarrow \lim_{x \to -\infty} g(x)
-                                    =
-                                    +\infty \]
-                                </div>
-                                <div class="math-display">
-                                    \[ \lim_{x \to -\infty} g(x) = -\infty \Rightarrow \lim_{x \to -\infty} f(x)
-                                    =
-                                    -\infty \]
-                                </div>
-                            </div>
-
-                            <div class="theorem-case">
-                                <div class="case-title">Cas 3 : Limite en un point $x_0$</div>
-                                <p>Soit $f$ et $g$ deux fonctions telles que $f(x) \leq g(x)$ sur un intervalle
-                                    $]a;\beta[$
-                                    de $\mathbb{R}$ et $x_0 \in ]a;\beta[$.</p>
-                                <div class="math-display">
-                                    \[ \lim_{x \to x_0} f(x) = +\infty \Rightarrow \lim_{x \to x_0} g(x) =
-                                    +\infty \]
-                                </div>
-                                <div class="math-display">
-                                    \[ \lim_{x \to x_0} g(x) = -\infty \Rightarrow \lim_{x \to x_0} f(x) =
-                                    -\infty \]
-                                </div>
+                <!--2.Quelques théorèmes sur les limites-->
+                <div>
+                    <div class="subsection-title">2.Quelques théorèmes sur les limites</div>
+                    <p></p>
+                    <div>
+                        <div class="subsubsection-title">a.Théorème de comparaison</div>
+                        <p></p>
+                        <div>
+                            <div class="example"></div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="example"></div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="subsubsection-title">b.Théorème d'encadrement ou théorème des gendarmes</div>
+                        <p></p>
+                        <div>
+                            <div class="application-exercise"></div>
+                            <button class="toggle-correction">Afficher la correction</button>
+                            <div class="correction">
+                                Voici la correction détaillée...
                             </div>
                         </div>
-                        <!-- b. theoreme-titre -->
-                        <div class="theoreme-titre">Théorème d'encadrement ou théorème des gendarmes</div>
-                        <div class="theorem-content">
-                            <p>Soient \( f \), \( g \) et \( h \) trois fonctions définies sur un intervalle \( I \)
-                                au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty
-                                \).
-                            </p>
-                            <p> \[
-                                \text{ Si \( \forall x\in I \) }
-                                \begin{cases}
-                                \quad g(x) \leq f(x)\leq h(x) \\
-                                \lim_{x \to \alpha}g(x)=\lim_{x \to \alpha}h(x)=\ell,
-                                \end{cases}
-                                \text{ alors } \lim_{x \to \alpha}f(x)=\ell
-                                \] </p>
-                            <!-- Exercice d'application du théorème des gendarmes -->
-                            <div class="exerciceapp">
-                                <div class="exerciceapp-title">Exercice d'application 1</div>
-                                <div class="math-display">
-                                    \[ \text{Calculer} \lim_{x \to +\infty} \frac{x-\sin x}{x^{2}} \]
-                                </div>
-                                <button class="toggle-correction-btn">Afficher la Correction</button>
-                                <div class="correction-content" style="display: none;">
-                                    <div class="correction">
-                                        <div class="correction-title">Correction 1</div>
-                                        ddsssrffer er ferzfvre zfcezrgfersz za cer rrty-ti--nytr zeazc'czz erzzaxczr
-                                    </div>
-                                </div>
+                    </div>
+                    <div>
+                        <div class="subsubsection-title">c.Limite et composition de fonctions</div>
+                        <p></p>
+                        <div>
+                            <div class="application-exercise"></div>
+                            <button class="toggle-correction">Afficher la correction</button>
+                            <div class="correction">
+                                Voici la correction détaillée...
                             </div>
                         </div>
-                        <!-- c. limites -->
-                        <div class="theoreme-titre">Limite et composition de fonctions</div>
-                        <div class="theorem-content">
-                            <p>Soit \( \alpha \), \( \beta \) et \( \gamma \) des réels ou \( \pm\infty \) On considère
-                                deux fonctions \( u \) et \( v \) telles que</p>
-                            <p>\[
-                                \text{ Si }
-                                \begin{cases}
-                                \lim_{x \to \alpha}u(x)=\beta \\
-                                \lim_{x \to \beta}v(x)=\gamma
-                                \end{cases}
-                                \text{ alors } \lim_{x \to \alpha}v(u(x))=\gamma
-                                \]</p>
-                            <div class="exerciceapp">
-                                <div class="exerciceapp-title">Exercice d'application 2</div>
-                                <div class="math-display">
-                                    <p>\[\text{Calculer }\lim_{x \to +\infty}\sqrt{\frac{9}{x}+7} \]</p>
-                                </div>
-
-                                <button class="toggle-correction-btn">Afficher la Correction</button>
-                                <div class="correction-content" style="display: none;">
-                                    <div class="correction">
-                                        <div class="correction-title">Correction 2</div>
-                                        <p>On commence par la fonction la plus à l'intérieur :</p>
-                                        <p>\[\text{Posons } u(x)=\frac{9}{x}+7 \text{ et } v(x)=\sqrt{\frac{9}{x}+7} \]
-                                        </p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div>
+                        <div class="subsubsection-title">d.Théorème du changement de variable</div>
+                        <div>
+                            <div class="application-exercise"></div>
+                            <button class="toggle-correction">Afficher la correction</button>
+                            <div class="correction">
+                                Voici la correction détaillée...
                             </div>
-                        </div>
-                        <!-- c. limites -->
-                        <div class="theoreme-titre">Théorème du changement de variable</div>
-                        <div class="theorem-content">
-                            <p>\[ \lim_{x \to x_{0}}f(x)=\lim_{t \to 0}f(x_{0}+t) \]</p>
-                            <p>\[ \lim_{x \to +\infty}f(x)=\lim_{X \to 0^{+}}f \left( \frac{1}{X} \right) \]</p>
-                            <p>\[ \lim_{x \to -\infty}f(x)=\lim_{X \to 0^{-}}f \left( \frac{1}{X} \right) \]</p>
-                            <div style="text-align: center;"><b>Preuve[Exercice]</b></div>
                         </div>
                     </div>
                 </div>
                 <!--3.Limites de fonctions trigonométriques-->
-                <div class="subsubsection">
-                    <div class="subsubsection-title">Limites de fonctions trigonométriques</div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to 0} \frac{\sin x}{x}=1 \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to 0} \frac{\tan x}{x}=1 \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p> \[ \lim_{x \to 0} \frac{1-\cos x}{x^{2}}=\frac{1}{2} \]</p>
-                    </div>
-                    <div class="formula-item">
-                        <p>\[ \lim_{x \to 0} \frac{\cos x -1 }{x}=0 \]</p>
-                    </div>
-                    <div class="exerciceapp">
-                        <div class="exerciceapp-title">Exercice d'application 3</div>
-                        <div class="math-display">
-                            <p>\[ \lim_{x \to +\infty}x\sin \frac{1}{x} \]</p>
-                            <p>\[ \lim_{x \to +\infty}x\tan \frac{3}{x} \]</p>
-                            <p>\[ \lim_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \]</p>
-                        </div>
-
-                        <button class="toggle-correction-btn">Afficher la Correction</button>
-                        <div class="correction-content" style="display: none;">
-                            <div class="correction">
-                                <div class="correction-title">Correction 3</div>
-                                </p>
-                            </div>
+                <div>
+                    <div class="subsection-title">3.Limites de fonctions trigonométriques</div>
+                    <div>
+                        <div class="application-exercise"></div>
+                        <button class="toggle-correction">Afficher la correction</button>
+                        <div class="correction">
+                            Voici la correction détaillée...
                         </div>
                     </div>
                 </div>
                 <!--4.Interprétations géométriques des limites-->
-                <div class="subsubsection">
-                    <div class="subsubsection-title">Interprétations géométriques des limites</div>
-                    <div class="theoreme">
-                        <p>Les limites peuvent être interprétées géométriquement de plusieurs manières en fonction du
-                            contexte.
-                            Voici quelques exemples typiques :</p>
-                        <!--a)Asymptote horizontale (AH)[Parllèle à \((ox)\)]-->
-                        <div class="theoreme-titre">Asymptote horizontale (AH)[Parllèle à \((ox)\)]</div>
-                        <div class="theorem-content">
-                            <p>\(
-                                \text{ Une fonction } f \text{ a une asymptote horizontale en } y = \ell \text{
-                                lorsque} \lim\limits_{x \to +\infty} f(x) = \ell \text{ ou } \lim\limits_{x \to +\infty}
-                                f(x) = \ell
-                                \)
-                            </p>
-                            <p> Si \( \lim\limits_{x \to +\infty} f(x) = \ell \) On dit que: \( y = \ell \) est une AH à
-                                \((C_{f})\) en \( +\infty \)</p>
-                            <p> Si \( \lim\limits_{x \to -\infty} f(x) = \ell \) On dit que: \( y = \ell \) est une AH à
-                                \((C_{f})\) en \( -\infty \)</p>
-                            <p>Cela signifie que la courbe de la fonction se rapproche de la droite \( y = \ell \) à
-                                mesure que \( x \to +\infty \) ou \( x \to -\infty \).</p>
-                            <!-- Exemple 3 -->
-                            <div class="example">
-                                <div class="example-title">Exemple 3</div>
-                                <div class="math-display">
-                                    Déterminer l'AH de
-                                    \(
-                                    f(x) = \frac{2x^2}{x^2 + 1}
-                                    \)
-                                </div>
-
-                                <div class="solution">
-                                    <div class="solution-title">Solution 3</div>
-                                    \[
-                                    \lim_{x \to +\infty} f(x) = 2, \quad \lim_{x \to -\infty} f(x) = 2.
-                                    \]
-                                    La courbe de la fonction se rapproche de la droite \( y = 2 \) à mesure que \( x \to
-                                    +\infty \) ou \( x \to -\infty \).
-                                </div>
-                            </div>
-                        </div>
-                        <!--b)Asymptote verticale (AV)[Parallèle à \((oy)\)]-->
-                        <div class="theoreme-titre">Asymptote verticale (AV)[Parallèle à \((oy)\)]</div>
-                        <div class="theorem-content">
-                            <p>Soit \( x = a \in \mathbb{R} \)\( \text{ si }\lim\limits_{x \to a} f(x) = \pm\infty
-                                \text{ alors
-                                \(x = a\) est une AV à \(C_{f}\)}\)
-                                Cela signifie que la courbe de la fonction tend vers l'infini lorsque \( x \) approche
-                                \( a \) par la droite (ou la gauche).</p>
-                            <!-- Exemple 4 -->
-                            <div class="example">
-                                <div class="example-title">Exemple 4</div>
-                                <div class="math-display">
-                                    <p>Déterminer de l'AV de \( f \) tel que
-                                        \( f(x) = \frac{1}{x} \)</p>
-                                </div>
-
-                                <div class="solution">
-                                    <div class="solution-title">Solution 4</div>
-                                    <p>\[
-                                        \lim_{x \to 0^{+}} f(x) = +\infty \quad \text{et} \quad \lim_{x \to 0^{-}} f(x)
-                                        =
-                                        -\infty,
-                                        \]</p>
-                                    <p>ce qui signifie que la fonction a une asymptote verticale en \( x = 0 \).</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--c)Asymptote oblique (AO)-->
-                        <div class="theoreme-titre">Asymptote oblique (AO)</div>
-                        <div class="theorem-content">
-                            <p>Si \( \lim\limits_{x \to +\infty} (f(x)-(ax+b)) = 0 \) alors \(y = ax+b\) est une
-                                AO
-                                à \((C_{f})\) en \( +\infty \) </p>
-
-                            <p>Si \( \lim\limits_{x \to -\infty} (f(x)-(ax+b)) = 0 \) alors \(y = ax+b\) est une
-                                AO
-                                à \((C_{f})\) en \( -\infty \) </p>
-                            <p>Cette méthode est utilisée pour montrer que \(y=ax+b\) est est une AO</p>
-                            <!-- Exemple 5 -->
-                            <div class="example">
-                                <div class="example-title">Exemple 5</div>
-                                <div class="math-display">
-                                    <p>Soit \( f(x) = \frac{x^2 + 2x + 1}{x} \) une fonction et \( (C_{f}) \) sa courbe
-                                        représentative.
-                                        Montrer que \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \)</p>
-                                </div>
-
-                                <div class="solution">
-                                    <div class="solution-title">Solution 5</div>
-                                    <p>\( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \) si
-                                        \(\lim\limits_{x \to +\infty}\left[ f(x)-y\right] =0 \)
-                                        En effet
-                                        \[
-                                        f(x) = \frac{x^2 + 2x + 1}{x}, \quad \lim_{x \to +\infty} \left( f(x) - (x + 2)
-                                        \right) = 0.
-                                        \]
-                                        La courbe de la fonction se rapproche de la droite \( y = x + 2 \) pour \( x \to
-                                        +\infty \).</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--d)Propriété 1[Autre façon de montrer que \( y = ax + b \) est une AO]-->
-                        <div class="theoreme-titre">Propriété 1[Autre façon de montrer que \( y = ax + b \) est une AO]
-                        </div>
-                        <div class="theorem-content">
-                            Soit \( f \) une fonction, \( a, b \) un réel et \( (C_{f}) \) sa courbe représentative .
-                            <p>\(\text{Si }\lim\limits_{x \to +\infty}f(x)=\pm\infty
-                                \text{ et }
-                                \lim\limits_{x \to +\infty}\frac{f(x)}{x}=a
-                                \text{ et }
-                                \lim\limits_{x \to +\infty}\left( f(x)-ax\right) =b
-                                \textbf{ alors }
-                                y = ax + b \text{ est une AO à } (C_{f})\quad en\quad +\infty.
-                                \)</p>
-                            <b>NB</b>
-
-                            Cette propriété reste valable lorsque \( x\rightarrow -\infty\)
-
-                            On aura \( y = ax + b \) est une AO à \( (C_{f}) \) en \(-\infty\)
-                        </div>
-                        <!--e)Branche parabolique de direction (oy)-->
-                        <div class="theoreme-titre">Branche parabolique de direction (oy)</div>
-                        <div class="theorem-content">
+                <div>
+                    <div class="subsection-title">2.Quelques théorèmes sur les limites</div>
+                    <!--a.Asymptote horizontale (AH)[Parallèle à (Ox)]-->
+                    <div>
+                        <div class="subsubsection-title">a.Asymptote horizontale (AH)[Parallèle à (Ox)]</div>
+                        <div>
+                            <div class="example"></div>
                             <p></p>
                         </div>
-                        <!--f)Branche parabolique de direction (ox)-->
-                        <div class="theoreme-titre">Branche parabolique de direction (ox)</div>
-                        <div class="theorem-content">
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--b.Asymptote verticale (AV)[Parallèle à (oy)]-->
+                    <div>
+                        <div class="subsubsection-title">b.Asymptote verticale (AV)[Parallèle à (oy)]</div>
+                        <div>
+                            <div class="example"></div>
                             <p></p>
                         </div>
-                        <!--g)Branche parabolique de direction \(y = ax\) (a réel)-->
-                        <div class="theoreme-titre">Branche parabolique de direction \(y = ax\) (a réel)</div>
-                        <div class="theorem-content">
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--c.Asymptote oblique (AO)-->
+                    <div>
+                        <div class="subsubsection-title">c.Asymptote oblique (AO)</div>
+                        <div>
+                            <div class="example"></div>
                             <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--d.Propriété 1[Autre façon de montrer que y=ax+b est une AO]-->
+                    <div>
+                        <div class="subsubsection-title">d.Propriété 1[Autre façon de montrer que y=ax+b est une AO]
+                        </div>
+                        <div>
+                            <div class="example"></div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--e.Branche parabolique de direction (oy)-->
+                    <div>
+                        <div class="subsubsection-title">e.Branche parabolique de direction (oy)</div>
+                        <div>
+                            <div class="example"></div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="remark"></div>
+                        </div>
+                    </div>
+                    <!--f.Branche parabolique de direction (ox)-->
+                    <div>
+                        <div class="subsubsection-title">f.Branche parabolique de direction (ox)</div>
+                        <div>
+                            <div class="example"></div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div class="solution"></div>
+                            <ul class="bullet-list">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="remark"></div>
+                        </div>
+                    </div>
+                    <!--g.Branche parabolique de direction y = ax (a réel)-->
+                    <div>
+                        <div class="subsubsection-title">g.Branche parabolique de direction y = ax (a réel)</div>
+                        <div>
+                            <div class="remark"></div>
+                        </div>
+                        <div>
+                            <div class="application-exercise"></div>
+                            <button class="toggle-correction">Afficher la correction</button>
+                            <div class="correction">
+                                Voici la correction détaillée...
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Sous-section II -->
-                <div class="subsection">
-                    <div class="subsection-title">Continuité</div>
-                    <!-- Contenu Continuité ici -->
+            </div>
+
+            <!-- II. Conjugué -->
+            <div class="section">
+                <div class="section-title">II.Continuité</div>
+                <div>
+                    <div class="definition"></div>
+                    <p></p>
+                </div>
+                <div style="color: red;">
+                    <p><b>Revoir</b></p>
+                    <p>[Continuité à gauche et continuité à droite]</p>
+                    <p>[Continuité à gauche et continuité à droite]</p>
+                    <p>[Prolongement par continuité]</p>
+                    <p>[Continuité sur un intervalle]</p>
+                    <p>[Continuité de fonctions usuelles]</p>
+                    <p>[Opérations sur les fonctions continues]</p>
+                </div>
+                <!--2.Compositions de deux fonctions continues-->
+                <div>
+                    <div class="subsection-title">2.Compositions de deux fonctions continues</div>
+                    <div>
+                        <div class="application-exercise"></div>
+                        <button class="toggle-correction">Afficher la correction</button>
+                        <div class="correction">
+                            Voici la correction détaillée...
+                        </div>
+                    </div>
+                </div>
+                <!--3.Image d’un intervalle par une fonction continue et stritement monotone-->
+                <div>
+                    <div class="subsection-title">3.Image d'un intervalle par une fonction continue et stritement
+                        monotone
+                    </div>
+                    <div>
+                        <div class="application-exercise"></div>
+                        <button class="toggle-correction">Afficher la correction</button>
+                        <div class="correction">
+                            Voici la correction détaillée...
+                        </div>
+                    </div>
+                </div>
+                <!--4.Théorème des valeurs intermédaires-->
+                <div>
+                    <div class="subsection-title">4.Théorème des valeurs intermédaires</div>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                        <ul class="bullet-list">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="application-exercise"></div>
+                        <button class="toggle-correction">Afficher la correction</button>
+                        <div class="correction">
+                            Voici la correction détaillée...
+                        </div>
+                    </div>
+                </div>
+                <!--5.Théorème d'existence et d'unicité d'une solution-->
+                <div>
+                    <div class="subsection-title">5.Théorème d'existence et d'unicité d'une solution</div>
+                    <b style="color: red;"><u>Ilustration graphique</u></b>
+                    <b style="color: red;"><u>Cas particulier</u></b>
+                    <b style="color: red;"><u>Ilustration graphique</u></b>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--6.Encadrement de la racine α à ϵ près-->
+                <div>
+                    <div class="subsection-title">6.Encadrement de la racine $\alpha$ à $\epsilon$ près</div>
+                    <p><u>Méthode de dichotomie(Approche par exemple)</u></p>
+                    <div>
+                        <div class="application-exercise"></div>
+                        <button class="toggle-correction">Afficher la correction</button>
+                        <div class="correction">
+                            Voici la correction détaillée...
+                        </div>
+                    </div>
+                    <p><u>Méthode de balayage(Approche par exemple)[Exercice]</u></p>
+                </div>
+                <!--7.Théorème d’existence d’une bijection et de sa réciproque-->
+                <div>
+                    <div class="subsection-title">7.Théorème d'existence d'une bijection et de sa réciproque</div>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--8.Calcul de $f^{-1}(y_0)$ sans connaître l’expression de $f^{-1}$-->
+                <div>
+                    <div class="subsection-title">8.Calcul de $f^{-1}(y_0)$ sans connaître l'expression de $f^{-1}$
+                    </div>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
                 </div>
             </div>
-            <!-- Section B -->
+        </div>
+        <!-- B.Dérivabilité -->
+        <div class="sectionAB">
+            <div class="sectionAB-title">B.Dérivabilité</div>
+            <!--I.Dérivation-->
             <div class="section">
-                <div class="section-title">Dérivées</div>
-                <!-- Contenu Dérivées ici -->
+                <div class="section-title">I.Dérivation</div>
+                <!--1.Notion de nombre dérivé-->
+                <div>
+                    <div class="subsection-title">1.Notion de nombre dérivé</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--2.Dérivabilté à gauche-Dérivabilité à droite-->
+                <div>
+                    <div class="subsection-title">2.Dérivabilté à gauche-Dérivabilité à droite</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--3.Interprétation géométrique du nombre-->
+                <div>
+                    <div class="subsection-title">3.Interprétation géométrique du nombre dérivée</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--4.Dérivabilité sur un intervalle-->
+                <div>
+                    <div class="subsection-title">4.Dérivabilité sur un intervalle</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--5.Dérivée d’une fonction composée-->
+                <div>
+                    <div class="subsection-title">5.Dérivée d'une fonction composée</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                </div>
+                <!--6.Dérivée de la fonction réciproque-->
+                <div>
+                    <div class="subsection-title">6.Dérivée de la fonction réciproque</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+                    <div>
+                        <div class="propriete"></div>
+                    </div>
+                </div>
+                <!--7.Inégalité des accroissements finis (IAF)-->
+                <div>
+                    <div class="subsection-title">7.Inégalité des accroissements finis (IAF)</div>
+                    <p></p>
+                    <div>
+                        <div class="example"></div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <div class="solution"></div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
-        <script src="script.js"></script>
+        <!-- C.Primitives -->
+        <div class="sectionAB">
+            <div class="sectionAB-title">C.Primitives</div>
+            <!--1.Définition-->
+            <div>
+                <div class="subsection-title">1.Définition</div>
+            </div>
+            <!--2.Théorème (admis)-->
+            <div>
+                <div class="subsection-title">2.Théorème (admis)</div>
+            </div>
+            <!--3.Théorème-->
+            <div>
+                <div class="subsection-title">3.Théorème</div>
+            </div>
+            <!--remark-->
+            <div>
+                <div class="remark">remark</div>
+            </div>
+            <div>
+                <div class="application-exercise"></div>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
+            </div>
+        </div>
+        <!-- D.ÉTUDES DE FONCTIONS -->
+        <div class="sectionAB">
+            <div class="sectionAB-title">D.ÉTUDES DE FONCTIONS</div>
+            <!--1.Courbe de la fonction réciproque-->
+            <div>
+                <div class="subsection-title">1.Courbe de la fonction réciproque</div>
+            </div>
+            <!--2. Fonction paire-->
+            <div>
+                <div class="subsection-title">2.Fonction paire</div>
+            </div>
+            <!--3. Fonction impaire-->
+            <div>
+                <div class="subsection-title">3.Fonction impaire</div>
+            </div>
+            <!--4. Axe de symétrie-->
+            <div>
+                <div class="subsection-title">4.Axe de symétrie</div>
+                <div>
+                    <div class="example"></div>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                </div>
+            </div>
+            <!--5. Centre de symétrie-->
+            <div>
+                <div class="subsection-title">5.Centre de symétrie</div>
+                <div>
+                    <div class="example"></div>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                </div>
+            </div>
+            <!--6. Périodicité-->
+            <div>
+                <div class="subsection-title">6.Périodicité</div>
+                <div>
+                    <div class="example"></div>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                </div>
+            </div>
+            <!--7.Position relative d’une courbe et de son asymptote (∆) : y = ax + b-->
+            <div>
+                <div class="subsection-title">7.Position relative d'une courbe et de son asymptote $(∆) : y = ax + b$
+                </div>
+                <div>
+                    <div class="example"></div>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                </div>
+            </div>
+            <!--8.Position relative d’une courbe et de sa tangente au point M0 d’abscisse x0-->
+            <div>
+                <div class="subsection-title">8.Position relative d'une courbe et de sa tangente au point M0 d'abscisse
+                    $x_0$
+                </div>
+                <div>
+                    <div class="example"></div>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="solution"></div>
+                </div>
+            </div>
+        </div>
+        +++++++++++++++++++++++++++++++
+        <!-- III. Représentation graphique -->
+
+        <div class="plan-container">
+            <img src="images/planComplex.png" class="planComplex" alt="Plan Complexes">
+            <img src="images/planComplex2.png" class="planComplex" alt="Plan Complexes">
+        </div>
+    </div>
 </body>
 
 </html>
