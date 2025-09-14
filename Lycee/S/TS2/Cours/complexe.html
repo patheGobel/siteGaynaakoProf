@@ -727,7 +727,7 @@
                 (\overrightarrow{OM},\overrightarrow{OM'})&=(\overrightarrow{OM},\vec{e_1})+(\vec{e_1},\overrightarrow{OM})[2\pi]\\
                 &=-(\vec{e_1},\overrightarrow{OM})+(\vec{e_1},\overrightarrow{OM})[2\pi]\\
                 &=( \arg(z)-\arg(z') )[2\pi]\\
-                &=\arg\left(\frac{z'}{z}\right)[2\pi]
+                &=\arg\left(\dfrac{z'}{z}\right)[2\pi]
                 \end{aligned}
                 $
             </p>
@@ -747,6 +747,72 @@
             </ol>
         </div>
         <div>
+            <div class="exercise"></div>
+            Soient \( A, B \) et \( C \) des points dans le plan complexe d'affixes respectifs \(z_A = 3 + 5i,\) \(z_B =
+            3 - 5i \quad \text{et} \quad z_C = 7 + 3i\)
+            <ol>
+                <li>Montrer que :\(\dfrac{z_B - z_C}{z_A - z_C} = 2i\)</li>
+                <li>Montrer que \( ABC \) est un triangle rectangle et que : \(BC = 2AC\)</li>
+            </ol>
+        </div>
+        <div>
+            <div class="exercise"></div>
+            Le plan complexe est rapporté à un repère orthonormé \( (0, \vec{i}, \vec{j}) \);
+
+            Soient A, B et C des points dans le plan complexe d'affixes respectifs
+            \(a = 2i, \quad b = \sqrt{2}(1+i)\) et \(c = a + b\)
+            <ol>
+                <li>Montrer que OBCA est un losange</li>
+                <li>Montrer que \(\arg(c) \equiv \dfrac{3\pi}{8} \ [2\pi]\)</li>
+            </ol>
+        </div>
+        <div>
+            <div class="exercise"></div>
+            Soient \( A, B \) et \( C \) des points dans le plan complexe d'affixes respectifs
+            \[
+            a = 2 + i,
+            \]
+            \[
+            b = 3 + 2i \quad \text{et} \quad c = 5 - i
+            \]
+
+            Soit \( \alpha \) une mesure de l'angle orienté :
+            \[
+            \left( \overrightarrow{AB}; \overrightarrow{AC} \right)
+            \]
+
+            Calculer \(\tan \alpha\)
+        </div>
+        <div>
+            <div class="exercise"></div>
+            On considère dans le plan complexe
+
+            muni d'un repère orthonormé \( R \left( 0; \vec{e}_1; \vec{e}_2 \right) \) les points \( A, B \) et \( C \)
+            d'affixes respectifs :
+            \[
+            z_1 = -\sqrt{2} \quad \text{et}
+            \]
+            \[
+            z_2 = 1 + i \quad \text{et} \quad z_3 = 1 - i
+            \]
+
+            <ol>
+                <li>Placer dans le repère \( R \) les points \( A, B \) et \( C \)</li>
+                <li>Déterminer le module et l'argument du nombre complexe\[
+                    \frac{z_2 - z_1}{z_3 - z_1}
+                    \]
+                    et déterminer une mesure de l'angle
+                    \[
+                    \left( \overrightarrow{AC}; \overrightarrow{AB} \right)
+                    \]</li>
+                <li>Montrer que la droite (OA) est la médiatrice du segment \([BC]\) et en déduire que :\[
+                    \left( \overrightarrow{AO}; \overrightarrow{AB} \right) = \frac{\pi}{8} \ [2\pi]
+                    \]</li>
+                <li>Écrire le nombre \(\frac{z_1 - z_2}{z_1}\) sous sa forme algébrique puis en déduire \(\cos \left(
+                    \frac{\pi}{8} \right)\) et \(\sin \left( \frac{\pi}{8} \right)\)</li>
+            </ol>
+        </div>
+        <div>
             <div class="propriete"></div>
             Soient $M$ et $M'$ et $A$, $B$, $C$ et $D$ quatre
             points distincts dans le plan complexe d'affixes
@@ -760,7 +826,7 @@
         </div>
         Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$
         \( \left|\dfrac{d-c}{b-a}\right|=\dfrac{CD}{AB} \)<br>
-        \( \arg\left(\frac{d-c}{b-a}\right)=(\overrightarrow{AB},\overrightarrow{CD}) \)
+        \( \arg\left(\dfrac{d-c}{b-a}\right)=(\overrightarrow{AB},\overrightarrow{CD}) \)
         <p><b>Réel</b></p>
         <p>Si $\dfrac{d-c}{b-a} \in \mathbb{R}^{*}_{+}$ alors
             $\widehat{(\overrightarrow{AB},\overrightarrow{CD})}=0
@@ -796,11 +862,26 @@
             <div class="subsection-title">2.Configurations géométriques</div>
             <ul>
                 <li><b>Condition d'alignement: </b><br>
-                    $A(a)$, $B(b)$ et $C(c)$ sont alignés si et seulement si $(b -
-                    a)(\overline{c} - \overline{a})$ est réel.</li>
+                    $A(a)$, $B(b)$ et $C(c)$ sont alignés si et seulement si <strong style="color:red;">$(b -
+                        a)(\overline{c} - \overline{a})$ est réel</strong> ou <strong style="color:red;">$\arg \left(
+                        \dfrac{c-a}{b-a} \right) = 0 \pmod{\pi}$</strong>.</li>
+                <div>
+                    <div class="exercise"></div>
+                    <ol>
+                        <li>Vérifier que les points $A(5+3i)$;$B(2+i)$ et $C(-1-i)$ sont alignés</li>
+                        <li>Est ce que les points $M(-2+2i)$, $N(2-i)$ et $N(1-i)$ sont alignés ?</li>
+                    </ol>
+                </div>
+                <li><b>droites parallèles: </b><br>
+                    $A(a)$, $B(b)$, $C(c)$ et $D(d)$ $(AB)$||(CD) si et seulement si <strong style="color:red;">$\arg
+                        \left(
+                        \dfrac{a-b}{c-d} \right) = 0 \pmod{\pi}$</strong>
                 <li><b>Condition d'orthogonalité: </b><br>
-                    Les droites $(AB)$ et $(AC)$ sont orthogonales si et seulement si $(b - a)(\overline{c} -
-                    \overline{a})$ est imaginaire pur.
+                    Les droites $(AB)$ et $(AC)$ sont orthogonales si et seulement si <strong style="color:red;">$(b -
+                        a)(\overline{c} -
+                        \overline{a})$ est imaginaire pur</strong> ou <strong style="color:red;">$\arg
+                        \left(
+                        \dfrac{a-b}{c-d} \right) = \dfrac{\pi}{2} \pmod{\pi}$</strong>
                 </li>
                 <li><b>Condition de cocyclicité de 4 points: </b><br>Soient A, B, C, et D quatre points distincts du
                     plan. Alors A, B, C, et
@@ -810,7 +891,7 @@
                     [2\pi]$ ou
                     $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
                     \pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
-                    [2\pi]$<br>
+                    [2\pi]$ ou $\dfrac{c - a}{b - a} \times \dfrac{b - d}{c - d} \in \mathbb{R}^*$<br>
                 </li>
                 <b><u>$1^{er}$CAS:</u></b>
                 <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}=\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
@@ -818,12 +899,12 @@
                 <img src="images/solution12.png" class="solution1" alt="Solution">
                 <p>Ceci se traduit par : \[
                     \begin{aligned}
-                    \arg \left( \frac{c-a}{b-a} \right) \equiv \arg \left( \frac{c-d}{b-d} \right) \pmod{2\pi} &\iff
-                    \arg \left( \frac{c-a}{b-a} \right) - \arg \left( \frac{c-d}{b-d} \right) \equiv 0 \pmod{2\pi}\\
-                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \right]
+                    \arg \left( \dfrac{c-a}{b-a} \right) \equiv \arg \left( \dfrac{c-d}{b-d} \right) \pmod{2\pi} &\iff
+                    \arg \left( \dfrac{c-a}{b-a} \right) - \arg \left( \dfrac{c-d}{b-d} \right) \equiv 0 \pmod{2\pi}\\
+                    &\iff \arg \left[ \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \right]
                     \equiv
                     0 \pmod{2\pi}\\
-                    &\iff \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \in \mathbb{R}^{*+}
+                    &\iff \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \in \mathbb{R}^{*+}
                     \end{aligned}
                     \]</p>
                 <b><u>$1^{er}$CAS:</u></b>
@@ -833,16 +914,20 @@
                 <img src="images/solution13.png" class="solution1" alt="Solution">
                 <p>Cecil se traduit par :\[
                     \begin{aligned}
-                    \arg \left( \frac{c-a}{b-a} \right) \equiv \pi - \arg \left( \frac{b-d}{c-d} \right)
-                    \pmod{2\pi}&\iff \arg \left( \frac{c-a}{b-a} \right) + \arg \left( \frac{b-d}{c-d} \right) - \pi
+                    \arg \left( \dfrac{c-a}{b-a} \right) \equiv \pi - \arg \left( \dfrac{b-d}{c-d} \right)
+                    \pmod{2\pi}&\iff \arg \left( \dfrac{c-a}{b-a} \right) + \arg \left( \dfrac{b-d}{c-d} \right) - \pi
                     \equiv 0
                     \pmod{2\pi}\\
-                    &\iff \arg \left[ \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \times
+                    &\iff \arg \left[ \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \times
                     (-1)
                     \right] \equiv 0 \pmod{2\pi}\\
-                    &\iff \left( \frac{c-a}{b-a} \right) \times \left( \frac{b-d}{c-d} \right) \in \mathbb{R}^*_{-}
+                    &\iff \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \in \mathbb{R}^*_{-}
                     \end{aligned}
                     \]</p>
+                <div>
+                    <div class="exercise"></div>
+
+                </div>
                 <li><b>Triangle équilatéral: </b><br>
                     Les points $A(a)$, $B(b)$ et $C(c)$ forment un triangle équilatéral direct si, et seulement si :
                     \[
@@ -852,7 +937,7 @@
                     Si $G$ est le barycentre des points $M_k$ d'affixe $z_k$, affectés des coefficients $x_k$, alors
                     l'affixe de $G$ est :
                     \[
-                    \frac{1}{\sum_{k=1}^n x_k} \left( \sum_{k=1}^n x_k z_k \right).
+                    \dfrac{1}{\sum_{k=1}^n x_k} \left( \sum_{k=1}^n x_k z_k \right).
                     \]</li>
             </ul>
         </div>
