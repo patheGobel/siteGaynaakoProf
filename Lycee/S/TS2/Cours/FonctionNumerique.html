@@ -30,7 +30,41 @@
                 <!--1.Quelques limites usuelles-->
                 <div>
                     <div class="subsection-title">1.Quelques limites usuelles</div>
-                    <p></p>
+                    <p>\(\forall n\in\mathbb{N}^{*} \lim\limits_{x \to +\infty} x^{n}=+\infty \text{ , } \lim\limits_{x
+                        \to +\infty}
+                        \dfrac{1}{x^{n}}=0^{+} \)</p>
+
+                    <p>\(
+
+                        \forall n\in\mathbb{N}^{*}
+                        \lim\limits_{x \to -\infty} x^{n} =
+                        \begin{cases}
+                        +\infty \text{ si \(n\) est pair}\\
+                        -\infty \text{ si \(n\) est pair}
+                        \end{cases}
+                        \text{ , }
+                        \lim\limits_{x \to -\infty} \dfrac{1}{x^{n}}=
+                        \begin{cases}
+                        0^{+} \text{ si \(n\) est pair}\\
+                        0^{-} \text{ si \(n\) est pair}
+                        \end{cases}
+
+                        \)</p>
+
+                    <p>\(\lim\limits_{x \to +\infty} \sqrt{x}=+\infty \text{ , } \lim\limits_{x \to +\infty}
+                        \dfrac{1}{\sqrt{x}}=0^{+}\)</p>
+
+                    <p>\(\lim\limits_{x \to a^{+}} \dfrac{1}{x-a}=+\infty \text{ , } \lim\limits_{x \to a^{-}}
+                        \dfrac{1}{x-a}=-\infty\)
+                    </p>
+                    <b><u>Autre Notation</u></b>
+                    <p>\( ( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow a^{-}
+                        )
+                        \Leftrightarrow ( x\rightarrow a_{<} )\)</p>
+                            <p>\( \lim\limits_{x \to a^{+}} f(x)=+\infty \text{ se note aussi }
+                                \lim\limits_{x \to a_{>}} f(x)=+\infty \)</p>
+                            <p>\( \lim\limits_{x \to a^{-}} f(x)=-\infty \text{ se note aussi } \lim\limits_{x \to a_{
+                                <}} f(x)=-\infty \)</p>
                 </div>
                 <!--2.Quelques théorèmes sur les limites-->
                 <div>
@@ -38,30 +72,68 @@
                     <p></p>
                     <div>
                         <div class="subsubsection-title">a.Théorème de comparaison</div>
-                        <p></p>
+                        <p> Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \)
+                            au
+                            voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \(
+                            -\infty \).
+                        </p>
+                        <p>\( \text{ Si pour tout \( x\in I \): }
+                            \begin{cases}
+                            f(x)\geq g(x)\\
+                            \lim\limits_{x \to \alpha}g(x)=+\infty
+                            \end{cases}
+                            \text{ alors } \lim\limits_{x \to \alpha}f(x)=+\infty \)</p>
+                        <img src="images/" class="planComplex" alt="cas 1">
+                        <p>\( \text{Si pour tout \( x\in I \): }
+                            \begin{cases}
+                            f(x)\leq g(x)\\
+                            \lim\limits_{x \to \alpha}g(x)=-\infty
+                            \end{cases}
+                            \text{ alors } \lim\limits_{x \to \alpha}f(x)=-\infty
+                            \)</p>
+                        <img src="images/" class="planComplex" alt="cas 2">
                         <div>
                             <div class="example"></div>
-                            <p></p>
+                            <p>\( \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim\limits_{x \to +\infty} f(x) \)</p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
+                            <p>\( \text{Pour tout \(x\), \( \sin x\leq 1 \implies -x + \sin x \leq 1 - x \implies
+                                f(x)\leq
+                                1 - x \).} \)</p>
+                            <p>\( \text{Posons \( g(x)=1-x \) donc \( f(x)\leq g(x) \).} \)</p>
+                            <p>\( \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim\limits_{x \to
+                                +\infty}f(x)=-\infty \)</p>
                         </div>
                         <div>
                             <div class="example"></div>
-                            <p></p>
+                            <p>\( \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim\limits_{x \to 0}
+                                g(x) \)
+                            </p>
                         </div>
                         <div>
                             <div class="solution"></div>
+                            <p>\( \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq
+                                \sqrt{1+x^{2}} \)., on a, pour tout }, x\neq 0 \)</p>
+                            <p>\( f(x)\geq g(x) \text{ Or,} \lim_{x \to 0}g(x)=+\infty, \text{donc} \lim_{x \to
+                                0}f(x)=+\infty \)</p>
                         </div>
                     </div>
                     <div>
-                        <div class="subsubsection-title">b.Théorème d'encadrement ou théorème des gendarmes</div>
-                        <p></p>
+                        <div class="subsubsection-title">b.Théorème d'encadrement ou théorème des
+                            gendarmes
+                        </div>
+                        <p>Soient \( f \), \( g \) et \( h \) trois fonctions définies sur un intervalle \( I \) au
+                            voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty \). </p>
+                        <p>\( \text{ Si \( \forall x\in I \) }
+                            \begin{cases}
+                            \quad g(x) \leq f(x)\leq h(x) \\
+                            \lim\limits_{x \to \alpha}g(x)=\lim\limits_{x \to \alpha}h(x)=\ell,
+                            \end{cases}
+                            \text{ alors } \lim\limits_{x \to \alpha}f(x)=\ell \)</p>
                         <div>
                             <div class="application-exercise"></div>
+                            <p>\( \text{ Calculer } \lim_{ x\to +\infty} \frac{x-\sin x}{x^{2}} \)</p>
                             <button class="toggle-correction">Afficher la correction</button>
                             <div class="correction">
                                 Voici la correction détaillée...
@@ -106,7 +178,8 @@
                     <div class="subsection-title">2.Quelques théorèmes sur les limites</div>
                     <!--a.Asymptote horizontale (AH)[Parallèle à (Ox)]-->
                     <div>
-                        <div class="subsubsection-title">a.Asymptote horizontale (AH)[Parallèle à (Ox)]</div>
+                        <div class="subsubsection-title">a.Asymptote horizontale (AH)[Parallèle à (Ox)]
+                        </div>
                         <div>
                             <div class="example"></div>
                             <p></p>
@@ -120,7 +193,8 @@
                     </div>
                     <!--b.Asymptote verticale (AV)[Parallèle à (oy)]-->
                     <div>
-                        <div class="subsubsection-title">b.Asymptote verticale (AV)[Parallèle à (oy)]</div>
+                        <div class="subsubsection-title">b.Asymptote verticale (AV)[Parallèle à (oy)]
+                        </div>
                         <div>
                             <div class="example"></div>
                             <p></p>
@@ -148,7 +222,9 @@
                     </div>
                     <!--d.Propriété 1[Autre façon de montrer que y=ax+b est une AO]-->
                     <div>
-                        <div class="subsubsection-title">d.Propriété 1[Autre façon de montrer que y=ax+b est une AO]
+                        <div class="subsubsection-title">d.Propriété 1[Autre façon de montrer que y=ax+b
+                            est
+                            une AO]
                         </div>
                         <div>
                             <div class="example"></div>
@@ -197,7 +273,9 @@
                     </div>
                     <!--g.Branche parabolique de direction y = ax (a réel)-->
                     <div>
-                        <div class="subsubsection-title">g.Branche parabolique de direction y = ax (a réel)</div>
+                        <div class="subsubsection-title">g.Branche parabolique de direction y = ax (a
+                            réel)
+                        </div>
                         <div>
                             <div class="remark"></div>
                         </div>
@@ -499,7 +577,8 @@
             </div>
             <!--7.Position relative d’une courbe et de son asymptote (∆) : y = ax + b-->
             <div>
-                <div class="subsection-title">7.Position relative d'une courbe et de son asymptote $(∆) : y = ax + b$
+                <div class="subsection-title">7.Position relative d'une courbe et de son asymptote $(∆) : y = ax +
+                    b$
                 </div>
                 <div>
                     <div class="example"></div>
@@ -511,7 +590,8 @@
             </div>
             <!--8.Position relative d’une courbe et de sa tangente au point M0 d’abscisse x0-->
             <div>
-                <div class="subsection-title">8.Position relative d'une courbe et de sa tangente au point M0 d'abscisse
+                <div class="subsection-title">8.Position relative d'une courbe et de sa tangente au point M0
+                    d'abscisse
                     $x_0$
                 </div>
                 <div>
