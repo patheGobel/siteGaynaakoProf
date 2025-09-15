@@ -27,6 +27,7 @@
  }
 
  /* Style pour les titres de section */
+ 
  .section-title {
      font-size: 1.6rem;
      /* Taille plus grande */
@@ -49,6 +50,29 @@
      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
      /* Légère ombre */
  }
+ /* Style pour les titres de sectionAB */
+ .sectionAB-title{
+    font-size: 1.6rem;
+    /* Taille plus grande */
+    font-weight: bold;
+    /* Gras */
+    color: #ff0000;
+    /* Rouge pour attirer l'attention */
+    border-left: 6px solid #ff0000;
+    /* Ligne verticale colorée à gauche */
+    padding-left: 12px;
+    /* Décalage du texte par rapport à la ligne */
+    margin-top: 30px;
+    /* Espacement au-dessus */
+    margin-bottom: 15px;
+    /* Espacement en dessous */
+    background-color: #ffe6e6;
+    /* Fond très léger */
+    border-radius: 5px;
+    /* Coins arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Légère ombre */
+}
 
  /* Style pour les titres de subsection */
  .subsection-title {
