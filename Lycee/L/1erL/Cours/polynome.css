@@ -1,0 +1,314 @@
+ /* Initialisation du compteur */
+ body {
+     counter-reset:
+         definition-counter exemple-counter solution-counter remark-counter propriete-counter exercise-counter application-exercise-counter;
+ }
+
+ /* Style pour le titre principal de la leçon */
+ h1 {
+     font-size: 2.5rem;
+     /* Grand titre */
+     font-weight: bold;
+     /* Gras */
+     color: #1d3557;
+     /* Bleu foncé élégant */
+     text-align: center;
+     /* Centré */
+     margin-top: 30px;
+     /* Espacement au-dessus */
+     margin-bottom: 30px;
+     /* Espacement en dessous */
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+     /* Légère ombre portée */
+     border-bottom: 3px solid #e63946;
+     /* Ligne rouge sous le titre */
+     padding-bottom: 10px;
+     /* Décalage avec la ligne */
+ }
+
+ /* Style pour les titres de section */
+ .section-title {
+     font-size: 1.6rem;
+     /* Taille plus grande */
+     font-weight: bold;
+     /* Gras */
+     color: #e63946;
+     /* Rouge pour attirer l'attention */
+     border-left: 6px solid #e63946;
+     /* Ligne verticale colorée à gauche */
+     padding-left: 12px;
+     /* Décalage du texte par rapport à la ligne */
+     margin-top: 30px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     background-color: #ffe6e6;
+     /* Fond très léger */
+     border-radius: 5px;
+     /* Coins arrondis */
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+     /* Légère ombre */
+ }
+
+ /* Style pour les titres de subsection */
+ .subsection-title {
+     font-size: 1.3rem;
+     /* Taille légèrement plus petite que le h1 */
+     font-weight: bold;
+     /* Gras */
+     color: #db5661;
+     /* Rouge vif pour rappeler le style des sections */
+     margin-top: 20px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     border-left: 5px solid #db5661;
+     /* Ligne décorative à gauche */
+     padding-left: 8px;
+     /* Décalage du texte par rapport à la ligne */
+ }
+
+ /* Style pour les titres de subsubsection-title */
+ .subsubsection-title {
+     font-size: 1.3rem;
+     /* Taille légèrement plus petite que le h1 */
+     font-weight: bold;
+     /* Gras */
+     color: #d98289;
+     /* Rouge vif pour rappeler le style des sections */
+     margin-top: 20px;
+     /* Espacement au-dessus */
+     margin-bottom: 15px;
+     /* Espacement en dessous */
+     border-left: 5px solid #d98289;
+     /* Ligne décorative à gauche */
+     padding-left: 8px;
+     /* Décalage du texte par rapport à la ligne */
+ }
+
+ ul.triangle-list {
+     list-style: none;
+     /* enlever les puces normales */
+     padding-left: 0;
+ }
+
+ ul.triangle-list li::before {
+     content: "► ";
+     /* équivalent à \blacktriangleright */
+     color: rgb(219, 37, 37);
+     margin-right: 6px;
+ }
+
+ /* Style pour les definition */
+ .definition {
+     counter-increment: definition-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .definition::before {
+     content: "Définition " counter(definition-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les exemples */
+ .example {
+     counter-increment: exemple-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .example::before {
+     content: "Exemple " counter(exemple-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /*Solution Exemple*/
+ .solution {
+     counter-increment: solution-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .solution::before {
+     content: "Solution " counter(solution-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les exercise */
+ .exercise {
+     counter-increment: exercise-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .exercise::before {
+     content: "Exercice " counter(exercise-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les application-exercise */
+ .application-exercise {
+     counter-increment: application-exercise-counter;
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+ }
+
+ /* Numérotation automatique */
+ .application-exercise::before {
+     content: "Exerice Application " counter(application-exercise-counter) " : ";
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les correction application-exercise */
+ .correction {
+     font-weight: bold;
+     color: #049320;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-left: 4px solid #05aa18;
+     padding-left: 10px;
+     font-size: 1.1rem;
+     position: relative;
+     display: none;
+ }
+
+ /* Numérotation automatique */
+ .correction::before {
+     font-weight: bold;
+     color: #0c9816;
+     /* Rouge pour bien marquer le numéro */
+ }
+
+ /* Style pour les remarques */
+ .remark {
+     counter-increment: remark-counter;
+     font-weight: bold;
+     color: #ff8c00;
+     /* orange */
+     margin-top: 15px;
+     margin-bottom: 10px;
+     border-left: 4px solid #ff8c00;
+     padding-left: 10px;
+     font-size: 1rem;
+ }
+
+ /* Numérotation automatique des remarques */
+ .remark::before {
+     content: "Remarque " counter(remark-counter) " : ";
+     font-weight: bold;
+     color: #ff8c00;
+     /* rouge-orange pour le numéro */
+ }
+
+ /* Style pour les propriete */
+ .propriete {
+     counter-increment: propriete-counter;
+     font-weight: bold;
+     color: #ff8c00;
+     /* orange */
+     margin-top: 15px;
+     margin-bottom: 10px;
+     border-left: 4px solid #ff8c00;
+     padding-left: 10px;
+     font-size: 1rem;
+ }
+
+ /* Numérotation automatique des propriete */
+ .propriete::before {
+     content: "Propriété " counter(propriete-counter) " : ";
+     font-weight: bold;
+     color: #ff8c00;
+     /* rouge-orange pour le numéro */
+ }
+
+ .plan-container {
+     display: flex;
+     /* active le mode flex */
+     justify-content: center;
+     /* centre horizontalement les images */
+     gap: 20px;
+     /* espace entre les images */
+     margin: 10px 0;
+     flex-wrap: wrap;
+     /* permet de passer en vertical si écran trop petit */
+ }
+
+ .planComplex {
+     width: 45%;
+     /* chaque image prend 45% de la largeur du conteneur */
+     height: auto;
+     /* conserve les proportions */
+ }
+
+ img.solution1 {
+     width: 200px;
+     /* ou width:50%; */
+     height: auto;
+     /* garde les proportions */
+     display: block;
+ }
+
+ p b {
+     color: red;
+ }
+
+ /*
+ ul.bullet-list {
+     list-style: none;
+     padding-left: 0;
+ }
+ */
+
+ /*
+ ul.bullet-list li::before {
+     content: "• ";
+     font-size: 1.2em;
+     color: #e63946;
+     
+ margin-right: 6px;
+ }*/
