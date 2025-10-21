@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculs Dans \( \mathbb{R} \)</title>
+    <link rel="stylesheet" href="calculsDansR.css">
+    <script src="calculsDansR.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculs Dans \( \mathbb{R} \)</h1>
+        <!-- I. Rappel et compléments  -->
+        <div class="section">
+            <div class="section-title">I. Rappel et compléments</div>
+            <!--1. Egalités Usuelles-->
+            <div>
+                <div class="subsection-title">1. Identités remarquables</div>
+                <p><b>Identités classiques</b></p>
+                <p>Carré d'une somme</p>
+                <p>\( (a + b)^2 = a^2 + 2ab + b^2 \)</p>
+                <p>Carré d'une différence</p>
+                <p>\( (a - b)^2 = a^2 - 2ab + b^2 \)</p>
+                <p>Produit d'une somme par une différence</p>
+                <p>\( (a + b)(a - b) = a^2 - b^2 \)</p>
+
+                <p><b>Identités du 3ème degré</b></p>
+                <p>Cube d'une somme</p>
+                <p>\( (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \)</p>
+                <p>Cube d'une différence</p>
+                <p> \( (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3 \)</p>
+                <p>Somme de deux cubes</p>
+                <p>\( a^3 + b^3 = (a + b)(a^2 - ab + b^2) \)</p>
+                <p>Différence de deux cubes</p>
+                <p>\( a^3 - b^3 = (a - b)(a^2 + ab + b^2) \)</p>
+            </div>
+            <div>
+                <div class="example"></div>
+                <p><b>Développement d'expressions</b></p>
+                <p>développer l'expression </p>
+                <ol>
+                    <li>\( (2x + 5)^2 \)</li>
+                    <li>\( (3x - 4)^2 \)</li>
+                    <li>\( (x + 7)(x - 7) \)</li>
+                    <li>\( (2a + 3b)^2 \)</li>
+                </ol>
+                <p><b>Factorisation d'expressions</b></p>
+                <ol>
+                    <li>\( 9x^2 - 16 \)</li>
+                    <li> \( 25a^2 - 49b^2 \)</li>
+                    <li>\( x^2 + 10x + 25 \)</li>
+                    <li>\( 4y^2 - 12y + 9 \)</li>
+                </ol>
+                <p><b>Calcul mental</b></p>
+                <ol>
+                    <li>\( 103^2 = (100 + 3)^2 = 100^2 + 2 \times 100 \times 3 + 3^2 = 10000 + 600 + 9 = 10609 \)</li>
+                    <li>\( 98^2 = (100 - 2)^2 = 100^2 - 2 \times 100 \times 2 + 2^2 = 10000 - 400 + 4 = 9604 \)</li>
+                    <li>\( 47 \times 53 = (50 - 3)(50 + 3) = 50^2 - 3^2 = 2500 - 9 = 2491 \)</li>
+                    <li>\( 201 \times 199 = (200 + 1)(200 - 1) = 200^2 - 1^2 = 40000 - 1 = 39999 \)</li>
+                </ol>
+            </div>
+            <div>
+                <div class="solution"></div>
+                <ul class="bullet-list">
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <div class="example"></div>
+                <p><b>Développement des cubes</b></p>
+                <p>Développer les expressions suivantes :</p>
+                <ol>
+                    <li>\( (x + 2)^3 \)</li>
+                    <li>\( (2x - 1)^3 \)</li>
+                    <li>\( (3a + b)^3 \)</li>
+                    <li>\( (x - 3y)^3 \)</li>
+                </ol>
+                <p><b>Factorisation des cubes</b></p>
+                <p>Factoriser les expressions suivantes :</p>
+                <ol>
+                    <li>\( x^3 + 8 \)</li>
+                    <li>\( 27 - y^3 \)</li>
+                    <li>\( 8a^3 + 27b^3 \)</li>
+                    <li>\( 64x^3 - 125 \)</li>
+                </ol>
+                <p><b>Calcul mental avec les cubes</b></p>
+                <p>Calculer rapidement en utilisant les identités remarquables des cubes :</p>
+                <ol>
+                    <li>\( 101^3 = (100 + 1)^3 \)</li>
+                    <li>\( 99^3 = (100 - 1)^3 \)</li>
+                    <li>\( 21^3 = (20 + 1)^3 \)</li>
+                </ol>
+            </div>
+            <div>
+                <div class="solution"></div>
+                <p><br>
+            </div>
+            <div>
+                <div class="remark"></div>
+            </div>
+            <div>
+                <div class="example"></div>
+                <p></p>
+            </div>
+            <div>
+                <div class="solution"></div>
+                <p><br>
+            </div>
+        </div>
+
+        <!-- II. Conjugué -->
+        <div class="section">
+            <div class="section-title">II. Conjugué d'un Nombre Complexe</div>
+            <div>
+                <div class="definition"></div>
+                <p></p>
+            </div>
+            <div>
+                <div class="example"></div>
+                <p></p>
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+            <div>
+                <div class="propriete"></div>
+                <ul class="bullet-list">
+                    <li></li>
+                    <li></li>
+                    <p></p>
+                </ul>
+            </div>
+            <div>
+                <div class="example"></div>
+                <ol>
+                    <li></li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <li></li><br><br>
+                </ol>
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+
+        </div>
+
+        <!-- III. Représentation graphique -->
+        <div class="section">
+            <div class="section-title">III. Représentation graphique d'un Nombre Complexe</div>
+            <div>
+                <div class="subsection-title">1. Plan Complexes</div>
+            </div>
+            <div class="plan-container">
+                <img src="images/planComplex.png" class="planComplex" alt="Plan Complexes">
+                <img src="images/planComplex2.png" class="planComplex" alt="Plan Complexes">
+            </div>
+            <div>
+                <div class="subsection-title">2.Représentation d'un Nombre Complexe</div>
+                <p></p>
+            </div>
+            <div>
+                <div class="example"></div>
+                <img src="images/solution1.png" class="solution1" alt="Solution">
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+        </div>
+
+        <!-- IV. Module -->
+        <div class="section">
+            <div class="section-title">IV. Module d'un Nombre Complexe</div>
+            <div>
+                <div class="definition"></div>
+            </div>
+            <div class="propriete"></div>
+            <p></p>
+            <div>
+                <div class="example"></div>
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+            <div>
+                <div class="exercise"></div>
+                <p>1.a 1.b 1.c 1.d (CIAM SE PAGE 2010)</p>
+            </div>
+            <div>
+                <div class="exercise"></div>
+                <p>1.e 1.f 1.g (CIAM SE PAGE 2012)</p>
+            </div>
+            <div>
+                <div class="application-exercise"></div>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
+            </div>
+        </div>
+
+        <!-- V. Argument -->
+        <div class="section">
+            <div class="section-title">V. Argument d'un nombre complexe non nul</div>
+            <div>
+                <div class="definition"></div>
+            </div>
+            <div>
+                <div class="propriete"></div>
+            </div>
+            <div>
+                <div class="propriete"></div>
+
+            </div>
+            <div>
+                <div class="application-exercise"></div>
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
+            </div>
+            <div>
+                <div class="remark"></div>
+                <p style="text-indent: 30px;">Si $b>0$ alors $arg(z)=\frac{\pi}{2}$</p>
+                <p style="text-indent: 30px;">Si $b< 0 $ alors $\arg(z)=\frac{-\pi}{2}$</p>
+            </div>
+        </div>
+
+        <!-- VI. Formes -->
+        <div class="section">
+            <div class="section-title">VI. Forme d'un nombre complexe</div>
+            <div class="subsection-title">1. Forme algébrique</div>
+
+            <div>
+                <div class="example"></div>
+
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+            <div class="subsection-title">2. Forme trigonométrique</div>
+            <div>
+                <div class="example"></div>
+            </div>
+            <div class="solution"></div>
+            <div class="subsection-title">3. Forme exponentielle</div>
+            <div>
+                <div class="definition"></div>
+            </div>
+            <div>
+                <div class="propriete"></div>
+            </div>
+            <div>
+                <div class="application-exercise"></div>
+
+                <button class="toggle-correction">Afficher la correction</button>
+                <div class="correction">
+                    Voici la correction détaillée...
+                </div>
+            </div>
+        </div>
+
+        <!-- VII. Formules -->
+        <div class="section">
+            <div class="section-title">VII. Formule de Moivre - Formule d'Euler</div>
+            <div>
+                <div class="subsection-title">1. Formule de Moivre</div>
+            </div>
+            <div>
+                <div class="subsection-title">2. Formule d'Euler</div>
+            </div>
+            <div cclass="subsection-title">3. Linéariser des expressions trigonométriques</div>
+            <div>
+                <div class="example"></div>
+            </div>
+            <div>
+                <div class="solution"></div>
+            </div>
+        </div>
+        <!-- VIII. Résolution déquations dans Cs -->
+        <div class="section">
+            <div class="section-title">VIII. Résolution déquations dans C</div>
+            <div>
+                <div class="subsection-title">1. Racines nièmes (n ≥ 2)</div>
+                <div>
+                    <div class="subsubsection-title">a. Racine n-ième de l'unité</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- IX. Interprétation géométrique -->
+    <div class="section">
+        <div class="section-title">IX. Interprétation géométrique des nombres complexes</div>
+        <div>
+            <div class="exercise"></div>
+        </div>
+        <div>
+            <div class="exercise"></div>
+        </div>
+        <div>
+            <div class="propriete"></div>
+        </div>
+        <div>
+            <div class="example"></div>
+        </div>
+        <div>
+            <div class="solution"></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
