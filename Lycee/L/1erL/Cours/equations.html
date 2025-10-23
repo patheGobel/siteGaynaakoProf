@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systèmes d'équations et d'inéquations - 1er L</title>
+    <link rel="stylesheet" href="polynome.css">
+    <script src="polynome.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Systèmes d'équations et d'inéquations - 1er L</h1>
+        <!-- I. Systèmes de trois équations linéaires à trois inconnues  -->
+        <div class="section">
+            <div class="section-title">I. Systèmes de trois équations linéaires à trois inconnues</div>
+            <!--1. Exemple-->
+            <div>
+                <div class="subsection-title">1. Exemple</div>
+                <div class="subsubsection-title">a. Définition et vocabulaire</div>
+            </div>
+            <div>
+                <div class="example"></div>
+                Le système
+                $\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\\2x-y+2z&amp;=&amp;2\\-x+y+z&amp;=&amp;-3\end{array}\right.$
+                est formé de trois équations.
+                <p>Chacune d'elle contient trois inconnues $x$ ; $y$ et $z$ avec des exposants tous égaux à $1.$</p>
+                <p>On dit qu'on a un système de trois équations linéaires à trois inconnues $x$ ; $y$ et $z.$</p>
+                <p>Résoudre un tel système c'est trouver tous les triplets $(x\;,\ y\;,\ z)$ de nombres réels qui
+                    vérifient les trois équations du système.</p>
+            </div>
+            <div class="subsection-title">2. Résolution avec la méthode du pivot de Gauss</div>
+            <div>
+                <div class="example"></div>
+                <p>Résolvons le système suivant en utilisant la méthode du pivot de Gauss</p>
+                <p>$\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\\2x-y+2z&amp;=&amp;2\\-x+y+z&amp;=&amp;-3\end{array}\right.$
+                </p>
+                <p>Pour résoudre un tel système, on commence par désigner les $3$ équations respectivement par $L_{1}$ ;
+                    $L_{2}$ et $L_{3}$</p>
+                <p>$\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\qquad\left(L_{1}\right)\\2x-y+2z&amp;=&amp;2\qquad\left(L_{2}\right)\\-x+y+z&amp;=&amp;-3\qquad\left(L_{3}\right)\end{array}\right.$
+                </p>
+                <b>$1^{er}$ étape :</b>
+                <p>On fixe l'équation $\left(L_{1}\right)$ puis on élimine l'inconnue $x$ dans $\left(L_{2}\right)$ en
+                    considérant le sous-système
+                    $-2\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\qquad\left(L_{1}\right)\\2x-y+2z&amp;=&amp;2\qquad\left(L_{2}\right)\end{array}\right.$
+                </p>
+                <p>$$\text{d'où
+                    }\left\lbrace\begin{array}{lcl}-2x-20y+6z&amp;=&amp;-10\\2x-y+2z&amp;=&amp;2\end{array}\right.$$</p>
+                <p>ainsi on a : $-21y+8z=-8\quad\left(L'_{2}\right)$</p>
+                <b>$2^{ième}$ étape :</b>
+                <p>On fixe l'équation $\left(L_{1}\right)$ puis on élimine l'inconnue $x$ dans $\left(L_{3}\right)$ en
+                    considérant le sous-système
+                    $\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\qquad\left(L_{1}\right)\\-x+y+z&amp;=&amp;-3\qquad\left(L_{3}\right)\end{array}\right.$
+                </p>
+                <p>d'où ainsi on a : $11y-2z=2\quad\left(L'_{3}\right)$</p>
+                <p>Ainsi, on obtient le système équivalent suivant :
+                    $\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\qquad\left(L_{1}\right)\\-21y+8z&amp;=&amp;-8\qquad\left(L'_{2}\right)\\11y-2z&amp;=&amp;-3\qquad\left(L'_{3}\right)\end{array}\right.$
+                </p>
+                <b>$3^{ième}$ étape :</b>
+                <p>On fixe $\left(L'_{2}\right)$ puis on élimine $y$ dans $\left(L'_{3}\right)$ en considérant le
+                    sous-système
+                    $\left\lbrace\begin{array}{lcl}-21y+8z&amp;=&amp;-8\qquad\left(L'_{2}\right)\\11y-2z&amp;=&amp;2\qquad\left(L'_{3}\right)\end{array}\right.$
+                </p>
+                <p>Ainsi on a $46z=-46\left(L"_{3}\right)$</p>
+                <p>On obtient le système équivalent suivant dit système triangulaire</p>
+                <p>$\left\lbrace\begin{array}{lcl}x+10y-3z&amp;=&amp;5\qquad\left(L_{1}\right)\\-21y+8z&amp;=&amp;-8\qquad\left(L'_{2}\right)\\46z&amp;=&amp;-46\qquad\left(L"_{3}\right)\end{array}\right.$
+                </p>
+                <b>$4^{ième}$ étape : </b>
+                <p>Pour terminer la résolution, on détermine $z$ dans $\left(L"_{3}\right)$, puis on remplace $z$ par
+                    cette valeur dans $\left(L'_{2}\right)$, on obtient la valeur de $y$ puis on obtient celle de $x$,
+                    en substituant à $y$ et $z$ par leurs valeurs respectives dans $\left(L'_{1}\right).$</p>
+                <p>Ainsi on a : $S=\left\lbrace(2\ ;\ 0\ ;\ -1)\right\rbrace$</p>
+            </div>
+            </p>
+        </div>
+        </p>
+    </div>
+    <div>
+        <div class="remark"></div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
