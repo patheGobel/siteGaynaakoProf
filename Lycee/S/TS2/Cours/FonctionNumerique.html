@@ -143,17 +143,36 @@
                     </div>
                     <div>
                         <div class="subsubsection-title">c.Limite et composition de fonctions</div>
-                        <p></p>
+                        <p>Soit \( \alpha \), \( \beta \) et \( \gamma \) des réels ou \( \pm\infty \) On considère deux
+                            fonctions \( u \) et \( v \) telles que
+
+                            \(
+                            \text{ Si }
+                            \begin{cases}
+                            \lim_{x \to \alpha}u(x)=\beta \\
+                            \lim_{x \to \beta}v(x)=\gamma
+                            \end{cases}
+                            \text{ alors } \lim_{x \to \alpha}v(u(x))=\gamma
+                            \)</p>
                         <div>
                             <div class="application-exercise"></div>
+                            <p>\( \text{Calculer }\lim\limits_{x \to +\infty}\sqrt{\frac{9}{x}+7} \)</p>
                             <button class="toggle-correction">Afficher la correction</button>
                             <div class="correction">
-                                Voici la correction détaillée...
+                                <p>On commence par la fonction la plus à l'intérieur :</p>
+
+                                <p>\( \text{Posons } u(x)=\frac{9}{x}+7 \text{ et } v(x)=\sqrt{\frac{9}{x}+7} \)</p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="subsubsection-title">d.Théorème du changement de variable</div>
+                        <p> \( \lim\limits_{x \to x_{0}}f(x)=\lim\limits_{t \to 0}f(x_{0}+t) \) </p>
+                        <p>\( \lim\limits_{x \to +\infty}f(x)=\lim\limits_{X \to 0^{+}}f \left( \frac{1}{X} \right) \)
+                        </p>
+                        <p>\( \lim\limits_{x \to -\infty}f(x)=\lim\limits_{X \to 0^{-}}f \left( \frac{1}{X} \right) \)
+                        </p>
+                        <p>Preuve[Exercice]</p>
                         <div>
                             <div class="application-exercise"></div>
                             <button class="toggle-correction">Afficher la correction</button>
@@ -166,8 +185,15 @@
                 <!--3.Limites de fonctions trigonométriques-->
                 <div>
                     <div class="subsection-title">3.Limites de fonctions trigonométriques</div>
+                    <p> \( \lim\limits_{x \to 0} \frac{\sin x}{x}=1 \) </p>
+                    <p> \( \lim\limits_{x \to 0} \frac{\tan x}{x}=1 \) </p>
+                    <p> \( \lim\limits_{x \to 0} \frac{1-\cos x}{x^{2}}=\frac{1}{2} \) </p>
+                    <p> \( \lim\limits_{x \to 0} \frac{\cos x -1 }{x}=0 \) </p>
                     <div>
                         <div class="application-exercise"></div>
+                        <p>\( \lim\limits_{x \to +\infty}x\sin \frac{1}{x} \)</p>
+                        <p>\( \lim\limits_{x \to +\infty}x\tan \frac{3}{x} \)</p>
+                        <p>\( \lim\limits_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \)</p>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
                             Voici la correction détaillée...
@@ -176,49 +202,85 @@
                 </div>
                 <!--4.Interprétations géométriques des limites-->
                 <div>
-                    <div class="subsection-title">2.Quelques théorèmes sur les limites</div>
+                    <div class="subsection-title">4.Interprétations géométriques des limites</div>
+                    <p>Les limites peuvent être interprétées géométriquement de plusieurs manières en fonction du
+                        contexte.</p>
+                    <p>Voici quelques exemples typiques :</p>
                     <!--a.Asymptote horizontale (AH)[Parallèle à (Ox)]-->
                     <div>
                         <div class="subsubsection-title">a.Asymptote horizontale (AH)[Parallèle à (Ox)]
                         </div>
+                        <p>\( \text{ Une fonction } f \text{ a une asymptote horizontale en } y = \ell \text{ lorsque}
+                            \lim\limits_{x \to +\infty} f(x) = \ell \text{ ou } \lim\limits_{x \to +\infty} f(x) = \ell
+                            \)</p>
+                        <p>\( \text{ Si } \lim\limits_{x \to +\infty} f(x) = \ell \text{ on dit que: } y = \ell \text{
+                            est }
+                            \text{ une AH }
+                            \text{ à } (C_{f}) \text{ en } -\infty \)</p>
+                        <p>\( \text{ Si } \lim\limits_{x \to -\infty} f(x) = \ell \text{ on dit que: } y = \ell \text{
+                            est }
+                            \text{ une AH }
+                            \text{ à } (C_{f}) \text{ en } -\infty \)</p>
+                        <p> Cela signifie que la courbe de la fonction se rapproche de la droite \( y = \ell \) à mesure
+                            que \( x \to +\infty \) ou \( x \to -\infty \).</p>
                         <div>
                             <div class="example"></div>
-                            <p></p>
+                            <p>Déterminer l'AH de \( f \)</p>
+                            <p>\( f(x) = \frac{2x^2}{x^2 + 1} \)</p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
+                            <p>\( \lim\limits_{x \to +\infty} f(x) = 2, \quad \lim\limits_{x \to -\infty} f(x) = 2 \)
+                            </p>
+                            <p> La courbe de la fonction se rapproche de la droite \( y = 2 \) à mesure que \( x \to
+                                +\infty
+                                \) ou \( x \to -\infty \).</p>
                         </div>
                     </div>
                     <!--b.Asymptote verticale (AV)[Parallèle à (oy)]-->
                     <div>
                         <div class="subsubsection-title">b.Asymptote verticale (AV)[Parallèle à (oy)]
                         </div>
+                        <p>Soit \( x = a \in \mathbb{R} \)</p>
+                        <p>Si \( \lim\limits_{x \to a} f(x) = \pm\infty \) alors \(x = a\) est une AV à
+                            \(C_{f}\)</p>
+                        <p>Cela signifie que la courbe de la fonction tend vers l'infini lorsque \( x \) approche \( a
+                            \) par la droite (ou la gauche).</p>
                         <div>
                             <div class="example"></div>
-                            <p></p>
+                            <p>Déterminer de l'AV de \( f \) tel que \( f(x) = \frac{1}{x} \)</p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
+                            <p>\( \lim\limits_{x \to 0^{+}} f(x) = +\infty \quad \text{et} \quad \lim\limits_{x \to
+                                0^{-}} f(x) =
+                                -\infty, \)</p>
+                            <p>ce qui signifie que la fonction a une asymptote verticale en \( x = 0 \).</p>
                         </div>
                     </div>
-                    <!--c.Asymptote oblique (AO)-->
+                    <!--C.Asymptote oblique (AO)-->
                     <div>
                         <div class="subsubsection-title">c.Asymptote oblique (AO)</div>
+                        <p>Si \( \lim\limits_{x \to +\infty} [f(x)-(ax+b)] = 0 \) alors \(y = ax+b\) est une AO à
+                            \((C_{f})\) en \( +\infty \)</p>
+                        <p>Si \( \lim\limits_{x \to -\infty} [f(x)-(ax+b)] = 0 \) alors \(y = ax+b\) est une AO à
+                            \((C_{f})\) en \( -\infty \)</p>
+                        <p>Cette méthode est utilisée pour montrer que \(y=ax+b\) est est une AO</p>
                         <div>
                             <div class="example"></div>
-                            <p></p>
+                            <p>Soit \( f(x) = \frac{x^2 + 2x + 1}{x} \) une fonction et \( (C_{f}) \) sa courbe
+                                représentative.</p>
+                            <p>Montrer que \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \)</p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
+                            <p> \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \) si
+                                \( \lim\limits_{x \to +\infty}\left[ f(x)-y\right] =0 \)</p>
+
+                            En effet
+                            \(f(x) = \frac{x^2 + 2x + 1}{x}, \quad \lim\limits_{x \to +\infty} \left( f(x) - (x + 2)
+                            \right) = 0.\)
+                            La courbe de la fonction se rapproche de la droite \( y = x + 2 \) pour \( x \to +\infty \).
                         </div>
                     </div>
                     <!--d.Propriété 1[Autre façon de montrer que y=ax+b est une AO]-->
@@ -227,20 +289,54 @@
                             est
                             une AO]
                         </div>
+                        <p>Soit \( f \) une fonction, \( a, b \) un réel et \( (C_{f}) \) sa courbe représentative .</p>
+                        \(
+                        \text{Si } \lim\limits_{x \to +\infty}f(x)=\pm\infty
+                        \text{ et }
+                        \lim\limits_{x \to +\infty}\frac{f(x)}{x}=a
+                        \text{ et }
+                        \lim\limits_{x \to +\infty}\left( f(x)-ax\right) =b
+                        \)
+
+                        \(
+                        \text{ alors }
+                        y = ax + b \text{ est une AO à } (C_{f})\quad en\quad +\infty.\)
+                        <p><b>NB:</b></p>
+                        <p>Cette propriété reste valable lorsque \( x\rightarrow -\infty\)</p>
+
+                        <p>On aura \( y = ax + b \) est une AO à \( (C_{f}) \) en \(-\infty \)</p>
                         <div>
-                            <div class="example"></div>
-                            <p></p>
-                        </div>
-                        <div>
-                            <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
+                            <div class="application-exercise"></div>
+                            <ol>
+                                <li>Soit \( f(x)=\frac{2x}{\sqrt{x+1}} \)</li>
+                                Déterminer \(Df\) et montrer que \(x=-1\) est une AV à \( (C_{f}) \).
+                                <li>Soit \( g(x)=\sqrt{4x^{2}+1}+2x \)</li>
+                                <ol type="a">
+                                    <li>Montrer que \(y = 0\) est une AH à \( (C_{g}) \) en \(-\infty\)</li>
+                                    <li>Montrer que \(y = 4x\) est une AO à \( (C_{g}) \) en \(+\infty\)</li>
+                                </ol>
+                            </ol>
+                            <button class="toggle-correction">Afficher la correction</button>
+                            <div class="correction">
+                                Voici la correction détaillée...
+                            </div>
                         </div>
                     </div>
                     <!--e.Branche parabolique de direction (oy)-->
                     <div>
                         <div class="subsubsection-title">e.Branche parabolique de direction (oy)</div>
+                        <p> Si \( \lim\limits_{x \to +\infty} f(x) = \pm\infty et \lim\limits_{x \to +\infty}
+                            \frac{f(x)}{x}
+                            = \pm\infty \)</p>
+
+                        <p>
+                            alors \((C_{f})\) admet une branche parabolique de direction \( (oy) \) en \( +\infty
+                            \)
+                        </p>
+                        <div>
+                            <div class="remark"></div>
+                            <p>Cette propriété reste valable lorsque \(x \rightarrow -\infty\) </p>
+                        </div>
                         <div>
                             <div class="example"></div>
                             <p></p>
@@ -258,30 +354,35 @@
                     <!--f.Branche parabolique de direction (ox)-->
                     <div>
                         <div class="subsubsection-title">f.Branche parabolique de direction (ox)</div>
-                        <div>
-                            <div class="example"></div>
-                            <p></p>
-                        </div>
-                        <div>
-                            <div class="solution"></div>
-                            <ul class="bullet-list">
-                                <li></li>
-                            </ul>
-                        </div>
+                        <p>Si \( \lim\limits_{x \to +\infty} f(x) = \pm\infty \) et \( \lim\limits_{x \to +\infty}
+                            \frac{f(x)}{x}
+                            = 0 \)</p>
+                        <p>alors \((C_{f})\) admet une branche parabolique de direction \( (ox) \) en \( +\infty \)</p>
                         <div>
                             <div class="remark"></div>
+                            Cette propriété reste valable lorsque \(x \rightarrow -\infty\)
                         </div>
                     </div>
                     <!--g.Branche parabolique de direction y = ax (a réel)-->
                     <div>
-                        <div class="subsubsection-title">g.Branche parabolique de direction y = ax (a
+                        <div class="subsubsection-title">g. Branche parabolique de direction y = ax (a
                             réel)
                         </div>
+                        <p>Si \( \lim\limits_{x \to +\infty} f(x) = \pm\infty \) et \( \lim\limits_{x \to +\infty}
+                            \frac{f(x)}{x}
+                            = a \) et \( \lim\limits_{x \to +\infty} (f(x)-ax) = \pm\infty \)</p>
+                        <p>alors \((C_{f})\) admet une branche parabolique de direction \(y=ax\) en \( +\infty \)</p>
                         <div>
                             <div class="remark"></div>
                         </div>
                         <div>
                             <div class="application-exercise"></div>
+                            <p>Étudier les branches infinies des courbes représentatives des fonctions suivantes :</p>
+                            <ol type="a">
+                                <li>\( f(x)=\frac{2x^{3}-1}{x-1} \)</li>
+                                <li>\( g(x)=\sqrt{x^{2}+1}-x \)</li>
+                                <li>\( h(x)=x\sqrt{\frac{x+1}{x-1}}\)</li>
+                            </ol>
                             <button class="toggle-correction">Afficher la correction</button>
                             <div class="correction">
                                 Voici la correction détaillée...
@@ -296,10 +397,12 @@
                 <div class="section-title">II.Continuité</div>
                 <div>
                     <div class="definition"></div>
-                    <p></p>
+                    <p>Soit f une fonction definie en \( x_{0} \) on dit que f est continue en \( x_{0} \) si
+                        \( \lim\limits_{x \to x_{0}} f(x)=f(x_{0}) \).</p>
                 </div>
+                <div class="subsection-title">1.Prolongement par continuité</div>
                 <div style="color: red;">
-                    <p><b>Revoir</b></p>
+                    <p><b>A Revoir</b></p>
                     <p>[Continuité à gauche et continuité à droite]</p>
                     <p>[Continuité à gauche et continuité à droite]</p>
                     <p>[Prolongement par continuité]</p>
@@ -310,11 +413,78 @@
                 <!--2.Compositions de deux fonctions continues-->
                 <div>
                     <div class="subsection-title">2.Compositions de deux fonctions continues</div>
+                    <p>Si \( f \) est continue en \(x_{0}\) et \( g \) est continue en \( f(x_{0}) \) alors \( gof \)
+                        est continue en \(x_{0}\) donc la composition de deux fonctions continues est une fonction
+                        continue.</p>
                     <div>
                         <div class="application-exercise"></div>
+                        <ol type="a">
+                            <li>Soit \( f(x)=\sqrt{|2x^{5}|} \)</li>
+                            Etudier la continuité de \( f \) sur \( \mathbb{R} \)
+                            <li>Soit \( f(x)=x\sqrt{1-x} \)</li>
+                            Etudier la continuité de f sur son domaine de définition.
+                        </ol>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
-                            Voici la correction détaillée...
+                            <ol type="a">
+                                <li> Continuité de \( f(x) = \sqrt{|2x^5|} \) sur \( \mathbb{R} \)</li>
+                                <p><b>Domaine de définition</b></p>
+                                <p>La fonction \( f(x) = \sqrt{|2x^5|} \) est définie pour tous les \( x \in \mathbb{R}
+                                    \),
+                                    car
+                                    l'expression \( |2x^5| \) est toujours positive ou nulle, et la racine carrée d'un
+                                    nombre
+                                    positif ou nul est bien définie. Donc, \( f(x) \) est définie sur \( \mathbb{R} \).
+                                </p>
+                                <p><b>Étude de la continuité</b></p>
+                                La fonction \( f(x) \) est composée des fonctions suivantes :
+                                <ul>
+                                    <li>\( g(x) = 2x^5 \), une fonction polynomiale, qui est continue partout sur \(
+                                        \mathbb{R}
+                                        \).</li>
+                                    <li>\( h(x) = |x| \), la fonction valeur absolue, qui est continue partout.</li>
+                                    <li>\( k(x) = \sqrt{x} \), la racine carrée, qui est continue pour \( x \geq 0 \).
+                                    </li>
+                                </ul>
+                                <p>Ainsi, \( f(x) \) est continue sur \( \mathbb{R} \), car c'est la composition de
+                                    fonctions
+                                    continues sur leur domaine respectif.</p>
+                                <p> <b>Conclusion : </b>La fonction \( f(x) = \sqrt{|2x^5|} \) est continue sur \(
+                                    \mathbb{R}
+                                    \).</p>
+                                <li>Continuité de \( f(x) = x\sqrt{1 - x} \)</li>
+                                <p><b>Domaine de définition</b></p>
+                                <p> La fonction \( f(x) = x\sqrt{1 - x} \) impose que \( 1 - x \geq 0 \), c'est-à-dire
+                                    \( x
+                                    \leq
+                                    1 \).</p>
+                                <p>Ainsi, la fonction est définie pour \( x < 1 \), sans autres contraintes. Le domaine
+                                        de définition de \( f(x) \) est donc \( ]-\infty, 1[ \).</p>
+                                        <p><b>Étude de la continuité</b></p>
+                                        <ul>
+                                            <li>La fonction \( g(x) = x \) est continue partout sur \( \mathbb{R} \).
+                                            </li>
+                                            <li>La fonction \( h(x) = \sqrt{1 - x} \) est continue pour \( x < 1 \), car
+                                                    la racine carrée est définie pour les valeurs positives ou
+                                                    nulles.</li>
+                                                    Ainsi, \( f(x) = x\sqrt{1 - x} \) est continue sur \( ]-\infty, 1[
+                                                    \).
+                                        </ul>
+                                        <p><b>Point de discontinuité possible en \( x = 1 \):</b></p>
+                                        <p>Lorsque \( x \) tend vers 1, la fonction \( \sqrt{1 - x} \) tend vers 0. À \(
+                                            x
+                                            = 1
+                                            \), la racine carrée devient \( \sqrt{1 - 1} = 0 \), donc \( f(1) = 1 \times
+                                            0 =
+                                            0
+                                            \). Cependant, la fonction n'est pas définie en \( x = 1 \), ce qui entraîne
+                                            une
+                                            discontinuité en \( x = 1 \).</p>
+                                        <p><b>Conclusion:</b></p> La fonction \( f(x) = x\sqrt{1 - x} \) est continue
+                                        sur \(
+                                        ]-\infty, 1[ \) et
+                                        présente une discontinuité en \( x = 1 \).
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -323,8 +493,69 @@
                     <div class="subsection-title">3.Image d'un intervalle par une fonction continue et stritement
                         monotone
                     </div>
+                    <ul>
+                        <li>L'image d'un intervalle par une fonction continue est un intervalle.</li>
+                        \(
+                        \text{C'est à dire}
+                        \begin{cases}
+                        \text{\( f \) est continue sur \( I \)}\\
+                        \text{\( I \) est un intervalle}
+                        \end{cases}
+                        \text{alors \( f(I) \) est un intervalle}
+                        \)
+                        <li>Lorsqu'une fonction \( f \) est continue et strictement monotone sur \( K \), \( f(K) \) est
+                            un intervalle de même nature que \( K \) et ses bornes sont les limites de \( f \) aux
+                            bornes de \( K \).</li>
+                        Le tableau ci-dessous précise \( f(K) \) suivant la nature de \( K \) et le sens de variation de
+                        \( f \).
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>\( K \)</th>
+                                    <th>\( f(K) \)</th>
+                                    <th>\( f(K) \)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>\( f \) stictement croissante</td>
+                                    <td>\( f \) strictement décroissante</td>
+                                </tr>
+                                <tr>
+                                    <td>[a;b]</td>
+                                    <td>\( [f(a);f(b)] \)</td>
+                                    <td>\( [f(b);f(a)] \)</td>
+                                </tr>
+                                <tr>
+                                    <td>[a;b[</td>
+                                    <td>\( [f(a);\lim\limits_{x\to b^{-}}f(x)[ \)</td>
+                                    <td>\( [\lim\limits_{x\to b^{-}}f(x);f(a)[ \)</td>
+                                </tr>
+                                <tr>
+                                    <td>]a;b[</td>
+                                    <td>\( ]\lim\limits_{x\to b^{+}}f(x);\lim\limits_{x\to b^{-}}f(x)[ \)</td>
+                                    <td>\( ]\lim\limits_{x\to b^{-}}f(x);\lim\limits_{x\to b^{+}}f(x)[ \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( [a;+\infty[ \)</td>
+                                    <td>\( [f(a);\lim\limits_{x\to +\infty}f(x)[ \)</td>
+                                    <td>\( [\lim\limits_{x\to +\infty}f(x);f(a)[ \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \mathbb{R} \)</td>
+                                    <td>\( ]\lim\limits_{x\to -\infty}f(x);\lim\limits_{x\to +\infty}f(x)[ \)</td>
+                                    <td>\( ]\lim\limits_{x\to +\infty}f(x);\lim\limits_{x\to -\infty}f(x)[ \)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
                     <div>
                         <div class="application-exercise"></div>
+                        <p>Soit \( f(x)=\frac{2x+1}{x-1} \)</p>
+
+                        <p>Déterminer l'image par \( f \) des intervalles \( [-2;0] \) et \( ]1;+\infty[ \)</p>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
                             Voici la correction détaillée...
