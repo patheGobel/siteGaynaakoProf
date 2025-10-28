@@ -797,7 +797,73 @@
                 <!--3.Interprétation géométrique du nombre-->
                 <div>
                     <div class="subsection-title">3.Interprétation géométrique du nombre dérivée</div>
-                    <p></p>
+                    <p>Si \( f \) est dérivable en \( x_{0} \) alors \( f'(x_{0}) \) existe et \( C_{f} \) admet une
+                        tangente au point d'abscisse \( x_{0} \) d'équation : \( y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Limite</th>
+                                <th>Dérivabilité en \( x_0 \)</th>
+                                <th>Interprétation géométrique : \( (C_f) \) admet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td rowspan="2">\(f\) est dérivable en \(x_0\)</td>
+                                <td>Une tangente au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur
+                                    \(a\)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>Une tangente horizontale au point \( A \left(x_0; f(x_0)\right) \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td rowspan="2">\(f\) est dérivable à droite en \(x_0\)</td>
+                                <td>Une demi-tangente à droite au point \( A \left(x_0; f(x_0)\right) \) de coefficient
+                                    directeur \(a\)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>Une demi-tangente horizontale à droite au point \( A \left(x_0; f(x_0)\right) \)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
+                                <td rowspan="2">\(f\) n'est pas dérivable à droite en \(x_0\)</td>
+                                <td>Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \)
+                                    dirigée vers le bas</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
+                                <td>Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \)
+                                    dirigée vers le haut</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td rowspan="2">\(f\) est dérivable à gauche en \(x_0\)</td>
+                                <td>Une demi-tangente à gauche au point \( A \left(x_0; f(x_0)\right) \) de coefficient
+                                    directeur \(a\)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>Une demi-tangente horizontale à gauche au point \( A \left(x_0; f(x_0)\right) \)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
+                                <td rowspan="2">\(f\) n'est pas dérivable à gauche en \(x_0\)</td>
+                                <td>Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \)
+                                    dirigée vers le haut</td>
+                            </tr>
+                            <tr>
+                                <td>\( \lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
+                                <td> Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \)
+                                    dirigée vers le bas </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div>
                         <div class="example"></div>
                         <p></p>
@@ -809,7 +875,16 @@
                 <!--4.Dérivabilité sur un intervalle-->
                 <div>
                     <div class="subsection-title">4.Dérivabilité sur un intervalle</div>
-                    <p></p>
+                    <p>\( f \) est dérivable sur \( ]a ; b[ \) si et seulement si \( f \) est dérivable en tout point
+                        de \( ]a ; b[ \).</p>
+                    <ul>
+                        <li>Toute fonction polynôme est dérivable sur \( \mathbb{R} \).</li>
+                        <li>Toute fonction rationnelle est dérivable sur son ensemble de définition .</li>
+                        <li>\(|f|\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \) et
+                            \( f(x) \neq 0 \forall x \in I \)</li>
+                        <li>\(\sqrt{f}\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \)
+                            et \( f(x) >0 \forall x \in I \)</li>
+                    </ul>
                     <div>
                         <div class="example"></div>
                         <p></p>
@@ -821,7 +896,21 @@
                 <!--5.Dérivée d’une fonction composée-->
                 <div>
                     <div class="subsection-title">5.Dérivée d'une fonction composée</div>
-                    <p></p>
+                    <p>Soit \( f \) une fonction définie sur un intervalle \( I \) et \( g \) une fonction définie sur
+                        un
+                        intervalle \( K \) contenant \( f(I) \).</p>
+                    <ul>
+                        <li>Si \( f \) est dérivable en un élément \( x_{0} \) de \( I \) et g dérivable en \( f \)
+                            alors
+
+                            \( g\circ f \) est dérivable en et on a : \( (g\circ f)'(x_{0}) = g' \circ f(x_{0}) \times
+                            f'(x_{0})
+                            \)</li>
+                        <li>Si \( f \) est dérivable sur \( I \) et \( g \) dérivable sur \( K \) alors \( g\circ f \)
+                            est
+
+                            dérivable sur \( I \) et on a : \( (g\circ f)' = g' \circ f \times f' \)</li>
+                    </ul>
                     <div>
                         <div class="example"></div>
                         <p></p>
@@ -833,6 +922,30 @@
                 <!--6.Dérivée de la fonction réciproque-->
                 <div>
                     <div class="subsection-title">6.Dérivée de la fonction réciproque</div>
+                    <p>Soit \( f \) une fonction dérivable et bijective de \( I \to J \) et \( f^{-1} \) la bijection
+                        réciproque donc \( f^{-1'}(y)=\frac{1}{f'(x)} \text{avec } f'(x)\neq 0\)</p>
+
+                    En effet:
+                    \[
+                    \begin{array}{c c c c}
+                    f : I \to J & & f^{-1} : J \to I \\
+                    f : x \mapsto y = f(x) & & y \mapsto x = f^{-1}(y)
+                    \end{array}
+                    \]
+
+                    On a
+                    \begin{align*}
+                    f^{-1}\circ f(x)=x &\implies (f^{-1}\circ f(x))'=x'\\
+                    &\implies (f^{-1})'(f(x))\times f'(x)=1 \\
+                    &\implies (f^{-1})'(y)\times f'(x)=1\\
+                    &\implies (f^{-1})'(y) = \frac{1}{f'(x)}
+                    \end{align*}
+
+
+                    <b>Propriété</b>
+
+                    <p>\( (f^{-1})'(y_{0})=\frac{1}{f'(x_{0})}=\frac{1}{f'(f^{-1}(y_{0}))} \text{avec } f'(x)\neq 0\)
+                    </p>
                     <p></p>
                     <div>
                         <div class="example"></div>
@@ -848,10 +961,13 @@
                 <!--7.Inégalité des accroissements finis (IAF)-->
                 <div>
                     <div class="subsection-title">7.Inégalité des accroissements finis (IAF)</div>
-                    <p></p>
+                    <p>Soit \( f \) une fonction dérivable sur un intervalle \( I \) et \( M\in\mathbb{R}^{*}_{+} \) tel
+                        que
+                        \( |f'(x)| \leq M \).</p>
+                    <p>Alors pour tout \( a \) et \( b \in I\), on a : \( | f(b)-f(a) | \leq M(b-a) \)</p>
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>Démontrer que pour tout réels \( a \) et \( b \) \( | \cos b - \cos a \leq | b - a |\)</p>
                     </div>
                     <div>
                         <div class="solution"></div>
@@ -867,21 +983,52 @@
             <!--1.Définition-->
             <div>
                 <div class="subsection-title">1.Définition</div>
+                <p>Soit \( F \) une fonction dérivable sur un intervalle \( I \) et soit \( f \) une fonction définie et
+                    continue sur \( I \).</p>
+
+                <p>On dit que \( F \) est une primitive de \( f \) sur \( I \) si pour tout \( x \) élément de \( I \)
+                </p>
+
+                <p>On a : \( F'(x)=f(x) \)</p>
+
+                <p>\( F \) est une primitive de \( f \) sur \( I \) si \( f \) est la dérivée de \( F \) sur \( I \).
+                </p>
             </div>
             <!--2.Théorème (admis)-->
             <div>
                 <div class="subsection-title">2.Théorème (admis)</div>
+                <p>Toute fonction continue sur un intervalle \( I \) admet une primitive sur \( I \).</p>
+                <!--remark-->
+                <div>
+                    <div class="remark"></div>
+                    Si \( f \) admet une primitive sur \( I \) alors elle en admet une infinité.
+                </div>
             </div>
             <!--3.Théorème-->
             <div>
                 <div class="subsection-title">3.Théorème</div>
+                <p>Deux primitives d'une même fonction sur un même intervalle diffèrent d'une constante.</p>
+
+                <p>Donc si \( F \) et \( G \) sont des primitives de \( f \) sur \( I \) alors il existe une constante
+                    réelle \( k \) telle que pour tout \( x \) élément de \( I \) \( F(x)=G(x)+k \)</p>
+
+                <p>Pour la preuve voir la variation des fonctions avec l'utilisation des dérivées.</p>
+
+                <p>On en déduit que :</p>
+
+                <p>Chacune des primitives de \( f \) sur \( I \) est déterminée par sa valeur en un point de \( I \).
+                </p>
             </div>
             <!--remark-->
             <div>
-                <div class="remark">remark</div>
+                <div class="remark"></div>
+                <p>Toute primitive de \( f \) sur \( I \) est dérivable sur \( I \).</p>
+
+                <p>Il serait utile de connaitre les résultats figurant sur le tableau suivant :</p>
             </div>
             <div>
                 <div class="application-exercise"></div>
+
                 <button class="toggle-correction">Afficher la correction</button>
                 <div class="correction">
                     Voici la correction détaillée...
