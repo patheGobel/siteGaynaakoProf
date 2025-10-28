@@ -558,25 +558,68 @@
                         <p>Déterminer l'image par \( f \) des intervalles \( [-2;0] \) et \( ]1;+\infty[ \)</p>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
-                            Voici la correction détaillée...
+                            Soit \( f(x) = \frac{2x + 1}{x - 1} \).
+                            <ul>
+                                <li><b>\( D_f \):</b></li>
+                                \( D_f = \mathbb{R} \setminus \{1\} \)
+                                <li><b>Continuité de \( f \):</b></li>
+                                La fonction \( f(x) = \frac{2x + 1}{x - 1} \) est une fonction rationnelle donc continue
+                                sur \( D_f = \mathbb{R} \setminus \{1\} \).
+                                <li><b>Monotonie de \( f \):</b></li>
+                                Calculons la dérivée de \( f \) :
+                                <p> \(
+                                    f'(x) =\frac{-3}{(x - 1)^2}
+                                    \)</p>
+
+                                <p>Pour tout \( x \in D_f \) \( f'(x) < 0 \). Cela signifie que la fonction \( f \) est
+                                        strictement décroissante sur chaque intervalle de son domaine de définition, à
+                                        savoir \( ]-\infty; 1[ \) et \( ]1; +\infty[ \).</p>
+                                        <p>-\( f([-2; 0])=[f(0);
+                                            f(-2)]=[-1;
+                                            1] \)</p>
+                                        <p>-\( f(]1; +\infty[)=]\lim\limits_{x \to +\infty}f(x) ; \lim\limits_{x \to
+                                            1^{+}}f(x)[=]2;
+                                            +\infty[ \)</p>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <!--4.Théorème des valeurs intermédaires-->
                 <div>
                     <div class="subsection-title">4.Théorème des valeurs intermédaires</div>
+                    <p>Si la fonction \( f \) est \textcolor{red}{ continue } sur \( [a ; b] \) et si le réel \( m \)
+                        est compris entre \( f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) admet
+                        \textcolor{red}{ au moins } une seule solution dans \( [a ; b] \).</p>
+                    <p>Autrement dit, il existe <b>au moins</b> un réel <b>c</b> entre
+                        <b>a</b> et <b>b</b> tel que <b>\( f(c) = m \)</b>
+                    </p>
+                    <b>Illustration graphique</b><br>
+                    <img src="images/com.png" class="planComplex" alt="cas 1  ">
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>Soit la fonction \( f(x)=\frac{1}{2}x^{3}+x-5 \) continue sur \( [-2 ; 4] \).</p>
                     </div>
                     <div>
                         <div class="solution"></div>
-                        <ul class="bullet-list">
-                            <li></li>
-                        </ul>
+                        <p>\(f( [-2 ; 4] ) = [\lim\limits_{x \to -2} f(x) ; \lim\limits_{x \to 4} f(x)] = [-11 ; 31] \).
+                        </p>
+                        <p>D'après le théorème précédent, comme \(5\in [-11 ; 31] \) donc l'équation \( f(x) = 5 \) a
+                            une solution dans \( [-2 ; 4] \).</p>
                     </div>
+                    <p><b>NB</b></p>
+                    <ul>
+                        <li>
+                            Si \( m = 0 \) il suffit montrer que \( \lim\limits_{x \to a} f(x) \times \lim\limits_{x
+                            \to b}
+                            f(x) < 0 \) </li>
+                        <li>
+                            Il faut toujours commencer par montrer que \( f \) est continue.
+                        </li>
+                    </ul>
                     <div>
                         <div class="application-exercise"></div>
+                        <p>\( f(x) = 2x^{5} + x^{2} + x + 8 \)</p>
+                        <p>Montrer que l'équation \( f(x) = 0 \) admet au moins une solution dans \( [1 ; 2] \).</p>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
                             Voici la correction détaillée...
@@ -586,23 +629,57 @@
                 <!--5.Théorème d'existence et d'unicité d'une solution-->
                 <div>
                     <div class="subsection-title">5.Théorème d'existence et d'unicité d'une solution</div>
-                    <b style="color: red;"><u>Ilustration graphique</u></b>
-                    <b style="color: red;"><u>Cas particulier</u></b>
-                    <b style="color: red;"><u>Ilustration graphique</u></b>
-                    <div>
-                        <div class="example"></div>
-                        <p></p>
-                    </div>
-                    <div>
-                        <div class="solution"></div>
-                    </div>
+                    <p>Si la fonction \( f \) est <b>continue</b> et <b>strictement monotone</b>
+                        (croissante ou bien décroissante) sur \( [a ; b] \). Pour tout réel \( m \) compris entre \(
+                        f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) admet une <b>unique continue</b> dans \(
+                        \alpha\in [a ; b] \).
+                    </p>
+                    <b style="color: red;"><u>Ilustration graphique</u></b><br>
+                    <img src="images/com.png" class="planComplex" alt="cas 1  "><br>
+                    <b style="color: red;"><u>Cas particulier</u></b><br>
+                    <p>Si la fonction \( f \) réalise une bijection(continue et strictement monotone) de \( [a ; b] \)
+                        de plus si \( f(a) \times f(b) < 0 \) alors l'équation \( f(x)=0 \) admet une unique solution \(
+                            \alpha \) sur l'intervalle \( [a ; b] \).</p>
+                            <b style="color: red;"><u>Ilustration graphique</u></b><br>
+                            <img src="images/com.png" class="planComplex" alt="cas 1  ">
+                            <div>
+                                <div class="example"></div>
+                                <p>Soit \( f(x)=x^{3} + x + 1 \)</p>
+                                <p>Montrer que l'équation \( f(x) = 0 \) admet une unique solution sur \( [-0,8 ; -0,6]
+                                    \). </p>
+                            </div>
+                            <div>
+                                <div class="solution"></div>
+                            </div>
                 </div>
                 <!--6.Encadrement de la racine α à ϵ près-->
                 <div>
                     <div class="subsection-title">6.Encadrement de la racine $\alpha$ à $\epsilon$ près</div>
                     <p><u>Méthode de dichotomie(Approche par exemple)</u></p>
+                    <p> Si \( f \) fonction \textcolor{red}{strictement contenu} sur un intervalle \( [a;b] \), telle
+                        que \( f(a)\geq 0 \) et \( f(b) \leq 0\); alors il existe au moins un réel \( \alpha \) dans
+                        l'intervalle \( [a;b] \) tel que \( f(\alpha) = 0 \).</p>
+                    <p>L'idée est alors de trouver le signe de \( f \) au \textcolor{red}{ milieu } de \( [a;b] \), et
+                        de distinguer les deux cas</p>
+                    <ul>
+                        <li>Si \( f\left( \frac{a+b}{2}\right) \leq 0 \), alors \( \alpha \) est dans l'intervalle
+                            \( \left[\frac{a+b}{2} ; b \right] \)</li>
+                        <li>Sinon \( f\left( \frac{a+b}{2}\right) > 0 \), alors \( \alpha \) est dans l'intervalle
+                            \( \left[a ; \frac{a+b}{2} \right] \)</li>
+                    </ul>
+                    <p>Dans les deux cas, on a trouvé un intervalle de longueur moité dans lequel est située une racine
+                        \(
+                        \alpha \) de l'équation \( f(x)=0 \).</p>
+                    <p>On recommence alors avec cet intervalle, et ainsi de suite,jusqu'à ce qu'on trouve une
+                        approximation qui nous convienne.</p>
                     <div>
                         <div class="application-exercise"></div>
+                        <p>Soit la fonction \(f(x)=x^{3}-7x \)</p>
+                        <ul type="a">
+                            <li>Montrer que l'équation \( f(x)=0 \) admet une unique solution \( \alpha \) sur
+                                l'intervalle \( [2;4] \).</li>
+                            <li>Donner un encadrement de \( \alpha \) à 0.1 près</li>
+                        </ul>
                         <button class="toggle-correction">Afficher la correction</button>
                         <div class="correction">
                             Voici la correction détaillée...
@@ -613,21 +690,59 @@
                 <!--7.Théorème d’existence d’une bijection et de sa réciproque-->
                 <div>
                     <div class="subsection-title">7.Théorème d'existence d'une bijection et de sa réciproque</div>
+                    <p>Si \( f \) est continue et strictement monotone sur un intervalle \( I \), alors \( f \) est une
+                        bijection de \( I \) vers \( J = f(I) \). Dans ce cas, \( f \) admet une fonction réciproque \(
+                        f^{-1} \) qui est également continue et strictement monotone sur l'intervalle \( J \), avec les
+                        propriétés suivantes :</p>
+                    <ul>
+                        <li>La fonction réciproque \( f^{-1} \) est telle que \( f(f^{-1}(y)) = y \) pour tout \( y \in
+                            J \) et \( f^{-1}(f(x)) = x \) pour tout \( x \in I \).</li>
+                        <li>La monotonie de \( f^{-1} \) est de même sens que celle de \( f \) .</li>
+                    </ul>
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>Considérons la fonction \( f : \mathbb{R} \to \mathbb{R} \) définie par :</p>
+                        <p>\( f(x) = 2x + 3 \)</p>
+                        <ul>
+                            <li>La fonction \( f \) est-elle continue sur \(\mathbb{R}\) ?</li>
+                            <li> La fonction \( f \) est-elle strictement monotone sur \(\mathbb{R}\) ?</li>
+                            <li>La fonction \( f \) est-elle une bijection de \(\mathbb{R}\) vers \(\mathbb{R}\) ?</li>
+                            <li>Déterminer l'expression explicite la fonction réciproque \( f^{-1} \) de la fonction \(
+                                f \) ?</li>
+                            <li>La fonction réciproque \( f^{-1} \) est-elle continue et strictement monotone ?</li>
+                        </ul>
                     </div>
                     <div>
                         <div class="solution"></div>
+                        <ul>
+                            <li>Oui, la fonction \( f(x) = 2x + 3 \) est continue sur \(\mathbb{R}\) car elle est une
+                                fonction affine (polynomiale de degré 1).</li>
+                            <li>Oui, la fonction \( f \) est strictement croissante sur \(\mathbb{R}\), car sa dérivée
+                                est \( f'(x) = 2 > 0 \), ce qui signifie que la pente est positive.</li>
+                            <li>Oui, comme \( f \) est continue et strictement croissante, elle est bijective de
+                                \(\mathbb{R}\) vers \(\mathbb{R}\).</li>
+                            <li>Pour trouver la fonction réciproque \( f^{-1} \), nous résolvons l'équation \( y = 2x +
+                                3 \) pour \( x \) :</li>
+                            \(y = 2x + 3 \implies x = \frac{y - 3}{2}\)<br>
+                            Donc, la fonction réciproque est \( f^{-1}(y) = \frac{y - 3}{2} \).
+                            <li>Oui, la fonction réciproque \( f^{-1}(y) = \frac{y - 3}{2} \) est également continue et
+                                strictement croissante sur \(\mathbb{R}\) car elle est une fonction affine avec une
+                                pente positive.</li>
+                            <li>Calculer \( f^{-1}(5) \)</li>
+                        </ul>
+                        <b>NB:</b> Il n'est pas toujours possible de déterminer l'expression explicite de \( f^{-1} \)
                     </div>
                 </div>
                 <!--8.Calcul de $f^{-1}(y_0)$ sans connaître l’expression de $f^{-1}$-->
                 <div>
                     <div class="subsection-title">8.Calcul de $f^{-1}(y_0)$ sans connaître l'expression de $f^{-1}$
                     </div>
+                    <p>Pour calculer \( f^{-1}(y_{0}) \), on résout \( f(x)=y_{0} \).</p>
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>Soit \( f(x) =\sqrt{x^{2}+3x+x-1} \). On admet que f est une bijection de \( [0 ; +\infty[ \)
+                            vers \( [-1 ; +\infty[ \)</p>
+                        <p>Calculer \( f^{-1}(2) \) </p>
                     </div>
                     <div>
                         <div class="solution"></div>
@@ -644,10 +759,16 @@
                 <!--1.Notion de nombre dérivé-->
                 <div>
                     <div class="subsection-title">1.Notion de nombre dérivé</div>
-                    <p></p>
+                    <p>Soit \( f \) une fonction définie sur un intervalle \( I \) contenant \( x_{0} \)</p>
+                    <p>\( f \) est dérivable en \( x_{0} \) ou \( f \) admet un nombre dérivé en \( x_{0} \) si et
+                        seulment si \( \lim\limits_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \text{ avec } (\ell
+                        \in\mathbb{R}) \)</p>
+                    <p>\( \ell \) est appelé le nombre dérivé de \( f \) en \( x_{0} \) et est noté \( f'(x_{0}) \).</p>
+                    <p>On a alors :\( \lim\limits_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=f'(x_{0}) \)</p>
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>Soit \( f(x)=\frac{x}{2x+1} \)</p>
+                        <p>Etudier la dérivabilité de \( f \) en \( -1 \).</p>
                     </div>
                     <div>
                         <div class="solution"></div>
@@ -656,10 +777,18 @@
                 <!--2.Dérivabilté à gauche-Dérivabilité à droite-->
                 <div>
                     <div class="subsection-title">2.Dérivabilté à gauche-Dérivabilité à droite</div>
-                    <p></p>
+                    <p>Soit f une fonction définie sur un intervalle I contenant $x_{0}$ et $\ell$ un réel.</p>
+                    <p>$f$ est dérivable à droite de $x_{0}$ si \( \lim\limits_{x \to
+                        x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
+                    <p>$f$ est dérivable à gauche de $x_{0}$ si \( \lim\limits_{x \to
+                        x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
+                    <p> $f$ est dérivable en $x_{0}$ si \( \lim\limits_{x \to
+                        x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\lim\limits_{x \to
+                        x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
+                    <p><b>NB:</b> On note \( f'_{g}(x) \) la dérivé à gauche et \( f'_{d}(x) \) la dérivé à droite</p>
                     <div>
                         <div class="example"></div>
-                        <p></p>
+                        <p>\( f(x) = x|x-1| \) \( f \) est-elle dérivable en \( 1 \) ?</p>
                     </div>
                     <div>
                         <div class="solution"></div>
