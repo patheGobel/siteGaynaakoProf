@@ -666,10 +666,10 @@
                 <div class="subsection-title">2. Résolution d'équation</div>
                 <div>
                     <div class="example"></div>
-                    Soit $(E)$ l'équation définie par $(E)$ :
-                    \[
+                    Soit $(E)$ l'équation définie par $(E)$ :<br>
+                    \(
                     z^3 - 3z^2 + (3 - i)z - 2(1 - i) = 0.
-                    \]
+                    \)
                     <ol>
                         <li>Montrer que $(E)$ admet une solution réelle à déterminer.</li>
                         <li>Résoudre $(E)$.</li>
@@ -679,72 +679,57 @@
                     <div class="solution"></div>
                     <ol>
                         <li>Soit $z = a$ la solution réelle de $(E)$.</li>
-                        Donc,
-                        \[
-                        a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0
-                        \]
-                        \[
-                        \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0
-                        \]
-                        \[
-                        \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0.
-                        \]
+                        Donc,<br>
 
-                        Cela implique :
-                        \[
-                        \begin{cases}
-                        a^3 - 3a^2 + 3a - 2 = 0 \\
-                        2 - a = 0
-                        \end{cases}
-                        \]
-
-                        \[
-                        \implies
-                        \begin{cases}
-                        a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\
-                        a = 2 \quad (2)
-                        \end{cases}
-                        \]
+                        \(
+                        \begin{aligned}
+                        a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0 & \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0\\
+                        & \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0\\
+                        & \implies \begin{cases}a^3 - 3a^2 + 3a - 2 = 0 \\ 2 - a = 0\end{cases}\\
+                        & \implies \begin{cases}a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\ a = 2 \quad (2)\end{cases}
+                        \end{aligned}
+                        \)
+                        <br>
 
                         $a = 2$ vérifie aussi l'équation $(1)$, donc $2$ est la solution réelle cherchée.
-                        <li>L'équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.
-                            En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$,
-                            $b$ et
-                            $c$.
+                        <li>L'équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.<br>
+                            En procédant par la méthode de Horner, on détermine les coefficients $a$, $b$ et $c$.
 
-                            On a :
-                            \[
+                            <p>
+                                \(
+                                \begin{array}{|c|c|c|c|c|}
+                                \hline
+                                & 1 & -3 & 3 & -2 + 2i \\
+                                \hline
+                                \mathbf{2} & \times & 2 & -2 & 2 - 2i \\
+                                \hline
+                                & 1 & -1 & 1 - i & 0 \\
+                                \hline
+                                \end{array}
+                                \)
+                            </p>
+
+                            On obtient ainsi l'équation équivalente :
+                            \( \displaystyle
                             (z - 2)(z^2 - z + 1 - i) = 0 \iff z = 2 \quad \text{ou} \quad z^2 - z + 1 - i = 0.
-                            \]
+                            \)
 
-                            Soit l'équation $z^2 - z + 1 - i = 0$, alors :
-                            \[
-                            \Delta = (1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
-                            \]
+                            <p>Soit l'équation $z^2 - z + 1 - i = 0$. Calculons son discriminant :</p>
+                            \( \displaystyle
+                            \Delta = (-1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
+                            \)
 
-                            Donc :
-                            \[
-                            z_1 = \frac{1 - 1 - 2i}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + 1 + 2i}{2} = 1 +
+                            <p>Les racines de cette équation du second degré sont :</p>
+                            \( \displaystyle
+                            z_1 = \frac{1 - (1 + 2i)}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + (1 + 2i)}{2} = 1 +
                             i.
-                            \]
+                            \)
 
-                            D'où :
-                            \[
-                            S_C = \{2; -i; 1 + i\}.
-                            \]
-
-
-                            \[
-                            \begin{array}{|c|c|c|c|c|}
-                            \hline
-                            & 1 & 1 & 1 & 1 \\
-                            \hline
-                            -1 & \times & -1 & 0 & -1 \\
-                            \hline
-                            & 1 & 0 & 1 & 0 \\
-                            \hline
-                            \end{array}
-                            \]</li>
+                            <p>D'où l'ensemble des solutions dans $\mathbb{C}$ :</p>
+                            \( \displaystyle
+                            S_{\mathbb{C}} = \{2; -i; 1 + i\}.
+                            \)
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -798,8 +783,8 @@
             <div class="exercise"></div>
             Le plan complexe est rapporté à un repère orthonormé \( (0, \vec{i}, \vec{j}) \);
 
-            Soient A, B et C des points dans le plan complexe d'affixes respectifs
-            \(a = 2i, \quad b = \sqrt{2}(1+i)\) et \(c = a + b\)
+            <p>Soient A, B et C des points dans le plan complexe d'affixes respectifs</p><br>
+            <p>\(a = 2i, \quad b = \sqrt{2}(1+i)\) et \(c = a + b\)</p>
             <ol>
                 <li>Montrer que OBCA est un losange</li>
                 <li>Montrer que \(\arg(c) \equiv \dfrac{3\pi}{8} \ [2\pi]\)</li>
@@ -807,48 +792,38 @@
         </div>
         <div>
             <div class="exercise"></div>
-            Soient \( A, B \) et \( C \) des points dans le plan complexe d'affixes respectifs
-            \[
-            a = 2 + i,
-            \]
-            \[
-            b = 3 + 2i \quad \text{et} \quad c = 5 - i
-            \]
+            <p>Soient \( A, B \) et \( C \) des points dans le plan complexe d'affixes respectifs</p>
+            <p>\(a = 2 + i, \quad b = b = 3 + 2i\) et \(c = 5 - i\)</p>
 
             Soit \( \alpha \) une mesure de l'angle orienté :
-            \[
-            \left( \overrightarrow{AB}; \overrightarrow{AC} \right)
-            \]
+            <p>\( \left( \overrightarrow{AB}; \overrightarrow{AC} \right) \)</p>
 
             Calculer \(\tan \alpha\)
         </div>
         <div>
             <div class="exercise"></div>
-            On considère dans le plan complexe
-
-            muni d'un repère orthonormé \( R \left( 0; \vec{e}_1; \vec{e}_2 \right) \) les points \( A, B \) et \( C \)
-            d'affixes respectifs :
-            \[
-            z_1 = -\sqrt{2} \quad \text{et}
-            \]
-            \[
-            z_2 = 1 + i \quad \text{et} \quad z_3 = 1 - i
-            \]
+            <p>
+                On considère dans le plan complexe muni d'un repère orthonormé direct \( \mathcal{R} \left( O;
+                \vec{e}_1; \vec{e}_2 \right) \)
+                les points \( A \), \( B \) et \( C \) d'affixes respectives :
+            </p>
+            <p>
+                \( z_1 = -\sqrt{2}, \quad z_2 = 1 + i \quad \text{et} \quad z_3 = 1 - i \)
+            </p>
 
             <ol>
-                <li>Placer dans le repère \( R \) les points \( A, B \) et \( C \)</li>
-                <li>Déterminer le module et l'argument du nombre complexe\[
-                    \frac{z_2 - z_1}{z_3 - z_1}
-                    \]
-                    et déterminer une mesure de l'angle
-                    \[
-                    \left( \overrightarrow{AC}; \overrightarrow{AB} \right)
-                    \]</li>
-                <li>Montrer que la droite (OA) est la médiatrice du segment \([BC]\) et en déduire que :\[
-                    \left( \overrightarrow{AO}; \overrightarrow{AB} \right) = \frac{\pi}{8} \ [2\pi]
-                    \]</li>
-                <li>Écrire le nombre \(\frac{z_1 - z_2}{z_1}\) sous sa forme algébrique puis en déduire \(\cos \left(
-                    \frac{\pi}{8} \right)\) et \(\sin \left( \frac{\pi}{8} \right)\)</li>
+                <li>Placer les points \( A \), \( B \) et \( C \) dans le repère \( \mathcal{R} \).</li>
+                <li>Déterminer le module et un argument du nombre complexe
+                    \( \displaystyle \frac{z_2 - z_1}{z_3 - z_1} \)
+                    puis en déduire une mesure de l'angle \( \left( \overrightarrow{AC}; \overrightarrow{AB} \right) \).
+                </li>
+                <li>Montrer que la droite \( (OA) \) est la médiatrice du segment \( [BC] \) et en déduire que :
+                    \( \left( \overrightarrow{AO}; \overrightarrow{AB} \right) = \frac{\pi}{8} \ [2\pi] \)
+                </li>
+                <li>Calculer le module et la forme algébrique du nombre complexe \( z_2 - z_1 \). En déduire les valeurs
+                    exactes de
+                    \( \cos \left( \frac{\pi}{8} \right) \) et \( \sin \left( \frac{\pi}{8} \right) \).
+                </li>
             </ol>
         </div>
         <div>
@@ -923,20 +898,20 @@
                         \dfrac{a-b}{c-d} \right) = \dfrac{\pi}{2} \pmod{\pi}$</strong>
                 </li>
                 <li><b>Condition de cocyclicité de 4 points: </b><br>Soient A, B, C, et D quatre points distincts du
-                    plan. Alors A, B, C, et
-                    D sont cocycliques ou alignés si et seulement si on a l'égalité d'angles orientés:
-                    $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
+                    <p>plan. Alors A, B, C, et D sont cocycliques ou alignés si et seulement si on a l'égalité d'angles orientés:</p>
+                    <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
                     \widehat{(\overrightarrow{DB},\overrightarrow{DC})}
                     [2\pi]$ ou
                     $\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
                     \pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
-                    [2\pi]$ ou $\dfrac{c - a}{b - a} \times \dfrac{b - d}{c - d} \in \mathbb{R}^*$<br>
+                    [2\pi]$ ou $\dfrac{c - a}{b - a} \times \dfrac{b - d}{c - d} \in \mathbb{R}^*$</p>
                 </li>
                 <b><u>$1^{er}$CAS:</u></b>
                 <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}=\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
                     [2\pi]$</p>
                 <img src="images/solution12.png" class="solution1" alt="Solution">
-                <p>Ceci se traduit par : \[
+                Ceci se traduit par : 
+                <p>\(\displaystyle
                     \begin{aligned}
                     \arg \left( \dfrac{c-a}{b-a} \right) \equiv \arg \left( \dfrac{c-d}{b-d} \right) \pmod{2\pi} &\iff
                     \arg \left( \dfrac{c-a}{b-a} \right) - \arg \left( \dfrac{c-d}{b-d} \right) \equiv 0 \pmod{2\pi}\\
@@ -945,13 +920,14 @@
                     0 \pmod{2\pi}\\
                     &\iff \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \in \mathbb{R}^{*+}
                     \end{aligned}
-                    \]</p>
+                    \)</p>
                 <b><u>$1^{er}$CAS:</u></b>
                 <p>$\widehat{(\overrightarrow{AB},\overrightarrow{AC})}\equiv
                     \pi-\widehat{(\overrightarrow{DB},\overrightarrow{DC})}
                     [2\pi]$</p>
                 <img src="images/solution13.png" class="solution1" alt="Solution">
-                <p>Cecil se traduit par :\[
+                <p>Ceci se traduit par :
+                    <p>\(\displaystyle
                     \begin{aligned}
                     \arg \left( \dfrac{c-a}{b-a} \right) \equiv \pi - \arg \left( \dfrac{b-d}{c-d} \right)
                     \pmod{2\pi}&\iff \arg \left( \dfrac{c-a}{b-a} \right) + \arg \left( \dfrac{b-d}{c-d} \right) - \pi
@@ -962,22 +938,22 @@
                     \right] \equiv 0 \pmod{2\pi}\\
                     &\iff \left( \dfrac{c-a}{b-a} \right) \times \left( \dfrac{b-d}{c-d} \right) \in \mathbb{R}^*_{-}
                     \end{aligned}
-                    \]</p>
+                    \)</p>
                 <div>
                     <div class="exercise"></div>
 
                 </div>
                 <li><b>Triangle équilatéral: </b><br>
                     Les points $A(a)$, $B(b)$ et $C(c)$ forment un triangle équilatéral direct si, et seulement si :
-                    \[
+                    \(
                     a + j b + j^2 c = 0.
-                    \]</li>
+                    \)</li>
                 <li><b>Barycentre: </b><br>
                     Si $G$ est le barycentre des points $M_k$ d'affixe $z_k$, affectés des coefficients $x_k$, alors
                     l'affixe de $G$ est :
-                    \[
+                    \(
                     \dfrac{1}{\sum_{k=1}^n x_k} \left( \sum_{k=1}^n x_k z_k \right).
-                    \]</li>
+                    \)</li>
             </ul>
         </div>
     </div>
