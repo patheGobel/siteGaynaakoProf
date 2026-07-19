@@ -1232,21 +1232,77 @@
             <!--1.Courbe de la fonction réciproque-->
             <div>
                 <div class="subsection-title">1.Courbe de la fonction réciproque</div>
+                <p>
+                    Soit \( f \) une bijection de \( I \) vers \( J \) et \( f^{-1} \) sa bijection réciproque.<br>
+                    La courbe de \( f \), notée \( (C_f) \), et la courbe de \( f^{-1} \), notée \( (C_{f^{-1}}) \),
+                    sunt symétriques par rapport à la première bissectrice :
+                </p>
+                <p style="padding-left: 20px; margin-top: 10px;">
+                    \( \displaystyle (\Delta) \text{ d'équation } y = x. \)
+                </p>
             </div>
             <!--2. Fonction paire-->
             <div>
                 <div class="subsection-title">2.Fonction paire</div>
+                <p>
+                    Soit \( f \) une fonction et \( D_f \) son ensemble de définition.
+                    La fonction \( f \) est dite paire lorsque, pour tout \( x \) appartenant à \( D_f \), on a :
+                </p>
+
+                <p>
+                    \( \displaystyle -x \in D_f \quad \text{et} \quad f(-x) = f(x). \)
+                </p>
+
+                <p>
+                    <b>NB :</b> La courbe d'une fonction paire est symétrique par rapport à l'axe des ordonnées.
+                </p>
+
+                <!-- Remplacer "courbe_fonction_paire.png" par le chemin réel de ton image générée -->
+                <div style="text-align: left; margin-top: 20px; margin-bottom: 20px;">
+                    <img src="images/courbe_fonction_paire.png"
+                        alt="Symétrie d'une fonction paire par rapport à l'axe des ordonnées"
+                        style="max-width: 100%; height: auto; width: 450px;">
+                </div>
             </div>
             <!--3. Fonction impaire-->
             <div>
                 <div class="subsection-title">3.Fonction impaire</div>
+                <p>Soit $f$ une fonction et $D_f$ son ensemble de définition.</p>
+                <p>La fonction $f$ est dite impaire lorsque, pour tout $x$ appartenant à $D_f$, on a :</p>
+                <p> \(
+                    -x \in D_f \quad \text{et} \quad f(-x) = -f(x).
+                    \)</p>
+
+                <p><b>NB :</b> La courbe d'une fonction impaire est symétrique par rapport à l'origine du repère.</p>
+                <!-- Remplacer "courbe_fonction_paire.png" par le chemin réel de ton image générée -->
+                <div style="text-align: left; margin-top: 20px; margin-bottom: 20px;">
+                    <img src="images/courbe_fonction_impaire.png"
+                        alt="Symétrie d'une fonction paire par rapport à l'axe des ordonnées"
+                        style="max-width: 100%; height: auto; width: 450px;">
+                </div>
             </div>
             <!--4. Axe de symétrie-->
             <div>
                 <div class="subsection-title">4.Axe de symétrie</div>
+                <p>La droite d'équation cartésienne \( x=a \) est un axe de symétrie de la courbe \( (C_{f}) \) si les
+                    deux conditions suivantes sont réalisées :</p>
+                <ul>
+                    <li> \( (\forall x \in D_{f}) \ ; \ ( 2a-x ) \in D_{f} \)</li>
+                    <li> \( (\forall x \in D_{f}) \ ; \ f( 2a-x )=f(x) \)</li>
+                </ul>
+                <!-- Intégration de la figure -->
+                <div>
+                    <img src="images/axeSymetrie.png" alt="Axe de symétrie d'une courbe"
+                        style="max-width: 100%; height: auto; width: 400px; display: block; margin-bottom: 5px;">
+                </div>
+                <p>
+                    <span style="color: blue; font-weight: bold;">Cas particulier :</span> Si \( a=0 \) ; \( f \) est
+                    une fonction paire.
+                </p>
                 <div>
                     <div class="example"></div>
-                    <p></p>
+                    <p>Soit \( f(x)=2x^{2}-2x+1 \). Montrer que la droite d'équation \( x=\frac{1}{2} \) est un axe de
+                        symétrie pour la courbe \( C_{f} \).</p>
                 </div>
                 <div>
                     <div class="solution"></div>
@@ -1255,12 +1311,94 @@
             <!--5. Centre de symétrie-->
             <div>
                 <div class="subsection-title">5.Centre de symétrie</div>
+                <p>
+                    Le point \( I(a ; b) \) est un centre de symétrie de la courbe \( C_{f} \) si les deux conditions
+                    suivantes sont réalisées :
+                </p>
+                <ul>
+                    <li> \( (\forall x \in D_{f}) \ ; \ ( 2a-x ) \in D_{f} \)</li>
+                    <li> \( (\forall x \in D_{f}) \ ; \ f( 2a-x )+f(x) = 2b \)</li>
+                </ul>
+
+                <!-- Figure -->
+                <div style="margin-top: 20px; margin-bottom: 20px;">
+                    <img src="centreSymetrie.png" alt="Centre de symétrie d'une courbe"
+                        style="max-width: 100%; height: auto; width: 400px; display: block; margin-bottom: 5px;">
+                    <span style="font-size: 0.9em; color: #555;"><i>Figure : Centre de symétrie</i></span>
+                </div>
+
+                <p>
+                    <span style="color: blue; font-weight: bold;">Cas particulier :</span> Si \( a=b=0 \) ; \( f \) est
+                    une fonction impaire.
+                </p>
+
+                <p>
+                    D'où, le point \(\displaystyle I\left(3 ; \frac{3}{2}\right) \) est le centre de symétrie de la courbe \( C_f \).
+                </p>
+
                 <div>
                     <div class="example"></div>
-                    <p></p>
+                    <p>
+                        Soit \(\displaystyle f(x)=\frac{3x+1}{2x-6} \). Montrer que le point \( I\left(3 ; \frac{3}{2}\right) \) est
+                        un
+                        centre de symétrie pour la courbe \( C_{f} \).
+                    </p>
                 </div>
                 <div>
                     <div class="solution"></div>
+                    <p>
+                        La fonction \( f \) est une fonction rationnelle. Son ensemble de définition est :
+                    </p>
+                    <p style="padding-left: 20px;">
+                        \( \displaystyle D_f = \{x \in \mathbb{R} \ / \ 2x - 6 \neq 0\} = \mathbb{R} \setminus \{3\} =
+                        ]-\infty ; 3[\ \cup\ ]3 ; +\infty[ \)
+                    </p>
+
+                    <p>Ici, \( a = 3 \) et \( b = \frac{3}{2} \). Vérifions les deux conditions :</p>
+
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li style="margin-bottom: 20px;">
+                            <b>•</b> Soit \( x \in D_f \) (donc \( x \neq 3 \)). Montrons que \( (2a - x) \in D_f \),
+                            c'est-à-dire que \( (6 - x) \in D_f \) :
+                            <p style="padding-left: 20px; margin-top: 5px;">
+                                \( \displaystyle x \neq 3 \implies -x \neq -3 \implies 6 - x \neq 6 - 3 \implies 6 - x
+                                \neq
+                                3 \)
+                            </p>
+                            Par conséquent, \( (6 - x) \in D_f \). La première condition est validée.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <b>•</b> Montrons maintenant que \( f(6 - x) + f(x) = 2b \), c'est-à-dire que \( f(6 - x) +
+                            f(x)
+                            = 3 \) :
+
+                            <p style="margin-top: 10px; margin-bottom: 10px;">D'une part, calculons \( f(6 - x) \) :</p>
+                            <p style="padding-left: 20px;">
+                                \( \displaystyle f(6 - x) = \frac{3(6 - x) + 1}{2(6 - x) - 6} = \frac{18 - 3x + 1}{12 -
+                                2x -
+                                6} = \frac{19 - 3x}{6 - 2x} = \frac{3x - 19}{2x - 6} \)
+                            </p>
+
+                            <p style="margin-top: 15px; margin-bottom: 10px;">D'autre part, sommons \( f(6 - x) \) et \(
+                                f(x) \) :</p>
+                            <p style="padding-left: 20px;">
+                                \( \displaystyle
+                                \begin{aligned}
+                                f(6 - x) + f(x) &= \frac{3x - 19}{2x - 6} + \frac{3x + 1}{2x - 6} \\
+                                &= \frac{(3x - 19) + (3x + 1)}{2x - 6} \\
+                                &= \frac{6x - 18}{2x - 6} \\
+                                &= \frac{3(2x - 6)}{2x - 6} \\
+                                &= 3
+                                \end{aligned}
+                                \)
+                            </p>
+                            <p style="margin-top: 10px;">
+                                Puisque \( 3 = 2 \cdot \left(\frac{3}{2}\right) = 2b \), la seconde condition est
+                                parfaitement remplie.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!--6. Périodicité-->
