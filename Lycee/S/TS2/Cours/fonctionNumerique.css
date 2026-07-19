@@ -348,3 +348,7 @@ ul.bullet-list li::before {
     
 margin-right: 6px;
 }*/
+.liste-math li {
+     margin-bottom: 18px;
+     /* Espace automatique de 18px sous chaque puce */
+ }
