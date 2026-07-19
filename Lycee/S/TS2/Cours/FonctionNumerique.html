@@ -31,12 +31,11 @@
                 <!--1.Quelques limites usuelles-->
                 <div>
                     <div class="subsection-title">1.Quelques limites usuelles</div>
-                    <p>\(\forall n\in\mathbb{N}^{*} \lim\limits_{x \to +\infty} x^{n}=+\infty \text{ , } \lim\limits_{x
+                    <p>\(\displaystyle \forall n\in\mathbb{N}^{*} \lim\limits_{x \to +\infty} x^{n}=+\infty \text{ , } \lim\limits_{x
                         \to +\infty}
                         \dfrac{1}{x^{n}}=0^{+} \)</p>
 
-                    <p>\(
-
+                    <p>\(\displaystyle
                         \forall n\in\mathbb{N}^{*}
                         \lim\limits_{x \to -\infty} x^{n} =
                         \begin{cases}
@@ -52,14 +51,14 @@
 
                         \)</p>
 
-                    <p>\(\lim\limits_{x \to +\infty} \sqrt{x}=+\infty \text{ , } \lim\limits_{x \to +\infty}
+                    <p>\(\displaystyle \lim\limits_{x \to +\infty} \sqrt{x}=+\infty \text{ , } \lim\limits_{x \to +\infty}
                         \dfrac{1}{\sqrt{x}}=0^{+}\)</p>
 
-                    <p>\(\lim\limits_{x \to a^{+}} \dfrac{1}{x-a}=+\infty \text{ , } \lim\limits_{x \to a^{-}}
+                    <p>\(\displaystyle \lim\limits_{x \to a^{+}} \dfrac{1}{x-a}=+\infty \text{ , } \lim\limits_{x \to a^{-}}
                         \dfrac{1}{x-a}=-\infty\)
                     </p>
                     <b><u>Autre Notation</u></b>
-                    <p>\( ( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow a^{-}
+                    <p>\(\displaystyle ( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow a^{-}
                         )
                         \Leftrightarrow ( x\rightarrow a_{<} )\)</p>
                             <p>\( \lim\limits_{x \to a^{+}} f(x)=+\infty \text{ se note aussi }
@@ -78,14 +77,14 @@
                             voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \(
                             -\infty \).
                         </p>
-                        <p>\( \text{ Si pour tout \( x\in I \): }
+                        <p>\(\displaystyle \text{ Si pour tout \( x\in I \): }
                             \begin{cases}
                             f(x)\geq g(x)\\
                             \lim\limits_{x \to \alpha}g(x)=+\infty
                             \end{cases}
                             \text{ alors } \lim\limits_{x \to \alpha}f(x)=+\infty \)</p>
                         <img src="images/comp1.png" class="planComplex" alt="cas 1  ">
-                        <p>\( \text{Si pour tout \( x\in I \): }
+                        <p>\(\displaystyle \text{Si pour tout \( x\in I \): }
                             \begin{cases}
                             f(x)\leq g(x)\\
                             \lim\limits_{x \to \alpha}g(x)=-\infty
@@ -95,26 +94,26 @@
                         <img src="images/comp2.png" class="planComplex" alt="cas 2">
                         <div>
                             <div class="example"></div>
-                            <p>\( \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim\limits_{x \to +\infty} f(x) \)</p>
+                            <p>\(\displaystyle \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim\limits_{x \to +\infty} f(x) \)</p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <p>\( \text{Pour tout \(x\), \( \sin x\leq 1 \implies -x + \sin x \leq 1 - x \implies
+                            <p>\(\displaystyle \text{Pour tout \(x\), \( \sin x\leq 1 \implies -x + \sin x \leq 1 - x \implies
                                 f(x)\leq
                                 1 - x \).} \)</p>
-                            <p>\( \text{Posons \( g(x)=1-x \) donc \( f(x)\leq g(x) \).} \)</p>
-                            <p>\( \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim\limits_{x \to
+                            <p>\(\displaystyle \text{Posons \( g(x)=1-x \) donc \( f(x)\leq g(x) \).} \)</p>
+                            <p>\(\displaystyle \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim\limits_{x \to
                                 +\infty}f(x)=-\infty \)</p>
                         </div>
                         <div>
                             <div class="example"></div>
-                            <p>\( \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim\limits_{x \to 0}
+                            <p>\(\displaystyle \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim\limits_{x \to 0}
                                 g(x) \)
                             </p>
                         </div>
                         <div>
                             <div class="solution"></div>
-                            <p>\( \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq
+                            <p>\(\displaystyle \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq
                                 \sqrt{1+x^{2}} \)., on a, pour tout }, x\neq 0 \)</p>
                             <p>\( f(x)\geq g(x) \text{ Or,} \lim_{x \to 0}g(x)=+\infty, \text{donc} \lim_{x \to
                                 0}f(x)=+\infty \)</p>
@@ -780,17 +779,17 @@
                 <div>
                     <div class="subsection-title">2.Dérivabilté à gauche-Dérivabilité à droite</div>
                     <p>Soit f une fonction définie sur un intervalle I contenant $x_{0}$ et $\ell$ un réel.</p>
-                    <p>$f$ est dérivable à droite de $x_{0}$ si \( \lim\limits_{x \to
+                    <p>$f$ est dérivable à droite de $x_{0}$ si \(\displaystyle \lim\limits_{x \to
                         x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
-                    <p>$f$ est dérivable à gauche de $x_{0}$ si \( \lim\limits_{x \to
+                    <p>$f$ est dérivable à gauche de $x_{0}$ si \(\displaystyle \lim\limits_{x \to
                         x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
-                    <p> $f$ est dérivable en $x_{0}$ si \( \lim\limits_{x \to
+                    <p> $f$ est dérivable en $x_{0}$ si \(\displaystyle \lim\limits_{x \to
                         x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\lim\limits_{x \to
                         x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \)</p>
-                    <p><b>NB:</b> On note \( f'_{g}(x) \) la dérivé à gauche et \( f'_{d}(x) \) la dérivé à droite</p>
+                    <p><b>NB:</b> On note \( f'_{g}(x) \) la dérivé à gauche et \(\displaystyle f'_{d}(x) \) la dérivé à droite</p>
                     <div>
                         <div class="example"></div>
-                        <p>\( f(x) = x|x-1| \) \( f \) est-elle dérivable en \( 1 \) ?</p>
+                        <p>\(\displaystyle f(x) = x|x-1| \) \( f \) est-elle dérivable en \( 1 \) ?</p>
                     </div>
                     <div>
                         <div class="solution"></div>
@@ -800,67 +799,67 @@
                 <div>
                     <div class="subsection-title">3.Interprétation géométrique du nombre dérivée</div>
                     <p>Si \( f \) est dérivable en \( x_{0} \) alors \( f'(x_{0}) \) existe et \( C_{f} \) admet une
-                        tangente au point d'abscisse \( x_{0} \) d'équation : \( y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)</p>
+                        tangente au point d'abscisse \( x_{0} \) d'équation : \(\displaystyle y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)</p>
                     <table>
                         <thead>
                             <tr>
                                 <th>Limite</th>
-                                <th>Dérivabilité en \( x_0 \)</th>
-                                <th>Interprétation géométrique : \( (C_f) \) admet</th>
+                                <th>Dérivabilité en \(\displaystyle x_0 \)</th>
+                                <th>Interprétation géométrique : \(\displaystyle (C_f) \) admet</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
                                 <td rowspan="2">\(f\) est dérivable en \(x_0\)</td>
                                 <td>Une tangente au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur
                                     \(a\)</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
                                 <td>Une tangente horizontale au point \( A \left(x_0; f(x_0)\right) \)</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
                                 <td rowspan="2">\(f\) est dérivable à droite en \(x_0\)</td>
                                 <td>Une demi-tangente à droite au point \( A \left(x_0; f(x_0)\right) \) de coefficient
                                     directeur \(a\)</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
                                 <td>Une demi-tangente horizontale à droite au point \( A \left(x_0; f(x_0)\right) \)
                                 </td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
                                 <td rowspan="2">\(f\) n'est pas dérivable à droite en \(x_0\)</td>
                                 <td>Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \)
                                     dirigée vers le bas</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
                                 <td>Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \)
                                     dirigée vers le haut</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \)</td>
                                 <td rowspan="2">\(f\) est dérivable à gauche en \(x_0\)</td>
                                 <td>Une demi-tangente à gauche au point \( A \left(x_0; f(x_0)\right) \) de coefficient
                                     directeur \(a\)</td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = 0 \)</td>
                                 <td>Une demi-tangente horizontale à gauche au point \( A \left(x_0; f(x_0)\right) \)
                                 </td>
                             </tr>
                             <tr>
-                                <td>\( \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \)</td>
                                 <td rowspan="2">\(f\) n'est pas dérivable à gauche en \(x_0\)</td>
                                 <td>Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \)
                                     dirigée vers le haut</td>
                             </tr>
                             <tr>
-                                <td>\( \lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
+                                <td>\(\displaystyle \lim\limits_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \)</td>
                                 <td> Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \)
                                     dirigée vers le bas </td>
                             </tr>
@@ -925,28 +924,28 @@
                 <div>
                     <div class="subsection-title">6.Dérivée de la fonction réciproque</div>
                     <p>Soit \( f \) une fonction dérivable et bijective de \( I \to J \) et \( f^{-1} \) la bijection
-                        réciproque donc \( f^{-1'}(y)=\frac{1}{f'(x)} \text{avec } f'(x)\neq 0\)</p>
+                        réciproque donc \(\displaystyle f^{-1'}(y)=\frac{1}{f'(x)} \text{avec } f'(x)\neq 0\)</p>
 
                     En effet:
-                    \[
-                    \begin{array}{c c c c}
-                    f : I \to J & & f^{-1} : J \to I \\
-                    f : x \mapsto y = f(x) & & y \mapsto x = f^{-1}(y)
-                    \end{array}
-                    \]
+                    <p>\(\displaystyle
+                        \begin{array}{c c c c}
+                        f : I \to J & & f^{-1} : J \to I \\
+                        f : x \mapsto y = f(x) & & y \mapsto x = f^{-1}(y)
+                        \end{array}
+                        \)</p>
 
                     On a
-                    \begin{align*}
-                    f^{-1}\circ f(x)=x &\implies (f^{-1}\circ f(x))'=x'\\
-                    &\implies (f^{-1})'(f(x))\times f'(x)=1 \\
-                    &\implies (f^{-1})'(y)\times f'(x)=1\\
-                    &\implies (f^{-1})'(y) = \frac{1}{f'(x)}
-                    \end{align*}
+                    <p>\(\displaystyle \begin{aligned}
+                        f^{-1}\circ f(x)=x &\implies (f^{-1}\circ f(x))'=x'\\
+                        &\implies (f^{-1})'(f(x))\times f'(x)=1 \\
+                        &\implies (f^{-1})'(y)\times f'(x)=1\\
+                        &\implies (f^{-1})'(y) = \frac{1}{f'(x)}
+                        \end{aligned}\)</p>
 
 
                     <b>Propriété</b>
 
-                    <p>\( (f^{-1})'(y_{0})=\frac{1}{f'(x_{0})}=\frac{1}{f'(f^{-1}(y_{0}))} \text{avec } f'(x)\neq 0\)
+                    <p>\(\displaystyle (f^{-1})'(y_{0})=\frac{1}{f'(x_{0})}=\frac{1}{f'(f^{-1}(y_{0}))} \text{avec } f'(x)\neq 0\)
                     </p>
                     <p></p>
                     <div>
