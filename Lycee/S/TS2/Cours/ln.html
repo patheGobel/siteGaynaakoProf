@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonction Numérique</title>
+    <link rel="stylesheet" href="ln.css">
+    <script src="ln.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <div class="header">
+        <h1>Fonction logarithme Népérien</h1>
+        <div class="header-meta">
+            <span>Prof : M. BA</span>
+            <span>Classe : TS2</span>
+        </div>
+        <div class="header-year">
+            Année scolaire : 2025 -- 2026
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <h2 class="section-title">Introduction :</h2>
+    <p>
+        En 1614, un mathématicien écossais, John Napier (1550 ; 1617) ci-contre, plus connu sous le nom francisé de
+        Neper publie « Mirifici logarithmorum canonis descriptio ».
+        Dans cet ouvrage, qui est la finalité d’un travail de 20 ans, Neper présente un outil permettant de simplifier
+        les calculs opératoires : le logarithme.
+        Neper construit le mot à partir des mots grecs « logos » (logique) et arithmos (nombre).
+        Toutefois cet outil ne trouvera son essor qu’après la mort de Neper. Les mathématiciens anglais Henri Briggs
+        (1561 ; 1630) et William Oughtred (1574 ; 1660) reprennent et prolongent les travaux de Neper.
+        Les mathématiciens de l’époque établissent alors des tables de logarithmes de plus en plus précises.
+        L’intérêt d’établir ces tables logarithmiques est de permettre de substituer une multiplication par une addition
+        (paragraphe II). Ceci peut paraître dérisoire aujourd’hui, mais il faut comprendre qu’à cette époque, les
+        calculatrices n’existent évidemment pas, les nombres décimaux ne sont pas d’usage courant et les opérations
+        posées telles que nous les utilisons ne sont pas encore connues. Et pourtant l'astronomie, la navigation ou le
+        commerce demandent d’effectuer des opérations de plus en plus complexes.
+    </p>
+
+    <!-- Section I -->
+    <h2 class="section-title">I. Définition et propriétés</h2>
+
+    <h3 class="subsection-title">1. Définition</h3>
+    <p>
+        On appelle fonction logarithmique népérien la fonction notée $\ln$ qui est définie sur $]0\;;\ +\infty[$ et qui
+        vérifie $(\ln (x))'=\dfrac{1}{x}\ $ et $\ \ln 1=0$
+    </p>
+    <p>
+        \(\displaystyle \begin{array}{rcl}
+        \ln\ :\ ]0\;;\ +\infty[ & \longrightarrow & \mathbb{R} \\
+        x & \longmapsto & \ln x
+        \end{array}\)
+    </p>
+
+    <h3 class="subsection-title">2. Conséquences de la définition</h3>
+    <p>Soit $u$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$ alors :</p>
+    <ul>
+        <li>$\ln u$ existe si $u > 0$</li>
+        <li>$\ln |u|$ existe si $u \neq 0$</li>
+        <li>$\ln u^{2}$ existe si $u \neq 0$</li>
+    </ul>
+
+    <h3 class="subsection-title">3. Propriétés</h3>
+    <p>Les propriétés fondamentales de la fonction logarithmique, $\ln$, sont :</p>
+    <ul>
+        <li>$\ln(ab) = \ln a + \ln b \quad \text{pour } a > 0 \text{ et } b > 0.$</li>
+        <li>$\ln\left(\dfrac{a}{b}\right) = \ln a - \ln b \quad \text{pour } a > 0 \text{ et } b > 0.$</li>
+        <li>$\ln(a^p) = p \ln a \quad \text{pour } a > 0 \text{ et } p \in \mathbb{R}.$</li>
+        <li>$\ln\sqrt{a} = \dfrac{1}{2} \ln a \quad \text{pour } a > 0.$</li>
+    </ul>
+
+    <h3 class="subsection-title">4. Remarque</h3>
+    <p>La fonction $\ln$ est strictement croissante sur son domaine $]0\;;\ +\infty[$, c'est-à-dire que :</p>
+    <p>$ \forall a, b \in ]0\;;\ +\infty[, \quad a < b \implies \ln a < \ln b.$ </p>
+
+            <!-- Section II -->
+            <h2 class="section-title">II. Limites et Dérivée</h2>
+
+            <h3 class="subsection-title">1. Limites aux bornes de $D_{ln}$</h3>
+            <ul>
+                <li>$\displaystyle \lim\limits_{x \to 0^+} \ln x = -\infty$.</li>
+                <li>$\displaystyle \lim\limits_{x \to +\infty} \ln x = +\infty$.</li>
+            </ul>
+
+            <h3 class="subsection-title">2. Limites usuelles</h3>
+            <ul>
+                <li>$\displaystyle \lim\limits_{x \to 0^+} x \ln x = 0$.</li>
+                <li>$\displaystyle \lim\limits_{x \to +\infty} \frac{\ln x}{x} = 0$</li>
+                <li>$\displaystyle \lim\limits_{{x \to 0}} \frac{\ln(x+1)}{x}=1$</li>
+            </ul>
+            <p>Soit $a$ un nombre rationnel strictement positif.</p>
+            <ul>
+                <li>$\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-} $</li>
+                <li>$\displaystyle \lim\limits_{{x \to +\infty}} \frac{\ln(x)}{x^{\alpha}}=0^{+}$</li>
+            </ul>
+
+            <p><strong><span class="text-red">Preuve de quelques limites</span></strong></p>
+            <p>
+                Montrons que $\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$ pour $\alpha=1$<br>
+                pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a : $x\ln x=-\frac{\ln X}{X}$<br>
+                ainsi, $\displaystyle \lim\limits_{{x \to 0^{+}}} -\frac{\ln(X)}{X}=0^{-}$<br>
+                Donc $\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$
+            </p>
+
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>Déterminer les limites suivantes :</p>
+            <ol class="custom-counter">
+                <li>$\lim\limits_{x \to +\infty} x\ln(x)-x^{2}+1$</li>
+                <li>$\lim\limits_{x \to 0} x\ln(x)-x^{2}+1$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{x\ln(x)}{x^{2}+1}$</li>
+            </ol>
+
+            <p><strong><span class="text-red">Exercice d'application</span></strong></p>
+            <p>Déterminer les limites suivantes :</p>
+            <ol class="custom-counter">
+                <li>$\lim\limits_{x \to +\infty} x+1-\ln(x)$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{x}{2}\left[\ln\left(1+\frac{1}{x}\right)\right]$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{\ln(x)}{\sqrt{x}}$</li>
+                <li>$\lim\limits_{x \to 1^{+}} (x-1)\ln(x-1)$</li>
+                <li>$\lim\limits_{x \to 1^{+}} \frac{x}{x+1}-\ln(x+1)$</li>
+            </ol>
+
+            <h3 class="subsection-title">3. Dérivée</h3>
+            <p>Soit $u$ et $v$ deux fonctions strictement positives :</p>
+            <p>
+                $[\ln(u(x))]' = \frac{u'(x)}{u(x)}$<br>
+                $\left[\ln\left(\frac{u(x)}{v(x)}\right)\right]' = \frac{u'(x)}{u(x)}$
+            </p>
+
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>
+                $f(x) = \frac{\ln(x^{2}+2x+9)}{x}$<br>
+                $f(x) = \ln\left[\frac{x^{2}+2x+9}{x-2}\right]$
+            </p>
+
+            <h3 class="subsection-title">4. Limites des composées avec ln</h3>
+            <p>Soit $u(x)$ une fonction strictly positive.</p>
+            <p>Cherchons $\lim\limits_{{x \to a}} \ln[u(x)]$</p>
+            <p>$\textbf{Si}
+                \begin{cases}
+                \lim\limits_{{x \to a}} u(x)=l\\[2mm]
+                \lim\limits_{{X \to l}} \ln(X)=l'
+                \end{cases} \implies \lim\limits_{{x \to a}} \ln[u(x)]=l'
+                $
+            </p>
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>Calcule la limite suivante :</p>
+            <p>$\displaystyle \lim\limits_{{x \to +\infty}} \ln\left(\dfrac{x^{2}}{2x^{2}-1}\right)$</p>
+            <p><strong><span class="text-red">Solution</span></strong></p>
+            <p>
+                Soit à déterminer la limite suivante :
+                $\displaystyle \lim\limits_{x \to +\infty} \ln\left(\frac{x^2}{2x^2 - 1}\right)$
+            </p>
+
+            <p><strong>Étape 1 : Limite de la fonction rationnelle à l'intérieur du logarithme</strong></p>
+            <p>
+                Quand $x \to +\infty$, le comportement en $+\infty$ d'une fonction rationnelle est donné par le rapport
+                de ses termes de plus haut degré :<br>
+                $
+                \displaystyle
+                \begin{aligned}
+                \lim\limits_{x \to +\infty} \frac{x^2}{2x^2 - 1} &= \lim_{x \to +\infty} \frac{x^2}{2x^2}\\ 
+                                                                 &= \frac{1}{2}
+                \end{aligned}
+                $
+            </p>
+
+            <p><strong>Étape 2 : Application du théorème de composition des limites</strong></p>
+            <p>
+                On pose $u(x) = \frac{x^2}{2x^2 - 1}$.
+            </p>
+            <p>
+                $\text{Si }
+                \begin{cases}
+                \lim\limits_{x \to +\infty} u(x) = \dfrac{1}{2} \\[2mm]
+                \lim\limits_{X \to \frac{1}{2}} \ln(X) = \ln\left(\dfrac{1}{2}\right)
+                \end{cases}
+                \text{ alors } \lim\limits_{x \to +\infty} \ln\left[u(x)\right] = \ln\left(\frac{1}{2}\right)$
+            </p>
+
+            <p><strong>Étape 3 : Simplification du résultat</strong></p>
+            <p>
+                En utilisant la propriété $\ln\left(\frac{1}{a}\right) = -\ln(a)$, on obtient :
+                $\ln\left(\frac{1}{2}\right) = -\ln(2)$
+            </p>
+
+            <p><strong>Conclusion :</strong></p>
+            <p>
+                $\displaystyle \lim\limits_{x \to +\infty} \ln\left(\frac{x^2}{2x^2 - 1}\right) = -\ln(2)$
+            </p>
+</body>
+
+</html>
