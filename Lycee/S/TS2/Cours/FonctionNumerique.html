@@ -1261,7 +1261,8 @@
                 <div style="text-align: left; margin-top: 20px; margin-bottom: 20px;">
                     <img src="images/courbe_fonction_paire.png"
                         alt="Symétrie d'une fonction paire par rapport à l'axe des ordonnées"
-                        style="max-width: 100%; height: auto; width: 450px;">
+                        style="max-width: 100%; height: auto; width: 450px;"><br>
+                    <span style="font-size: 0.9em; color: #555;"><i>Figure : Fonction paire</i></span>
                 </div>
             </div>
             <!--3. Fonction impaire-->
@@ -1278,7 +1279,8 @@
                 <div style="text-align: left; margin-top: 20px; margin-bottom: 20px;">
                     <img src="images/courbe_fonction_impaire.png"
                         alt="Symétrie d'une fonction paire par rapport à l'axe des ordonnées"
-                        style="max-width: 100%; height: auto; width: 450px;">
+                        style="max-width: 100%; height: auto; width: 450px;"><br>
+                    <span style="font-size: 0.9em; color: #555;"><i>Figure : Fonction impaire</i></span>
                 </div>
             </div>
             <!--4. Axe de symétrie-->
@@ -1294,6 +1296,7 @@
                 <div>
                     <img src="images/axeSymetrie.png" alt="Axe de symétrie d'une courbe"
                         style="max-width: 100%; height: auto; width: 400px; display: block; margin-bottom: 5px;">
+                    <span style="font-size: 0.9em; color: #555;"><i>Figure : Axe de symétrie</i></span>
                 </div>
                 <p>
                     <span style="color: blue; font-weight: bold;">Cas particulier :</span> Si \( a=0 \) ; \( f \) est
@@ -1322,7 +1325,7 @@
 
                 <!-- Figure -->
                 <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <img src="centreSymetrie.png" alt="Centre de symétrie d'une courbe"
+                    <img src="images/centreSymetrie.png" alt="Centre de symétrie d'une courbe"
                         style="max-width: 100%; height: auto; width: 400px; display: block; margin-bottom: 5px;">
                     <span style="font-size: 0.9em; color: #555;"><i>Figure : Centre de symétrie</i></span>
                 </div>
@@ -1333,13 +1336,15 @@
                 </p>
 
                 <p>
-                    D'où, le point \(\displaystyle I\left(3 ; \frac{3}{2}\right) \) est le centre de symétrie de la courbe \( C_f \).
+                    D'où, le point \(\displaystyle I\left(3 ; \frac{3}{2}\right) \) est le centre de symétrie de la
+                    courbe \( C_f \).
                 </p>
 
                 <div>
                     <div class="example"></div>
                     <p>
-                        Soit \(\displaystyle f(x)=\frac{3x+1}{2x-6} \). Montrer que le point \( I\left(3 ; \frac{3}{2}\right) \) est
+                        Soit \(\displaystyle f(x)=\frac{3x+1}{2x-6} \). Montrer que le point \( I\left(3 ;
+                        \frac{3}{2}\right) \) est
                         un
                         centre de symétrie pour la courbe \( C_{f} \).
                     </p>
@@ -1404,12 +1409,58 @@
             <!--6. Périodicité-->
             <div>
                 <div class="subsection-title">6.Périodicité</div>
+                <p>
+                    Soit \( f \) une fonction et \( D_f \) son ensemble de définition. Soit \( T \) un nombre réel
+                    strictement positif. On dit que \( T \) est une <b>période</b> de \( f \) lorsque, pour tout \( x \)
+                    appartenant à \( D_f \), on a :
+                </p>
+
+                <ul>
+                    <li>
+                        \( x + T \in D_f \)
+                        <span style="color: #666;">(1)</span>
+                    </li>
+                    <li>
+                        \( f(x + T) = f(x) \)
+                        <span style="color: #666;">(2)</span>
+                    </li>
+                </ul>
+
+                <p>
+                    Le plus petit réel \( T \) strictement positif qui vérifie (1) et (2) est appelé <b>la période</b>
+                    de \( f \).
+                </p>
+
                 <div>
                     <div class="example"></div>
-                    <p></p>
+                    <p>
+                        Considérons la fonction \( f : \mathbb{R} \rightarrow \mathbb{R} \) définie par \( f(x) =
+                        \sin(x) \)
+                        pour tout \( x \in \mathbb{R} \).
+                    </p>
+                    <p>Montrer que \(\sin(x)\) est périodique de période T à déterminer. </p>
                 </div>
                 <div>
                     <div class="solution"></div>
+                    <p>
+                        La fonction sinus est périodique de période \( T = 2\pi \). En effet, pour tout \( x \in
+                        \mathbb{R}
+                        \), on a :
+                    </p>
+
+                    <ul>
+                        <li>
+                            \( x + 2\pi \in \mathbb{R} \) <i>(ce qui vérifie la condition (1))</i>,
+                        </li>
+                        <li>
+                            \( f(x + 2\pi) = \sin(x + 2\pi) = \sin(x) = f(x) \) <i>(ce qui vérifie la condition
+                                (2))</i>.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Ainsi, \( 2\pi \) est la période de \( f(x) = \sin(x) \).
+                    </p>
                 </div>
             </div>
             <!--7.Position relative d’une courbe et de son asymptote (∆) : y = ax + b-->
@@ -1417,12 +1468,65 @@
                 <div class="subsection-title">7.Position relative d'une courbe et de son asymptote $(∆) : y = ax +
                     b$
                 </div>
+                <p>
+                    Soient \( f \) une fonction et \( (C_f) \) sa courbe représentative. Soit la droite \( (\Delta) : y
+                    = ax + b \).
+                </p>
+
+                <p>
+                    Posons \( g(x) = f(x) - (ax + b) \).
+                </p>
+
+                <ul>
+                    <li>
+                        Si \( g(x) > 0 \ \forall x \in K \), alors \( (C_f) \) est <b>au-dessus</b> de \(
+                        (\Delta) \) sur \( K \).
+                    </li>
+                    <li>
+                        Si \( g(x) < 0 \ \forall x \in K \), alors \( (C_f) \) est <b>au-dessous (ou en
+                            dessous)</b> de \( (\Delta) \) sur \( K \).
+                    </li>
+                    <li>
+                        Si \( g(x) = 0 \ \forall x \in K \), alors \( (C_f) \) et \( (\Delta) \) se coupent sur
+                        \( K \).
+                    </li>
+                </ul>
+
                 <div>
                     <div class="example"></div>
-                    <p></p>
+                    <p>
+                        Considérons la fonction \( f(x) = 2x + \frac{1}{x} \) et son asymptote oblique \( (\Delta) : y =
+                        2x
+                        \).
+                    </p>
                 </div>
                 <div>
                     <div class="solution"></div>
+                    <p>
+                        Calculons \( g(x) = f(x) - (2x) = 2x + \frac{1}{x} - 2x = \frac{1}{x} \).
+                    </p>
+
+                    <ul>
+                        <li>
+                            Pour \( x > 0 \), \( g(x) = \frac{1}{x} > 0 \), donc \( (C_f) \) est au-dessus de
+                            \(
+                            (\Delta) \) pour \( x > 0 \).
+                        </li>
+                        <li>
+                            Pour \( x < 0 \), \( g(x)=\frac{1}{x} < 0 \), donc \( (C_f) \) est en dessous de \( (\Delta)
+                                \) pour \( x < 0 \). </li>
+                        <li>
+                            \( g(x) \) ne s'annule jamais (sauf à l'infini), donc \( (C_f) \) et \( (\Delta) \)
+                            ne
+                            se coupent pas.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Ainsi, la courbe de \( f(x) = 2x + \frac{1}{x} \) est au-dessus de l'asymptote \( y = 2x \) pour
+                        \(
+                        x > 0 \) et en dessous pour \( x < 0 \), sans intersection entre \( (C_f) \) et \( (\Delta) \).
+                            </p>
                 </div>
             </div>
             <!--8.Position relative d’une courbe et de sa tangente au point M0 d’abscisse x0-->
@@ -1431,13 +1535,153 @@
                     d'abscisse
                     $x_0$
                 </div>
+                <p>
+                    Soit \( f \) une fonction deux fois dérivable sur un intervalle \( K \) et \( x_0 \) un élément de
+                    \( K \).
+                </p>
+
+                <p>
+                    On désigne par \( (C_f) \) sa courbe représentative et par \( (T) \) la tangente à \( (C_f) \) au
+                    point \( M_0 \) d'abscisse \( x_0 \).
+                </p>
+
+                <p>
+                    \( (T) \) a pour équation : \( y = f(x_0) + f'(x_0)(x - x_0) \).
+                </p>
+
+                <ul>
+                    <li>
+                        Si \( f'' > 0 \ \forall x \in K \), alors \( (C_f) \) est <b>au-dessus</b> de \( (T) \)
+                        sur \( K \). On dit que \( f \) est <b>convexe</b> sur \( K \).
+                    </li>
+                    <li>
+                        Si \( f'' < 0 \ \forall x \in K \), alors \( (C_f) \) est <b>au-dessous (ou en
+                            dessous)</b> de \( (T) \) sur \( K \). On dit que \( f \) est <b>concave</b> sur \( K \).
+                    </li>
+                    <li>
+                        Si \( f'' \) s'annule et change de signe en \( x_0 \), alors la droite \( (T) \)
+                        <b>traverse</b> la courbe \( (C_f) \) en \( M_0 \). On dit que \( M_0 \) est un <b>point
+                            d'inflexion</b> de \( (C_f) \).
+                    </li>
+                </ul>
                 <div>
                     <div class="example"></div>
-                    <p></p>
+                    <p>
+                        Considérons la fonction \( f(x) = x^3 - 3x^2 + 2x \) et étudions sa tangente au point \( M_0 \)
+                        d'abscisse \( x_0 = 1 \).
+                    <ol>
+                        <li>Calculons \( f(x_0) \), \( f'(x_0) \) et \( f''(x_0) \) :</li>
+                        <li>Équation de la tangente \( (T) \) en \( M_0 \) :</li>
+                        <li>Analyse de la concavité :</li>
+                    </ol>
+                    </p>
                 </div>
                 <div>
                     <div class="solution"></div>
+                    <ol>
+                        <li>
+                            <b>Calculons \( f(x_0) \), \( f'(x_0) \) et \( f''(x_0) \) :</b>
+                            <p>
+                                \( \displaystyle f(x) = x^3 - 3x^2 + 2x \)
+                            </p>
+                            <p>
+                                \( \displaystyle f'(x) = 3x^2 - 6x + 2 \)
+                            </p>
+                            <p>
+                                \( \displaystyle f''(x) = 6x - 6 \)
+                            </p>
+
+                            <p>En prenant \( x_0 = 1 \) :</p>
+                            <p>
+                                \( \displaystyle f(1) = 1^3 - 3 \times 1^2 + 2 \times 1 = 0 \)
+                            </p>
+                            <p>
+                                \( \displaystyle f'(1) = 3 \times 1^2 - 6 \times 1 + 2 = -1 \)
+                            </p>
+                            <p>
+                                \( \displaystyle f''(1) = 6 \times 1 - 6 = 0 \)
+                            </p>
+                        </li>
+
+                        <li>
+                            <b>Équation de la tangente \( (T) \) en \( M_0 \) :</b>
+                            <p>L'équation de la tangente au point \( M_0(1, 0) \) est donnée par :</p>
+                            <p>
+                                \( \displaystyle y = f(x_0) + f'(x_0)(x - x_0) = 0 + (-1)(x - 1) = -x + 1 \)
+                            </p>
+                        </li>
+
+                        <li>
+                            <b>Analyse de la concavité :</b>
+                            <p>
+                                Pour \( f(x) = x^3 - 3x^2 + 2x \), on a \( f''(x) = 6x - 6 \), qui s'annule en \( x = 1
+                                \). En étudiant le signe de \( f''(x) \) de part et d'autre de \( x = 1 \) :
+                            </p>
+                            <ul>
+                                <li>
+                                    Pour \( x < 1 \), \( f''(x) < 0 \), donc \( f \) est concave. </li>
+                                <li>
+                                    Pour \( x > 1 \), \( f''(x) > 0 \), donc \( f \) est convexe.
+                                </li>
+                            </ul>
+                            <p>
+                                Ainsi, \( f''(x) \) change de signe en \( x_0 = 1 \), ce qui signifie que \( M_0 \) est
+                                un point d'inflexion de la courbe \( (C_f) \). La tangente \( (T) \) traverse la courbe
+                                en ce point.
+                            </p>
+                        </li>
+                    </ol>
                 </div>
+            </div>
+            <div> <!--9.Applications-->
+                <div class="subsection-title">9.Applications</div>
+
+                <p>Soit \( f \) la fonction définie par :</p>
+                <p>
+                    \( \displaystyle
+                    f(x) =
+                    \begin{cases}
+                    2x\sqrt{1 - x^2} & \text{si } x > 0 \\
+                    -x + \sqrt{x^2 - 2x} & \text{si } x \leq 0
+                    \end{cases}
+                    \)
+                </p>
+
+                <ol>
+                    <li>
+                        Déterminer \( D_f \), les limites aux bornes et préciser les asymptotes et branches infinies
+                        éventuelles.
+                    </li>
+                    <li>
+                        Étudier la dérivabilité de \( f \) en 0 et 1 ; interpréter géométriquement les résultats
+                        obtenus.
+                    </li>
+                    <li>
+                        Calculer \( f'(x) \) là où \( f \) est définie, puis dresser le tableau de variation de \( f
+                        \).
+                    </li>
+                    <li>
+                        Tracer la courbe de \( f \).
+                    </li>
+                    <li>
+                        Soit \( h \) la restriction de \( f \) à l'intervalle \( ]-\infty ; 0] \).
+                        <ol type="a">
+                            <li>
+                                Montrer que \( h \) admet une bijection réciproque \( h^{-1} \) dont on précisera
+                                l'ensemble de définition, l'ensemble de dérivabilité et le tableau de variation.
+                            </li>
+                            <li>
+                                Sans utiliser l'expression de \( h^{-1}(x) \), calculer \( (h^{-1})'(2) \).
+                            </li>
+                            <li>
+                                Déterminer explicitement \( h^{-1} \).
+                            </li>
+                            <li>
+                                Tracer la courbe de \( h^{-1} \) dans le même repère que celle de \( f \).
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
