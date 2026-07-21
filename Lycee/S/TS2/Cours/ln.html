@@ -107,7 +107,25 @@
                 <li>$\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-} $</li>
                 <li>$\displaystyle \lim\limits_{{x \to +\infty}} \frac{\ln(x)}{x^{\alpha}}=0^{+}$</li>
             </ul>
+            <p><strong><span class="text-red">Croissances comparées :</span></strong></p>
+            <p>
+                Soit \(\alpha\) un nombre réel strictement positif (\(\alpha > 0\)).<br>
+                Au voisinage de \(0^+\) et de \(+\infty\), la fonction puissance l'emporte sur la fonction logarithme
+                népérien :
+            </p>
 
+            <ul>
+                <li>
+                    <strong>En \(0^+\) :</strong>
+                    \(\lim\limits_{x \to 0^+} x \ln x = 0 \quad \text{et plus généralement,} \quad \lim\limits_{x \to
+                    0^+} x^{\alpha} \ln x = 0^{-}\)
+                </li>
+                <li>
+                    <strong>En \(+\infty\) :</strong>
+                    \(\lim\limits_{x \to +\infty} \frac{\ln x}{x} = 0 \quad \text{et plus généralement,} \quad
+                    \lim\limits_{x \to +\infty} \frac{\ln x}{x^{\alpha}} = 0^{+}\)
+                </li>
+            </ul>
             <p><strong><span class="text-red">Preuve de quelques limites</span></strong></p>
             <p>
                 Montrons que $\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$ pour $\alpha=1$<br>
@@ -133,21 +151,7 @@
                 <li>$\lim\limits_{x \to 1^{+}} (x-1)\ln(x-1)$</li>
                 <li>$\lim\limits_{x \to 1^{+}} \frac{x}{x+1}-\ln(x+1)$</li>
             </ol>
-
-            <h3 class="subsection-title">3. Dérivée</h3>
-            <p>Soit $u$ et $v$ deux fonctions strictement positives :</p>
-            <p>
-                $[\ln(u(x))]' = \frac{u'(x)}{u(x)}$<br>
-                $\left[\ln\left(\frac{u(x)}{v(x)}\right)\right]' = \frac{u'(x)}{u(x)}$
-            </p>
-
-            <p><strong><span class="text-red">Exemple</span></strong></p>
-            <p>
-                $f(x) = \frac{\ln(x^{2}+2x+9)}{x}$<br>
-                $f(x) = \ln\left[\frac{x^{2}+2x+9}{x-2}\right]$
-            </p>
-
-            <h3 class="subsection-title">4. Limites des composées avec ln</h3>
+            <h3 class="subsection-title">3. Limites des composées avec ln</h3>
             <p>Soit $u(x)$ une fonction strictly positive.</p>
             <p>Cherchons $\lim\limits_{{x \to a}} \ln[u(x)]$</p>
             <p>$\textbf{Si}
@@ -173,8 +177,8 @@
                 $
                 \displaystyle
                 \begin{aligned}
-                \lim\limits_{x \to +\infty} \frac{x^2}{2x^2 - 1} &= \lim_{x \to +\infty} \frac{x^2}{2x^2}\\ 
-                                                                 &= \frac{1}{2}
+                \lim\limits_{x \to +\infty} \frac{x^2}{2x^2 - 1} &= \lim_{x \to +\infty} \frac{x^2}{2x^2}\\
+                &= \frac{1}{2}
                 \end{aligned}
                 $
             </p>
@@ -202,6 +206,69 @@
             <p>
                 $\displaystyle \lim\limits_{x \to +\infty} \ln\left(\frac{x^2}{2x^2 - 1}\right) = -\ln(2)$
             </p>
-</body>
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>
+                $f(x) = \frac{\ln(x^{2}+2x+9)}{x}$<br>
+                $f(x) = \ln\left[\frac{x^{2}+2x+9}{x-2}\right]$
+            </p>
+            <h3 class="subsection-title">4. Dérivée</h3>
+            <p>
+                Soient \(u\) et \(v\) deux fonctions dérivables et strictement positives sur un intervalle \(I\) de
+                \(\mathbb{R}\).
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Dérivée de \(\ln(u)\) :</strong>
+                    \( \big[\ln(u(x))\big]' = \frac{u'(x)}{u(x)} \)
+                </li>
+                <li>
+                    <strong>Dérivée de \(\ln\left(\frac{u}{v}\right)\) :</strong>
+                    \( \left[\ln\left(\frac{u(x)}{v(x)}\right)\right]' = \left[\ln(u(x)) - \ln(v(x))\right]' =
+                    \frac{u'(x)}{u(x)} - \frac{v'(x)}{v(x)} \)
+                </li>
+            </ul>
+
+            <p style="color: red; font-weight: bold; margin-top: 20px;">Exemples :</p>
+            <p>Déterminer la fonction dérivée de chacune des fonctions suivantes :</p>
+
+            <ol class="custom-counter">
+                <li>
+                    \(f(x) = \frac{\ln(x^{2}+2x+9)}{x}\) sur \(\mathbb{R}^*\)
+                    <em>(Forme \(\frac{u}{v}\) combinée avec \(\ln\))</em>
+                </li>
+                <li>
+                    \(g(x) = \ln\left(\frac{x^{2}+2x+9}{x-2}\right)\) sur \(]2 \;;\ +\infty[\)
+                </li>
+            </ol>
+            <!-- Section III -->
+            <h2 class="section-title">III. Etude le fonction ln</h2>
+            <p>Soit \(f\) la fonction définie par \(f(x) = \ln(x)\).</p>
+
+            <p style="font-weight: bold; margin-top: 15px;">1. Domaine de définition \(D_{f}\) :</p>
+
+            <p>\(f(x)\) existe si et seulement si \(x \in \mathbb{R}^*_+\).</p>
+
+            <p>Ainsi, le domaine de définition est :</p>
+
+            $ D_{f} = \mathbb{R}^*_+ = ]0 \,;\, +\infty[ $
+            <p style="font-weight: bold; margin-top: 15px;">2. Limites aux bornes de \(D_{f}\) :</p>
+
+            <p><strong>En \(0^+\) :</strong></p>
+            $ \lim\limits_{x \to 0^+} \ln(x) = -\infty $
+            <p><em>(La droite d'équation \(x = 0\) est asymptote verticale à la courbe \(\mathcal{C}_f\).)</em></p>
+
+            <p><strong>En \(+\infty\) :</strong></p>
+            $ \lim\limits_{x \to +\infty} \ln(x) = +\infty $
+
+            <p style="font-weight: bold; margin-top: 15px;">3. Dérivée et sens de variation :</p>
+
+            <p>Pour tout \(x \in ]0 \,;\, +\infty[\), \(f\) est dérivable et :</p>
+            $ f'(x) = \frac{1}{x} $
+
+            <p>
+                Pour tout \(x \in ]0 \,;\, +\infty[\), \(f'(x) > 0\). On en déduit que la fonction \(f\) est
+                <strong>strictement croissante</strong> sur \(]0 \,;\, +\infty[\).
+            </p>
 
 </html>
