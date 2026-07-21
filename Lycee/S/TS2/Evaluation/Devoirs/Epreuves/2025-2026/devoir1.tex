@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2025}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2025/2026} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 26/11/2025} & \textbf{Durée : 4 heures} \\ \hline
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\underline{Exercice 1 :} 0,5 $\times $ 10 = 5 points}
+\begin{enumerate}
+\item Énoncer le théorème des valeurs intermédiaires et son corollaire.
+\item Énoncer Théorème de la bijection.
+\item Énoncer le théorème de l’inégalité des accroissements finis (IAF).
+\item Théorème de la bijection.
+\item \(\text{Si }\lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \text{ alors ... }\)
+\item \(\text{Si }\lim_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0} = +\infty \text{ alors ... }\)
+\item \(\text{Si }\lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = 0 \text{ alors ... }\)
+\item \(\text{Si }\lim_{x \to +\infty} f(x) =+\infty \text{ et }\lim_{x \to +\infty}\dfrac{f(x)}{x}=\beta \in\mathbb{R}^{*}\text{ et }\lim_{x \to +\infty}[f(x)-\beta x]=+\infty\text{ alors ...}\)
+\item Si \(f\) est continue et strictement décroissante sur \( ]-\infty; b] \), alors \( f(]-\infty; b]) = ... \)
+\end{enumerate}
+
+\section*{\underline{Exercice 2 :} 5,5 points}
+
+\begin{enumerate}
+    \item Calculer les limites suivantes : \textbf{(4 × 1 pt)}
+    \[
+    \lim_{x \to 0} \dfrac{\sqrt{1+\sin x} - 1}{\sin 2x} \; ; \quad
+    \lim_{x \to 0} \dfrac{\cos x - 1}{x^3 + x^2} \; ; \quad
+    \lim_{x \to 1} \dfrac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}\; ; \quad
+    \lim_{x \to 1} \dfrac{\sin(\pi x)}{x - 1}
+    \]
+    \item Donner les primitives des fonctions \(f\),\(g\) et \(h\) respectivement sur \(\mathbb{R}\) et \(\mathbb{R} \setminus \{1; 2\}\). \textbf{(3 × 0,5 pt)}
+    \[
+    f(x)=2\cos(x)-3\sin(x)\; ; \quad
+    g(x) = (3x-1)(3x^2-2x+3)^3 \; ; \quad
+    h(x) = \dfrac{1-x^2}{(x^3-3x+2)^3}.
+    \]
+\end{enumerate}
+
+\section*{\underline{Problème :} 9,5 points}
+\underline{\textbf{Partie A :}}
+Soit la fonction $f$ définie par :
+\[
+f(x)=
+\begin{cases}
+\dfrac{x^2-2x}{x-1} & \text{si } x<0,\\[4mm]
+x + \sqrt{x^2+x} & \text{si } x\ge 0,
+\end{cases}
+\qquad
+\text{et } (\mathcal{C}_f) \text{ sa courbe représentative dans un repère orthonormé } (O,\vec{i},\vec{j}).
+\]
+
+\begin{enumerate}
+    \item Déterminer l'ensemble de définition $\mathcal{D}_f$ de $f$. \hspace{1cm} \textbf{(0,5 pt)}
+    \item Déterminer les limites aux bornes de $\mathcal{D}_f$. \hspace{1cm} \textbf{(0,5 pt)}
+    \item Étudier la continuité et la dérivabilité de $f$ en $0$. Interpréter les résultats obtenus. \hspace{1cm} \textbf{(1,5 pt)}
+    \item 
+      \begin{enumerate}
+        \item Montrer que $(\mathcal{C}_f)$ admet en $-\infty$ une asymptote oblique $(\Delta_1)$ dont on déterminera l’équation. \textbf{(0,5 pt)}
+        \item Étudier la position relative de $(\mathcal{C}_f)$ par rapport à $\Delta_1$ sur $]-\infty;0[$. \hspace{1cm} \textbf{(0,5 pt)}
+      \end{enumerate}
+    \item Montrer que $(\mathcal{C}_f)$ admet en $+\infty$ une asymptote oblique $(\Delta_2)$ dont on déterminera l’équation. \textbf{(0,5 pt)}
+    \item Préciser l'ensemble de dérivabilité de $f$ puis calculer $f'(x)$ sur chaque intervalle où $f$ est dérivable.\\ \textbf{(0,5 pt)}
+    \item Dresser le tableau de variation de $f$. \hspace{1cm} \textbf{(0,5 pt)}
+    \item Préciser les points d'intersection de $(\mathcal{C}_f)$ avec les axes du repère. \textbf{(0,25 pt)}
+    \item Construire la courbe $(\mathcal{C}_f)$. \hspace{1cm} \textbf{(1,5 pt)}
+\end{enumerate}
+
+\underline{\textbf{Partie B :}}
+
+Soit $h$ la restriction de $f$ à l’intervalle $I = [0; +\infty[$.
+
+\begin{enumerate}
+
+    \item Montrer que $h$ réalise une bijection de $I$ dans un intervalle $J$ à préciser.
+    \hspace{1cm} \textbf{(0,25 pt)}
+
+    \item La bijection réciproque $h^{-1}$ est-elle dérivable sur $J$ ?
+    \hspace{1cm} \textbf{(0,25 pt)}
+
+    \item Calculer $h\!\left(\dfrac{4}{5}\right)$ puis $(h^{-1})'(2)$.
+   \hspace{1cm} \textbf{(0,5 pt)}
+
+    \item Construire $(\mathcal{C}_{h^{-1}})$ la courbe représentative de $h^{-1}$ dans le même repère.
+    \hspace{1cm} \textbf{(0,5 pt)}
+
+    \item Exprimer $h^{-1}(x)$ pour tout $x \in J$.
+    \hspace{1cm} \textbf{(0,5 pt)}
+
+\end{enumerate}
+
+\end{document}

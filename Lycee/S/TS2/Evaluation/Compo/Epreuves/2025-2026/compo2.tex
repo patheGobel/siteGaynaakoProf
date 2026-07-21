@@ -1,0 +1,219 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{multicol}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2026}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2025/2026} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 11/06/2026} & \textbf{Durée : 4 heures} \\ \hline
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily Composition Du 2$ ^\text{\bf nd} $ Semestre}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+\section*{\underline{Exercice 1 : (5 pts)}}
+
+On munit le plan d'un repère orthonormé $\left(O, \vec{u}, \vec{v}\right)$.
+    %\begin{multicols}{2}
+%\setlength{\columnseprule}{0.1mm} % La largeur de la ligne verticale entre les colonnes
+\begin{enumerate}
+    \item Soit $A(\sqrt{3} - i)$ et $r$ la rotation de centre $O$ et d'angle $\dfrac{\pi}{4}$.
+    \begin{enumerate}
+        \item Déterminer la forme exponentielle de $\sqrt{3} - i$\hfill \textbf{(0,25 pt)}
+        \item Déterminer l'écriture complexe de la rotation $r$.\hfill \textbf{(0,5 pt)}
+        \item Soit $B$ l'image de $A$ par la rotation $r$. Montrer que l'affixe $b$ du point $B$ est \\$b = \left(\dfrac{\sqrt{6}+\sqrt{2}}{2}\right) + i \left(\dfrac{\sqrt{6}-\sqrt{2}}{2}\right)$.
+        \item Écrire $b$ sous forme exponentielle puis sous forme trigonométrique.\hfill \textbf{(0,5pt + 0,5pt)} 
+        \item En déduire les valeurs exactes de $\cos \dfrac{\pi}{12}$ et $\sin \dfrac{\pi}{12}$.\hfill \textbf{(0,25pt $\times$ 2)}
+        \item Résoudre dans $\mathbb{C}$ l'équation : $z^3 = 1$.\hfill \textbf{(0,5 pt)}
+        \item En déduire les solutions dans $\mathbb{C}$ sous forme algébrique de l'équation $z^3 = b^3$.\hfill \textbf{(0,5 pt)}
+    \end{enumerate}
+%\end{multicols}  
+    \item Soit $f$ la transformation d'écriture complexe : $z' = \left(1 - i\sqrt{3}\right)z + 2i\sqrt{3}$.
+    \begin{enumerate}
+        \item Déterminer la nature et les éléments caractéristiques de $f$. \hfill \textbf{(0,75 pt)}
+        \item Déterminer une équation cartésienne de la droite $(\Delta')$, image de la droite $(\Delta) : -x + y - 1 = 0$ par $f$.\hfill \textbf{(0,5 pt)}
+        \item Déterminer l'image du cercle $(C)$ de centre $A$ et de rayon $\dfrac{1}{2}$ par $f$. \hfill \textbf{(0,5 pt)}
+    \end{enumerate}
+\end{enumerate}
+
+\section*{\underline{Exercice 2 :(5 pts)} }
+
+\subsection*{Contexte}
+Une entreprise de services numériques supervise un serveur informatique qui peut être dans deux états : \textbf{Actif (A)} ou \textbf{En maintenance (M)}.
+Le comportement du serveur est observé chaque jour à heure fixe. 
+
+On constate que :
+\begin{itemize}
+    \item Si le serveur est \textbf{Actif} un jour donné, il a une probabilité de $0,6$ de rester actif le lendemain.
+    \item Si le serveur est \textbf{En maintenance} un jour donné, il a une probabilité de $0,1$ de le rester le lendemain pour finaliser les mises à jour.
+\end{itemize}
+
+Le premier jour du déploiement (jour 0), le serveur est garanti \textbf{Actif}.\\
+Pour tout entier naturel $n$, on note $A_n$ l'événement « le serveur est actif au jour $n$ » et $p_n = P(A_n)$ sa probabilité. On a ainsi $p_0 = 1$.
+
+\subsection*{Partie A }
+\begin{enumerate}
+    \item Déterminer la valeur de $p_1$. \hfill \textbf{(0,25 pt)}
+    \item Traduire la situation par un arbre pondéré reliant le jour $n$ au jour $n+1$.\hfill \textbf{(0,5 pt)}
+    \item Montrer que, pour tout entier naturel $n$, on a : $p_{n+1} = -0,3p_n + 0,9$.\hfill \textbf{(0,5 pt)}
+    \item Soit la suite $\left(u_n\right)$ définie pour tout entier naturel $n$ par $u_n = p_n - \dfrac{9}{13}$.
+    \begin{enumerate}
+        \item Montrer que $\left(u_n\right)$ est une suite géométrique dont on précisera la raison et le premier terme.\hfill \textbf{(0,5 pt)}
+        \item Exprimer $u_n$, puis $p_n$ en fonction de $n$.\hfill \textbf{(0,25 pt)}
+        \item Déterminer la limite de la suite $\left(p_n\right)$ et interpréter ce résultat dans le contexte du problème.\hfill \textbf{(0,5 pt)}
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{Partie B }
+L'entreprise décide d'analyser le comportement du serveur sur une période de \textbf{10 jours consécutifs}, après une très longue période de mise en service (on considère alors que la probabilité qu'il soit actif chaque jour est stabilisée à sa valeur limite, soit $p = \dfrac{9}{13}$). On suppose que l'état du serveur d'un jour à l'autre sur cette période devient indépendant.\\
+Soit $X$ la variable aléatoire égale au nombre de jours où le serveur est \textbf{Actif} durant cette période de 10 jours.
+\begin{enumerate}
+    \item Justifier que $X$ suit une loi binomiale dont on précisera les paramètres.\hfill \textbf{(0,5 pt)}
+    \item Calculer l'espérance mathématique de $X$. Que représente cette valeur ?\hfill \textbf{(0,5 pt)}
+    \item Calculer la probabilité que le serveur soit actif pendant exactement 8 jours (arrondir à $10^{-3}$).\hfill \textbf{(0,25 pt)}
+    \item Calculer la probabilité que le serveur subisse au moins une maintenance durant ces 10 jours (arrondir à $10^{-3}$).\hfill \textbf{(0,25 pt)}
+\end{enumerate}
+
+\subsection*{Partie C : Optimisation financière}
+Chaque jour où le serveur est actif, il génère un profit de $5\,000$ FCFA. Chaque jour de maintenance coûte $2\,000$ FCFA à l'entreprise. On note $G_n$ le gain net réalisé par le serveur au jour $n$.
+\begin{enumerate}
+    \item Justifier que le gain net moyen attendu au jour $n$ est donné par : $E(G_n) = 7\,000p_n - 2\,000$.\hfill \textbf{(0,5 pt)}
+    \item L'entreprise souhaite évaluer le gain total moyen cumulé $\Sigma_N$ sur les $N$ premiers jours (du jour 0 au jour $N-1$), défini par : $\Sigma_N = \sum_{n=0}^{N-1} E(G_n)$.\\
+    Montrer que : $\Sigma_N = \dfrac{280\,000}{13} \times \left[1 - (-0,3)^N\right] + \dfrac{37\,000}{13}N$.\hfill \textbf{(0,5 pt)}
+\end{enumerate}
+
+\section*{\underline{Problème :}\quad\textbf{10 pts}} 
+
+\subsection*{Partie A (1,25 point)}
+
+On considère la fonction $h$ définie sur $]0 ; +\infty[$ par : 
+$h(x) = \ln\left(\dfrac{x+1}{x}\right) - \dfrac{1}{x+1}$
+
+\begin{enumerate}
+    \item Montrer que pour tout $x \in ]0 ; +\infty[$, la fonction dérivée $h'$ de $h$ est définie par :
+    $h'(x) = -\dfrac{1}{x(x+1)^2}$ \hfill \textbf{(0,25 pt)}
+    
+    \item Calculer les limites de la fonction $h$ en $0^+$ et en $+\infty$, puis dresser le tableau de variation complet de $h$ sur $]0 ; +\infty[$. \hfill \textbf{(0,75 pt)}
+    
+    \item En déduire le signe de $h(x)$ pour tout $x$ appartenant à $]0 ; +\infty[$. \hfill \textbf{(0,25 pt)}
+\end{enumerate}
+
+\subsection*{Partie B (9,75 points)}
+
+Soit la fonction $f$ définie sur $\mathbb{R}$ par :
+$f(x) = \begin{cases} 
+e^{2x} + e^x - 1 & \text{si } x \le 0 \\ 
+1 - x\ln\left(\dfrac{x}{x+1}\right) & \text{si } x > 0 
+\end{cases}$
+On note $(C_f)$ sa courbe représentative dans un repère orthonormé $(O, \vec{i}, \vec{j})$ d'unité graphique $2\text{ cm}$.
+
+\begin{enumerate}
+    \item Montrer que l'ensemble de définition de $f$ est $D_f = \mathbb{R}$. \hfill \textbf{(0,5 pt)}
+    
+    \item Calculer $\lim\limits_{x \to -\infty} f(x)$. En déduire que la courbe $(C_f)$ admet une asymptote horizontale en $-\infty$ dont on précisera l'équation. \hfill \textbf{(0,5 pt)}
+    
+    \item Vérifier que pour tout $x > 0$, on peut écrire :
+    $f(x) = 1 + \dfrac{\ln\left(\frac{x}{x+1}\right)}{\frac{x}{x+1}-1}\left(\dfrac{x}{x+1}\right)$
+    En déduire $\lim\limits_{x \to +\infty} f(x)$ et préciser l'équation de l'asymptote horizontale à $(C_f)$ en $+\infty$. \hfill \textbf{(0,75 pt)}
+    
+    \item Étudier la continuité de $f$ en $0$. \hfill \textbf{(0,5 pt)}
+    \begin{enumerate}
+        \item Étudier la dérivabilité de $f$ en $0$ (on distinguera la dérivabilité à gauche et à droite). \hfill \textbf{(0,5 pt)}
+        \item Donner une interprétation géométrique des résultats précédents (existence de demi-tangentes au point d'abscisse $0$). \hfill \textbf{(0,5 pt)}
+    \end{enumerate}
+    
+    \item Déterminer l'expression de $f'(x)$ pour $x \le 0$, puis montrer que pour $x > 0$, on a $f'(x) = h(x)$. \hfill \textbf{(0,75 pt)}
+    
+    \item Étudier le signe de $f'(x)$ sur $\mathbb{R}$ et dresser le tableau de variation complet de la fonction $f$ sur son ensemble de définition. \hfill \textbf{(0,75 pt)}
+    
+    \item Montrer que l'équation $f(x) = 0$ admet une unique solution $\alpha$ dans l'intervalle $]-\infty ; 0]$. Vérifier que $-0,5 \le \alpha \le -0,4$. \hfill \textbf{(0,5 pt)}
+    
+    \item Soit $g$ la restriction de la fonction $f$ à l'intervalle $I = ]-\infty ; 0]$.
+    \begin{enumerate}
+        \item Montrer que $g$ réalise une bijection de $I$ vers un intervalle $J$ que l'on précisera. \hfill \textbf{(0,25 pt)}
+        \item Calculer $g(-\ln 2)$ puis $(g^{-1})'\left(-\dfrac{1}{4}\right)$. Quelle est la position relative de la tangente à la courbe $(C_{g^{-1}})$ au point d'abscisse $-\dfrac{1}{4}$ par rapport à la première bissectrice du repère ? \hfill \textbf{(1 pt)}
+        \item Dresser le tableau de variation de la fonction réciproque $g^{-1}$ sur $J$. \hfill \textbf{(0,25 pt)}
+    \end{enumerate}
+    
+    \item Dans le repère $(O, \vec{i}, \vec{j})$, tracer la première bissectrice (la droite d'équation $y=x$), les asymptotes, puis les courbes représentatives $(C_f)$ de $f$ et $(C_{g^{-1}})$ de la fonction réciproque de $g$. \hfill \textbf{(1,25 pt)}
+    \item À l'aide d'une intégration par parties, calculer la valeur exacte de l'intégrale :
+    \[
+    K = \int_0^4 \left[ 1 - x\ln\left(\dfrac{x}{x+1}\right) \right] dx
+    \]\hfill \textbf{(0,75 pt)}
+\end{enumerate}
+
+\end{document}
