@@ -48,14 +48,20 @@ body::before {
 }
 
 /* Titres de section */
-h2.section-title {
+h1.section-title {
     color: red;
     text-decoration: underline;
     font-size: 1.4em;
     margin-top: 30px;
 }
 
-h3.subsection-title {
+h2.subsection-title {
+    color: red;
+    text-decoration: underline;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+h3.subsubsection-title {
     color: red;
     text-decoration: underline;
     font-size: 1.2em;
