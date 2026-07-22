@@ -469,12 +469,70 @@
             </li>
         </ul>
     </div>
+    
     <!-- Section IV -->
-    <h1 class="section-title">IV. Équations, systèmes et inéquations faisant intervenir l'exponentielle</h1>
+    <h1 class="section-title">IV. Étude de la fonction exponentielle</h1>
+    <div class="section">
+        <p>Soit \(f\) la fonction définie sur \(\mathbb{R}\) par \( f(x)=e^x \)</p>
+
+
+        <!--1°) Équations exponentielles-->
+        <div class="subsection">
+            <h2 class="subsection-title">1. Domaine de définition</h2>
+        </div>
+        <!--2°) Limites aux bornes de \(D_f\)-->
+        <div class="subsection">
+            <h2 class="subsection-title">2. Limites aux bornes de \(D_f\)</h2>
+            <p>En \(-\infty\) :</p>
+
+            <p>\(\displaystyle \lim\limits_{x\to-\infty} e^x = 0\)</p>
+
+            <p>En \(+\infty\) :</p>
+
+            <p>\(\displaystyle \lim\limits_{x\to+\infty} e^x = +\infty\)</p>
+        </div>
+        <!--3°) Dérivée-->
+        <div class="subsection">
+            <h2 class="subsection-title">3. Dérivée</h2>
+            <p>La fonction \(f\) est dérivable sur \(\mathbb{R}\) et :</p>
+
+            <p>\(f'(x) = e^x\)</p>
+
+            <p>Or,</p>
+
+            <p>\(\forall x \in \mathbb{R}, \qquad e^x > 0\)</p>
+
+            <p>Par conséquent :</p>
+
+            <p>\(\text{La fonction } f \text{ est strictement croissante sur } \mathbb{R}.\)</p>
+        </div>
+        <!--4°) Tableau de variation-->
+        <div class="subsection">
+            <h2 class="subsection-title">4. Tableau de variation</h2>
+            <img src="images/tabVarExpo.png" alt="Tableau de variation de la fonction exponentielle" />
+        </div>
+        <!--5°) Représentation graphique-->
+        <div class="subsection">
+            <h2 class="subsection-title">5. Représentation graphique</h2>
+            <p>La courbe représentative de la fonction exponentielle passe par le point \(J(0;1)\), car \(e^0 = 1\).
+            </p>
+
+            <p>La tangente à la courbe au point \(J\) a pour équation \(y = x + 1\).</p>
+
+            <p>La courbe \(\mathcal{C}_f\) est située au-dessus de cette tangente. Ainsi :</p>
+
+            <p>\(\forall x \in \mathbb{R}, \quad e^x \ge x + 1\)</p>
+
+            <p>L'égalité est obtenue uniquement pour \(x = 0\).</p>
+            <img src="images/coubeExpo.png" alt="Tableau de variation de la fonction exponentielle" />
+        </div>
+    </div>
+    <!-- Section V -->
+    <h1 class="section-title">V. Équations, systèmes et inéquations faisant intervenir l'exponentielle</h1>
     <div class="section">
         <!--1°) Équations exponentielles-->
         <div class="subsection">
-            <h2 class="subsection-title">1°) Équations exponentielles</h2>
+            <h2 class="subsection-title">1. Équations exponentielles</h2>
             <p>Pour résoudre une équation contenant une exponentielle, on utilise généralement l'une des propriétés
                 suivantes :</p>
 
@@ -500,6 +558,78 @@
                 </li>
             </ol>
         </div>
+        <!--2°) Systèmes d'équations-->
+        <div class="subsection">
+            <h2 class="subsection-title">2. Systèmes d'équations</h2>
+            <p><strong><span class="text-red">Méthode :</span></strong></p>
+
+            <p>Dans un système contenant des exponentielles, on pose souvent :</p>
+
+            \( X = e^x \quad \text{et} \quad Y = e^y, \)
+
+            <p>avec :</p>
+
+            \( X > 0, \qquad Y > 0. \)
+
+            <p>Le système devient alors un système algébrique classique.</p>
+
+            <p><strong><span class="text-red">Exemples :</span></strong></p>
+
+            <p>Résoudre les systèmes suivants :</p>
+
+            <ol class="custom-counter">
+                <li>
+                    \[
+                    \begin{cases}
+                    4e^x - 3e^y = 9 \\
+                    2e^x + e^y = 7
+                    \end{cases}
+                    \]
+                </li>
+                <li>
+                    \[
+                    \begin{cases}
+                    e^x e^y = 10 \\
+                    e^{x-y} = \dfrac{2}{5}
+                    \end{cases}
+                    \]
+                </li>
+                <li>
+                    \[
+                    \begin{cases}
+                    e^{2x} - 7e^{y+1} = -10 \\
+                    x - y = 1
+                    \end{cases}
+                    \]
+                </li>
+            </ol>
+        </div>
+        <!--3°) Inéquations exponentielles-->
+        <div class="subsection">
+            <h2 class="subsection-title">3. Inéquations exponentielles</h2>
+            <p><strong><span class="text-red">Méthode :</span></strong></p>
+            <p>Pour résoudre une inéquation exponentielle, on utilise le fait que la fonction exponentielle est
+                strictement croissante :</p>
+            <p>\( e^a < e^b \Longleftrightarrow a < b \)</p>
+                    <p>\( e^a \le e^b \Longleftrightarrow a \le b \)</p>
+                    <p>Lorsque l'inéquation est polynomiale en \(e^x\), on effectue le changement de variable :</p>
+                    <p>\( X = e^x \qquad (X > 0) \)</p>
+                    <p><strong><span class="text-red">Exemples :</span></strong></p>
+                    <p>Résoudre dans \(\mathbb{R}\) les inéquations suivantes :</p>
+
+                    <ol class="custom-counter" type="a">
+                        <li>
+                            \(e^{-x} \ge 2\)
+                        </li>
+                        <li>
+                            \(e^{x^2-3} \le e^{2x}\)
+                        </li>
+                        <li>
+                            \(2e^{2x} - 5e^x + 2 > 0\)
+                        </li>
+                    </ol>
+        </div>
+    </div>
 </body>
 
 </html>
