@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonction Numérique</title>
+    <link rel="stylesheet" href="expo.css">
+    <script src="expo.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <div class="header">
+        <h1>Fonction logarithme Népérien</h1>
+        <div class="header-meta">
+            <span>Prof : M. BA</span>
+            <span>Classe : TS2</span>
+        </div>
+        <div class="header-year">
+            Année scolaire : 2025 -- 2026
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <h2 class="section-title">Introduction :</h2>
+    <div>
+        <p>
+            Au XVII<sup>e</sup> siècle, les mathématiciens cherchent à résoudre des problèmes de plus en plus complexes
+            liés
+            notamment à l’astronomie, à la physique et aux calculs financiers. Parmi les outils développés à cette
+            époque
+            figurent les logarithmes de Neper, qui permettent de transformer les multiplications difficiles en additions
+            plus simples.
+        </p>
+
+        <p>
+            Cependant, l’étude des logarithmes fait apparaître naturellement une nouvelle question :
+            <strong>quelle fonction permet de retrouver un nombre à partir de son logarithme ?</strong>
+            Cette recherche conduit progressivement à la notion de fonction exponentielle.
+        </p>
+
+        <p>
+            Le terme « exponentielle » vient du mot « exposant », car cette fonction est liée à l’étude des puissances
+            dont
+            l’exposant varie. Les travaux de nombreux mathématiciens, notamment ceux de Leonhard Euler (1707 ; 1783),
+            permettent de formaliser cette notion et d’en établir les propriétés fondamentales.
+        </p>
+
+        <p>
+            La fonction exponentielle occupe aujourd’hui une place essentielle dans les sciences. Elle intervient dans
+            l’étude de la croissance des populations, des phénomènes radioactifs, des intérêts composés, de la
+            propagation
+            des épidémies ou encore dans de nombreux modèles physiques.
+        </p>
+
+        <p>
+            Elle constitue ainsi un outil indispensable pour représenter des phénomènes où une grandeur évolue
+            proportionnellement à sa valeur présente. Dans ce chapitre, nous découvrirons la fonction exponentielle, ses
+            propriétés, son comportement et ses principales applications.
+        </p>
+    </div>
+    <!-- Section I -->
+    <h2 class="section-title">I. Définition et propriétés</h2>
+    <div>
+        <h3 class="subsection-title">1. Définition</h3>
+        <div>
+            <p>
+                La fonction logarithme népérien \( \ln \) est continue et strictement croissante sur \( ]0;+\infty[ \).
+                Elle réalise donc une bijection de \( ]0;+\infty[ \) sur \( \mathbb{R} \).
+            </p>
+
+            <p>
+                Elle admet alors une fonction réciproque, notée \( \exp \), appelée <strong>fonction
+                    exponentielle</strong>. Cette fonction est définie sur \( \mathbb{R} \) et à valeurs dans \(
+                ]0;+\infty[ \).
+            </p>
+
+            <p>
+                On note :
+            </p>
+
+            <p>
+                \(\displaystyle \forall x\in\mathbb{R},\qquad \exp(x)=e^x. \)
+            </p>
+
+            <p>
+                Par définition, pour tout réel \(x\) et tout réel strictement positif \(y\),
+            </p>
+
+            <p>
+                \(\displaystyle e^x=y \quad\Longleftrightarrow\quad x=\ln(y). \)
+            </p>
+        </div>
+        <h3 class="subsection-title">2. Conséquences de la définition</h3>
+        <div>
+            <ol type="a">
+                <li>
+                    <strong>Ensemble de définition et image</strong>
+
+                    <p>
+                        \(\displaystyle D_{e^x}=\mathbb{R} \qquad\text{et}\qquad \mathrm{Im}(e^x)=]0;+\infty[. \)
+                    </p>
+
+                    <p>
+                        En particulier,
+                    </p>
+
+                    <p>
+                        \(\displaystyle \forall x\in\mathbb{R},\qquad e^x>0. \)
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Relations avec le logarithme</strong>
+
+                    <p>
+                        Pour tout réel \(x\) et tout réel \(a>0\),
+                    </p>
+
+                    <p>
+                        \( \displaystyle e^{\ln(a)}=a \)
+                    </p>
+
+                    <p>
+                        et
+                    </p>
+
+                    <p>
+                        \( \ln(e^x)=x. \)
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Valeurs remarquables</strong>
+
+                    <p>
+                        \(\displaystyle e^0=1 \qquad;\qquad e^1=e\simeq2,718. \)
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Sens de variation</strong>
+
+                    <p>
+                        La fonction exponentielle est continue et strictement croissante sur \( \mathbb{R} \).
+                    </p>
+
+                    <p>
+                        Par conséquent,
+                    </p>
+
+                    <p>
+                        \(\displaystyle a < b \Longrightarrow e^{a} < e^{b} \) </p>
+                </li>
+            </ol>
+        </div>
+        <h3 class="subsection-title">3. Propriétés</h3>
+        <div>
+            <h3>
+                <u><strong style="color:red;">Propriété fondamentale</strong></u>
+            </h3>
+
+            <p>
+                Pour tous réels \(a\) et \(b\),
+            </p>
+
+            <p>
+                \(\displaystyle e^{a+b}=e^a\times e^b. \)
+            </p>
+
+            <p>
+                Cette propriété permet d'établir les égalités suivantes.
+            </p>
+
+            <h3>
+                <u><strong style="color:red;">Conséquences</strong></u>
+            </h3>
+
+            <p>
+                Pour tous réels \(a\), \(b\) et \(r\),
+            </p>
+
+            <ul>
+                <li>
+                    \(\displaystyle e^0=1, \)
+                </li>
+
+                <li>
+                    \(\displaystyle e^{-a}=\frac1{e^a}, \)
+                </li>
+
+                <li>
+                    \(\displaystyle e^{a-b}=\frac{e^a}{e^b}, \)
+                </li>
+
+                <li>
+                    \(\displaystyle e^{ra}=(e^a)^r. \)
+                </li>
+            </ul>
+
+            <p>
+                Comme la fonction exponentielle est strictement croissante,
+            </p>
+
+            <p>
+                \(\displaystyle e^a=e^b \Longleftrightarrow a=b, \)
+            </p>
+
+            <p>
+                et
+            </p>
+
+            <p>
+                \(\displaystyle e^a < e^b \Longleftrightarrow a < b. \) </p>
+        </div>
+        <h3 class="subsection-title">4. Remarque</h3>
+        <div>
+            <p>La fonction $\ln$ est strictement croissante sur son domaine $]0\;;\ +\infty[$, c'est-à-dire que :</p>
+            <p>\(\displaystyle \forall a, b \in ]0\;;\ +\infty[, \quad a < b \implies \ln a < \ln b. \) </p>
+        </div>
+    </div>
+    <!-- Section II -->
+    <h2 class="section-title">II. Limites et Dérivée</h2>
+    <div>
+        <h3 class="subsection-title">1. Limites aux bornes de $D_{ln}$</h3>
+        <div>
+            <ul>
+                <li>$\displaystyle \lim\limits_{x \to 0^+} \ln x = -\infty$.</li>
+                <li>$\displaystyle \lim\limits_{x \to +\infty} \ln x = +\infty$.</li>
+            </ul>
+        </div>
+        <h3 class="subsection-title">2. Limites usuelles</h3>
+        <div>
+            <ul>
+                <li>$\displaystyle \lim\limits_{x \to 0^+} x \ln x = 0$.</li>
+                <li>$\displaystyle \lim\limits_{x \to +\infty} \frac{\ln x}{x} = 0$</li>
+                <li>$\displaystyle \lim\limits_{{x \to 0}} \frac{\ln(x+1)}{x}=1$</li>
+            </ul>
+            <p>Soit $a$ un nombre rationnel strictement positif.</p>
+            <ul>
+                <li>$\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-} $</li>
+                <li>$\displaystyle \lim\limits_{{x \to +\infty}} \frac{\ln(x)}{x^{\alpha}}=0^{+}$</li>
+            </ul>
+            <p><strong><span class="text-red">Croissances comparées :</span></strong></p>
+            <p>
+                Soit \(\alpha\) un nombre réel strictement positif (\(\alpha > 0\)).<br>
+                Au voisinage de \(0^+\) et de \(+\infty\), la fonction puissance l'emporte sur la fonction logarithme
+                népérien :
+            </p>
+
+            <ul>
+                <li>
+                    <strong>En \(0^+\) :</strong>
+                    \(\lim\limits_{x \to 0^+} x \ln x = 0 \quad \text{et plus généralement,} \quad \lim\limits_{x \to
+                    0^+} x^{\alpha} \ln x = 0^{-}\)
+                </li>
+                <li>
+                    <strong>En \(+\infty\) :</strong>
+                    \(\lim\limits_{x \to +\infty} \frac{\ln x}{x} = 0 \quad \text{et plus généralement,} \quad
+                    \lim\limits_{x \to +\infty} \frac{\ln x}{x^{\alpha}} = 0^{+}\)
+                </li>
+            </ul>
+            <p><strong><span class="text-red">Preuve de quelques limites</span></strong></p>
+            <p>
+                Montrons que $\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$ pour $\alpha=1$<br>
+                pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a : $x\ln x=-\frac{\ln X}{X}$<br>
+                ainsi, $\displaystyle \lim\limits_{{x \to 0^{+}}} -\frac{\ln(X)}{X}=0^{-}$<br>
+                Donc $\displaystyle \lim\limits_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$
+            </p>
+
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>Déterminer les limites suivantes :</p>
+            <ol class="custom-counter">
+                <li>$\lim\limits_{x \to +\infty} x\ln(x)-x^{2}+1$</li>
+                <li>$\lim\limits_{x \to 0} x\ln(x)-x^{2}+1$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{x\ln(x)}{x^{2}+1}$</li>
+            </ol>
+
+            <p><strong><span class="text-red">Exercice d'application</span></strong></p>
+            <p>Déterminer les limites suivantes :</p>
+            <ol class="custom-counter">
+                <li>$\lim\limits_{x \to +\infty} x+1-\ln(x)$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{x}{2}\left[\ln\left(1+\frac{1}{x}\right)\right]$</li>
+                <li>$\lim\limits_{x \to +\infty} \frac{\ln(x)}{\sqrt{x}}$</li>
+                <li>$\lim\limits_{x \to 1^{+}} (x-1)\ln(x-1)$</li>
+                <li>$\lim\limits_{x \to 1^{+}} \frac{x}{x+1}-\ln(x+1)$</li>
+            </ol>
+        </div>
+        <h3 class="subsection-title">3. Limites des composées avec ln</h3>
+        <div>
+            <p>Soit $u(x)$ une fonction strictly positive.</p>
+            <p>Cherchons $\lim\limits_{{x \to a}} \ln[u(x)]$</p>
+            <p>$\textbf{Si}
+                \begin{cases}
+                \lim\limits_{{x \to a}} u(x)=l\\[2mm]
+                \lim\limits_{{X \to l}} \ln(X)=l'
+                \end{cases} \implies \lim\limits_{{x \to a}} \ln[u(x)]=l'
+                $
+            </p>
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>Calcule la limite suivante :</p>
+            <p>$\displaystyle \lim\limits_{{x \to +\infty}} \ln\left(\dfrac{x^{2}}{2x^{2}-1}\right)$</p>
+            <p><strong><span class="text-red">Solution</span></strong></p>
+            <p>
+                Soit à déterminer la limite suivante :
+                $\displaystyle \lim\limits_{x \to +\infty} \ln\left(\frac{x^2}{2x^2 - 1}\right)$
+            </p>
+
+            <p><strong>Étape 1 : Limite de la fonction rationnelle à l'intérieur du logarithme</strong></p>
+            <p>
+                Quand $x \to +\infty$, le comportement en $+\infty$ d'une fonction rationnelle est donné par le rapport
+                de ses termes de plus haut degré :<br>
+                $
+                \displaystyle
+                \begin{aligned}
+                \lim\limits_{x \to +\infty} \frac{x^2}{2x^2 - 1} &= \lim_{x \to +\infty} \frac{x^2}{2x^2}\\
+                &= \frac{1}{2}
+                \end{aligned}
+                $
+            </p>
+
+            <p><strong>Étape 2 : Application du théorème de composition des limites</strong></p>
+            <p>
+                On pose $u(x) = \frac{x^2}{2x^2 - 1}$.
+            </p>
+            <p>
+                $\text{Si }
+                \begin{cases}
+                \lim\limits_{x \to +\infty} u(x) = \dfrac{1}{2} \\[2mm]
+                \lim\limits_{X \to \frac{1}{2}} \ln(X) = \ln\left(\dfrac{1}{2}\right)
+                \end{cases}
+                \text{ alors } \lim\limits_{x \to +\infty} \ln\left[u(x)\right] = \ln\left(\frac{1}{2}\right)$
+            </p>
+
+            <p><strong>Étape 3 : Simplification du résultat</strong></p>
+            <p>
+                En utilisant la propriété $\ln\left(\frac{1}{a}\right) = -\ln(a)$, on obtient :
+                $\ln\left(\frac{1}{2}\right) = -\ln(2)$
+            </p>
+
+            <p><strong>Conclusion :</strong></p>
+            <p>
+                $\displaystyle \lim\limits_{x \to +\infty} \ln\left(\frac{x^2}{2x^2 - 1}\right) = -\ln(2)$
+            </p>
+            <p><strong><span class="text-red">Exemple</span></strong></p>
+            <p>
+                $f(x) = \frac{\ln(x^{2}+2x+9)}{x}$<br>
+                $f(x) = \ln\left[\frac{x^{2}+2x+9}{x-2}\right]$
+            </p>
+        </div>
+        <h3 class="subsection-title">4. Dérivée</h3>
+        <div>
+            <p>
+                Soient \(u\) et \(v\) deux fonctions dérivables et strictement positives sur un intervalle \(I\) de
+                \(\mathbb{R}\).
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Dérivée de \(\ln(u)\) :</strong>
+                    \( \big[\ln(u(x))\big]' = \frac{u'(x)}{u(x)} \)
+                </li>
+                <li>
+                    <strong>Dérivée de \(\ln\left(\frac{u}{v}\right)\) :</strong>
+                    \( \left[\ln\left(\frac{u(x)}{v(x)}\right)\right]' = \left[\ln(u(x)) - \ln(v(x))\right]' =
+                    \frac{u'(x)}{u(x)} - \frac{v'(x)}{v(x)} \)
+                </li>
+            </ul>
+
+            <p style="color: red; font-weight: bold; margin-top: 20px;">Exemples :</p>
+            <p>Déterminer la fonction dérivée de chacune des fonctions suivantes :</p>
+
+            <ol class="custom-counter">
+                <li>
+                    \(f(x) = \frac{\ln(x^{2}+2x+9)}{x}\) sur \(\mathbb{R}^*\)
+                    <em>(Forme \(\frac{u}{v}\) combinée avec \(\ln\))</em>
+                </li>
+                <li>
+                    \(g(x) = \ln\left(\frac{x^{2}+2x+9}{x-2}\right)\) sur \(]2 \;;\ +\infty[\)
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- Section III -->
+    <h2 class="section-title">III. Etude le fonction ln</h2>
+    <div>
+        <p>Soit \(f\) la fonction définie par \(f(x) = \ln(x)\).</p>
+
+        <p style="font-weight: bold; margin-top: 15px;">1. Domaine de définition \(D_{f}\) :</p>
+
+        <p>\(f(x)\) existe si et seulement si \(x \in \mathbb{R}^*_+\).</p>
+
+        <p>Ainsi, le domaine de définition est :</p>
+
+        $ D_{f} = \mathbb{R}^*_+ = ]0 \,;\, +\infty[ $
+        <p style="font-weight: bold; margin-top: 15px;">2. Limites aux bornes de \(D_{f}\) :</p>
+
+        <p><strong>En \(0^+\) :</strong></p>
+        $ \lim\limits_{x \to 0^+} \ln(x) = -\infty $
+        <p><em>(La droite d'équation \(x = 0\) est asymptote verticale à la courbe \(\mathcal{C}_f\).)</em></p>
+
+        <p><strong>En \(+\infty\) :</strong></p>
+        $ \lim\limits_{x \to +\infty} \ln(x) = +\infty $
+
+        <p style="font-weight: bold; margin-top: 15px;">3. Dérivée et sens de variation :</p>
+
+        <p>Pour tout \(x \in ]0 \,;\, +\infty[\), \(f\) est dérivable et :</p>
+        $ f'(x) = \frac{1}{x} $
+
+        <p>
+            Pour tout \(x \in ]0 \,;\, +\infty[\), \(f'(x) > 0\). On en déduit que la fonction \(f\) est
+            <strong>strictement croissante</strong> sur \(]0 \,;\, +\infty[\).
+        </p>
+        <img src="images/tableauVar.png" class="tableau de Variation" alt="cas 2">
+        <p style="font-weight: bold; margin-top: 15px;">4. Branche infinie de ln</p>
+        <p>$\lim\limits_{{x \to +\infty}} \frac{ln(x)}{x}=0$ donc ln admet une branche parabolique de direction (Ox) au
+            voisinage de +$\infty$.</p>
+        <img src="images/courbeLn.png" class="Courbe de la fonction ln" alt="cas 2">
+    </div>
+    <!-- Section IV -->
+    <h2 class="section-title">IV. Application:(Équations, inéquations et systèmes avec \(\ln\))</h2>
+    <div>
+        <h3 class="subsection-title">1. Équations</h3>
+
+        <div>
+            <p>Pour résoudre les équations comportant des logarithmes népériens, on peut procéder comme suit :</p>
+            <ul>
+                <li>On détermine l'ensemble (ou domaine) de validité \(D_v\).</li>
+                <li>On utilise les propriétés algébriques pour se ramener à la forme \(\ln(a) = \ln(b) \iff a = b\)
+                    (avec
+                    \(a > 0\) et \(b > 0\)).</li>
+                <li>On résout l'équation algébrique \(a = b\).</li>
+                <li>On conclut en ne retenant que les solutions qui appartiennent à \(D_v\).</li>
+            </ul>
+
+            <p><u><strong>Exemple :</strong></u></p>
+            <p>Résoudre dans \(\mathbb{R}\) les équations suivantes :</p>
+            <ol type="a" class="lettres-foncees">
+                <li>\(\ln(x+1) = \ln(2x-1)\)</li>
+                <li>\(\ln(x+1) - \ln(2x+1) = \ln(2x-1)\)</li>
+            </ol>
+            <p><u><strong>Correction de l'exemple :</strong></u></p>
+            <ul>
+                <li>
+                    <strong>Résolution de a) :</strong> \(\ln(x+1) = \ln(2x-1)\)
+                    <ul>
+                        <li><em>Domaine de validité \(D_v\) :</em><br>
+
+                            \(
+                            \begin{aligned}
+                            D_v &= \{x \in \mathbb{R} \mid x+1 > 0 \text{ et } 2x-1 > 0\}\\
+                            &= \left]-\frac{1}{2} \,;\,+\infty\right[ \cap \left]\frac{1}{2} \,;\, +\infty\right[\\
+                            &= \left]\frac{1}{2} \,;\,+\infty\right[
+                            \end{aligned}
+                            \)
+
+                        </li>
+                        <li><em>Résolution :</em><br> Pour tout \(x \in D_v\),<br>
+                            \(
+                            \begin{aligned}
+                            \ln(x+1) &= \ln(2x-1) \iff x+1\\
+                            &= 2x-1 \iff x\\
+                            &= 2
+                            \end{aligned}
+                            \)
+                        </li>
+                        <li><em>Conclusion :</em> \(2 \in D_v\), donc \(S = \{2\}\).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Résolution de b) :</strong> \(\ln(x+1) - \ln(2x+1) = \ln(2x-1)\)
+                    <ul>
+                        <li><em>Domaine de validité \(D_v\) :</em> \(D_v = \left]\frac{1}{2} \,;\, +\infty\right[\).
+                        </li>
+                        <li><em>Résolution :</em><br>
+                            \(
+                            \begin{aligned}
+                            \ln\left(\frac{x+1}{2x+1}\right) = \ln(2x-1) &\iff \frac{x+1}{2x+1} = 2x-1\\[1.5ex]
+                            &\iff x+1 = (2x-1)(2x+1)\\[1.5ex]
+                            &\iff x+1 = 4x^2 - 1\\[1.5ex]
+                            &\iff 4x^2 - x - 2 = 0\\
+                            \end{aligned}
+                            \)<br>
+                            <p>\(\Delta = 1 + 32 = 33 > 0 \implies x_1 = \frac{1-\sqrt{33}}{8} \notin D_v\) et \(x_2 =
+                                \frac{1+\sqrt{33}}{8} \in D_v\).</p>
+                        </li>
+                        <li><em>Conclusion :</em> \(S = \left\{\frac{1+\sqrt{33}}{8}\right\}\).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="subsection-title">2. Inéquations</h3>
+
+        <div>
+            <p>Pour résoudre une inéquation comportant des logarithmes :</p>
+            <ul>
+                <li>On cherche le domaine de validité \(D_v\).</li>
+                <li>Comme la fonction \(\ln\) est <strong>strictement croissante</strong> sur \(]0\,;\,+\infty[\), on
+                    utilise les équivalences :
+                    \( \ln(a) \leq \ln(b) \iff a \leq b \quad \text{et} \quad \ln(a) \geq \ln(b) \iff a \geq b \quad
+                    (\text{pour } a > 0 \text{ et } b > 0) \)
+                </li>
+                <li>On résout l'inéquation obtenue.</li>
+                <li>La solution finale est l'intersection de l'ensemble des solutions trouvées avec \(D_v\).</li>
+            </ul>
+
+            <p><u><strong>Exemple :</strong></u></p>
+            <p>Considérons les inéquations suivantes :</p>
+            <ol type="a" class="lettres-foncees">
+                <li> \(\ln(x-4) \geq \ln(2x+4)\)</li>
+                <li> \(\ln(x-1) \leq \ln(5x+5) - \ln(x-1)\)</li>
+            </ol>
+
+            <p><u><strong>Correction de l'exemple :</strong></u></p>
+            <ul>
+                <li>
+                    <strong>Résolution de a) :</strong> \(\ln(x-4) \geq \ln(2x+4)\)
+                    <ul>
+                        <li><em>Domaine de validité \(D_v\) :<br></em> \( x-4 > 0 \implies x > 4\) et \(2x+4 > 0
+                            \implies x
+                            >
+                            -2 \).<br> Ainsi, \(D_v = ]4 \,;\, +\infty[\).</li>
+                        <li><em>Résolution :<br></em> Pour \(x \in D_v\),<br>
+                            \(
+                            \begin{aligned}
+                            \ln(x-4) \geq \ln(2x+4) &\iff x-4 \geq 2x+4\\
+                            &\iff -x \geq 8\\
+                            &\iff x \leq -8
+                            \end{aligned}
+                            \)
+                        </li>
+                        <li><em>Conclusion :</em> \(S = ]-\infty \,;\, -8] \cap ]4 \,;\, +\infty[ = \emptyset\).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Résolution de b) :</strong> \(\ln(x-1) \leq \ln(5x+5) - \ln(x-1)\)
+                    <ul>
+                        <li><em>Domaine de validité \(D_v\) :</em><br> \(x-1 > 0 \implies x > 1\).<br> Ainsi, \(D_v = ]1
+                            \,;\,
+                            +\infty[\).</li>
+                        <li><em>Résolution :</em><br> Pour \(x \in D_v\),<br>
+                            \(\displaystyle
+                            \begin{aligned}
+                            2\ln(x-1) \leq \ln(5x+5) &\iff \ln(x-1)^2 \leq \ln(5x+5)\\
+                            &\iff (x-1)^2 \leq 5x+5\\
+                            &\iff x^2 - 2x + 1 \leq 5x + 5\\
+                            &\iff x^2 - 7x - 4 \leq 0\\
+                            \end{aligned}
+                            \)<br>
+                            \(\displaystyle \Delta = 49 + 16 = 65\).<br>
+                            Les racines sont \(\displaystyle x' = \frac{7-\sqrt{65}}{2} \approx -0{,}53\) et
+                            \(\displaystyle x'' = \frac{7+\sqrt{65}}{2} \approx 7{,}53\).<br>
+                            L'ensemble des solutions de l'inéquation est \(\displaystyle \left[\frac{7-\sqrt{65}}{2}
+                            \,;\,
+                            \frac{7+\sqrt{65}}{2}\right]\).
+                        </li>
+                        <li><em>Conclusion :</em> Intersection avec \(\displaystyle D_v = ]1 \,;\, +\infty[\) :
+                            \(\displaystyle S = \left]1 \,;\, \frac{7+\sqrt{65}}{2}\right] \)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="subsection-title">3. Systèmes d'équations et d'inéquations avec \(\ln\)</h3>
+
+        <div>
+            <p>Pour résoudre un système comportant des termes en \(\ln\), on utilise souvent un <strong>changement de
+                    variable</strong> de la forme \(X = \ln(x)\) et \(Y = \ln(y)\) pour se ramener à un système linéaire
+                classique.</p>
+
+            <p><u><strong>Exemple :</strong></u></p>
+            <p>Résoudre dans \(\mathbb{R} \times \mathbb{R}\) le système suivant :</p>
+            \( (S) : \begin{cases} x + y = 7 \\ \ln(x) + \ln(y) = \ln(12) \end{cases} \)
+
+            <p><u><strong>Correction de l'exemple :</strong></u></p>
+            <ul>
+                <li><em>Domaine de validité :</em> \(D_v = ]0\,;\,+\infty[ \times ]0\,;\,+\infty[\).</li>
+                <li><em>Transformation du système :</em> Pour \((x, y) \in D_v\),
+                    \( (S) \iff \begin{cases} x + y = 7 \\ \ln(xy) = \ln(12) \end{cases} \iff \begin{cases} x + y = 7 \\
+                    xy
+                    = 12 \end{cases} \)
+                </li>
+                <li>\(x\) et \(y\) sont donc les solutions de l'équation du second degré : \(X^2 - 7X + 12 = 0\).</li>
+                <li>\(\Delta = 49 - 48 = 1\). Les solutions sont \(X_1 = 3\) et \(X_2 = 4\).</li>
+                <li><em>Conclusion :</em> Comme \((3,4) \in D_v\) et \((4,3) \in D_v\), l'ensemble des couples solutions
+                    est
+                    :
+                    \( S = \{(3, 4) \,;\, (4, 3)\} \)
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
