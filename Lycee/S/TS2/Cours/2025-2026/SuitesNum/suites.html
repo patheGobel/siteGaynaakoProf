@@ -629,6 +629,87 @@
                     </li>
                 </ol>
             </div>
+            <h2 class="subsection-title">3. Applications</h2>
+            <div>
+                <p><b>
+                        <span class="highlight">Exemple 1 : Démontrer une égalité (Somme des premiers entiers non nuls)</span>
+                    </b><br>
+                    Démontrer par récurrence que pour tout \(n \in \mathbb{N}^*\) :
+                    \( 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \)</p>
+
+                <p><i>Démonstration :</i><br>
+                    Pour tout \(n \in \mathbb{N}^*\), notons \(P(n)\) la propriété : \(\displaystyle \sum_{k=1}^n k =
+                    \frac{n(n+1)}{2}\).</p>
+
+                <ul>
+                    <li>
+                        <b>Initialisation :</b> Pour \(n = 1\) :<br>
+                        D'une part, le membre de gauche vaut 1.<br>
+                        D'autre part, \(\frac{1(1+1)}{2} = \frac{2}{2} = 1\).<br>
+                        Donc \(P(1)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Hérédité :</b> Soit \(n \ge 1\) un entier fixé. Supposons \(P(n)\) vraie, c'est-à-dire \(1 +
+                        2 + \dots + n = \frac{n(n+1)}{2}\).<br>
+                        Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(1 + 2 + \dots + n + (n+1) =
+                        \frac{(n+1)(n+2)}{2}\).<br><br>
+                        En utilisant l'hypothèse de récurrence :
+                        \[
+                        \begin{align*}
+                        1 + 2 + \dots + n + (n+1) &= \frac{n(n+1)}{2} + (n+1) \\
+                        &= (n+1) \left( \frac{n}{2} + 1 \right) \\
+                        &= (n+1) \left( \frac{n+2}{2} \right) \\
+                        &= \frac{(n+1)(n+2)}{2}
+                        \end{align*}
+                        \]
+                        Donc \(P(n+1)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Conclusion :</b> La propriété est vraie au rang 1 et est héréditaire. Donc, par récurrence,
+                        pour tout \(n \in \mathbb{N}^*\), \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
+                    </li>
+                </ul>
+
+                <br>
+
+                <p><b>
+                        <span class="highlight">Exemple 2 : Démontrer une inégalité (Inégalité de Bernoulli)</span>
+                    </b><br>
+                    Soit \(a > 0\). Démontrer que pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).</p>
+
+                <p><i>Démonstration :</i><br>
+                    Pour tout \(n \in \mathbb{N}\), notons \(P(n)\) la propriété : \((1+a)^n \ge 1 + na\).</p>
+
+                <ul>
+                    <li>
+                        <b>Initialisation :</b> Pour \(n = 0\) :<br>
+                        \[ (1+a)^0 = 1 \quad \text{et} \quad 1 + 0 \cdot a = 1 \]
+                        Puisque \(1 \ge 1\), \(P(0)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Hérédité :</b> Soit \(n \in \mathbb{N}\) fixé. Supposons \((1+a)^n \ge 1 + na\).<br>
+                        Montrons que \((1+a)^{n+1} \ge 1 + (n+1)a\).<br><br>
+                        Comme \(1+a > 0\), multiplions les deux membres de l'hypothèse par \((1+a)\) :
+                        \[
+                        \begin{align*}
+                        (1+a)^{n+1} &\ge (1 + na)(1 + a) \\
+                        (1+a)^{n+1} &\ge 1 + a + na + na^2 \\
+                        (1+a)^{n+1} &\ge 1 + (n+1)a + na^2
+                        \end{align*}
+                        \]
+                        Or, \(n \ge 0\) et \(a^2 > 0\), donc \(na^2 \ge 0\). Par conséquent :
+                        \[ 1 + (n+1)a + na^2 \ge 1 + (n+1)a \]
+                        Par transitivité, \((1+a)^{n+1} \ge 1 + (n+1)a\). La propriété \(P(n+1)\) est donc vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Conclusion :</b> Par récurrence, pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).
+                    </li>
+                </ul>
+            </div>
         </div>
 </body>
 
