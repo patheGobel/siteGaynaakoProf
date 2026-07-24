@@ -576,141 +576,171 @@
                 </li>
             </ol>
         </div>
-        <h1 class="section-title">III. Démonstration par récurrence</h1>
-        <!--Sous-section -->
-        <div class="subsection">
-            <h2 class="subsection-title">1. Principe de récurrence</h2>
-            <div>
-                <p>Le principe de récurrence s'apparente à une <b>chute de dominos en chaîne</b> :</p>
+    </div>
+    <h1 class="section-title">III. Démonstration par récurrence</h1>
+    <!--Sous-section -->
+    <div class="subsection">
+        <h2 class="subsection-title">1. Principe de récurrence</h2>
+        <div>
+            <p>Le principe de récurrence s'apparente à une <b>chute de dominos en chaîne</b> :</p>
 
-                <ul>
-                    <li>On fait tomber le premier domino (<i>initialisation</i>).</li>
-                    <li>On s'assure que si un domino tombe, il fait forcément tomber le suivant (<i>hérédité</i>).</li>
-                    <li>Conclusion : tous les dominos tombent les uns après les autres.</li>
-                </ul>
+            <ul>
+                <li>On fait tomber le premier domino (<i>initialisation</i>).</li>
+                <li>On s'assure que si un domino tombe, il fait forcément tomber le suivant (<i>hérédité</i>).</li>
+                <li>Conclusion : tous les dominos tombent les uns après les autres.</li>
+            </ul>
 
-                <p><b>
-                        <span class="highlight">Axiome du principe de récurrence :</span>
-                    </b><br>
-                    Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
-                    \).<br>
-                    Si :</p>
+            <p><b>
+                    <span class="highlight">Axiome du principe de récurrence :</span>
+                </b><br>
+                Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
+                \).<br>
+                Si :</p>
 
-                <ol>
-                    <li>\( P(n_0) \) est vraie ;</li>
-                    <li>Pour tout entier \( n \ge n_0 \), si \( P(n) \) est vraie, alors \( P(n+1) \) est vraie ;</li>
-                </ol>
+            <ol>
+                <li>\( P(n_0) \) est vraie ;</li>
+                <li>Pour tout entier \( n \ge n_0 \), si \( P(n) \) est vraie, alors \( P(n+1) \) est vraie ;</li>
+            </ol>
 
-                <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
-            </div>
-            <h2 class="subsection-title">2. Méthode de démonstration</h2>
-            <div>
-                <p>Pour rédiger une démonstration par récurrence sur une propriété \( P(n) \) à partir d'un rang \( n_0
-                    \), on suit obligatoirement les 3 étapes suivantes :</p>
+            <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
+        </div>
+        <h2 class="subsection-title">2. Méthode de démonstration</h2>
+        <div>
+            <p>Pour rédiger une démonstration par récurrence sur une propriété \( P(n) \) à partir d'un rang \( n_0
+                \), on suit obligatoirement les 3 étapes suivantes :</p>
 
-                <ol>
-                    <li>
-                        <b>Étape 1 : Initialisation</b><br>
-                        On vérifie que la propriété est vraie pour le premier rang \( n_0 \) (c'est-à-dire que \( P(n_0)
-                        \) est vraie).
-                    </li>
-                    <br>
-                    <li>
-                        <b>Étape 2 : Hérédité</b><br>
-                        Soit \( n \) un entier naturel fixé tel que \( n \ge n_0 \).<br>
-                        On suppose que \( P(n) \) est vraie (<i>hypothèse de récurrence</i>).<br>
-                        On démontre alors que \( P(n+1) \) est vraie.
-                    </li>
-                    <br>
-                    <li>
-                        <b>Étape 3 : Conclusion</b><br>
-                        On conclut : la propriété est initialisée et héréditaire, donc d'après le principe de
-                        récurrence, \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).
-                    </li>
-                </ol>
-            </div>
-            <h2 class="subsection-title">3. Applications</h2>
-            <div>
-                <p><b>
-                        <span class="highlight">Exemple 1 : Démontrer une égalité (Somme des premiers entiers non nuls)</span>
-                    </b><br>
-                    Démontrer par récurrence que pour tout \(n \in \mathbb{N}^*\) :
-                    \( 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \)</p>
-
-                <p><i>Démonstration :</i><br>
-                    Pour tout \(n \in \mathbb{N}^*\), notons \(P(n)\) la propriété : \(\displaystyle \sum_{k=1}^n k =
-                    \frac{n(n+1)}{2}\).</p>
-
-                <ul>
-                    <li>
-                        <b>Initialisation :</b> Pour \(n = 1\) :<br>
-                        D'une part, le membre de gauche vaut 1.<br>
-                        D'autre part, \(\frac{1(1+1)}{2} = \frac{2}{2} = 1\).<br>
-                        Donc \(P(1)\) est vraie.
-                    </li>
-                    <br>
-                    <li>
-                        <b>Hérédité :</b> Soit \(n \ge 1\) un entier fixé. Supposons \(P(n)\) vraie, c'est-à-dire \(1 +
-                        2 + \dots + n = \frac{n(n+1)}{2}\).<br>
-                        Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(1 + 2 + \dots + n + (n+1) =
-                        \frac{(n+1)(n+2)}{2}\).<br><br>
-                        En utilisant l'hypothèse de récurrence :
-                        \[
-                        \begin{align*}
-                        1 + 2 + \dots + n + (n+1) &= \frac{n(n+1)}{2} + (n+1) \\
-                        &= (n+1) \left( \frac{n}{2} + 1 \right) \\
-                        &= (n+1) \left( \frac{n+2}{2} \right) \\
-                        &= \frac{(n+1)(n+2)}{2}
-                        \end{align*}
-                        \]
-                        Donc \(P(n+1)\) est vraie.
-                    </li>
-                    <br>
-                    <li>
-                        <b>Conclusion :</b> La propriété est vraie au rang 1 et est héréditaire. Donc, par récurrence,
-                        pour tout \(n \in \mathbb{N}^*\), \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
-                    </li>
-                </ul>
-
+            <ol>
+                <li>
+                    <b>Étape 1 : Initialisation</b><br>
+                    On vérifie que la propriété est vraie pour le premier rang \( n_0 \) (c'est-à-dire que \( P(n_0)
+                    \) est vraie).
+                </li>
                 <br>
+                <li>
+                    <b>Étape 2 : Hérédité</b><br>
+                    Soit \( n \) un entier naturel fixé tel que \( n \ge n_0 \).<br>
+                    On suppose que \( P(n) \) est vraie (<i>hypothèse de récurrence</i>).<br>
+                    On démontre alors que \( P(n+1) \) est vraie.
+                </li>
+                <br>
+                <li>
+                    <b>Étape 3 : Conclusion</b><br>
+                    On conclut : la propriété est initialisée et héréditaire, donc d'après le principe de
+                    récurrence, \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).
+                </li>
+            </ol>
+        </div>
+        <h2 class="subsection-title">3. Applications</h2>
+        <div>
+            <p><b>
+                    <span class="highlight">Exemple 1 : Démontrer une égalité (Somme des premiers entiers non
+                        nuls)</span>
+                </b><br>
+                Démontrer par récurrence que pour tout \(n \in \mathbb{N}^*\) :
+                \( 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \)</p>
 
-                <p><b>
-                        <span class="highlight">Exemple 2 : Démontrer une inégalité (Inégalité de Bernoulli)</span>
-                    </b><br>
-                    Soit \(a > 0\). Démontrer que pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).</p>
+            <p><i>Démonstration :</i><br>
+                Pour tout \(n \in \mathbb{N}^*\), notons \(P(n)\) la propriété : \(\displaystyle \sum_{k=1}^n k =
+                \frac{n(n+1)}{2}\).</p>
 
-                <p><i>Démonstration :</i><br>
-                    Pour tout \(n \in \mathbb{N}\), notons \(P(n)\) la propriété : \((1+a)^n \ge 1 + na\).</p>
+            <ul>
+                <li>
+                    <b>Initialisation :</b> Pour \(n = 1\) :<br>
+                    D'une part, le membre de gauche vaut 1.<br>
+                    D'autre part, \(\frac{1(1+1)}{2} = \frac{2}{2} = 1\).<br>
+                    Donc \(P(1)\) est vraie.
+                </li>
+                <br>
+                <li>
+                    <b>Hérédité :</b> Soit \(n \ge 1\) un entier fixé. Supposons \(P(n)\) vraie, c'est-à-dire \(1 +
+                    2 + \dots + n = \frac{n(n+1)}{2}\).<br>
+                    Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(1 + 2 + \dots + n + (n+1) =
+                    \frac{(n+1)(n+2)}{2}\).<br><br>
+                    En utilisant l'hypothèse de récurrence :
+                    \[
+                    \begin{align*}
+                    1 + 2 + \dots + n + (n+1) &= \frac{n(n+1)}{2} + (n+1) \\
+                    &= (n+1) \left( \frac{n}{2} + 1 \right) \\
+                    &= (n+1) \left( \frac{n+2}{2} \right) \\
+                    &= \frac{(n+1)(n+2)}{2}
+                    \end{align*}
+                    \]
+                    Donc \(P(n+1)\) est vraie.
+                </li>
+                <br>
+                <li>
+                    <b>Conclusion :</b> La propriété est vraie au rang 1 et est héréditaire. Donc, par récurrence,
+                    pour tout \(n \in \mathbb{N}^*\), \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
+                </li>
+            </ul>
 
-                <ul>
-                    <li>
-                        <b>Initialisation :</b> Pour \(n = 0\) :<br>
-                        \[ (1+a)^0 = 1 \quad \text{et} \quad 1 + 0 \cdot a = 1 \]
-                        Puisque \(1 \ge 1\), \(P(0)\) est vraie.
-                    </li>
-                    <br>
-                    <li>
-                        <b>Hérédité :</b> Soit \(n \in \mathbb{N}\) fixé. Supposons \((1+a)^n \ge 1 + na\).<br>
-                        Montrons que \((1+a)^{n+1} \ge 1 + (n+1)a\).<br><br>
-                        Comme \(1+a > 0\), multiplions les deux membres de l'hypothèse par \((1+a)\) :
+            <br>
+
+            <p><b>
+                    <span class="highlight">Exemple 2 : Démontrer une inégalité (Inégalité de Bernoulli)</span>
+                </b><br>
+                Soit \(a > 0\). Démontrer que pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).</p>
+
+            <p><i>Démonstration :</i><br>
+                Pour tout \(n \in \mathbb{N}\), notons \(P(n)\) la propriété : \((1+a)^n \ge 1 + na\).</p>
+
+            <ul>
+                <li>
+                    <b>Initialisation :</b> Pour \(n = 0\) :<br>
+                    \[ (1+a)^0 = 1 \quad \text{et} \quad 1 + 0 \cdot a = 1 \]
+                    Puisque \(1 \ge 1\), \(P(0)\) est vraie.
+                </li>
+                <br>
+                <li>
+                    <b>Hérédité :</b> Soit \(n \in \mathbb{N}\) fixé. Supposons \((1+a)^n \ge 1 + na\).<br>
+                    Montrons que \((1+a)^{n+1} \ge 1 + (n+1)a\).<br><br>
+                    Comme \(1+a > 0\), multiplions les deux membres de l'hypothèse par \((1+a)\) :
+                    \[
+                    \begin{align*}
+                    (1+a)^{n+1} &\ge (1 + na)(1 + a) \\
+                    (1+a)^{n+1} &\ge 1 + a + na + na^2 \\
+                    (1+a)^{n+1} &\ge 1 + (n+1)a + na^2
+                    \end{align*}
+                    \]
+                    Or, \(n \ge 0\) et \(a^2 > 0\), donc \(na^2 \ge 0\). Par conséquent :
+                    \[ 1 + (n+1)a + na^2 \ge 1 + (n+1)a \]
+                    Par transitivité, \((1+a)^{n+1} \ge 1 + (n+1)a\). La propriété \(P(n+1)\) est donc vraie.
+                </li>
+                <br>
+                <li>
+                    <b>Conclusion :</b> Par récurrence, pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).
+                </li>
+            </ul>
+            <u class="highlight"><strong>Exercice d'application</strong></u>
+            <div>
+                <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
+                \[
+                \begin{cases}
+                u_{n+1} = \frac{1}{3} u_n + \frac{5}{3}, & \forall n \in \mathbb{N}, \\
+                u_0 = 1. &
+                \end{cases}
+                \]
+
+                <p>Montrer que : \( \forall n \in \mathbb{N}, \; u_n < \frac{5}{2} \).</p>
+
+                        <br>
+
+                        <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
                         \[
-                        \begin{align*}
-                        (1+a)^{n+1} &\ge (1 + na)(1 + a) \\
-                        (1+a)^{n+1} &\ge 1 + a + na + na^2 \\
-                        (1+a)^{n+1} &\ge 1 + (n+1)a + na^2
-                        \end{align*}
+                        \begin{cases}
+                        u_{n+1} = \sqrt{12 + u_n}, & \forall n \in \mathbb{N}, \\
+                        u_0 = 0. &
+                        \end{cases}
                         \]
-                        Or, \(n \ge 0\) et \(a^2 > 0\), donc \(na^2 \ge 0\). Par conséquent :
-                        \[ 1 + (n+1)a + na^2 \ge 1 + (n+1)a \]
-                        Par transitivité, \((1+a)^{n+1} \ge 1 + (n+1)a\). La propriété \(P(n+1)\) est donc vraie.
-                    </li>
-                    <br>
-                    <li>
-                        <b>Conclusion :</b> Par récurrence, pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).
-                    </li>
-                </ul>
+
+                        <p>Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).</p>
+
+                        <br>
+                        <u class="highlight"><strong>Correction</strong></u>
+                        <p><b><u>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
