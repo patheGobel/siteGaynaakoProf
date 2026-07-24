@@ -197,7 +197,218 @@
                     </p>
                 </div>
             </div>
+            <h2 class="subsection-title">3. Représentation graphique des termes d'une suite</h2>
+            <div>
+                <div>
+                    <h3 class="subsubsection-title">a. Suite explicite</h3>
+                    <div>
+                        <ul>
+                            <li>Si \( u_n \) est définie de façon explicite :
+                                \( u_n=f(n) \), alors représenter graphiquement la suite \( (u_n) \) consiste à
+                                représenter
+                                dans un repère l'ensemble des points isolés \( (n,u_n) \).</li>
+                            <li>On peut aussi représenter directement les valeurs des termes de la suite sur l'un des
+                                axes
+                                du repère.</li>
+                        </ul>
+                        <p>
+                            <u><strong>Exemple</strong></u>
+                        </p>
 
+                        <p>
+                            Représenter les 6 premiers termes de la suite \( (u_n) \) définie par :
+                        </p>
+
+                        <p>
+                            \( u_n=\dfrac{n^2+1}{2n+3} \)
+                        </p>
+
+
+                        <p>
+                            <u><strong>Solution</strong></u>
+                        </p>
+                        <p>
+                            La représentation graphique est constituée des points :
+                        </p>
+
+                        <p>
+                            \( (0,\frac13), (1,\frac25), (2,\frac57), (3,\frac{10}{9}), (4,\frac{17}{11}), (5,2) \).
+                        </p>
+
+                        <p>
+                            <img src="images/courbe1.png" class="planComplex" alt="cas 2">
+                        </p>
+
+
+                        <p>
+                            <u><strong>Exemple</strong></u>
+                        </p>
+                        <p>
+                            La suite \( u_n=2n-7 \) est représentée par les points \( (n,u_n) \) pour
+                            \( n=0,1,2,3,4,5 \).
+                        </p>
+
+                        <p>
+                            Les points obtenus sont :
+                        </p>
+
+                        <p>
+                            \( (0,-7), (1,-5), (2,-3), (3,-1), (4,1), (5,3) \).
+                        </p>
+
+                        <p>
+                            <img src="images/courbe2.png" class="planComplex" alt="cas 2">
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="subsubsection-title">b. Suite définie par récurrence</h3>
+                    <div>
+                        <p>
+                            Soit :
+                        </p>
+
+                        <p>
+                            \(
+                            \begin{cases}
+                            u_0=\alpha,\\
+                            u_{n+1}=g(u_n),
+                            \end{cases}
+                            \)
+                        </p>
+
+                        <p>
+                            où \( g \) est la fonction associée à la suite \( (u_n) \).
+                        </p>
+
+                        <p>
+                            On trace \( C_g \), ainsi que la première bissectrice \( y=x \).
+                        </p>
+
+                        <p>
+                            Par une méthode graphique de projection, on construit les termes successifs de la suite \(
+                            (u_n)
+                            \) en suivant les étapes suivantes :
+                        </p>
+
+                        <ol>
+                            <li>
+                                On place le premier terme \( u_0 \) sur l’axe des abscisses.
+                            </li>
+
+                            <li>
+                                On lit la valeur de \( u_1=g(u_0) \) en projetant \( u_0 \) verticalement sur \( C_g \).
+                                Cette valeur se trouve sur l’axe des ordonnées.
+                            </li>
+
+                            <li>
+                                On projette \( u_1 \) sur l’axe des abscisses à l’aide de la première bissectrice \( y=x
+                                \).
+                            </li>
+
+                            <li>
+                                On utilise à nouveau la courbe \( C_g \) pour déterminer
+                                \( u_2=g(u_1) \).
+                            </li>
+
+                            <li>
+                                On projette \( u_2 \) sur l’axe des abscisses via la première bissectrice.
+                            </li>
+
+                            <li>
+                                On répète ce processus pour calculer les termes suivants :
+                                \( u_3,u_4,\dots \).
+                            </li>
+                        </ol>
+
+                        <p>
+                            Ce procédé, appelé <i>construction par itération graphique</i>, permet de visualiser
+                            l'évolution
+                            des termes de la suite \( (u_n) \) et d'étudier son comportement (convergence, divergence ou
+                            oscillation).
+                        </p>
+                        <p>
+                            <u><strong>Exemple</strong></u>
+                        </p>
+
+                        <p>
+                            Soit \( (u_n) \) la suite définie par :
+                        </p>
+
+                        <p>
+                            \( u_0=2 \)
+                        </p>
+
+                        <p>
+                            et pour tout \( n\in\mathbb{N} \),
+                        </p>
+
+                        <p>
+                            \( u_{n+1}=2\sqrt{u_n}. \)
+                        </p>
+
+                        <p>
+                            Construire les 6 premiers termes de \( (u_n) \).
+                        </p>
+
+
+                        <p>
+                            <u><strong>Solution</strong></u>
+                        </p>
+
+                        <p>
+                            Soit \( f \) la fonction définie sur \( [0;+\infty[ \) par :
+                        </p>
+
+                        <p>
+                            \( f:x\mapsto 2\sqrt{x}. \)
+                        </p>
+
+                        <p>
+                            Ainsi, pour tout \( n\in\mathbb{N} \),
+                        </p>
+
+                        <p>
+                            \( u_{n+1}=f(u_n). \)
+                        </p>
+
+                        <ol>
+                            <li>
+                                On trace \( (\mathcal{C}_f) \), la courbe représentative de la fonction \( f \).
+                            </li>
+
+                            <li>
+                                On trace la droite d'équation \( y=x \).
+                            </li>
+                        </ol>
+                        <p> <img src="images/courbe3.png" class="planComplex" alt="cas 3"> </p>
+                        <p>
+                            <u><strong>Exercice d'application</strong></u>
+                        </p>
+
+                        <p>
+                            <strong>b)</strong> \( u_n=2n-7 \)
+                        </p>
+
+                        <p>
+                            Soit \( (u_n)_{n\in\mathbb{N}} \) la suite définie par :
+                        </p>
+
+                        <p>
+                            \(
+                            \begin{cases}
+                            u_{n+1}=\sqrt{5u_n}+1\\
+                            u_0=1
+                            \end{cases}
+                            \)
+                        </p>
+
+                        <p>
+                            <u><strong>Correction</strong></u>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Sous-section avec sous-parties (a, b, c...) -->
