@@ -590,7 +590,7 @@
                 </ul>
 
                 <p><b>
-                        <font color="red">Axiome du principe de récurrence :</font>
+                        <span class="highlight">Axiome du principe de récurrence :</span>
                     </b><br>
                     Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
                     \).<br>
@@ -602,6 +602,32 @@
                 </ol>
 
                 <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
+            </div>
+            <h2 class="subsection-title">2. Méthode de démonstration</h2>
+            <div>
+                <p>Pour rédiger une démonstration par récurrence sur une propriété \( P(n) \) à partir d'un rang \( n_0
+                    \), on suit obligatoirement les 3 étapes suivantes :</p>
+
+                <ol>
+                    <li>
+                        <b>Étape 1 : Initialisation</b><br>
+                        On vérifie que la propriété est vraie pour le premier rang \( n_0 \) (c'est-à-dire que \( P(n_0)
+                        \) est vraie).
+                    </li>
+                    <br>
+                    <li>
+                        <b>Étape 2 : Hérédité</b><br>
+                        Soit \( n \) un entier naturel fixé tel que \( n \ge n_0 \).<br>
+                        On suppose que \( P(n) \) est vraie (<i>hypothèse de récurrence</i>).<br>
+                        On démontre alors que \( P(n+1) \) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Étape 3 : Conclusion</b><br>
+                        On conclut : la propriété est initialisée et héréditaire, donc d'après le principe de
+                        récurrence, \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).
+                    </li>
+                </ol>
             </div>
         </div>
 </body>
