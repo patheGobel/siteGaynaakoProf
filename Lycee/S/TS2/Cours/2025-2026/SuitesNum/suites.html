@@ -576,7 +576,34 @@
                 </li>
             </ol>
         </div>
-    </div>
+        <h1 class="section-title">III. Démonstration par récurrence</h1>
+        <!--Sous-section -->
+        <div class="subsection">
+            <h2 class="subsection-title">1. Principe de récurrence</h2>
+            <div>
+                <p>Le principe de récurrence s'apparente à une <b>chute de dominos en chaîne</b> :</p>
+
+                <ul>
+                    <li>On fait tomber le premier domino (<i>initialisation</i>).</li>
+                    <li>On s'assure que si un domino tombe, il fait forcément tomber le suivant (<i>hérédité</i>).</li>
+                    <li>Conclusion : tous les dominos tombent les uns après les autres.</li>
+                </ul>
+
+                <p><b>
+                        <font color="red">Axiome du principe de récurrence :</font>
+                    </b><br>
+                    Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
+                    \).<br>
+                    Si :</p>
+
+                <ol>
+                    <li>\( P(n_0) \) est vraie ;</li>
+                    <li>Pour tout entier \( n \ge n_0 \), si \( P(n) \) est vraie, alors \( P(n+1) \) est vraie ;</li>
+                </ol>
+
+                <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
+            </div>
+        </div>
 </body>
 
 </html>
