@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la Leçon</title>
+
+    <!-- Feuille de style et scripts JS spécifiques -->
+    <link rel="stylesheet" href="suites.css">
+    <script src="expo.js"></script>
+
+    <!-- Configuration MathJax (support du $ inline et display) -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+    <!-- En-tête du document -->
+    <div class="header">
+        <h1>Suites Numériques</h1>
+        <div class="header-meta">
+            <span>Prof : M. BA</span>
+            <span>Classe : TS2</span>
+        </div>
+        <div class="header-year">
+            Année scolaire : 2025 -- 2026
+        </div>
+    </div>
+
+    <!-- Introduction (sans conteneur de section) -->
+    <h1 class="intro-subtitle">Introduction</h1>
+    <p>..................</p>
+    <!-- Section principale -->
+    <h1 class="section-title">I. Généralités</h1>
+    <div class="section">
+        <!-- Sous-section -->
+        <div class="subsection">
+            <h2 class="subsection-title">1. Définition d'une suite</h2>
+            <div>
+                <p>
+                    On appelle <i>suite numérique</i> toute fonction définie de \( \mathbb{N} \) ou d'une partie \( E \)
+                    de \( \mathbb{N} \) vers \( \mathbb{R} \).
+                </p>
+                <p>
+                    On note :
+                </p>
+
+                <p>
+                    \(
+                    \begin{aligned}
+                    U :\quad &\mathbb{N} \rightarrow \mathbb{R} \\
+                    &n \mapsto U_n
+                    \end{aligned}
+                    \)
+                </p>
+                <p>
+                    Le réel \( U_n \) est appelé <span style="color:red;"><i>terme général</i></span> ou
+                    <span style="color:red;"><i>terme d'indice \( n \)</i></span>.
+                </p>
+
+                <p>
+                    L'ensemble des termes de la suite est noté \( (U_n) \) et \( n\in\mathbb{N} \) ou \(
+                    (U_n)_{n\in\mathbb{N}} \).
+                </p>
+            </div>
+            
+        </div>
+
+        <!-- Sous-section avec sous-parties (a, b, c...) -->
+        <div class="subsection">
+            <h2 class="subsection-title">2. Autre sous-section</h2>
+            <!--subsubsection-->
+            <div class="subsubsection">
+                <h3 class="subsubsection-title">a. Titre de la sous-partie :</h3>
+                <p>Contenu de la sous-partie...</p>
+
+                <!-- Mise en évidence de notions (Propriété, Méthode, Exemple...) -->
+                <p><strong><span class="text-red">Propriété :</span></strong></p>
+                <p>Énoncé de la propriété...</p>
+            </div>
+            <!--subsubsection-->
+            <div class="subsubsection">
+                <h3 class="subsubsection-title">b. Applications / Exercices :</h3>
+                <p>Consigne de l'exercice :</p>
+
+                <!-- Liste numérotée avec classe personnalisée -->
+                <ol class="custom-counter">
+                    <li>Premier item...</li>
+                    <li>Deuxième item...</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <!-- Insertion d'illustrations / schémas -->
+        <div class="subsection">
+            <h2 class="subsection-title">3. Représentation graphique</h2>
+            <p>Description ou légende de la figure...</p>
+            <img src="images/nom_de_l_image.png" alt="Description de l'image" />
+        </div>
+
+    </div>
+
+</body>
+
+</html>
