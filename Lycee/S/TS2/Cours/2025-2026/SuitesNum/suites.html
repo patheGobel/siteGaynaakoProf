@@ -39,17 +39,25 @@
 
     <!-- Introduction (sans conteneur de section) -->
     <h1 class="intro-subtitle">Introduction</h1>
-    <p>
-            Dans la vie courante comme dans de nombreuses sciences (économie, biologie, informatique), on s'intéresse fréquemment à l'évolution de grandeurs au cours du temps, étape par étape : l'évolution d'une population, le capital placé sur un compte bancaire, ou encore le nombre de vues d'une vidéo jour après jour.
+    <div>
+        <p>
+            Dans la vie courante comme dans de nombreuses sciences (économie, biologie, informatique), on s'intéresse
+            fréquemment à l'évolution de grandeurs au cours du temps, étape par étape : l'évolution d'une population, le
+            capital placé sur un compte bancaire, ou encore le nombre de vues d'une vidéo jour après jour.
         </p>
         <p>
-            Mathématiquement, une <strong>suite numérique</strong> permet de modéliser des phénomènes <strong>discrets</strong> (qui évoluent par « sauts » successifs), par opposition aux fonctions numériques d'une variable réelle qui modélisent des phénomènes <strong>continus</strong>.
+            Mathématiquement, une <strong>suite numérique</strong> permet de modéliser des phénomènes
+            <strong>discrets</strong> (qui évoluent par « sauts » successifs), par opposition aux fonctions numériques
+            d'une
+            variable réelle qui modélisent des phénomènes <strong>continus</strong>.
         </p>
         <div class="highlight-box">
-            <strong>Objectif principal du chapitre :</strong> Étudier le comportement à long terme de ces processus. La suite se rapproche-t-elle d'une valeur limite (convergence), ou tend-elle vers l'infini (divergence) ?
+            <strong>Objectif principal du chapitre :</strong> Étudier le comportement à long terme de ces processus. La
+            suite se rapproche-t-elle d'une valeur limite (convergence), ou tend-elle vers l'infini (divergence) ?
         </div>
     </div>
-    <!-- Section principale -->
+    </div>
+    <!-- I. Généralités -->
     <h1 class="section-title">I. Généralités</h1>
     <div class="section">
         <!-- Sous-section -->
@@ -73,8 +81,8 @@
                     \)
                 </p>
                 <p>
-                    Le réel \( U_n \) est appelé <span style="color:red;"><i>terme général</i></span> ou
-                    <span style="color:red;"><i>terme d'indice \( n \)</i></span>.
+                    Le réel \( U_n \) est appelé <span class="highlight"><i>terme général</i></span> ou
+                    <span class="highlight"><i>terme d'indice \( n \)</i></span>.
                 </p>
 
                 <p>
@@ -90,7 +98,7 @@
                     <p>
                         Lorsqu'une suite \( (U_n) \) est exprimée en fonction de \( n \), alors on dit que la suite \(
                         (U_n) \) est définie par une
-                        <span style="color:red;"><i>formule explicite</i></span> et on note :
+                        <span class="highlight"><i>formule explicite</i></span> et on note :
                     </p>
                     <p>
                         \( U_n=f(n) \).
@@ -138,7 +146,7 @@
                     <p>
                         Lorsque la suite \( (U_n) \) est définie par une relation entre \( U_n \) et \( U_{n+1} \),
                         alors on dit que \( (U_n) \) est définie par une
-                        <span style="color:red;"><i>relation de récurrence</i></span>.
+                        <span class="highlight"><i>relation de récurrence</i></span>.
                     </p>
                     <p>
                         \(
@@ -419,42 +427,41 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sous-section avec sous-parties (a, b, c...) -->
-        <div class="subsection">
-            <h2 class="subsection-title">2. Autre sous-section</h2>
-            <!--subsubsection-->
-            <div class="subsubsection">
-                <h3 class="subsubsection-title">a. Titre de la sous-partie :</h3>
-                <p>Contenu de la sous-partie...</p>
-
-                <!-- Mise en évidence de notions (Propriété, Méthode, Exemple...) -->
-                <p><strong><span class="text-red">Propriété :</span></strong></p>
-                <p>Énoncé de la propriété...</p>
-            </div>
-            <!--subsubsection-->
-            <div class="subsubsection">
-                <h3 class="subsubsection-title">b. Applications / Exercices :</h3>
-                <p>Consigne de l'exercice :</p>
-
-                <!-- Liste numérotée avec classe personnalisée -->
-                <ol class="custom-counter">
-                    <li>Premier item...</li>
-                    <li>Deuxième item...</li>
-                </ol>
-            </div>
-
-        </div>
-
-        <!-- Insertion d'illustrations / schémas -->
-        <div class="subsection">
-            <h2 class="subsection-title">3. Représentation graphique</h2>
-            <p>Description ou légende de la figure...</p>
-            <img src="images/nom_de_l_image.png" alt="Description de l'image" />
-        </div>
-
     </div>
+    <!-- II. Sens de variation d'une suite -->
+    <h1 class="section-title">II. Sens de variation d'une suite</h1>
+    <div class="section">
+        <!-- Sous-section -->
+        <div class="subsection">
+            <h2 class="subsection-title">1. Définitions</h2>
+            <div>
+                <p>Soit \(\left(u_n\right)\) une suite numérique.</p>
 
+                <ul>
+                    <li>
+                        La suite \(\left(u_n\right)\) est <span class="highlight">croissante</span> si :<br>
+                        \(\forall n \in \mathbb{N}, \quad u_{n+1} \geq u_n\)<br>
+                        c'est-à-dire :<br>
+                        \(u_{n+1} - u_n \geq 0.\)
+                    </li>
+
+                    <li>
+                        La suite \(\left(u_n\right)\) est <span class="highlight">décroissante</span> si :<br>
+                        \(\forall n \in \mathbb{N}, \quad u_{n+1} \leq u_n\)<br>
+                        c'est-à-dire :<br>
+                        \(u_{n+1} - u_n \leq 0.\)
+                    </li>
+
+                    <li>
+                        La suite \(\left(u_n\right)\) est <span class="highlight">constante</span> si :<br>
+                        \(\forall n \in \mathbb{N}, \quad u_{n+1} = u_n.\)
+                    </li>
+                </ul>
+                <p><b>Étudier le sens de variation d'une suite</b> \( \left(u_n\right) \)
+                    consiste à déterminer si elle est croissante, décroissante ou constante.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
