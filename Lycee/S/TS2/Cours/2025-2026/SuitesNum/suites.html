@@ -1148,46 +1148,68 @@
 
         <h2 class="subsection-title">2. Suites géométriques</h2>
         <div>
-            <h3 class="subsubsection">a. Définition :</h3>
+
+            <h3 class="subsubsection-title">a. Définition :</h3>
             <div>
-                <p>Une suite \( \left(u_{n}\right) \) est dite géométrique si chaque terme s'obtient en multipliant le
+                <p>Une suite \( \left(u_{n}\right) \) est dite géométrique si chaque terme s'obtient en multipliant
+                    le
                     précédent par un même nombre \( q \) appelé raison : \( u_{n+1}=u_{n}\times q. \)</p>
             </div>
+
+            <h3 class="subsubsection-title">b. Expression du terme général</h3>
+            <div>
+                <p>Si le premier terme est \( u_{p} \), alors :</p>
+                <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                    <p style="margin: 0;">
+                        <font color="red">\( u_{n}=u_{p}\times q^{n-p} \)</font>
+                    </p>
+                </div>
+                <u><span class="highlight">À retenir :</span></u>
+                <div>
+                    <p>Pour montrer qu’une suite \( (u_{n}) \) est géométrique de raison \( q \), il suffit de montrer
+                        que :
+                    </p>
+
+                    <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                        <p style="margin: 0;">
+                            <font color="red">\( \dfrac{u_{n+1}}{u_{n}}=q \)</font>
+                        </p>
+                    </div>
+                </div>
+                <u><span class="highlight">Exemple :</span></u>
+                <div>p>Montrer que \( (v_{n}) \) est une suite géométrique dont on précisera la raison et le premier
+                    terme
+                    puis
+                    exprimer \( (v_{n}) \) en fonction de \( n \).</p>
+                    <p>
+                        \(
+                        \begin{cases}
+                        u_{0}=5 \\
+                        u_{n + 1}=2u_{n}+3
+                        \end{cases}
+                        \quad \text{et} \quad v_{n} = u_{n} + 3
+                        \)
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="subsubsection-title">c. Somme des premiers termes</h3>
+
+            <div>
+                <p>Pour toute suite géométrique de raison \( q\neq 1 \), on a :</p>
+
+                <p>\( S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</p>
+
+                <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                    <p style="margin: 0;">
+                        <font color="red">\( S_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</font>
+                    </p>
+                </div>
+            </div>
+
+            
         </div>
 
-        <h2 class="subsection-title">b. Expression du terme général</h2>
-        <div>
-            <p>Si le premier terme est \( u_{p} \), alors :</p>
-            <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
-                <p style="margin: 0;">
-                    <font color="red">\( u_{n}=u_{p}\times q^{n-p} \)</font>
-                </p>
-            </div>
-        </div>
-        <u><span class="highlight">À retenir :</span></u>
-        <div>
-            <p>Pour montrer qu’une suite \( (u_{n}) \) est géométrique de raison \( q \), il suffit de montrer que :</p>
-
-            <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
-                <p style="margin: 0;">
-                    <font color="red">\( \dfrac{u_{n+1}}{u_{n}}=q \)</font>
-                </p>
-            </div>
-        </div>
-        <u><span class="highlight">Exemple :</span></u>
-        <div>p>Montrer que \( (v_{n}) \) est une suite géométrique dont on précisera la raison et le premier terme puis
-            exprimer \( (v_{n}) \) en fonction de \( n \).</p>
-            <p>
-                \(
-                \begin{cases}
-                u_{0}=5 \\
-                u_{n + 1}=2u_{n}+3
-                \end{cases}
-                \quad \text{et} \quad v_{n} = u_{n} + 3
-                \)
-            </p>
-        </div>
-        
     </div>
 </body>
 
