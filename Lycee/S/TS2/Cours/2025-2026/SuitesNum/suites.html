@@ -1005,7 +1005,85 @@
                 <li>Calculer sa limite.</li>
             </ol>
         </div>
-        
+        <u><span class="highlight">Correction :</span></u>
+        <div>
+            <!--a. Montrons que la suite est majorée par 3-->
+            <br>
+            <h3 class="subsubsection-title">a. Montrons que la suite est majorée par 3</h3>
+
+            <div>
+                <p>On montre par récurrence que :</p>
+                <p>\( u_n \leq 3 \)</p>
+
+                <p><b>Initialisation :</b></p>
+                <p>Si \( u_0 \leq 3 \), la propriété est vraie au rang 0.</p>
+
+                <p><b>Hérédité :</b></p>
+                <p>Supposons que \( u_n \leq 3 \).</p>
+
+                <p>Alors :</p>
+                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \leq \frac{1}{2}(3+3) = 3 \)</p>
+
+                <p>Donc \( u_{n+1} \leq 3 \).</p>
+
+                <p>La propriété est donc vraie pour tout \( n \).</p>
+            </div>
+
+            <!--b. Étudions la monotonie-->
+            <br>
+            <h3 class="subsubsection-title">b. Étudions la monotonie</h3>
+
+            <div>
+                <p>Calculons :</p>
+                <p>\( u_{n+1}-u_n = \frac{1}{2}(u_n+3)-u_n \)</p>
+                <p>\( = \frac{1}{2}u_n+\frac{3}{2}-u_n = -\frac{1}{2}u_n+\frac{3}{2} = \frac{1}{2}(3-u_n) \)</p>
+
+                <p>Or on a montré que \( u_n \leq 3 \), donc :</p>
+                <p>\( 3-u_n \geq 0 \)</p>
+
+                <p>Ainsi :</p>
+                <p>\( u_{n+1}-u_n \geq 0 \)</p>
+
+                <p>La suite est donc croissante.</p>
+            </div>
+
+            <!--c. Conclusion sur la convergence-->
+            <br>
+            <h3 class="subsubsection-title">c. Conclusion sur la convergence</h3>
+
+            <div>
+                <p>La suite \( (u_n) \) est :</p>
+
+                <ul>
+                    <li>croissante</li>
+                    <li>majorée par 3</li>
+                </ul>
+
+                <p>Donc elle est convergente.</p>
+
+                <p>On note :</p>
+                <p>\( \lim_{n\to+\infty} u_n = \ell \)</p>
+            </div>
+
+            <!--d. Utilisation du théorème du point fixe-->
+            <br>
+            <h3 class="subsubsection-title">d. Utilisation du théorème du point fixe</h3>
+
+            <div>
+                <p>On a :</p>
+                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
+
+                <p>En passant à la limite :</p>
+                <p>\( \ell=\frac{1}{2}(\ell+3) \)</p>
+
+                <p>On résout :</p>
+                <p>\( 2\ell=\ell+3 \)</p>
+                <p> \( \ell=3 \) </p>
+
+                <p>\( \boxed{\lim_{n\to+\infty} u_n = 3} \)</p>
+            </div>
+
+        </div>
     </div>
 </body>
 
