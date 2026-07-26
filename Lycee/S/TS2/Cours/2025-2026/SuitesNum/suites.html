@@ -883,6 +883,84 @@
             <u><span class="highlight">Correction :</span></u>
         </div>
     </div>
+    <!--V. Théorème du point fixe-->
+    <h1 class="section-title">V. Théorème du point fixe</h1>
+    <div class="subsection">
+        <h2 class="subsection-title">1. Définition</h2>
+        <p>Soit \( f \) une fonction définie sur un intervalle \( I \).</p>
+
+        <p>On appelle <b>point fixe</b> de \( f \) tout réel \( \ell \in I \) tel que :</p>
+
+        <p>\( f(\ell) = \ell. \)</p>
+
+        <p>Autrement dit, \( \ell \) est solution de l’équation :</p>
+        <p>\( f(x) = x. \)</p>
+        <h2 class="subsection-title">2. Théorème</h2>
+        <p>Soit \( f \) une fonction continue sur un intervalle \( I \).</p>
+
+        <p>Soit \( (u_n) \) une suite définie par récurrence par :</p>
+        <p>\( u_{n+1} = f(u_n) \)</p>
+
+        <p>Si la suite \( (u_n) \) converge vers un réel \( \ell \in I \), alors :</p>
+        <p>\( \ell \text{ est un point fixe de } f. \)</p>
+
+        <p>C’est-à-dire :</p>
+        <p>\( f(\ell) = \ell. \)</p>
+
+        <h2 class="subsection-title">3. Preuve détaillée</h2>
+
+        <p>On suppose que la suite \( (u_n) \) converge vers un réel \( \ell \in I \).</p>
+
+        <br>
+
+        <p><b>a. Limite de la suite décalée</b></p>
+
+        <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \( (u_{n+1}) \)
+            converge vers la même limite.</p>
+
+        <p>Ainsi :</p>
+        <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
+
+        <br>
+
+        <p><b>b. Utilisation de la relation de récurrence</b></p>
+
+        <p>Or, pour tout entier \( n \) :</p>
+        <p>\( u_{n+1} = f(u_n) \)</p>
+
+        <p>Donc :</p>
+        <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
+
+        <br>
+
+        <p><b>c. Utilisation de la continuité</b></p>
+
+        <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
+
+        <p>Par définition de la continuité :</p>
+        <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
+
+        <p>Comme \( u_n \to \ell \), on peut écrire :</p>
+        <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
+
+        <br>
+
+        <p><b>d. Conclusion</b></p>
+
+        <p>On obtient donc :</p>
+        <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
+
+        <p>Mais d’après la première étape :</p>
+        <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
+
+        <p>Ainsi :</p>
+        <p>\( \ell = f(\ell) \)</p>
+
+        <br>
+
+        <p>Donc \( \ell \) est un point fixe de \( f \).</p>
+
+        <p>\( \boxed{f(\ell)=\ell} \)</p>
 </body>
 
 </html>
