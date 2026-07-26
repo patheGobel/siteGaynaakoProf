@@ -56,7 +56,7 @@
             suite se rapproche-t-elle d'une valeur limite (convergence), ou tend-elle vers l'infini (divergence) ?
         </div>
     </div>
-    </div>
+
     <!-- I. Généralités -->
     <div class="section">
         <h1 class="section-title">I. Généralités</h1>
@@ -428,11 +428,15 @@
             </div>
         </div>
     </div>
+
     <!-- II. Sens de variation d'une suite -->
     <div class="section">
         <h1 class="section-title">II. Sens de variation d'une suite</h1>
         <!-- Sous-section -->
+
         <div class="subsection">
+
+            <!--1. Définitions-->
             <h2 class="subsection-title">1. Définitions</h2>
             <div>
                 <p>Soit \(\left(u_n\right)\) une suite numérique.</p>
@@ -460,8 +464,13 @@
                 <p><b>Étudier le sens de variation d'une suite</b> \( \left(u_n\right) \)
                     consiste à déterminer si elle est croissante, décroissante ou constante.</p>
             </div>
+
+            <!--2. Méthodes d'étude du sens de variation-->
             <h2 class="subsection-title">2. Méthodes d'étude du sens de variation</h2>
+
+            <!--a. Méthode de la différence-->
             <h3 class="subsubsection-title">a. Méthode de la différence</h3>
+
             <div>
                 <p>On étudie le signe de la différence : \(u_{n+1}-u_n.\)</p>
 
@@ -477,6 +486,8 @@
                 <p class="note">Cette méthode est la plus générale et peut être utilisée dans la majorité des
                     situations.</p>
             </div>
+
+            <!--b.Méthode du quotient-->
             <h3 class="subsubsection-title">b. Méthode du quotient</h3>
             <div>
                 <p>Lorsque les termes de la suite sont strictement positifs : \( u_n > 0 \),</p>
@@ -494,6 +505,8 @@
 
                 <p><b>Remarque :</b> Cette méthode nécessite obligatoirement que \( u_n > 0 \).</p>
             </div>
+
+            <!--c. Méthode par une fonction associée-->
             <h3 class="subsubsection-title">c. Méthode par une fonction associée</h3>
             <div>Si la suite est définie par : \( u_n = f(n) \),</p>
 
@@ -505,6 +518,8 @@
                 <p>Le sens de variation de la fonction \( f \) permet alors de conclure sur celui de la suite \( (u_n)
                     \).</p>
             </div>
+
+            <!--d. Méthode par récurrence-->
             <h3 class="subsubsection-title">d. Méthode par récurrence</h3>
             <div>
                 <p>Dans certains cas, il est difficile d'étudier directement \( u_{n+1} - u_n \).</p>
@@ -517,6 +532,8 @@
 
                 <p>\( u_{n+1} \leq u_n \).</p>
             </div>
+
+            <!--3. Méthode pratique-->
             <h2 class="subsection-title">3. Méthode pratique</h2>
             <div>
                 <p>Pour étudier le sens de variation d'une suite, on choisit généralement :</p>
@@ -529,710 +546,815 @@
                 </ul>
 
                 <br>
+                <p>
+                    <u><strong>Exercice d'application</strong></u>
+                </p>
+
+                <p>On considère les suites \( \left(u_n\right) \) définies pour tout entier naturel \( n \) par :</p>
+
+                <ol>
+                    <li>
+                        <p>\( u_n=n^2+3n+1 \)</p>
+                        <ol type="a">
+                            <li>Étudier le sens de variation de la suite \( \left(u_n\right) \) à l'aide de la
+                                différence \(
+                                u_{n+1}-u_n \).</li>
+                            <li>En déduire le minimum de la suite.</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <p>\( v_n=2^n \)</p>
+                        <ol type="a">
+                            <li>Étudier le sens de variation de la suite \( \left(v_n\right) \) en utilisant la méthode
+                                du
+                                quotient.</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <p>\( w_n=\frac{n}{n+1} \)</p>
+                        <ol type="a">
+                            <li>Étudier le sens de variation de la suite \( \left(w_n\right) \) à l'aide de la
+                                différence.
+                            </li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <p>Soit la suite \( \left(t_n\right) \) définie par :</p>
+                        <p>\( t_0=1,\qquad t_{n+1}=\frac{1}{2}(t_n+3) \)</p>
+                        <ol type="a">
+                            <li>Calculer les premiers termes de la suite.</li>
+                            <li>Montrer que :
+                                \( t_{n+1}-t_n=\frac{1}{2}(3-t_n). \)
+                            </li>
+                            <li>En supposant que \( t_n < 3 \) pour tout \( n \), étudier le sens de variation de \(
+                                    \left(t_n\right) \).</li>
+                        </ol>
+                    </li>
+                </ol>
+
             </div>
-            <p>
-                <u><strong>Exercice d'application</strong></u>
-            </p>
 
-            <p>On considère les suites \( \left(u_n\right) \) définies pour tout entier naturel \( n \) par :</p>
-
-            <ol>
-                <li>
-                    <p>\( u_n=n^2+3n+1 \)</p>
-                    <ol type="a">
-                        <li>Étudier le sens de variation de la suite \( \left(u_n\right) \) à l'aide de la différence \(
-                            u_{n+1}-u_n \).</li>
-                        <li>En déduire le minimum de la suite.</li>
-                    </ol>
-                </li>
-                <br>
-                <li>
-                    <p>\( v_n=2^n \)</p>
-                    <ol type="a">
-                        <li>Étudier le sens de variation de la suite \( \left(v_n\right) \) en utilisant la méthode du
-                            quotient.</li>
-                    </ol>
-                </li>
-                <br>
-                <li>
-                    <p>\( w_n=\frac{n}{n+1} \)</p>
-                    <ol type="a">
-                        <li>Étudier le sens de variation de la suite \( \left(w_n\right) \) à l'aide de la différence.
-                        </li>
-                    </ol>
-                </li>
-                <br>
-                <li>
-                    <p>Soit la suite \( \left(t_n\right) \) définie par :</p>
-                    <p>\( t_0=1,\qquad t_{n+1}=\frac{1}{2}(t_n+3) \)</p>
-                    <ol type="a">
-                        <li>Calculer les premiers termes de la suite.</li>
-                        <li>Montrer que :
-                            \( t_{n+1}-t_n=\frac{1}{2}(3-t_n). \)
-                        </li>
-                        <li>En supposant que \( t_n < 3 \) pour tout \( n \), étudier le sens de variation de \(
-                                \left(t_n\right) \).</li>
-                    </ol>
-                </li>
-            </ol>
         </div>
+
     </div>
+
     <!-- III. Démonstration par récurrence -->
-    <h1 class="section-title">III. Démonstration par récurrence</h1>
-    <!--Sous-section -->
-    <div class="subsection">
-        <h2 class="subsection-title">1. Principe de récurrence</h2>
-        <div>
-            <p>Le principe de récurrence s'apparente à une <b>chute de dominos en chaîne</b> :</p>
+    <div class="section">
+        <h1 class="section-title">III. Démonstration par récurrence</h1>
+        <!--Sous-section -->
 
-            <ul>
-                <li>On fait tomber le premier domino (<i>initialisation</i>).</li>
-                <li>On s'assure que si un domino tombe, il fait forcément tomber le suivant (<i>hérédité</i>).</li>
-                <li>Conclusion : tous les dominos tombent les uns après les autres.</li>
-            </ul>
+        <div class="subsection">
 
-            <p><b>
-                    <span class="highlight">Axiome du principe de récurrence :</span>
-                </b><br>
-                Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
-                \).<br>
-                Si :</p>
-
-            <ol>
-                <li>\( P(n_0) \) est vraie ;</li>
-                <li>Pour tout entier \( n \ge n_0 \), si \( P(n) \) est vraie, alors \( P(n+1) \) est vraie ;</li>
-            </ol>
-
-            <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
-        </div>
-        <h2 class="subsection-title">2. Méthode de démonstration</h2>
-        <div>
-            <p>Pour rédiger une démonstration par récurrence sur une propriété \( P(n) \) à partir d'un rang \( n_0
-                \), on suit obligatoirement les 3 étapes suivantes :</p>
-
-            <ol>
-                <li>
-                    <b>Étape 1 : Initialisation</b><br>
-                    On vérifie que la propriété est vraie pour le premier rang \( n_0 \) (c'est-à-dire que \( P(n_0)
-                    \) est vraie).
-                </li>
-                <br>
-                <li>
-                    <b>Étape 2 : Hérédité</b><br>
-                    Soit \( n \) un entier naturel fixé tel que \( n \ge n_0 \).<br>
-                    On suppose que \( P(n) \) est vraie (<i>hypothèse de récurrence</i>).<br>
-                    On démontre alors que \( P(n+1) \) est vraie.
-                </li>
-                <br>
-                <li>
-                    <b>Étape 3 : Conclusion</b><br>
-                    On conclut : la propriété est initialisée et héréditaire, donc d'après le principe de
-                    récurrence, \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).
-                </li>
-            </ol>
-        </div>
-        <h2 class="subsection-title">3. Applications</h2>
-        <div>
-            <p><b>
-                    <span class="highlight">Exemple 1 : Démontrer une égalité (Somme des premiers entiers non
-                        nuls)</span>
-                </b><br>
-                Démontrer par récurrence que pour tout \(n \in \mathbb{N}^*\) :
-                \( 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \)</p>
-
-            <p><i>Démonstration :</i><br>
-                Pour tout \(n \in \mathbb{N}^*\), notons \(P(n)\) la propriété : \(\displaystyle \sum_{k=1}^n k =
-                \frac{n(n+1)}{2}\).</p>
-
-            <ul>
-                <li>
-                    <b>Initialisation :</b> Pour \(n = 1\) :<br>
-                    D'une part, le membre de gauche vaut 1.<br>
-                    D'autre part, \(\frac{1(1+1)}{2} = \frac{2}{2} = 1\).<br>
-                    Donc \(P(1)\) est vraie.
-                </li>
-                <br>
-                <li>
-                    <b>Hérédité :</b> Soit \(n \ge 1\) un entier fixé. Supposons \(P(n)\) vraie, c'est-à-dire \(1 +
-                    2 + \dots + n = \frac{n(n+1)}{2}\).<br>
-                    Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(1 + 2 + \dots + n + (n+1) =
-                    \frac{(n+1)(n+2)}{2}\).<br><br>
-                    En utilisant l'hypothèse de récurrence :
-                    \[
-                    \begin{align*}
-                    1 + 2 + \dots + n + (n+1) &= \frac{n(n+1)}{2} + (n+1) \\
-                    &= (n+1) \left( \frac{n}{2} + 1 \right) \\
-                    &= (n+1) \left( \frac{n+2}{2} \right) \\
-                    &= \frac{(n+1)(n+2)}{2}
-                    \end{align*}
-                    \]
-                    Donc \(P(n+1)\) est vraie.
-                </li>
-                <br>
-                <li>
-                    <b>Conclusion :</b> La propriété est vraie au rang 1 et est héréditaire. Donc, par récurrence,
-                    pour tout \(n \in \mathbb{N}^*\), \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
-                </li>
-            </ul>
-
-            <br>
-
-            <p><b>
-                    <span class="highlight">Exemple 2 : Démontrer une inégalité (Inégalité de Bernoulli)</span>
-                </b><br>
-                Soit \(a > 0\). Démontrer que pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).</p>
-
-            <p><i>Démonstration :</i><br>
-                Pour tout \(n \in \mathbb{N}\), notons \(P(n)\) la propriété : \((1+a)^n \ge 1 + na\).</p>
-
-            <ul>
-                <li>
-                    <b>Initialisation :</b> Pour \(n = 0\) :<br>
-                    \[ (1+a)^0 = 1 \quad \text{et} \quad 1 + 0 \cdot a = 1 \]
-                    Puisque \(1 \ge 1\), \(P(0)\) est vraie.
-                </li>
-                <br>
-                <li>
-                    <b>Hérédité :</b> Soit \(n \in \mathbb{N}\) fixé. Supposons \((1+a)^n \ge 1 + na\).<br>
-                    Montrons que \((1+a)^{n+1} \ge 1 + (n+1)a\).<br><br>
-                    Comme \(1+a > 0\), multiplions les deux membres de l'hypothèse par \((1+a)\) :
-                    \[
-                    \begin{align*}
-                    (1+a)^{n+1} &\ge (1 + na)(1 + a) \\
-                    (1+a)^{n+1} &\ge 1 + a + na + na^2 \\
-                    (1+a)^{n+1} &\ge 1 + (n+1)a + na^2
-                    \end{align*}
-                    \]
-                    Or, \(n \ge 0\) et \(a^2 > 0\), donc \(na^2 \ge 0\). Par conséquent :
-                    \[ 1 + (n+1)a + na^2 \ge 1 + (n+1)a \]
-                    Par transitivité, \((1+a)^{n+1} \ge 1 + (n+1)a\). La propriété \(P(n+1)\) est donc vraie.
-                </li>
-                <br>
-                <li>
-                    <b>Conclusion :</b> Par récurrence, pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).
-                </li>
-            </ul>
-            <u class="highlight"><strong>Exercice d'application</strong></u>
-            <div>
-                <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
-                \(
-                \begin{cases}
-                u_{n+1} = \frac{1}{3} u_n + \frac{5}{3}, & \forall n \in \mathbb{N}, \\
-                u_0 = 1. &
-                \end{cases}
-                \)
-
-                <p>Montrer que : \( \forall n \in \mathbb{N}, \; u_n < \frac{5}{2} \).</p>
-
-                        <br>
-
-                        <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
-                        <br>
-                        \(
-                        \begin{cases}
-                        u_{n+1} = \sqrt{12 + u_n}, & \forall n \in \mathbb{N}, \\
-                        u_0 = 0. &
-                        \end{cases}
-                        \)
-
-                        <p>Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).</p>
-
-                        <br>
-                        <u class="highlight"><strong>Correction</strong></u>
-            </div>
-        </div>
-    </div>
-    <!--IV. Suites bornées et convergence-->
-    <h1 class="section-title">IV. Suites bornées et convergence</h1>
-    <!--Sous-section-->
-    <div class="subsection">
-        <h2 class="subsection-title">1. Suites minorées</h2>
-        <div>
-            <u><span class="highlight">Définition :</span></u>
-            <p>Une suite \( (u_n) \) est dite minorée s'il existe un réel \( m \) tel que :</p>
-            <p>\( \forall n \in \mathbb{N}, \quad u_n \geq m \)</p>
-            <p>Le réel \( m \) s'appelle un <b>minorant</b> de la suite.</p>
-
-            <u><span class="highlight">Exemple :</span></u>
-
-            <p>Soit la suite définie par :</p>
-            <p>\( u_n = n^2 + 3 \)</p>
-            <p>On a \( n^2 \geq 0 \), donc :</p>
-            <p>\( u_n = n^2 + 3 \geq 3 \)</p>
-            <p>La suite est donc minorée par 3.</p>
-        </div>
-        <h2 class="subsection-title">2. Suites majorées</h2>
-        <div>
-            <u><span class="highlight">Définition :</span></u>
-            <p>Une suite \( (u_n) \) est dite <b>majorée</b> s'il existe un réel \( M \) tel que :</p>
-            <p>\( \forall n \in \mathbb{N}, \quad u_n \leq M \)</p>
-            <p>Le réel \( M \) s'appelle un <b>majorant</b>.</p>
-
-            <br>
-
-            <u><span class="highlight">Exemple :</span></u>
-            <p>Soit :</p>
-            <p>\( u_n = \frac{1}{n+1} \)</p>
-            <p>On a :</p>
-            <p>\( 0 < \frac{1}{n+1} \leq 1 \)</p>
-                    <p>La suite est donc majorée par 1.</p>
-        </div>
-        <h2 class="subsection-title">3. Suites bornées</h2>
-        <div>
-            <u><span class="highlight">Définition :</span></u>
-            p>Une suite \( (u_n) \) est dite <b>bornée</b> si elle est à la fois minorée et majorée.</p>
-            <p>Autrement dit :</p>
-            <p>\( \exists m, M \in \mathbb{R} \quad \text{tel que} \quad m \leq u_n \leq M \)</p>
-
-            <br>
-            <u><span class="highlight">Exemple :</span></u>
-            <p>Soit :</p>
-            <p>\( u_n = \sin(n) \)</p>
-            <p>On sait que :</p>
-            <p>\( -1 \leq \sin(n) \leq 1 \)</p>
-            <p>La suite est donc bornée.</p>
-        </div>
-        <h2 class="subsection-title">4. Suites convergentes</h2>
-        <div>
-            <u><span class="highlight">Définition :</span></u>
-            <p>Une suite \( (u_n) \) est dite <b>convergente</b> si elle admet une limite réelle \( \ell \) lorsque \( n
-                \to +\infty \) :</p>
-            <p>\( \lim\limits_{n \to +\infty} u_n = \ell \)</p>
-            <p>Cela signifie que les termes de la suite se rapprochent d’un même nombre réel.</p>
-
-            <br>
-            <u><span class="highlight">Exemple :</span></u>
-            <p>\( u_n = \frac{1}{n} \)</p>
-            <p>On a :</p>
-            <p>\( \lim\limits_{n \to +\infty} \frac{1}{n} = 0 \)</p>
-            <p>La suite converge donc vers 0.</p>
-        </div>
-        <h2 class="subsection-title">5. Suites divergentes</h2>
-        <div>
-            <u><span class="highlight">Définition : Divergence vers \( +\infty \) </span></u>
-            <p>Une suite est dite <b>divergente</b> lorsqu’elle n’admet pas de limite réelle.</p>
-            <p>Elle peut :</p>
-            <ul>
-                <li>tendre vers \( +\infty \)</li>
-                <li>tendre vers \( -\infty \)</li>
-                <li>osciller</li>
-            </ul>
-
-            <br>
-            <u><span class="highlight">Exemple : Divergence vers \( +\infty \)</span></u>
-            <p>\( u_n = n \)</p>
-
-            <p>\( \lim\limits_{n \to +\infty} n = +\infty \)</p>
-
-            <br>
-            <u><span class="highlight">Exemple : Oscillation</span></u>
-            <p>\( u_n = (-1)^n \)</p>
-            <p>La suite alterne entre \( -1 \) et \( 1 \) : elle ne possède pas de limite.</p>
-        </div>
-        <h2 class="subsection-title">6. Théorème de convergence monotone</h2>
-        <div>
-            <u><span class="highlight">Théorème :</span></u>
-            <ul>
-                <li>Toute suite croissante et majorée est convergente.</li>
-                <li>Toute suite décroissante et minorée est convergente.</li>
-            </ul>
-            <br>
-            <u><span class="highlight">Exemple :</span></u>
-            <p>Soit :</p>
-            <p>\( u_n = 1 - \frac{1}{n} \)</p>
-
-            <p>La suite est croissante et majorée par 1.</p>
-            <p>D’après le théorème de la convergence, elle est donc convergente et :</p>
-            <p>\( \lim\limits_{n \to +\infty} u_n = 1 \)</p>
-        </div>
-        <h2 class="subsection-title">7. Suites adjacentes</h2>
-        <div>
-            <u><span class="highlight">Définition :</span></u>
-            <p>Deux suites \( u \) et \( v \) sont adjacentes si et seulement si , l’une est croissante, l’autre est
-                décroissante et la limite de leur différence est égale à 0 . C'est-à-dire</p>
-
-            <p>
-                \(
-                \begin{cases}
-                u \textbf{ est croissante}\\
-                v \textbf{ est décroissante}\\
-                \lim_{n\to \infty}(u_{n}-v_{n})=0
-                \end{cases} \textbf{Ou}
-                \begin{cases}
-                v \textbf{ est croissante}\\
-                u \textbf{ est décroissante}\\
-                \lim_{n\to \infty}(u_{n}-v_{n})=0
-                \end{cases}
-                \)
-            </p>
-            <u><span class="highlight">Exemple :</span></u>
-            <p>Soient deux suites définies par :</p>
-            <p>\( u_n = 1-\frac{1}{n}, \quad v_n = 1+\frac{1}{n}. \)</p>
-
-            <p>Montrer que les deux suite sont adjacents.</p>
-            <u><span class="highlight">Exercice D'application :</span></u>
-            <p>Soient les deux suites suivantes définies par récurrence pour tout \( n \in \mathbb{N} \) :</p>
-            <p>
-                \(
-                \begin{cases}
-                u_0 = 1, & v_0 = 2, \\
-                u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
-                \end{cases}
-                \)
-            </p>
-            <u><span class="highlight">Correction :</span></u>
-        </div>
-    </div>
-    <!--V. Théorème du point fixe-->
-    <h1 class="section-title">V. Théorème du point fixe</h1>
-    <div class="subsection">
-        <h2 class="subsection-title">1. Définition</h2>
-        <div>
-            <p>Soit \( f \) une fonction définie sur un intervalle \( I \).</p>
-
-            <p>On appelle <b>point fixe</b> de \( f \) tout réel \( \ell \in I \) tel que :</p>
-
-            <p>\( f(\ell) = \ell. \)</p>
-
-            <p>Autrement dit, \( \ell \) est solution de l’équation :</p>
-            <p>\( f(x) = x. \)</p>
-        </div>
-        <h2 class="subsection-title">2. Théorème</h2>
-        <div>
-            <p>Soit \( f \) une fonction continue sur un intervalle \( I \).</p>
-
-            <p>Soit \( (u_n) \) une suite définie par récurrence par :</p>
-            <p>\( u_{n+1} = f(u_n) \)</p>
-
-            <p>Si la suite \( (u_n) \) converge vers un réel \( \ell \in I \), alors :</p>
-            <p>\( \ell \text{ est un point fixe de } f. \)</p>
-
-            <p>C’est-à-dire :</p>
-            <p>\( f(\ell) = \ell. \)</p>
-        </div>
-        <h2 class="subsection-title">3. Preuve détaillée</h2>
-        <div>
-            <p>On suppose que la suite \( (u_n) \) converge vers un réel \( \ell \in I \).</p>
-
-            <br>
-
-            <p><b>a. Limite de la suite décalée</b></p>
-
-            <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \( (u_{n+1}) \)
-                converge vers la même limite.</p>
-
-            <p>Ainsi :</p>
-            <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
-
-            <br>
-
-            <p><b>b. Utilisation de la relation de récurrence</b></p>
-
-            <p>Or, pour tout entier \( n \) :</p>
-            <p>\( u_{n+1} = f(u_n) \)</p>
-
-            <p>Donc :</p>
-            <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
-
-            <br>
-
-            <p><b>c. Utilisation de la continuité</b></p>
-
-            <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
-
-            <p>Par définition de la continuité :</p>
-            <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
-
-            <p>Comme \( u_n \to \ell \), on peut écrire :</p>
-            <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
-
-            <br>
-
-            <p><b>d. Conclusion</b></p>
-
-            <p>On obtient donc :</p>
-            <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
-
-            <p>Mais d’après la première étape :</p>
-            <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
-
-            <p>Ainsi :</p>
-            <p>\( \ell = f(\ell) \)</p>
-
-            <br>
-
-            <p>Donc \( \ell \) est un point fixe de \( f \).</p>
-
-            <p>\( \boxed{f(\ell)=\ell} \)</p>
-        </div>
-        <h2 class="subsection-title">4. Méthode pratique</h2>
-        <div>
-            <p>Pour déterminer la limite d’une suite définie par :</p>
-
-            <p>\( u_{n+1} = f(u_n), \)</p>
-
-            <p>on procède ainsi :</p>
-
-            <ul>
-                <li>On montre d’abord que la suite est convergente.</li>
-                <li>On pose \( \lim\limits_{n\to +\infty} u_n = \ell \).</li>
-                <li>On passe à la limite dans la relation de récurrence.</li>
-                <li>On résout l’équation \( f(\ell) = \ell \).</li>
-            </ul>
-            <u><span class="highlight">Exemple :</span></u>
-            <p>Soit la suite définie par :</p>
-
-            <p>\( u_{n+1} = \frac{1}{2}(u_n + 3). \)</p>
-
-            <p>Si la suite converge vers \( \ell \), alors :</p>
-            <p>\( \ell = \frac{1}{2}(\ell + 3). \)</p>
-
-            <p>Donc :</p>
-            <p>\( 2\ell = \ell + 3 \)</p>
-
-            <p>\( \ell = 3. \)</p>
-        </div>
-        <h2 class="subsection-title">5. Application du théorème du point fixe</h2>
-        <u><span class="highlight">Exercice :</span></u>
-        <div>
-            <p>On considère la suite \( (u_n)_{n \in \mathbb{N}} \) définie par \( u_0 > 0 \) et pour tout \( n \in
-                \mathbb{N} \) par :</p>
-            <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
-            <ol type="a">
-                <li>Montrer que la suite \( (u_n) \) est majorée par 3 (pour \( u_0 \leq 3 \)).</li>
-                <li>Étudier le sens de variation de la suite \( (u_n) \).</li>
-                <li>Montrer que la suite \( (u_n) \) converge.</li>
-                <li>Calculer sa limite.</li>
-            </ol>
-        </div>
-        <u><span class="highlight">Correction :</span></u>
-        <div>
-            <!--a. Montrons que la suite est majorée par 3-->
-            <br>
-            <h3 class="subsubsection-title">a. Montrons que la suite est majorée par 3</h3>
+            <!--1. Principe de récurrence-->
+            <h2 class="subsection-title">1. Principe de récurrence</h2>
 
             <div>
-                <p>On montre par récurrence que :</p>
-                <p>\( u_n \leq 3 \)</p>
-
-                <p><b>Initialisation :</b></p>
-                <p>Si \( u_0 \leq 3 \), la propriété est vraie au rang 0.</p>
-
-                <p><b>Hérédité :</b></p>
-                <p>Supposons que \( u_n \leq 3 \).</p>
-
-                <p>Alors :</p>
-                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \leq \frac{1}{2}(3+3) = 3 \)</p>
-
-                <p>Donc \( u_{n+1} \leq 3 \).</p>
-
-                <p>La propriété est donc vraie pour tout \( n \).</p>
-            </div>
-
-            <!--b. Étudions la monotonie-->
-            <br>
-            <h3 class="subsubsection-title">b. Étudions la monotonie</h3>
-
-            <div>
-                <p>Calculons :</p>
-                <p>\( u_{n+1}-u_n = \frac{1}{2}(u_n+3)-u_n \)</p>
-                <p>\( = \frac{1}{2}u_n+\frac{3}{2}-u_n = -\frac{1}{2}u_n+\frac{3}{2} = \frac{1}{2}(3-u_n) \)</p>
-
-                <p>Or on a montré que \( u_n \leq 3 \), donc :</p>
-                <p>\( 3-u_n \geq 0 \)</p>
-
-                <p>Ainsi :</p>
-                <p>\( u_{n+1}-u_n \geq 0 \)</p>
-
-                <p>La suite est donc croissante.</p>
-            </div>
-
-            <!--c. Conclusion sur la convergence-->
-            <br>
-            <h3 class="subsubsection-title">c. Conclusion sur la convergence</h3>
-
-            <div>
-                <p>La suite \( (u_n) \) est :</p>
+                <p>Le principe de récurrence s'apparente à une <b>chute de dominos en chaîne</b> :</p>
 
                 <ul>
-                    <li>croissante</li>
-                    <li>majorée par 3</li>
+                    <li>On fait tomber le premier domino (<i>initialisation</i>).</li>
+                    <li>On s'assure que si un domino tombe, il fait forcément tomber le suivant (<i>hérédité</i>).</li>
+                    <li>Conclusion : tous les dominos tombent les uns après les autres.</li>
                 </ul>
 
-                <p>Donc elle est convergente.</p>
+                <p><b>
+                        <span class="highlight">Axiome du principe de récurrence :</span>
+                    </b><br>
+                    Soit \( P(n) \) une propriété dépendant d'un entier naturel \( n \), et soit \( n_0 \in \mathbb{N}
+                    \).<br>
+                    Si :</p>
 
-                <p>On note :</p>
-                <p>\( \lim_{n\to+\infty} u_n = \ell \)</p>
+                <ol>
+                    <li>\( P(n_0) \) est vraie ;</li>
+                    <li>Pour tout entier \( n \ge n_0 \), si \( P(n) \) est vraie, alors \( P(n+1) \) est vraie ;</li>
+                </ol>
+
+                <p>Alors la propriété \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).</p>
             </div>
 
-            <!--d. Utilisation du théorème du point fixe-->
-            <br>
-            <h3 class="subsubsection-title">d. Utilisation du théorème du point fixe</h3>
+            <!--2. Méthode de démonstration-->
+            <h2 class="subsection-title">2. Méthode de démonstration</h2>
 
             <div>
-                <p>On a :</p>
-                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
+                <p>Pour rédiger une démonstration par récurrence sur une propriété \( P(n) \) à partir d'un rang \( n_0
+                    \), on suit obligatoirement les 3 étapes suivantes :</p>
 
-                <p>En passant à la limite :</p>
-                <p>\( \ell=\frac{1}{2}(\ell+3) \)</p>
+                <ol>
+                    <li>
+                        <b>Étape 1 : Initialisation</b><br>
+                        On vérifie que la propriété est vraie pour le premier rang \( n_0 \) (c'est-à-dire que \( P(n_0)
+                        \) est vraie).
+                    </li>
+                    <br>
+                    <li>
+                        <b>Étape 2 : Hérédité</b><br>
+                        Soit \( n \) un entier naturel fixé tel que \( n \ge n_0 \).<br>
+                        On suppose que \( P(n) \) est vraie (<i>hypothèse de récurrence</i>).<br>
+                        On démontre alors que \( P(n+1) \) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Étape 3 : Conclusion</b><br>
+                        On conclut : la propriété est initialisée et héréditaire, donc d'après le principe de
+                        récurrence, \( P(n) \) est vraie pour tout entier \( n \ge n_0 \).
+                    </li>
+                </ol>
+            </div>
 
-                <p>On résout :</p>
-                <p>\( 2\ell=\ell+3 \)</p>
-                <p> \( \ell=3 \) </p>
+            <!--3. Applications-->
+            <h2 class="subsection-title">3. Applications</h2>
 
-                <p>\( \boxed{\lim_{n\to+\infty} u_n = 3} \)</p>
+            <div>
+                <p><b>
+                        <span class="highlight">Exemple 1 : Démontrer une égalité (Somme des premiers entiers non
+                            nuls)</span>
+                    </b><br>
+                    Démontrer par récurrence que pour tout \(n \in \mathbb{N}^*\) :
+                    \( 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \)</p>
+
+                <p><i>Démonstration :</i><br>
+                    Pour tout \(n \in \mathbb{N}^*\), notons \(P(n)\) la propriété : \(\displaystyle \sum_{k=1}^n k =
+                    \frac{n(n+1)}{2}\).</p>
+
+                <ul>
+                    <li>
+                        <b>Initialisation :</b> Pour \(n = 1\) :<br>
+                        D'une part, le membre de gauche vaut 1.<br>
+                        D'autre part, \(\frac{1(1+1)}{2} = \frac{2}{2} = 1\).<br>
+                        Donc \(P(1)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Hérédité :</b> Soit \(n \ge 1\) un entier fixé. Supposons \(P(n)\) vraie, c'est-à-dire \(1 +
+                        2 + \dots + n = \frac{n(n+1)}{2}\).<br>
+                        Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(1 + 2 + \dots + n + (n+1) =
+                        \frac{(n+1)(n+2)}{2}\).<br><br>
+                        En utilisant l'hypothèse de récurrence :
+                        \[
+                        \begin{align*}
+                        1 + 2 + \dots + n + (n+1) &= \frac{n(n+1)}{2} + (n+1) \\
+                        &= (n+1) \left( \frac{n}{2} + 1 \right) \\
+                        &= (n+1) \left( \frac{n+2}{2} \right) \\
+                        &= \frac{(n+1)(n+2)}{2}
+                        \end{align*}
+                        \]
+                        Donc \(P(n+1)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Conclusion :</b> La propriété est vraie au rang 1 et est héréditaire. Donc, par récurrence,
+                        pour tout \(n \in \mathbb{N}^*\), \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
+                    </li>
+                </ul>
+
+                <br>
+
+                <p><b>
+                        <span class="highlight">Exemple 2 : Démontrer une inégalité (Inégalité de Bernoulli)</span>
+                    </b><br>
+                    Soit \(a > 0\). Démontrer que pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).</p>
+
+                <p><i>Démonstration :</i><br>
+                    Pour tout \(n \in \mathbb{N}\), notons \(P(n)\) la propriété : \((1+a)^n \ge 1 + na\).</p>
+
+                <ul>
+                    <li>
+                        <b>Initialisation :</b> Pour \(n = 0\) :<br>
+                        \[ (1+a)^0 = 1 \quad \text{et} \quad 1 + 0 \cdot a = 1 \]
+                        Puisque \(1 \ge 1\), \(P(0)\) est vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Hérédité :</b> Soit \(n \in \mathbb{N}\) fixé. Supposons \((1+a)^n \ge 1 + na\).<br>
+                        Montrons que \((1+a)^{n+1} \ge 1 + (n+1)a\).<br><br>
+                        Comme \(1+a > 0\), multiplions les deux membres de l'hypothèse par \((1+a)\) :
+                        \[
+                        \begin{align*}
+                        (1+a)^{n+1} &\ge (1 + na)(1 + a) \\
+                        (1+a)^{n+1} &\ge 1 + a + na + na^2 \\
+                        (1+a)^{n+1} &\ge 1 + (n+1)a + na^2
+                        \end{align*}
+                        \]
+                        Or, \(n \ge 0\) et \(a^2 > 0\), donc \(na^2 \ge 0\). Par conséquent :
+                        \[ 1 + (n+1)a + na^2 \ge 1 + (n+1)a \]
+                        Par transitivité, \((1+a)^{n+1} \ge 1 + (n+1)a\). La propriété \(P(n+1)\) est donc vraie.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Conclusion :</b> Par récurrence, pour tout \(n \in \mathbb{N}\), \((1+a)^n \ge 1 + na\).
+                    </li>
+                </ul>
+
+                <!--Exercice d'application-->
+                <u class="highlight"><strong>Exercice d'application</strong></u>
+                <div>
+                    <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
+                    \(
+                    \begin{cases}
+                    u_{n+1} = \frac{1}{3} u_n + \frac{5}{3}, & \forall n \in \mathbb{N}, \\
+                    u_0 = 1. &
+                    \end{cases}
+                    \)
+
+                    <p>Montrer que : \( \forall n \in \mathbb{N}, \; u_n < \frac{5}{2} \).</p>
+
+                            <br>
+
+                            <p>Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :</p>
+                            <br>
+                            \(
+                            \begin{cases}
+                            u_{n+1} = \sqrt{12 + u_n}, & \forall n \in \mathbb{N}, \\
+                            u_0 = 0. &
+                            \end{cases}
+                            \)
+
+                            <p>Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).</p>
+
+                            <br>
+                            <u class="highlight"><strong>Correction</strong></u>
+                </div>
             </div>
 
         </div>
     </div>
-    <!--VI. Suites particulières-->
-    <h1 class="section-title">VI. Suites particulières</h1>
-    <div class="subsection">
-        <h2 class="subsection-title">1. Suites arithmétiques</h2>
-        <div>
-            <h3 class="subsubsection">a. Définition :</h3>
-            <div>
-                <p>Une suite \( \left(u_{n}\right) \) est <span class="highlight">arithmétique</span> si chaque terme
-                    s'obtient en
-                    ajoutant au précédent un même nombre <span class="highlight">\( r \)</span> appelé raison :</p>
-                <p>
-                    <span class="highlight">\( u_{n+1}=u_{n}+r \)</span>
-                </p>
-            </div>
-            <h3 class="subsubsection">b. Expression du terme général</h3>
-            <div>
-                <p>Si \( (u_n) \) est une suite arithmétique de raison \( r \) et de premier terme \( u_p \), alors on a
-                    :</p>
-                <span class="highlight">\( u_n = u_p + (n-p)r \)</span>
-                <p>Avec \( u_p \) le premier terme, \( p \) l'indice du premier terme et \( r \) la raison.</p>
-            </div>
-            <u><span class="highlight">À retenir</span></u>
-            <div>
-                <p>Pour montrer qu'une suite \( (u_n) \) est arithmétique de raison \( r \), il suffit de montrer que :
-                </p>
-                <p>\( u_{n+1} - u_n = r \)</p>
-            </div>
-            <u><span class="highlight">Exemple :</span></u>
-            <div>
-                <p>On considère la suite \( (u_n) \) définie par :</p>
-                <p>\( u_n = 5n + 3 \)</p>
-                <p>Montrer que \( (u_n) \) est une suite arithmétique dont on précisera la raison et le premier terme.
-                </p>
-            </div>
-            <u><span class="highlight">Correction :</span></u>
-            <div></div>
-            <h3 class="subsubsection-title">c. Somme des premiers termes</h3>
-            <div>
-                <p>Soit \( (u_n) \) une suite arithmétique.</p>
 
-                <p>Pour tous entiers naturels \( n \) et \( p \) tels que \( p \leq n \), on a :</p>
+    <!--IV. Suites bornées et convergence-->
+    <div class="section">
+        <h1 class="section-title">IV. Suites bornées et convergence</h1>
+        <!--Sous-section -->
 
-                <p>De façon générale, si la suite a pour premier terme \( u_p \), alors la somme \(
-                    S_n=u_p+u_{p+1}+\ldots+u_n \) vaut :</p>
-                <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
-                    <p style="margin: 0;">
-                        <font color="red">\( S_n=\dfrac{(n-p+1)(u_p+u_n)}{2} \)</font>
-                    </p>
-                </div>
-                <p><b>NB :</b> La somme \( S_n=u_0+u_1+\ldots+u_n \) peut être notée par \( S_n=\sum_{k=0}^{n}u_k \).
-                </p>
+        <div class="subsection">
+
+            <!--1. Suites minorées-->
+            <h2 class="subsection-title">1. Suites minorées</h2>
+
+            <div>
+                <u><span class="highlight">Définition :</span></u>
+                <p>Une suite \( (u_n) \) est dite minorée s'il existe un réel \( m \) tel que :</p>
+                <p>\( \forall n \in \mathbb{N}, \quad u_n \geq m \)</p>
+                <p>Le réel \( m \) s'appelle un <b>minorant</b> de la suite.</p>
+
+                <u><span class="highlight">Exemple :</span></u>
+
+                <p>Soit la suite définie par :</p>
+                <p>\( u_n = n^2 + 3 \)</p>
+                <p>On a \( n^2 \geq 0 \), donc :</p>
+                <p>\( u_n = n^2 + 3 \geq 3 \)</p>
+                <p>La suite est donc minorée par 3.</p>
+            </div>
+
+            <!--2. Suites majorées-->
+            <h2 class="subsection-title">2. Suites majorées</h2>
+
+            <div>
+                <u><span class="highlight">Définition :</span></u>
+                <p>Une suite \( (u_n) \) est dite <b>majorée</b> s'il existe un réel \( M \) tel que :</p>
+                <p>\( \forall n \in \mathbb{N}, \quad u_n \leq M \)</p>
+                <p>Le réel \( M \) s'appelle un <b>majorant</b>.</p>
+
                 <br>
 
-                <p><b>Exemple de sommation :</b></p>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>Soit :</p>
+                <p>\( u_n = \frac{1}{n+1} \)</p>
+                <p>On a :</p>
+                <p>\( 0 < \frac{1}{n+1} \leq 1 \)</p>
+                        <p>La suite est donc majorée par 1.</p>
+            </div>
 
-                <p>\( \sum_{k=0}^{4}(2k+7) = \cdots \)</p>
+            <!--3. Suites bornées-->
+            <h2 class="subsection-title">3. Suites bornées</h2>
 
-                <p>\( \sum_{k=0}^{10}5 = \cdots \)</p>
+            <div>
+                <u><span class="highlight">Définition :</span></u>
+                p>Une suite \( (u_n) \) est dite <b>bornée</b> si elle est à la fois minorée et majorée.</p>
+                <p>Autrement dit :</p>
+                <p>\( \exists m, M \in \mathbb{R} \quad \text{tel que} \quad m \leq u_n \leq M \)</p>
+
+                <br>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>Soit :</p>
+                <p>\( u_n = \sin(n) \)</p>
+                <p>On sait que :</p>
+                <p>\( -1 \leq \sin(n) \leq 1 \)</p>
+                <p>La suite est donc bornée.</p>
+            </div>
+
+            <!--4. Suites convergentes-->
+            <h2 class="subsection-title">4. Suites convergentes</h2>
+
+            <div>
+                <u><span class="highlight">Définition :</span></u>
+                <p>Une suite \( (u_n) \) est dite <b>convergente</b> si elle admet une limite réelle \( \ell \) lorsque
+                    \( n
+                    \to +\infty \) :</p>
+                <p>\( \lim\limits_{n \to +\infty} u_n = \ell \)</p>
+                <p>Cela signifie que les termes de la suite se rapprochent d’un même nombre réel.</p>
+
+                <br>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>\( u_n = \frac{1}{n} \)</p>
+                <p>On a :</p>
+                <p>\( \lim\limits_{n \to +\infty} \frac{1}{n} = 0 \)</p>
+                <p>La suite converge donc vers 0.</p>
+            </div>
+
+            <!--5. Suites divergentes-->
+            <h2 class="subsection-title">5. Suites divergentes</h2>
+
+            <div>
+                <u><span class="highlight">Définition : Divergence vers \( +\infty \) </span></u>
+                <p>Une suite est dite <b>divergente</b> lorsqu’elle n’admet pas de limite réelle.</p>
+                <p>Elle peut :</p>
+                <ul>
+                    <li>tendre vers \( +\infty \)</li>
+                    <li>tendre vers \( -\infty \)</li>
+                    <li>osciller</li>
+                </ul>
+
+                <br>
+                <u><span class="highlight">Exemple : Divergence vers \( +\infty \)</span></u>
+                <p>\( u_n = n \)</p>
+
+                <p>\( \lim\limits_{n \to +\infty} n = +\infty \)</p>
+
+                <br>
+                <u><span class="highlight">Exemple : Oscillation</span></u>
+                <p>\( u_n = (-1)^n \)</p>
+                <p>La suite alterne entre \( -1 \) et \( 1 \) : elle ne possède pas de limite.</p>
+            </div>
+
+            <!--6. Théorème de convergence monotone-->
+            <h2 class="subsection-title">6. Théorème de convergence monotone</h2>
+
+            <div>
+                <u><span class="highlight">Théorème :</span></u>
+                <ul>
+                    <li>Toute suite croissante et majorée est convergente.</li>
+                    <li>Toute suite décroissante et minorée est convergente.</li>
+                </ul>
+                <br>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>Soit :</p>
+                <p>\( u_n = 1 - \frac{1}{n} \)</p>
+
+                <p>La suite est croissante et majorée par 1.</p>
+                <p>D’après le théorème de la convergence, elle est donc convergente et :</p>
+                <p>\( \lim\limits_{n \to +\infty} u_n = 1 \)</p>
+            </div>
+
+            <!--7. Suites adjacentes-->
+            <h2 class="subsection-title">7. Suites adjacentes</h2>
+
+            <div>
+                <u><span class="highlight">Définition :</span></u>
+                <p>Deux suites \( u \) et \( v \) sont adjacentes si et seulement si , l’une est croissante, l’autre est
+                    décroissante et la limite de leur différence est égale à 0 . C'est-à-dire</p>
+
+                <p>
+                    \(
+                    \begin{cases}
+                    u \textbf{ est croissante}\\
+                    v \textbf{ est décroissante}\\
+                    \lim_{n\to \infty}(u_{n}-v_{n})=0
+                    \end{cases} \textbf{Ou}
+                    \begin{cases}
+                    v \textbf{ est croissante}\\
+                    u \textbf{ est décroissante}\\
+                    \lim_{n\to \infty}(u_{n}-v_{n})=0
+                    \end{cases}
+                    \)
+                </p>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>Soient deux suites définies par :</p>
+                <p>\( u_n = 1-\frac{1}{n}, \quad v_n = 1+\frac{1}{n}. \)</p>
+
+                <p>Montrer que les deux suite sont adjacents.</p>
+                <u><span class="highlight">Exercice D'application :</span></u>
+                <p>Soient les deux suites suivantes définies par récurrence pour tout \( n \in \mathbb{N} \) :</p>
+                <p>
+                    \(
+                    \begin{cases}
+                    u_0 = 1, & v_0 = 2, \\
+                    u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
+                    \end{cases}
+                    \)
+                </p>
+                <u><span class="highlight">Correction :</span></u>
             </div>
         </div>
+    </div>
 
-        <h2 class="subsection-title">2. Suites géométriques</h2>
-        <div>
+    <!--V. Théorème du point fixe-->
+    <div class="section">
+        <h1 class="section-title">V. Théorème du point fixe</h1>
+        <!--Sous-section -->
 
-            <h3 class="subsubsection-title">a. Définition :</h3>
+        <div class="subsection">
+
+            <!--1. Définition-->
+            <h2 class="subsection-title">1. Définition</h2>
+
             <div>
-                <p>Une suite \( \left(u_{n}\right) \) est dite géométrique si chaque terme s'obtient en multipliant
-                    le
-                    précédent par un même nombre \( q \) appelé raison : \( u_{n+1}=u_{n}\times q. \)</p>
+                <p>Soit \( f \) une fonction définie sur un intervalle \( I \).</p>
+
+                <p>On appelle <b>point fixe</b> de \( f \) tout réel \( \ell \in I \) tel que :</p>
+
+                <p>\( f(\ell) = \ell. \)</p>
+
+                <p>Autrement dit, \( \ell \) est solution de l’équation :</p>
+                <p>\( f(x) = x. \)</p>
+            </div>
+            <!--2. Théorème-->
+            <h2 class="subsection-title">2. Théorème</h2>
+            <div>
+                <p>Soit \( f \) une fonction continue sur un intervalle \( I \).</p>
+
+                <p>Soit \( (u_n) \) une suite définie par récurrence par :</p>
+                <p>\( u_{n+1} = f(u_n) \)</p>
+
+                <p>Si la suite \( (u_n) \) converge vers un réel \( \ell \in I \), alors :</p>
+                <p>\( \ell \text{ est un point fixe de } f. \)</p>
+
+                <p>C’est-à-dire :</p>
+                <p>\( f(\ell) = \ell. \)</p>
             </div>
 
-            <h3 class="subsubsection-title">b. Expression du terme général</h3>
+            <!--3. Preuve détaillée-->
+            <h2 class="subsection-title">3. Preuve détaillée</h2>
             <div>
-                <p>Si le premier terme est \( u_{p} \), alors :</p>
-                <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
-                    <p style="margin: 0;">
-                        <font color="red">\( u_{n}=u_{p}\times q^{n-p} \)</font>
+                <p>On suppose que la suite \( (u_n) \) converge vers un réel \( \ell \in I \).</p>
+
+                <br>
+
+                <p><b>a. Limite de la suite décalée</b></p>
+
+                <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \( (u_{n+1}) \)
+                    converge vers la même limite.</p>
+
+                <p>Ainsi :</p>
+                <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} = \ell \)
+                </p>
+
+                <br>
+
+                <p><b>b. Utilisation de la relation de récurrence</b></p>
+
+                <p>Or, pour tout entier \( n \) :</p>
+                <p>\( u_{n+1} = f(u_n) \)</p>
+
+                <p>Donc :</p>
+                <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
+
+                <br>
+
+                <p><b>c. Utilisation de la continuité</b></p>
+
+                <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
+
+                <p>Par définition de la continuité :</p>
+                <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
+
+                <p>Comme \( u_n \to \ell \), on peut écrire :</p>
+                <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
+
+                <br>
+
+                <p><b>d. Conclusion</b></p>
+
+                <p>On obtient donc :</p>
+                <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
+
+                <p>Mais d’après la première étape :</p>
+                <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
+
+                <p>Ainsi :</p>
+                <p>\( \ell = f(\ell) \)</p>
+
+                <br>
+
+                <p>Donc \( \ell \) est un point fixe de \( f \).</p>
+
+                <p>\( \boxed{f(\ell)=\ell} \)</p>
+            </div>
+
+            <!--4. Méthode pratique-->
+            <h2 class="subsection-title">4. Méthode pratique</h2>
+            <div>
+                <p>Pour déterminer la limite d’une suite définie par :</p>
+
+                <p>\( u_{n+1} = f(u_n), \)</p>
+
+                <p>on procède ainsi :</p>
+
+                <ul>
+                    <li>On montre d’abord que la suite est convergente.</li>
+                    <li>On pose \( \lim\limits_{n\to +\infty} u_n = \ell \).</li>
+                    <li>On passe à la limite dans la relation de récurrence.</li>
+                    <li>On résout l’équation \( f(\ell) = \ell \).</li>
+                </ul>
+                <u><span class="highlight">Exemple :</span></u>
+                <p>Soit la suite définie par :</p>
+
+                <p>\( u_{n+1} = \frac{1}{2}(u_n + 3). \)</p>
+
+                <p>Si la suite converge vers \( \ell \), alors :</p>
+                <p>\( \ell = \frac{1}{2}(\ell + 3). \)</p>
+
+                <p>Donc :</p>
+                <p>\( 2\ell = \ell + 3 \)</p>
+
+                <p>\( \ell = 3. \)</p>
+            </div>
+
+            <!--5. Application du théorème du point fixe-->
+            <h2 class="subsection-title">5. Application du théorème du point fixe</h2>
+
+            <u><span class="highlight">Exercice :</span></u>
+
+            <!--Exercice -->
+            <div>
+                <p>On considère la suite \( (u_n)_{n \in \mathbb{N}} \) définie par \( u_0 > 0 \) et pour tout \( n \in
+                    \mathbb{N} \) par :</p>
+                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
+                <ol type="a">
+                    <li>Montrer que la suite \( (u_n) \) est majorée par 3 (pour \( u_0 \leq 3 \)).</li>
+                    <li>Étudier le sens de variation de la suite \( (u_n) \).</li>
+                    <li>Montrer que la suite \( (u_n) \) converge.</li>
+                    <li>Calculer sa limite.</li>
+                </ol>
+            </div>
+
+            <!--Correction -->
+            <u><span class="highlight">Correction :</span></u>
+
+            <div>
+                <!--a. Montrons que la suite est majorée par 3-->
+                <br>
+                <h3 class="subsubsection-title">a. Montrons que la suite est majorée par 3</h3>
+
+                <div>
+                    <p>On montre par récurrence que :</p>
+                    <p>\( u_n \leq 3 \)</p>
+
+                    <p><b>Initialisation :</b></p>
+                    <p>Si \( u_0 \leq 3 \), la propriété est vraie au rang 0.</p>
+
+                    <p><b>Hérédité :</b></p>
+                    <p>Supposons que \( u_n \leq 3 \).</p>
+
+                    <p>Alors :</p>
+                    <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \leq \frac{1}{2}(3+3) = 3 \)</p>
+
+                    <p>Donc \( u_{n+1} \leq 3 \).</p>
+
+                    <p>La propriété est donc vraie pour tout \( n \).</p>
+                </div>
+
+                <!--b. Étudions la monotonie-->
+                <br>
+                <h3 class="subsubsection-title">b. Étudions la monotonie</h3>
+
+                <div>
+                    <p>Calculons :</p>
+                    <p>\( u_{n+1}-u_n = \frac{1}{2}(u_n+3)-u_n \)</p>
+                    <p>\( = \frac{1}{2}u_n+\frac{3}{2}-u_n = -\frac{1}{2}u_n+\frac{3}{2} = \frac{1}{2}(3-u_n) \)</p>
+
+                    <p>Or on a montré que \( u_n \leq 3 \), donc :</p>
+                    <p>\( 3-u_n \geq 0 \)</p>
+
+                    <p>Ainsi :</p>
+                    <p>\( u_{n+1}-u_n \geq 0 \)</p>
+
+                    <p>La suite est donc croissante.</p>
+                </div>
+
+                <!--c. Conclusion sur la convergence-->
+                <br>
+                <h3 class="subsubsection-title">c. Conclusion sur la convergence</h3>
+
+                <div>
+                    <p>La suite \( (u_n) \) est :</p>
+
+                    <ul>
+                        <li>croissante</li>
+                        <li>majorée par 3</li>
+                    </ul>
+
+                    <p>Donc elle est convergente.</p>
+
+                    <p>On note :</p>
+                    <p>\( \lim_{n\to+\infty} u_n = \ell \)</p>
+                </div>
+
+                <!--d. Utilisation du théorème du point fixe-->
+                <br>
+                <h3 class="subsubsection-title">d. Utilisation du théorème du point fixe</h3>
+
+                <div>
+                    <p>On a :</p>
+                    <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
+
+                    <p>En passant à la limite :</p>
+                    <p>\( \ell=\frac{1}{2}(\ell+3) \)</p>
+
+                    <p>On résout :</p>
+                    <p>\( 2\ell=\ell+3 \)</p>
+                    <p> \( \ell=3 \) </p>
+
+                    <p>\( \boxed{\lim_{n\to+\infty} u_n = 3} \)</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--VI. Suites particulières-->
+    <div class="section">
+        <h1 class="section-title">VI. Suites particulières</h1>
+        <!--Sous-section -->
+
+        <div class="subsection">
+
+            <!--VII. Suites arithmétiques-->
+            <h2 class="subsection-title">1. Suites arithmétiques</h2>
+
+            <div>
+
+                <!--a. Définition-->
+                <h3 class="subsubsection">a. Définition :</h3>
+                <div>
+                    <p>Une suite \( \left(u_{n}\right) \) est <span class="highlight">arithmétique</span> si chaque
+                        terme
+                        s'obtient en
+                        ajoutant au précédent un même nombre <span class="highlight">\( r \)</span> appelé raison :</p>
+                    <p>
+                        <span class="highlight">\( u_{n+1}=u_{n}+r \)</span>
                     </p>
                 </div>
-                <u><span class="highlight">À retenir :</span></u>
+
+                <!--b. Expression du terme général-->
+                <h3 class="subsubsection">b. Expression du terme général</h3>
                 <div>
-                    <p>Pour montrer qu’une suite \( (u_{n}) \) est géométrique de raison \( q \), il suffit de montrer
+                    <p>Si \( (u_n) \) est une suite arithmétique de raison \( r \) et de premier terme \( u_p \), alors
+                        on a
+                        :</p>
+                    <span class="highlight">\( u_n = u_p + (n-p)r \)</span>
+                    <p>Avec \( u_p \) le premier terme, \( p \) l'indice du premier terme et \( r \) la raison.</p>
+                </div>
+
+                <!--À retenir-->
+                <u><span class="highlight">À retenir</span></u>
+                <div>
+                    <p>Pour montrer qu'une suite \( (u_n) \) est arithmétique de raison \( r \), il suffit de montrer
                         que :
                     </p>
+                    <p>\( u_{n+1} - u_n = r \)</p>
+                </div>
 
+                <!--Exemple-->
+                <u><span class="highlight">Exemple :</span></u>
+                <div>
+                    <p>On considère la suite \( (u_n) \) définie par :</p>
+                    <p>\( u_n = 5n + 3 \)</p>
+                    <p>Montrer que \( (u_n) \) est une suite arithmétique dont on précisera la raison et le premier
+                        terme.
+                    </p>
+                </div>
+
+                <!--Exemple-->
+                <u><span class="highlight">Correction :</span></u>
+                <div></div>
+
+                <!--c. Somme des premiers termes-->
+                <h3 class="subsubsection-title">c. Somme des premiers termes</h3>
+                <div>
+                    <p>Soit \( (u_n) \) une suite arithmétique.</p>
+
+                    <p>Pour tous entiers naturels \( n \) et \( p \) tels que \( p \leq n \), on a :</p>
+
+                    <p>De façon générale, si la suite a pour premier terme \( u_p \), alors la somme \(
+                        S_n=u_p+u_{p+1}+\ldots+u_n \) vaut :</p>
                     <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
                         <p style="margin: 0;">
-                            <font color="red">\( \dfrac{u_{n+1}}{u_{n}}=q \)</font>
+                            <font color="red">\( S_n=\dfrac{(n-p+1)(u_p+u_n)}{2} \)</font>
+                        </p>
+                    </div>
+                    <p><b>NB :</b> La somme \( S_n=u_0+u_1+\ldots+u_n \) peut être notée par \( S_n=\sum_{k=0}^{n}u_k
+                        \).
+                    </p>
+                    <br>
+
+                    <p><b>Exemple de sommation :</b></p>
+
+                    <p>\( \sum_{k=0}^{4}(2k+7) = \cdots \)</p>
+
+                    <p>\( \sum_{k=0}^{10}5 = \cdots \)</p>
+                </div>
+
+            </div>
+
+            <!--2. Suites géométriques-->
+            <h2 class="subsection-title">2. Suites géométriques</h2>
+
+            <div>
+
+                <!--a. Définition-->
+                <h3 class="subsubsection-title">a. Définition :</h3>
+                <div>
+                    <p>Une suite \( \left(u_{n}\right) \) est dite géométrique si chaque terme s'obtient en multipliant
+                        le
+                        précédent par un même nombre \( q \) appelé raison : \( u_{n+1}=u_{n}\times q. \)</p>
+                </div>
+
+                <!--b. Expression du terme général-->
+                <h3 class="subsubsection-title">b. Expression du terme général</h3>
+                <div>
+                    <p>Si le premier terme est \( u_{p} \), alors :</p>
+                    <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                        <p style="margin: 0;">
+                            <font color="red">\( u_{n}=u_{p}\times q^{n-p} \)</font>
+                        </p>
+                    </div>
+                    <u><span class="highlight">À retenir :</span></u>
+                    <div>
+                        <p>Pour montrer qu’une suite \( (u_{n}) \) est géométrique de raison \( q \), il suffit de
+                            montrer
+                            que :
+                        </p>
+
+                        <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                            <p style="margin: 0;">
+                                <font color="red">\( \dfrac{u_{n+1}}{u_{n}}=q \)</font>
+                            </p>
+                        </div>
+                    </div>
+                    <u><span class="highlight">Exemple :</span></u>
+                    <div>Montrer que \( (v_{n}) \) est une suite géométrique dont on précisera la raison et le premier
+                        terme
+                        puis
+                        exprimer \( (v_{n}) \) en fonction de \( n \).</p>
+                        <p>
+                            \(
+                            \begin{cases}
+                            u_{0}=5 \\
+                            u_{n + 1}=2u_{n}+3
+                            \end{cases}
+                            \quad \text{et} \quad v_{n} = u_{n} + 3
+                            \)
                         </p>
                     </div>
                 </div>
-                <u><span class="highlight">Exemple :</span></u>
-                <div>Montrer que \( (v_{n}) \) est une suite géométrique dont on précisera la raison et le premier
-                    terme
-                    puis
-                    exprimer \( (v_{n}) \) en fonction de \( n \).</p>
-                    <p>
-                        \(
-                        \begin{cases}
-                        u_{0}=5 \\
-                        u_{n + 1}=2u_{n}+3
-                        \end{cases}
-                        \quad \text{et} \quad v_{n} = u_{n} + 3
-                        \)
-                    </p>
+
+                <!--c. Somme des premiers termes-->
+                <h3 class="subsubsection-title">c. Somme des premiers termes</h3>
+
+                <div>
+                    <p>Pour toute suite géométrique de raison \( q\neq 1 \), on a :</p>
+
+                    <p>\( S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</p>
+
+                    <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
+                        <p style="margin: 0;">
+                            <font color="red">\( S_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</font>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <h3 class="subsubsection-title">c. Somme des premiers termes</h3>
+                <!--d. Sens de variation-->
+                <h3 class="subsubsection-title">d. Sens de variation</h3>
 
-            <div>
-                <p>Pour toute suite géométrique de raison \( q\neq 1 \), on a :</p>
-
-                <p>\( S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</p>
-
-                <div style="border: 2px solid red; padding: 10px; text-align: center; margin: 10px 0;">
-                    <p style="margin: 0;">
-                        <font color="red">\( S_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q} \)</font>
-                    </p>
+                <div>
+                    <ul>
+                        <li>Si \( 0 < q < 1 \), la suite \( \left(u_{n}\right) \) est décroissante.</li>
+                        <li>Si \( q > 1 \), la suite \( \left(u_{n}\right) \) est croissante.</li>
+                        <li>Si \( q=1 \), la suite \( \left(u_{n}\right) \) est constante.</li>
+                    </ul>
                 </div>
-            </div>
 
-            <h3 class="subsubsection-title">d. Sens de variation</h3>
+                <!--Remarque-->
+                <u><span class="highlight">Remarque</span></u>
+                <div>
+                    <p>Soit \( q \) un nombre réel.</p>
 
-            <div>
-                <ul>
-                    <li>Si \( 0 < q < 1 \), la suite \( \left(u_{n}\right) \) est décroissante.</li>
-                    <li>Si \( q > 1 \), la suite \( \left(u_{n}\right) \) est croissante.</li>
-                    <li>Si \( q=1 \), la suite \( \left(u_{n}\right) \) est constante.</li>
-                </ul>
-            </div>
+                    <ul>
+                        <li>Si \( q > 1 \), alors
+                            <p>\( \lim_{n \rightarrow +\infty} q^n = +\infty \)</p>
+                        </li>
+                        <li>Si \( -1 < q < 1 \), alors <p>\( \lim_{n \rightarrow +\infty} q^n = 0 \)</p>
+                        </li>
+                    </ul>
+                </div>
 
-            <u><span class="highlight">Remarque</span></u>
-            <div>
-                <p>Soit \( q \) un nombre réel.</p>
-
-                <ul>
-                    <li>Si \( q > 1 \), alors
-                        <p>\( \lim_{n \rightarrow +\infty} q^n = +\infty \)</p>
-                    </li>
-                    <li>Si \( -1 < q < 1 \), alors <p>\( \lim_{n \rightarrow +\infty} q^n = 0 \)</p>
-                    </li>
-                </ul>
             </div>
 
         </div>
-
     </div>
+
 </body>
 
 </html>
