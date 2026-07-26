@@ -847,9 +847,40 @@
         </div>
         <h2 class="subsection-title">7. Suites adjacentes</h2>
         <div>
-            <span class="highlight">Définition :</span>
-            <span class="highlight">Exemple :</span>
-            <span class="highlight">Exercice D'application :</span>
+            <u><span class="highlight">Définition :</span></u>
+            <p>Deux suites \( u \) et \( v \) sont adjacentes si et seulement si , l’une est croissante, l’autre est
+                décroissante et la limite de leur différence est égale à 0 . C'est-à-dire</p>
+
+            <p>
+                \(
+                \begin{cases}
+                u \textbf{ est croissante}\\
+                v \textbf{ est décroissante}\\
+                \lim_{n\to \infty}(u_{n}-v_{n})=0
+                \end{cases} \textbf{Ou}
+                \begin{cases}
+                v \textbf{ est croissante}\\
+                u \textbf{ est décroissante}\\
+                \lim_{n\to \infty}(u_{n}-v_{n})=0
+                \end{cases}
+                \)
+            </p>
+            <u><span class="highlight">Exemple :</span></u>
+            <p>Soient deux suites définies par :</p>
+            <p>\( u_n = 1-\frac{1}{n}, \quad v_n = 1+\frac{1}{n}. \)</p>
+
+            <p>Montrer que les deux suite sont adjacents.</p>
+            <u><span class="highlight">Exercice D'application :</span></u>
+            <p>Soient les deux suites suivantes définies par récurrence pour tout \( n \in \mathbb{N} \) :</p>
+            <p>
+                \(
+                \begin{cases}
+                u_0 = 1, & v_0 = 2, \\
+                u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
+                \end{cases}
+                \)
+            </p>
+            <u><span class="highlight">Correction :</span></u>
         </div>
     </div>
 </body>
