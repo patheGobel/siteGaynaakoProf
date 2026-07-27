@@ -75,6 +75,6 @@ body {
     font-weight: bold;
 }
 
-.subsubsection {
+.subsection-title .subsubsection-title {
     color: red;
 }
