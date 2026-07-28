@@ -1033,7 +1033,8 @@
                 <p>Le réel \(m\) est un <strong>minorant</strong>.</p>
             </div>
             <div class="example-box">
-                <p><strong>Exemple :</strong> \(u_n = n^2 + 3 \geq 3\). La suite est minorée par 3.</p>
+                <p><strong>Exemple :</strong> \(u_n = n^2 + 3 \geq 3\).</p>
+                <p> La suite est minorée par 3.</p>
             </div>
         </article>
 
@@ -1049,7 +1050,8 @@
                 <p>Le réel \(M\) est un <strong>majorant</strong>.</p>
             </div>
             <div class="example-box">
-                <p><strong>Exemple :</strong> \(u_n = \dfrac{1}{n+1} \leq 1\). La suite est majorée par 1.</p>
+                <p><strong>Exemple :</strong> \(u_n = \dfrac{1}{n+1} \leq 1\).</p>
+                <p> La suite est majorée par 1.</p>
             </div>
         </article>
 
@@ -1063,8 +1065,8 @@
                 <p class="formula-center">\(\exists m, M \in \mathbb{R},\; m \leq u_n \leq M\)</p>
             </div>
             <div class="example-box">
-                <p><strong>Exemple :</strong> \(u_n = \sin(n)\). Comme \(-1 \leq \sin(n) \leq 1\), la suite est bornée.
-                </p>
+                <p><strong>Exemple :</strong> \(u_n = \sin(n)\).</p>
+                <p>Comme \(-1 \leq \sin(n) \leq 1\), la suite est bornée.</p>
             </div>
         </article>
 
@@ -1079,8 +1081,8 @@
                 <p class="formula-center">\(\lim\limits_{n \to +\infty} u_n = \ell\)</p>
             </div>
             <div class="example-box">
-                <p><strong>Exemple :</strong> \(\lim\limits_{n \to +\infty} \dfrac{1}{n} = 0\). La suite converge vers
-                    0.</p>
+                <p><strong>Exemple :</strong> \(\lim\limits_{n \to +\infty} \dfrac{1}{n} = 0\).</p>
+                <p> La suite converge vers 0.</p>
             </div>
         </article>
 
@@ -1162,12 +1164,11 @@
         <article class="subsection">
             <h3 class="subsection-title">1. Définition</h3>
             <div class="definition-box">
-                <p>
-                    Soit \(f\) une fonction définie sur un intervalle \(I\).
-                    Un <span class="highlight">point fixe</span> de \(f\) est un réel \(\ell \in I\) tel que :
+                <p>Soit \( f \) une fonction définie sur un intervalle \( I \).</p>
+                <p>On appelle <span class="highlight">point fixe</span> de \( f \) tout réel \( \ell \in I \) tel que :
                 </p>
-                <p class="formula-center">\(f(\ell) = \ell\)</p>
-                <p>C'est-à-dire une solution de l'équation \(f(x) = x\).</p>
+                <p>\( f(\ell) = \ell. \)</p>
+                <p>Autrement dit, \( \ell \) est solution de l’équation : \( f(x) = x. \)</p>
             </div>
         </article>
 
@@ -1175,12 +1176,16 @@
             <h3 class="subsection-title">2. Théorème</h3>
             <div class="theorem-box">
                 <p><strong>Théorème :</strong></p>
-                <p>
-                    Soit \(f\) continue sur \(I\), et \((u_n)\) définie par \(u_{n+1} = f(u_n)\).
-                    Si \((u_n)\) converge vers \(\ell \in I\), alors :
-                </p>
-                <p class="formula-center">\(f(\ell) = \ell\)</p>
-                <p>La limite est un point fixe de \(f\).</p>
+                <p>Soit \( f \) une fonction continue sur un intervalle \( I \).</p>
+
+                <p>Soit \( (u_n) \) une suite définie par récurrence par :</p>
+                <p>\( u_{n+1} = f(u_n) \)</p>
+
+                <p>Si la suite \( (u_n) \) converge vers un réel \( \ell \in I \), alors :</p>
+                <p>\( \ell \text{ est un point fixe de } f. \)</p>
+
+                <p>C’est-à-dire :</p>
+                <p>\( f(\ell) = \ell. \)</p>
             </div>
         </article>
 
@@ -1188,44 +1193,99 @@
             <h3 class="subsection-title">3. Démonstration</h3>
             <details>
                 <summary>Voir la démonstration</summary>
-                <ol>
-                    <li>
-                        <strong>Suite décalée :</strong> Si \(u_n \to \ell\), alors \(u_{n+1} \to \ell\).
-                    </li>
-                    <li>
-                        <strong>Relation de récurrence :</strong> \(u_{n+1} = f(u_n)\), donc
-                        \(\lim u_{n+1} = \lim f(u_n)\).
-                    </li>
-                    <li>
-                        <strong>Continuité :</strong> Comme \(f\) est continue,
-                        \(\lim f(u_n) = f(\lim u_n) = f(\ell)\).
-                    </li>
-                    <li>
-                        <strong>Conclusion :</strong> \(\ell = f(\ell)\).
-                    </li>
-                </ol>
+                <div>
+                    <p>On suppose que la suite \( (u_n) \) converge vers un réel \( \ell \in I \).</p>
+
+                    <!--a. Limite de la suite décalée-->
+                    <h3 class="subsubsection-title">a. Limite de la suite décalée</h3>
+
+                    <div>
+                        <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \(
+                            (u_{n+1}) \)
+                            converge vers la même limite.</p>
+
+                        <p>Ainsi :</p>
+                        <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} =
+                            \ell
+                            \)
+                        </p>
+                    </div>
+
+                    <!--b. Utilisation de la relation de récurrence-->
+                    <h3 class="subsubsection-title">b. Utilisation de la relation de récurrence</h3>
+
+                    <div>
+                        <p>Or, pour tout entier \( n \) :</p>
+                        <p>\( u_{n+1} = f(u_n) \)</p>
+
+                        <p>Donc :</p>
+                        <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
+                    </div>
+
+                    <!--c. Utilisation de la continuité-->
+                    <h3 class="subsubsection-title">c. Utilisation de la continuité</h3>
+
+                    <div>
+                        <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
+
+                        <p>Par définition de la continuité :</p>
+                        <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
+
+                        <p>Comme \( u_n \to \ell \), on peut écrire :</p>
+                        <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
+                    </div>
+
+                    <!--d. Conclusion-->
+                    <h3 class="subsubsection-title">d. Conclusion</h3>
+
+                    <div>
+                        <p>On obtient donc :</p>
+                        <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
+
+                        <p>Mais d’après la première étape :</p>
+                        <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
+
+                        <p>Ainsi :</p>
+                        <p>\( \ell = f(\ell) \)</p>
+
+                        <p>Donc \( \ell \) est un point fixe de \( f \).</p>
+
+                        <p>\( \boxed{f(\ell)=\ell} \)</p>
+                    </div>
+
+                </div>
             </details>
         </article>
 
         <article class="subsection">
             <h3 class="subsection-title">4. Méthode pratique</h3>
             <div class="method-box">
-                <p><strong>Pour déterminer la limite d'une suite récurrente :</strong></p>
-                <ol>
-                    <li>Montrer que la suite est convergente.</li>
-                    <li>Poser \(\ell = \lim u_n\).</li>
-                    <li>Passer à la limite dans \(u_{n+1} = f(u_n)\).</li>
-                    <li>Résoudre \(f(\ell) = \ell\).</li>
-                </ol>
+                <p>Pour déterminer la limite d’une suite définie par :</p>
+
+                <p>\( u_{n+1} = f(u_n), \)</p>
+
+                <p>on procède ainsi :</p>
+
+                <ul>
+                    <li>On montre d’abord que la suite est convergente.</li>
+                    <li>On pose \( \lim\limits_{n\to +\infty} u_n = \ell \).</li>
+                    <li>On passe à la limite dans la relation de récurrence.</li>
+                    <li>On résout l’équation \( f(\ell) = \ell \).</li>
+                </ul>
             </div>
             <div class="example-box">
                 <p><strong>Exemple :</strong> \(u_{n+1} = \frac{1}{2}(u_n + 3)\)</p>
-                <p>Si \((u_n)\) converge vers \(\ell\), alors :</p>
-                <div class="formula-block">
-                    \[
-                    \ell = \frac{1}{2}(\ell + 3) \implies 2\ell = \ell + 3 \implies \ell = 3
-                    \]
-                </div>
+                <p>Soit la suite définie par :</p>
+
+                <p>\( u_{n+1} = \frac{1}{2}(u_n + 3). \)</p>
+
+                <p>Si la suite converge vers \( \ell \), alors :</p>
+                <p>\( \ell = \frac{1}{2}(\ell + 3). \)</p>
+
+                <p>Donc :</p>
+                <p>\( 2\ell = \ell + 3 \)</p>
+
+                <p>\( \ell = 3. \)</p>
             </div>
         </article>
 
@@ -1233,22 +1293,75 @@
             <h3 class="subsection-title">5. Application</h3>
             <div class="exercise-box">
                 <p><strong>✏️ Exercice :</strong></p>
-                <p>
-                    Soit \((u_n)\) définie par \(u_0 > 0\) et \(u_{n+1} = \dfrac{1}{2}(u_n + 3)\).
-                </p>
+                <p>On considère la suite \( (u_n)_{n \in \mathbb{N}} \) définie par \( u_0 > 0 \) et pour tout \( n \in
+                    \mathbb{N} \) par :</p>
+                <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
                 <ol type="a">
-                    <li>Montrer que \((u_n)\) est majorée par 3 (si \(u_0 \leq 3\)).</li>
-                    <li>Étudier le sens de variation de \((u_n)\).</li>
-                    <li>Montrer que \((u_n)\) converge.</li>
+                    <li>Montrer que la suite \( (u_n) \) est majorée par 3 (pour \( u_0 \leq 3 \)).</li>
+                    <li>Étudier le sens de variation de la suite \( (u_n) \).</li>
+                    <li>Montrer que la suite \( (u_n) \) converge.</li>
                     <li>Calculer sa limite.</li>
                 </ol>
                 <details>
                     <summary>Voir la correction</summary>
-                    <p><strong>a.</strong> Par récurrence : si \(u_n \leq 3\), alors \(u_{n+1} = \frac{1}{2}(u_n+3) \leq
-                        3\).</p>
-                    <p><strong>b.</strong> \(u_{n+1} - u_n = \frac{1}{2}(3 - u_n) \geq 0\), donc croissante.</p>
-                    <p><strong>c.</strong> Croissante et majorée par 3 ⇒ convergente.</p>
-                    <p><strong>d.</strong> \(\ell = \frac{1}{2}(\ell + 3) \implies \ell = 3\).</p>
+                    <!--a. Montrons que la suite est majorée par 3-->
+                    <br>
+                    <ol type="a">
+                        <li>Montrons que la suite est majorée par 3</li>
+                        <p>On montre par récurrence que :</p>
+                        <p>On montre par récurrence que :</p>
+                        <p>\( u_n \leq 3 \)</p>
+
+                        <p><b>Initialisation :</b></p>
+                        <p>Si \( u_0 \leq 3 \), la propriété est vraie au rang 0.</p>
+
+                        <p><b>Hérédité :</b></p>
+                        <p>Supposons que \( u_n \leq 3 \).</p>
+
+                        <p>Alors :</p>
+                        <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \leq \frac{1}{2}(3+3) = 3 \)</p>
+
+                        <p>Donc \( u_{n+1} \leq 3 \).</p>
+
+                        <p>La propriété est donc vraie pour tout \( n \).</p>
+                        <li>Étudions la monotonie</li>
+                        <p>Calculons :</p>
+                        <p>\( u_{n+1}-u_n = \frac{1}{2}(u_n+3)-u_n \)</p>
+                        <p>\( = \frac{1}{2}u_n+\frac{3}{2}-u_n = -\frac{1}{2}u_n+\frac{3}{2} = \frac{1}{2}(3-u_n) \)</p>
+
+                        <p>Or on a montré que \( u_n \leq 3 \), donc :</p>
+                        <p>\( 3-u_n \geq 0 \)</p>
+
+                        <p>Ainsi :</p>
+                        <p>\( u_{n+1}-u_n \geq 0 \)</p>
+
+                        <p>La suite est donc croissante.</p>
+                        <li>Conclusion sur la convergence</li>
+                        <p>La suite \( (u_n) \) est :</p>
+
+                        <ul>
+                            <li>croissante</li>
+                            <li>majorée par 3</li>
+                        </ul>
+
+                        <p>Donc elle est convergente.</p>
+
+                        <p>On note :</p>
+                        <p>\( \lim_{n\to+\infty} u_n = \ell \)</p>
+                        <li>Utilisation du théorème du point fixe</li>
+                        <p>On a :</p>
+                        <p>\( u_{n+1}=\frac{1}{2}(u_n+3) \)</p>
+
+                        <p>En passant à la limite :</p>
+                        <p>\( \ell=\frac{1}{2}(\ell+3) \)</p>
+
+                        <p>On résout :</p>
+                        <p>\( 2\ell=\ell+3 \)</p>
+                        <p> \( \ell=3 \) </p>
+
+                        <p>\( \boxed{\lim_{n\to+\infty} u_n = 3} \)</p>
+                    </ol>
+                    
                 </details>
             </div>
         </article>
