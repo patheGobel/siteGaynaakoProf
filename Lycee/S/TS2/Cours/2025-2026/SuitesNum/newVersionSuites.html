@@ -332,12 +332,12 @@
                 <p><strong>✏️ Exercice d'application :</strong></p>
                 <p>Soit \((u_n)\) définie par :</p>
                 <div class="formula-block">
-                    \[
+                    \(
                     \begin{cases}
                     u_{n+1} = \sqrt{5u_n} + 1 \\
                     u_0 = 1
                     \end{cases}
-                    \]
+                    \)
                 </div>
                 <details>
                     <summary>Voir la correction</summary>
@@ -411,10 +411,9 @@
 
             <h4 class="subsubsection-title">d. Méthode par récurrence</h4>
             <div class="method-box">
-                <p>
-                    On démontre par récurrence que \(u_{n+1} \geq u_n\) (ou \(u_{n+1} \leq u_n\))
-                    lorsque la différence est difficile à étudier directement.
-                </p>
+                <p>Dans certains cas, il est difficile d'étudier directement \( u_{n+1} - u_n \).</p>
+                <p>On peut alors démontrer par récurrence une propriété du type : \(u_{n+1} \geq u_n\) (ou \(u_{n+1}
+                    \leq u_n\))</p>
             </div>
         </article>
 
@@ -461,6 +460,130 @@
                         </ol>
                     </li>
                 </ol>
+                <details>
+                    <summary> Voir la correction complète</summary>
+
+                    <!-- ===== Question 1 ===== -->
+                    <div style="margin-top: 16px; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <p><strong>1) \(u_n = n^2 + 3n + 1\)</strong></p>
+
+                        <p><strong>a) Étude du sens de variation avec la différence :</strong></p>
+                        <p>Calculons \(u_{n+1} - u_n\) :</p>
+                        <div class="formula-block">
+                            \[
+                            \begin{align*}
+                            u_{n+1} - u_n &= \left[(n+1)^2 + 3(n+1) + 1\right] - \left[n^2 + 3n + 1\right] \\
+                            &= (n^2 + 2n + 1 + 3n + 3 + 1) - (n^2 + 3n + 1) \\
+                            &= (n^2 + 5n + 5) - (n^2 + 3n + 1) \\
+                            &= 2n + 4 \\
+                            &= 2(n + 2)
+                            \end{align*}
+                            \]
+                        </div>
+
+                        <p>Pour tout \(n \in \mathbb{N}\), \(n \geq 0\), donc \(n + 2 > 0\), d'où :</p>
+                        <p class="formula-center">\(u_{n+1} - u_n = 2(n + 2) > 0\)</p>
+
+                        <p>Comme \(u_{n+1} - u_n > 0\) pour tout \(n \in \mathbb{N}\), la suite \((u_n)\) est <span
+                                class="highlight">strictement croissante</span>.</p>
+
+                        <p><strong>b) Minimum de la suite :</strong></p>
+                        <p>La suite étant strictement croissante, son minimum est atteint au premier terme :</p>
+                        <p class="formula-center">\(u_0 = 0^2 + 3 \times 0 + 1 = 1\)</p>
+                        <p>Donc le minimum de la suite est \(\boxed{1}\) atteint en \(n = 0\).</p>
+                    </div>
+
+                    <!-- ===== Question 2 ===== -->
+                    <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <p><strong>2) \(v_n = 2^n\)</strong></p>
+
+                        <p><strong>a) Étude du sens de variation avec le quotient :</strong></p>
+                        <p>Les termes sont strictement positifs (\(v_n > 0\)), on peut utiliser la méthode du quotient :
+                        </p>
+                        <div class="formula-block">
+                            \[
+                            \frac{v_{n+1}}{v_n} = \frac{2^{n+1}}{2^n} = 2
+                            \]
+                        </div>
+
+                        <p>Comme \(\dfrac{v_{n+1}}{v_n} = 2 > 1\) pour tout \(n \in \mathbb{N}\), la suite \((v_n)\) est
+                            <span class="highlight">strictement croissante</span>.</p>
+                    </div>
+
+                    <!-- ===== Question 3 ===== -->
+                    <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <p><strong>3) \(w_n = \dfrac{n}{n+1}\)</strong></p>
+
+                        <p><strong>a) Étude du sens de variation avec la différence :</strong></p>
+                        <p>Calculons \(w_{n+1} - w_n\) :</p>
+                        <div class="formula-block">
+                            \[
+                            \begin{align*}
+                            w_{n+1} - w_n &= \frac{n+1}{n+2} - \frac{n}{n+1} \\
+                            &= \frac{(n+1)(n+1) - n(n+2)}{(n+2)(n+1)} \\
+                            &= \frac{(n^2 + 2n + 1) - (n^2 + 2n)}{(n+2)(n+1)} \\
+                            &= \frac{1}{(n+2)(n+1)}
+                            \end{align*}
+                            \]
+                        </div>
+
+                        <p>Pour tout \(n \in \mathbb{N}\), \((n+2)(n+1) > 0\), donc :</p>
+                        <p class="formula-center">\(w_{n+1} - w_n = \dfrac{1}{(n+2)(n+1)} > 0\)</p>
+
+                        <p>Comme \(w_{n+1} - w_n > 0\) pour tout \(n \in \mathbb{N}\), la suite \((w_n)\) est <span
+                                class="highlight">strictement croissante</span>.</p>
+                    </div>
+
+                    <!-- ===== Question 4 ===== -->
+                    <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <p><strong>4) \(t_0 = 1,\quad t_{n+1} = \dfrac{1}{2}(t_n + 3)\)</strong></p>
+
+                        <p><strong>a) Calcul des premiers termes :</strong></p>
+                        <div class="formula-block">
+                            \[
+                            \begin{align*}
+                            t_0 &= 1 \\
+                            t_1 &= \frac{1}{2}(1 + 3) = \frac{4}{2} = 2 \\
+                            t_2 &= \frac{1}{2}(2 + 3) = \frac{5}{2} = 2.5 \\
+                            t_3 &= \frac{1}{2}\left(\frac{5}{2} + 3\right) = \frac{1}{2}\left(\frac{5}{2} +
+                            \frac{6}{2}\right) = \frac{1}{2} \times \frac{11}{2} = \frac{11}{4} = 2.75 \\
+                            t_4 &= \frac{1}{2}\left(\frac{11}{4} + 3\right) = \frac{1}{2}\left(\frac{11}{4} +
+                            \frac{12}{4}\right) = \frac{1}{2} \times \frac{23}{4} = \frac{23}{8} = 2.875
+                            \end{align*}
+                            \]
+                        </div>
+                        <p>Les premiers termes sont : \(1, 2, \frac{5}{2}, \frac{11}{4}, \frac{23}{8}, \dots\)</p>
+
+                        <p><strong>b) Montrons que \(t_{n+1} - t_n = \dfrac{1}{2}(3 - t_n)\) :</strong></p>
+                        <div class="formula-block">
+                            \[
+                            \begin{align*}
+                            t_{n+1} - t_n &= \frac{1}{2}(t_n + 3) - t_n \\
+                            &= \frac{t_n}{2} + \frac{3}{2} - t_n \\
+                            &= \frac{3}{2} - \frac{t_n}{2} \\
+                            &= \frac{1}{2}(3 - t_n)
+                            \end{align*}
+                            \]
+                        </div>
+
+                        <p><strong>c) Étude du sens de variation en supposant \(t_n < 3\) :</strong>
+                        </p>
+                        <p>On a démontré que :</p>
+                        <p class="formula-center">\(t_{n+1} - t_n = \dfrac{1}{2}(3 - t_n)\)</p>
+
+                        <p>Si \(t_n < 3\), alors \(3 - t_n> 0\), donc :</p>
+                        <p class="formula-center">\(t_{n+1} - t_n = \dfrac{1}{2}(3 - t_n) > 0\)</p>
+
+                        <p>Comme \(t_{n+1} - t_n > 0\) pour tout \(n \in \mathbb{N}\), la suite \((t_n)\) est <span
+                                class="highlight">strictement croissante</span>.</p>
+
+                        <div class="note" style="margin-top: 12px;">
+                            <strong>💡 Remarque :</strong> La suite \((t_n)\) est croissante et majorée par 3. D'après
+                            le théorème de convergence monotone, elle converge vers une limite \(\ell\) qui vérifie :
+                            \(\ell = \frac{1}{2}(\ell + 3) \implies \ell = 3\).
+                        </div>
+                    </div>
+                </details>
             </div>
         </article>
     </section>
@@ -573,24 +696,24 @@
                     <li>
                         <p>Soit \((u_n)\) définie par :</p>
                         <div class="formula-block">
-                            \[
+                            \(
                             \begin{cases}
                             u_{n+1} = \frac{1}{3}u_n + \frac{5}{3} \\
                             u_0 = 1
                             \end{cases}
-                            \]
+                            \)
                         </div>
                         <p>Montrer que \(\forall n \in \mathbb{N},\; u_n < \frac{5}{2}\).</p>
                     </li>
                     <li>
                         <p>Soit \((u_n)\) définie par :</p>
                         <div class="formula-block">
-                            \[
+                            \(
                             \begin{cases}
                             u_{n+1} = \sqrt{12 + u_n} \\
                             u_0 = 0
                             \end{cases}
-                            \]
+                            \)
                         </div>
                         <p>Montrer que \(\forall n \in \mathbb{N}^*,\; 3 \leq u_n \leq 4\).</p>
                     </li>
