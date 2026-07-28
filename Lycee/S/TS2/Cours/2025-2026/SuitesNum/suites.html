@@ -989,57 +989,62 @@
             <div>
                 <p>On suppose que la suite \( (u_n) \) converge vers un réel \( \ell \in I \).</p>
 
-                <br>
+                <!--a. Limite de la suite décalée-->
+                <h3 class="subsubsection-title">a. Limite de la suite décalée</h3>
 
-                <p><b>a. Limite de la suite décalée</b></p>
+                <div>
+                    <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \(
+                        (u_{n+1}) \)
+                        converge vers la même limite.</p>
 
-                <p>On sait que si une suite \( (u_n) \) converge vers \( \ell \), alors la suite décalée \( (u_{n+1}) \)
-                    converge vers la même limite.</p>
+                    <p>Ainsi :</p>
+                    <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} = \ell
+                        \)
+                    </p>
+                </div>
 
-                <p>Ainsi :</p>
-                <p>\( \lim_{n\to +\infty} u_n = \ell \quad \Longrightarrow \quad \lim_{n\to +\infty} u_{n+1} = \ell \)
-                </p>
+                <!--b. Utilisation de la relation de récurrence-->
+                <h3 class="subsubsection-title">b. Utilisation de la relation de récurrence</h3>
 
-                <br>
+                <div>
+                    <p>Or, pour tout entier \( n \) :</p>
+                    <p>\( u_{n+1} = f(u_n) \)</p>
 
-                <p><b>b. Utilisation de la relation de récurrence</b></p>
+                    <p>Donc :</p>
+                    <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
+                </div>
 
-                <p>Or, pour tout entier \( n \) :</p>
-                <p>\( u_{n+1} = f(u_n) \)</p>
+                <!--c. Utilisation de la continuité-->
+                <h3 class="subsubsection-title">c. Utilisation de la continuité</h3>
 
-                <p>Donc :</p>
-                <p>\( \lim_{n\to +\infty} u_{n+1} = \lim_{n\to +\infty} f(u_n) \)</p>
+                <div>
+                    <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
 
-                <br>
+                    <p>Par définition de la continuité :</p>
+                    <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
 
-                <p><b>c. Utilisation de la continuité</b></p>
+                    <p>Comme \( u_n \to \ell \), on peut écrire :</p>
+                    <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
+                </div>
 
-                <p>La fonction \( f \) est continue sur \( I \) et \( \ell \in I \).</p>
+                <!--d. Conclusion-->
+                <h3 class="subsubsection-title">d. Conclusion</h3>
 
-                <p>Par définition de la continuité :</p>
-                <p>\( \lim_{x \to \ell} f(x) = f(\ell) \)</p>
+                <div>
+                    <p>On obtient donc :</p>
+                    <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
 
-                <p>Comme \( u_n \to \ell \), on peut écrire :</p>
-                <p>\( \lim_{n\to +\infty} f(u_n) = f\!\left(\lim_{n\to +\infty} u_n\right) = f(\ell) \)</p>
+                    <p>Mais d’après la première étape :</p>
+                    <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
 
-                <br>
+                    <p>Ainsi :</p>
+                    <p>\( \ell = f(\ell) \)</p>
 
-                <p><b>d. Conclusion</b></p>
+                    <p>Donc \( \ell \) est un point fixe de \( f \).</p>
 
-                <p>On obtient donc :</p>
-                <p>\( \lim_{n\to +\infty} u_{n+1} = f(\ell) \)</p>
+                    <p>\( \boxed{f(\ell)=\ell} \)</p>
+                </div>
 
-                <p>Mais d’après la première étape :</p>
-                <p>\( \lim_{n\to +\infty} u_{n+1} = \ell \)</p>
-
-                <p>Ainsi :</p>
-                <p>\( \ell = f(\ell) \)</p>
-
-                <br>
-
-                <p>Donc \( \ell \) est un point fixe de \( f \).</p>
-
-                <p>\( \boxed{f(\ell)=\ell} \)</p>
             </div>
 
             <!--4. Méthode pratique-->
