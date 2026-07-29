@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Similitudes planes directes - TS2</title>
+
+    <!-- ===== Feuilles de style ===== -->
+    <link rel="stylesheet" href="similitude.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <h1>📐 Similitudes planes directes</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    I. COMPLEXE ET TRANSFORMATION DU PLAN
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">I. Complexe et transformation du plan</h2>
+
+        <!-- 1. Fonction associée -->
+        <article class="subsection">
+            <h3 class="subsection-title">1. Fonction dans $\mathbb{C}$ associée à une transformation du plan</h3>
+
+            <div class="clearfix">
+                <div class="float-left">
+                    <p>Soit</p>
+                    <p> $\begin{aligned} f : &\mathbb{C} \to \mathbb{C}\\ &z \to f(z) \end{aligned}$</p>
+                </div>
+                <div class="float-right" style="text-align: right;">
+                    
+                    <p><p>Soit</p><br>$\begin{aligned} F : &\mathcal{P} \to \mathcal{P}\\ &M(z) \to M'(z') \end{aligned}$</p>
+                </div>
+            </div>
+
+            <div class="definition-box">
+                <p><strong>Si $f$ est une bijection de $\mathbb{C}$ dans $\mathbb{C}$, alors</strong></p>
+                <p>$F$ est la transformation du plan associée à la bijection complexe $f$ dans $\mathbb{C}$.</p>
+            </div>
+        </article>
+
+        <!-- 2. Transformations élémentaires -->
+        <article class="subsection">
+            <h3 class="subsection-title">2. Transformations élémentaires du plan</h3>
+
+            <p><strong>Soient M, N, P et Q les points d'affixes respectives $z$, $\bar{z}$, $-z$ et $-\bar{z}$.</strong></p>
+
+            <!-- Figure : représentation graphique -->
+            <figure>
+                <svg viewBox="-8.5 -6.5 17 13" style="max-width: 500px; width: 100%; height: auto; background: white; border-radius: 8px; border: 1px solid #e2e8f0; padding: 8px;">
+                    <!-- Grille -->
+                    <rect x="-8.5" y="-6.5" width="17" height="13" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+                    <g stroke="#e2e8f0" stroke-width="0.5">
+                        <line x1="-8" y1="-6" x2="8" y2="-6"/>
+                        <line x1="-8" y1="-5" x2="8" y2="-5"/>
+                        <line x1="-8" y1="-4" x2="8" y2="-4"/>
+                        <line x1="-8" y1="-3" x2="8" y2="-3"/>
+                        <line x1="-8" y1="-2" x2="8" y2="-2"/>
+                        <line x1="-8" y1="-1" x2="8" y2="-1"/>
+                        <line x1="-8" y1="0" x2="8" y2="0"/>
+                        <line x1="-8" y1="1" x2="8" y2="1"/>
+                        <line x1="-8" y1="2" x2="8" y2="2"/>
+                        <line x1="-8" y1="3" x2="8" y2="3"/>
+                        <line x1="-8" y1="4" x2="8" y2="4"/>
+                        <line x1="-8" y1="5" x2="8" y2="5"/>
+                        <line x1="-8" y1="6" x2="8" y2="6"/>
+                        <line x1="-8" y1="-6" x2="-8" y2="6"/>
+                        <line x1="-7" y1="-6" x2="-7" y2="6"/>
+                        <line x1="-6" y1="-6" x2="-6" y2="6"/>
+                        <line x1="-5" y1="-6" x2="-5" y2="6"/>
+                        <line x1="-4" y1="-6" x2="-4" y2="6"/>
+                        <line x1="-3" y1="-6" x2="-3" y2="6"/>
+                        <line x1="-2" y1="-6" x2="-2" y2="6"/>
+                        <line x1="-1" y1="-6" x2="-1" y2="6"/>
+                        <line x1="0" y1="-6" x2="0" y2="6"/>
+                        <line x1="1" y1="-6" x2="1" y2="6"/>
+                        <line x1="2" y1="-6" x2="2" y2="6"/>
+                        <line x1="3" y1="-6" x2="3" y2="6"/>
+                        <line x1="4" y1="-6" x2="4" y2="6"/>
+                        <line x1="5" y1="-6" x2="5" y2="6"/>
+                        <line x1="6" y1="-6" x2="6" y2="6"/>
+                        <line x1="7" y1="-6" x2="7" y2="6"/>
+                        <line x1="8" y1="-6" x2="8" y2="6"/>
+                    </g>
+                    <!-- Axes -->
+                    <line x1="-8.5" y1="0" x2="8.5" y2="0" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+                    <line x1="0" y1="-6.5" x2="0" y2="6.5" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+                        </marker>
+                    </defs>
+                    <!-- Labels -->
+                    <text x="8.2" y="-0.3" font-size="12" font-family="Arial">x</text>
+                    <text x="0.3" y="-6.3" font-size="12" font-family="Arial">y</text>
+                    <text x="-0.8" y="1.2" font-size="10" font-family="Arial">0</text>
+                    <!-- Graduations -->
+                    <g font-size="8" font-family="Arial">
+                        <text x="0.8" y="-0.3">1</text>
+                        <text x="1.8" y="-0.3">2</text>
+                        <text x="2.8" y="-0.3">3</text>
+                        <text x="3.8" y="-0.3">4</text>
+                        <text x="4.8" y="-0.3">5</text>
+                        <text x="5.8" y="-0.3">6</text>
+                        <text x="6.8" y="-0.3">7</text>
+                        <text x="7.8" y="-0.3">8</text>
+                        <text x="-1.2" y="-0.3">-1</text>
+                        <text x="-2.2" y="-0.3">-2</text>
+                        <text x="-3.2" y="-0.3">-3</text>
+                        <text x="-4.2" y="-0.3">-4</text>
+                        <text x="-5.2" y="-0.3">-5</text>
+                        <text x="-6.2" y="-0.3">-6</text>
+                        <text x="-7.2" y="-0.3">-7</text>
+                        <text x="-8.2" y="-0.3">-8</text>
+                        <text x="-0.8" y="-1.2">-1</text>
+                        <text x="-0.8" y="-2.2">-2</text>
+                        <text x="-0.8" y="-3.2">-3</text>
+                        <text x="-0.8" y="-4.2">-4</text>
+                        <text x="-0.8" y="-5.2">-5</text>
+                        <text x="-0.8" y="-6.2">-6</text>
+                        <text x="-0.8" y="0.8">1</text>
+                        <text x="-0.8" y="1.8">2</text>
+                        <text x="-0.8" y="2.8">3</text>
+                        <text x="-0.8" y="3.8">4</text>
+                        <text x="-0.8" y="4.8">5</text>
+                        <text x="-0.8" y="5.8">6</text>
+                    </g>
+                    <!-- Vecteurs unitaires -->
+                    <line x1="0" y1="0" x2="1" y2="0" stroke="black" stroke-width="3" marker-end="url(#arrow)"/>
+                    <text x="0.3" y="-0.5" font-size="10" font-family="Arial" font-style="italic">u</text>
+                    <line x1="0" y1="0" x2="0" y2="1" stroke="black" stroke-width="3" marker-end="url(#arrow)"/>
+                    <text x="-0.6" y="1" font-size="10" font-family="Arial" font-style="italic">v</text>
+                    <!-- Rectangle et points -->
+                    <polygon points="2,2 2,-2 -2,-2 -2,2" fill="none" stroke="black" stroke-width="1.5"/>
+                    <circle cx="2" cy="2" r="3" fill="black"/>
+                    <text x="2.5" y="2.8" font-size="12" font-family="Arial" font-weight="bold">M</text>
+                    <circle cx="2" cy="-2" r="3" fill="black"/>
+                    <text x="2.5" y="-2.2" font-size="12" font-family="Arial" font-weight="bold">N</text>
+                    <circle cx="-2" cy="-2" r="3" fill="black"/>
+                    <text x="-3.5" y="-2.2" font-size="12" font-family="Arial" font-weight="bold">P</text>
+                    <circle cx="-2" cy="2" r="3" fill="black"/>
+                    <text x="-3.5" y="2.8" font-size="12" font-family="Arial" font-weight="bold">Q</text>
+                </svg>
+                <figcaption>Figure 1 : Transformations élémentaires dans le plan complexe</figcaption>
+            </figure>
+
+            <ul>
+                <li><strong>La symétrie d'axe (OI) a pour écriture complexe $z' = \bar{z}$.</strong></li>
+                <li><strong>La symétrie d'axe (OJ) a pour écriture complexe $z' = -\bar{z}$.</strong></li>
+                <li><strong>La symétrie de centre O a pour écriture complexe $z' = -z$.</strong></li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    II. TRANSLATION
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">II. Translation</h2>
+
+        <div class="theorem-box">
+            <p><strong>Théorème :</strong></p>
+            <p>Toute transformation du plan d'écriture complexe $z' = z + b$, $b \in \mathbb{C}$, est une translation de vecteur $\vec{u}$ d'affixe $b$.</p>
+        </div>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration : Écriture complexe d'une translation</h3>
+
+            <div class="formula-block">
+                $t_{\vec{u}} : \mathcal{P} \to \mathcal{P}$<br />
+                $M(z) \to t_{\vec{u}}(M) = M'(z')$
+            </div>
+
+            <p>$t_{\vec{u}}(M) = M' \iff \vec{u} = \overrightarrow{MM'} \iff z_{\vec{u}} = z_{\overrightarrow{MM'}}$</p>
+
+            <p>$z_{\vec{u}} = z_{\overrightarrow{MM'}} = z_{M'} - z_M$</p>
+
+            <p>On pose : $z_{\vec{u}} = b$.</p>
+
+            <p>On obtient : $b = z' - z$ d'où $\boxed{z' = z + b}$.</p>
+
+            <div class="tip-box">
+                <p><strong>💡 Conclusion :</strong> Toute écriture complexe de la forme $z' = z + b$ est une translation de vecteur $\vec{u}$ d'affixe $b$.</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <ol>
+                    <li>Donner la nature de la transformation du plan d'écriture complexe : $z' = z - 3 + 2i$.</li>
+                    <li>Soit la translation de vecteur $\vec{u}$ d'affixe $-2 + i$. Donner son écriture complexe.</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1)</strong> $z' = z - 3 + 2i$ avec $b = -3 + 2i$.</p>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            La transformation est la translation de vecteur $\vec{u}$ d'affixe $-3 + 2i$.
+                        </p>
+
+                        <p><strong>2)</strong> Le vecteur $\vec{u}$ est d'affixe $-2 + i$ donc $b = -2 + i$.</p>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            La translation de vecteur $\vec{u}$ d'affixe $-2 + i$ est d'écriture complexe : $z' = z - 2 + i$.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    III. HOMOTHÉTIE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">III. Homothétie</h2>
+
+        <div class="theorem-box">
+            <p><strong>Théorème :</strong></p>
+            <p>Toute transformation du plan d'écriture complexe $z' = az + b$, $a \in \mathbb{R} \setminus \{0; 1\}$, $b \in \mathbb{C}$, est une homothétie de rapport $k = a$ et de centre $\Omega$ tel que $z_{\Omega} = \dfrac{b}{1 - a}$.</p>
+        </div>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration : Écriture complexe d'une homothétie</h3>
+
+            <div class="formula-block">
+                $h(\Omega, k) : \mathcal{P} \to \mathcal{P}$<br />
+                $M(z) \to h(\Omega, k)(M) = M'(z')$
+            </div>
+
+            <p>$h(\Omega, k)(M) = M' \iff \overrightarrow{\Omega M'} = k \overrightarrow{\Omega M} \iff z_{\overrightarrow{\Omega M'}} = z_{k \overrightarrow{\Omega M}}$</p>
+
+            <p>$z_{\overrightarrow{\Omega M'}} = k z_{\overrightarrow{\Omega M}} \iff z_{M'} - z_{\Omega} = k(z_M - z_{\Omega})$</p>
+
+            <p>On obtient : $z' - z_{\Omega} = k(z - z_{\Omega})$, donc $z' = kz + (1 - k)z_{\Omega}$.</p>
+
+            <p>Posons $k = a$ et $b = (1 - k)z_{\Omega}$ donc $z' = az + b$.</p>
+
+            <p>$k = a$ donc $b = (1 - a)z_{\Omega}$ donc $\boxed{z_{\Omega} = \dfrac{b}{1 - a}}$.</p>
+
+            <div class="tip-box">
+                <p><strong>💡 Conclusion :</strong> Toute transformation du plan d'écriture complexe $z' = az + b$, $a \in \mathbb{R} \setminus \{0; 1\}$, $b \in \mathbb{C}$, est une homothétie de rapport $k = a$ et de centre $\Omega$ tel que $z_{\Omega} = \dfrac{b}{1 - a}$.</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <ol>
+                    <li>Donner la nature de la transformation du plan d'écriture complexe : $z' = -\frac{1}{2}z + 3 - 6i$.</li>
+                    <li>Soit l'homothétie de rapport -2 et de centre A d'affixe $-1 + i$. Donner son écriture complexe.</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1)</strong> $a = -\frac{1}{2}$ et $b = 3 - 6i$.</p>
+                        <p>$z_{\Omega} = \dfrac{b}{1 - a} = \dfrac{3 - 6i}{1 - (-\frac{1}{2})} = \dfrac{3 - 6i}{\frac{3}{2}} = 2 - 4i$.</p>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            La transformation est l'homothétie de rapport $-\frac{1}{2}$ et de centre $\Omega$ d'affixe $2 - 4i$.
+                        </p>
+
+                        <p><strong>2)</strong> $k = a = -2$, $z_A = -1 + i$.</p>
+                        <p>$b = (1 - a)z_A = (1 - (-2))(-1 + i) = -3 + 3i$.</p>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            L'homothétie est d'écriture complexe : $z' = -2z - 3 + 3i$.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    IV. ROTATION
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">IV. Rotation</h2>
+
+        <div class="theorem-box">
+            <p><strong>Théorème :</strong></p>
+            <p>Toute transformation du plan d'écriture complexe $z' = az + b$, $a \in \mathbb{C} \setminus \mathbb{R}$, $|a| = 1$, $b \in \mathbb{C}$, est une rotation d'angle $\theta = \arg(a) \ (2\pi)$ et de centre $\Omega$ tel que $z_{\Omega} = \dfrac{b}{1 - a}$.</p>
+        </div>
+
+        <div class="definition-box">
+            <p><strong>Soit $z' = az + b$, $a \in \mathbb{C}$, $|a| = 1$, $b \in \mathbb{C}$ l'écriture complexe de la rotation d'angle $\theta$ et de centre $\Omega$ alors</strong></p>
+            <p class="formula-center">$a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$.</p>
+        </div>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration : Écriture complexe d'une rotation</h3>
+
+            <p>Soit $r$ une rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta$. Soit $M$ un point du plan d'affixe $z$ et $M'$ son image par $r$ d'affixe $z'$.</p>
+
+            <h4 style="margin: 16px 0 8px; color: var(--primary);">1. Définition géométrique</h4>
+            <p>Par définition de la rotation $r(\Omega, \theta)$, le point $M'$ est l'image de $M$ si et seulement si :</p>
+            <ul>
+                <li>$\Omega M' = \Omega M$ (conservation de la distance au centre)</li>
+                <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$ (mesure de l'angle orienté)</li>
+            </ul>
+
+            <h4 style="margin: 16px 0 8px; color: var(--primary);">2. Traduction complexe</h4>
+            <p>Ces deux conditions se traduisent avec les affixes par :</p>
+            <ol>
+                <li>$|z' - z_{\Omega}| = |z - z_{\Omega}|$ ce qui implique $\left| \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right| = 1$</li>
+                <li>$\arg\left( \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv \theta \pmod{2\pi}$</li>
+            </ol>
+
+            <p>Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ a donc pour module $1$ et pour argument $\theta$. D'après la forme exponentielle :</p>
+            <div class="formula-block">
+                \[
+                \frac{z' - z_{\Omega}}{z - z_{\Omega}} = e^{i\theta}
+                \]
+            </div>
+
+            <h4 style="margin: 16px 0 8px; color: var(--primary);">3. Passage à la forme $z' = az + b$</h4>
+            <p>En isolant $z'$, on obtient :</p>
+            <div class="formula-block">
+                \[
+                \begin{align*}
+                z' - z_{\Omega} &= e^{i\theta}(z - z_{\Omega}) \\
+                z' &= e^{i\theta}z - e^{i\theta}z_{\Omega} + z_{\Omega} \\
+                z' &= e^{i\theta}z + (1 - e^{i\theta})z_{\Omega}
+                \end{align*}
+                \]
+            </div>
+
+            <div class="tip-box">
+                <p><strong>💡 Conclusion :</strong> En posant $a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$, on retrouve $z' = az + b$ où :</p>
+                <ul>
+                    <li>$|a| = |e^{i\theta}| = 1$</li>
+                    <li>$\theta = \arg(a) \pmod{2\pi}$</li>
+                    <li>$z_{\Omega} = \dfrac{b}{1 - a}$ (affixe du point invariant)</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <ol>
+                    <li>Donner la nature de la transformation du plan d'écriture complexe : $z' = \frac{1}{2}(1 - i\sqrt{3})z - \sqrt{3} + i$.</li>
+                    <li>Soit la rotation d'angle $-\frac{2\pi}{3}$ et de centre A d'affixe $-2i$. Donner son écriture complexe.</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1)</strong> $a = \frac{1}{2}(1 - i\sqrt{3}) = \frac{1}{2} - i\frac{\sqrt{3}}{2}$ et $b = -\sqrt{3} + i$.</p>
+                        <ul>
+                            <li><strong>Module :</strong> $|a| = \sqrt{(\frac{1}{2})^2 + (-\frac{\sqrt{3}}{2})^2} = 1$.</li>
+                            <li><strong>Argument :</strong> $\cos\theta = \frac{1}{2}$ et $\sin\theta = -\frac{\sqrt{3}}{2}$, donc $\theta = -\frac{\pi}{3} \ [2\pi]$.</li>
+                            <li><strong>Centre :</strong> $z_{\Omega} = \dfrac{b}{1 - a} = \dfrac{-\sqrt{3} + i}{\frac{1}{2} + i\frac{\sqrt{3}}{2}} = 2i$.</li>
+                        </ul>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            La transformation est la rotation d'angle $-\frac{\pi}{3}$ et de centre $\Omega$ d'affixe $2i$.
+                        </p>
+
+                        <p><strong>2)</strong> $\theta = -\frac{2\pi}{3}$ et $z_A = -2i$.</p>
+                        <ul>
+                            <li>$a = e^{i(-\frac{2\pi}{3})} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$.</li>
+                            <li>$b = (1 - a)z_A = (\frac{3}{2} + i\frac{\sqrt{3}}{2})(-2i) = \sqrt{3} - 3i$.</li>
+                        </ul>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            L'écriture complexe est : $z' = (-\frac{1}{2} - i\frac{\sqrt{3}}{2})z + \sqrt{3} - 3i$.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    V. SIMILITUDE PLANE DIRECTE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">V. Similitude plane directe</h2>
+
+        <div class="definition-box">
+            <p><strong>Définition :</strong></p>
+            <p>On appelle <span class="highlight">similitude plane directe</span> toute transformation du plan d'écriture complexe :</p>
+            <p class="formula-center">$z' = az + b$, $a \in \mathbb{C} \setminus \mathbb{R}$, $|a| \neq 1$, $b \in \mathbb{C}$.</p>
+        </div>
+
+        <div class="theorem-box">
+            <p><strong>Éléments caractéristiques :</strong></p>
+            <ul>
+                <li><strong>Rapport :</strong> $\lambda = |a|$</li>
+                <li><strong>Angle :</strong> $\theta = \arg(a) \ (2\pi)$</li>
+                <li><strong>Centre :</strong> $\Omega$ tel que $z_{\Omega} = \dfrac{b}{1 - a}$</li>
+            </ul>
+            <p>$\lambda$, $\theta$ et $\Omega$ sont appelés les <strong>éléments caractéristiques</strong> de la similitude plane directe.</p>
+        </div>
+
+        <div class="definition-box">
+            <p><strong>Soit $z' = az + b$, $a \in \mathbb{C} \setminus \mathbb{R}$, $|a| \neq 1$, $b \in \mathbb{C}$ l'écriture d'une similitude plane directe de rapport $\lambda$, d'angle $\theta$ et de centre $\Omega$ alors</strong></p>
+            <p class="formula-center">$a = \lambda e^{i\theta}$ et $b = (1 - a)z_{\Omega}$.</p>
+        </div>
+
+        <div class="tip-box">
+            <p><strong>💡 Remarque :</strong></p>
+            <p>$z_{\Omega} = \dfrac{b}{1 - a} \iff b = (1 - a)z_{\Omega}$.</p>
+            <p>$\lambda = |a|$ donc $|a| = \lambda$, $\arg(a) = \theta$ d'où $a = \lambda e^{i\theta}$.</p>
+            <p><strong>Les deux écritures complexes suivantes sont équivalentes :</strong></p>
+            <ul>
+                <li><strong>Forme développée :</strong> $z' = az + b$</li>
+                <li><strong>Forme réduite :</strong> $z' - z_{\Omega} = \lambda e^{i\theta}(z - z_{\Omega})$</li>
+            </ul>
+        </div>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exemple</h3>
+
+            <div class="example-box">
+                <ol>
+                    <li>
+                        <p>Soit la similitude directe $S$ telle que $z_A - z_B = 2e^{i\frac{\pi}{4}}(z_C - z_B)$.</p>
+                        <p>On a $S(C) = A$, $\lambda = 2$, $\theta = \frac{\pi}{4}$.</p>
+                        <p>$S$ est la similitude directe de rapport 2, d'angle $\frac{\pi}{4}$ et son centre est le point $B$.</p>
+                    </li>
+                    <li>
+                        <p>Soit la similitude directe $S$ telle que $z_E - z_D = 5e^{i\frac{2\pi}{3}}(z_F - z_D)$.</p>
+                        <p>On a $S(F) = E$, $\lambda = 5$, $\theta = \frac{2\pi}{3}$.</p>
+                        <p>$S$ est la similitude directe de rapport 5, d'angle $\frac{2\pi}{3}$ et son centre est le point $D$.</p>
+                    </li>
+                </ol>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <ol>
+                    <li>Donner les éléments caractéristiques de la similitude plane directe $S$ d'écriture complexe : $z' = (1 + i)z - 2i$.</li>
+                    <li>Donner l'écriture complexe de la similitude plane directe de rapport 2, d'angle $-\frac{\pi}{3}$ et de centre $\Omega$ d'affixe $1 + i$.</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1)</strong> $a = 1 + i$ et $b = -2i$.</p>
+                        <ul>
+                            <li><strong>Rapport :</strong> $\lambda = |a| = |1 + i| = \sqrt{2}$.</li>
+                            <li><strong>Angle :</strong> $\cos\theta = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$ et $\sin\theta = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$, donc $\theta = \frac{\pi}{4} \ [2\pi]$.</li>
+                            <li><strong>Centre :</strong> $z_{\Omega} = \dfrac{b}{1 - a} = \dfrac{-2i}{1 - (1 + i)} = \dfrac{-2i}{-i} = 2$.</li>
+                        </ul>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            La similitude a pour rapport $\sqrt{2}$, pour angle $\frac{\pi}{4}$ et pour centre $\Omega$ d'affixe $2$.
+                        </p>
+
+                        <p><strong>2)</strong> $\lambda = 2$, $\theta = -\frac{\pi}{3}$ et $z_{\Omega} = 1 + i$.</p>
+                        <ul>
+                            <li>$a = \lambda e^{i\theta} = 2(\cos(-\frac{\pi}{3}) + i\sin(-\frac{\pi}{3})) = 1 - i\sqrt{3}$.</li>
+                            <li>$b = (1 - a)z_{\Omega} = (1 - (1 - i\sqrt{3}))(1 + i) = (i\sqrt{3})(1 + i) = -\sqrt{3} + i\sqrt{3}$.</li>
+                        </ul>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            L'écriture complexe est : $z' = (1 - i\sqrt{3})z - \sqrt{3} + i\sqrt{3}$.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    VI. RÉCAPITULATIF
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">VI. Récapitulatif : Nature des transformations complexes</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valeur de $a$</th>
+                        <th>Nature de la transformation</th>
+                        <th>Éléments caractéristiques</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>$a = 1$</strong></td>
+                        <td><span class="highlight">Translation</span></td>
+                        <td>Vecteur $\vec{u}$ d'affixe $b$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$a \in \mathbb{R} \setminus \{0; 1\}$</strong></td>
+                        <td><span class="highlight">Homothétie</span></td>
+                        <td>
+                            $\begin{cases}
+                            \text{Rapport } k = a \\
+                            \text{Centre } \Omega \left( z_{\Omega} = \frac{b}{1-a} \right)
+                            \end{cases}$
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>$a \in \mathbb{C} \setminus \mathbb{R}$, $|a| = 1$</strong></td>
+                        <td><span class="highlight">Rotation</span></td>
+                        <td>
+                            $\begin{cases}
+                            \text{Angle } \theta = \arg(a) \ [2\pi] \\
+                            \text{Centre } \Omega \left( z_{\Omega} = \frac{b}{1-a} \right)
+                            \end{cases}$
+                        </td>
+                    </tr>
+                    <tr class="table-highlight">
+                        <td><strong>$a \in \mathbb{C} \setminus \mathbb{R}$, $|a| \neq 1$</strong></td>
+                        <td><span class="highlight">Similitude plane directe</span></td>
+                        <td>
+                            $\begin{cases}
+                            \text{Rapport } \lambda = |a| \\
+                            \text{Angle } \theta = \arg(a) \ [2\pi] \\
+                            \text{Centre } \Omega \left( z_{\Omega} = \frac{b}{1-a} \right)
+                            \end{cases}$
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method-box">
+            <p><strong>🔍 Méthode de reconnaissance :</strong></p>
+            <p>Regardez attentivement le coefficient <strong>$a$</strong> :</p>
+            <ol>
+                <li><strong>Si $a = 1$</strong> : C'est une <strong>Translation</strong> de vecteur d'affixe $b$.</li>
+                <li><strong>Si $a$ est un nombre réel</strong> ($a \in \mathbb{R} \setminus \{0, 1\}$) : C'est une <strong>Homothétie</strong>.</li>
+                <li><strong>Si $a$ est complexe</strong> ($a \notin \mathbb{R}$) <strong>et $|a| = 1$</strong> : C'est une <strong>Rotation</strong>.</li>
+                <li><strong>Si $a$ est complexe</strong> ($a \notin \mathbb{R}$) <strong>et $|a| \neq 1$</strong> : C'est une <strong>Similitude plane directe</strong>.</li>
+            </ol>
+        </div>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Propriété</h3>
+            <div class="definition-box">
+                <p>Une similitude plane directe est soit une translation, soit une homothétie, soit une rotation, soit une composition commutative de rotation et d'homothétie de même centre.</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemple :</strong></p>
+                <p>Soit $S$ définie par $z' = 2e^{i\frac{\pi}{3}}z$.</p>
+                <p>On a $a = 2e^{i\frac{\pi}{3}}$, donc :</p>
+                <p class="formula-center">$k = |a| = 2$, $\theta = \frac{\pi}{3}$, $\Omega(0)$.</p>
+                <p>Ainsi, $S = H_{\Omega,2} \circ R_{\Omega,\frac{\pi}{3}} = R_{\Omega,\frac{\pi}{3}} \circ H_{\Omega,2}$.</p>
+                <p>C'est donc une similitude plane directe égale à la composition commutative d'une rotation et d'une homothétie de même centre.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    VII. DÉTERMINATION D'UNE SIMILITUDE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">VII. Détermination d'une similitude</h2>
+
+        <article class="subsection">
+            <h3 class="subsection-title">1. À partir de deux points et de leurs images</h3>
+
+            <div class="theorem-box">
+                <p><strong>Soit la similitude plane directe $S$ telle que $S(A) = A'$ et $S(B) = B'$.</strong></p>
+                <p>La similitude plane directe $S$ est d'écriture complexe : $z' = az + b$ avec</p>
+                <p class="formula-center">$a = \dfrac{z_{A'} - z_{B'}}{z_A - z_B}$ et $b = z_{A'} - az_A$.</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">2. À partir de son centre, d'un point et son image</h3>
+
+            <div class="theorem-box">
+                <p><strong>Soit la similitude plane directe $S$ telle que $S(A) = A'$ et $S(\Omega) = \Omega$.</strong></p>
+                <p>La similitude plane directe $S$ est d'écriture complexe : $z' = az + b$ avec</p>
+                <p class="formula-center">$a = \dfrac{z_{A'} - z_{\Omega}}{z_A - z_{\Omega}}$ et $b = z_{\Omega} - az_{\Omega}$.</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration</h3>
+
+            <div class="correction-box">
+                <p><strong>1) Cas avec deux points et leurs images :</strong></p>
+                <p>$z' = az + b$, $S(A) = A'$ et $S(B) = B'$.</p>
+                <p>$S(A) = A'$ donc $z_{A'} = az_A + b$ (1).</p>
+                <p>$S(B) = B'$ donc $z_{B'} = az_B + b$ (2).</p>
+                <p>En faisant la différence de (1) et (2) : $z_{A'} - z_{B'} = a(z_A - z_B)$ d'où $a = \dfrac{z_{A'} - z_{B'}}{z_A - z_B}$.</p>
+                <p>$z_{A'} = az_A + b$ donc $b = z_{A'} - az_A$.</p>
+
+                <p style="margin-top: 16px;"><strong>2) Cas avec le centre, un point et son image :</strong></p>
+                <p>$z' = az + b$, $S(A) = A'$ et $S(\Omega) = \Omega$.</p>
+                <p>$S(A) = A'$ donc $z_{A'} = az_A + b$ (1).</p>
+                <p>$S(\Omega) = \Omega$ donc $z_{\Omega} = az_{\Omega} + b$ (2).</p>
+                <p>En faisant la différence de (1) et (2) : $z_{A'} - z_{\Omega} = a(z_A - z_{\Omega})$ d'où $a = \dfrac{z_{A'} - z_{\Omega}}{z_A - z_{\Omega}}$.</p>
+                <p>$z_{\Omega} = az_{\Omega} + b$ donc $b = z_{\Omega} - az_{\Omega}$.</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <p>Le plan complexe est rapporté à un repère orthonormé direct $(O; \vec{u}, \vec{v})$.</p>
+                <p>Soit $s$ la similitude plane directe qui transforme le point $A$ d'affixe $z_A = 1 + i$ en $A'$ d'affixe $z_{A'} = 2 + 5i$, et le point $B$ d'affixe $z_B = i$ en $B'$ d'affixe $z_{B'} = 4 + 3i$.</p>
+                <ol>
+                    <li>Déterminer le coefficient complexe $a$ de cette similitude.</li>
+                    <li>En déduire la valeur de $b$ et donner l'écriture complexe de $s$.</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la correction détaillée</summary>
+                    <div class="correction-box">
+                        <p><strong>1) Calcul de $a$ :</strong></p>
+                        <p>D'après la formule $a = \dfrac{z_{A'} - z_{B'}}{z_A - z_B}$ :</p>
+                        <div class="formula-block">
+                            \[
+                            a = \frac{(2 + 5i) - (4 + 3i)}{(1 + i) - i} = \frac{-2 + 2i}{1} = -2 + 2i
+                            \]
+                        </div>
+
+                        <p><strong>2) Calcul de $b$ :</strong></p>
+                        <p>En utilisant $b = z_{A'} - az_A$ :</p>
+                        <div class="formula-block">
+                            \[
+                            \begin{align*}
+                            b &= (2 + 5i) - (-2 + 2i)(1 + i) \\
+                            &= (2 + 5i) - (-2 - 2i + 2i + 2i^2) \\
+                            &= (2 + 5i) - (-2 - 2) \\
+                            &= (2 + 5i) - (-4) = 6 + 5i
+                            \end{align*}
+                            \]
+                        </div>
+                        <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                            L'écriture complexe est : $z' = (-2 + 2i)z + 6 + 5i$.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    VIII. ÉTUDE D'UNE SIMILITUDE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">VIII. Étude d'une similitude à partir de son écriture complexe</h2>
+
+        <div class="exercise-box">
+            <p><strong>✏️ Exercice :</strong></p>
+            <p>Soit $S$ l'application du plan dans lui-même d'écriture complexe : $z' = 3iz - 1 - 7i$.</p>
+            <ol>
+                <li>Justifier que $S$ est une similitude plane directe et préciser ses éléments caractéristiques.</li>
+                <li>Déterminer l'expression analytique de $S$.</li>
+                <li>Déterminer une équation de l'image par $S$ de la droite $(BC)$, $B$ et $C$ étant les points d'affixes respectives $2$ et $3 - i$.</li>
+                <li>Déterminer une équation de $(C')$, image par $S$ du cercle $(C)$ d'équation : $(x - 2)^2 + y^2 = 1$.</li>
+            </ol>
+            <details>
+                <summary>📝 Voir la correction complète</summary>
+                <div class="correction-box">
+                    <p><strong>1) Nature de $S$ et éléments caractéristiques :</strong></p>
+                    <p>$z' = az + b$ avec $a = 3i$ et $b = -1 - 7i$.</p>
+                    <p>$a = 3i = 3e^{i\pi/2}$.</p>
+                    <p>Ainsi : $k = |a| = 3$ et $\theta = \arg(a) = \frac{\pi}{2}$.</p>
+                    <p>Le centre $\Omega$ d'affixe $\omega$ vérifie :</p>
+                    <div class="formula-block">
+                        \[
+                        \omega = a\omega + b \iff \omega(1 - 3i) = -1 - 7i
+                        \]
+                    </div>
+                    <div class="formula-block">
+                        \[
+                        \omega = \frac{-1 - 7i}{1 - 3i} = \frac{(-1 - 7i)(1 + 3i)}{(1 - 3i)(1 + 3i)} = \frac{20 - 10i}{10} = 2 - i
+                        \]
+                    </div>
+                    <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                        $S$ est une similitude directe de centre $\Omega(2 - i)$, de rapport $3$ et d'angle $\frac{\pi}{2}$.
+                    </p>
+
+                    <p><strong>2) Expression analytique de $S$ :</strong></p>
+                    <p>Posons $z = x + iy$. Alors :</p>
+                    <div class="formula-block">
+                        \[
+                        z' = 3i(x + iy) - 1 - 7i = 3ix - 3y - 1 - 7i = (-3y - 1) + i(3x - 7)
+                        \]
+                    </div>
+                    <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                        $\begin{cases} x' = -3y - 1 \\ y' = 3x - 7 \end{cases}$
+                    </p>
+
+                    <p><strong>3) Image de la droite $(BC)$ :</strong></p>
+                    <p>Affixes : $z_B = 2 \Rightarrow B(2,0)$, $z_C = 3 - i \Rightarrow C(3,-1)$.</p>
+                    <p>Pente : $m = \dfrac{-1 - 0}{3 - 2} = -1$.</p>
+                    <p>Équation de $(BC)$ : $y = -x + 2$.</p>
+                    <p>On applique $S$ : $x' = -3y - 1$ et $y' = 3x - 7$.</p>
+                    <p>Or $y = -x + 2$, donc :</p>
+                    <div class="formula-block">
+                        \[
+                        x' = -3(-x + 2) - 1 = 3x - 7, \qquad y' = 3x - 7
+                        \]
+                    </div>
+                    <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                        $\boxed{y' = x'}$
+                    </p>
+
+                    <p><strong>4) Image du cercle $(C)$ :</strong></p>
+                    <p>$(C) : (x - 2)^2 + y^2 = 1$.</p>
+                    <p>Centre $A(2,0)$ et rayon $r = 1$.</p>
+                    <p>Image du centre :</p>
+                    <div class="formula-block">
+                        \[
+                        x'_A = -3(0) - 1 = -1, \qquad y'_A = 3(2) - 7 = -1
+                        \]
+                    </div>
+                    <p>Donc $A'(-1,-1)$.</p>
+                    <p>Le rayon est multiplié par $3$ : $r' = 3$.</p>
+                    <p class="formula-center" style="font-weight: 600; color: #dc2626;">
+                        $\boxed{(x' + 1)^2 + (y' + 1)^2 = 9}$
+                    </p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PIED DE PAGE
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - Cours de Mathématiques TS2 - Similitudes planes directes</p>
+    </footer>
+
+</body>
+</html>
