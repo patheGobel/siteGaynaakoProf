@@ -409,31 +409,82 @@
                     rotation d'angle $\theta$ et de centre $\Omega$ alors</strong></p>
             <p class="formula-center">$a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$.</p>
         </div>
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration : Écriture complexe d'une rotation</h3>
+            $$
+            \begin{aligned}
+            r(\Omega, \theta) : \boldsymbol{P} &\longrightarrow \boldsymbol{P}\\M(z) &\longmapsto r(\Omega,\theta)(M) = M'(z')
+            \end{aligned}
+            $$
 
+            $$
+            \begin{aligned} 
+            r(\Omega, \theta)(M) = M' &\iff 
+            \begin{cases} 
+                \Omega M = \Omega M' \quad (1)\\
+                (\overrightarrow{\Omega M},\overrightarrow{\Omega M'}) = \theta \quad (2)
+            \end{cases}
+            \end{aligned}
+            $$
+
+            $$
+            \begin{aligned} 
+             (1)\quad  \Omega M = \Omega M' &\iff |z_M - z_{\Omega}| = |z_{M'} - z_{\Omega}|\\ 
+                                 &\iff \left| \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} \right| = 1
+            \end{aligned}
+            $$
+
+            $$
+            \begin{aligned} 
+             (2)\quad (\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) = \theta \iff \arg\left( \frac{z_{M'} -
+            z_{\Omega}}{z_M - z_{\Omega}} \right) = \theta
+            \end{aligned}
+            $$
+
+            $$\text{D'après } (1) \text{ et } (2), \text{ on a :} \quad \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} = 1
+            \times e^{i\theta} = e^{i\theta}$$
+
+            $$\frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} = e^{i\theta} \iff z_{M'} - z_{\Omega} = e^{i\theta}(z_M -
+            z_{\Omega}) \iff z_{M'} - z_{\Omega} = e^{i\theta} z_M - e^{i\theta} z_{\Omega}$$
+
+            $$\text{Or } z_{M'} = z', \ z_M = z. \ \text{On obtient: } z' - z_{\Omega} = e^{i\theta} z - e^{i\theta}
+            z_{\Omega}, \ z' = e^{i\theta} z + (1 - e^{i\theta}) z_{\Omega}$$
+
+            $$\text{On pose: } a = e^{i\theta} \quad \text{et} \quad b = (1 - e^{i\theta}) z_{\Omega} = (1 - a)
+            z_{\Omega}.$$
+
+            $$\text{On obtient : } z' = az + b, \ a = e^{i\theta} \quad \text{et} \quad b = (1 - a) z_{\Omega}.$$
+        </article>
         <article class="subsection">
             <h3 class="subsection-title">Démonstration : Écriture complexe d'une rotation</h3>
 
-            <p>Soit $r$ une rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta$. Soit $M$ un point du
+            <p>Soit $r$ une rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta$. Soit $M$
+                un point du
                 plan d'affixe $z$ et $M'$ son image par $r$ d'affixe $z'$.</p>
 
             <h4 style="margin: 16px 0 8px; color: var(--primary);">1. Définition géométrique</h4>
-            <p>Par définition de la rotation $r(\Omega, \theta)$, le point $M'$ est l'image de $M$ si et seulement si :
+            <p>Par définition de la rotation $r(\Omega, \theta)$, le point $M'$ est l'image de $M$ si et
+                seulement si :
             </p>
             <ul>
                 <li>$\Omega M' = \Omega M$ (conservation de la distance au centre)</li>
-                <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$ (mesure de
+                <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$
+                    (mesure de
                     l'angle orienté)</li>
             </ul>
 
             <h4 style="margin: 16px 0 8px; color: var(--primary);">2. Traduction complexe</h4>
             <p>Ces deux conditions se traduisent avec les affixes par :</p>
             <ol>
-                <li>$|z' - z_{\Omega}| = |z - z_{\Omega}|$ ce qui implique $\left| \dfrac{z' - z_{\Omega}}{z -
+                <li>$|z' - z_{\Omega}| = |z - z_{\Omega}|$ ce qui implique $\left| \dfrac{z' - z_{\Omega}}{z
+                    -
                     z_{\Omega}} \right| = 1$</li>
-                <li>$\arg\left( \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv \theta \pmod{2\pi}$</li>
+                <li>$\arg\left( \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv \theta \pmod{2\pi}$
+                </li>
             </ol>
 
-            <p>Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ a donc pour module $1$ et pour argument
+            <p>Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ a donc pour module $1$ et pour
+                argument
                 $\theta$. D'après la forme exponentielle :</p>
             <div class="formula-block">
                 \[
@@ -454,7 +505,8 @@
             </div>
 
             <div class="tip-box">
-                <p><strong>💡 Conclusion :</strong> En posant $a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$, on retrouve
+                <p><strong>💡 Conclusion :</strong> En posant $a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$,
+                    on retrouve
                     $z' = az + b$ où :</p>
                 <ul>
                     <li>$|a| = |e^{i\theta}| = 1$</li>
@@ -463,43 +515,159 @@
                 </ul>
             </div>
         </article>
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration détaillée et commentée</h3>
 
+            <!-- Bloc d'accordéon dépliable -->
+            <details class="proof-details">
+                <summary class="proof-toggle">voir démonstration détaillée et commentée</summary>
+
+                <div class="proof-content">
+                    <!-- Étape 1 : Hypothèses et notation -->
+                    <p class="proof-step-intro">
+                        Soit $r(\Omega, \theta)$ la rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta
+                        \in \mathbb{R}$.
+                        Considérons un point $M$ du plan d'affixe $z$, et son image $M'$ d'affixe $z'$ :
+                    </p>
+
+                    <div class="formula-block">
+                        $\begin{aligned}
+                        r(\Omega, \theta) : \mathcal{P} &\longrightarrow \mathcal{P}\\
+                        M(z) &\longmapsto M'(z')
+                        \end{aligned}$
+                    </div>
+
+                    <!-- Étape 2 : Définition géométrique -->
+                    <p>
+                        <strong>1. Définition géométrique :</strong><br>
+                        Par définition géométrique de la rotation de centre $\Omega$ et d'angle $\theta$, le point $M'$
+                        est l'image du point $M$ (distinct de $\Omega$) si et seulement si deux conditions sont
+                        vérifiées simultanément :
+                    </p>
+                    <ul>
+                        <li>$\Omega M' = \Omega M$ (conservation de la distance au centre)</li>
+                        <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$
+                            (orientation et mesure de l'angle)</li>
+                    </ul>
+
+                    <!-- Étape 3 : Traduction en affixes complexes -->
+                    <p>
+                        <strong>2. Traduction complexe du module et de l'argument :</strong><br>
+                        Exprimons ces deux conditions géométriques en termes d'affixes :
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Egalité des distances :</strong> $|\overrightarrow{\Omega M'}| =
+                            |\overrightarrow{\Omega M}| \iff |z' - z_{\Omega}| = |z - z_{\Omega}|$.<br>
+                            Comme $M \neq \Omega$, on a $z \neq z_{\Omega}$, ce qui permet d'écrire :
+                            $$\left| \frac{z' - z_{\Omega}}{z - z_{\Omega}} \right| = \frac{|z' - z_{\Omega}|}{|z -
+                            z_{\Omega}|} = 1$$
+                        </li>
+                        <li>
+                            <strong>Angle orienté :</strong> Par propriété de l'argument d'un quotient d'affixes :
+                            $$\arg\left( \frac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv (\overrightarrow{\Omega
+                            M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$$
+                        </li>
+                    </ol>
+
+                    <!-- Étape 4 : Forme exponentielle -->
+                    <p>
+                        <strong>3. Passage à la forme exponentielle :</strong><br>
+                        Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ possède un module égal à $1$ et un
+                        argument égal à $\theta$. D'après l'écriture trigonométrique/exponentielle d'un complexe de
+                        module $1$, on en déduit :
+                    </p>
+                    <p>
+                        $$\frac{z' - z_{\Omega}}{z - z_{\Omega}} = 1 \cdot e^{i\theta} = e^{i\theta}$$
+                    </p>
+
+                    <!-- Étape 5 : Isolement de z' -->
+                    <p>
+                        <strong>4. Expression sous la forme $z' = az + b$ :</strong><br>
+                        En multipliant par $(z - z_{\Omega})$ puis en isolant l'affixe $z'$ du point image :
+                    </p>
+                    <p>
+                        $$\begin{aligned}
+                        z' - z_{\Omega} &= e^{i\theta}(z - z_{\Omega}) \\
+                        z' &= e^{i\theta}z - e^{i\theta}z_{\Omega} + z_{\Omega} \\
+                        z' &= e^{i\theta}z + (1 - e^{i\theta})z_{\Omega}
+                        \end{aligned}$$
+                    </p>
+
+                    <!-- Étape 6 : Identification des paramètres a et b -->
+                    <p>
+                        <strong>5. Identification des constantes $a$ et $b$ :</strong><br>
+                        On pose $a = e^{i\theta}$ et $b = (1 - e^{i\theta})z_{\Omega} = (1 - a)z_{\Omega}$. L'expression
+                        prend bien la forme :
+                    </p>
+                    <p>
+                        $$z' = az + b$$
+                    </p>
+                    <p>
+                        De plus, comme $a = e^{i\theta}$, on remarque directement que :
+                    </p>
+                    <ul>
+                        <li>$|a| = |e^{i\theta}| = 1$ (avec $a \neq 1$ si $\theta \not\equiv 0 \pmod{2\pi}$)</li>
+                        <li>$\arg(a) \equiv \theta \pmod{2\pi}$</li>
+                        <li>$z_{\Omega} = \dfrac{b}{1 - a}$ (l'affixe du centre est le seul point fixe $z' = z$)</li>
+                    </ul>
+                </div>
+                <!-- Synthèse visible directement -->
+                <div class="tip-box">
+                    <p><strong>💡 Conclusion :</strong> Toute transformation du plan d'écriture complexe $z' = az + b$,
+                        avec $a \in \mathbb{C}^*$ tel que $|a| = 1$ et $a \neq 1$, est une <strong>rotation</strong> :
+                    </p>
+                    <ul>
+                        <li>d'angle $\theta \equiv \arg(a) \pmod{2\pi}$</li>
+                        <li>de centre $\Omega$ d'affixe $\boxed{z_{\Omega} = \frac{b}{1 - a}}$</li>
+                    </ul>
+                </div>
+            </details>
+        </article>
         <article class="subsection">
             <h3 class="subsection-title">Exercice d'application</h3>
 
             <div class="exercise-box">
                 <p><strong>✏️ Exercice :</strong></p>
                 <ol>
-                    <li>Donner la nature de la transformation du plan d'écriture complexe : $z' = \frac{1}{2}(1 -
+                    <li>Donner la nature de la transformation du plan d'écriture complexe : $z' =
+                        \frac{1}{2}(1 -
                         i\sqrt{3})z - \sqrt{3} + i$.</li>
-                    <li>Soit la rotation d'angle $-\frac{2\pi}{3}$ et de centre A d'affixe $-2i$. Donner son écriture
+                    <li>Soit la rotation d'angle $-\frac{2\pi}{3}$ et de centre A d'affixe $-2i$. Donner son
+                        écriture
                         complexe.</li>
                 </ol>
                 <details>
                     <summary>📝 Voir la solution</summary>
                     <div class="correction-box">
-                        <p><strong>1)</strong> $a = \frac{1}{2}(1 - i\sqrt{3}) = \frac{1}{2} - i\frac{\sqrt{3}}{2}$ et
+                        <p><strong>1)</strong> $a = \frac{1}{2}(1 - i\sqrt{3}) = \frac{1}{2} -
+                            i\frac{\sqrt{3}}{2}$ et
                             $b = -\sqrt{3} + i$.</p>
                         <ul>
-                            <li><strong>Module :</strong> $|a| = \sqrt{(\frac{1}{2})^2 + (-\frac{\sqrt{3}}{2})^2} = 1$.
+                            <li><strong>Module :</strong> $|a| = \sqrt{(\frac{1}{2})^2 +
+                                (-\frac{\sqrt{3}}{2})^2} = 1$.
                             </li>
                             <li><strong>Argument :</strong> $\cos\theta = \frac{1}{2}$ et $\sin\theta =
                                 -\frac{\sqrt{3}}{2}$, donc $\theta = -\frac{\pi}{3} \ [2\pi]$.</li>
-                            <li><strong>Centre :</strong> $z_{\Omega} = \dfrac{b}{1 - a} = \dfrac{-\sqrt{3} +
+                            <li><strong>Centre :</strong> $z_{\Omega} = \dfrac{b}{1 - a} = \dfrac{-\sqrt{3}
+                                +
                                 i}{\frac{1}{2} + i\frac{\sqrt{3}}{2}} = 2i$.</li>
                         </ul>
                         <p class="formula-center" style="font-weight: 600; color: #dc2626;">
-                            La transformation est la rotation d'angle $-\frac{\pi}{3}$ et de centre $\Omega$ d'affixe
+                            La transformation est la rotation d'angle $-\frac{\pi}{3}$ et de centre $\Omega$
+                            d'affixe
                             $2i$.
                         </p>
 
                         <p><strong>2)</strong> $\theta = -\frac{2\pi}{3}$ et $z_A = -2i$.</p>
                         <ul>
                             <li>$a = e^{i(-\frac{2\pi}{3})} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$.</li>
-                            <li>$b = (1 - a)z_A = (\frac{3}{2} + i\frac{\sqrt{3}}{2})(-2i) = \sqrt{3} - 3i$.</li>
+                            <li>$b = (1 - a)z_A = (\frac{3}{2} + i\frac{\sqrt{3}}{2})(-2i) = \sqrt{3} - 3i$.
+                            </li>
                         </ul>
                         <p class="formula-center" style="font-weight: 600; color: #dc2626;">
-                            L'écriture complexe est : $z' = (-\frac{1}{2} - i\frac{\sqrt{3}}{2})z + \sqrt{3} - 3i$.
+                            L'écriture complexe est : $z' = (-\frac{1}{2} - i\frac{\sqrt{3}}{2})z + \sqrt{3}
+                            - 3i$.
                         </p>
                     </div>
                 </details>
