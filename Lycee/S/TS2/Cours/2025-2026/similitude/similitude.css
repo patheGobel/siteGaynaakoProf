@@ -273,7 +273,7 @@ b {
            FORMULES
         ============================================================ */
 .formula-block {
-    text-align: center;
+    text-align: flex;
     padding: 12px 0;
     margin: 8px 0;
     overflow-x: auto;
