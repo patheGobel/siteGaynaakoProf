@@ -248,7 +248,7 @@
                 \end{aligned}$
             </div>
 
-            <p>$\begin{aligned} h(\Omega, k)(M) = M' &\iff \overrightarrow{\Omega M'} = k \overrightarrow{\Omega M}\\ 
+            <p>$\begin{aligned} h(\Omega, k)(M) = M' &\iff \overrightarrow{\Omega M'} = k \overrightarrow{\Omega M}\\
                 &\iff z_{\overrightarrow{\Omega M'}} = z_{k \overrightarrow{\Omega M}} \end{aligned}$</p>
 
             <p>$z_{\overrightarrow{\Omega M'}} = k z_{\overrightarrow{\Omega M}} \iff z_{M'} - z_{\Omega} = k(z_M -
@@ -266,7 +266,98 @@
                     centre $\Omega$ tel que $z_{\Omega} = \dfrac{b}{1 - a}$.</p>
             </div>
         </article>
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration détaillée et commentée</h3>
 
+            <!-- Bloc d'accordéon dépliable -->
+            <details class="proof-details">
+                <summary class="proof-toggle">voir démonstration détaillée et commentée</summary>
+
+                <div class="proof-content">
+                    <!-- Étape 1 : Définition de la transformation -->
+                    <p class="proof-step-intro">
+                        Soit $h$ l'homothétie de centre $\Omega$ d'affixe $\omega$ (ou $z_{\Omega}$) et de rapport $k
+                        \in \mathbb{R}^* \setminus \{1\}$.
+                        Considérons un point $M$ du plan d'affixe $z$, et son image $M'$ d'affixe $z'$ :
+                    </p>
+
+                    <div class="formula-block">
+                        $$\begin{aligned}
+                        h(\Omega, k) : \mathcal{P} &\longrightarrow \mathcal{P}\\
+                        M(z) &\longmapsto M'(z')
+                        \end{aligned}$$
+                    </div>
+
+                    <!-- Étape 2 : Équivalence vectorielle -->
+                    <p>
+                        <strong>1. Caractérisation vectorielle :</strong><br>
+                        Par définition géométrique de l'homothétie de centre $\Omega$ et de rapport $k$, le point $M'$
+                        est l'image du point $M$ si et seulement si les vecteurs $\overrightarrow{\Omega M'}$ et
+                        $\overrightarrow{\Omega M}$ sont colinéaires selon la relation :
+                    </p>
+                    <p>
+                        $$h(\Omega, k)(M) = M' \iff \overrightarrow{\Omega M'} = k \overrightarrow{\Omega M}$$
+                    </p>
+
+                    <!-- Étape 3 : Passage aux affixes -->
+                    <p>
+                        <strong>2. Passage aux affixes complexes :</strong><br>
+                        Deux vecteurs sont égaux si et seulement s'ils ont la même affixe. En appliquant la propriété de
+                        linéarité de l'affixe ($z_{k\vec{v}} = k \cdot z_{\vec{v}}$) :
+                    </p>
+                    <p>
+                        $$\overrightarrow{\Omega M'} = k \overrightarrow{\Omega M} \iff z_{\overrightarrow{\Omega M'}} =
+                        z_{k \overrightarrow{\Omega M}} \iff z_{\overrightarrow{\Omega M'}} = k \cdot
+                        z_{\overrightarrow{\Omega M}}$$
+                    </p>
+
+                    <!-- Étape 4 : Expression en fonction de z, z' et z_Omega -->
+                    <p>
+                        <strong>3. Expression avec les affixes des points :</strong><br>
+                        En rappelant que $z_{\overrightarrow{AB}} = z_B - z_A$, la relation devient :
+                    </p>
+                    <p>
+                        $$z_{M'} - z_{\Omega} = k(z_M - z_{\Omega}) \iff z' - z_{\Omega} = k(z - z_{\Omega})$$
+                    </p>
+
+                    <!-- Étape 5 : Développement et isolement de z' -->
+                    <p>
+                        <strong>4. Développement et identification de la forme $z' = az + b$ :</strong><br>
+                        En isolant $z'$, on obtient :
+                    </p>
+                    <p>
+                        $$z' = kz - k z_{\Omega} + z_{\Omega} \iff z' = kz + (1 - k)z_{\Omega}$$
+                    </p>
+                    <p>
+                        En posant $a = k$ ($a \in \mathbb{R} \setminus \{0; 1\}$) et $b = (1 - k)z_{\Omega}$, l'écriture
+                        complexe s'écrit bien sous la forme :
+                    </p>
+                    <p>
+                        $$z' = az + b$$
+                    </p>
+
+                    <!-- Étape 6 : Recherche de l'affixe du centre Omega -->
+                    <p>
+                        <strong>5. Recherche de l'affixe du centre $\Omega$ :</strong><br>
+                        Comme $k = a$, on a $b = (1 - a)z_{\Omega}$. Puisque $a \neq 1$, $1 - a \neq 0$, on peut diviser
+                        par $(1 - a)$ pour retrouver l'affixe du centre :
+                    </p>
+                    <p>
+                        $$\boxed{z_{\Omega} = \frac{b}{1 - a}}$$
+                    </p>
+                </div>
+                <!-- Synthèse visible directement -->
+                <div class="tip-box">
+                    <p><strong>💡 Conclusion :</strong> Toute transformation du plan d'écriture complexe $z' = az + b$,
+                        avec
+                        $a \in \mathbb{R} \setminus \{0; 1\}$ et $b \in \mathbb{C}$, est une homothétie de rapport $k =
+                        a$
+                        et de centre $\Omega$ d'affixe :
+                        $$\boxed{z_{\Omega} = \frac{b}{1 - a}}$$
+                    </p>
+                </div>
+            </details>
+        </article>
         <article class="subsection">
             <h3 class="subsection-title">Exercice d'application</h3>
 
