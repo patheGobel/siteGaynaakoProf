@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suites Numériques - Cours TS2</title>
+
+    <!-- ===== Feuilles de style ===== -->
+    <link rel="stylesheet" href="test.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+    <div class="exercise-box">
+        <p><strong>✏️ Exercices d'application :</strong></p>
+        <ol>
+            <li>
+                <p>Soit \((u_n)\) définie par :</p>
+                <div class="formula-block">
+                    \[
+                    \begin{cases}
+                    u_{n+1} = \frac{1}{3}u_n + \frac{5}{3} \\
+                    u_0 = 1
+                    \end{cases}
+                    \]
+                </div>
+                <p>Montrer que \(\forall n \in \mathbb{N},\; u_n < \frac{5}{2}\).</p>
+            </li>
+            <li>
+                <p>Soit \((u_n)\) définie par :</p>
+                <div class="formula-block">
+                    \[
+                    \begin{cases}
+                    u_{n+1} = \sqrt{12 + u_n} \\
+                    u_0 = 0
+                    \end{cases}
+                    \]
+                </div>
+                <p>Montrer que \(\forall n \in \mathbb{N}^*,\; 3 \leq u_n \leq 4\).</p>
+            </li>
+        </ol>
+
+        <details>
+            <summary>📝 Voir la correction complète</summary>
+
+            <!-- Réponse 1 -->
+            <div class="correction-section">
+                <p><strong>Exercice 1 : \(u_n < \frac{5}{2}\)</strong>
+                </p>
+                <p><strong>Montrons par récurrence que :</strong></p>
+                <p class="formula-center">\(P(n) : u_n < \dfrac{5}{2}\)</p>
+
+                        <!-- Étape 1 : Initialisation -->
+                        <div>
+                            <p><strong>🔹 Étape 1 : Initialisation</strong></p>
+                            <p>Pour \(n = 0\) :</p>
+                            <div class="formula-block">
+                                \[ u_0 = 1 \quad \text{et} \quad \frac{5}{2} = 2.5 \]
+                            </div>
+                            <p>Comme \(1 < 2.5\), on a bien \(u_0 < \dfrac{5}{2}\).</p>
+                                    <p>Donc \(P(0)\) est <span class="highlight">vraie</span>.</p>
+                        </div>
+
+                        <!-- Étape 2 : Hérédité -->
+                        <div>
+                            <p><strong>🔹 Étape 2 : Hérédité</strong></p>
+                            <p>Soit \(n \in \mathbb{N}\) fixé. Supposons que \(P(n)\) est vraie, c'est-à-dire :</p>
+                            <p class="formula-center">\(u_n < \dfrac{5}{2}\)</p>
+                                    <p>Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(u_{n+1} < \dfrac{5}{2}\).</p>
+                                            <p>D'après la relation de récurrence :</p>
+                                            <div class="formula-block">
+                                                \[ u_{n+1} = \frac{1}{3}u_n + \frac{5}{3} \]
+                                            </div>
+                                            <p>Comme \(u_n < \dfrac{5}{2}\), on a :</p>
+                                                    <div class="formula-block">
+                                                        \[
+                                                        \begin{align*}
+                                                        u_{n+1} &= \frac{1}{3}u_n + \frac{5}{3} \\
+                                                        &< \frac{1}{3} \cdot \frac{5}{2} + \frac{5}{3} \\ &=\frac{5}{6}
+                                                            + \frac{10}{6}=\frac{15}{6}=\frac{5}{2} \end{align*} \]
+                                                            </div>
+                                                            <p>Donc \(u_{n+1} < \dfrac{5}{2}\).</p>
+                                                                    <p>La propriété \(P(n+1)\) est donc <span
+                                                                            class="highlight">vraie</span>.</p>
+                                                    </div>
+
+                                                    <!-- Étape 3 : Conclusion -->
+                                                    <div>
+                                                        <p><strong>🔹 Étape 3 : Conclusion</strong></p>
+                                                        <p>La propriété \(P(n)\) est :</p>
+                                                        <ul>
+                                                            <li><strong>Initialisée</strong> au rang \(n = 0\) ;</li>
+                                                            <li><strong>Héréditaire</strong> : \(P(n) \Rightarrow
+                                                                P(n+1)\).</li>
+                                                        </ul>
+                                                        <p>D'après le principe de récurrence, on conclut que :</p>
+                                                        <p>\(\boxed{\forall n \in \mathbb{N},\; u_n <
+                                                                \dfrac{5}{2}}\)</p>
+                                                    </div>
+
+                                                    <!-- Vérification numérique -->
+                                                    <div class="note-box">
+                                                        <strong>🔍 Vérification :</strong>
+                                                        \(u_0 = 1\), \(u_1 = \frac{1}{3} \times 1 + \frac{5}{3} = 2\),
+                                                        \(u_2 = \frac{1}{3} \times 2 + \frac{5}{3} = \frac{7}{3} \approx
+                                                        2.33 < 2.5\) </div>
+                                                    </div>
+
+                                                    <!-- Réponse 2 -->
+                                                    <div class="correction-section">
+                                                        <p><strong>Exercice 2 : \(3 \leq u_n \leq 4\)</strong></p>
+                                                        <p><strong>Montrons par récurrence que :</strong></p>
+                                                        <p class="formula-center">\(P(n) : 3 \leq u_n \leq 4\) pour tout
+                                                            \(n \in \mathbb{N}^*\)</p>
+
+                                                        <!-- Étape 1 : Initialisation -->
+                                                        <div>
+                                                            <p><strong>🔹 Étape 1 : Initialisation</strong></p>
+                                                            <p>Pour \(n = 1\) :</p>
+                                                            <div class="formula-block">
+                                                                \[ u_1 = \sqrt{12 + u_0} = \sqrt{12 + 0} = \sqrt{12} =
+                                                                2\sqrt{3} \]
+                                                            </div>
+                                                            <p>Vérifions que \(3 \leq u_1 \leq 4\) :</p>
+                                                            <div class="formula-block">
+                                                                \[
+                                                                \begin{align*}
+                                                                3 &\leq 2\sqrt{3} \leq 4 \\
+                                                                9 &\leq 12 \leq 16 \quad \text{(en élevant au carré)}
+                                                                \end{align*}
+                                                                \]
+                                                            </div>
+                                                            <p>Comme \(9 \leq 12 \leq 16\), on a bien \(3 \leq 2\sqrt{3}
+                                                                \leq 4\).</p>
+                                                            <p>Donc \(P(1)\) est <span class="highlight">vraie</span>.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- Étape 2 : Hérédité -->
+                                                        <div>
+                                                            <p><strong>🔹 Étape 2 : Hérédité</strong></p>
+                                                            <p>Soit \(n \in \mathbb{N}^*\) fixé. Supposons que \(P(n)\)
+                                                                est vraie, c'est-à-dire :</p>
+                                                            <p class="formula-center">\(3 \leq u_n \leq 4\)</p>
+                                                            <p>Montrons que \(P(n+1)\) est vraie, c'est-à-dire \(3 \leq
+                                                                u_{n+1} \leq 4\).</p>
+                                                            <p>D'après la relation de récurrence :</p>
+                                                            <div class="formula-block">
+                                                                \[ u_{n+1} = \sqrt{12 + u_n} \]
+                                                            </div>
+                                                            <p>Comme \(3 \leq u_n \leq 4\), on a :</p>
+                                                            <div class="formula-block">
+                                                                \[ 12 + 3 \leq 12 + u_n \leq 12 + 4 \]
+                                                                \[ 15 \leq 12 + u_n \leq 16 \]
+                                                            </div>
+                                                            <p>En prenant la racine carrée (fonction croissante sur
+                                                                \(\mathbb{R}^+\)) :</p>
+                                                            <div class="formula-block">
+                                                                \[ \sqrt{15} \leq \sqrt{12 + u_n} \leq \sqrt{16} \]
+                                                                \[ \sqrt{15} \leq u_{n+1} \leq 4 \]
+                                                            </div>
+                                                            <p>Comme \(\sqrt{15} > \sqrt{9} = 3\), on a :</p>
+                                                            <div class="formula-block"
+                                                                style="font-size: 1.2rem; font-weight: 600; color: #059669;">
+                                                                \[ 3 \leq u_{n+1} \leq 4 \]
+                                                            </div>
+                                                            <p>Donc \(3 \leq u_{n+1} \leq 4\).</p>
+                                                            <p>La propriété \(P(n+1)\) est donc <span
+                                                                    class="highlight">vraie</span>.</p>
+                                                        </div>
+
+                                                        <!-- Étape 3 : Conclusion -->
+                                                        <div>
+                                                            <p><strong>🔹 Étape 3 : Conclusion</strong></p>
+                                                            <p>La propriété \(P(n)\) est :</p>
+                                                            <ul>
+                                                                <li><strong>Initialisée</strong> au rang \(n = 1\) ;
+                                                                </li>
+                                                                <li><strong>Héréditaire</strong> : \(P(n) \Rightarrow
+                                                                    P(n+1)\).</li>
+                                                            </ul>
+                                                            <p>D'après le principe de récurrence, on conclut que :</p>
+                                                            <p class="formula-center"
+                                                                style="font-size: 1.2rem; font-weight: 600; color: #dc2626;">
+                                                                \(\boxed{\forall n \in \mathbb{N}^*,\; 3 \leq u_n \leq
+                                                                4}\)
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- Vérification numérique -->
+                                                        <div class="note-box">
+                                                            <strong>🔍 Vérification :</strong>
+                                                            \(u_0 = 0\), \(u_1 = \sqrt{12} \approx 3.464\),
+                                                            \(u_2 = \sqrt{12 + 3.464} \approx \sqrt{15.464} \approx
+                                                            3.932\),
+                                                            \(u_3 = \sqrt{12 + 3.932} \approx \sqrt{15.932} \approx
+                                                            3.991\)
+                                                        </div>
+
+                                                        <!-- Propriété supplémentaire -->
+                                                        <div>
+                                                            <p><strong>💡 Propriété supplémentaire :</strong></p>
+                                                            <p>On peut également montrer que la suite \((u_n)\) est
+                                                                <strong>croissante</strong> :</p>
+                                                            <div class="formula-block">
+                                                                \[ u_{n+1} - u_n = \sqrt{12 + u_n} - u_n \]
+                                                            </div>
+                                                            <p>Comme \(u_n \leq 4\), on a \(\sqrt{12 + u_n} \geq u_n
+                                                                \iff 12 + u_n \geq u_n^2\).</p>
+                                                            <p>Cette inégalité est vraie car \(u_n \in [3, 4]\).</p>
+                                                            <p>Donc \((u_n)\) est croissante et majorée par 4, donc
+                                                                <strong>convergente</strong>.</p>
+                                                            <p>Sa limite \(\ell\) vérifie : \(\ell = \sqrt{12 + \ell}
+                                                                \implies \ell^2 = 12 + \ell \implies \ell^2 - \ell - 12
+                                                                = 0\).</p>
+                                                            <p>Les solutions sont \(\ell = 4\) ou \(\ell = -3\). Comme
+                                                                \(\ell > 0\), on a \(\ell = 4\).</p>
+                                                            <p>\(\boxed{\lim_{n \to +\infty} u_n = 4}\)</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- RÉCAPITULATIF DES MÉTHODES -->
+                                                    <div>
+                                                        <h4>📋 Récapitulatif des méthodes</h4>
+                                                        <table
+                                                            style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                                                            <thead style="background: #8b5cf6; color: white;">
+                                                                <tr>
+                                                                    <th style="padding: 10px 16px; text-align: left;">
+                                                                        Étape</th>
+                                                                    <th style="padding: 10px 16px; text-align: left;">
+                                                                        Exercice 1</th>
+                                                                    <th style="padding: 10px 16px; text-align: left;">
+                                                                        Exercice 2</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                                                    <td style="padding: 10px 16px; font-weight: 600;">
+                                                                        Initialisation</td>
+                                                                    <td style="padding: 10px 16px;">\(u_0 = 1 <
+                                                                            \frac{5}{2}\)</td>
+                                                                    <td style="padding: 10px 16px;">\(u_1 = 2\sqrt{3}
+                                                                        \in [3, 4]\)</td>
+                                                                </tr>
+                                                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                                                    <td style="padding: 10px 16px; font-weight: 600;">
+                                                                        Hérédité</td>
+                                                                    <td style="padding: 10px 16px;">\(u_n < \frac{5}{2}
+                                                                            \Rightarrow u_{n+1} < \frac{5}{2}\)</td>
+                                                                    <td style="padding: 10px 16px;">\(3 \leq u_n \leq 4
+                                                                        \Rightarrow 3 \leq u_{n+1} \leq 4\)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding: 10px 16px; font-weight: 600;">
+                                                                        Outil clé</td>
+                                                                    <td style="padding: 10px 16px;">Inégalité stricte
+                                                                    </td>
+                                                                    <td style="padding: 10px 16px;">Monotonie de la
+                                                                        racine carrée</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div style="margin-top: 12px;">
+                                                            <strong>🎯 Points clés à retenir :</strong>
+                                                            <ul>
+                                                                <li>La <strong>récurrence</strong> est la méthode
+                                                                    naturelle pour les suites définies par récurrence.
+                                                                </li>
+                                                                <li>Il faut toujours vérifier que
+                                                                    l'<strong>initialisation</strong> est au bon rang.
+                                                                </li>
+                                                                <li>Dans l'<strong>hérédité</strong>, on utilise
+                                                                    l'hypothèse de récurrence pour encadrer \(u_{n+1}\).
+                                                                </li>
+                                                                <li>Pour les inégalités avec des racines carrées, on
+                                                                    utilise la <strong>monotonie</strong> de la
+                                                                    fonction.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+        </details>
+    </div>
+</body>

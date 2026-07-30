@@ -1,186 +1,66 @@
-/* ==========================
-   Style général
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Style du composant <details> */
+.exercise-box details {
+    margin-top: 16px;
+    background: #ffffff;
+    border: 1px solid #d1fae5;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.8;
-    color:#333;
-    background:#f5f5f5;
-
-    width:100%;
-    max-width:1400px;   /* ou supprime complètement cette ligne */
-    margin:0 auto;
-    padding:10px;
+/* Style de la barre <summary> de déclenchement */
+.exercise-box summary {
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #065f46;
+    background-color: #f0fdf4;
+    cursor: pointer;
+    user-select: none;
+    list-style: none; /* Cache la flèche par défaut */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
 }
 
-/* ==========================
-   En-tête
-========================== */
-
-.header{
-    background:#0b5ed7;
-    color:white;
-    padding:25px;
-    border-radius:10px;
-    margin-bottom:35px;
+.exercise-box summary:hover {
+    background-color: #dcfce7;
 }
 
-.header h1{
-    text-align:center;
-    margin-bottom:15px;
+/* Flèche personnalisée à droite */
+.exercise-box summary::after {
+    content: "▼";
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
 }
 
-.header-meta{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+/* Rotation de la flèche à l'ouverture */
+.exercise-box details[open] summary::after {
+    transform: rotate(-180deg);
 }
 
-.header-year{
-    text-align:center;
-    margin-top:10px;
-    font-weight:bold;
+/* Animation à l'apparition du contenu */
+.exercise-box details[open] > *:not(summary) {
+    animation: fadeIn 0.35s ease-in-out forwards;
 }
 
-/* ==========================
-   Introduction
-========================== */
-
-.intro-subtitle{
-    color:#0b5ed7;
-    margin-bottom:15px;
-}
-
-.highlight-box{
-    background:#fff8dc;
-    border-left:6px solid orange;
-    padding:15px;
-    margin:20px 0;
-    border-radius:6px;
-}
-
-/* ==========================
-   Sections
-========================== */
-
-.section{
-    width:100%;
-    margin:20px 0;
-    padding:20px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 0 8px rgba(0,0,0,.08);
-}
-
-.section-title{
-    color:#0b5ed7;
-    border-bottom:3px solid #0b5ed7;
-    padding-bottom:8px;
-    margin-bottom:20px;
-}
-
-/* ==========================
-   Sous-sections
-========================== */
-
-.subsection-title{
-    color:#c0392b;
-    margin:25px 0 15px;
-}
-
-.subsubsection-title{
-    color:#198754;
-    margin:20px 0 12px;
-}
-
-/* ==========================
-   Paragraphes
-========================== */
-
-p{
-    margin:10px 0;
-    text-align:justify;
-}
-
-/* ==========================
-   Listes
-========================== */
-
-ul,
-ol{
-    margin:15px 0 15px 35px;
-}
-
-li{
-    margin:8px 0;
-}
-
-/* ==========================
-   Mise en évidence
-========================== */
-
-.highlight{
-    color:#c0392b;
-    font-weight:bold;
-}
-
-/* ==========================
-   Images
-========================== */
-
-img{
-    display:block;
-    max-width:100%;
-    margin:20px auto;
-    border-radius:8px;
-    box-shadow:0 0 6px rgba(0,0,0,.15);
-}
-
-/* ==========================
-   Blocs mathématiques
-========================== */
-
-.MathJax{
-    font-size:1.05em !important;
-}
-
-/* ==========================
-   Liens
-========================== */
-
-a{
-    color:#0b5ed7;
-    text-decoration:none;
-}
-
-a:hover{
-    text-decoration:underline;
-}
-
-/* ==========================
-   Responsive
-========================== */
-
-@media (max-width:768px){
-
-    body{
-        padding:5px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
     }
-
-    .section{
-        padding:12px;
-        border-radius:6px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .header{
-        padding:15px;
-    }
+/* Espacement interne du contenu sous le summary */
+.exercise-box details > div {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
 
+.exercise-box details > div:last-child {
+    border-bottom: none;
 }

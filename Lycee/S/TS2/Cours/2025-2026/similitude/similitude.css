@@ -191,13 +191,13 @@ b {
 /* ============================================================
            ENCADRÉS
         ============================================================ */
-.definition-box {
+/* .definition-box {
     background: #eff6ff;
     border-left: 6px solid var(--primary-light);
     padding: 18px 24px;
     border-radius: var(--radius-sm);
     margin: 16px 0;
-}
+} */
 
 .example-box {
     background: #fffbeb;

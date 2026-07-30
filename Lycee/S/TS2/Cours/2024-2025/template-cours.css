@@ -1,0 +1,71 @@
+/* ==========================================================================
+   1. VARIABLES ET CONFIGURATION GLOBALE
+   ========================================================================== */
+:root {
+    --primary-color: #d9534f;
+    /* Rouge cours */
+    --primary-light: #fff5f5;
+    /* Fond rosé léger pour encadrés */
+    --border-red: #feb2b2;
+    /* Ligne pointillée/séparateur */
+    --text-color: #2d3748;
+    /* Gris foncé haute lisibilité */
+    --bg-color: #f7fafc;
+    /* Fond de page */
+    --card-bg: #ffffff;
+    /* Fond blanc blocs */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.75;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 30px 15px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. EN-TÊTE DU COURS (HEADER)
+   ========================================================================== */
+.header {
+    background-color: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-meta {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+
+.header-year {
+    font-style: italic;
+    color: #718096;
+    font-size: 0.95rem;
+}
