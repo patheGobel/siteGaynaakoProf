@@ -655,3 +655,39 @@ details>ol {
     color: var(--text-muted);
     margin-left: 8px;
 }
+++++++++++++
+/* Style du conteneur de la démonstration */
+.proof-details {
+    margin: 1.5rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+/* Style du bouton "Voir la démonstration" */
+.proof-toggle {
+    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.proof-toggle:hover {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* Contenu masqué/affiché */
+.proof-content {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.proof-step-intro {
+    margin-top: 0;
+}
