@@ -411,116 +411,127 @@
         </div>
         <article class="subsection">
             <h3 class="subsection-title">Démonstration : Écriture complexe d'une rotation</h3>
-            $$
-            \begin{aligned}
-            r(\Omega, \theta) : \boldsymbol{P} &\longrightarrow \boldsymbol{P}\\M(z) &\longmapsto r(\Omega,\theta)(M) = M'(z')
-            \end{aligned}
-            $$
+            <p>$$
+                \begin{aligned}
+                r(\Omega, \theta) : \boldsymbol{P} &\longrightarrow \boldsymbol{P}\\M(z) &\longmapsto
+                r(\Omega,\theta)(M) =
+                M'(z')
+                \end{aligned}
+                $$</p>
 
-            $$
-            \begin{aligned} 
-            r(\Omega, \theta)(M) = M' &\iff 
-            \begin{cases} 
+            <p>$$
+                \begin{aligned}
+                r(\Omega, \theta)(M) = M' &\iff
+                \begin{cases}
                 \Omega M = \Omega M' \quad (1)\\
                 (\overrightarrow{\Omega M},\overrightarrow{\Omega M'}) = \theta \quad (2)
-            \end{cases}
-            \end{aligned}
-            $$
+                \end{cases}
+                \end{aligned}
+                $$
+            </p>
 
-            $$
-            \begin{aligned} 
-             (1)\quad  \Omega M = \Omega M' &\iff |z_M - z_{\Omega}| = |z_{M'} - z_{\Omega}|\\ 
-                                 &\iff \left| \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} \right| = 1
-            \end{aligned}
-            $$
+            <p>$$
+                \begin{aligned}
+                (1)\quad \Omega M = \Omega M' &\iff |z_M - z_{\Omega}| = |z_{M'} - z_{\Omega}|\\
+                &\iff \left| \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} \right| = 1
+                \end{aligned}
+                $$
+            </p>
 
-            $$
-            \begin{aligned} 
-             (2)\quad (\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) = \theta \iff \arg\left( \frac{z_{M'} -
-            z_{\Omega}}{z_M - z_{\Omega}} \right) = \theta
-            \end{aligned}
-            $$
+            <p>$$
+                \begin{aligned}
+                (2)\quad (\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) = \theta \iff \arg\left( \frac{z_{M'} -
+                z_{\Omega}}{z_M - z_{\Omega}} \right) = \theta
+                \end{aligned}
+                $$</p>
 
-            $$\text{D'après } (1) \text{ et } (2), \text{ on a :} \quad \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} = 1
-            \times e^{i\theta} = e^{i\theta}$$
+            <p>$$\text{D'après } (1) \text{ et } (2), \text{ on a :} \quad \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}}
+                = 1
+                \times e^{i\theta} = e^{i\theta}$$</p>
 
-            $$\frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} = e^{i\theta} \iff z_{M'} - z_{\Omega} = e^{i\theta}(z_M -
-            z_{\Omega}) \iff z_{M'} - z_{\Omega} = e^{i\theta} z_M - e^{i\theta} z_{\Omega}$$
+            <P>$$
+                \begin{aligned}
+                \frac{z_{M'} - z_{\Omega}}{z_M - z_{\Omega}} = e^{i\theta} &\iff z_{M'} - z_{\Omega} = e^{i\theta}(z_M -
+                z_{\Omega})\\
+                &\iff z_{M'} - z_{\Omega} = e^{i\theta} z_M - e^{i\theta} z_{\Omega}
+                \end{aligned}
+                $$</P>
 
-            $$\text{Or } z_{M'} = z', \ z_M = z. \ \text{On obtient: } z' - z_{\Omega} = e^{i\theta} z - e^{i\theta}
-            z_{\Omega}, \ z' = e^{i\theta} z + (1 - e^{i\theta}) z_{\Omega}$$
+            <p>$$\text{Or } z_{M'} = z', \ z_M = z.$$ $$\text{On obtient: } z' - z_{\Omega} = e^{i\theta} z -
+                e^{i\theta}
+                z_{\Omega}, \ z' = e^{i\theta} z + (1 - e^{i\theta}) z_{\Omega}$$</p>
 
-            $$\text{On pose: } a = e^{i\theta} \quad \text{et} \quad b = (1 - e^{i\theta}) z_{\Omega} = (1 - a)
-            z_{\Omega}.$$
-
-            $$\text{On obtient : } z' = az + b, \ a = e^{i\theta} \quad \text{et} \quad b = (1 - a) z_{\Omega}.$$
+            <p>$$\text{On obtient : } z' = az + b, \ a = e^{i\theta} \quad \text{et} \quad b = (1 - a) z_{\Omega}.$$</p>
         </article>
         <article class="subsection">
             <h3 class="subsection-title">Démonstration : Écriture complexe d'une rotation</h3>
-
-            <p>Soit $r$ une rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta$. Soit $M$
-                un point du
-                plan d'affixe $z$ et $M'$ son image par $r$ d'affixe $z'$.</p>
-
-            <h4 style="margin: 16px 0 8px; color: var(--primary);">1. Définition géométrique</h4>
-            <p>Par définition de la rotation $r(\Omega, \theta)$, le point $M'$ est l'image de $M$ si et
-                seulement si :
-            </p>
-            <ul>
-                <li>$\Omega M' = \Omega M$ (conservation de la distance au centre)</li>
-                <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$
-                    (mesure de
-                    l'angle orienté)</li>
-            </ul>
-
-            <h4 style="margin: 16px 0 8px; color: var(--primary);">2. Traduction complexe</h4>
-            <p>Ces deux conditions se traduisent avec les affixes par :</p>
-            <ol>
-                <li>$|z' - z_{\Omega}| = |z - z_{\Omega}|$ ce qui implique $\left| \dfrac{z' - z_{\Omega}}{z
-                    -
-                    z_{\Omega}} \right| = 1$</li>
-                <li>$\arg\left( \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv \theta \pmod{2\pi}$
-                </li>
-            </ol>
-
-            <p>Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ a donc pour module $1$ et pour
-                argument
-                $\theta$. D'après la forme exponentielle :</p>
-            <div class="formula-block">
-                \[
-                \frac{z' - z_{\Omega}}{z - z_{\Omega}} = e^{i\theta}
-                \]
-            </div>
-
-            <h4 style="margin: 16px 0 8px; color: var(--primary);">3. Passage à la forme $z' = az + b$</h4>
-            <p>En isolant $z'$, on obtient :</p>
-            <div class="formula-block">
-                \[
-                \begin{align*}
-                z' - z_{\Omega} &= e^{i\theta}(z - z_{\Omega}) \\
-                z' &= e^{i\theta}z - e^{i\theta}z_{\Omega} + z_{\Omega} \\
-                z' &= e^{i\theta}z + (1 - e^{i\theta})z_{\Omega}
-                \end{align*}
-                \]
-            </div>
-
-            <div class="tip-box">
-                <p><strong>💡 Conclusion :</strong> En posant $a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$,
-                    on retrouve
-                    $z' = az + b$ où :</p>
-                <ul>
-                    <li>$|a| = |e^{i\theta}| = 1$</li>
-                    <li>$\theta = \arg(a) \pmod{2\pi}$</li>
-                    <li>$z_{\Omega} = \dfrac{b}{1 - a}$ (affixe du point invariant)</li>
-                </ul>
-            </div>
-        </article>
-        <article class="subsection">
-            <h3 class="subsection-title">Démonstration détaillée et commentée</h3>
-
             <!-- Bloc d'accordéon dépliable -->
             <details class="proof-details">
                 <summary class="proof-toggle">voir démonstration détaillée et commentée</summary>
+                <p>Soit $r$ une rotation de centre $\Omega$ d'affixe $z_{\Omega}$ et d'angle $\theta$. Soit $M$
+                    un point du
+                    plan d'affixe $z$ et $M'$ son image par $r$ d'affixe $z'$.</p>
+
+                <h4 style="margin: 16px 0 8px; color: var(--primary);">1. Définition géométrique</h4>
+                <p>Par définition de la rotation $r(\Omega, \theta)$, le point $M'$ est l'image de $M$ si et
+                    seulement si :
+                </p>
+                <ul>
+                    <li>$\Omega M' = \Omega M$ (conservation de la distance au centre)</li>
+                    <li>$(\overrightarrow{\Omega M}, \overrightarrow{\Omega M'}) \equiv \theta \pmod{2\pi}$
+                        (mesure de
+                        l'angle orienté)</li>
+                </ul>
+
+                <h4 style="margin: 16px 0 8px; color: var(--primary);">2. Traduction complexe</h4>
+                <p>Ces deux conditions se traduisent avec les affixes par :</p>
+                <ol>
+                    <li>$|z' - z_{\Omega}| = |z - z_{\Omega}|$ ce qui implique $\left| \dfrac{z' - z_{\Omega}}{z
+                        -
+                        z_{\Omega}} \right| = 1$</li>
+                    <li>$\arg\left( \dfrac{z' - z_{\Omega}}{z - z_{\Omega}} \right) \equiv \theta \pmod{2\pi}$
+                    </li>
+                </ol>
+
+                <p>Le nombre complexe $\dfrac{z' - z_{\Omega}}{z - z_{\Omega}}$ a donc pour module $1$ et pour
+                    argument
+                    $\theta$. D'après la forme exponentielle :</p>
+                <div class="formula-block">
+                    \[
+                    \frac{z' - z_{\Omega}}{z - z_{\Omega}} = e^{i\theta}
+                    \]
+                </div>
+
+                <h4 style="margin: 16px 0 8px; color: var(--primary);">3. Passage à la forme $z' = az + b$</h4>
+                <p>En isolant $z'$, on obtient :</p>
+                <div class="formula-block">
+                    \[
+                    \begin{align*}
+                    z' - z_{\Omega} &= e^{i\theta}(z - z_{\Omega}) \\
+                    z' &= e^{i\theta}z - e^{i\theta}z_{\Omega} + z_{\Omega} \\
+                    z' &= e^{i\theta}z + (1 - e^{i\theta})z_{\Omega}
+                    \end{align*}
+                    \]
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>💡 Conclusion :</strong> En posant $a = e^{i\theta}$ et $b = (1 - a)z_{\Omega}$,
+                        on retrouve
+                        $z' = az + b$ où :</p>
+                    <ul>
+                        <li>$|a| = |e^{i\theta}| = 1$</li>
+                        <li>$\theta = \arg(a) \pmod{2\pi}$</li>
+                        <li>$z_{\Omega} = \dfrac{b}{1 - a}$ (affixe du point invariant)</li>
+                    </ul>
+                </div>
+            </details>
+        </article>
+        <article class="subsection">
+            <h3 class="subsection-title">Démonstration détaillée ++ et commentée ++</h3>
+
+            <!-- Bloc d'accordéon dépliable -->
+            <details class="proof-details">
+                <summary class="proof-toggle">voir démonstration détaillée++ et commentée++</summary>
 
                 <div class="proof-content">
                     <!-- Étape 1 : Hypothèses et notation -->
