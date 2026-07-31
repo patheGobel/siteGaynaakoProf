@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Probabilités - TS2</title>
 
-   <!-- ===== Feuilles de style ===== -->
+    <!-- ===== Feuilles de style ===== -->
     <link rel="stylesheet" href="proba.css" />
 
     <!-- ===== Configuration MathJax ===== -->
@@ -51,13 +52,16 @@
         <!-- 1. Expérience aléatoire -->
         <article class="subsection">
             <h3 class="subsection-title-red">1. Expérience aléatoire</h3>
-            <p>Une expérience est dite <span class="highlight">aléatoire</span> si son issue est impossible à prévoir avec certitude.</p>
+            <p>Une expérience est dite <span class="highlight">aléatoire</span> si son issue est impossible à prévoir
+                avec certitude.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 1 :</strong></p>
                 <ol>
-                    <li>On lance une pièce de monnaie : on ne peut pas savoir à l'avance si on obtiendra "pile" ou "face".</li>
-                    <li>On lance un dé à 6 faces : on ne peut pas prédire quel numéro apparaîtra sur la face supérieure.</li>
+                    <li>On lance une pièce de monnaie : on ne peut pas savoir à l'avance si on obtiendra "pile" ou
+                        "face".</li>
+                    <li>On lance un dé à 6 faces : on ne peut pas prédire quel numéro apparaîtra sur la face supérieure.
+                    </li>
                     <li>L'issue d'un match de football ou d'un combat de lutte.</li>
                 </ol>
             </div>
@@ -66,7 +70,8 @@
         <!-- 2. Univers des possibles -->
         <article class="subsection">
             <h3 class="subsection-title-red">2. Univers des possibles</h3>
-            <p>On appelle <span class="highlight">univers</span> d'une expérience aléatoire, noté $\Omega$, l'ensemble de tous les résultats (ou issues) possibles.</p>
+            <p>On appelle <span class="highlight">univers</span> d'une expérience aléatoire, noté $\Omega$, l'ensemble
+                de tous les résultats (ou issues) possibles.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 2 :</strong></p>
@@ -80,7 +85,8 @@
         <!-- 3. Évènement -->
         <article class="subsection">
             <h3 class="subsection-title-red">3. Évènement</h3>
-            <p>Soit $\Omega$ l'univers associé à une expérience aléatoire. On appelle <span class="highlight">évènement</span> toute partie (sous-ensemble) de $\Omega$.</p>
+            <p>Soit $\Omega$ l'univers associé à une expérience aléatoire. On appelle <span
+                    class="highlight">évènement</span> toute partie (sous-ensemble) de $\Omega$.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 3 :</strong></p>
@@ -94,7 +100,8 @@
         <!-- 4. Évènement élémentaire -->
         <article class="subsection">
             <h3 class="subsection-title-red">4. Évènement élémentaire</h3>
-            <p>Soit $\Omega$ un univers associé à l'expérience aléatoire. On appelle <span class="highlight">évènement élémentaire</span> tout singleton de $\Omega$.</p>
+            <p>Soit $\Omega$ un univers associé à l'expérience aléatoire. On appelle <span class="highlight">évènement
+                    élémentaire</span> tout singleton de $\Omega$.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 4 :</strong></p>
@@ -107,7 +114,8 @@
         <!-- 5. Évènement réalisé -->
         <article class="subsection">
             <h3 class="subsection-title-red">5. Évènement réalisé</h3>
-            <p>Un événement est dit <span class="highlight">réalisé</span> si le résultat de l'expérience appartient à cet évènement.</p>
+            <p>Un événement est dit <span class="highlight">réalisé</span> si le résultat de l'expérience appartient à
+                cet évènement.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 5 :</strong></p>
@@ -118,13 +126,15 @@
         <!-- 6. Évènement certain -->
         <article class="subsection">
             <h3 class="subsection-title-red">6. Évènement certain</h3>
-            <p>C'est l'évènement qui contient toutes les issues possibles. Il est noté $\Omega$. Il se réalise toujours.</p>
+            <p>C'est l'évènement qui contient toutes les issues possibles. Il est noté $\Omega$. Il se réalise toujours.
+            </p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 6 :</strong></p>
                 <p>Pour le lancer d'un dé :</p>
                 <p>L'univers associé à cette expérience est $\Omega = \{1, 2, 3, 4, 5, 6\}$.</p>
-                <p>L'événement « le numéro de la face apparue est inférieur à 7 » est $\Omega$. C'est l'événement certain.</p>
+                <p>L'événement « le numéro de la face apparue est inférieur à 7 » est $\Omega$. C'est l'événement
+                    certain.</p>
             </div>
         </article>
 
@@ -137,31 +147,36 @@
                 <p><strong>📌 Exemple 7 :</strong></p>
                 <p>Soit le lancer d'un dé numéroté de 1 à 6.</p>
                 <p>L'univers associé à cette expérience est $\Omega = \{1, 2, 3, 4, 5, 6\}$.</p>
-                <p>L'événement « le numéro de la face apparue est supérieur à 7 » est $\emptyset$. C'est l'événement impossible.</p>
+                <p>L'événement « le numéro de la face apparue est supérieur à 7 » est $\emptyset$. C'est l'événement
+                    impossible.</p>
             </div>
         </article>
 
         <!-- 8. Évènements contraires -->
         <article class="subsection">
             <h3 class="subsection-title-red">8. Évènements contraires</h3>
-            <p>L'évènement contraire de $A$, noté $\overline{A}$, est l'ensemble des issues de $\Omega$ qui ne sont pas dans $A$.</p>
+            <p>L'évènement contraire de $A$, noté $\overline{A}$, est l'ensemble des issues de $\Omega$ qui ne sont pas
+                dans $A$.</p>
 
             <figure>
                 <svg viewBox="0 0 200 130" width="200" height="130">
-                    <rect x="10" y="10" width="180" height="110" fill="rgba(220,38,38,0.1)" stroke="#dc2626" stroke-width="2" />
+                    <rect x="10" y="10" width="180" height="110" fill="rgba(220,38,38,0.1)" stroke="#dc2626"
+                        stroke-width="2" />
                     <rect x="10" y="10" width="180" height="110" fill="rgba(220,38,38,0.05)" stroke="none" />
                     <circle cx="110" cy="65" r="45" fill="white" stroke="#dc2626" stroke-width="2" />
                     <text x="110" y="70" font-size="18" text-anchor="middle" font-weight="bold">A</text>
-                    <text x="35" y="30" font-size="16" font-weight="bold">$\overline{A}$</text>
-                    <text x="25" y="115" font-size="14">$\Omega$</text>
+                    <!-- Utilisation de text avec un surlignage ou d'autres symboles -->
+                    <text x="35" y="30" font-size="16" font-weight="bold">
+                        <tspan text-decoration="overline">A</tspan>
+                    </text>
+                    <!-- Ou utiliser un symbole alternatif -->
+                    <text x="25" y="115" font-size="14">Ω</text>
                 </svg>
                 <figcaption>Diagramme de l'évènement contraire $\overline{A}$</figcaption>
             </figure>
 
-            <p><strong>Remarque :</strong> Si $A$ et $\overline{A}$ sont deux évènements contraires alors :</p>
-            <div class="formula-center">
-                $$A \cap \overline{A} = \emptyset \quad \text{et} \quad A \cup \overline{A} = \Omega$$
-            </div>
+            <p><strong>Remarque :</strong> Si $A$ et $\overline{A}$ sont deux évènements contraires alors : $A \cap
+                \overline{A} = \emptyset \quad \text{et} \quad A \cup \overline{A} = \Omega$</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 8 :</strong></p>
@@ -178,11 +193,13 @@
         <!-- 9. Évènements incompatibles -->
         <article class="subsection">
             <h3 class="subsection-title-red">9. Évènements incompatibles</h3>
-            <p>Deux évènements $A$ et $B$ sont <span class="highlight">incompatibles</span> s'ils ne peuvent pas se réaliser en même temps. Leur intersection est vide : $A \cap B = \emptyset$.</p>
+            <p>Deux évènements $A$ et $B$ sont <span class="highlight">incompatibles</span> s'ils ne peuvent pas se
+                réaliser en même temps. Leur intersection est vide : $A \cap B = \emptyset$.</p>
 
             <figure>
                 <svg viewBox="0 0 220 130" width="220" height="130">
-                    <rect x="10" y="10" width="200" height="110" fill="rgba(220,38,38,0.05)" stroke="#dc2626" stroke-width="2" />
+                    <rect x="10" y="10" width="200" height="110" fill="rgba(220,38,38,0.05)" stroke="#dc2626"
+                        stroke-width="2" />
                     <circle cx="75" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
                     <circle cx="145" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
                     <text x="75" y="70" font-size="16" text-anchor="middle" font-weight="bold">A</text>
@@ -192,7 +209,8 @@
                 <figcaption>Diagramme d'évènements incompatibles $A \cap B = \emptyset$</figcaption>
             </figure>
 
-            <p><strong>Remarque :</strong> Si $A$ et $B$ sont deux évènements incompatibles alors $A \cap B = \emptyset$.</p>
+            <p><strong>Remarque :</strong> Si $A$ et $B$ sont deux évènements incompatibles alors $A \cap B =
+                \emptyset$.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple 9 :</strong></p>
@@ -201,7 +219,8 @@
                     $$A = \{\text{lancer un nombre pair}\} = \{2, 4, 6\}$$
                     $$B = \{\text{lancer un nombre impair}\} = \{1, 3, 5\}$$
                 </div>
-                <p>Comme aucun nombre ne peut être à la fois pair et impair, les événements $A$ et $B$ sont incompatibles.</p>
+                <p>Comme aucun nombre ne peut être à la fois pair et impair, les événements $A$ et $B$ sont
+                    incompatibles.</p>
             </div>
 
             <!-- Remarque importante : Contraire vs Incompatible -->
@@ -209,11 +228,15 @@
                 <h4 style="color: var(--primary);">⚠️ REMARQUE IMPORTANTE : Contraire vs Incompatible</h4>
                 <p>Il ne faut pas confondre ces deux notions. Voici la différence fondamentale :</p>
                 <ul>
-                    <li><strong>Évènements incompatibles :</strong> Ils ne peuvent pas se produire en même temps ($A \cap B = \emptyset$). Mais attention, il peut rester de la place pour d'autres résultats !</li>
-                    <li><strong>Évènements contraires :</strong> C'est le cas "extrême". Non seulement ils ne peuvent pas se produire en même temps ($A \cap \overline{A} = \emptyset$), mais surtout, <strong>à eux deux, ils couvrent tout l'univers</strong> ($A \cup \overline{A} = \Omega$).</li>
+                    <li><strong>Évènements incompatibles :</strong> Ils ne peuvent pas se produire en même temps ($A
+                        \cap B = \emptyset$). Mais attention, il peut rester de la place pour d'autres résultats !</li>
+                    <li><strong>Évènements contraires :</strong> C'est le cas "extrême". Non seulement ils ne peuvent
+                        pas se produire en même temps ($A \cap \overline{A} = \emptyset$), mais surtout, <strong>à eux
+                            deux, ils couvrent tout l'univers</strong> ($A \cup \overline{A} = \Omega$).</li>
                 </ul>
                 <div class="formula-center">
-                    <p><strong><em>"Deux évènements contraires sont forcément incompatibles, mais deux évènements incompatibles ne sont pas forcément contraires."</em></strong></p>
+                    <p><strong><em>"Deux évènements contraires sont forcément incompatibles, mais deux évènements
+                                incompatibles ne sont pas forcément contraires."</em></strong></p>
                 </div>
             </div>
 
@@ -223,14 +246,17 @@
                 <ol>
                     <li>Soient $A = \{1\}$ et $B = \{2\}$.
                         <ul>
-                            <li>Ils sont <strong>incompatibles</strong> car on ne peut pas obtenir 1 et 2 en même temps ($A \cap B = \emptyset$).</li>
-                            <li>Mais ils <strong>ne sont pas contraires</strong> car si on obtient un 5, ni $A$ ni $B$ n'est réalisé. Ils ne couvrent pas tout l'univers.</li>
+                            <li>Ils sont <strong>incompatibles</strong> car on ne peut pas obtenir 1 et 2 en même temps
+                                ($A \cap B = \emptyset$).</li>
+                            <li>Mais ils <strong>ne sont pas contraires</strong> car si on obtient un 5, ni $A$ ni $B$
+                                n'est réalisé. Ils ne couvrent pas tout l'univers.</li>
                         </ul>
                     </li>
                     <li>Soient $A = \{1, 2, 3\}$ et $B = \{4, 5, 6\}$.
                         <ul>
                             <li>Ils sont <strong>incompatibles</strong> (aucune issue commune).</li>
-                            <li>Ils sont <strong>contraires</strong> car à eux deux, ils contiennent tous les chiffres du dé ($A \cup B = \Omega$). Ici, $B = \overline{A}$.</li>
+                            <li>Ils sont <strong>contraires</strong> car à eux deux, ils contiennent tous les chiffres
+                                du dé ($A \cup B = \Omega$). Ici, $B = \overline{A}$.</li>
                         </ul>
                     </li>
                 </ol>
@@ -247,7 +273,8 @@
         <!-- 1. Définition de Probabilité -->
         <article class="subsection">
             <h3 class="subsection-title-red">1. Définition de Probabilité</h3>
-            <p>Soit $\mathcal{E}$ une épreuve aléatoire d'univers $\Omega$. On appelle <span class="highlight">probabilité</span> toute application $P$ :</p>
+            <p>Soit $\mathcal{E}$ une épreuve aléatoire d'univers $\Omega$. On appelle <span
+                    class="highlight">probabilité</span> toute application $P$ :</p>
             <div class="formula-center">
                 $$\begin{align*}
                 P : \mathcal{P}(\Omega) &\longrightarrow [0, 1] \\
@@ -280,7 +307,8 @@
             <p>Soit $\Omega$ l'univers de cette expérience : $\Omega = \{1, 2, 3, 4, 5, 6\}$.</p>
             <p>Supposons l'évènement $A = \{5\}$. Il y a une chance sur 6 de réaliser cette possibilité.</p>
             <p>La probabilité de l'évènement $A$ est donc égale à $\frac{1}{6}$, que l'on note $P(A) = \frac{1}{6}$.</p>
-            <p>De même, considérons l'évènement $B = \{1, 6\}$. Il y a deux chances sur 6 de réaliser l'évènement $B$.</p>
+            <p>De même, considérons l'évènement $B = \{1, 6\}$. Il y a deux chances sur 6 de réaliser l'évènement $B$.
+            </p>
             <p>La probabilité de l'évènement $B$ est donc égale à $\frac{2}{6} = \frac{1}{3}$.</p>
 
             <div class="exercise-box">
@@ -310,7 +338,8 @@
                             <li>
                                 <p><strong>Événement B :</strong></p>
                                 <p>Multiples de 2 (nombres pairs)</p>
-                                <p>$B = \{20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40\} \Rightarrow \text{Card}(B) = 11$</p>
+                                <p>$B = \{20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40\} \Rightarrow \text{Card}(B) = 11$
+                                </p>
                                 $$p(B) = \frac{11}{21}$$
                             </li>
                             <li>
@@ -325,13 +354,15 @@
                         <ul>
                             <li>
                                 <p><strong>Intersection $p(A \cap B)$ :</strong></p>
-                                <p>$A \cap B$ sont les multiples de $3 \times 2 = 6$. On constate que $A \cap B = C$.</p>
+                                <p>$A \cap B$ sont les multiples de $3 \times 2 = 6$. On constate que $A \cap B = C$.
+                                </p>
                                 $$p(A \cap B) = \frac{3}{21} = \frac{1}{7}$$
                             </li>
                             <li>
                                 <p><strong>Union $p(A \cup B)$ :</strong></p>
                                 <p>$p(A \cup B) = p(A) + p(B) - p(A \cap B)$</p>
-                                $$p(A \cup B) = \frac{7}{21} + \frac{11}{21} - \frac{3}{21} = \frac{15}{21} = \frac{5}{7}$$
+                                $$p(A \cup B) = \frac{7}{21} + \frac{11}{21} - \frac{3}{21} = \frac{15}{21} =
+                                \frac{5}{7}$$
                             </li>
                             <li>
                                 <p><strong>Intersection $p(A \cap C)$ :</strong></p>
@@ -353,7 +384,9 @@
         <article class="subsection">
             <h3 class="subsection-title-red">3. Équiprobabilité ou probabilité uniforme</h3>
             <p>Soit $E$ une épreuve aléatoire d'univers $\Omega$.</p>
-            <p>Une <span class="highlight">équiprobabilité</span> ou une <span class="highlight">probabilité uniforme</span> est une probabilité telle que tous les éléments élémentaires sont d'égale probabilité, elle est annoncée dans des situations de parfait hasard :</p>
+            <p>Une <span class="highlight">équiprobabilité</span> ou une <span class="highlight">probabilité
+                    uniforme</span> est une probabilité telle que tous les éléments élémentaires sont d'égale
+                probabilité, elle est annoncée dans des situations de parfait hasard :</p>
             <ul>
                 <li>"Dé parfait", "Dé non pipé"</li>
                 <li>"boules indiscernables au toucher"</li>
@@ -392,7 +425,10 @@
 
             <div class="example-box">
                 <p><strong>📌 Exemple 12 :</strong></p>
-                <p>Une urne contient 3 boules blanches numérotées de 1 à 3, 4 boules rouges numérotées de 1 à 4, 2 boules noires numérotées de 1 à 2. Les boules sont indiscernables au toucher. On tire <strong>successivement sans remise</strong> trois boules de l'urne.</p>
+                <p>Une urne contient 3 boules blanches numérotées de 1 à 3, 4 boules rouges numérotées de 1 à 4, 2
+                    boules noires numérotées de 1 à 2. Les boules sont indiscernables au toucher. On tire
+                    <strong>successivement sans remise</strong> trois boules de l'urne.
+                </p>
                 <p>Calculer le nombre de tirages possibles.</p>
                 <p>Calculer la probabilité des événements suivants :</p>
                 <ul>
@@ -410,16 +446,24 @@
                         <ol>
                             <li>$\text{Card } \Omega = A_9^3 = 504$</li>
                             <li>
-                                <p>$\text{Card } A = A_3^3 + A_4^3 = 6 + 24 = 30 \Rightarrow P(A) = \frac{30}{504} = \frac{5}{84}$</p>
-                                <p>$\text{Card } B = A_3^2 \times A_6^1 \times \frac{3!}{2!} = 6 \times 6 \times 3 = 108 \Rightarrow P(B) = \frac{108}{504} = \frac{3}{14}$</p>
+                                <p>$\text{Card } A = A_3^3 + A_4^3 = 6 + 24 = 30 \Rightarrow P(A) = \frac{30}{504} =
+                                    \frac{5}{84}$</p>
+                                <p>$\text{Card } B = A_3^2 \times A_6^1 \times \frac{3!}{2!} = 6 \times 6 \times 3 = 108
+                                    \Rightarrow P(B) = \frac{108}{504} = \frac{3}{14}$</p>
                                 <p>$\text{Card } C = \text{Card } \Omega - \text{Card } \bar{C}$</p>
-                                <p>$\text{Card } \bar{C} = A_4^3 = 24$ (toutes les boules impaires : $b_1, b_3, R_1, R_3, n_1$)</p>
-                                <p>$\text{Card } C = 504 - 24 = 480 \Rightarrow P(C) = \frac{480}{504} = \frac{20}{21}$</p>
-                                <p>$\text{Card } D = A_4^1 \times A_8^2 = 4 \times 56 = 224 \Rightarrow P(D) = \frac{224}{504} = \frac{4}{9}$</p>
-                                <p>$\text{Card } E = A_1^1 \times A_3^1 \times A_7^1 + A_1^1 \times A_2^1 \times A_7^1 = 1 \times 3 \times 7 + 1 \times 2 \times 7 = 21 + 14 = 35 \Rightarrow P(E) = \frac{35}{504} = \frac{5}{72}$</p>
+                                <p>$\text{Card } \bar{C} = A_4^3 = 24$ (toutes les boules impaires : $b_1, b_3, R_1,
+                                    R_3, n_1$)</p>
+                                <p>$\text{Card } C = 504 - 24 = 480 \Rightarrow P(C) = \frac{480}{504} = \frac{20}{21}$
+                                </p>
+                                <p>$\text{Card } D = A_4^1 \times A_8^2 = 4 \times 56 = 224 \Rightarrow P(D) =
+                                    \frac{224}{504} = \frac{4}{9}$</p>
+                                <p>$\text{Card } E = A_1^1 \times A_3^1 \times A_7^1 + A_1^1 \times A_2^1 \times A_7^1 =
+                                    1 \times 3 \times 7 + 1 \times 2 \times 7 = 21 + 14 = 35 \Rightarrow P(E) =
+                                    \frac{35}{504} = \frac{5}{72}$</p>
                                 <p>$\text{Card } F = \text{Card } \Omega - \text{Card } \bar{F}$</p>
                                 <p>$\text{Card } \bar{F} = A_3^3 = 6$ (3 rouges)</p>
-                                <p>$\text{Card } F = 504 - 6 = 498 \Rightarrow P(F) = \frac{498}{504} = \frac{83}{84}$</p>
+                                <p>$\text{Card } F = 504 - 6 = 498 \Rightarrow P(F) = \frac{498}{504} = \frac{83}{84}$
+                                </p>
                             </li>
                         </ol>
                     </div>
@@ -428,7 +472,8 @@
 
             <div class="example-box">
                 <p><strong>📌 Exemple : Lancer de deux dés</strong></p>
-                <p>On lance 2 dés parfaits de 6 faces numérotés de 1 à 6. On note par $S$ la somme des numéros apparus sur les faces supérieures des 2 dés.</p>
+                <p>On lance 2 dés parfaits de 6 faces numérotés de 1 à 6. On note par $S$ la somme des numéros apparus
+                    sur les faces supérieures des 2 dés.</p>
                 <ol>
                     <li>À l'aide d'un tableau à double entrée, donner toutes les valeurs possibles de $S$.</li>
                     <li>Calculer la probabilité des événements suivants :</li>
@@ -456,12 +501,60 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td><strong>1</strong></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
-                                    <tr><td><strong>2</strong></td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
-                                    <tr><td><strong>3</strong></td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
-                                    <tr><td><strong>4</strong></td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-                                    <tr><td><strong>5</strong></td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
-                                    <tr><td><strong>6</strong></td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                                    <tr>
+                                        <td><strong>1</strong></td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4</strong></td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5</strong></td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>6</strong></td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -498,12 +591,17 @@
 
             <p>On lance un dé parfait de 6 faces et on note le numéro de la face apparue.</p>
             <p>La probabilité d'avoir la face de numéro 6 est égale à $\frac{1}{6}$.</p>
-            <p>Si une autre personne regarde la face apparue avant les autres et dit : « la face porte un numéro pair ».</p>
+            <p>Si une autre personne regarde la face apparue avant les autres et dit : « la face porte un numéro pair ».
+            </p>
             <p>La probabilité d'avoir 6 est alors égale à $\frac{1}{3}$.</p>
-            <p>$\frac{1}{3}$ est appelée la <span class="highlight">probabilité conditionnelle</span> d'avoir 6 sachant que le numéro est pair.</p>
+            <p>$\frac{1}{3}$ est appelée la <span class="highlight">probabilité conditionnelle</span> d'avoir 6 sachant
+                que le numéro est pair.</p>
 
             <h4 style="color: var(--primary);">1. Définition</h4>
-            <p>Soit $E$ une épreuve aléatoire d'univers $\Omega$. $A$ et $B$ deux événements de l'épreuve. On appelle <span class="highlight">probabilité conditionnelle</span> de $A$ sachant $B$ le nombre réel noté $P_B(A)$ ou $P(A|B)$ défini par :</p>
+            <p>Soit $E$ une épreuve aléatoire d'univers $\Omega$. $A$ et $B$ deux événements de l'épreuve. On appelle
+                <span class="highlight">probabilité conditionnelle</span> de $A$ sachant $B$ le nombre réel noté
+                $P_B(A)$ ou $P(A|B)$ défini par :
+            </p>
             <div class="formula-center">
                 $$\boxed{P_B(A) = \frac{P(A \cap B)}{P(B)}}$$
             </div>
@@ -519,7 +617,8 @@
 
             <div class="example-box">
                 <p><strong>📌 Exemple :</strong></p>
-                <p>Une urne contient trois boules rouges numérotées de 1 à 3, quatre boules vertes numérotées de 1 à 4 et 2 boules noires numérotées de 1 à 2, qui sont indiscernables au toucher.</p>
+                <p>Une urne contient trois boules rouges numérotées de 1 à 3, quatre boules vertes numérotées de 1 à 4
+                    et 2 boules noires numérotées de 1 à 2, qui sont indiscernables au toucher.</p>
                 <p>On tire <strong>successivement sans remise</strong> 3 boules de l'urne.</p>
                 <ol>
                     <li>Calculer la probabilité des événements suivants :
@@ -537,14 +636,18 @@
                         <p>$\text{Card } \Omega = A_9^3 = 504$</p>
                         <ol>
                             <li>
-                                <p>$P(A) = \dfrac{A_3^3 + A_4^3}{504} = \dfrac{6 + 24}{504} = \dfrac{30}{504} = \dfrac{5}{84}$</p>
-                                <p>$P(B) = \dfrac{A_3^1 \times A_8^2}{504} = \dfrac{3 \times 56}{504} = \dfrac{168}{504} = \dfrac{1}{3}$</p>
+                                <p>$P(A) = \dfrac{A_3^3 + A_4^3}{504} = \dfrac{6 + 24}{504} = \dfrac{30}{504} =
+                                    \dfrac{5}{84}$</p>
+                                <p>$P(B) = \dfrac{A_3^1 \times A_8^2}{504} = \dfrac{3 \times 56}{504} = \dfrac{168}{504}
+                                    = \dfrac{1}{3}$</p>
                                 <p>$P(C) = \dfrac{A_4^3}{504} = \dfrac{24}{504} = \dfrac{1}{21}$</p>
                             </li>
                             <li>
                                 <p>$P(A \cap B) = \dfrac{A_3^3}{504} = \dfrac{6}{504} = \dfrac{1}{84}$</p>
-                                <p>$P_B(A) = \dfrac{P(A \cap B)}{P(B)} = \dfrac{\frac{1}{84}}{\frac{1}{3}} = \dfrac{3}{84} = \boxed{\dfrac{1}{28}}$</p>
-                                <p>$P_A(B) = \dfrac{P(A \cap B)}{P(A)} = \dfrac{\frac{1}{84}}{\frac{5}{84}} = \dfrac{1}{84} \times \dfrac{84}{5} = \boxed{\dfrac{1}{5}}$</p>
+                                <p>$P_B(A) = \dfrac{P(A \cap B)}{P(B)} = \dfrac{\frac{1}{84}}{\frac{1}{3}} =
+                                    \dfrac{3}{84} = \boxed{\dfrac{1}{28}}$</p>
+                                <p>$P_A(B) = \dfrac{P(A \cap B)}{P(A)} = \dfrac{\frac{1}{84}}{\frac{5}{84}} =
+                                    \dfrac{1}{84} \times \dfrac{84}{5} = \boxed{\dfrac{1}{5}}$</p>
                             </li>
                         </ol>
                     </div>
@@ -558,7 +661,8 @@
 
             <div class="example-box">
                 <p><strong>📌 Exemple :</strong></p>
-                <p>On dispose de 2 dés non pipés, numérotés de 1 à 6. On lance les deux dés et on fait la somme des numéros apparus sur la face supérieure des 2 dés.</p>
+                <p>On dispose de 2 dés non pipés, numérotés de 1 à 6. On lance les deux dés et on fait la somme des
+                    numéros apparus sur la face supérieure des 2 dés.</p>
                 <ul>
                     <li>À l'aide d'un tableau à double entrée, déterminer l'ensemble des résultats possibles.</li>
                     <li>Calculer la probabilité des événements suivants :
@@ -587,12 +691,60 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td><strong>1</strong></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
-                                    <tr><td><strong>2</strong></td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
-                                    <tr><td><strong>3</strong></td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
-                                    <tr><td><strong>4</strong></td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-                                    <tr><td><strong>5</strong></td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
-                                    <tr><td><strong>6</strong></td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                                    <tr>
+                                        <td><strong>1</strong></td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4</strong></td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5</strong></td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>6</strong></td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -612,7 +764,8 @@
         <article class="subsection">
             <h3 class="subsection-title-red">B. Utilisation de l'arbre de choix pondéré</h3>
 
-            <p>Les exercices de probabilité conditionnelle sont facilités par l'usage d'un arbre de choix pondéré qui respecte la règle suivante :</p>
+            <p>Les exercices de probabilité conditionnelle sont facilités par l'usage d'un arbre de choix pondéré qui
+                respecte la règle suivante :</p>
             <div class="formula-center">
                 <em>« La somme des probabilités des branches issues d'un même nœud est égale à 1 »</em>
             </div>
@@ -622,45 +775,45 @@
                 <svg viewBox="0 0 500 350" width="500" height="350">
                     <!-- Racine -->
                     <circle cx="250" cy="20" r="4" fill="#dc2626" />
-                    
+
                     <!-- Branche vers A -->
                     <line x1="250" y1="20" x2="120" y2="120" stroke="#dc2626" stroke-width="2" />
                     <text x="175" y="75" font-size="14">$p(A)$</text>
-                    
+
                     <!-- Branche vers ¬A -->
                     <line x1="250" y1="20" x2="380" y2="120" stroke="#dc2626" stroke-width="2" />
                     <text x="325" y="75" font-size="14">$p(\bar{A})$</text>
-                    
+
                     <!-- Nœud A -->
                     <circle cx="120" cy="120" r="4" fill="#dc2626" />
                     <text x="105" y="140" font-size="16" font-weight="bold">A</text>
-                    
+
                     <!-- Nœud ¬A -->
                     <circle cx="380" cy="120" r="4" fill="#dc2626" />
                     <text x="365" y="140" font-size="16" font-weight="bold">$\bar{A}$</text>
-                    
+
                     <!-- Branches de A -->
                     <line x1="120" y1="120" x2="50" y2="220" stroke="#dc2626" stroke-width="2" />
                     <text x="60" y="175" font-size="12">$P_A(B)$</text>
                     <line x1="120" y1="120" x2="190" y2="220" stroke="#dc2626" stroke-width="2" />
                     <text x="150" y="175" font-size="12">$P_A(\bar{B})$</text>
-                    
+
                     <!-- Branches de ¬A -->
                     <line x1="380" y1="120" x2="310" y2="220" stroke="#dc2626" stroke-width="2" />
                     <text x="330" y="175" font-size="12">$P_{\bar{A}}(B)$</text>
                     <line x1="380" y1="120" x2="450" y2="220" stroke="#dc2626" stroke-width="2" />
                     <text x="420" y="175" font-size="12">$P_{\bar{A}}(\bar{B})$</text>
-                    
+
                     <!-- Nœuds finaux -->
                     <circle cx="50" cy="220" r="3" fill="#dc2626" />
                     <text x="30" y="240" font-size="12">$A \cap B$</text>
-                    
+
                     <circle cx="190" cy="220" r="3" fill="#dc2626" />
                     <text x="170" y="240" font-size="12">$A \cap \bar{B}$</text>
-                    
+
                     <circle cx="310" cy="220" r="3" fill="#dc2626" />
                     <text x="290" y="240" font-size="12">$\bar{A} \cap B$</text>
-                    
+
                     <circle cx="450" cy="220" r="3" fill="#dc2626" />
                     <text x="430" y="240" font-size="12">$\bar{A} \cap \bar{B}$</text>
                 </svg>
@@ -680,38 +833,38 @@
                 <div class="tikz-container">
                     <svg viewBox="0 0 500 350" width="500" height="350">
                         <circle cx="250" cy="20" r="4" fill="#dc2626" />
-                        
+
                         <line x1="250" y1="20" x2="120" y2="120" stroke="#dc2626" stroke-width="2" />
                         <text x="175" y="75" font-size="14">$...$</text>
-                        
+
                         <line x1="250" y1="20" x2="380" y2="120" stroke="#dc2626" stroke-width="2" />
                         <text x="325" y="75" font-size="14">$1/4$</text>
-                        
+
                         <circle cx="120" cy="120" r="4" fill="#dc2626" />
                         <text x="105" y="140" font-size="16" font-weight="bold">$\bar{A}$</text>
-                        
+
                         <circle cx="380" cy="120" r="4" fill="#dc2626" />
                         <text x="365" y="140" font-size="16" font-weight="bold">A</text>
-                        
+
                         <line x1="120" y1="120" x2="50" y2="220" stroke="#dc2626" stroke-width="2" />
                         <text x="60" y="175" font-size="12">$...$</text>
                         <line x1="120" y1="120" x2="190" y2="220" stroke="#dc2626" stroke-width="2" />
                         <text x="150" y="175" font-size="12">$1/5$</text>
-                        
+
                         <line x1="380" y1="120" x2="310" y2="220" stroke="#dc2626" stroke-width="2" />
                         <text x="330" y="175" font-size="12">$...$</text>
                         <line x1="380" y1="120" x2="450" y2="220" stroke="#dc2626" stroke-width="2" />
                         <text x="420" y="175" font-size="12">$1/3$</text>
-                        
+
                         <circle cx="50" cy="220" r="3" fill="#dc2626" />
                         <text x="30" y="240" font-size="12">$\bar{A} \cap \bar{B}$</text>
-                        
+
                         <circle cx="190" cy="220" r="3" fill="#dc2626" />
                         <text x="170" y="240" font-size="12">$\bar{A} \cap B$</text>
-                        
+
                         <circle cx="310" cy="220" r="3" fill="#dc2626" />
                         <text x="290" y="240" font-size="12">$A \cap \bar{B}$</text>
-                        
+
                         <circle cx="450" cy="220" r="3" fill="#dc2626" />
                         <text x="430" y="240" font-size="12">$A \cap B$</text>
                     </svg>
@@ -727,7 +880,8 @@
                         <p><strong>Calculons $P(B)$ :</strong></p>
                         $$P(B) = P(A \cap B) + P(\bar{A} \cap B)$$
                         $$P(B) = P(A) \times P_A(B) + P(\bar{A}) \times P_{\bar{A}}(B)$$
-                        $$P(B) = \frac{1}{4} \times \frac{1}{3} + \frac{3}{4} \times \frac{1}{5} = \frac{1}{12} + \frac{3}{20} = \frac{5}{60} + \frac{9}{60} = \frac{14}{60}$$
+                        $$P(B) = \frac{1}{4} \times \frac{1}{3} + \frac{3}{4} \times \frac{1}{5} = \frac{1}{12} +
+                        \frac{3}{20} = \frac{5}{60} + \frac{9}{60} = \frac{14}{60}$$
                         $$\boxed{P(B) = \frac{7}{30}}$$
                     </div>
                 </details>
@@ -739,40 +893,40 @@
                 <div class="tikz-container">
                     <svg viewBox="0 0 550 400" width="550" height="400">
                         <circle cx="275" cy="20" r="4" fill="#dc2626" />
-                        
+
                         <line x1="275" y1="20" x2="120" y2="130" stroke="#dc2626" stroke-width="2" />
                         <text x="185" y="80" font-size="14">$1/6$</text>
-                        
+
                         <line x1="275" y1="20" x2="430" y2="130" stroke="#dc2626" stroke-width="2" />
                         <text x="355" y="80" font-size="14">$5/6$</text>
-                        
+
                         <circle cx="120" cy="130" r="4" fill="#dc2626" />
                         <text x="105" y="150" font-size="16" font-weight="bold">A</text>
-                        
+
                         <circle cx="430" cy="130" r="4" fill="#dc2626" />
                         <text x="415" y="150" font-size="16" font-weight="bold">$\bar{A}$</text>
-                        
+
                         <line x1="120" y1="130" x2="20" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="45" y="195" font-size="12">$1/2$</text>
                         <line x1="120" y1="130" x2="120" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="125" y="195" font-size="12">$1/2$</text>
                         <line x1="120" y1="130" x2="220" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="155" y="195" font-size="12">$0$</text>
-                        
+
                         <line x1="430" y1="130" x2="330" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="365" y="195" font-size="12">$1/4$</text>
                         <line x1="430" y1="130" x2="430" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="435" y="195" font-size="12">$2/4$</text>
                         <line x1="430" y1="130" x2="530" y2="250" stroke="#dc2626" stroke-width="2" />
                         <text x="465" y="195" font-size="12">$1/4$</text>
-                        
+
                         <circle cx="20" cy="250" r="3" fill="#dc2626" />
                         <text x="5" y="270" font-size="12">$B$</text>
                         <circle cx="120" cy="250" r="3" fill="#dc2626" />
                         <text x="105" y="270" font-size="12">$C$</text>
                         <circle cx="220" cy="250" r="3" fill="#dc2626" />
                         <text x="205" y="270" font-size="12">$D$</text>
-                        
+
                         <circle cx="330" cy="250" r="3" fill="#dc2626" />
                         <text x="315" y="270" font-size="12">$D$</text>
                         <circle cx="430" cy="250" r="3" fill="#dc2626" />
@@ -785,19 +939,23 @@
                     <summary>📝 Voir la solution</summary>
                     <div class="correction-box">
                         <p><strong>1. Calcul de $P(B)$ :</strong></p>
-                        $$P(B) = P(A \cap B) + P(\bar{A} \cap B) = \frac{1}{6} \times \frac{1}{2} + \frac{5}{6} \times \frac{1}{4} = \frac{1}{12} + \frac{5}{24} = \frac{7}{24}$$
-                        
+                        $$P(B) = P(A \cap B) + P(\bar{A} \cap B) = \frac{1}{6} \times \frac{1}{2} + \frac{5}{6} \times
+                        \frac{1}{4} = \frac{1}{12} + \frac{5}{24} = \frac{7}{24}$$
+
                         <p><strong>2. Calcul de $P(C)$ :</strong></p>
-                        $$P(C) = P(A \cap C) + P(\bar{A} \cap C) = \frac{1}{6} \times \frac{1}{2} + \frac{5}{6} \times \frac{2}{4} = \frac{1}{12} + \frac{5}{12} = \boxed{\frac{1}{2}}$$
-                        
+                        $$P(C) = P(A \cap C) + P(\bar{A} \cap C) = \frac{1}{6} \times \frac{1}{2} + \frac{5}{6} \times
+                        \frac{2}{4} = \frac{1}{12} + \frac{5}{12} = \boxed{\frac{1}{2}}$$
+
                         <p><strong>3. Calcul de $P(D)$ :</strong></p>
-                        $$P(D) = P(A \cap D) + P(\bar{A} \cap D) = 0 + \frac{5}{6} \times \frac{1}{4} = \boxed{\frac{5}{24}}$$
+                        $$P(D) = P(A \cap D) + P(\bar{A} \cap D) = 0 + \frac{5}{6} \times \frac{1}{4} =
+                        \boxed{\frac{5}{24}}$$
                     </div>
                 </details>
             </div>
 
             <h4 style="color: var(--primary);">Formule des probabilités totales</h4>
-            <p>Soit l'univers $\Omega$ d'une expérience aléatoire. $\{A_1, A_2, \dots, A_n\}$ forme une <span class="highlight">partition</span> de l'univers $\Omega$.</p>
+            <p>Soit l'univers $\Omega$ d'une expérience aléatoire. $\{A_1, A_2, \dots, A_n\}$ forme une <span
+                    class="highlight">partition</span> de l'univers $\Omega$.</p>
             <p>Alors, pour tout événement $B$, on a :</p>
             <div class="formula-center">
                 $$p(B) = p(B \cap A_1) + p(B \cap A_2) + \dots + p(B \cap A_n)$$
@@ -811,7 +969,8 @@
             </div>
 
             <h4 style="color: var(--primary);">Formule de Bayes</h4>
-            <p>Soient $A$ et $B$ deux événements de probabilités non nulles. La probabilité de $A$ sachant $B$ est donnée par :</p>
+            <p>Soient $A$ et $B$ deux événements de probabilités non nulles. La probabilité de $A$ sachant $B$ est
+                donnée par :</p>
             <div class="formula-center">
                 $$\boxed{P_B(A) = \frac{P(A) \times P_A(B)}{P(B)}}$$
             </div>
@@ -826,54 +985,54 @@
                 <div class="tikz-container">
                     <svg viewBox="0 0 600 400" width="600" height="400">
                         <circle cx="300" cy="20" r="4" fill="#dc2626" />
-                        
+
                         <line x1="300" y1="20" x2="150" y2="120" stroke="#dc2626" stroke-width="2" />
                         <text x="215" y="75" font-size="14">$1/4$</text>
-                        
+
                         <line x1="300" y1="20" x2="450" y2="120" stroke="#dc2626" stroke-width="2" />
                         <text x="365" y="75" font-size="14">$2/4$</text>
-                        
+
                         <line x1="300" y1="20" x2="300" y2="120" stroke="#dc2626" stroke-width="2" />
                         <text x="305" y="75" font-size="14">$1/4$</text>
-                        
+
                         <circle cx="150" cy="120" r="4" fill="#dc2626" />
                         <text x="135" y="140" font-size="16" font-weight="bold">A</text>
-                        
+
                         <circle cx="450" cy="120" r="4" fill="#dc2626" />
                         <text x="435" y="140" font-size="16" font-weight="bold">B</text>
-                        
+
                         <circle cx="300" cy="120" r="4" fill="#dc2626" />
                         <text x="285" y="140" font-size="16" font-weight="bold">C</text>
-                        
+
                         <line x1="150" y1="120" x2="50" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="85" y="180" font-size="12">$1/5$</text>
                         <line x1="150" y1="120" x2="150" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="155" y="180" font-size="12">$2/5$</text>
                         <line x1="150" y1="120" x2="250" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="185" y="180" font-size="12">$2/5$</text>
-                        
+
                         <line x1="450" y1="120" x2="400" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="420" y="180" font-size="12">$1/7$</text>
                         <line x1="450" y1="120" x2="500" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="470" y="180" font-size="12">$6/7$</text>
-                        
+
                         <line x1="300" y1="120" x2="250" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="270" y="180" font-size="12">$3/4$</text>
                         <line x1="300" y1="120" x2="350" y2="230" stroke="#dc2626" stroke-width="2" />
                         <text x="320" y="180" font-size="12">$1/4$</text>
-                        
+
                         <circle cx="50" cy="230" r="3" fill="#dc2626" />
                         <text x="35" y="250" font-size="12">$E$</text>
                         <circle cx="150" cy="230" r="3" fill="#dc2626" />
                         <text x="135" y="250" font-size="12">$F$</text>
                         <circle cx="250" cy="230" r="3" fill="#dc2626" />
                         <text x="235" y="250" font-size="12">$G$</text>
-                        
+
                         <circle cx="400" cy="230" r="3" fill="#dc2626" />
                         <text x="385" y="250" font-size="12">$E$</text>
                         <circle cx="500" cy="230" r="3" fill="#dc2626" />
                         <text x="485" y="250" font-size="12">$F$</text>
-                        
+
                         <circle cx="250" cy="230" r="3" fill="#dc2626" />
                         <text x="235" y="250" font-size="12">$G$</text>
                         <circle cx="350" cy="230" r="3" fill="#dc2626" />
@@ -886,26 +1045,33 @@
                         <p><strong>1. Calcul des probabilités totales</strong></p>
                         <p><strong>Calcul de $P(E)$ :</strong></p>
                         $$P(E) = P(A \cap E) + P(B \cap E) + P(C \cap E)$$
-                        $$P(E) = \left(\frac{1}{4} \times \frac{1}{5}\right) + \left(\frac{2}{4} \times \frac{1}{7}\right) + \left(\frac{1}{4} \times \frac{1}{4}\right) = \frac{1}{20} + \frac{2}{28} + \frac{1}{16}$$
+                        $$P(E) = \left(\frac{1}{4} \times \frac{1}{5}\right) + \left(\frac{2}{4} \times
+                        \frac{1}{7}\right) + \left(\frac{1}{4} \times \frac{1}{4}\right) = \frac{1}{20} + \frac{2}{28} +
+                        \frac{1}{16}$$
                         $$\boxed{P(E) = \frac{103}{560}}$$
-                        
+
                         <p><strong>Calcul de $P(G)$ :</strong></p>
                         $$P(G) = P(A \cap G) + P(C \cap G)$$
-                        $$P(G) = \left(\frac{1}{4} \times \frac{2}{5}\right) + \left(\frac{1}{4} \times \frac{3}{4}\right) = \frac{2}{20} + \frac{3}{16} = \frac{8}{80} + \frac{15}{80}$$
+                        $$P(G) = \left(\frac{1}{4} \times \frac{2}{5}\right) + \left(\frac{1}{4} \times
+                        \frac{3}{4}\right) = \frac{2}{20} + \frac{3}{16} = \frac{8}{80} + \frac{15}{80}$$
                         $$\boxed{P(G) = \frac{23}{80}}$$
-                        
+
                         <p><strong>Calcul de $P(F)$ :</strong></p>
                         $$P(F) = P(A \cap F) + P(B \cap F)$$
-                        $$P(F) = \left(\frac{1}{4} \times \frac{2}{5}\right) + \left(\frac{2}{4} \times \frac{6}{7}\right) = \frac{2}{20} + \frac{12}{28} = \frac{1}{10} + \frac{3}{7}$$
+                        $$P(F) = \left(\frac{1}{4} \times \frac{2}{5}\right) + \left(\frac{2}{4} \times
+                        \frac{6}{7}\right) = \frac{2}{20} + \frac{12}{28} = \frac{1}{10} + \frac{3}{7}$$
                         $$\boxed{P(F) = \frac{37}{70}}$$
-                        
+
                         <p><strong>2. Calcul des probabilités conditionnelles (Bayes)</strong></p>
                         <p><strong>Calcul de $P_E(A)$ :</strong></p>
-                        $$P_E(A) = \frac{P(A \cap E)}{P(E)} = \frac{\frac{1}{4} \times \frac{1}{5}}{\frac{103}{560}} = \frac{\frac{1}{20}}{\frac{103}{560}} = \frac{1}{20} \times \frac{560}{103}$$
+                        $$P_E(A) = \frac{P(A \cap E)}{P(E)} = \frac{\frac{1}{4} \times \frac{1}{5}}{\frac{103}{560}} =
+                        \frac{\frac{1}{20}}{\frac{103}{560}} = \frac{1}{20} \times \frac{560}{103}$$
                         $$\boxed{P_E(A) = \frac{28}{103}}$$
-                        
+
                         <p><strong>Calcul de $P_F(B)$ :</strong></p>
-                        $$P_F(B) = \frac{P(B \cap F)}{P(F)} = \frac{\frac{2}{4} \times \frac{6}{7}}{\frac{37}{70}} = \frac{\frac{12}{28}}{\frac{37}{70}} = \frac{3}{7} \times \frac{70}{37} = \frac{3 \times 10}{37}$$
+                        $$P_F(B) = \frac{P(B \cap F)}{P(F)} = \frac{\frac{2}{4} \times \frac{6}{7}}{\frac{37}{70}} =
+                        \frac{\frac{12}{28}}{\frac{37}{70}} = \frac{3}{7} \times \frac{70}{37} = \frac{3 \times
+                        10}{37}$$
                         $$\boxed{P_F(B) = \frac{30}{37}}$$
                     </div>
                 </details>
@@ -917,14 +1083,16 @@
             <h3 class="subsection-title-red">C. Évènements indépendants</h3>
 
             <h4 style="color: var(--primary);">1. Définition</h4>
-            <p>Deux événements sont dits <span class="highlight">indépendants</span> lorsque le fait que l'un se produise n'a aucune influence sur la probabilité que l'autre se produise.</p>
+            <p>Deux événements sont dits <span class="highlight">indépendants</span> lorsque le fait que l'un se
+                produise n'a aucune influence sur la probabilité que l'autre se produise.</p>
             <p>Si $A$ et $B$ sont deux évènements indépendants de probabilités non nulles alors :</p>
             <div class="formula-center">
                 $$p(A \cap B) = p(A) \times p(B)$$
             </div>
 
             <h4 style="color: var(--primary);">Propriétés</h4>
-            <p>Soient $A$ et $B$ deux événements tels que $P(A) \neq 0$ et $P(B) \neq 0$ et qui sont indépendants, on a :</p>
+            <p>Soient $A$ et $B$ deux événements tels que $P(A) \neq 0$ et $P(B) \neq 0$ et qui sont indépendants, on a
+                :</p>
             <ul>
                 <li>$p_B(A) = p(A)$</li>
                 <li>$p_A(B) = p(B)$</li>
@@ -938,7 +1106,8 @@
                 <details>
                     <summary>📝 Voir la solution</summary>
                     <div class="correction-box">
-                        <p>On veut montrer que $P(\overline{A} \cap \overline{B}) = P(\overline{A}) \times P(\overline{B})$.</p>
+                        <p>On veut montrer que $P(\overline{A} \cap \overline{B}) = P(\overline{A}) \times
+                            P(\overline{B})$.</p>
                         <p>$P(\overline{A} \cap \overline{B}) = P(\overline{A \cup B})$ (loi de Morgan)</p>
                         <p>$= 1 - P(A \cup B)$</p>
                         <p>$= 1 - [P(A) + P(B) - P(A \cap B)]$</p>
@@ -947,7 +1116,8 @@
                         <p>$= (1 - P(A)) - P(B)(1 - P(A))$</p>
                         <p>$= (1 - P(A))(1 - P(B))$</p>
                         <p>$= P(\overline{A}) \times P(\overline{B})$</p>
-                        <p>Donc $\overline{A}$ et $\overline{B}$ sont bien indépendants. <span style="font-size:1.2rem;">□</span></p>
+                        <p>Donc $\overline{A}$ et $\overline{B}$ sont bien indépendants. <span
+                                style="font-size:1.2rem;">□</span></p>
                     </div>
                 </details>
             </div>
@@ -971,11 +1141,13 @@
                 a_i &\longmapsto x_i
                 \end{align*}$$
             </div>
-            <p>On appelle <span class="highlight">univers image</span> l'ensemble des valeurs possibles de $X$ noté $X(\Omega)$.</p>
+            <p>On appelle <span class="highlight">univers image</span> l'ensemble des valeurs possibles de $X$ noté
+                $X(\Omega)$.</p>
 
             <div class="example-box">
                 <p><strong>📌 Exemple :</strong></p>
-                <p>On dispose de 2 dés numérotés de 1 à 6. On lance les 2 dés. On définit la variable aléatoire $X$ qui prend la valeur absolue de la différence des numéros apparus sur la face des 2 dés.</p>
+                <p>On dispose de 2 dés numérotés de 1 à 6. On lance les 2 dés. On définit la variable aléatoire $X$ qui
+                    prend la valeur absolue de la différence des numéros apparus sur la face des 2 dés.</p>
                 <p>Déterminer l'univers image de la variable aléatoire $X$.</p>
                 <div class="table-wrapper">
                     <table class="somme-table">
@@ -991,17 +1163,66 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td><strong>1</strong></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-                            <tr><td><strong>2</strong></td><td>1</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-                            <tr><td><strong>3</strong></td><td>2</td><td>1</td><td>0</td><td>1</td><td>2</td><td>3</td></tr>
-                            <tr><td><strong>4</strong></td><td>3</td><td>2</td><td>1</td><td>0</td><td>1</td><td>2</td></tr>
-                            <tr><td><strong>5</strong></td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td><td>1</td></tr>
-                            <tr><td><strong>6</strong></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6</strong></td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <p>L'univers image est : $X(\Omega) = \{0, 1, 2, 3, 4, 5\}$</p>
-                <p><strong>Remarque :</strong> Sur une épreuve aléatoire on peut définir plusieurs variables aléatoires.</p>
+                <p><strong>Remarque :</strong> Sur une épreuve aléatoire on peut définir plusieurs variables aléatoires.
+                </p>
             </div>
         </article>
 
@@ -1078,23 +1299,28 @@
         <!-- c. Espérance mathématique -->
         <article class="subsection">
             <h3 class="subsection-title-red">c. Espérance mathématique</h3>
-            <p>Soit $X$ une variable aléatoire d'univers $\Omega$ et d'univers image $X(\Omega) = \{x_1, x_2, \dots, x_n\}$.</p>
-            <p>On appelle <span class="highlight">espérance mathématique</span> de la variable aléatoire $X$ le nombre réel :</p>
+            <p>Soit $X$ une variable aléatoire d'univers $\Omega$ et d'univers image $X(\Omega) = \{x_1, x_2, \dots,
+                x_n\}$.</p>
+            <p>On appelle <span class="highlight">espérance mathématique</span> de la variable aléatoire $X$ le nombre
+                réel :</p>
             <div class="formula-center">
                 $$\boxed{E(X) = \sum_{i=1}^{n} x_i P(X = x_i)}$$
             </div>
 
             <p><strong>Reprenons l'exemple précédent :</strong></p>
-            $$E(X) = 0 \times \frac{6}{36} + 1 \times \frac{10}{36} + 2 \times \frac{8}{36} + 3 \times \frac{6}{36} + 4 \times \frac{4}{36} + 5 \times \frac{2}{36}$$
+            $$E(X) = 0 \times \frac{6}{36} + 1 \times \frac{10}{36} + 2 \times \frac{8}{36} + 3 \times \frac{6}{36} + 4
+            \times \frac{4}{36} + 5 \times \frac{2}{36}$$
             $$E(X) = \frac{0 + 10 + 16 + 18 + 16 + 10}{36} = \frac{70}{36} = \frac{35}{18}$$
 
-            <p><strong>Remarque :</strong> L'espérance mathématique d'une variable aléatoire est en quelque sorte la valeur moyenne la plus probable.</p>
+            <p><strong>Remarque :</strong> L'espérance mathématique d'une variable aléatoire est en quelque sorte la
+                valeur moyenne la plus probable.</p>
         </article>
 
         <!-- d. Variance et écart-type -->
         <article class="subsection">
             <h3 class="subsection-title-red">d. Variance et écart-type</h3>
-            <p>Soit $X$ une variable aléatoire d'univers image $X(\Omega) = \{x_1, x_2, \dots, x_n\}$. On appelle <span class="highlight">variance</span> de $X$, le nombre réel positif :</p>
+            <p>Soit $X$ une variable aléatoire d'univers image $X(\Omega) = \{x_1, x_2, \dots, x_n\}$. On appelle <span
+                    class="highlight">variance</span> de $X$, le nombre réel positif :</p>
             <div class="formula-center">
                 $$V(X) = E([X - E(X)]^2) = E(X^2) - [E(X)]^2$$
                 $$\boxed{V(X) = \sum_{i=1}^{n} x_i^2 P_i - [E(X)]^2}$$
@@ -1133,11 +1359,13 @@
                     <div class="correction-box">
                         <p><strong>L'espérance :</strong></p>
                         $$E(X) = 0 \times \frac{1}{4} + 1 \times \frac{1}{4} + 2 \times \frac{2}{4} = \frac{5}{4}$$
-                        
+
                         <p><strong>La variance :</strong></p>
-                        $$V(X) = 0^2 \times \frac{1}{4} + 1^2 \times \frac{1}{4} + 2^2 \times \frac{2}{4} - \left(\frac{5}{4}\right)^2$$
-                        $$V(X) = \frac{1}{4} + \frac{8}{4} - \frac{25}{16} = \frac{9}{4} - \frac{25}{16} = \frac{36}{16} - \frac{25}{16} = \frac{11}{16}$$
-                        
+                        $$V(X) = 0^2 \times \frac{1}{4} + 1^2 \times \frac{1}{4} + 2^2 \times \frac{2}{4} -
+                        \left(\frac{5}{4}\right)^2$$
+                        $$V(X) = \frac{1}{4} + \frac{8}{4} - \frac{25}{16} = \frac{9}{4} - \frac{25}{16} = \frac{36}{16}
+                        - \frac{25}{16} = \frac{11}{16}$$
+
                         <p><strong>L'écart-type :</strong></p>
                         $$\sigma_X = \sqrt{\frac{11}{16}} = \frac{\sqrt{11}}{4}$$
                     </div>
@@ -1148,155 +1376,162 @@
         <!-- e. Fonction de répartition -->
         <article class="subsection">
             <h3 class="subsection-title-red">e. Fonction de répartition</h3>
-            <p>Soit $X$ une variable aléatoire d'univers image $X(\Omega) = \{\alpha_1, \alpha_2, \dots, \alpha_n\}$. On appelle <span class="highlight">fonction de répartition</span> de la variable aléatoire $X$ la fonction</p>
+            <p>Soit $X$ une variable aléatoire d'univers image $X(\Omega) = \{\alpha_1, \alpha_2, \dots, \alpha_n\}$. On
+                appelle <span class="highlight">fonction de répartition</span> de la variable aléatoire $X$ la fonction
+            </p>
             <div class="formula-center">
                 $$f : \mathbb{R} \to [0, 1], \quad x \mapsto P(X \leq x)$$
             </div>
             <p>Si la loi de probabilité est donnée telle que $x_1 < x_2 < \dots < x_n$ :</p>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>$X_i$</th>
-                            <th>$x_1$</th>
-                            <th>$x_2$</th>
-                            <th>$\dots$</th>
-                            <th>$x_n$</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>$P_i$</td>
-                            <td>$P_1$</td>
-                            <td>$P_2$</td>
-                            <td>$\dots$</td>
-                            <td>$P_n$</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>La fonction de répartition $F$ est définie par :</p>
-            <ul>
-                <li>$\forall x \in ]-\infty, x_1[, F(x) = 0$</li>
-                <li>$\forall x \in [x_1, x_2[, F(x) = P_1$</li>
-                <li>$\forall x \in [x_2, x_3[, F(x) = P_1 + P_2$</li>
-                <li>$\forall x \in [x_{n-1}, x_n[, F(x) = P_1 + P_2 + \dots + P_{n-1}$</li>
-                <li>$\forall x \in [x_n, +\infty[, F(x) = 1$</li>
-            </ul>
-
-            <p><strong>Remarque :</strong> La fonction de répartition est une fonction définie par morceaux, elle est croissante.</p>
-            <div class="formula-center">
-                $$\lim_{x \to -\infty} F(x) = 0 \quad \text{et} \quad \lim_{x \to +\infty} F(x) = 1$$
-            </div>
-
-            <div class="example-box">
-                <p><strong>📌 Exemple :</strong></p>
-                <p>Soit $X$ une variable aléatoire de loi de probabilité ci-dessous.</p>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>$X_i$</th>
-                                <th>-3</th>
-                                <th>-1</th>
-                                <th>0</th>
-                                <th>2</th>
-                                <th>3</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>$P_i$</td>
-                                <td>$\frac{1}{10}$</td>
-                                <td>$\frac{3}{10}$</td>
-                                <td>$\frac{1}{10}$</td>
-                                <td>$\frac{2}{10}$</td>
-                                <td>$\frac{3}{10}$</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <ol>
-                    <li>Définir la fonction de répartition.</li>
-                    <li>Représenter $\mathcal{C}_F$ dans un espace d'unité $10 \, \text{cm}$.</li>
-                </ol>
-                <details>
-                    <summary>📝 Voir la solution</summary>
-                    <div class="correction-box">
-                        <p>$$F(x) = \begin{cases}
-                        0 & \text{si } x \in ]-\infty, -3[ \\
-                        \frac{1}{10} & \text{si } x \in [-3, -1[ \\
-                        \frac{4}{10} & \text{si } x \in [-1, 0[ \\
-                        \frac{5}{10} & \text{si } x \in [0, 2[ \\
-                        \frac{7}{10} & \text{si } x \in [2, 3[ \\
-                        1 & \text{si } x \in [3, +\infty[
-                        \end{cases}$$</p>
-                        <figure>
-                            <svg viewBox="0 0 500 400" width="500" height="400">
-                                <!-- Axes -->
-                                <line x1="50" y1="350" x2="450" y2="350" stroke="#333" stroke-width="2" />
-                                <line x1="50" y1="350" x2="50" y2="20" stroke="#333" stroke-width="2" />
-                                <text x="440" y="370" font-size="16">$x$</text>
-                                <text x="30" y="25" font-size="16">$F(x)$</text>
-                                
-                                <!-- Grille -->
-                                <line x1="50" y1="350" x2="50" y2="350" stroke="#ddd" stroke-width="0.5" />
-                                
-                                <!-- Échelle x -->
-                                <text x="50" y="370" font-size="12">$-4$</text>
-                                <text x="130" y="370" font-size="12">$-3$</text>
-                                <text x="210" y="370" font-size="12">$-1$</text>
-                                <text x="290" y="370" font-size="12">$0$</text>
-                                <text x="370" y="370" font-size="12">$2$</text>
-                                <text x="450" y="370" font-size="12">$3$</text>
-                                
-                                <!-- Échelle y -->
-                                <text x="35" y="350" font-size="12">$0$</text>
-                                <text x="35" y="320" font-size="12">$1/10$</text>
-                                <text x="35" y="230" font-size="12">$4/10$</text>
-                                <text x="35" y="200" font-size="12">$5/10$</text>
-                                <text x="35" y="140" font-size="12">$7/10$</text>
-                                <text x="35" y="50" font-size="12">$1$</text>
-                                
-                                <!-- Points de la fonction -->
-                                <!-- [-4, -3] -->
-                                <line x1="50" y1="350" x2="130" y2="350" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="130" cy="350" r="4" fill="#dc2626" />
-                                
-                                <!-- [-3, -1] -->
-                                <line x1="130" y1="320" x2="210" y2="320" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="130" cy="320" r="4" fill="#dc2626" />
-                                <circle cx="210" cy="320" r="4" fill="white" stroke="#dc2626" stroke-width="2" />
-                                
-                                <!-- [-1, 0] -->
-                                <line x1="210" y1="230" x2="290" y2="230" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="210" cy="230" r="4" fill="#dc2626" />
-                                <circle cx="290" cy="230" r="4" fill="white" stroke="#dc2626" stroke-width="2" />
-                                
-                                <!-- [0, 2] -->
-                                <line x1="290" y1="200" x2="370" y2="200" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="290" cy="200" r="4" fill="#dc2626" />
-                                <circle cx="370" cy="200" r="4" fill="white" stroke="#dc2626" stroke-width="2" />
-                                
-                                <!-- [2, 3] -->
-                                <line x1="370" y1="140" x2="450" y2="140" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="370" cy="140" r="4" fill="#dc2626" />
-                                <circle cx="450" cy="140" r="4" fill="white" stroke="#dc2626" stroke-width="2" />
-                                
-                                <!-- [3, +∞] -->
-                                <line x1="450" y1="50" x2="480" y2="50" stroke="#dc2626" stroke-width="2" />
-                                <circle cx="450" cy="50" r="4" fill="#dc2626" />
-                            </svg>
-                            <figcaption>Courbe de la fonction de répartition</figcaption>
-                        </figure>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>$X_i$</th>
+                                    <th>$x_1$</th>
+                                    <th>$x_2$</th>
+                                    <th>$\dots$</th>
+                                    <th>$x_n$</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$P_i$</td>
+                                    <td>$P_1$</td>
+                                    <td>$P_2$</td>
+                                    <td>$\dots$</td>
+                                    <td>$P_n$</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </details>
-            </div>
+                    <p>La fonction de répartition $F$ est définie par :</p>
+                    <ul>
+                        <li>$\forall x \in ]-\infty, x_1[, F(x) = 0$</li>
+                        <li>$\forall x \in [x_1, x_2[, F(x) = P_1$</li>
+                        <li>$\forall x \in [x_2, x_3[, F(x) = P_1 + P_2$</li>
+                        <li>$\forall x \in [x_{n-1}, x_n[, F(x) = P_1 + P_2 + \dots + P_{n-1}$</li>
+                        <li>$\forall x \in [x_n, +\infty[, F(x) = 1$</li>
+                    </ul>
 
-            <p><strong>Remarque :</strong> Soit $X$ une variable aléatoire de fonction de répartition $F$ :</p>
-            <div class="formula-center">
-                $$P(X > a) = 1 - P(X \leq a) = 1 - F(a)$$
-            </div>
+                    <p><strong>Remarque :</strong> La fonction de répartition est une fonction définie par morceaux,
+                        elle est croissante.</p>
+                    <div class="formula-center">
+                        $$\lim_{x \to -\infty} F(x) = 0 \quad \text{et} \quad \lim_{x \to +\infty} F(x) = 1$$
+                    </div>
+
+                    <div class="example-box">
+                        <p><strong>📌 Exemple :</strong></p>
+                        <p>Soit $X$ une variable aléatoire de loi de probabilité ci-dessous.</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>$X_i$</th>
+                                        <th>-3</th>
+                                        <th>-1</th>
+                                        <th>0</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>$P_i$</td>
+                                        <td>$\frac{1}{10}$</td>
+                                        <td>$\frac{3}{10}$</td>
+                                        <td>$\frac{1}{10}$</td>
+                                        <td>$\frac{2}{10}$</td>
+                                        <td>$\frac{3}{10}$</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ol>
+                            <li>Définir la fonction de répartition.</li>
+                            <li>Représenter $\mathcal{C}_F$ dans un espace d'unité $10 \, \text{cm}$.</li>
+                        </ol>
+                        <details>
+                            <summary>📝 Voir la solution</summary>
+                            <div class="correction-box">
+                                <p>$$F(x) = \begin{cases}
+                                    0 & \text{si } x \in ]-\infty, -3[ \\
+                                    \frac{1}{10} & \text{si } x \in [-3, -1[ \\
+                                    \frac{4}{10} & \text{si } x \in [-1, 0[ \\
+                                    \frac{5}{10} & \text{si } x \in [0, 2[ \\
+                                    \frac{7}{10} & \text{si } x \in [2, 3[ \\
+                                    1 & \text{si } x \in [3, +\infty[
+                                    \end{cases}$$</p>
+                                <figure>
+                                    <svg viewBox="0 0 500 400" width="500" height="400">
+                                        <!-- Axes -->
+                                        <line x1="50" y1="350" x2="450" y2="350" stroke="#333" stroke-width="2" />
+                                        <line x1="50" y1="350" x2="50" y2="20" stroke="#333" stroke-width="2" />
+                                        <text x="440" y="370" font-size="16">$x$</text>
+                                        <text x="30" y="25" font-size="16">$F(x)$</text>
+
+                                        <!-- Grille -->
+                                        <line x1="50" y1="350" x2="50" y2="350" stroke="#ddd" stroke-width="0.5" />
+
+                                        <!-- Échelle x -->
+                                        <text x="50" y="370" font-size="12">$-4$</text>
+                                        <text x="130" y="370" font-size="12">$-3$</text>
+                                        <text x="210" y="370" font-size="12">$-1$</text>
+                                        <text x="290" y="370" font-size="12">$0$</text>
+                                        <text x="370" y="370" font-size="12">$2$</text>
+                                        <text x="450" y="370" font-size="12">$3$</text>
+
+                                        <!-- Échelle y -->
+                                        <text x="35" y="350" font-size="12">$0$</text>
+                                        <text x="35" y="320" font-size="12">$1/10$</text>
+                                        <text x="35" y="230" font-size="12">$4/10$</text>
+                                        <text x="35" y="200" font-size="12">$5/10$</text>
+                                        <text x="35" y="140" font-size="12">$7/10$</text>
+                                        <text x="35" y="50" font-size="12">$1$</text>
+
+                                        <!-- Points de la fonction -->
+                                        <!-- [-4, -3] -->
+                                        <line x1="50" y1="350" x2="130" y2="350" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="130" cy="350" r="4" fill="#dc2626" />
+
+                                        <!-- [-3, -1] -->
+                                        <line x1="130" y1="320" x2="210" y2="320" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="130" cy="320" r="4" fill="#dc2626" />
+                                        <circle cx="210" cy="320" r="4" fill="white" stroke="#dc2626"
+                                            stroke-width="2" />
+
+                                        <!-- [-1, 0] -->
+                                        <line x1="210" y1="230" x2="290" y2="230" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="210" cy="230" r="4" fill="#dc2626" />
+                                        <circle cx="290" cy="230" r="4" fill="white" stroke="#dc2626"
+                                            stroke-width="2" />
+
+                                        <!-- [0, 2] -->
+                                        <line x1="290" y1="200" x2="370" y2="200" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="290" cy="200" r="4" fill="#dc2626" />
+                                        <circle cx="370" cy="200" r="4" fill="white" stroke="#dc2626"
+                                            stroke-width="2" />
+
+                                        <!-- [2, 3] -->
+                                        <line x1="370" y1="140" x2="450" y2="140" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="370" cy="140" r="4" fill="#dc2626" />
+                                        <circle cx="450" cy="140" r="4" fill="white" stroke="#dc2626"
+                                            stroke-width="2" />
+
+                                        <!-- [3, +∞] -->
+                                        <line x1="450" y1="50" x2="480" y2="50" stroke="#dc2626" stroke-width="2" />
+                                        <circle cx="450" cy="50" r="4" fill="#dc2626" />
+                                    </svg>
+                                    <figcaption>Courbe de la fonction de répartition</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                    </div>
+
+                    <p><strong>Remarque :</strong> Soit $X$ une variable aléatoire de fonction de répartition $F$ :</p>
+                    <div class="formula-center">
+                        $$P(X > a) = 1 - P(X \leq a) = 1 - F(a)$$
+                    </div>
         </article>
     </section>
 
@@ -1309,7 +1544,8 @@
         <!-- a. Loi de Bernoulli -->
         <article class="subsection">
             <h3 class="subsection-title-red">a. Loi de Bernoulli</h3>
-            <p>Une expérience aléatoire est dite de <span class="highlight">Bernoulli</span> lorsqu'elle ne comporte que deux issues possibles : le succès (noté $S$) et l'échec (noté $\overline{S}$).</p>
+            <p>Une expérience aléatoire est dite de <span class="highlight">Bernoulli</span> lorsqu'elle ne comporte que
+                deux issues possibles : le succès (noté $S$) et l'échec (noté $\overline{S}$).</p>
             <p>On définit une variable aléatoire $X$ telle que :</p>
             <div class="formula-center">
                 $$X = \begin{cases}
@@ -1318,7 +1554,8 @@
                 \end{cases}$$
             </div>
             <p>On pose $p = P(X = 1)$ avec $p \in [0, 1]$, alors $P(X = 0) = 1 - p$.</p>
-            <p>On dit que $X$ suit une <span class="highlight">loi de Bernoulli</span> de paramètre $p$, et on note : $X \sim \mathcal{B}(p)$.</p>
+            <p>On dit que $X$ suit une <span class="highlight">loi de Bernoulli</span> de paramètre $p$, et on note : $X
+                \sim \mathcal{B}(p)$.</p>
 
             <p><strong>Loi de probabilité de $X$ :</strong></p>
             <div class="table-wrapper">
@@ -1344,41 +1581,45 @@
                 $$E(X) = p \quad \text{et} \quad V(X) = p - p^2 = pq$$
             </div>
 
-            <p><strong>Remarque :</strong> Dans toute épreuve aléatoire, il est possible de définir une variable aléatoire qui suit une loi de Bernoulli. Il suffit de prendre un événement et son événement contraire.</p>
+            <p><strong>Remarque :</strong> Dans toute épreuve aléatoire, il est possible de définir une variable
+                aléatoire qui suit une loi de Bernoulli. Il suffit de prendre un événement et son événement contraire.
+            </p>
         </article>
 
         <!-- b. Schéma de Bernoulli -->
         <article class="subsection">
             <h3 class="subsection-title-red">b. Schéma de Bernoulli</h3>
-            <p>Soit une épreuve aléatoire qui présente deux issues possibles $S$ et $\overline{S}$, et soit $n \in \mathbb{N}$.</p>
-            <p>La répétition successive et indépendante $n$ fois de cette épreuve aléatoire est appelée <span class="highlight">schéma de Bernoulli</span>.</p>
+            <p>Soit une épreuve aléatoire qui présente deux issues possibles $S$ et $\overline{S}$, et soit $n \in
+                \mathbb{N}$.</p>
+            <p>La répétition successive et indépendante $n$ fois de cette épreuve aléatoire est appelée <span
+                    class="highlight">schéma de Bernoulli</span>.</p>
 
             <div class="tikz-container">
                 <svg viewBox="0 0 600 500" width="600" height="500">
                     <!-- Niveau 1 -->
                     <circle cx="300" cy="20" r="4" fill="#dc2626" />
-                    
+
                     <line x1="300" y1="20" x2="150" y2="100" stroke="#dc2626" stroke-width="2" />
                     <text x="215" y="65" font-size="14">$q$</text>
                     <line x1="300" y1="20" x2="450" y2="100" stroke="#dc2626" stroke-width="2" />
                     <text x="365" y="65" font-size="14">$p$</text>
-                    
+
                     <circle cx="150" cy="100" r="4" fill="#dc2626" />
                     <text x="135" y="120" font-size="16" font-weight="bold">$\bar{S}$</text>
                     <circle cx="450" cy="100" r="4" fill="#dc2626" />
                     <text x="435" y="120" font-size="16" font-weight="bold">$S$</text>
-                    
+
                     <!-- Niveau 2 -->
                     <line x1="150" y1="100" x2="60" y2="200" stroke="#dc2626" stroke-width="2" />
                     <text x="90" y="155" font-size="12">$q$</text>
                     <line x1="150" y1="100" x2="240" y2="200" stroke="#dc2626" stroke-width="2" />
                     <text x="185" y="155" font-size="12">$p$</text>
-                    
+
                     <line x1="450" y1="100" x2="360" y2="200" stroke="#dc2626" stroke-width="2" />
                     <text x="395" y="155" font-size="12">$q$</text>
                     <line x1="450" y1="100" x2="540" y2="200" stroke="#dc2626" stroke-width="2" />
                     <text x="485" y="155" font-size="12">$p$</text>
-                    
+
                     <circle cx="60" cy="200" r="4" fill="#dc2626" />
                     <text x="45" y="220" font-size="14" font-weight="bold">$\bar{S}$</text>
                     <circle cx="240" cy="200" r="4" fill="#dc2626" />
@@ -1387,23 +1628,23 @@
                     <text x="345" y="220" font-size="14" font-weight="bold">$\bar{S}$</text>
                     <circle cx="540" cy="200" r="4" fill="#dc2626" />
                     <text x="525" y="220" font-size="14" font-weight="bold">$S$</text>
-                    
+
                     <!-- Niveau 3 -->
                     <line x1="60" y1="200" x2="20" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="25" y="265" font-size="12">$q$</text>
                     <line x1="60" y1="200" x2="100" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="65" y="265" font-size="12">$p$</text>
-                    
+
                     <line x1="240" y1="200" x2="200" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="205" y="265" font-size="12">$q$</text>
                     <line x1="240" y1="200" x2="280" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="245" y="265" font-size="12">$p$</text>
-                    
+
                     <line x1="360" y1="200" x2="320" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="325" y="265" font-size="12">$q$</text>
                     <line x1="360" y1="200" x2="400" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="365" y="265" font-size="12">$p$</text>
-                    
+
                     <line x1="540" y1="200" x2="500" y2="320" stroke="#dc2626" stroke-width="2" />
                     <text x="505" y="265" font-size="12">$q$</text>
                     <line x1="540" y1="200" x2="580" y2="320" stroke="#dc2626" stroke-width="2" />
@@ -1411,7 +1652,9 @@
                 </svg>
             </div>
 
-            <p>La variable aléatoire $X$ qui prend le nombre de fois où l'événement succès s'est réalisé durant ces $n$ répétitions suit une <span class="highlight">loi binomiale</span> de paramètres $n$ et $p$, on note : $X \sim B(n, p)$.</p>
+            <p>La variable aléatoire $X$ qui prend le nombre de fois où l'événement succès s'est réalisé durant ces $n$
+                répétitions suit une <span class="highlight">loi binomiale</span> de paramètres $n$ et $p$, on note : $X
+                \sim B(n, p)$.</p>
             <p>$X(\Omega) = \{0, 1, 2, \dots, n\}$. $\forall k \in X(\Omega)$ :</p>
             <div class="formula-center">
                 $$P(X = k) = C_n^k p^k q^{n-k}$$
@@ -1451,17 +1694,22 @@
             <h3 class="subsection-title-red">Exemple BAC 2004</h3>
             <div class="example-box">
                 <p><strong>📌 Exemple BAC 2004 :</strong></p>
-                <p>Un porte-monnaie contient quatre pièces de 500 F CFA et six pièces de 200 F CFA. Un enfant tire au hasard et simultanément 3 pièces de ce porte-monnaie.</p>
+                <p>Un porte-monnaie contient quatre pièces de 500 F CFA et six pièces de 200 F CFA. Un enfant tire au
+                    hasard et simultanément 3 pièces de ce porte-monnaie.</p>
                 <ol>
                     <li>Calculer la probabilité de l'événement $A$ : « tirer trois pièces de 500 F ».</li>
-                    <li>Soit $X$ la variable aléatoire égale au nombre de pièces de 500 F figurant parmi les trois pièces tirées.
+                    <li>Soit $X$ la variable aléatoire égale au nombre de pièces de 500 F figurant parmi les trois
+                        pièces tirées.
                         <ol type="a">
                             <li>Déterminer la loi de probabilité de $X$.</li>
                             <li>Calculer l'espérance mathématique et l'écart-type de $X$.</li>
                         </ol>
                     </li>
-                    <li>L'enfant répète cinq fois l'expérience en remettant chaque fois les trois pièces tirées dans le porte-monnaie.
-                    <br>Quelle est la probabilité que l'événement $A$ se réalise trois fois à l'issue des cinq tirages ?</li>
+                    <li>L'enfant répète cinq fois l'expérience en remettant chaque fois les trois pièces tirées dans le
+                        porte-monnaie.
+                        <br>Quelle est la probabilité que l'événement $A$ se réalise trois fois à l'issue des cinq
+                        tirages ?
+                    </li>
                 </ol>
                 <details>
                     <summary>📝 Voir la solution</summary>
@@ -1470,7 +1718,8 @@
 
                         <p><strong>1. Calcul de la probabilité de l'événement $A$ :</strong></p>
                         <p>Le nombre total de tirages possibles de $3$ pièces parmi $10$ est : $\binom{10}{3} = 120$</p>
-                        <p>Le nombre de tirages favorables (choisir $3$ pièces parmi les $4$ pièces de $500$ F) est : $\binom{4}{3} = 4$</p>
+                        <p>Le nombre de tirages favorables (choisir $3$ pièces parmi les $4$ pièces de $500$ F) est :
+                            $\binom{4}{3} = 4$</p>
                         $$P(A) = \frac{\binom{4}{3}}{\binom{10}{3}} = \frac{4}{120} = \frac{1}{30}$$
 
                         <p><strong>2. Étude de la variable aléatoire $X$</strong></p>
@@ -1501,10 +1750,12 @@
                         </div>
 
                         <p><strong>Espérance :</strong></p>
-                        $$E(X) = 0 \times \frac{1}{6} + 1 \times \frac{1}{2} + 2 \times \frac{3}{10} + 3 \times \frac{1}{30} = \frac{6}{5}$$
+                        $$E(X) = 0 \times \frac{1}{6} + 1 \times \frac{1}{2} + 2 \times \frac{3}{10} + 3 \times
+                        \frac{1}{30} = \frac{6}{5}$$
 
                         <p><strong>Variance :</strong></p>
-                        $$V(X) = 0^2 \times \frac{1}{6} + 1^2 \times \frac{1}{2} + 2^2 \times \frac{3}{10} + 3^2 \times \frac{1}{30} - \left(\frac{6}{5}\right)^2 = \frac{14}{25}$$
+                        $$V(X) = 0^2 \times \frac{1}{6} + 1^2 \times \frac{1}{2} + 2^2 \times \frac{3}{10} + 3^2 \times
+                        \frac{1}{30} - \left(\frac{6}{5}\right)^2 = \frac{14}{25}$$
 
                         <p><strong>Écart-type :</strong></p>
                         $$\sigma(X) = \sqrt{\frac{14}{25}} = \frac{\sqrt{14}}{5}$$
@@ -1513,7 +1764,8 @@
                         <p>On répète $5$ fois l'expérience avec remise. Les tirages sont donc indépendants.</p>
                         <p>La probabilité de succès (événement $A$) est : $p = \frac{1}{30}$</p>
                         <p>On cherche la probabilité d'obtenir exactement $3$ succès en $5$ répétitions :</p>
-                        $$P = \binom{5}{3} \left(\frac{1}{30}\right)^3 \left(\frac{29}{30}\right)^2 = 10 \times \frac{1}{27000} \times \frac{841}{900} = \frac{841}{2430000}$$
+                        $$P = \binom{5}{3} \left(\frac{1}{30}\right)^3 \left(\frac{29}{30}\right)^2 = 10 \times
+                        \frac{1}{27000} \times \frac{841}{900} = \frac{841}{2430000}$$
                     </div>
                 </details>
             </div>
@@ -1528,4 +1780,5 @@
     </footer>
 
 </body>
+
 </html>
