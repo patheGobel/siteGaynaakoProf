@@ -200,15 +200,24 @@
                 <svg viewBox="0 0 220 130" width="220" height="130">
                     <rect x="10" y="10" width="200" height="110" fill="rgba(220,38,38,0.05)" stroke="#dc2626"
                         stroke-width="2" />
-                    <circle cx="75" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
-                    <circle cx="145" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
-                    <text x="75" y="70" font-size="16" text-anchor="middle" font-weight="bold">A</text>
-                    <text x="145" y="70" font-size="16" text-anchor="middle" font-weight="bold">B</text>
+
+                    <!-- Cercle A déplacé vers la gauche (cx changé de 75 à 65) -->
+                    <circle cx="65" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
+
+                    <!-- Cercle B déplacé vers la droite (cx changé de 145 à 155) -->
+                    <circle cx="155" cy="65" r="35" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="2" />
+
+                    <!-- Texte A (centré sur le nouveau cx) -->
+                    <text x="65" y="70" font-size="16" text-anchor="middle" font-weight="bold">A</text>
+
+                    <!-- Texte B (centré sur le nouveau cx) -->
+                    <text x="155" y="70" font-size="16" text-anchor="middle" font-weight="bold">B</text>
+
                     <text x="25" y="115" font-size="14">$\Omega$</text>
                 </svg>
                 <figcaption>Diagramme d'évènements incompatibles $A \cap B = \emptyset$</figcaption>
             </figure>
-
+            
             <p><strong>Remarque :</strong> Si $A$ et $B$ sont deux évènements incompatibles alors $A \cap B =
                 \emptyset$.</p>
 
