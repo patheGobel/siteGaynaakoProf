@@ -1081,63 +1081,114 @@
 
             <div class="example-box">
                 <p><strong>📌 Exemple 3 : Soit l'arbre</strong></p>
-                <div class="tikz-container">
-                    <svg viewBox="0 0 600 400" width="600" height="400">
-                        <circle cx="300" cy="20" r="4" fill="#dc2626" />
 
-                        <line x1="300" y1="20" x2="150" y2="120" stroke="#dc2626" stroke-width="2" />
-                        <text x="215" y="75" font-size="14">$1/4$</text>
+                <div class="tree-container"
+                    style="position: relative; width: 100%; max-width: 700px; margin: 20px auto;">
 
-                        <line x1="300" y1="20" x2="450" y2="120" stroke="#dc2626" stroke-width="2" />
-                        <text x="365" y="75" font-size="14">$2/4$</text>
+                    <svg class="tree-svg" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: auto; position: relative; z-index: 1;">
 
-                        <line x1="300" y1="20" x2="300" y2="120" stroke="#dc2626" stroke-width="2" />
-                        <text x="305" y="75" font-size="14">$1/4$</text>
 
-                        <circle cx="150" cy="120" r="4" fill="#dc2626" />
-                        <text x="135" y="140" font-size="16" font-weight="bold">A</text>
+                        <!-- RACINE (Omega) -->
+                        <foreignObject x="325" y="10" width="50" height="40">
+                            <div class="math-node">$\Omega$</div>
+                        </foreignObject>
 
-                        <circle cx="450" cy="120" r="4" fill="#dc2626" />
-                        <text x="435" y="140" font-size="16" font-weight="bold">B</text>
+                        <!-- NIVEAU 1 : Branches principales (vers A, B, C) -->
+                        <line x1="330" y1="45" x2="160" y2="190" class="branch-line" />
+                        <line x1="350" y1="45" x2="350" y2="190" class="branch-line" />
+                        <line x1="370" y1="45" x2="540" y2="190" class="branch-line" />
 
-                        <circle cx="300" cy="120" r="4" fill="#dc2626" />
-                        <text x="285" y="140" font-size="16" font-weight="bold">C</text>
+                        <!-- Probabilités Niveau 1 -->
+                        <foreignObject x="200" y="80" width="60" height="50">
+                            <div class="math-label">$\frac{1}{4}$</div>
+                        </foreignObject>
 
-                        <line x1="150" y1="120" x2="50" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="85" y="180" font-size="12">$1/5$</text>
-                        <line x1="150" y1="120" x2="150" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="155" y="180" font-size="12">$2/5$</text>
-                        <line x1="150" y1="120" x2="250" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="185" y="180" font-size="12">$2/5$</text>
+                        <foreignObject x="355" y="95" width="60" height="50">
+                            <div class="math-label">$\frac{2}{4}$</div>
+                        </foreignObject>
 
-                        <line x1="450" y1="120" x2="400" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="420" y="180" font-size="12">$1/7$</text>
-                        <line x1="450" y1="120" x2="500" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="470" y="180" font-size="12">$6/7$</text>
+                        <foreignObject x="440" y="80" width="60" height="50">
+                            <div class="math-label">$\frac{1}{4}$</div>
+                        </foreignObject>
 
-                        <line x1="300" y1="120" x2="250" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="270" y="180" font-size="12">$3/4$</text>
-                        <line x1="300" y1="120" x2="350" y2="230" stroke="#dc2626" stroke-width="2" />
-                        <text x="320" y="180" font-size="12">$1/4$</text>
+                        <!-- NŒUDS NIVEAU 1 -->
+                        <foreignObject x="135" y="185" width="50" height="40">
+                            <div class="math-node">$A$</div>
+                        </foreignObject>
 
-                        <circle cx="50" cy="230" r="3" fill="#dc2626" />
-                        <text x="35" y="250" font-size="12">$E$</text>
-                        <circle cx="150" cy="230" r="3" fill="#dc2626" />
-                        <text x="135" y="250" font-size="12">$F$</text>
-                        <circle cx="250" cy="230" r="3" fill="#dc2626" />
-                        <text x="235" y="250" font-size="12">$G$</text>
+                        <foreignObject x="325" y="185" width="50" height="40">
+                            <div class="math-node">$B$</div>
+                        </foreignObject>
 
-                        <circle cx="400" cy="230" r="3" fill="#dc2626" />
-                        <text x="385" y="250" font-size="12">$E$</text>
-                        <circle cx="500" cy="230" r="3" fill="#dc2626" />
-                        <text x="485" y="250" font-size="12">$F$</text>
+                        <foreignObject x="515" y="185" width="50" height="40">
+                            <div class="math-node">$C$</div>
+                        </foreignObject>
 
-                        <circle cx="250" cy="230" r="3" fill="#dc2626" />
-                        <text x="235" y="250" font-size="12">$G$</text>
-                        <circle cx="350" cy="230" r="3" fill="#dc2626" />
-                        <text x="335" y="250" font-size="12">$E$</text>
+                        <!-- NIVEAU 2 GAUCHE : Depuis A (vers E, F, G) -->
+                        <line x1="145" y1="225" x2="70" y2="375" class="branch-line" />
+                        <line x1="155" y1="225" x2="155" y2="375" class="branch-line" />
+                        <line x1="165" y1="225" x2="240" y2="375" class="branch-line" />
+
+                        <!-- Labels A -->
+                        <foreignObject x="65" y="275" width="60" height="50">
+                            <div class="math-label">$\frac{1}{5}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="180" y="275" width="60" height="50">
+                            <div class="math-label">$\frac{2}{5}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="45" y="370" width="50" height="40">
+                            <div class="math-node">$E$</div>
+                        </foreignObject>
+                        <foreignObject x="130" y="370" width="50" height="40">
+                            <div class="math-node">$F$</div>
+                        </foreignObject>
+                        <foreignObject x="215" y="370" width="50" height="40">
+                            <div class="math-node">$G$</div>
+                        </foreignObject>
+
+                        <!-- NIVEAU 2 CENTRE : Depuis B (vers E, F) -->
+                        <line x1="340" y1="225" x2="305" y2="375" class="branch-line" />
+                        <line x1="360" y1="225" x2="395" y2="375" class="branch-line" />
+
+                        <!-- Labels B -->
+                        <foreignObject x="285" y="280" width="60" height="50">
+                            <div class="math-label">$\frac{1}{7}$</div>
+                        </foreignObject>
+                        <foreignObject x="365" y="280" width="60" height="50">
+                            <div class="math-label">$\frac{6}{7}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="280" y="370" width="50" height="40">
+                            <div class="math-node">$E$</div>
+                        </foreignObject>
+                        <foreignObject x="370" y="370" width="50" height="40">
+                            <div class="math-node">$F$</div>
+                        </foreignObject>
+
+                        <!-- NIVEAU 2 DROITE : Depuis C (vers G, E) -->
+                        <line x1="530" y1="225" x2="495" y2="375" class="branch-line" />
+                        <line x1="550" y1="225" x2="585" y2="375" class="branch-line" />
+
+                        <!-- Labels C -->
+                        <foreignObject x="470" y="280" width="60" height="50">
+                            <div class="math-label">$\frac{3}{4}$</div>
+                        </foreignObject>
+                        <foreignObject x="550" y="280" width="60" height="50">
+                            <div class="math-label">$\frac{1}{4}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="470" y="370" width="50" height="40">
+                            <div class="math-node">$G$</div>
+                        </foreignObject>
+                        <foreignObject x="560" y="370" width="50" height="40">
+                            <div class="math-node">$E$</div>
+                        </foreignObject>
                     </svg>
                 </div>
+
                 <details>
                     <summary>📝 Voir la solution</summary>
                     <div class="correction-box">
