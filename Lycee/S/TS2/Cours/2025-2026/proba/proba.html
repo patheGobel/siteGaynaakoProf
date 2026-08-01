@@ -955,49 +955,83 @@
             <div class="example-box">
                 <p><strong>📌 Exemple 3 : Arbre à plusieurs issues</strong></p>
                 <p>Soit l'arbre suivant :</p>
-                <div class="tikz-container">
-                    <svg viewBox="0 0 550 400" width="550" height="400">
-                        <circle cx="275" cy="20" r="4" fill="#dc2626" />
+                <div class="tree-container">
+                    <svg class="tree-svg" viewBox="0 0 600 340">
+                        <!-- NIVEAU 1 : Branches principales -->
+                        <line x1="300" y1="20" x2="150" y2="140" class="branch-line" />
+                        <line x1="300" y1="20" x2="450" y2="140" class="branch-line" />
 
-                        <line x1="275" y1="20" x2="120" y2="130" stroke="#dc2626" stroke-width="2" />
-                        <text x="185" y="80" font-size="14">$1/6$</text>
+                        <!-- Probabilités Niveau 1 -->
+                        <foreignObject x="170" y="55" width="80" height="40">
+                            <div class="label-text">$\frac{1}{6}$</div>
+                        </foreignObject>
 
-                        <line x1="275" y1="20" x2="430" y2="130" stroke="#dc2626" stroke-width="2" />
-                        <text x="355" y="80" font-size="14">$5/6$</text>
+                        <foreignObject x="350" y="55" width="80" height="40">
+                            <div class="label-text">$\frac{5}{6}$</div>
+                        </foreignObject>
 
-                        <circle cx="120" cy="130" r="4" fill="#dc2626" />
-                        <text x="105" y="150" font-size="16" font-weight="bold">A</text>
+                        <!-- Nœuds Niveau 1 -->
+                        <foreignObject x="130" y="140" width="40" height="40">
+                            <div class="node-text">$A$</div>
+                        </foreignObject>
 
-                        <circle cx="430" cy="130" r="4" fill="#dc2626" />
-                        <text x="415" y="150" font-size="16" font-weight="bold">$\bar{A}$</text>
+                        <foreignObject x="430" y="140" width="40" height="40">
+                            <div class="node-text">$\overline{A}$</div>
+                        </foreignObject>
 
-                        <line x1="120" y1="130" x2="20" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="45" y="195" font-size="12">$1/2$</text>
-                        <line x1="120" y1="130" x2="120" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="125" y="195" font-size="12">$1/2$</text>
-                        <line x1="120" y1="130" x2="220" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="155" y="195" font-size="12">$0$</text>
+                        <!-- NIVEAU 2 GAUCHE : Décrochage depuis A bar -->
+                        <line x1="140" y1="165" x2="50" y2="285" class="branch-line" />
+                        <line x1="160" y1="165" x2="250" y2="285" class="branch-line" />
 
-                        <line x1="430" y1="130" x2="330" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="365" y="195" font-size="12">$1/4$</text>
-                        <line x1="430" y1="130" x2="430" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="435" y="195" font-size="12">$2/4$</text>
-                        <line x1="430" y1="130" x2="530" y2="250" stroke="#dc2626" stroke-width="2" />
-                        <text x="465" y="195" font-size="12">$1/4$</text>
+                        <!-- Probabilités Niveau 2 Gauche -->
+                        <foreignObject x="30" y="200" width="90" height="40">
+                            <div class="label-text">$\frac{1}{2}$</div>
+                        </foreignObject>
 
-                        <circle cx="20" cy="250" r="3" fill="#dc2626" />
-                        <text x="5" y="270" font-size="12">$B$</text>
-                        <circle cx="120" cy="250" r="3" fill="#dc2626" />
-                        <text x="105" y="270" font-size="12">$C$</text>
-                        <circle cx="220" cy="250" r="3" fill="#dc2626" />
-                        <text x="205" y="270" font-size="12">$D$</text>
+                        <foreignObject x="190" y="200" width="90" height="40">
+                            <div class="label-text">$\frac{1}{2}$</div>
+                        </foreignObject>
 
-                        <circle cx="330" cy="250" r="3" fill="#dc2626" />
-                        <text x="315" y="270" font-size="12">$D$</text>
-                        <circle cx="430" cy="250" r="3" fill="#dc2626" />
-                        <text x="415" y="270" font-size="12">$B$</text>
-                        <circle cx="530" cy="250" r="3" fill="#dc2626" />
-                        <text x="515" y="270" font-size="12">$C$</text>
+                        <!-- Nœuds Niveau 2 Gauche -->
+                        <foreignObject x="30" y="290" width="40" height="40">
+                            <div class="node-text">$B$</div>
+                        </foreignObject>
+
+                        <foreignObject x="230" y="290" width="40" height="40">
+                            <div class="node-text">$C$</div>
+                        </foreignObject>
+
+                        <!-- NIVEAU 2 DROITE : Décrochage depuis A -->
+                        <line x1="440" y1="165" x2="350" y2="285" class="branch-line" />
+                        <line x1="450" y1="165" x2="450" y2="285" class="branch-line" />
+                        <line x1="460" y1="165" x2="550" y2="285" class="branch-line" />
+
+                        <!-- Probabilités Niveau 2 Droite -->
+                        <foreignObject x="320" y="200" width="90" height="40">
+                            <div class="label-text">$\frac{1}{4}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="420" y="220" width="90" height="40">
+                            <div class="label-text">$\frac{1}{4}$</div>
+                        </foreignObject>
+
+                        <foreignObject x="490" y="200" width="90" height="40">
+                            <div class="label-text">$\frac{1}{2}$</div>
+                        </foreignObject>
+
+                        <!-- Nœuds Niveau 2 Droite -->
+                        <foreignObject x="330" y="290" width="40" height="40">
+                            <div class="node-text">$D$</div>
+                        </foreignObject>
+
+                        <foreignObject x="430" y="290" width="40" height="40">
+                            <div class="node-text">$B$</div>
+                        </foreignObject>
+
+                        <foreignObject x="530" y="290" width="40" height="40">
+                            <div class="node-text">$C$</div>
+                        </foreignObject>
+
                     </svg>
                 </div>
                 <details>
