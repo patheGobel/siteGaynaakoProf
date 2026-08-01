@@ -658,3 +658,36 @@
         .mb-20 {
             margin-bottom: 20px;
         }
+
+
+        .tree-container {
+            width: 100%;
+            max-width: 650px;
+            margin: 20px auto;
+            font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', serif;
+        }
+
+        .tree-svg {
+            width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+
+        /* Traits des branches */
+        .branch-line {
+            stroke: #333333;
+            stroke-width: 1.2;
+        }
+
+        /* Style du texte HTML via foreignObject pour garder MathJax */
+        .node-text {
+            font-size: 18px;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .label-text {
+            font-size: 16px;
+            text-align: center;
+            line-height: 1;
+        }

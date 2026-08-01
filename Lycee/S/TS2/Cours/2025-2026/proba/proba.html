@@ -780,51 +780,73 @@
             </div>
 
             <h4 style="color: var(--primary);">Structure générale</h4>
-            <div class="tikz-container">
-                <svg viewBox="0 0 500 350" width="500" height="350">
-                    <!-- Racine -->
-                    <circle cx="250" cy="20" r="4" fill="#dc2626" />
+            <div class="tree-container">
+                <svg class="tree-svg" viewBox="0 0 600 340">
+                    <!-- NIVEAU 1 : Branches principales -->
+                    <line x1="300" y1="20" x2="150" y2="140" class="branch-line" />
+                    <line x1="300" y1="20" x2="450" y2="140" class="branch-line" />
 
-                    <!-- Branche vers A -->
-                    <line x1="250" y1="20" x2="120" y2="120" stroke="#dc2626" stroke-width="2" />
-                    <text x="175" y="75" font-size="14">$p(A)$</text>
+                    <!-- Probabilités Niveau 1 -->
+                    <foreignObject x="170" y="55" width="80" height="40">
+                        <div class="label-text">$p(\overline{A})$</div>
+                    </foreignObject>
 
-                    <!-- Branche vers ¬A -->
-                    <line x1="250" y1="20" x2="380" y2="120" stroke="#dc2626" stroke-width="2" />
-                    <text x="325" y="75" font-size="14">$p(\bar{A})$</text>
+                    <foreignObject x="350" y="55" width="80" height="40">
+                        <div class="label-text">$p(A)$</div>
+                    </foreignObject>
 
-                    <!-- Nœud A -->
-                    <circle cx="120" cy="120" r="4" fill="#dc2626" />
-                    <text x="105" y="140" font-size="16" font-weight="bold">A</text>
+                    <!-- Nœuds Niveau 1 -->
+                    <foreignObject x="130" y="140" width="40" height="40">
+                        <div class="node-text">$\overline{A}$</div>
+                    </foreignObject>
 
-                    <!-- Nœud ¬A -->
-                    <circle cx="380" cy="120" r="4" fill="#dc2626" />
-                    <text x="365" y="140" font-size="16" font-weight="bold">$\bar{A}$</text>
+                    <foreignObject x="430" y="140" width="40" height="40">
+                        <div class="node-text">$A$</div>
+                    </foreignObject>
 
-                    <!-- Branches de A -->
-                    <line x1="120" y1="120" x2="50" y2="220" stroke="#dc2626" stroke-width="2" />
-                    <text x="60" y="175" font-size="12">$P_A(B)$</text>
-                    <line x1="120" y1="120" x2="190" y2="220" stroke="#dc2626" stroke-width="2" />
-                    <text x="150" y="175" font-size="12">$P_A(\bar{B})$</text>
+                    <!-- NIVEAU 2 GAUCHE : Décrochage depuis A bar -->
+                    <line x1="140" y1="165" x2="50" y2="285" class="branch-line" />
+                    <line x1="160" y1="165" x2="250" y2="285" class="branch-line" />
 
-                    <!-- Branches de ¬A -->
-                    <line x1="380" y1="120" x2="310" y2="220" stroke="#dc2626" stroke-width="2" />
-                    <text x="330" y="175" font-size="12">$P_{\bar{A}}(B)$</text>
-                    <line x1="380" y1="120" x2="450" y2="220" stroke="#dc2626" stroke-width="2" />
-                    <text x="420" y="175" font-size="12">$P_{\bar{A}}(\bar{B})$</text>
+                    <!-- Probabilités Niveau 2 Gauche -->
+                    <foreignObject x="30" y="200" width="90" height="40">
+                        <div class="label-text">$p_{\overline{A}}(\overline{B})$</div>
+                    </foreignObject>
 
-                    <!-- Nœuds finaux -->
-                    <circle cx="50" cy="220" r="3" fill="#dc2626" />
-                    <text x="30" y="240" font-size="12">$A \cap B$</text>
+                    <foreignObject x="190" y="200" width="90" height="40">
+                        <div class="label-text">$p_{\overline{A}}(B)$</div>
+                    </foreignObject>
 
-                    <circle cx="190" cy="220" r="3" fill="#dc2626" />
-                    <text x="170" y="240" font-size="12">$A \cap \bar{B}$</text>
+                    <!-- Nœuds Niveau 2 Gauche -->
+                    <foreignObject x="30" y="290" width="40" height="40">
+                        <div class="node-text">$\overline{B}$</div>
+                    </foreignObject>
 
-                    <circle cx="310" cy="220" r="3" fill="#dc2626" />
-                    <text x="290" y="240" font-size="12">$\bar{A} \cap B$</text>
+                    <foreignObject x="230" y="290" width="40" height="40">
+                        <div class="node-text">$B$</div>
+                    </foreignObject>
 
-                    <circle cx="450" cy="220" r="3" fill="#dc2626" />
-                    <text x="430" y="240" font-size="12">$\bar{A} \cap \bar{B}$</text>
+                    <!-- NIVEAU 2 DROITE : Décrochage depuis A -->
+                    <line x1="440" y1="165" x2="350" y2="285" class="branch-line" />
+                    <line x1="460" y1="165" x2="550" y2="285" class="branch-line" />
+
+                    <!-- Probabilités Niveau 2 Droite -->
+                    <foreignObject x="320" y="200" width="90" height="40">
+                        <div class="label-text">$p_A(\overline{B})$</div>
+                    </foreignObject>
+
+                    <foreignObject x="490" y="200" width="90" height="40">
+                        <div class="label-text">$p_A(B)$</div>
+                    </foreignObject>
+
+                    <!-- Nœuds Niveau 2 Droite -->
+                    <foreignObject x="330" y="290" width="40" height="40">
+                        <div class="node-text">$\overline{B}$</div>
+                    </foreignObject>
+
+                    <foreignObject x="530" y="290" width="40" height="40">
+                        <div class="node-text">$B$</div>
+                    </foreignObject>
                 </svg>
             </div>
 
