@@ -1530,7 +1530,10 @@
                 appelle <span class="highlight">fonction de répartition</span> de la variable aléatoire $X$ la fonction
             </p>
             <div class="formula-center">
-                $$f : \mathbb{R} \to [0, 1], \quad x \mapsto P(X \leq x)$$
+                $$\begin{align*}
+                f : \mathbb{R} &\longrightarrow [0, 1] \\
+                x &\mapsto P(X \leq x)
+                \end{align*}$$
             </div>
             <p>Si la loi de probabilité est donnée telle que $x_1 < x_2 < \dots < x_n$ :</p>
                     <div class="table-wrapper">
@@ -1612,68 +1615,222 @@
                                     \frac{7}{10} & \text{si } x \in [2, 3[ \\
                                     1 & \text{si } x \in [3, +\infty[
                                     \end{cases}$$</p>
-                                <figure>
-                                    <svg viewBox="0 0 500 400" width="500" height="400">
-                                        <!-- Axes -->
-                                        <line x1="50" y1="350" x2="450" y2="350" stroke="#333" stroke-width="2" />
-                                        <line x1="50" y1="350" x2="50" y2="20" stroke="#333" stroke-width="2" />
-                                        <text x="440" y="370" font-size="16">$x$</text>
-                                        <text x="30" y="25" font-size="16">$F(x)$</text>
+                                <div class="graph-container"
+                                    style="position: relative; width: 100%; max-width: 650px; margin: 20px auto;">
 
-                                        <!-- Grille -->
-                                        <line x1="50" y1="350" x2="50" y2="350" stroke="#ddd" stroke-width="0.5" />
+                                    <!-- Filigrane PGB vertical diagonal -->
+                                    <div
+                                        style="position: absolute; top: 50%; left: 45%; transform: translate(-50%, -50%) rotate(-65deg); font-size: 140px; font-weight: 900; color: rgba(120, 120, 120, 0.35); pointer-events: none; user-select: none; font-family: sans-serif; z-index: 0; letter-spacing: 5px;">
+                                        PGB
+                                    </div>
 
-                                        <!-- Échelle x -->
-                                        <text x="50" y="370" font-size="12">$-4$</text>
-                                        <text x="130" y="370" font-size="12">$-3$</text>
-                                        <text x="210" y="370" font-size="12">$-1$</text>
-                                        <text x="290" y="370" font-size="12">$0$</text>
-                                        <text x="370" y="370" font-size="12">$2$</text>
-                                        <text x="450" y="370" font-size="12">$3$</text>
+                                    <svg class="graph-svg" viewBox="-280 -360 560 410"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        style="width: 100%; height: auto; position: relative; z-index: 1;">
+                                        <defs>
+                                            <!-- Définition des flèches pour les axes -->
+                                            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6"
+                                                markerHeight="6" orient="auto-start-reverse">
+                                                <path d="M 0 1 L 10 5 L 0 9 z" fill="#000000" />
+                                            </marker>
+                                        </defs>
 
-                                        <!-- Échelle y -->
-                                        <text x="35" y="350" font-size="12">$0$</text>
-                                        <text x="35" y="320" font-size="12">$1/10$</text>
-                                        <text x="35" y="230" font-size="12">$4/10$</text>
-                                        <text x="35" y="200" font-size="12">$5/10$</text>
-                                        <text x="35" y="140" font-size="12">$7/10$</text>
-                                        <text x="35" y="50" font-size="12">$1$</text>
+                                        <style>
+                                            .grid-line {
+                                                stroke: #e5e5e5;
+                                                stroke-width: 1;
+                                                stroke-dasharray: 3, 3;
+                                            }
 
-                                        <!-- Points de la fonction -->
-                                        <!-- [-4, -3] -->
-                                        <line x1="50" y1="350" x2="130" y2="350" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="130" cy="350" r="4" fill="#dc2626" />
+                                            .axis-line {
+                                                stroke: #000000;
+                                                stroke-width: 1.5;
+                                            }
 
-                                        <!-- [-3, -1] -->
-                                        <line x1="130" y1="320" x2="210" y2="320" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="130" cy="320" r="4" fill="#dc2626" />
-                                        <circle cx="210" cy="320" r="4" fill="white" stroke="#dc2626"
-                                            stroke-width="2" />
+                                            .projection-line {
+                                                stroke: #888888;
+                                                stroke-width: 1.2;
+                                                stroke-dasharray: 4, 4;
+                                            }
 
-                                        <!-- [-1, 0] -->
-                                        <line x1="210" y1="230" x2="290" y2="230" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="210" cy="230" r="4" fill="#dc2626" />
-                                        <circle cx="290" cy="230" r="4" fill="white" stroke="#dc2626"
-                                            stroke-width="2" />
+                                            .plot-line {
+                                                stroke: #ff0000;
+                                                stroke-width: 2.2;
+                                            }
 
-                                        <!-- [0, 2] -->
-                                        <line x1="290" y1="200" x2="370" y2="200" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="290" cy="200" r="4" fill="#dc2626" />
-                                        <circle cx="370" cy="200" r="4" fill="white" stroke="#dc2626"
-                                            stroke-width="2" />
+                                            .dot-filled {
+                                                fill: #ff0000;
+                                                stroke: #ff0000;
+                                                stroke-width: 1.5;
+                                            }
 
-                                        <!-- [2, 3] -->
-                                        <line x1="370" y1="140" x2="450" y2="140" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="370" cy="140" r="4" fill="#dc2626" />
-                                        <circle cx="450" cy="140" r="4" fill="white" stroke="#dc2626"
-                                            stroke-width="2" />
+                                            .dot-open {
+                                                fill: #ffffff;
+                                                stroke: #ff0000;
+                                                stroke-width: 1.8;
+                                            }
 
-                                        <!-- [3, +∞] -->
-                                        <line x1="450" y1="50" x2="480" y2="50" stroke="#dc2626" stroke-width="2" />
-                                        <circle cx="450" cy="50" r="4" fill="#dc2626" />
+                                            .tick-label {
+                                                font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', serif;
+                                                font-size: 16px;
+                                                text-anchor: middle;
+                                                dominant-baseline: central;
+                                                fill: #000000;
+                                            }
+                                        </style>
+
+                                        <!-- 1. GRILLE DE FOND (Gris clair pointillé) -->
+                                        <!-- Quadrillage horizontal -->
+                                        <line x1="-240" y1="0" x2="240" y2="0" class="grid-line" />
+                                        <line x1="-240" y1="-30" x2="240" y2="-30" class="grid-line" />
+                                        <line x1="-240" y1="-60" x2="240" y2="-60" class="grid-line" />
+                                        <line x1="-240" y1="-90" x2="240" y2="-90" class="grid-line" />
+                                        <line x1="-240" y1="-120" x2="240" y2="-120" class="grid-line" />
+                                        <line x1="-240" y1="-150" x2="240" y2="-150" class="grid-line" />
+                                        <line x1="-240" y1="-180" x2="240" y2="-180" class="grid-line" />
+                                        <line x1="-240" y1="-210" x2="240" y2="-210" class="grid-line" />
+                                        <line x1="-240" y1="-240" x2="240" y2="-240" class="grid-line" />
+                                        <line x1="-240" y1="-270" x2="240" y2="-270" class="grid-line" />
+                                        <line x1="-240" y1="-300" x2="240" y2="-300" class="grid-line" />
+                                        <line x1="-240" y1="-330" x2="240" y2="-330" class="grid-line" />
+
+                                        <!-- Quadrillage vertical -->
+                                        <line x1="-240" y1="-340" x2="-240" y2="10" class="grid-line" />
+                                        <line x1="-192" y1="-340" x2="-192" y2="10" class="grid-line" />
+                                        <line x1="-144" y1="-340" x2="-144" y2="10" class="grid-line" />
+                                        <line x1="-96" y1="-340" x2="-96" y2="10" class="grid-line" />
+                                        <line x1="-48" y1="-340" x2="-48" y2="10" class="grid-line" />
+                                        <line x1="0" y1="-340" x2="0" y2="10" class="grid-line" />
+                                        <line x1="48" y1="-340" x2="48" y2="10" class="grid-line" />
+                                        <line x1="96" y1="-340" x2="96" y2="10" class="grid-line" />
+                                        <line x1="144" y1="-340" x2="144" y2="10" class="grid-line" />
+                                        <line x1="192" y1="-340" x2="192" y2="10" class="grid-line" />
+                                        <line x1="240" y1="-340" x2="240" y2="10" class="grid-line" />
+
+                                        <!-- 2. LIGNES DE PROJECTION ET POINTILLÉS GRIS (Gris moyen) -->
+                                        <!-- x = -3 vers y = 1 -->
+                                        <line x1="-144" y1="0" x2="-144" y2="-30" class="projection-line" />
+                                        <!-- x = -1 vers y = 1 et y = 4 -->
+                                        <line x1="-48" y1="0" x2="-48" y2="-120" class="projection-line" />
+                                        <line x1="-48" y1="-30" x2="0" y2="-30" class="projection-line" />
+                                        <line x1="-48" y1="-120" x2="0" y2="-120" class="projection-line" />
+                                        <!-- x = 2 vers y = 7 -->
+                                        <line x1="96" y1="0" x2="96" y2="-210" class="projection-line" />
+                                        <line x1="0" y1="-210" x2="96" y2="-210" class="projection-line" />
+                                        <!-- x = 3 vers y = 7 et y = 10 -->
+                                        <line x1="144" y1="0" x2="144" y2="-300" class="projection-line" />
+                                        <line x1="96" y1="-210" x2="144" y2="-210" class="projection-line" />
+                                        <line x1="0" y1="-300" x2="144" y2="-300" class="projection-line" />
+
+                                        <!-- 3. AXES DU REPÈRE -->
+                                        <!-- Axe X -->
+                                        <line x1="-260" y1="0" x2="240" y2="0" class="axis-line"
+                                            marker-end="url(#arrow)" />
+                                        <!-- Axe Y -->
+                                        <line x1="0" y1="20" x2="0" y2="-345" class="axis-line"
+                                            marker-end="url(#arrow)" />
+
+                                        <!-- Graduations Axes (Petits traits) -->
+                                        <line x1="-192" y1="-3" x2="-192" y2="3" class="axis-line" />
+                                        <line x1="-144" y1="-3" x2="-144" y2="3" class="axis-line" />
+                                        <line x1="-96" y1="-3" x2="-96" y2="3" class="axis-line" />
+                                        <line x1="-48" y1="-3" x2="-48" y2="3" class="axis-line" />
+                                        <line x1="48" y1="-3" x2="48" y2="3" class="axis-line" />
+                                        <line x1="96" y1="-3" x2="96" y2="3" class="axis-line" />
+                                        <line x1="144" y1="-3" x2="144" y2="3" class="axis-line" />
+                                        <line x1="192" y1="-3" x2="192" y2="3" class="axis-line" />
+
+                                        <!-- 4. COURBE ET SEGMENTS EN ROUGE -->
+                                        <!-- Intervalle ]-inf, -3] -->
+                                        <line x1="-260" y1="0" x2="-144" y2="0" class="plot-line" />
+                                        <!-- Intervalle ]-3, -1[ -->
+                                        <line x1="-144" y1="-30" x2="-48" y2="-30" class="plot-line" />
+                                        <!-- Intervalle [-1, 0[ -->
+                                        <line x1="-48" y1="-120" x2="0" y2="-120" class="plot-line" />
+                                        <!-- Intervalle [0, 2[ -->
+                                        <line x1="0" y1="-150" x2="96" y2="-150" class="plot-line" />
+                                        <!-- Intervalle [2, 3[ -->
+                                        <line x1="96" y1="-210" x2="144" y2="-210" class="plot-line" />
+                                        <!-- Intervalle [3, +inf[ -->
+                                        <line x1="144" y1="-300" x2="210" y2="-300" class="plot-line" />
+
+                                        <!-- 5. POINTS (PLEINS ET CREUX) -->
+                                        <!-- Sur l'axe x en -3 -->
+                                        <circle cx="-144" cy="0" r="4.5" class="dot-filled" />
+
+                                        <!-- Segment y = 1 -->
+                                        <circle cx="-144" cy="-30" r="4.5" class="dot-filled" />
+                                        <circle cx="-48" cy="-30" r="4.5" class="dot-open" />
+
+                                        <!-- Segment y = 4 -->
+                                        <circle cx="-48" cy="-120" r="4.5" class="dot-filled" />
+                                        <circle cx="0" cy="-120" r="4.5" class="dot-open" />
+
+                                        <!-- Segment y = 5 -->
+                                        <circle cx="0" cy="-150" r="4.5" class="dot-filled" />
+                                        <circle cx="96" cy="-150" r="4.5" class="dot-open" />
+
+                                        <!-- Segment y = 7 -->
+                                        <circle cx="96" cy="-210" r="4.5" class="dot-filled" />
+                                        <circle cx="144" cy="-210" r="4.5" class="dot-open" />
+
+                                        <!-- Segment y = 10 -->
+                                        <circle cx="144" cy="-300" r="4.5" class="dot-filled" />
+
+                                        <!-- 6. TEXTES ET LABELS DES GRADUATIONS -->
+                                        <!-- Axes Labels -->
+                                        <foreignObject x="245" y="-12" width="30" height="30">
+                                            <div class="tick-label" style="font-style: italic;">$x$</div>
+                                        </foreignObject>
+
+                                        <!-- Graduations X -->
+                                        <foreignObject x="-207" y="5" width="30" height="25">
+                                            <div class="tick-label">$-4$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-159" y="5" width="30" height="25">
+                                            <div class="tick-label">$-3$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-111" y="5" width="30" height="25">
+                                            <div class="tick-label">$-2$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-63" y="5" width="30" height="25">
+                                            <div class="tick-label">$-1$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-15" y="5" width="30" height="25">
+                                            <div class="tick-label">$0$</div>
+                                        </foreignObject>
+                                        <foreignObject x="33" y="5" width="30" height="25">
+                                            <div class="tick-label">$1$</div>
+                                        </foreignObject>
+                                        <foreignObject x="81" y="5" width="30" height="25">
+                                            <div class="tick-label">$2$</div>
+                                        </foreignObject>
+                                        <foreignObject x="129" y="5" width="30" height="25">
+                                            <div class="tick-label">$3$</div>
+                                        </foreignObject>
+                                        <foreignObject x="177" y="5" width="30" height="25">
+                                            <div class="tick-label">$4$</div>
+                                        </foreignObject>
+
+                                        <!-- Graduations Y -->
+                                        <foreignObject x="-30" y="-42" width="25" height="25">
+                                            <div class="tick-label" style="text-anchor: end;">$1$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-30" y="-132" width="25" height="25">
+                                            <div class="tick-label" style="text-anchor: end;">$4$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-30" y="-162" width="25" height="25">
+                                            <div class="tick-label" style="text-anchor: end;">$5$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-30" y="-222" width="25" height="25">
+                                            <div class="tick-label" style="text-anchor: end;">$7$</div>
+                                        </foreignObject>
+                                        <foreignObject x="-35" y="-312" width="30" height="25">
+                                            <div class="tick-label" style="text-anchor: end;">$10$</div>
+                                        </foreignObject>
+
                                     </svg>
-                                    <figcaption>Courbe de la fonction de répartition</figcaption>
-                                </figure>
+                                </div>
                             </div>
                         </details>
                     </div>
