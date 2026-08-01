@@ -1635,50 +1635,6 @@
                                             </marker>
                                         </defs>
 
-                                        <style>
-                                            .grid-line {
-                                                stroke: #e5e5e5;
-                                                stroke-width: 1;
-                                                stroke-dasharray: 3, 3;
-                                            }
-
-                                            .axis-line {
-                                                stroke: #000000;
-                                                stroke-width: 1.5;
-                                            }
-
-                                            .projection-line {
-                                                stroke: #888888;
-                                                stroke-width: 1.2;
-                                                stroke-dasharray: 4, 4;
-                                            }
-
-                                            .plot-line {
-                                                stroke: #ff0000;
-                                                stroke-width: 2.2;
-                                            }
-
-                                            .dot-filled {
-                                                fill: #ff0000;
-                                                stroke: #ff0000;
-                                                stroke-width: 1.5;
-                                            }
-
-                                            .dot-open {
-                                                fill: #ffffff;
-                                                stroke: #ff0000;
-                                                stroke-width: 1.8;
-                                            }
-
-                                            .tick-label {
-                                                font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', serif;
-                                                font-size: 16px;
-                                                text-anchor: middle;
-                                                dominant-baseline: central;
-                                                fill: #000000;
-                                            }
-                                        </style>
-
                                         <!-- 1. GRILLE DE FOND (Gris clair pointillé) -->
                                         <!-- Quadrillage horizontal -->
                                         <line x1="-240" y1="0" x2="240" y2="0" class="grid-line" />
@@ -1901,61 +1857,149 @@
             <p>La répétition successive et indépendante $n$ fois de cette épreuve aléatoire est appelée <span
                     class="highlight">schéma de Bernoulli</span>.</p>
 
-            <div class="tikz-container">
-                <svg viewBox="0 0 600 500" width="600" height="500">
-                    <!-- Niveau 1 -->
-                    <circle cx="300" cy="20" r="4" fill="#dc2626" />
+            <div class="tree-container" style="position: relative; width: 100%; max-width: 650px; margin: 20px auto;">
 
-                    <line x1="300" y1="20" x2="150" y2="100" stroke="#dc2626" stroke-width="2" />
-                    <text x="215" y="65" font-size="14">$q$</text>
-                    <line x1="300" y1="20" x2="450" y2="100" stroke="#dc2626" stroke-width="2" />
-                    <text x="365" y="65" font-size="14">$p$</text>
+                <!-- Filigrane PGB vertical diagonal en arrière-plan -->
+                <div
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-65deg); font-size: 160px; font-weight: 900; color: rgba(120, 120, 120, 0.25); pointer-events: none; user-select: none; font-family: sans-serif; z-index: 0; letter-spacing: 5px;">
+                    PGB
+                </div>
 
-                    <circle cx="150" cy="100" r="4" fill="#dc2626" />
-                    <text x="135" y="120" font-size="16" font-weight="bold">$\bar{S}$</text>
-                    <circle cx="450" cy="100" r="4" fill="#dc2626" />
-                    <text x="435" y="120" font-size="16" font-weight="bold">$S$</text>
+                <svg class="tree-svg" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 100%; height: auto; position: relative; z-index: 1;">
 
-                    <!-- Niveau 2 -->
-                    <line x1="150" y1="100" x2="60" y2="200" stroke="#dc2626" stroke-width="2" />
-                    <text x="90" y="155" font-size="12">$q$</text>
-                    <line x1="150" y1="100" x2="240" y2="200" stroke="#dc2626" stroke-width="2" />
-                    <text x="185" y="155" font-size="12">$p$</text>
+                    <!-- NIVEAU 0 -> NIVEAU 1 -->
+                    <!-- Branches depuis la Racine (350, 20) -->
+                    <line x1="340" y1="20" x2="190" y2="200" class="branch-line" />
+                    <line x1="360" y1="20" x2="510" y2="200" class="branch-line" />
 
-                    <line x1="450" y1="100" x2="360" y2="200" stroke="#dc2626" stroke-width="2" />
-                    <text x="395" y="155" font-size="12">$q$</text>
-                    <line x1="450" y1="100" x2="540" y2="200" stroke="#dc2626" stroke-width="2" />
-                    <text x="485" y="155" font-size="12">$p$</text>
+                    <!-- Labels Niveau 1 -->
+                    <foreignObject x="235" y="80" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="425" y="80" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
 
-                    <circle cx="60" cy="200" r="4" fill="#dc2626" />
-                    <text x="45" y="220" font-size="14" font-weight="bold">$\bar{S}$</text>
-                    <circle cx="240" cy="200" r="4" fill="#dc2626" />
-                    <text x="225" y="220" font-size="14" font-weight="bold">$S$</text>
-                    <circle cx="360" cy="200" r="4" fill="#dc2626" />
-                    <text x="345" y="220" font-size="14" font-weight="bold">$\bar{S}$</text>
-                    <circle cx="540" cy="200" r="4" fill="#dc2626" />
-                    <text x="525" y="220" font-size="14" font-weight="bold">$S$</text>
+                    <!-- Nœuds Niveau 1 -->
+                    <foreignObject x="160" y="200" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="480" y="200" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
 
-                    <!-- Niveau 3 -->
-                    <line x1="60" y1="200" x2="20" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="25" y="265" font-size="12">$q$</text>
-                    <line x1="60" y1="200" x2="100" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="65" y="265" font-size="12">$p$</text>
+                    <!-- NIVEAU 1 -> NIVEAU 2 -->
+                    <!-- Depuis S_barre (190, 240) -->
+                    <line x1="180" y1="240" x2="100" y2="420" class="branch-line" />
+                    <line x1="200" y1="240" x2="280" y2="420" class="branch-line" />
 
-                    <line x1="240" y1="200" x2="200" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="205" y="265" font-size="12">$q$</text>
-                    <line x1="240" y1="200" x2="280" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="245" y="265" font-size="12">$p$</text>
+                    <!-- Depuis S (510, 240) -->
+                    <line x1="500" y1="240" x2="420" y2="420" class="branch-line" />
+                    <line x1="520" y1="240" x2="600" y2="420" class="branch-line" />
 
-                    <line x1="360" y1="200" x2="320" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="325" y="265" font-size="12">$q$</text>
-                    <line x1="360" y1="200" x2="400" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="365" y="265" font-size="12">$p$</text>
+                    <!-- Labels Niveau 2 -->
+                    <foreignObject x="110" y="300" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="240" y="300" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
+                    <foreignObject x="430" y="300" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="560" y="300" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
 
-                    <line x1="540" y1="200" x2="500" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="505" y="265" font-size="12">$q$</text>
-                    <line x1="540" y1="200" x2="580" y2="320" stroke="#dc2626" stroke-width="2" />
-                    <text x="545" y="265" font-size="12">$p$</text>
+                    <!-- Nœuds Niveau 2 -->
+                    <foreignObject x="70" y="420" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="250" y="420" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
+                    <foreignObject x="390" y="420" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="570" y="420" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
+
+                    <!-- NIVEAU 2 -> NIVEAU 3 -->
+                    <!-- Depuis S_barre (100, 460) -->
+                    <line x1="95" y1="460" x2="55" y2="640" class="branch-line" />
+                    <line x1="105" y1="460" x2="145" y2="640" class="branch-line" />
+
+                    <!-- Depuis S (280, 460) -->
+                    <line x1="275" y1="460" x2="235" y2="640" class="branch-line" />
+                    <line x1="285" y1="460" x2="325" y2="640" class="branch-line" />
+
+                    <!-- Depuis S_barre (420, 460) -->
+                    <line x1="415" y1="460" x2="375" y2="640" class="branch-line" />
+                    <line x1="425" y1="460" x2="465" y2="640" class="branch-line" />
+
+                    <!-- Depuis S (600, 460) -->
+                    <line x1="595" y1="460" x2="555" y2="640" class="branch-line" />
+                    <line x1="605" y1="460" x2="645" y2="640" class="branch-line" />
+
+                    <!-- Labels Niveau 3 -->
+                    <foreignObject x="45" y="530" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="125" y="530" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
+
+                    <foreignObject x="225" y="530" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="305" y="530" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
+
+                    <foreignObject x="365" y="530" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="445" y="530" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
+
+                    <foreignObject x="545" y="530" width="40" height="40">
+                        <div class="math-label">$q$</div>
+                    </foreignObject>
+                    <foreignObject x="625" y="530" width="40" height="40">
+                        <div class="math-label">$p$</div>
+                    </foreignObject>
+
+                    <!-- Nœuds Niveau 3 (Feuilles) -->
+                    <foreignObject x="25" y="640" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="115" y="640" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
+
+                    <foreignObject x="205" y="640" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="295" y="640" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
+
+                    <foreignObject x="345" y="640" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="435" y="640" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
+
+                    <foreignObject x="525" y="640" width="60" height="40">
+                        <div class="math-node">$\overline{S}$</div>
+                    </foreignObject>
+                    <foreignObject x="615" y="640" width="60" height="40">
+                        <div class="math-node">$S$</div>
+                    </foreignObject>
                 </svg>
             </div>
 
