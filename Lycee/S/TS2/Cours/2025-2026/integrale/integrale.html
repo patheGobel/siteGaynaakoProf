@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcul Intégral - TS2</title>
+
+    <link rel="stylesheet" href="integrale.css" />
+
+    <!-- Configuration MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <h1>∫ Calcul Intégral</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    I. INTÉGRALE D'UNE FONCTION CONTINUE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">I. Intégrale d'une fonction continue</h2>
+
+        <!-- 1. Introduction -->
+        <article class="subsection">
+            <h3 class="subsection-title">1. Introduction</h3>
+
+            <p>Soit \(f\) une fonction continue sur un intervalle \(I\), \(F\) et \(G\) deux primitives de \(f\) sur \(I\), \(a\) et \(b\) deux éléments de \(I\). On sait qu'il existe un nombre réel \(c\) tel que : \(\forall x \in I\),</p>
+            <p class="formula-center">\(G(x) = F(x) + c\)</p>
+
+            <div class="formula-block">
+                \[
+                \begin{cases}
+                G(a) = F(a) + c \\
+                G(b) = F(b) + c
+                \end{cases}
+                \]
+            </div>
+
+            <p class="formula-center">\(G(b) - G(a) = F(b) - F(a)\)</p>
+
+            <p>Le nombre réel \(F(b) - F(a)\) est donc <strong>indépendant</strong> de la primitive \(f\) choisie.</p>
+        </article>
+
+        <!-- 2. Définition -->
+        <article class="subsection">
+            <h3 class="subsection-title">2. Définition</h3>
+
+            <div class="definition-box">
+                <p>Soit \(f\) une fonction continue sur un intervalle \(I\).</p>
+                <p>On appelle <strong>intégrale de \(a\) à \(b\) de \(f\)</strong> le nombre réel \(F(b) - F(a)\) où \(F\) est une primitive de \(f\) sur \(I\). On note :</p>
+                <p class="formula-center">\(\displaystyle F(b) - F(a) = \int_{a}^{b} f(x) \, dx = \left[ F(x) \right]_{a}^{b}\)</p>
+            </div>
+
+            <ul>
+                <li>\(\displaystyle \int_a^b f(x) \, dx\) se lit "intégrale ou somme de \(a\) à \(b\) de \(f(x)dx\)".</li>
+                <li>\(\displaystyle \left[ F(x) \right]_a^b\) se lit "\(F(x)\) pris entre \(a\) et \(b\)."</li>
+                <li>\(a\) et \(b\) sont les <strong>bornes</strong> de l'intégrale.</li>
+                <li>Dans l'écriture \(\displaystyle \int_a^b f(x) \, dx\), on peut remplacer \(x\) par toute autre lettre (sauf \(a\) et \(b\)). \(x\) est appelé <strong>variable muette</strong>.</li>
+            </ul>
+
+            <!-- Exemple 1 -->
+            <h4 class="subsubsection-title">Exemple 1</h4>
+            <div class="example-box">
+                <p>\(f(x) = x^2\), \(F(x) = \frac{1}{3}x^3\)</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_1^2 f(x) \, dx &= \left[ \frac{1}{3}x^3 \right]_1^2 \\
+                    &= \frac{1}{3}(2^3 - 1^3) \\
+                    &= \frac{1}{3}(8 - 1) \\
+                    &= \frac{7}{3}
+                    \end{aligned}
+                    \]
+                </div>
+                <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                    \(\boxed{\int_1^2 f(x) \, dx = \frac{7}{3}}\)
+                </p>
+            </div>
+
+            <!-- Exemple 2 -->
+            <h4 class="subsubsection-title">Exemple 2</h4>
+            <div class="example-box">
+                <p>\(f(x) = \cos x\), \(F(x) = \sin x\)</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_0^{\frac{\pi}{4}} \cos x \, dx &= \left[ \sin x \right]_0^{\frac{\pi}{4}} \\
+                    &= \sin\left(\frac{\pi}{4}\right) - \sin(0) \\
+                    &= \frac{\sqrt{2}}{2} - 0 \\
+                    &= \frac{\sqrt{2}}{2}
+                    \end{aligned}
+                    \]
+                </div>
+                <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                    \(\boxed{\int_0^{\frac{\pi}{4}} \cos x \, dx = \frac{\sqrt{2}}{2}}\)
+                </p>
+            </div>
+
+            <!-- Propriété 1 -->
+            <h4 class="subsubsection-title">Propriété 1</h4>
+            <div class="theorem-box">
+                <p>Soit \(f\) une fonction continue sur un intervalle \(I\), \(a\) et \(b\) deux éléments de \(I\). On a :</p>
+                <p class="formula-center">\(\displaystyle \int_a^a f(x) \, dx = 0 \quad \text{et} \quad \int_a^b f(x) \, dx = -\int_b^a f(x) \, dx\)</p>
+            </div>
+
+            <p><strong>En effet :</strong></p>
+            <div class="formula-block">
+                \[
+                \int_a^b f(x) \, dx = \left[ F(x) \right]_a^b = F(b) - F(a) = 0
+                \]
+            </div>
+            <div class="formula-block">
+                \[
+                \int_a^b f(x) \, dx = \left[ F(x) \right]_a^b = F(b) - F(a) = -\left(F(a) - F(b)\right) = -\int_b^a f(x) \, dx
+                \]
+            </div>
+        </article>
+
+        <!-- 3. Intégrale et primitive -->
+        <article class="subsection">
+            <h3 class="subsection-title">3. Intégrale et primitive</h3>
+
+            <div class="definition-box">
+                <p>Soit \(f\) une fonction continue sur \(I\) (intervalle), \(a \in I\), \(F\) primitive de \(f\) sur \(I\), telle que \(F'(x) = f(x)\) et \(F(a) = 0\).</p>
+                <p class="formula-center">\(\displaystyle F(x) = \int_a^x f(t) \, dt\)</p>
+                <p><strong>En effet :</strong></p>
+                <p class="formula-center">\(\displaystyle \int_a^x f(t) \, dt = F(x) - F(a) = F(x) - 0\)</p>
+            </div>
+        </article>
+
+        <!-- 4. Interprétation graphique -->
+        <article class="subsection">
+            <h3 class="subsection-title">4. Interprétation graphique de l'intégrale</h3>
+
+            <p>Soit \(f\) une fonction continue et <span class="highlight">positive</span> sur un intervalle \(I\), \((\mathcal{C}_f)\) sa courbe représentative, \(a\) et \(b \in I\) avec \(a < b\).</p>
+
+            <div class="definition-box">
+                <p>\(\displaystyle \int_a^b f(x) \, dx\) est l'<strong>aire (en unité d'aire)</strong> du domaine \(\mathcal{D}\) délimité par la courbe \((\mathcal{C}_f)\), l'axe des abscisses et les droites d'équation \(x = a\) et \(x = b\).</p>
+                <p>Ce domaine est aussi l'ensemble des points \(M\begin{pmatrix}x \\ y\end{pmatrix}\) tel que :</p>
+                <p class="formula-center">\(\begin{cases} a \leq x \leq b \\ 0 \leq y \leq f(x) \end{cases}\)</p>
+                <p>Ainsi, en notant \(\mathcal{A}(\mathcal{D})\) l'aire du domaine et u.a l'unité d'aire :</p>
+                <p class="formula-center" style="font-size: 1.2rem; font-weight: 600; color: var(--primary);">
+                    \(\mathcal{A}(\mathcal{D}) = \int_a^b f(x) \, dx \cdot \text{u.a}\)
+                </p>
+            </div>
+
+            <!-- Figure 1 : Aire sous une courbe positive -->
+            <figure>
+                <div class="svg-container">
+                    <svg viewBox="-3.5 -1.5 13 6" style="max-width: 100%; height: auto;">
+                        <!-- Grille -->
+                        <rect x="-3.5" y="-1.5" width="13" height="6" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+                        <g stroke="#e2e8f0" stroke-width="0.3">
+                            <line x1="-3" y1="-1" x2="6" y2="-1"/>
+                            <line x1="-3" y1="0" x2="6" y2="0"/>
+                            <line x1="-3" y1="1" x2="6" y2="1"/>
+                            <line x1="-3" y1="2" x2="6" y2="2"/>
+                            <line x1="-3" y1="3" x2="6" y2="3"/>
+                            <line x1="-3" y1="4" x2="6" y2="4"/>
+                            <line x1="-2" y1="-1.5" x2="-2" y2="4.5"/>
+                            <line x1="-1" y1="-1.5" x2="-1" y2="4.5"/>
+                            <line x1="0" y1="-1.5" x2="0" y2="4.5"/>
+                            <line x1="1" y1="-1.5" x2="1" y2="4.5"/>
+                            <line x1="2" y1="-1.5" x2="2" y2="4.5"/>
+                            <line x1="3" y1="-1.5" x2="3" y2="4.5"/>
+                            <line x1="4" y1="-1.5" x2="4" y2="4.5"/>
+                            <line x1="5" y1="-1.5" x2="5" y2="4.5"/>
+                        </g>
+                        <!-- Axes -->
+                        <line x1="-3.5" y1="0" x2="6.5" y2="0" stroke="black" stroke-width="1.5" marker-end="url(#arrow2)"/>
+                        <line x1="0" y1="-1.5" x2="0" y2="4.5" stroke="black" stroke-width="1.5" marker-end="url(#arrow2)"/>
+                        <defs>
+                            <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <polygon points="0 0, 8 3, 0 6" fill="black"/>
+                            </marker>
+                        </defs>
+                        <text x="6" y="-0.3" font-size="10" font-family="Arial">x</text>
+                        <text x="0.3" y="4.3" font-size="10" font-family="Arial">y</text>
+                        <text x="-0.6" y="0.8" font-size="9" font-family="Arial">O</text>
+                        <!-- Vecteurs -->
+                        <line x1="0" y1="0" x2="0.8" y2="0" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow2)"/>
+                        <text x="0.3" y="-0.4" font-size="9" font-family="Arial" font-style="italic">i</text>
+                        <line x1="0" y1="0" x2="0" y2="0.8" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow2)"/>
+                        <text x="-0.5" y="0.9" font-size="9" font-family="Arial" font-style="italic">j</text>
+                        <!-- Courbe -->
+                        <path d="M-1.5,2.5 C-0.5,4.2 0.5,4.5 1.5,4.0 C2.5,3.5 3.5,2.5 4.5,1.8 C5.5,1.0 6.2,0.5 6.5,0.2" fill="none" stroke="#0891b2" stroke-width="2.5"/>
+                        <text x="5.8" y="0.8" font-size="10" font-family="Arial" fill="#0891b2">C<sub>f</sub></text>
+                        <!-- Aire hachurée -->
+                        <path d="M-1.5,0 L-1.5,2.5 C-0.5,4.2 0.5,4.5 1.5,4.0 C2.5,3.5 3.5,2.5 4.5,1.8 L4.5,0 Z" fill="url(#hatch)" opacity="0.6"/>
+                        <defs>
+                            <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                                <line x1="0" y1="0" x2="0" y2="6" stroke="#0d9488" stroke-width="1.2"/>
+                            </pattern>
+                        </defs>
+                        <!-- Bornes -->
+                        <line x1="-1.5" y1="-0.5" x2="-1.5" y2="2.8" stroke="#dc2626" stroke-width="1.5"/>
+                        <line x1="4.5" y1="-0.5" x2="4.5" y2="2.0" stroke="#dc2626" stroke-width="1.5"/>
+                        <circle cx="-1.5" cy="0" r="2" fill="#dc2626"/>
+                        <text x="-1.8" y="-0.3" font-size="11" font-family="Arial" fill="#dc2626">a</text>
+                        <circle cx="4.5" cy="0" r="2" fill="#dc2626"/>
+                        <text x="4.2" y="-0.3" font-size="11" font-family="Arial" fill="#dc2626">b</text>
+                        <!-- Label D -->
+                        <text x="1" y="1.8" font-size="14" font-family="Arial" font-weight="bold" fill="#0d9488">𝒟</text>
+                        <!-- Formule -->
+                        <text x="7" y="2" font-size="12" font-family="Arial" fill="#dc2626" font-weight="bold">
+                            A(𝒟) = ∫ₐᵇ f(x)dx · u.a
+                        </text>
+                    </svg>
+                </div>
+                <figcaption>Figure 1 : Aire sous une courbe positive</figcaption>
+            </figure>
+
+            <!-- Remarque : fonction négative -->
+            <h4 class="subsubsection-title">Remarque : Cas d'une fonction négative</h4>
+
+            <p>Si \(f\) est une fonction continue et <span class="highlight">négative</span> sur \([a,b]\). La symétrie orthogonale d'axe \((OI)\) transforme la courbe \(\mathcal{C}_f\) en celle de \(\mathcal{C}'_{-f}\).</p>
+            <p>Le domaine \(\mathcal{D}\) est transformé en un domaine \(\mathcal{D}'\) de même aire.</p>
+            <p class="formula-center">\(\mathcal{A}(\mathcal{D}) = \mathcal{A}(\mathcal{D}') = \displaystyle \int_a^b -f(x) \, dx \cdot \text{u.a}\)</p>
+
+            <!-- Figure 2 : Aire sous une courbe négative -->
+            <figure>
+                <div class="svg-container">
+                    <svg viewBox="-2.5 -2.5 11 6" style="max-width: 100%; height: auto;">
+                        <!-- Grille -->
+                        <rect x="-2.5" y="-2.5" width="11" height="6" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+                        <g stroke="#e2e8f0" stroke-width="0.3">
+                            <line x1="-2" y1="-2" x2="6" y2="-2"/>
+                            <line x1="-2" y1="-1" x2="6" y2="-1"/>
+                            <line x1="-2" y1="0" x2="6" y2="0"/>
+                            <line x1="-2" y1="1" x2="6" y2="1"/>
+                            <line x1="-2" y1="2" x2="6" y2="2"/>
+                            <line x1="-1" y1="-2.5" x2="-1" y2="3.5"/>
+                            <line x1="0" y1="-2.5" x2="0" y2="3.5"/>
+                            <line x1="1" y1="-2.5" x2="1" y2="3.5"/>
+                            <line x1="2" y1="-2.5" x2="2" y2="3.5"/>
+                            <line x1="3" y1="-2.5" x2="3" y2="3.5"/>
+                            <line x1="4" y1="-2.5" x2="4" y2="3.5"/>
+                            <line x1="5" y1="-2.5" x2="5" y2="3.5"/>
+                        </g>
+                        <!-- Axes -->
+                        <line x1="-2.5" y1="0" x2="6.5" y2="0" stroke="black" stroke-width="1.5" marker-end="url(#arrow3)"/>
+                        <line x1="0" y1="-2.5" x2="0" y2="3.5" stroke="black" stroke-width="1.5" marker-end="url(#arrow3)"/>
+                        <defs>
+                            <marker id="arrow3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <polygon points="0 0, 8 3, 0 6" fill="black"/>
+                            </marker>
+                        </defs>
+                        <text x="6" y="-0.3" font-size="10" font-family="Arial">x</text>
+                        <text x="0.3" y="3.3" font-size="10" font-family="Arial">y</text>
+                        <text x="-0.6" y="0.8" font-size="9" font-family="Arial">O</text>
+                        <!-- Vecteurs -->
+                        <line x1="0" y1="0" x2="0.7" y2="0" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow3)"/>
+                        <text x="0.2" y="-0.4" font-size="9" font-family="Arial" font-style="italic">i</text>
+                        <line x1="0" y1="0" x2="0" y2="0.7" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow3)"/>
+                        <text x="-0.5" y="0.8" font-size="9" font-family="Arial" font-style="italic">j</text>
+                        <!-- Courbe du haut (-f) -->
+                        <path d="M-0.5,0.5 C0.5,2.0 1.5,2.2 2.5,1.8 C3.5,1.2 4.5,0.5 5.5,0.0" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+                        <text x="4.8" y="1.8" font-size="10" font-family="Arial" fill="#dc2626">C'<sub>-f</sub></text>
+                        <!-- Courbe du bas (f) -->
+                        <path d="M-0.5,-0.5 C0.5,-2.0 1.5,-2.2 2.5,-1.8 C3.5,-1.2 4.5,-0.5 5.5,0.0" fill="none" stroke="#0891b2" stroke-width="2.5"/>
+                        <text x="4.8" y="-1.8" font-size="10" font-family="Arial" fill="#dc2626">C<sub>f</sub></text>
+                        <!-- Aire hachurée supérieure -->
+                        <path d="M0.5,0 L0.5,0.5 C1.5,2.0 2.5,2.2 3.5,1.8 L3.5,0 Z" fill="url(#hatch2)" opacity="0.5"/>
+                        <!-- Aire hachurée inférieure -->
+                        <path d="M0.5,-0.5 C1.5,-2.0 2.5,-2.2 3.5,-1.8 L3.5,0 L0.5,0 Z" fill="url(#hatch2)" opacity="0.5"/>
+                        <defs>
+                            <pattern id="hatch2" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                                <line x1="0" y1="0" x2="0" y2="6" stroke="#0d9488" stroke-width="1.2"/>
+                            </pattern>
+                        </defs>
+                        <!-- Bornes -->
+                        <line x1="0.5" y1="-2.2" x2="0.5" y2="2.5" stroke="#2563eb" stroke-width="1.5"/>
+                        <line x1="3.5" y1="-2.2" x2="3.5" y2="2.5" stroke="#2563eb" stroke-width="1.5"/>
+                        <text x="0.3" y="-0.3" font-size="11" font-family="Arial">a</text>
+                        <text x="3.3" y="-0.3" font-size="11" font-family="Arial">b</text>
+                        <!-- Labels -->
+                        <text x="1.5" y="0.8" font-size="12" font-family="Arial" font-weight="bold" fill="#0d9488">𝒟'</text>
+                        <text x="1.5" y="-0.8" font-size="12" font-family="Arial" font-weight="bold" fill="#0d9488">𝒟</text>
+                    </svg>
+                </div>
+                <figcaption>Figure 2 : Aire sous une courbe négative par symétrie</figcaption>
+            </figure>
+
+            <!-- Exemple d'application : fonction négative -->
+            <div class="exercise-box">
+                <p><strong>✏️ Exemple d'application : Aire sous une courbe négative</strong></p>
+                <p>Soit \(f\) définie sur \([0, 3]\) par \(f(x) = x^2 - 3x\).</p>
+                <ol>
+                    <li>Montrer que \(f\) est continue et négative sur \([0, 3]\).</li>
+                    <li>Déterminer l'aire du domaine délimité par \(\mathcal{C}_f\), l'axe des abscisses et les droites \(x=0\) et \(x=3\).</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1) Signe et continuité :</strong></p>
+                        <p>\(f\) est polynomiale donc continue sur \(\mathbb{R}\).</p>
+                        <p>\(f(x) = x(x-3)\). Sur \([0,3]\), \(x \geq 0\) et \(x-3 \leq 0\), donc \(f(x) \leq 0\).</p>
+
+                        <p><strong>2) Aire par symétrie :</strong></p>
+                        <p>\(-f(x) = -x^2 + 3x\).</p>
+                        <div class="formula-block">
+                            \[
+                            \mathcal{A}(\mathcal{D}) = \int_0^3 (-x^2 + 3x) \, dx = \left[-\frac{x^3}{3} + \frac{3x^2}{2}\right]_0^3
+                            \]
+                        </div>
+                        <div class="formula-block">
+                            \[
+                            = \left(-9 + \frac{27}{2}\right) - 0 = -\frac{18}{2} + \frac{27}{2} = \frac{9}{2} \cdot \text{u.a}
+                            \]
+                        </div>
+                        <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                            \(\boxed{\mathcal{A}(\mathcal{D}) = \frac{9}{2} \cdot \text{u.a}}\)
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Fonction changeant de signe -->
+            <p><strong>Si \(f\) est continue et <span class="highlight">négative</span> sur \([a,c]\) et <span class="highlight">positive</span> sur \([c,b]\) :</strong></p>
+            <div class="formula-box">
+                <p class="formula-center" style="font-size: 1.1rem;">
+                    \(\displaystyle \mathcal{A}(\mathcal{D}) = \int_a^c -f(x) \, dx \cdot \text{u.a} + \int_c^b f(x) \, dx \cdot \text{u.a}\)
+                </p>
+            </div>
+
+            <!-- Figure 3 : Fonction changeant de signe -->
+            <figure>
+                <div class="svg-container">
+                    <svg viewBox="-1.5 -2.5 9 7" style="max-width: 100%; height: auto;">
+                        <!-- Grille -->
+                        <rect x="-1.5" y="-2.5" width="9" height="7" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+                        <g stroke="#e2e8f0" stroke-width="0.3">
+                            <line x1="-1" y1="-2" x2="6" y2="-2"/>
+                            <line x1="-1" y1="-1" x2="6" y2="-1"/>
+                            <line x1="-1" y1="0" x2="6" y2="0"/>
+                            <line x1="-1" y1="1" x2="6" y2="1"/>
+                            <line x1="-1" y1="2" x2="6" y2="2"/>
+                            <line x1="-1" y1="3" x2="6" y2="3"/>
+                            <line x1="0" y1="-2.5" x2="0" y2="4.5"/>
+                            <line x1="1" y1="-2.5" x2="1" y2="4.5"/>
+                            <line x1="2" y1="-2.5" x2="2" y2="4.5"/>
+                            <line x1="3" y1="-2.5" x2="3" y2="4.5"/>
+                            <line x1="4" y1="-2.5" x2="4" y2="4.5"/>
+                            <line x1="5" y1="-2.5" x2="5" y2="4.5"/>
+                        </g>
+                        <!-- Axes -->
+                        <line x1="-1.5" y1="0" x2="6.5" y2="0" stroke="black" stroke-width="1.5" marker-end="url(#arrow4)"/>
+                        <line x1="0" y1="-2.5" x2="0" y2="4.5" stroke="black" stroke-width="1.5" marker-end="url(#arrow4)"/>
+                        <defs>
+                            <marker id="arrow4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <polygon points="0 0, 8 3, 0 6" fill="black"/>
+                            </marker>
+                        </defs>
+                        <text x="6" y="-0.3" font-size="10" font-family="Arial">x</text>
+                        <text x="0.3" y="4.3" font-size="10" font-family="Arial">y</text>
+                        <text x="-0.6" y="0.8" font-size="9" font-family="Arial">O</text>
+                        <!-- Vecteurs -->
+                        <line x1="0" y1="0" x2="0.7" y2="0" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow4)"/>
+                        <text x="0.2" y="-0.4" font-size="9" font-family="Arial" font-style="italic">i</text>
+                        <line x1="0" y1="0" x2="0" y2="0.7" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow4)"/>
+                        <text x="-0.5" y="0.8" font-size="9" font-family="Arial" font-style="italic">j</text>
+                        <!-- Courbe -->
+                        <path d="M0.2,-0.3 C0.8,-1.5 1.5,-1.8 2.0,0.0 C2.5,1.8 3.0,2.8 3.8,3.2 C4.5,3.5 5.2,3.0 5.8,2.0" fill="none" stroke="#0891b2" stroke-width="2.5"/>
+                        <text x="5.2" y="2.8" font-size="10" font-family="Arial" fill="#0891b2">C<sub>f</sub></text>
+                        <!-- Aire négative -->
+                        <path d="M0.2,0 L0.2,-0.3 C0.8,-1.5 1.5,-1.8 2.0,0.0 L2.0,0 Z" fill="url(#hatch3)" opacity="0.5"/>
+                        <!-- Aire positive -->
+                        <path d="M2.0,0 L2.0,0.0 C2.5,1.8 3.0,2.8 3.8,3.2 L3.8,0 Z" fill="url(#hatch3)" opacity="0.5"/>
+                        <defs>
+                            <pattern id="hatch3" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                                <line x1="0" y1="0" x2="0" y2="6" stroke="#0d9488" stroke-width="1.2"/>
+                            </pattern>
+                        </defs>
+                        <!-- Bornes -->
+                        <line x1="0.2" y1="-1.8" x2="0.2" y2="0.5" stroke="#dc2626" stroke-width="1.5"/>
+                        <line x1="2.0" y1="-1.8" x2="2.0" y2="1.5" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4,2"/>
+                        <line x1="3.8" y1="-0.5" x2="3.8" y2="3.5" stroke="#dc2626" stroke-width="1.5"/>
+                        <text x="0.0" y="-0.3" font-size="11" font-family="Arial" fill="#dc2626">a</text>
+                        <text x="1.7" y="-0.3" font-size="11" font-family="Arial">c</text>
+                        <text x="3.6" y="-0.3" font-size="11" font-family="Arial" fill="#dc2626">b</text>
+                        <!-- Labels -->
+                        <text x="0.8" y="-0.8" font-size="12" font-family="Arial" font-weight="bold" fill="#0d9488">𝒟₁</text>
+                        <text x="2.8" y="1.2" font-size="12" font-family="Arial" font-weight="bold" fill="#0d9488">𝒟₂</text>
+                        <!-- Formules -->
+                        <text x="0.7" y="-1.0" font-size="8" font-family="Arial" fill="#0d9488">A₁ = ∫ₐᶜ -f(x)dx</text>
+                        <text x="2.7" y="1.8" font-size="8" font-family="Arial" fill="#0d9488">A₂ = ∫ᶜᵇ f(x)dx</text>
+                    </svg>
+                </div>
+                <figcaption>Figure 3 : Fonction changeant de signe sur l'intervalle</figcaption>
+            </figure>
+
+            <!-- Exercice d'application -->
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice d'application : Fonction changeant de signe</strong></p>
+                <p>Soit \(f(x) = x^2 - 1\) sur \([0, 2]\).</p>
+                <ol>
+                    <li>Étudier le signe de \(f\) sur \([0, 2]\). En déduire la valeur du point de bascule \(c\).</li>
+                    <li>Calculer \(\displaystyle I = \int_0^2 f(x) \, dx\).</li>
+                    <li>Déterminer l'aire géométrique du domaine délimité par \(\mathcal{C}_f\), l'axe des abscisses et les droites \(x=0\) et \(x=2\).</li>
+                </ol>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>1) Signe :</strong></p>
+                        <p>\(f(x) = x^2 - 1 = (x-1)(x+1)\).</p>
+                        <p>Sur \([0,2]\), \(f(x)=0 \iff x=1\). Donc \(c=1\).</p>
+                        <ul>
+                            <li>Sur \([0,1]\), \(f(x) \leq 0\) (négative).</li>
+                            <li>Sur \([1,2]\), \(f(x) \geq 0\) (positive).</li>
+                        </ul>
+
+                        <p><strong>2) Calcul de l'intégrale :</strong></p>
+                        <div class="formula-block">
+                            \[
+                            I = \int_0^2 (x^2 - 1) \, dx = \left[\frac{x^3}{3} - x\right]_0^2 = \left(\frac{8}{3} - 2\right) - 0 = \frac{2}{3}
+                            \]
+                        </div>
+
+                        <p><strong>3) Aire géométrique :</strong></p>
+                        <div class="formula-block">
+                            \[
+                            \mathcal{A}(\mathcal{D}) = \int_0^1 -f(x) \, dx + \int_1^2 f(x) \, dx
+                            \]
+                        </div>
+                        <div class="formula-block">
+                            \[
+                            = \int_0^1 (-x^2 + 1) \, dx + \int_1^2 (x^2 - 1) \, dx
+                            \]
+                        </div>
+                        <div class="formula-block">
+                            \[
+                            = \left[-\frac{x^3}{3} + x\right]_0^1 + \left[\frac{x^3}{3} - x\right]_1^2
+                            = \frac{2}{3} + \frac{4}{3} = 2 \cdot \text{u.a}
+                            \]
+                        </div>
+                        <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                            \(\boxed{\mathcal{A}(\mathcal{D}) = 2 \cdot \text{u.a}}\)
+                        </p>
+                        <p class="note">L'aire géométrique (2 u.a) est différente de l'intégrale (\(\frac{2}{3}\)) car la partie négative s'est soustraite algébriquement.</p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    II. PROPRIÉTÉS ALGÉBRIQUES
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">II. Propriétés algébriques de l'intégrale</h2>
+
+        <!-- a. Relation de Chasles -->
+        <article class="subsection">
+            <h3 class="subsection-title">a. Relation de Chasles</h3>
+
+            <div class="theorem-box">
+                <p>Si \(f\) est continue sur un intervalle \(I\), \(a\), \(b\) et \(c\) trois éléments de \(I\).</p>
+                <p class="formula-center" style="font-size: 1.2rem;">
+                    \(\displaystyle \int_a^c f(x) \, dx = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx\)
+                </p>
+            </div>
+
+            <p><strong>Interprétation graphique :</strong> L'aire totale est la somme des aires des sous-domaines.</p>
+
+            <!-- Exemple -->
+            <h4 class="subsubsection-title">Exemple</h4>
+            <div class="example-box">
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} |\sin(t)| \, dt &= \int_{-\frac{\pi}{2}}^0 -\sin(t) \, dt + \int_0^{\frac{\pi}{2}} \sin(t) \, dt \\
+                    &= -\left[\cos(t)\right]_{-\frac{\pi}{2}}^0 + \left[-\cos(t)\right]_0^{\frac{\pi}{2}} \\
+                    &= 1 + 1 \\
+                    &= 2
+                    \end{aligned}
+                    \]
+                </div>
+                <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                    \(\boxed{\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} |\sin(t)| \, dt = 2}\)
+                </p>
+            </div>
+        </article>
+
+        <!-- b. Linéarité -->
+        <article class="subsection">
+            <h3 class="subsection-title">b. Linéarité de l'intégrale</h3>
+
+            <div class="formula-box">
+                <p>Soit \(f\) et \(g\) deux fonctions continues sur \(I\). \(\alpha, \beta \in \mathbb{R}\), \(a, b \in I\).</p>
+                <p class="formula-center" style="font-size: 1.2rem;">
+                    \(\displaystyle \int_a^b (\alpha f + \beta g)(x) \, dx = \alpha \int_a^b f(x) \, dx + \beta \int_a^b g(x) \, dx\)
+                </p>
+            </div>
+
+            <h4 class="subsubsection-title">Exemple</h4>
+            <div class="example-box">
+                <p>Calculer \(\displaystyle \int_0^{\frac{\pi}{4}} \cos^2(t) \, dt\).</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_0^{\frac{\pi}{4}} \cos^2(t) \, dt &= \int_0^{\frac{\pi}{4}} \frac{1 + \cos(2t)}{2} \, dt \\
+                    &= \frac{1}{2}\int_0^{\frac{\pi}{4}} 1 \, dt + \frac{1}{2}\int_0^{\frac{\pi}{4}} \cos(2t) \, dt
+                    \end{aligned}
+                    \]
+                </div>
+                <details>
+                    <summary>Voir la suite du calcul</summary>
+                    <div class="formula-block">
+                        \[
+                        = \frac{1}{2}\left[t\right]_0^{\frac{\pi}{4}} + \frac{1}{2}\left[\frac{\sin(2t)}{2}\right]_0^{\frac{\pi}{4}}
+                        = \frac{\pi}{8} + \frac{1}{4}
+                        \]
+                    </div>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    III. SIGNE DE L'INTÉGRALE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">III. Signe de l'intégrale</h2>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Propriétés</h3>
+
+            <div class="theorem-box">
+                <p><strong>i)</strong> Soit \(f\) continue sur \(I\), \(a, b \in I\) avec \(a < b\).</p>
+                <ul>
+                    <li>Si \(f \geq 0\) sur \([a,b]\), alors \(\displaystyle \int_a^b f(x) \, dx \geq 0\).</li>
+                    <li>Si \(f \leq 0\) sur \([a,b]\), alors \(\displaystyle \int_a^b f(x) \, dx \leq 0\).</li>
+                </ul>
+            </div>
+
+            <div class="theorem-box">
+                <p><strong>ii)</strong> Soit \(f\) et \(g\) continues sur \(I\), \(a, b \in I\) avec \(a < b\).</p>
+                <p>Si \(f \leq g\) pour tout \(x \in [a,b]\), alors</p>
+                <p class="formula-center">\(\displaystyle \int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx\)</p>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Exemples</h3>
+
+            <div class="example-box">
+                <p><strong>i) Fonction positive :</strong></p>
+                <p>Pour \(I = \int_1^2 (x^2 + 3) \, dx\), on a \(x^2 + 3 > 0\) sur \([1,2]\). Donc \(I > 0\).</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>i) Fonction négative :</strong></p>
+                <p>Pour \(L = \int_0^3 (-e^x - 1) \, dx\), on a \(-e^x - 1 < 0\) sur \([0,3]\). Donc \(L < 0\).</p>
+                <details>
+                    <summary>Vérification par le calcul</summary>
+                    <div class="formula-block">
+                        \[
+                        L = \left[-e^x - x\right]_0^3 = (-e^3 - 3) - (-1) = -e^3 - 2 < 0
+                        \]
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>ii) Comparaison :</strong></p>
+                <p>Sur \([0,1]\), \(x^2 \leq x\). Donc \(\displaystyle \int_0^1 x^2 \, dx \leq \int_0^1 x \, dx\).</p>
+                <details>
+                    <summary>Vérification par le calcul</summary>
+                    <div class="formula-block">
+                        \[
+                        \int_0^1 x^2 \, dx = \frac{1}{3} \quad \text{et} \quad \int_0^1 x \, dx = \frac{1}{2}
+                        \]
+                    </div>
+                </details>
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Remarque</h3>
+
+            <div class="note">
+                <p>Soit \(f\) continue sur \(I\), \(a, b \in I\), \(a \leq b\).</p>
+                <p>On a : \(-|f| \leq f \leq |f|\) sur \([a,b]\), donc :</p>
+                <p class="formula-center">\(\displaystyle \left| \int_a^b f(x) \, dx \right| \leq \int_a^b |f(x)| \, dx\)</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    IV. INÉGALITÉ DE LA MOYENNE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">IV. Inégalité de la moyenne</h2>
+
+        <article class="subsection">
+            <h3 class="subsection-title">Propriétés</h3>
+
+            <div class="theorem-box">
+                <p><strong>i)</strong> Soit \(f\) continue sur \(I\), \(a, b \in I\).</p>
+                <p>Si \(m \leq f(x) \leq M\) pour tout \(x \in [a,b]\), alors :</p>
+                <p class="formula-center">\(\displaystyle m(b-a) \leq \int_a^b f(x) \, dx \leq M(b-a)\)</p>
+            </div>
+
+            <div class="theorem-box">
+                <p><strong>ii)</strong> Soit \(f\) continue sur \(I\), \(a, b \in I\), \(a \leq b\).</p>
+                <p>Si \(|f(x)| \leq M\) pour tout \(x \in [a,b]\), alors :</p>
+                <p class="formula-center">\(\displaystyle \left| \int_a^b f(x) \, dx \right| \leq M(b-a)\)</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    V. VALEUR MOYENNE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">V. Valeur moyenne d'une fonction</h2>
+
+        <div class="definition-box">
+            <p>Soit \(f\) continue sur \([a,b]\). On appelle <strong>valeur moyenne</strong> de \(f\) sur \([a,b]\) le nombre réel \(\mu\) défini par :</p>
+            <p class="formula-center" style="font-size: 1.2rem;">
+                \(\displaystyle \mu = \frac{1}{b-a} \int_a^b f(x) \, dx\)
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    VI. TECHNIQUES DE CALCUL INTÉGRAL
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">VI. Techniques de calcul intégral</h2>
+
+        <!-- 1. Primitives usuelles -->
+        <article class="subsection">
+            <h3 class="subsection-title">1. Primitives usuelles</h3>
+
+            <p>Le tableau suivant reprend quelques résultats concernant les primitives. Dans ce tableau, \(u\) désigne une fonction dérivable sur \(K\), \(v\) une fonction dérivable sur un intervalle contenant \(u(K)\) et \(\alpha\) un nombre réel différent de \(-1\).</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fonction</th>
+                            <th>\(\frac{u'}{u}\)</th>
+                            <th>\(u'e^u\)</th>
+                            <th>\(u'u^\alpha\)</th>
+                            <th>\(u' \cdot v' \circ u\)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primitive</strong></td>
+                            <td>\(\ln|u|\)</td>
+                            <td>\(e^u\)</td>
+                            <td>\(\frac{1}{\alpha+1}u^{\alpha+1}\)</td>
+                            <td>\(v \circ u\)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commentaires</strong></td>
+                            <td>\(u \neq 0\) sur \(K\)</td>
+                            <td>—</td>
+                            <td>\(u > 0\) sur \(K\)</td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="subsubsection-title">Exemples</h4>
+            <div class="example-box">
+                <ul>
+                    <li>\(\displaystyle \int_0^1 (t^3 + 2t + 1) \, dt = \left[\frac{t^4}{4} + t^2 + t\right]_0^1 = \frac{9}{4}\)</li>
+                    <li>\(\displaystyle \int_0^{\frac{\pi}{4}} \sin\left(2t + \frac{\pi}{2}\right) \, dt = \left[-\frac{1}{2}\cos\left(2t + \frac{\pi}{2}\right)\right]_0^{\frac{\pi}{4}} = \frac{1}{2}\)</li>
+                    <li>\(\displaystyle \int_0^{\frac{1}{2}} \frac{2t}{t^2 - 1} \, dt = \left[\ln|t^2 - 1|\right]_0^{\frac{1}{2}} = \ln\frac{3}{4}\)</li>
+                    <li>\(\displaystyle \int_0^{\frac{\pi}{2}} \cos t \, e^{\sin t} \, dt = \left[e^{\sin t}\right]_0^{\frac{\pi}{2}} = e - 1\)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 2. Intégration par parties -->
+        <article class="subsection">
+            <h3 class="subsection-title">2. Intégration par parties</h3>
+
+            <div class="formula-box">
+                <p>Soit \(u\) et \(v\) deux fonctions dérivables sur \(K\) telles que \(u'\) et \(v'\) sont continues sur \(K\), \(a, b \in K\).</p>
+                <p class="formula-center" style="font-size: 1.2rem;">
+                    \(\displaystyle \int_a^b u(t)v'(t) \, dt = \left[u(t)v(t)\right]_a^b - \int_a^b u'(t)v(t) \, dt\)
+                </p>
+            </div>
+
+            <h4 class="subsubsection-title">Exemple 1</h4>
+            <div class="example-box">
+                <p>Calculer \(\displaystyle \int_1^2 \ln t \, dt\).</p>
+                <p>Posons : \(u(t) = \ln t\) et \(v'(t) = 1\).</p>
+                <p>On a : \(u'(t) = \frac{1}{t}\), \(v(t) = t\).</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_1^2 \ln t \, dt &= \left[t\ln t\right]_1^2 - \int_1^2 dt \\
+                    &= 2\ln 2 - 1
+                    \end{aligned}
+                    \]
+                </div>
+            </div>
+
+            <h4 class="subsubsection-title">Exemple 2</h4>
+            <div class="example-box">
+                <p>Calculer \(\displaystyle \int_0^{\frac{\pi}{2}} t\cos t \, dt\).</p>
+                <p>Posons : \(u(t) = t\) et \(v'(t) = \cos t\).</p>
+                <p>On a : \(u'(t) = 1\), \(v(t) = \sin t\).</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    \int_0^{\frac{\pi}{2}} t\cos t \, dt &= \left[t\sin t\right]_0^{\frac{\pi}{2}} - \int_0^{\frac{\pi}{2}} \sin t \, dt \\
+                    &= \frac{\pi}{2} - 1
+                    \end{aligned}
+                    \]
+                </div>
+            </div>
+
+            <!-- Méthode ALPES -->
+            <div class="tcolorbox">
+                <div class="tcb-title">💡 Méthode ALPES : Choix de \(u(x)\)</div>
+                <div class="tcb-body">
+                    <p>Pour effectuer une IPP efficace, le choix de \(u(x)\) se fait grâce au moyen mnémotechnique <strong>ALPES</strong> :</p>
+                    <ul>
+                        <li><span class="letter">A</span> : <strong>A</strong>rc (fonctions réciproques : \(\arctan\), \(\arcsin\))</li>
+                        <li><span class="letter">L</span> : <strong>L</strong>ogarithme (\(\ln\))</li>
+                        <li><span class="letter">P</span> : <strong>P</strong>olynôme (\(x\), \(x^2-1\))</li>
+                        <li><span class="letter">E</span> : <strong>E</strong>xponentielle (\(e^x\))</li>
+                        <li><span class="letter">S</span> : <strong>S</strong>inus / Cosinus (trigonométriques)</li>
+                    </ul>
+                    <p><em>Exemple :</em> Dans \(\int x e^x dx\), on pose \(u(x) = x\) car P (polynôme) est avant E (exponentielle).</p>
+                </div>
+            </div>
+
+            <h4 class="subsubsection-title">Exemple d'application de la méthode ALPES</h4>
+            <div class="example-box">
+                <p>Calculer \(\displaystyle I = \int_1^e x\ln(x) \, dx\).</p>
+                <p><strong>Choix avec ALPES :</strong> Le logarithme (L) est avant le polynôme (P), donc on pose \(u(x) = \ln x\).</p>
+                <p>\(u(x) = \ln x \implies u'(x) = \frac{1}{x}\), \(v'(x) = x \implies v(x) = \frac{x^2}{2}\).</p>
+                <div class="formula-block">
+                    \[
+                    \begin{aligned}
+                    I &= \left[\ln x \cdot \frac{x^2}{2}\right]_1^e - \int_1^e \frac{1}{x} \cdot \frac{x^2}{2} \, dx \\
+                    &= \frac{e^2}{2} - \left[\frac{x^2}{4}\right]_1^e \\
+                    &= \frac{e^2}{2} - \left(\frac{e^2}{4} - \frac{1}{4}\right) \\
+                    &= \frac{e^2 + 1}{4}
+                    \end{aligned}
+                    \]
+                </div>
+                <p class="formula-center" style="font-weight: 600; color: var(--primary);">
+                    \(\boxed{I = \frac{e^2 + 1}{4}}\)
+                </p>
+            </div>
+        </article>
+
+        <!-- 3. Fonctions paires, impaires, périodiques -->
+        <article class="subsection">
+            <h3 class="subsection-title">3. Intégration de fonctions paires, impaires, périodiques</h3>
+
+            <div class="theorem-box">
+                <p><strong>Propriété 1 :</strong> Soit \(f\) continue sur un intervalle \(I\) symétrique par rapport à \(0\).</p>
+                <ul>
+                    <li>Si \(f\) est <span class="highlight">paire</span> : \(\displaystyle \int_{-\alpha}^{\alpha} f(x) \, dx = 2\int_0^{\alpha} f(x) \, dx\)</li>
+                    <li>Si \(f\) est <span class="highlight">impaire</span> : \(\displaystyle \int_{-\alpha}^{\alpha} f(x) \, dx = 0\)</li>
+                </ul>
+            </div>
+
+            <div class="theorem-box">
+                <p><strong>Propriété 2 :</strong> Soit \(f\) continue sur \(\mathbb{R}\) et périodique de période \(p\).</p>
+                <ul>
+                    <li>\(\displaystyle \int_{a+p}^{b+p} f(x) \, dx = \int_a^b f(x) \, dx\)</li>
+                    <li>\(\displaystyle \int_a^{a+p} f(x) \, dx = \int_0^p f(x) \, dx\)</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- ============================================================
+    VII. APPLICATION DU CALCUL INTÉGRAL
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">VII. Application du calcul intégral</h2>
+
+        <div class="theorem-box">
+            <p>Soit \(f\) et \(g\) deux fonctions continues sur \(I\), \((\mathcal{C}_f)\) et \((\mathcal{C}_g)\) leurs représentations graphiques. \(a, b \in I\) avec \(a < b\).</p>
+            <p>Lorsque \(f \leq g\) sur \([a,b]\), l'aire du domaine \(\mathcal{D}\) délimité par \((\mathcal{C}_f)\), \((\mathcal{C}_g)\) et les droites \(x=a\) et \(x=b\) est :</p>
+            <p class="formula-center" style="font-size: 1.2rem;">
+                \(\displaystyle \mathcal{A}(\mathcal{D}) = \int_a^b \left[g(x) - f(x)\right] \, dx \cdot \text{u.a}\)
+            </p>
+        </div>
+
+        <div class="note">
+            <p><strong>Remarque :</strong> Cette formule est fondamentale pour calculer l'aire entre deux courbes.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PIED DE PAGE
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - Cours de Mathématiques TS2 - Calcul Intégral</p>
+    </footer>
+
+</body>
+</html>
