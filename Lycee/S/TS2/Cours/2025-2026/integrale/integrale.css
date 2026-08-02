@@ -238,6 +238,14 @@ b {
     margin: 16px 0;
 }
 
+.preuve-box {
+    background: #fef2f2;
+    border-left: 6px solid var(--secondary);
+    padding: 18px 24px;
+    border-radius: var(--radius-sm);
+    margin: 16px 0;
+}
+
 .tip-box {
     background: #fef9c3;
     border: 2px dashed #eab308;
@@ -784,6 +792,25 @@ details>ol {
   margin-top: 10px;
 }
 
+/* Style du bloc details */
+.preuve-details {
+  margin-top: 10px;
+}
+
+/* Style du bouton "Voir la solution" */
+.btn-preuve {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: var(--primary, #c0392b);
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
 /* Style du bouton "Voir la solution" */
 .btn-solution {
   display: inline-block;
@@ -804,5 +831,10 @@ details>ol {
 
 /* Petit espace au-dessus du contenu déplié */
 .solution-content {
+  margin-top: 15px;
+}
+
+/* Petit espace au-dessus du contenu déplié */
+.preuve-content {
   margin-top: 15px;
 }
