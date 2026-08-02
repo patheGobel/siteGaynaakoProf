@@ -46,24 +46,165 @@
         <!-- 1. Introduction -->
         <article class="subsection">
             <h3 class="subsection-title">1. Introduction</h3>
+            <p>L’objectif de ce cours est de donner un sens précis à la notion d’aire sous une courbe, puis de montrer
+                comment la calculer efficacement. Pour cela, nous allons emprunter deux chemins complètement différents,
+                mais qui aboutiront au même résultat.</p>
+            <p>Considérons la fonction constante</p>
 
-            <p>Soit \(f\) une fonction continue sur un intervalle \(I\), \(F\) et \(G\) deux primitives de \(f\) sur
-                \(I\), \(a\) et \(b\) deux éléments de \(I\). On sait qu'il existe un nombre réel \(c\) tel que :
-                \(\forall x \in I\),</p>
-            <p class="formula-center">\(G(x) = F(x) + c\)</p>
+            <section class="cours">
 
-            <div class="formula-block">
-                \[
-                \begin{cases}
-                G(a) = F(a) + c \\
-                G(b) = F(b) + c
-                \end{cases}
-                \]
-            </div>
+                <p>
+                    Considérons la fonction constante \( f(x)=3 \) sur l'intervalle \([1\,;5]\).
+                </p>
 
-            <p class="formula-center">\(G(b) - G(a) = F(b) - F(a)\)</p>
+                <h3>Première méthode : une approche géométrique</h3>
 
-            <p>Le nombre réel \(F(b) - F(a)\) est donc <strong>indépendant</strong> de la primitive \(f\) choisie.</p>
+                <p>
+                    La courbe représentative de \(f\) est une droite horizontale.
+                    La région comprise entre cette courbe, l'axe des abscisses et les droites
+                    d'équations \(x=1\) et \(x=5\) est un rectangle.
+                </p>
+
+
+                <div class="formula">
+                    \( \text{Largeur}=5-1=4,
+                    \qquad
+                    \text{Hauteur}=3. \)
+                </div>
+
+
+                <p>
+                    Son aire est donc : \(  A=4\times3=12. \)
+                </p>
+
+
+                <!-- Figure -->
+                <div class="figure" style="text-align:center">
+
+                    <svg width="450" height="300" viewBox="0 0 450 300">
+
+                        <!-- Axes -->
+                        <line x1="50" y1="250" x2="400" y2="250" stroke="black" stroke-width="2" />
+                        <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2" />
+
+                        <!-- Flèches -->
+                        <polygon points="400,250 390,245 390,255" fill="black" />
+                        <polygon points="50,50 45,60 55,60" fill="black" />
+
+                        <!-- Rectangle aire -->
+                        <rect x="120" y="100" width="200" height="150" fill="lightblue" opacity="0.6" />
+
+                        <!-- Fonction y=3 -->
+                        <line x1="50" y1="100" x2="380" y2="100" stroke="blue" stroke-width="3" />
+
+                        <!-- Bornes -->
+                        <line x1="120" y1="250" x2="120" y2="100" stroke="black" stroke-dasharray="5,5" />
+
+                        <line x1="320" y1="250" x2="320" y2="100" stroke="black" stroke-dasharray="5,5" />
+
+
+                        <!-- Graduations -->
+                        <text x="115" y="270">1</text>
+                        <text x="315" y="270">5</text>
+
+                        <text x="25" y="105">3</text>
+
+                        <!-- Labels -->
+                        <text x="360" y="90" fill="blue">
+                            \(y=f(x)=3\)
+                        </text>
+
+                        <text x="405" y="260">x</text>
+                        <text x="40" y="45">y</text>
+
+                    </svg>
+
+                </div>
+
+
+                <p>
+                    On obtient donc : \( A=12. \)
+                </p>
+
+                <h3>Deuxième méthode : une approche calculatoire</h3>
+
+
+                <p>
+                    Une primitive de la fonction \(f\) est : \( F(x)=3x. \)
+                </p>
+
+                <p>
+                    Calculons :<br> \( \begin{aligned}
+                    F(5)-F(1)
+                    &=3\times5-3\times1\\
+                    &=15-3\\
+                    &=12.
+                    \end{aligned} \)
+                </p>
+
+                <p>
+                    On retrouve exactement la même valeur.
+                </p>
+
+
+                <p>
+                    Nous avons donc calculé une même aire de deux façons différentes :
+                </p>
+
+
+                <ul>
+                    <li>par une méthode géométrique ;</li>
+                    <li>par un simple calcul utilisant une primitive.</li>
+                </ul>
+
+
+                <p>
+                    Cette égalité n'est pas un hasard. Elle reste vraie pour toute fonction continue.
+                </p>
+
+
+                <p>
+                    Soit \(f\) une fonction continue sur un intervalle \(I\),
+                    \(F\) et \(G\) deux primitives de \(f\) sur \(I\).
+                </p>
+
+
+                <p>
+                    Il existe une constante réelle \(c\) telle que : \( G(x)=F(x)+c,\qquad \forall x\in I. \)
+                </p>
+
+                <p>
+                    En particulier : \( \left\{
+                    \begin{aligned}
+                    G(a)&=F(a)+c,\\
+                    G(b)&=F(b)+c.
+                    \end{aligned}
+                    \right. \)
+                </p>
+
+
+                <p>
+                    En soustrayant les deux égalités, on obtient : \( G(b)-G(a)=F(b)-F(a). \)
+                </p>
+
+
+                <p>
+                    Ainsi, la quantité : \( F(b)-F(a) \) ne dépend pas de la primitive choisie.
+                </p>
+
+                <p>
+                    Cette quantité est donc bien définie. On la note : \( \boxed{\int_a^b f(x)\,dx=F(b)-F(a)} \)
+                </p>
+
+
+                <p>
+                    et elle représente l'aire algébrique comprise entre la courbe représentative
+                    de \(f\), l'axe des abscisses et les droites d'équations
+                    \(x=a\) et \(x=b\).
+                </p>
+
+            </section>
+
         </article>
 
         <!-- 2. Définition -->
@@ -184,8 +325,7 @@
 
                     <!-- Figure 1 : Aire sous une courbe positive -->
                     <figure>
-                        <img src="images/aire1.png" alt="Aire sous une courbe positive"
-                            class="figure-image" />
+                        <img src="images/aire1.png" alt="Aire sous une courbe positive" class="figure-image" />
                         <figcaption>Figure 1 : Aire sous une courbe positive</figcaption>
                     </figure>
 
@@ -201,8 +341,7 @@
 
                     <!-- Figure 2 : Aire sous une courbe négative -->
                     <figure>
-                        <img src="images/aire2.png" alt="Aire sous une courbe positive"
-                            class="figure-image" />
+                        <img src="images/aire2.png" alt="Aire sous une courbe positive" class="figure-image" />
                         <figcaption>Figure 2 : Aire sous une courbe négative par symétrie</figcaption>
                     </figure>
 
@@ -256,8 +395,7 @@
 
                     <!-- Figure 3 : Fonction changeant de signe -->
                     <figure>
-                        <img src="images/aire3.png" alt="Aire sous une courbe positive"
-                            class="figure-image" />
+                        <img src="images/aire3.png" alt="Aire sous une courbe positive" class="figure-image" />
                         <figcaption>Figure 3 : Fonction changeant de signe sur l'intervalle</figcaption>
                     </figure>
 
@@ -611,7 +749,8 @@
                 <div class="tcb-title">💡 Méthode ALPES : Choix de \(u(x)\)</div>
                 <div class="tcb-body">
                     <p>Pour effectuer une IPP efficace, le choix de \(u(x)\) se fait grâce au moyen mnémotechnique
-                        <strong>ALPES</strong> :</p>
+                        <strong>ALPES</strong> :
+                    </p>
                     <ul>
                         <li><span class="letter">A</span> : <strong>A</strong>rc (fonctions réciproques : \(\arctan\),
                             \(\arcsin\))</li>

@@ -768,9 +768,13 @@ details>ol {
 }
 
 .figure-image {
-  width: 100%;          /* S'adapte au conteneur */
-  max-width: 450px;     /* Ajuste cette valeur selon la taille souhaitée */
-  height: auto;         /* Conserve les proportions de l'image */
-  display: block;
-  margin: 0 auto;       /* Centre l'image */
+    width: 100%;
+    /* S'adapte au conteneur */
+    max-width: 450px;
+    /* Ajuste cette valeur selon la taille souhaitée */
+    height: auto;
+    /* Conserve les proportions de l'image */
+    display: block;
+    margin: 0 auto;
+    /* Centre l'image */
 }
