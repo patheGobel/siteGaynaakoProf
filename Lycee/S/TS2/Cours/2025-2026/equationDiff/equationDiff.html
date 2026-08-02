@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Équations Différentielles - TS2</title>
+    <link rel="stylesheet" href="equationDiff.css" />
+   
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <h1>📐 Équations Différentielles</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    I. DÉFINITIONS
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">I. Définitions</h2>
+
+        <p>Soient $a_{0}, a_{1}, \dots, a_{n}$ des constantes réelles, $y = y(x)$ une fonction de $x$. On appelle <span class="highlight">équation différentielle linéaire d'ordre $n$ à coefficients constants</span>, une équation liant une fonction $y$ et ses dérivées successives $y', y'', \dots, y^{(n)}$. On a :</p>
+        <div class="formula-center">
+            $$a_{n}y^{(n)}(x) + a_{n-1}y^{(n-1)}(x) + \cdots + a_{2}y''(x) + a_{1}y'(x) + a_{0}y(x) = g(x)$$
+        </div>
+        <p>où $g(x)$ est une fonction donnée appelée <span class="highlight">second membre</span> et $a_{n} \neq 0$.</p>
+
+        <div class="example-box">
+            <p><strong>📌 Exemple :</strong></p>
+            <p>L'équation $2y'' - 3y' + 4y = \sin(2x)$ est une équation différentielle linéaire du 2<sup>nd</sup> ordre, à coefficients constants.</p>
+        </div>
+
+        <ul>
+            <li>L'équation <strong>(E)</strong> : $a_{n}y^{(n)} + a_{n-1}y^{(n-1)} + \dots + a_{1}y' + a_{0}y = g(x)$ est dite <span class="highlight">équation avec second membre</span>.</li>
+            <li>L'équation <strong>(E')</strong> : $a_{n}y^{(n)} + a_{n-1}y^{(n-1)} + \dots + a_{1}y' + a_{0}y = 0$ est dite <span class="highlight">équation homogène</span> ou <span class="highlight">équation sans second membre</span>.</li>
+            <li><strong>(E')</strong> est appelée l'équation homogène <strong>associée</strong> à <strong>(E)</strong>.</li>
+            <li>Les solutions d'une équation différentielle sont des <strong>fonctions</strong>.</li>
+            <li>Une fonction $f$ est solution de l'équation différentielle sur un intervalle $I$ si elle est $n$ fois dérivable sur $I$ et si elle vérifie l'équation pour tout $x \in I$.</li>
+            <li>L'ensemble de toutes les solutions d'une équation différentielle est appelé la <span class="highlight">solution générale</span> de l'équation.</li>
+            <li>Toute fonction particulière qui vérifie l'équation différentielle est appelée une <span class="highlight">solution particulière</span>.</li>
+        </ul>
+    </section>
+
+    <!-- ============================================================
+    II. THÉORÈMES DE SUPERPOSITION
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">II. Théorèmes de superposition</h2>
+
+        <p>Soient $(E)$ une équation différentielle linéaire d'ordre $n$ à coefficients constants avec second membre, et $(E')$ l'équation homogène associée.</p>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Propriété 1 : Cas de l'équation homogène</h3>
+            <p>Si $y_1$ et $y_2$ sont deux solutions de l'équation homogène $(E')$, alors leur somme $y_1 + y_2$ est encore une solution de $(E')$.</p>
+            <div class="important-box">
+                <p><strong>Remarque :</strong> Plus généralement, toute combinaison linéaire $\lambda y_1 + \mu y_2$ (où $\lambda, \mu \in \mathbb{R}$) est aussi solution de $(E')$.</p>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Propriété 2 : Cas de l'équation complète</h3>
+            <p>Si $y_h$ est une solution de l'équation homogène $(E')$ et $y_p$ est une solution de l'équation avec second membre $(E)$, alors leur somme :</p>
+            <div class="formula-center">
+                $$y(x) = y_h(x) + y_p(x)$$
+            </div>
+            <p>est encore une solution de l'équation complète $(E)$.</p>
+
+            <h4 style="color: var(--green);">Preuve [Propriété 2]</h4>
+            <p>Soit $f_p$ une solution particulière de l'équation <strong>(E)</strong> avec second membre, et $f_h$ une solution générale de l'équation homogène associée <strong>(E')</strong>. Nous devons montrer que $f(x) = f_p(x) + f_h(x)$ est une solution générale de l'équation <strong>(E)</strong>.</p>
+
+            <p>Puisque $f_p$ est une solution particulière de <strong>(E)</strong>, cela signifie que lorsque nous remplaçons $y$ par $f_p$ dans <strong>(E)</strong>, nous obtenons une équation vraie.</p>
+
+            <div class="formula-block highlight-green">
+                $$a_{n}f_p^{(n)}(x) + a_{n-1}f_p^{(n-1)}(x) + \cdots + a_{2}f_p''(x) + a_{1}f_p'(x) + a_{0}f_p(x) = g(x)$$
+            </div>
+
+            <p>De même, puisque $f_h$ est une solution générale de <strong>(E')</strong>, lorsque nous remplaçons $y$ par $f_h$ dans <strong>(E')</strong>, nous obtenons une équation vraie.</p>
+
+            <div class="formula-block" style="color: var(--primary);">
+                $$a_{n}f_h^{(n)}(x) + a_{n-1}f_h^{(n-1)}(x) + \cdots + a_{2}f_h''(x) + a_{1}f_h'(x) + a_{0}f_h(x) = 0$$
+            </div>
+
+            <p>En ajoutant les deux équations, nous obtenons :</p>
+
+            <div class="formula-center">
+                $$a_{n}(f_p + f_h)^{(n)}(x) + a_{n-1}(f_p + f_h)^{(n-1)}(x) + \cdots + a_{2}(f_p + f_h)''(x) + a_{1}(f_p + f_h)'(x) + a_{0}(f_p + f_h)(x) = g(x)$$
+            </div>
+
+            <p>Puisque $f_p$ est une solution de l'équation avec second membre <strong>(E)</strong> et $f_h$ est une solution de l'équation homogène <strong>(E')</strong>, la partie gauche de l'équation ci-dessus est égale à $g(x) + 0$, ce qui est simplement $g(x)$.</p>
+
+            <p>Ainsi, $f(x) = f_p(x) + f_h(x)$ satisfait l'équation différentielle <strong>(E)</strong>, ce qui prouve que c'est une solution générale de <strong>(E)</strong>.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    III. ÉQUATIONS DIFFÉRENTIELLES D'ORDRE 1
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">III. Équations différentielles linéaires d'ordre 1, à coefficients constants</h2>
+
+        <p>Une équation différentielle linéaire d'ordre 1, à coefficients constants est une équation de la forme :</p>
+        <div class="formula-center">
+            <strong>(E)</strong> : $ay' + by = g(x)$ <span style="color: var(--primary);">(avec second membre)</span>
+        </div>
+        <div class="formula-center">
+            <strong>(E')</strong> : $ay' + by = 0$ <span style="color: var(--primary);">(sans second membre ou équation homogène)</span>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">1. Recherche de la solution générale de l'équation homogène</h3>
+            <p>Soit <strong>(E')</strong> : $ay' + by = 0$ où $a$ et $b$ sont des réels avec $a \neq 0$.</p>
+
+            <div class="formula-block">
+                $$\begin{aligned}
+                ay' + by = 0 &\Longrightarrow ay' = -by \\
+                &\Longrightarrow \frac{y'}{y} = -\frac{b}{a} \\
+                &\Longrightarrow \ln|y| = -\frac{b}{a}x + c \\
+                &\Longrightarrow |y| = e^{-\frac{b}{a}x + c} \\
+                &\Longrightarrow |y| = e^{c} \cdot e^{-\frac{b}{a}x} \\
+                &\Longrightarrow y = \pm e^{c} \cdot e^{-\frac{b}{a}x}
+                \end{aligned}$$
+            </div>
+
+            <p>En posant $k = \pm e^c$, on obtient $y = k e^{-\frac{b}{a}x}$ avec $k \in \mathbb{R}^*$.</p>
+
+            <div class="important-box">
+                <p><strong>Remarque :</strong> La fonction nulle ($y = 0$, qui correspond au cas $k = 0$) est également une solution évidente de l'équation $(E')$. On peut donc étendre la constante $k$ à toutes les valeurs réelles.</p>
+            </div>
+
+            <div class="theorem-box">
+                <p><strong>Conclusion :</strong> Les solutions générales de l'équation homogène $(E')$ sont les fonctions $f_h$ (ou $y_h$) définies sur $\mathbb{R}$ de la forme :</p>
+                <div class="formula-center">
+                    $$\boxed{f_h(x) = k e^{-\frac{b}{a}x} \quad \text{où } k \in \mathbb{R}}$$
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple :</strong></p>
+                <p>Résoudre sur $\mathbb{R}$ l'équation différentielle homogène $(E_1) : 2y' + 3y = 0$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p>Ici, $a = 2$ et $b = 3$. D'après le cours, les solutions générales de cette équation sont les fonctions $y_h$ définies sur $\mathbb{R}$ par :</p>
+                        $$\boxed{y_h(x) = k e^{-\frac{3}{2}x} \quad \text{où } k \in \mathbb{R}}$$
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">2. Recherche d'une solution particulière de l'équation avec second membre</h3>
+
+            <p>Soit l'équation différentielle complète (avec second membre) <strong>(E)</strong> : $ay'(x) + by(x) = g(x)$.</p>
+
+            <ul>
+                <li>Une fonction $y_p$ est dite <span class="highlight">solution particulière</span> de $(E)$ si elle est dérivable sur $\mathbb{R}$ et si elle vérifie l'équation complète :</li>
+            </ul>
+            <div class="formula-center">
+                $$a y_p'(x) + b y_p(x) = g(x)$$
+            </div>
+
+            <ul>
+                <li><strong>Cas où $g(x)$ est un polynôme :</strong> Si $g(x)$ est un polynôme de degré $n$ et que $b \neq 0$, alors on cherche la solution particulière $y_p$ sous la forme d'un polynôme de même degré $n$.</li>
+                <li><strong>Cas où $g(x)$ est de forme trigonométrique :</strong> Si $g(x)$ est de la forme $\alpha \cos(\beta x) + \mu \sin(\beta x)$ (où $\alpha$ et $\mu$ sont des constantes réelles), alors on cherche $y_p$ sous la forme :</li>
+            </ul>
+            <div class="formula-center">
+                $$y_p(x) = A \cos(\beta x) + B \sin(\beta x)$$
+            </div>
+            <p>où $A$ et $B$ sont deux constantes réelles à déterminer en injectant $y_p$ dans $(E)$.</p>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 1 : Cas polynôme</strong></p>
+                <p>Trouver une solution particulière de l'équation $(E_2) : y' - 2y = 4x^2 - 2x$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p>Le second membre $g(x) = 4x^2 - 2x$ est un polynôme de degré 2 et le coefficient devant $y$ est non nul ($b = -2 \neq 0$). On cherche donc $y_p$ sous la forme d'un polynôme de degré 2 :</p>
+                        $$y_p(x) = Ax^2 + Bx + C \quad \Longrightarrow \quad y_p'(x) = 2Ax + B$$
+                        <p>En injectant $y_p$ et $y_p'$ dans l'équation $(E_2)$, on obtient :</p>
+                        $$(2Ax + B) - 2(Ax^2 + Bx + C) = 4x^2 - 2x$$
+                        $$-2Ax^2 + (2A - 2B)x + (B - 2C) = 4x^2 - 2x$$
+
+                        <p>Par identification des coefficients :</p>
+                        $$\begin{cases}
+                        -2A = 4 \\
+                        2A - 2B = -2 \\
+                        B - 2C = 0
+                        \end{cases}
+                        \Longrightarrow
+                        \begin{cases}
+                        A = -2 \\
+                        B = -1 \\
+                        C = -\frac{1}{2}
+                        \end{cases}$$
+
+                        <p>Ainsi, la solution particulière est :</p>
+                        $$\boxed{y_p(x) = -2x^2 - x - \frac{1}{2}}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 2 : Cas trigonométrique</strong></p>
+                <p>Trouver une solution particulière de l'équation $(E_3) : y' + y = 10\cos(2x)$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p>Ici, $\beta = 2$. On cherche donc $y_p$ sous la forme :</p>
+                        $$y_p(x) = A \cos(2x) + B \sin(2x) \quad \Longrightarrow \quad y_p'(x) = -2A \sin(2x) + 2B \cos(2x)$$
+
+                        <p>En injectant dans $(E_3)$, on a :</p>
+                        $$(-2A \sin(2x) + 2B \cos(2x)) + (A \cos(2x) + B \sin(2x)) = 10\cos(2x)$$
+
+                        <p>En regroupant les termes en $\cos(2x)$ et $\sin(2x)$ :</p>
+                        $$(A + 2B)\cos(2x) + (-2A + B)\sin(2x) = 10\cos(2x)$$
+
+                        <p>Par identification :</p>
+                        $$\begin{cases}
+                        A + 2B = 10 \\
+                        -2A + B = 0
+                        \end{cases}
+                        \Longrightarrow
+                        \begin{cases}
+                        A = 2 \\
+                        B = 4
+                        \end{cases}$$
+
+                        <p>La solution particulière est donc :</p>
+                        $$\boxed{y_p(x) = 2\cos(2x) + 4\sin(2x)}$$
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">3. Solution générale de <strong>(E)</strong></h3>
+            <p>Une solution générale $y(x)$ de l'équation complète <strong>(E)</strong> est donnée par :</p>
+            <div class="formula-center">
+                $$y(x) = y_h(x) + y_p(x)$$
+            </div>
+            <p>où $y_h$ est la solution générale de l'équation homogène <strong>(E')</strong> et $y_p$ est une solution particulière de <strong>(E)</strong>.</p>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple :</strong></p>
+                <p>Résoudre sur $\mathbb{R}$ l'équation différentielle complète $(E_4) : y' + y = 10\cos(2x)$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p>La solution générale de l'équation $(E_4)$ est la somme des solutions trouvées précédemment.</p>
+                        <p>Les solutions sont donc les fonctions $y$ définies sur $\mathbb{R}$ par :</p>
+                        $$\boxed{y(x) = y_h(x) + y_p(x) = k e^{-x} + 2\cos(2x) + 4\sin(2x) \quad \text{où } k \in \mathbb{R}}$$
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    IV. ÉQUATIONS DIFFÉRENTIELLES DU 2ND ORDRE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">IV. Équations différentielles du 2<sup>nd</sup> ordre à coefficients constants</h2>
+
+        <p>Une équation différentielle du second ordre à coefficients constants est une équation de la forme :</p>
+        <div class="formula-center">
+            <strong>(E)</strong> : $ay'' + by' + cy = g(x)$ \quad où $a, b, c \in \mathbb{R}$ avec $a \neq 0$ <span style="color: var(--primary);">(Équation avec second membre)</span>
+        </div>
+
+        <p>L'équation obtenue en remplaçant le second membre par $0$ est appelée <span class="highlight">équation homogène</span> (ou équation sans second membre) associée à $(E)$ :</p>
+        <div class="formula-center">
+            <strong>(E')</strong> : $ay'' + by' + cy = 0$ \quad où $a \neq 0$ <span style="color: var(--primary);">(Équation homogène)</span>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Recherche de la solution homogène de (E')</h3>
+
+            <p>Soit $(E') : ay'' + by' + cy = 0$ avec $a \neq 0$.</p>
+            <p>Nous appelons <span class="highlight">équation caractéristique</span> associée à $(E')$ l'équation du second degré :</p>
+            <div class="formula-center">
+                $$\color{red}{ar^2 + br + c = 0}$$
+            </div>
+
+            <div class="theorem-box">
+                <p><strong>Théorème :</strong></p>
+                <p>Soit $(E') : ay'' + by' + cy = 0$ une équation différentielle et $ar^2 + br + c = 0$ son équation caractéristique associée de discriminant $\Delta = b^2 - 4ac$.</p>
+
+                <ul>
+                    <li>
+                        <p><strong>Si $\Delta > 0$ :</strong> L'équation caractéristique admet deux solutions réelles distinctes :</p>
+                        $$r_1 = \frac{-b - \sqrt{\Delta}}{2a} \quad \text{et} \quad r_2 = \frac{-b + \sqrt{\Delta}}{2a}$$
+                        <p>Dans ce cas, la solution générale de $(E')$ est de la forme :</p>
+                        <div class="formula-center">
+                            $$\boxed{y_h(x) = A e^{r_1 x} + B e^{r_2 x}} \quad \text{où } A, B \in \mathbb{R}$$
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Si $\Delta = 0$ :</strong> L'équation caractéristique admet une solution double réelle :</p>
+                        $$r_0 = \frac{-b}{2a}$$
+                        <p>Dans ce cas, la solution générale de $(E')$ est de la forme :</p>
+                        <div class="formula-center">
+                            $$\boxed{y_h(x) = (Ax + B)e^{r_0 x}} \quad \text{où } A, B \in \mathbb{R}$$
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Si $\Delta < 0$ :</strong> L'équation caractéristique admet deux solutions complexes conjuguées :</p>
+                        $$r_1 = \alpha + i\beta \quad \text{et} \quad r_2 = \alpha - i\beta \quad \text{avec } \alpha = \frac{-b}{2a} \text{ et } \beta = \frac{\sqrt{-\Delta}}{2a}$$
+                        <p>Dans ce cas, la solution générale de $(E')$ est de la forme :</p>
+                        <div class="formula-center">
+                            $$\boxed{y_h(x) = e^{\alpha x} \left( A\cos(\beta x) + B\sin(\beta x) \right)} \quad \text{où } A, B \in \mathbb{R}$$
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="important-box">
+                <p><strong>Remarque :</strong> Dans tous les cas, les constantes $A$ et $B$ sont dépendantes des conditions initiales.</p>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Exemples d'application</h3>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 1 : Cas $\Delta > 0$</strong></p>
+                <p>Résoudre l'équation différentielle : $(E'_1) : y'' - 3y' + 2y = 0$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ul>
+                            <li>L'équation caractéristique associée est : $r^2 - 3r + 2 = 0$.</li>
+                            <li>Calcul du discriminant : $\Delta = (-3)^2 - 4(1)(2) = 9 - 8 = 1$.</li>
+                            <li>Puisque $\Delta > 0$, l'équation admet deux racines réelles distinctes :</li>
+                            $$r_1 = \frac{3 - \sqrt{1}}{2(1)} = 1 \quad \text{et} \quad r_2 = \frac{3 + \sqrt{1}}{2(1)} = 2$$
+                            <li>La solution générale de $(E'_1)$ est donc :</li>
+                            $$\boxed{y_h(x) = A e^{x} + B e^{2x}} \quad \text{avec } A, B \in \mathbb{R}$$
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 2 : Cas $\Delta = 0$</strong></p>
+                <p>Résoudre l'équation différentielle : $(E'_2) : y'' - 4y' + 4y = 0$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ul>
+                            <li>L'équation caractéristique associée est : $r^2 - 4r + 4 = 0$.</li>
+                            <li>Calcul du discriminant : $\Delta = (-4)^2 - 4(1)(4) = 16 - 16 = 0$.</li>
+                            <li>Puisque $\Delta = 0$, l'équation admet une racine double réelle :</li>
+                            $$r_0 = \frac{4}{2(1)} = 2$$
+                            <li>La solution générale de $(E'_2)$ est donc :</li>
+                            $$\boxed{y_h(x) = (Ax + B)e^{2x}} \quad \text{avec } A, B \in \mathbb{R}$$
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 3 : Cas $\Delta < 0$</strong></p>
+                <p>Résoudre l'équation différentielle : $(E'_3) : y'' - 2y' + 5y = 0$.</p>
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ul>
+                            <li>L'équation caractéristique associée est : $r^2 - 2r + 5 = 0$.</li>
+                            <li>Calcul du discriminant : $\Delta = (-2)^2 - 4(1)(5) = 4 - 20 = -16$.</li>
+                            <li>Puisque $\Delta < 0$, l'équation admet deux racines complexes conjuguées $r = \alpha \pm i\beta$ avec :</li>
+                            $$\alpha = \frac{-(-2)}{2(1)} = 1 \quad \text{et} \quad \beta = \frac{\sqrt{-(-16)}}{2(1)} = \frac{\sqrt{16}}{2} = 2$$
+                            <li>Les racines sont donc $r_1 = 1 + 2i$ et $r_2 = 1 - 2i$.</li>
+                            <li>La solution générale de $(E'_3)$ est donc :</li>
+                            $$\boxed{y_h(x) = e^{x} \left( A\cos(2x) + B\sin(2x) \right)} \quad \text{avec } A, B \in \mathbb{R}$$
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple 4 : Résolution avec conditions initiales</strong></p>
+                <p>Déterminer la solution unique de l'équation $(E'_1) : y'' - 3y' + 2y = 0$ vérifiant les conditions initiales :</p>
+                $$y(0) = 3 \quad \text{et} \quad y'(0) = 4$$
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p><strong>Étape 1 : Forme générale de la solution</strong></p>
+                        <p>D'après l'Exemple 1, la solution générale de l'équation est :</p>
+                        $$y_h(x) = A e^{x} + B e^{2x} \quad \text{avec } A, B \in \mathbb{R}$$
+
+                        <p><strong>Étape 2 : Calcul de la dérivée</strong></p>
+                        <p>Pour appliquer la seconde condition, on dérive la fonction $y_h$ :</p>
+                        $$y_h'(x) = A e^{x} + 2B e^{2x}$$
+
+                        <p><strong>Étape 3 : Application des conditions initiales</strong></p>
+                        <p>En injectant $x = 0$ dans les expressions de $y_h$ et $y_h'$, on obtient :</p>
+                        $$\begin{cases}
+                        y_h(0) = 3 \implies A + B = 3 \\
+                        y_h'(0) = 4 \implies A + 2B = 4
+                        \end{cases}$$
+
+                        <p><strong>Étape 4 : Résolution du système</strong></p>
+                        <p>Par soustraction : $(A + 2B) - (A + B) = 4 - 3 \implies B = 1$</p>
+                        <p>En remplaçant $B = 1$ dans $A + B = 3$, on trouve $A = 2$.</p>
+
+                        <p><strong>Conclusion :</strong></p>
+                        $$\boxed{y(x) = 2e^{x} + e^{2x}}$$
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - Cours de Mathématiques TS2 - Équations Différentielles</p>
+    </footer>
+
+</body>
+</html>
