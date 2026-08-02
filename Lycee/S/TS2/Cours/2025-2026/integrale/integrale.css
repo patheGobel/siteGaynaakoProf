@@ -294,7 +294,7 @@ b {
            FORMULES
         ============================================================ */
 .formula-block {
-    text-align: center;
+    text-align: flex;
     padding: 12px 0;
     margin: 8px 0;
     overflow-x: auto;
@@ -777,4 +777,32 @@ details>ol {
     display: block;
     margin: 0 auto;
     /* Centre l'image */
+}
+
+/* Style du bloc details */
+.solution-details {
+  margin-top: 10px;
+}
+
+/* Style du bouton "Voir la solution" */
+.btn-solution {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: var(--primary, #c0392b);
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-solution:hover {
+  opacity: 0.9;
+}
+
+/* Petit espace au-dessus du contenu déplié */
+.solution-content {
+  margin-top: 15px;
 }
