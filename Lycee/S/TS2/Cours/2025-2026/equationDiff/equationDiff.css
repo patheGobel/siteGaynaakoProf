@@ -640,3 +640,80 @@ details>ol {
 .cases-item {
     padding: 4px 0;
 }
+/*-----------------------*/
+/* ============================================================
+   PROOF DETAILS (ACCORDÉON POUR LES PREUVES)
+============================================================ */
+.proof-details {
+    margin: 16px 0 8px 0;
+    cursor: pointer;
+}
+
+.btn-proof {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #f0fdf4;
+    border: 2px solid var(--green);
+    border-radius: var(--radius-sm);
+    color: var(--green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.btn-proof:hover {
+    background: var(--green);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.btn-proof::before {
+    content: "▶";
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.proof-details[open] .btn-proof::before {
+    transform: rotate(90deg);
+}
+
+.proof-details[open] .btn-proof {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+.proof-content {
+    margin-top: 16px;
+    padding: 18px 24px;
+    background: #f8fafc;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--green);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour que le summary n'ait pas de style par défaut */
+.proof-details summary {
+    list-style: none;
+}
+
+.proof-details summary::-webkit-details-marker {
+    display: none;
+}
