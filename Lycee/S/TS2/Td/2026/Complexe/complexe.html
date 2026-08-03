@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Nombres Complexes - TS2</title>
+
+    <style>
+        /* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #8b5cf6;
+            --primary-dark: #5b21b6;
+            --secondary: #059669;
+            --accent: #d97706;
+            --danger: #dc2626;
+            --purple: #7c3aed;
+            --blue: #2563eb;
+            --bg-body: #f1f5f9;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+            --radius: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           TYPOGRAPHIE
+        ============================================================ */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul,
+        ol {
+            padding-left: 28px;
+            margin: 12px 0 18px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        strong,
+        b {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* ============================================================
+           EN-TÊTE
+        ============================================================ */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 30px 40px;
+            border-radius: var(--radius);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .header-top .school {
+            font-weight: 600;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin: 10px 0 6px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+            text-align: center;
+            font-size: 1rem;
+            opacity: 0.85;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            padding-top: 12px;
+            margin-top: 10px;
+        }
+
+        .header-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ============================================================
+           SECTIONS
+        ============================================================ */
+        .section {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 30px 35px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-title {
+            color: var(--primary-dark);
+            border-bottom: 4px solid var(--primary-light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-size: 1.8rem;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .subsection-title {
+            color: var(--secondary);
+            margin: 25px 0 14px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid var(--border-light);
+        }
+
+        .subsection-title-red {
+            color: var(--primary);
+            margin: 25px 0 14px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid var(--primary-light);
+        }
+
+        /* ============================================================
+           EXERCICE BOX
+        ============================================================ */
+        .exercise-box {
+            background: #faf5ff;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 20px 24px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .exercise-box .exercise-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .exercise-box .exercise-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .exercise-box .exercise-title .exo-tag {
+            color: var(--primary);
+        }
+
+        .exercise-box .sub-exercise {
+            margin: 12px 0 8px 0;
+            padding-left: 8px;
+            border-left: 3px solid var(--primary-light);
+        }
+
+        .exercise-box .sub-exercise .sub-label {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .three-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px 20px;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            .three-columns {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .three-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================================
+           ENCADRÉS
+        ============================================================ */
+        .example-box {
+            background: #fffbeb;
+            border-left: 6px solid var(--accent);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .correction-box {
+            background: #f0fdf4;
+            border-left: 6px solid var(--secondary);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .important-box {
+            background: #fef2f2;
+            border: 2px solid var(--primary);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .highlight-purple {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ============================================================
+           FORMULES
+        ============================================================ */
+        .formula-block {
+            text-align: center;
+            padding: 10px 0;
+            margin: 6px 0;
+            overflow-x: auto;
+        }
+
+        .formula-center {
+            text-align: center;
+            font-size: 1.05rem;
+            padding: 6px 0;
+        }
+
+        /* ============================================================
+           TABLEAUX
+        ============================================================ */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tr:hover {
+            background: #f1f5f9;
+        }
+
+        /* ============================================================
+           DETAILS / SUMMARY
+        ============================================================ */
+        details {
+            margin: 12px 0 4px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: 600;
+            color: var(--primary);
+            padding: 8px 0;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        summary:hover {
+            color: var(--primary-dark);
+        }
+
+        details[open] summary {
+            color: var(--primary-dark);
+        }
+
+        details>div,
+        details>p,
+        details>ul,
+        details>ol {
+            padding: 12px 16px 8px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-sm);
+            margin-top: 4px;
+        }
+
+        .btn-solution {
+            display: inline-block;
+            padding: 6px 18px;
+            background: var(--primary);
+            color: white;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-solution:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .solution-details summary {
+            list-style: none;
+        }
+
+        .solution-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .solution-details summary .btn-solution::before {
+            content: "▶ ";
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-details[open] summary .btn-solution::before {
+            content: "▼ ";
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .footer {
+            text-align: center;
+            padding: 30px 0 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 2px solid var(--border-light);
+            margin-top: 20px;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px 10px;
+            }
+
+            .header {
+                padding: 20px 16px;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 4px;
+                font-size: 0.8rem;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                gap: 4px;
+                font-size: 0.8rem;
+            }
+
+            .section {
+                padding: 16px 14px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .exercise-box {
+                padding: 14px 16px;
+            }
+
+            .exercise-box .two-columns,
+            .exercise-box .three-columns {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .section {
+                padding: 12px 10px;
+            }
+
+            .exercise-box {
+                padding: 10px 12px;
+            }
+
+            table {
+                font-size: 0.7rem;
+            }
+
+            th,
+            td {
+                padding: 4px 6px;
+            }
+        }
+
+        /* ============================================================
+           MATHJAX
+        ============================================================ */
+        .MathJax {
+            font-size: 1.05em !important;
+        }
+
+        .mjx-container {
+            margin: 6px 0 10px 0 !important;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        /* ============================================================
+           ANIMATIONS
+        ============================================================ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* ============================================================
+           SCROLLBAR
+        ============================================================ */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* ============================================================
+           STYLES SPÉCIFIQUES
+        ============================================================ */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
+        }
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .exo-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 2px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 6px;
+        }
+
+        .tag-exo {
+            display: inline-block;
+            background: var(--primary-light);
+            color: white;
+            font-weight: 700;
+            padding: 2px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+
+        .diamond {
+            color: var(--primary);
+        }
+
+        /* En-tête du TD à la manière du PDF */
+        .td-header {
+            background: var(--bg-white);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .td-header .td-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .td-header .td-row.border-bottom {
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 10px;
+            margin-bottom: 6px;
+        }
+
+        .td-header .td-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            padding: 8px 0;
+            letter-spacing: 1px;
+        }
+
+        .td-header .td-title .diamonds {
+            color: var(--primary);
+        }
+
+        .td-header .td-school {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .td-header .td-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .td-header .td-meta strong {
+            color: var(--text-dark);
+        }
+
+        /* Séparateur entre les exercices dans le PDF */
+        .exercise-separator {
+            border: none;
+            border-top: 3px dashed var(--primary-light);
+            margin: 30px 0 20px 0;
+            opacity: 0.5;
+        }
+
+        /* Pour les sous-listes dans les exercices */
+        .exercise-box .sub-list {
+            padding-left: 20px;
+            margin: 6px 0 10px 0;
+        }
+
+        .exercise-box .sub-list li {
+            margin-bottom: 3px;
+        }
+    </style>
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU TD
+    ============================================================ -->
+    <div class="td-header">
+        <div class="td-row border-bottom">
+            <span class="td-school">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="td-meta"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="td-row">
+            <span class="td-meta"><strong>Matière :</strong> Mathématiques</span>
+            <span class="td-meta"><strong>Niveau :</strong> TS2</span>
+            <span class="td-meta"><strong>Date :</strong> 05/12/2025</span>
+        </div>
+        <div class="td-title">
+            <span class="diamonds">♦♦♦</span> TD Complexe <span class="diamonds">♦♦♦</span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    EXERCICE 1 : Forme algébrique et calcul de i^n
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <div class="exercise-title">Forme algébrique et calcul de $i^n$</div>
+
+            <ol>
+                <li>
+                    Déterminer les formes algébriques des nombres complexes donnés. Préciser, le cas échéant, s'il est réel ou imaginaire pur.
+                    <div class="two-columns">
+                        <ol type="a">
+                            <li>$z_1 = i(1 - 4i) + 3(2 - i)$</li>
+                            <li>$z_2 = (3 - i)^2 + 6i$</li>
+                            <li>$z_3 = \dfrac{3}{1 - i}$</li>
+                            <li>$z_4 = \dfrac{1 + 2i}{2 - i}$</li>
+                        </ol>
+                        <ol type="a" start="5">
+                            <li>$z_5 = (2 + i\sqrt{3})(\sqrt{3} - i)$</li>
+                            <li>$z_6 = (2 + 5i)^2$</li>
+                            <li>$z_7 = \dfrac{3 - 3i}{1 + i}$</li>
+                        </ol>
+                    </div>
+                </li>
+                <li>Calculer $i^{2025}$, $i^{40}$, $i^{27}$, $i^{34}$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Formes algébriques :</strong></p>
+                    <div class="two-columns">
+                        <div>
+                            <p>a) $z_1 = i(1 - 4i) + 3(2 - i)$</p>
+                            <p>$z_1 = i - 4i^2 + 6 - 3i$</p>
+                            <p>$z_1 = i + 4 + 6 - 3i = 10 - 2i$</p>
+                            <p class="formula-center">$\boxed{z_1 = 10 - 2i}$</p>
+
+                            <p>b) $z_2 = (3 - i)^2 + 6i$</p>
+                            <p>$z_2 = 9 - 6i + i^2 + 6i$</p>
+                            <p>$z_2 = 9 - 1 + (-6i + 6i) = 8$</p>
+                            <p class="formula-center">$\boxed{z_2 = 8}$ (réel)</p>
+
+                            <p>c) $z_3 = \dfrac{3}{1 - i}$</p>
+                            <p>$z_3 = \dfrac{3(1 + i)}{(1 - i)(1 + i)} = \dfrac{3 + 3i}{2}$</p>
+                            <p class="formula-center">$\boxed{z_3 = \dfrac{3}{2} + \dfrac{3}{2}i}$</p>
+
+                            <p>d) $z_4 = \dfrac{1 + 2i}{2 - i}$</p>
+                            <p>$z_4 = \dfrac{(1 + 2i)(2 + i)}{(2 - i)(2 + i)} = \dfrac{2 + i + 4i + 2i^2}{5}$</p>
+                            <p>$z_4 = \dfrac{2 + 5i - 2}{5} = \dfrac{5i}{5} = i$</p>
+                            <p class="formula-center">$\boxed{z_4 = i}$ (imaginaire pur)</p>
+                        </div>
+                        <div>
+                            <p>e) $z_5 = (2 + i\sqrt{3})(\sqrt{3} - i)$</p>
+                            <p>$z_5 = 2\sqrt{3} - 2i + i\sqrt{3}\sqrt{3} - i^2\sqrt{3}$</p>
+                            <p>$z_5 = 2\sqrt{3} - 2i + 3i + \sqrt{3} = 3\sqrt{3} + i$</p>
+                            <p class="formula-center">$\boxed{z_5 = 3\sqrt{3} + i}$</p>
+
+                            <p>f) $z_6 = (2 + 5i)^2$</p>
+                            <p>$z_6 = 4 + 20i + 25i^2 = 4 + 20i - 25$</p>
+                            <p class="formula-center">$\boxed{z_6 = -21 + 20i}$</p>
+
+                            <p>g) $z_7 = \dfrac{3 - 3i}{1 + i}$</p>
+                            <p>$z_7 = \dfrac{3(1 - i)}{1 + i} = \dfrac{3(1 - i)^2}{(1 + i)(1 - i)}$</p>
+                            <p>$z_7 = \dfrac{3(1 - 2i + i^2)}{2} = \dfrac{3(-2i)}{2} = -3i$</p>
+                            <p class="formula-center">$\boxed{z_7 = -3i}$ (imaginaire pur)</p>
+                        </div>
+                    </div>
+
+                    <p><strong>2. Calcul de $i^n$ :</strong></p>
+                    <p>$i^{2025} = i^{4 \times 506 + 1} = (i^4)^{506} \times i = 1^{506} \times i = i$</p>
+                    <p>$i^{40} = i^{4 \times 10} = (i^4)^{10} = 1$</p>
+                    <p>$i^{27} = i^{4 \times 6 + 3} = (i^4)^6 \times i^3 = -i$</p>
+                    <p>$i^{34} = i^{4 \times 8 + 2} = (i^4)^8 \times i^2 = -1$</p>
+                    <p class="formula-center">$\boxed{i^{2025} = i,\; i^{40} = 1,\; i^{27} = -i,\; i^{34} = -1}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 2 : Conjugué
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <div class="exercise-title">Conjugué</div>
+
+            <ol>
+                <li>Déterminer le conjugué des nombres complexes suivants :
+                    <div class="two-columns">
+                        <ol type="a">
+                            <li>$z_1 = 3i$</li>
+                            <li>$z_2 = -i(1 + 4i)$</li>
+                        </ol>
+                        <ol type="a" start="3">
+                            <li>$z_3 = (3 - 5i)^3$</li>
+                            <li>$z_4 = \dfrac{2i}{i + 3} - \dfrac{3}{2 + i}$</li>
+                        </ol>
+                    </div>
+                </li>
+                <li>Soit $z_5 = \dfrac{2 - i}{1 + i}$ et $z_6 = \dfrac{2 + i}{1 - i}$.<br>
+                    Montrer que $\overline{z_6} = z_5$. Que peut-on en déduire sans calcul de $z_5 + z_6$ et $z_5 - z_6$ ?</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Conjugués :</strong></p>
+                    <p>a) $\overline{z_1} = \overline{3i} = -3i$</p>
+                    <p>b) $z_2 = -i(1 + 4i) = -i - 4i^2 = -i + 4 = 4 - i$<br>
+                    $\overline{z_2} = \overline{4 - i} = 4 + i$</p>
+                    <p>c) $\overline{z_3} = \overline{(3 - 5i)^3} = (3 + 5i)^3$ (car $\overline{z^n} = \bar{z}^n$)</p>
+                    <p>d) $z_4 = \dfrac{2i}{i + 3} - \dfrac{3}{2 + i}$<br>
+                    $\overline{z_4} = \overline{\dfrac{2i}{i + 3}} - \overline{\dfrac{3}{2 + i}} = \dfrac{-2i}{-i + 3} - \dfrac{3}{2 - i} = \dfrac{-2i}{3 - i} - \dfrac{3}{2 - i}$</p>
+
+                    <p><strong>2.</strong> $\overline{z_6} = \overline{\dfrac{2 + i}{1 - i}} = \dfrac{2 - i}{1 + i} = z_5$</p>
+                    <p>On en déduit que $z_5$ et $z_6$ sont conjugués.</p>
+                    <p>Donc $z_5 + z_6$ est un réel et $z_5 - z_6$ est un imaginaire pur.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 3 : Module et argument
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <div class="exercise-title">Module et argument</div>
+
+            <p>Déterminer le module et un argument des nombres complexes suivants :</p>
+            <div class="three-columns">
+                <ol type="a">
+                    <li>$z_1 = -\sqrt{3} + i$</li>
+                    <li>$z_2 = -1 + i\sqrt{3}$</li>
+                    <li>$z_3 = 1 - i$</li>
+                    <li>$z_4 = 1 + i$</li>
+                </ol>
+                <ol type="a" start="5">
+                    <li>$z_5 = -\sqrt{3} + i$</li>
+                    <li>$z_6 = \dfrac{2i - 2\sqrt{3}}{4i + 4}$</li>
+                    <li>$z_7 = (\sqrt{3} + i)(1 - i)^2$</li>
+                    <li>$z_8 = \dfrac{(-\sqrt{3} + i)^3}{(1 + i)^2}$</li>
+                </ol>
+                <ol type="a" start="9">
+                    <li>$z_9 = 2 \dfrac{(\sqrt{3} + i)^2}{(-1 - i)^2}$</li>
+                    <li>$z_{10} = -2i (1 + i\sqrt{3})^6$</li>
+                </ol>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappel :</strong> Pour $z = a + ib$, $|z| = \sqrt{a^2 + b^2}$ et $\arg(z) = \theta$ tel que $\cos\theta = \dfrac{a}{|z|}$ et $\sin\theta = \dfrac{b}{|z|}$.</p>
+
+                    <div class="two-columns">
+                        <div>
+                            <p>a) $z_1 = -\sqrt{3} + i$</p>
+                            <p>$|z_1| = \sqrt{3 + 1} = 2$</p>
+                            <p>$\arg(z_1) = \dfrac{5\pi}{6}$</p>
+                            <p class="formula-center">$\boxed{|z_1| = 2,\; \arg(z_1) = \frac{5\pi}{6}}$</p>
+
+                            <p>b) $z_2 = -1 + i\sqrt{3}$</p>
+                            <p>$|z_2| = \sqrt{1 + 3} = 2$</p>
+                            <p>$\arg(z_2) = \dfrac{2\pi}{3}$</p>
+                            <p class="formula-center">$\boxed{|z_2| = 2,\; \arg(z_2) = \frac{2\pi}{3}}$</p>
+
+                            <p>c) $z_3 = 1 - i$</p>
+                            <p>$|z_3| = \sqrt{1 + 1} = \sqrt{2}$</p>
+                            <p>$\arg(z_3) = -\dfrac{\pi}{4}$</p>
+                            <p class="formula-center">$\boxed{|z_3| = \sqrt{2},\; \arg(z_3) = -\frac{\pi}{4}}$</p>
+
+                            <p>d) $z_4 = 1 + i$</p>
+                            <p>$|z_4| = \sqrt{2}$</p>
+                            <p>$\arg(z_4) = \dfrac{\pi}{4}$</p>
+                            <p class="formula-center">$\boxed{|z_4| = \sqrt{2},\; \arg(z_4) = \frac{\pi}{4}}$</p>
+                        </div>
+                        <div>
+                            <p>e) $z_5 = -\sqrt{3} + i$ (identique à a)</p>
+
+                            <p>f) $z_6 = \dfrac{2i - 2\sqrt{3}}{4i + 4} = \dfrac{2(i - \sqrt{3})}{4(i + 1)} = \dfrac{i - \sqrt{3}}{2(i + 1)}$</p>
+                            <p>Après calcul : $z_6 = \dfrac{1 - i\sqrt{3}}{2}$</p>
+                            <p>$|z_6| = 1$, $\arg(z_6) = -\dfrac{\pi}{3}$</p>
+
+                            <p>g) $z_7 = (\sqrt{3} + i)(1 - i)^2$</p>
+                            <p>$(1 - i)^2 = -2i$</p>
+                            <p>$z_7 = (\sqrt{3} + i)(-2i) = -2i\sqrt{3} - 2i^2 = 2 - 2i\sqrt{3}$</p>
+                            <p>$|z_7| = 4$, $\arg(z_7) = -\dfrac{\pi}{3}$</p>
+
+                            <p>h) $z_8 = \dfrac{(-\sqrt{3} + i)^3}{(1 + i)^2}$</p>
+                            <p>$|z_8| = \dfrac{|-\sqrt{3} + i|^3}{|1 + i|^2} = \dfrac{2^3}{(\sqrt{2})^2} = \dfrac{8}{2} = 4$</p>
+                            <p>$\arg(z_8) = 3 \times \dfrac{5\pi}{6} - 2 \times \dfrac{\pi}{4} = \dfrac{5\pi}{2} - \dfrac{\pi}{2} = 2\pi \equiv 0$</p>
+                            <p class="formula-center">$\boxed{|z_8| = 4,\; \arg(z_8) = 0}$</p>
+
+                            <p>i) $z_9 = 2\dfrac{(\sqrt{3} + i)^2}{(-1 - i)^2}$</p>
+                            <p>$|z_9| = 2 \times \dfrac{2^2}{(\sqrt{2})^2} = 2 \times \dfrac{4}{2} = 4$</p>
+                            <p>$\arg(z_9) = 2 \times \dfrac{\pi}{6} - 2 \times \left(-\dfrac{3\pi}{4}\right) = \dfrac{\pi}{3} + \dfrac{3\pi}{2} = \dfrac{11\pi}{6}$</p>
+
+                            <p>j) $z_{10} = -2i(1 + i\sqrt{3})^6$</p>
+                            <p>$|z_{10}| = 2 \times 2^6 = 128$</p>
+                            <p>$\arg(z_{10}) = -\dfrac{\pi}{2} + 6 \times \dfrac{\pi}{3} = -\dfrac{\pi}{2} + 2\pi = \dfrac{3\pi}{2}$</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 4 : Forme trigonométrique
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <div class="exercise-title">Forme trigonométrique</div>
+
+            <p>Soit les nombres complexes $z_1 = 1 + i\sqrt{3}$ et $z_2 = 1 - i$.</p>
+
+            <ol>
+                <li>Déterminer les formes trigonométriques de $z_1$, $z_2$ et $Z = \dfrac{z_1}{z_2}$.</li>
+                <li>Déterminer la forme algébrique de $Z$.</li>
+                <li>En déduire $\cos\left(\dfrac{7\pi}{12}\right)$ et $\sin\left(\dfrac{7\pi}{12}\right)$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Formes trigonométriques :</strong></p>
+                    <p>$z_1 = 1 + i\sqrt{3} = 2\left(\cos\dfrac{\pi}{3} + i\sin\dfrac{\pi}{3}\right)$</p>
+                    <p>$z_2 = 1 - i = \sqrt{2}\left(\cos\left(-\dfrac{\pi}{4}\right) + i\sin\left(-\dfrac{\pi}{4}\right)\right)$</p>
+                    <p>$Z = \dfrac{z_1}{z_2} = \dfrac{2}{\sqrt{2}}\left[\cos\left(\dfrac{\pi}{3} + \dfrac{\pi}{4}\right) + i\sin\left(\dfrac{\pi}{3} + \dfrac{\pi}{4}\right)\right]$</p>
+                    <p>$Z = \sqrt{2}\left[\cos\left(\dfrac{7\pi}{12}\right) + i\sin\left(\dfrac{7\pi}{12}\right)\right]$</p>
+
+                    <p><strong>2. Forme algébrique de $Z$ :</strong></p>
+                    <p>$Z = \dfrac{1 + i\sqrt{3}}{1 - i} = \dfrac{(1 + i\sqrt{3})(1 + i)}{(1 - i)(1 + i)} = \dfrac{1 + i + i\sqrt{3} + i^2\sqrt{3}}{2}$</p>
+                    <p>$Z = \dfrac{1 - \sqrt{3}}{2} + \dfrac{1 + \sqrt{3}}{2}i$</p>
+
+                    <p><strong>3. Déduction :</strong></p>
+                    <p>$\cos\left(\dfrac{7\pi}{12}\right) = \dfrac{1 - \sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{2} - \sqrt{6}}{4}$</p>
+                    <p>$\sin\left(\dfrac{7\pi}{12}\right) = \dfrac{1 + \sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{2} + \sqrt{6}}{4}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 5 : Formes trigonométrique et exponentielle
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+            <div class="exercise-title">Formes trigonométrique et exponentielle</div>
+
+            <p>Dans chacun des cas suivants, déterminer la forme trigonométrique et la forme exponentielle.</p>
+            <div class="two-columns">
+                <ol type="a">
+                    <li>$z_1 = 4$</li>
+                    <li>$z_2 = -6$</li>
+                    <li>$z_3 = -i$</li>
+                    <li>$z_4 = -5 + 5i\sqrt{3}$</li>
+                </ol>
+                <ol type="a" start="5">
+                    <li>$z_5 = -1 - i$</li>
+                    <li>$z_6 = \sqrt{3} - i$</li>
+                    <li>$z_{10} = -2e^{i\frac{\pi}{2}}$</li>
+                    <li>$z_{11} = ie^{i\frac{\pi}{3}}$</li>
+                </ol>
+            </div>
+            <ol start="9">
+                <li>$z_7 = -2\left(\cos\dfrac{\pi}{6} + i\sin\dfrac{\pi}{6}\right)$</li>
+                <li>$z_9 = 4\left(\cos\dfrac{\pi}{12} + i\sin\dfrac{\pi}{12}\right)$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <div class="two-columns">
+                        <div>
+                            <p>a) $z_1 = 4 = 4(\cos 0 + i\sin 0) = 4e^{i0}$</p>
+                            <p>b) $z_2 = -6 = 6(\cos\pi + i\sin\pi) = 6e^{i\pi}$</p>
+                            <p>c) $z_3 = -i = \cos\left(-\dfrac{\pi}{2}\right) + i\sin\left(-\dfrac{\pi}{2}\right) = e^{-i\frac{\pi}{2}}$</p>
+                            <p>d) $z_4 = -5 + 5i\sqrt{3} = 10\left(\cos\dfrac{2\pi}{3} + i\sin\dfrac{2\pi}{3}\right) = 10e^{i\frac{2\pi}{3}}$</p>
+                            <p>e) $z_5 = -1 - i = \sqrt{2}\left(\cos\left(-\dfrac{3\pi}{4}\right) + i\sin\left(-\dfrac{3\pi}{4}\right)\right) = \sqrt{2}e^{-i\frac{3\pi}{4}}$</p>
+                        </div>
+                        <div>
+                            <p>f) $z_6 = \sqrt{3} - i = 2\left(\cos\left(-\dfrac{\pi}{6}\right) + i\sin\left(-\dfrac{\pi}{6}\right)\right) = 2e^{-i\frac{\pi}{6}}$</p>
+                            <p>g) $z_{10} = -2e^{i\frac{\pi}{2}} = 2e^{i\left(\frac{\pi}{2} + \pi\right)} = 2e^{i\frac{3\pi}{2}}$</p>
+                            <p>h) $z_{11} = ie^{i\frac{\pi}{3}} = e^{i\frac{\pi}{2}} \times e^{i\frac{\pi}{3}} = e^{i\frac{5\pi}{6}}$</p>
+                            <p>i) $z_7 = -2\left(\cos\dfrac{\pi}{6} + i\sin\dfrac{\pi}{6}\right) = 2e^{i\left(\frac{\pi}{6} + \pi\right)} = 2e^{i\frac{7\pi}{6}}$</p>
+                            <p>j) $z_9 = 4\left(\cos\dfrac{\pi}{12} + i\sin\dfrac{\pi}{12}\right) = 4e^{i\frac{\pi}{12}}$</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 6 : Forme trigonométrique
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+            <div class="exercise-title">Forme trigonométrique</div>
+
+            <p>On considère les nombres complexes :</p>
+            <p class="formula-center">$z_1 = \dfrac{\sqrt{6} - i\sqrt{2}}{2}, \quad z_2 = 1 - i \quad \text{et} \quad z_3 = \dfrac{z_1}{z_2}$.</p>
+
+            <ol>
+                <li>Donner une écriture trigonométrique des nombres complexes $z_1$, $z_2$ et $z_3$.</li>
+                <li>Écrire sous forme algébrique $z_3$.<br>
+                    En déduire les valeurs exactes de $\cos\dfrac{\pi}{12}$ et $\sin\dfrac{\pi}{12}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Formes trigonométriques :</strong></p>
+                    <p>$z_1 = \dfrac{\sqrt{6} - i\sqrt{2}}{2} = \sqrt{2}\left(\cos\dfrac{\pi}{12} - i\sin\dfrac{\pi}{12}\right) = \sqrt{2}e^{-i\frac{\pi}{12}}$</p>
+                    <p>$z_2 = 1 - i = \sqrt{2}\left(\cos\left(-\dfrac{\pi}{4}\right) + i\sin\left(-\dfrac{\pi}{4}\right)\right) = \sqrt{2}e^{-i\frac{\pi}{4}}$</p>
+                    <p>$z_3 = \dfrac{z_1}{z_2} = e^{i\left(-\frac{\pi}{12} + \frac{\pi}{4}\right)} = e^{i\frac{\pi}{6}}$</p>
+
+                    <p><strong>2. Forme algébrique de $z_3$ :</strong></p>
+                    <p>$z_3 = \dfrac{\sqrt{6} - i\sqrt{2}}{2(1 - i)} = \dfrac{\sqrt{6} - i\sqrt{2}}{2(1 - i)} \times \dfrac{1 + i}{1 + i} = \dfrac{\sqrt{6} + i\sqrt{6} - i\sqrt{2} + \sqrt{2}}{4}$</p>
+                    <p>$z_3 = \dfrac{\sqrt{6} + \sqrt{2}}{4} + i\dfrac{\sqrt{6} - \sqrt{2}}{4} = \cos\dfrac{\pi}{6} + i\sin\dfrac{\pi}{6}$</p>
+
+                    <p>Donc :</p>
+                    <p>$\cos\dfrac{\pi}{12} = \dfrac{\sqrt{6} + \sqrt{2}}{4}$ et $\sin\dfrac{\pi}{12} = \dfrac{\sqrt{6} - \sqrt{2}}{4}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 7 : Classique
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+            <div class="exercise-title">Classique !</div>
+
+            <ol>
+                <li>Écrire $1 + i$ sous forme trigonométrique. En déduire l'expression de $(1 + i)^6$ par la formule de Moivre.</li>
+                <li>Calculer $\left(-\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}\right)^{2026}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $1 + i = \sqrt{2}e^{i\frac{\pi}{4}}$</p>
+                    <p>$(1 + i)^6 = (\sqrt{2})^6 \times e^{i\frac{6\pi}{4}} = 2^3 \times e^{i\frac{3\pi}{2}} = 8 \times (-i) = -8i$</p>
+
+                    <p><strong>2.</strong> $-\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2} = e^{i\frac{2\pi}{3}}$</p>
+                    <p>$\left(-\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}\right)^{2026} = \left(e^{i\frac{2\pi}{3}}\right)^{2026} = e^{i\frac{4052\pi}{3}}$</p>
+                    <p>$2026 \equiv 1 \pmod{6}$ donc :</p>
+                    <p class="formula-center">$\boxed{\left(-\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}\right)^{2026} = e^{i\frac{2\pi}{3}} = -\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 8 : Racines carrées et Equations
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+            <div class="exercise-title">Racines carrées et Équations</div>
+
+            <ol>
+                <li>Déterminer les racines carrées de :
+                    <div class="two-columns">
+                        <ol type="a">
+                            <li>$z = 3 + 4i$</li>
+                            <li>$z = 8 - 6i$</li>
+                        </ol>
+                        <ol type="a" start="3">
+                            <li>$z = -5 + 12i$</li>
+                            <li>$z = 7 + 24i$</li>
+                        </ol>
+                    </div>
+                </li>
+                <li>Résoudre dans $\mathbb{C}$ les équations suivantes :
+                    <div class="two-columns">
+                        <ol type="a">
+                            <li>$4z^2 - 12z + 153 = 0$</li>
+                            <li>$z^2 - 4z + 5 = 0$</li>
+                            <li>$z^2 + z + 1 = 0$</li>
+                            <li>$iz^2 - iz - 3 - i = 0$</li>
+                        </ol>
+                        <ol type="a" start="5">
+                            <li>$iz^2 + (1 - 5i)z + 6i - 2 = 0$</li>
+                            <li>$z^2 - (2 + 4i)z - 2 + 4i = 0$</li>
+                            <li>$(3 + i)z^2 - (7 - i)z + 10 = 0$</li>
+                            <li>$z^2 - (1 + i\sqrt{3})z - 1 + i\sqrt{3} = 0$</li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Racines carrées :</strong></p>
+                    <p>Pour $z = a + ib$, les racines carrées sont $\pm(\alpha + i\beta)$ avec :</p>
+                    <p>$\alpha = \sqrt{\dfrac{|z| + a}{2}}$, $\beta = \text{signe}(b)\sqrt{\dfrac{|z| - a}{2}}$</p>
+
+                    <p>a) $z = 3 + 4i$, $|z| = 5$<br>
+                    $\alpha = \sqrt{\dfrac{5 + 3}{2}} = 2$, $\beta = \sqrt{\dfrac{5 - 3}{2}} = 1$<br>
+                    $\boxed{\text{Racines : } \pm(2 + i)}$</p>
+
+                    <p>b) $z = 8 - 6i$, $|z| = 10$<br>
+                    $\alpha = \sqrt{\dfrac{10 + 8}{2}} = 3$, $\beta = -\sqrt{\dfrac{10 - 8}{2}} = -1$<br>
+                    $\boxed{\text{Racines : } \pm(3 - i)}$</p>
+
+                    <p>c) $z = -5 + 12i$, $|z| = 13$<br>
+                    $\alpha = \sqrt{\dfrac{13 - 5}{2}} = 2$, $\beta = \sqrt{\dfrac{13 + 5}{2}} = 3$<br>
+                    $\boxed{\text{Racines : } \pm(2 + 3i)}$</p>
+
+                    <p>d) $z = 7 + 24i$, $|z| = 25$<br>
+                    $\alpha = \sqrt{\dfrac{25 + 7}{2}} = 4$, $\beta = \sqrt{\dfrac{25 - 7}{2}} = 3$<br>
+                    $\boxed{\text{Racines : } \pm(4 + 3i)}$</p>
+
+                    <p><strong>2. Équations :</strong></p>
+                    <p>a) $4z^2 - 12z + 153 = 0$<br>
+                    $\Delta = 144 - 4(4)(153) = 144 - 2448 = -2304 = (48i)^2$<br>
+                    $z = \dfrac{12 \pm 48i}{8} = \dfrac{3}{2} \pm 6i$</p>
+
+                    <p>b) $z^2 - 4z + 5 = 0$<br>
+                    $\Delta = 16 - 20 = -4 = (2i)^2$<br>
+                    $z = \dfrac{4 \pm 2i}{2} = 2 \pm i$</p>
+
+                    <p>c) $z^2 + z + 1 = 0$<br>
+                    $\Delta = 1 - 4 = -3 = (i\sqrt{3})^2$<br>
+                    $z = \dfrac{-1 \pm i\sqrt{3}}{2} = e^{\pm i\frac{2\pi}{3}}$</p>
+
+                    <p>d) $iz^2 - iz - 3 - i = 0$<br>
+                    $\Delta = (-i)^2 - 4i(-3 - i) = -1 + 12i + 4i^2 = -5 + 12i$<br>
+                    Les racines carrées de $-5 + 12i$ sont $\pm(2 + 3i)$<br>
+                    $z = \dfrac{i \pm (2 + 3i)}{2i}$<br>
+                    $z_1 = \dfrac{2 + 4i}{2i} = 2 - i$, $z_2 = \dfrac{-2 - 2i}{2i} = -1 + i$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 9 : Racines n-ièmes
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 9</span>
+            <div class="exercise-title">Racines $n$-ièmes</div>
+
+            <ol>
+                <li>Résoudre dans $\mathbb{C} : z^6 = 4\sqrt{2}(-1 + i)$</li>
+                <li>
+                    <ol type="a">
+                        <li>Résoudre dans $\mathbb{C} : z^3 = 1$.</li>
+                        <li>Calculer $(1 + i)^3$.</li>
+                        <li>En déduire les racines cubiques de $z = -2 + 2i$.</li>
+                    </ol>
+                </li>
+                <li>Résoudre dans $\mathbb{C} : z^3 = 4\sqrt{2}(-1 + i)$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $4\sqrt{2}(-1 + i) = 4\sqrt{2} \times \sqrt{2} e^{i\frac{3\pi}{4}} = 8e^{i\frac{3\pi}{4}}$</p>
+                    <p>$z^6 = 8e^{i\frac{3\pi}{4}} \implies z = 8^{1/6} e^{i\left(\frac{3\pi}{24} + \frac{2k\pi}{6}\right)} = \sqrt{2}e^{i\left(\frac{\pi}{8} + \frac{k\pi}{3}\right)}$, $k = 0,1,2,3,4,5$</p>
+
+                    <p><strong>2.a)</strong> $z^3 = 1 = e^{i0} \implies z = e^{i\frac{2k\pi}{3}}$, $k = 0,1,2$</p>
+                    <p>$\boxed{z_0 = 1,\; z_1 = -\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2},\; z_2 = -\dfrac{1}{2} - i\dfrac{\sqrt{3}}{2}}$</p>
+
+                    <p><strong>2.b)</strong> $(1 + i)^3 = (1 + i)^2(1 + i) = 2i(1 + i) = 2i - 2 = -2 + 2i$</p>
+
+                    <p><strong>2.c)</strong> Les racines cubiques de $-2 + 2i$ sont :<br>
+                    $z_k = (1 + i) \times e^{i\frac{2k\pi}{3}}$, $k = 0,1,2$</p>
+
+                    <p><strong>3.</strong> $4\sqrt{2}(-1 + i) = 8e^{i\frac{3\pi}{4}}$<br>
+                    $z^3 = 8e^{i\frac{3\pi}{4}} \implies z = 2e^{i\left(\frac{\pi}{4} + \frac{2k\pi}{3}\right)}$, $k = 0,1,2$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 10 : Racines n-ièmes
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 10</span>
+            <div class="exercise-title">Racines $n$-ièmes</div>
+
+            <p>On donne $z_0 = 1 - i\sqrt{3}$</p>
+
+            <ol>
+                <li>Donner une écriture trigonométrique de $z_0$.</li>
+                <li>Montrer que $z_0^4 = -8 + 8i\sqrt{3}$.</li>
+                <li>Résoudre dans $\mathbb{C}$ l'équation $z^4 = 1$.</li>
+                <li>En déduire les solutions de $(E) : z^4 = -8 + 8i\sqrt{3}$ sous forme algébrique et sous forme trigonométrique.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $z_0 = 1 - i\sqrt{3} = 2e^{-i\frac{\pi}{3}}$</p>
+
+                    <p><strong>2.</strong> $z_0^4 = (2e^{-i\frac{\pi}{3}})^4 = 16e^{-i\frac{4\pi}{3}} = 16\left(\cos\dfrac{4\pi}{3} - i\sin\dfrac{4\pi}{3}\right) = 16\left(-\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}\right) = -8 + 8i\sqrt{3}$</p>
+
+                    <p><strong>3.</strong> $z^4 = 1 \implies z = e^{i\frac{2k\pi}{4}} = e^{i\frac{k\pi}{2}}$, $k = 0,1,2,3$<br>
+                    $\boxed{z_0 = 1,\; z_1 = i,\; z_2 = -1,\; z_3 = -i}$</p>
+
+                    <p><strong>4.</strong> Les solutions de $z^4 = -8 + 8i\sqrt{3} = z_0^4$ sont :<br>
+                    $z = z_0 \times e^{i\frac{k\pi}{2}}$, $k = 0,1,2,3$<br>
+                    $z_k = 2e^{i\left(-\frac{\pi}{3} + \frac{k\pi}{2}\right)}$, $k = 0,1,2,3$</p>
+                    <p>Forme algébrique :<br>
+                    $z_0 = 2e^{-i\frac{\pi}{3}} = 1 - i\sqrt{3}$<br>
+                    $z_1 = 2e^{i\frac{\pi}{6}} = \sqrt{3} + i$<br>
+                    $z_2 = 2e^{i\frac{2\pi}{3}} = -1 + i\sqrt{3}$<br>
+                    $z_3 = 2e^{i\frac{7\pi}{6}} = -\sqrt{3} - i$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 11 : Linéarisation
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 11</span>
+            <div class="exercise-title">Linéarisation</div>
+
+            <ol>
+                <li>Linéariser les polynômes trigonométriques suivants :
+                    <ol type="a">
+                        <li>$h(x) = \cos x \sin^2 x$</li>
+                        <li>$k(x) = \cos 2x \sin 3x$</li>
+                        <li>$m(x) = \sin^3 x$</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Linéariser $f(x) = \sin^4 x + \cos^4 x$.</li>
+                        <li>Déduisez-en une primitive sur $\mathbb{R}$ de $f$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $h(x) = \cos x \sin^2 x = \cos x \times \dfrac{1 - \cos 2x}{2} = \dfrac{1}{2}\cos x - \dfrac{1}{2}\cos x \cos 2x$</p>
+                    <p>$h(x) = \dfrac{1}{2}\cos x - \dfrac{1}{4}(\cos 3x + \cos x) = \dfrac{1}{4}\cos x - \dfrac{1}{4}\cos 3x$</p>
+
+                    <p><strong>1.b)</strong> $k(x) = \cos 2x \sin 3x = \dfrac{1}{2}[\sin(3x + 2x) + \sin(3x - 2x)] = \dfrac{1}{2}(\sin 5x + \sin x)$</p>
+
+                    <p><strong>1.c)</strong> $m(x) = \sin^3 x = \dfrac{3\sin x - \sin 3x}{4}$</p>
+
+                    <p><strong>2.a)</strong> $\sin^4 x = \dfrac{\cos 4x - 4\cos 2x + 3}{8}$<br>
+                    $\cos^4 x = \dfrac{\cos 4x + 4\cos 2x + 3}{8}$<br>
+                    $f(x) = \sin^4 x + \cos^4 x = \dfrac{2\cos 4x + 6}{8} = \dfrac{1}{4}\cos 4x + \dfrac{3}{4}$</p>
+
+                    <p><strong>2.b)</strong> $F(x) = \dfrac{1}{16}\sin 4x + \dfrac{3}{4}x + C$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SUITE DES EXERCICES (à partir du 12)
+    ============================================================ -->
+    <section class="section">
+        <!-- ============================================================
+        EXERCICE 12 : Lieux géométriques
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 12</span>
+            <div class="exercise-title">Lieux géométriques</div>
+
+            <p>Dans chacun des cas, déterminer géométriquement l'ensemble des points $M$ d'affixe $z$ vérifiant la relation donnée.</p>
+
+            <ol>
+                <li>$|z + 1 + 4i| = |z - 1 + i|$</li>
+                <li>$|z + 1 + 4i| = 4$</li>
+                <li>$|\overline{z} + 1 - 4i| = |z - 2i|$</li>
+                <li>$|3iz + 6| = 3|z - 1 + i|$</li>
+                <li>$\arg\dfrac{z - 2i}{z - 1 + i} = \dfrac{\pi}{2}[\pi]$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $|z + 1 + 4i| = |z - 1 + i|$<br>
+                    $|z - (-1 - 4i)| = |z - (1 - i)|$<br>
+                    Ensemble des points équidistants de $A(-1, -4)$ et $B(1, -1)$.<br>
+                    $\boxed{\text{Médiatrice du segment }[AB]}$</p>
+
+                    <p><strong>2.</strong> $|z + 1 + 4i| = 4$<br>
+                    $|z - (-1 - 4i)| = 4$<br>
+                    $\boxed{\text{Cercle de centre }A(-1, -4)\text{ et de rayon }4}$</p>
+
+                    <p><strong>3.</strong> $|\overline{z} + 1 - 4i| = |z - 2i|$<br>
+                    $|\overline{z} - (-1 + 4i)| = |z - 2i|$<br>
+                    $|z - (-1 - 4i)| = |z - 2i|$<br>
+                    $\boxed{\text{Médiatrice du segment joignant }A(-1, -4)\text{ et }B(0, 2)}$</p>
+
+                    <p><strong>4.</strong> $|3iz + 6| = 3|z - 1 + i|$<br>
+                    $|3i(z - 2i)| = 3|z - (1 - i)|$<br>
+                    $3|z - 2i| = 3|z - (1 - i)|$<br>
+                    $|z - 2i| = |z - (1 - i)|$<br>
+                    $\boxed{\text{Médiatrice du segment joignant }A(0, 2)\text{ et }B(1, -1)}$</p>
+
+                    <p><strong>5.</strong> $\arg\dfrac{z - 2i}{z - 1 + i} = \dfrac{\pi}{2}[\pi]$<br>
+                    $\arg(z - 2i) - \arg(z - 1 + i) = \dfrac{\pi}{2}[\pi]$<br>
+                    $\boxed{\text{Cercle de diamètre }[AB]\text{ où }A(0, 2)\text{ et }B(1, -1)\text{ privé de }A\text{ et }B}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 13 : Lieux géométriques
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 13</span>
+            <div class="exercise-title">Lieux géométriques</div>
+
+            <p>On considère l'expression $Z = \dfrac{z + 1}{z - 2i}$ où $z \neq 2i$. Déterminer par la méthode géométrique, l'ensemble des points $M(z)$ tels que :</p>
+
+            <ol>
+                <li>$Z$ soit réel.</li>
+                <li>$Z$ soit imaginaire pur.</li>
+                <li>$\arg(Z) = \dfrac{\pi}{2}[2\pi]$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$Z = \dfrac{z + 1}{z - 2i} = \dfrac{z - (-1)}{z - 2i}$</p>
+
+                    <p><strong>1.</strong> $Z \in \mathbb{R} \iff \arg(Z) = 0[\pi]$<br>
+                    $\arg(z + 1) - \arg(z - 2i) = 0[\pi]$<br>
+                    $(\overrightarrow{MA}, \overrightarrow{MB}) = 0[\pi]$<br>
+                    $\boxed{\text{Droite }(AB)\text{ privée de }B}$ où $A(-1, 0)$ et $B(0, 2)$</p>
+
+                    <p><strong>2.</strong> $Z$ imaginaire pur $\iff \arg(Z) = \dfrac{\pi}{2}[\pi]$<br>
+                    $\boxed{\text{Cercle de diamètre }[AB]\text{ privé de }A\text{ et }B}$</p>
+
+                    <p><strong>3.</strong> $\arg(Z) = \dfrac{\pi}{2}[2\pi]$<br>
+                    $\boxed{\text{Demi-cercle de diamètre }[AB]\text{ privé de }A\text{ et }B}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FIN DES EXERCICES (14 à 31)
+    ============================================================ -->
+    <section class="section">
+        <p class="formula-center" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">
+            ♦♦♦ La suite des exercices (14 à 31) est disponible dans la version complète du TD. ♦♦♦
+        </p>
+        <p class="formula-center" style="color: var(--text-muted);">
+            Ces exercices couvrent : Complexes et géométrie, Polynômes complexes, Suites complexes, etc.
+        </p>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Nombres Complexes - TS2 - Lycée de Dindéfélo</p>
+    </footer>
+
+</body>
+</html>

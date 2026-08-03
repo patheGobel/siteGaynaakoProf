@@ -1,0 +1,702 @@
+ /* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+ :root {
+     --primary: #7c3aed;
+     --primary-light: #8b5cf6;
+     --primary-dark: #5b21b6;
+     --secondary: #059669;
+     --accent: #d97706;
+     --danger: #dc2626;
+     --purple: #7c3aed;
+     --blue: #2563eb;
+     --bg-body: #f1f5f9;
+     --bg-white: #ffffff;
+     --text-dark: #0f172a;
+     --text-muted: #475569;
+     --border-light: #e2e8f0;
+     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+     --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+     --radius: 16px;
+     --radius-sm: 8px;
+     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: var(--font-sans);
+     background: var(--bg-body);
+     color: var(--text-dark);
+     line-height: 1.8;
+     padding: 30px 20px;
+     max-width: 1100px;
+     margin: 0 auto;
+     -webkit-font-smoothing: antialiased;
+ }
+
+ /* ============================================================
+           TYPOGRAPHIE
+        ============================================================ */
+ h1,
+ h2,
+ h3,
+ h4 {
+     font-weight: 700;
+     letter-spacing: -0.02em;
+     line-height: 1.3;
+ }
+
+ p {
+     margin-bottom: 12px;
+ }
+
+ ul,
+ ol {
+     padding-left: 28px;
+     margin: 12px 0 18px;
+ }
+
+ li {
+     margin-bottom: 6px;
+ }
+
+ strong,
+ b {
+     font-weight: 600;
+     color: var(--text-dark);
+ }
+
+ /* ============================================================
+           EN-TÊTE
+        ============================================================ */
+ .header {
+     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+     color: white;
+     padding: 30px 40px;
+     border-radius: var(--radius);
+     margin-bottom: 40px;
+     box-shadow: var(--shadow-lg);
+     position: relative;
+     overflow: hidden;
+ }
+
+ .header::before {
+     content: '';
+     position: absolute;
+     top: -50%;
+     right: -20%;
+     width: 400px;
+     height: 400px;
+     background: rgba(255, 255, 255, 0.05);
+     border-radius: 50%;
+     pointer-events: none;
+ }
+
+ .header-top {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 10px;
+     margin-bottom: 8px;
+     font-size: 0.9rem;
+     opacity: 0.9;
+     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+     padding-bottom: 10px;
+ }
+
+ .header-top .school {
+     font-weight: 600;
+ }
+
+ .header h1 {
+     font-size: 2.4rem;
+     font-weight: 800;
+     margin: 10px 0 6px;
+     position: relative;
+     z-index: 1;
+     text-align: center;
+     letter-spacing: 2px;
+ }
+
+ .header .subtitle {
+     text-align: center;
+     font-size: 1rem;
+     opacity: 0.85;
+     position: relative;
+     z-index: 1;
+ }
+
+ .header-meta {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: 15px;
+     font-size: 0.9rem;
+     opacity: 0.9;
+     position: relative;
+     z-index: 1;
+     border-top: 2px solid rgba(255, 255, 255, 0.2);
+     padding-top: 12px;
+     margin-top: 10px;
+ }
+
+ .header-meta span {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+ }
+
+ /* ============================================================
+           SECTIONS
+        ============================================================ */
+ .section {
+     background: var(--bg-white);
+     border-radius: var(--radius);
+     box-shadow: var(--shadow-sm);
+     padding: 30px 35px;
+     margin-bottom: 25px;
+     border: 1px solid var(--border-light);
+     transition: var(--transition);
+ }
+
+ .section:hover {
+     box-shadow: var(--shadow-md);
+ }
+
+ .section-title {
+     color: var(--primary-dark);
+     border-bottom: 4px solid var(--primary-light);
+     padding-bottom: 10px;
+     margin-bottom: 20px;
+     display: inline-block;
+     font-size: 1.8rem;
+ }
+
+ .subsection {
+     margin-bottom: 25px;
+ }
+
+ .subsection:last-child {
+     margin-bottom: 0;
+ }
+
+ .subsection-title {
+     color: var(--secondary);
+     margin: 25px 0 14px;
+     padding-bottom: 6px;
+     border-bottom: 3px solid var(--border-light);
+ }
+
+ .subsection-title-red {
+     color: var(--primary);
+     margin: 25px 0 14px;
+     padding-bottom: 6px;
+     border-bottom: 3px solid var(--primary-light);
+ }
+
+ /* ============================================================
+           EXERCICE BOX
+        ============================================================ */
+ .exercise-box {
+     background: #faf5ff;
+     border: 2px solid var(--primary);
+     border-radius: var(--radius-sm);
+     padding: 20px 24px;
+     margin: 20px 0;
+     position: relative;
+ }
+
+ .exercise-box .exercise-number {
+     display: inline-block;
+     background: var(--primary);
+     color: white;
+     font-weight: 700;
+     padding: 2px 14px;
+     border-radius: 4px;
+     font-size: 0.85rem;
+     margin-bottom: 10px;
+ }
+
+ .exercise-box .exercise-title {
+     font-weight: 600;
+     color: var(--primary-dark);
+     margin-bottom: 12px;
+     font-size: 1.05rem;
+ }
+
+ .exercise-box .exercise-title .exo-tag {
+     color: var(--primary);
+ }
+
+ .exercise-box .sub-exercise {
+     margin: 12px 0 8px 0;
+     padding-left: 8px;
+     border-left: 3px solid var(--primary-light);
+ }
+
+ .exercise-box .sub-exercise .sub-label {
+     font-weight: 600;
+     color: var(--primary-dark);
+ }
+
+ .two-columns {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 15px 30px;
+     margin: 8px 0;
+ }
+
+ @media (max-width: 768px) {
+     .two-columns {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ .three-columns {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px 20px;
+     margin: 8px 0;
+ }
+
+ @media (max-width: 768px) {
+     .three-columns {
+         grid-template-columns: 1fr 1fr;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .three-columns {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ /* ============================================================
+           ENCADRÉS
+        ============================================================ */
+ .example-box {
+     background: #fffbeb;
+     border-left: 6px solid var(--accent);
+     padding: 18px 24px;
+     border-radius: var(--radius-sm);
+     margin: 16px 0;
+ }
+
+ .correction-box {
+     background: #f0fdf4;
+     border-left: 6px solid var(--secondary);
+     padding: 18px 24px;
+     border-radius: var(--radius-sm);
+     margin: 16px 0;
+ }
+
+ .important-box {
+     background: #fef2f2;
+     border: 2px solid var(--primary);
+     padding: 18px 24px;
+     border-radius: var(--radius-sm);
+     margin: 16px 0;
+ }
+
+ .highlight {
+     color: var(--primary);
+     font-weight: 600;
+ }
+
+ .highlight-purple {
+     color: var(--primary);
+     font-weight: 600;
+ }
+
+ /* ============================================================
+           FORMULES
+        ============================================================ */
+ .formula-block {
+     text-align: center;
+     padding: 10px 0;
+     margin: 6px 0;
+     overflow-x: auto;
+ }
+
+ .formula-center {
+     text-align: center;
+     font-size: 1.05rem;
+     padding: 6px 0;
+ }
+
+ /* ============================================================
+           TABLEAUX
+        ============================================================ */
+ .table-wrapper {
+     overflow-x: auto;
+     margin: 16px 0;
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     border-radius: var(--radius-sm);
+     overflow: hidden;
+     box-shadow: var(--shadow-sm);
+ }
+
+ thead {
+     background: var(--primary);
+     color: white;
+ }
+
+ th {
+     padding: 12px 16px;
+     text-align: left;
+     font-weight: 600;
+ }
+
+ td {
+     padding: 10px 16px;
+     border-bottom: 1px solid var(--border-light);
+     vertical-align: middle;
+ }
+
+ tr:nth-child(even) {
+     background: #f8fafc;
+ }
+
+ tr:hover {
+     background: #f1f5f9;
+ }
+
+ /* ============================================================
+           DETAILS / SUMMARY
+        ============================================================ */
+ details {
+     margin: 12px 0 4px;
+     cursor: pointer;
+ }
+
+ summary {
+     font-weight: 600;
+     color: var(--primary);
+     padding: 8px 0;
+     transition: var(--transition);
+     display: inline-block;
+ }
+
+ summary:hover {
+     color: var(--primary-dark);
+ }
+
+ details[open] summary {
+     color: var(--primary-dark);
+ }
+
+ details>div,
+ details>p,
+ details>ul,
+ details>ol {
+     padding: 12px 16px 8px 16px;
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: var(--radius-sm);
+     margin-top: 4px;
+ }
+
+ .btn-solution {
+     display: inline-block;
+     padding: 6px 18px;
+     background: var(--primary);
+     color: white;
+     border-radius: var(--radius-sm);
+     font-weight: 600;
+     cursor: pointer;
+     transition: var(--transition);
+     border: none;
+     font-size: 0.9rem;
+ }
+
+ .btn-solution:hover {
+     background: var(--primary-dark);
+     transform: translateY(-1px);
+     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+ }
+
+ .solution-details summary {
+     list-style: none;
+ }
+
+ .solution-details summary::-webkit-details-marker {
+     display: none;
+ }
+
+ .solution-details summary .btn-solution::before {
+     content: "▶ ";
+     display: inline-block;
+     transition: transform 0.3s ease;
+ }
+
+ .solution-details[open] summary .btn-solution::before {
+     content: "▼ ";
+ }
+
+ /* ============================================================
+           FOOTER
+        ============================================================ */
+ .footer {
+     text-align: center;
+     padding: 30px 0 10px;
+     color: var(--text-muted);
+     font-size: 0.9rem;
+     border-top: 2px solid var(--border-light);
+     margin-top: 20px;
+ }
+
+ /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+ @media (max-width: 768px) {
+     body {
+         padding: 12px 10px;
+     }
+
+     .header {
+         padding: 20px 16px;
+     }
+
+     .header h1 {
+         font-size: 1.6rem;
+     }
+
+     .header-top {
+         flex-direction: column;
+         gap: 4px;
+         font-size: 0.8rem;
+     }
+
+     .header-meta {
+         flex-direction: column;
+         gap: 4px;
+         font-size: 0.8rem;
+     }
+
+     .section {
+         padding: 16px 14px;
+     }
+
+     .section-title {
+         font-size: 1.4rem;
+     }
+
+     .exercise-box {
+         padding: 14px 16px;
+     }
+
+     .exercise-box .two-columns,
+     .exercise-box .three-columns {
+         grid-template-columns: 1fr;
+     }
+
+     table {
+         font-size: 0.8rem;
+     }
+
+     th,
+     td {
+         padding: 6px 8px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .header h1 {
+         font-size: 1.3rem;
+     }
+
+     .section {
+         padding: 12px 10px;
+     }
+
+     .exercise-box {
+         padding: 10px 12px;
+     }
+
+     table {
+         font-size: 0.7rem;
+     }
+
+     th,
+     td {
+         padding: 4px 6px;
+     }
+ }
+
+ /* ============================================================
+           MATHJAX
+        ============================================================ */
+ .MathJax {
+     font-size: 1.05em !important;
+ }
+
+ .mjx-container {
+     margin: 6px 0 10px 0 !important;
+     overflow-x: auto;
+     overflow-y: hidden;
+ }
+
+ /* ============================================================
+           ANIMATIONS
+        ============================================================ */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(10px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .section {
+     animation: fadeIn 0.5s ease-out;
+ }
+
+ /* ============================================================
+           SCROLLBAR
+        ============================================================ */
+ ::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: var(--bg-body);
+     border-radius: 10px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: var(--border-light);
+     border-radius: 10px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: var(--text-muted);
+ }
+
+ /* ============================================================
+           STYLES SPÉCIFIQUES
+        ============================================================ */
+ .text-center {
+     text-align: center;
+ }
+
+ .mt-10 {
+     margin-top: 10px;
+ }
+
+ .mb-10 {
+     margin-bottom: 10px;
+ }
+
+ .inline-block {
+     display: inline-block;
+ }
+
+ .exo-number {
+     display: inline-block;
+     background: var(--primary);
+     color: white;
+     font-weight: 700;
+     padding: 2px 12px;
+     border-radius: 4px;
+     font-size: 0.8rem;
+     margin-right: 6px;
+ }
+
+ .tag-exo {
+     display: inline-block;
+     background: var(--primary-light);
+     color: white;
+     font-weight: 700;
+     padding: 2px 12px;
+     border-radius: 4px;
+     font-size: 0.75rem;
+     margin-right: 8px;
+ }
+
+ .diamond {
+     color: var(--primary);
+ }
+
+ /* En-tête du TD à la manière du PDF */
+ .td-header {
+     background: var(--bg-white);
+     border: 2px solid var(--primary);
+     border-radius: var(--radius-sm);
+     padding: 16px 20px;
+     margin-bottom: 30px;
+     box-shadow: var(--shadow-sm);
+ }
+
+ .td-header .td-row {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 8px;
+     padding: 4px 0;
+ }
+
+ .td-header .td-row.border-bottom {
+     border-bottom: 2px solid var(--border-light);
+     padding-bottom: 10px;
+     margin-bottom: 6px;
+ }
+
+ .td-header .td-title {
+     text-align: center;
+     font-size: 1.6rem;
+     font-weight: 700;
+     color: var(--primary-dark);
+     padding: 8px 0;
+     letter-spacing: 1px;
+ }
+
+ .td-header .td-title .diamonds {
+     color: var(--primary);
+ }
+
+ .td-header .td-school {
+     font-weight: 600;
+     color: var(--primary-dark);
+ }
+
+ .td-header .td-meta {
+     font-size: 0.9rem;
+     color: var(--text-muted);
+ }
+
+ .td-header .td-meta strong {
+     color: var(--text-dark);
+ }
+
+ /* Séparateur entre les exercices dans le PDF */
+ .exercise-separator {
+     border: none;
+     border-top: 3px dashed var(--primary-light);
+     margin: 30px 0 20px 0;
+     opacity: 0.5;
+ }
+
+ /* Pour les sous-listes dans les exercices */
+ .exercise-box .sub-list {
+     padding-left: 20px;
+     margin: 6px 0 10px 0;
+ }
+
+ .exercise-box .sub-list li {
+     margin-bottom: 3px;
+ }
