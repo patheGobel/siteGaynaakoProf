@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Années</title>
+    <title>Série de TD - Terminale S2</title>
     <style>
         /* ===== RESET & BASE ===== */
         * {
@@ -32,35 +32,53 @@
             padding: 2.5rem 2rem;
             max-width: 500px;
             width: 100%;
-            transition: 0.3s;
         }
 
-        /* ===== GRILLE DES ANNÉES ===== */
-        .grid-annees {
+        h1 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 1.8rem;
+        }
+
+        /* ===== GRILLES DES BOUTONS ===== */
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-            margin: 0.5rem 0 1.5rem 0;
+            margin-bottom: 1rem;
         }
 
-        .annee-item {
+        .grid-chapitres {
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les chapitres */
+        }
+
+        /* ===== STYLES DES BOUTONS ===== */
+        .btn-item {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 1.2rem 0.3rem;
+            padding: 1.2rem 0.5rem;
             text-align: center;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #0f172a;
-            transition: 0.2s ease;
+            transition: all 0.2s ease;
             cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-            letter-spacing: 0.3px;
             text-decoration: none;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .annee-item:hover {
+        .btn-item:hover {
             background: #ffffff;
             border-color: #3b82f6;
             transform: translateY(-3px);
@@ -68,24 +86,28 @@
             color: #1e40af;
         }
 
-        /* ===== CONTENEUR DE CONTENU DYNAMIQUE ===== */
-        .contenu-dynamique {
-            display: none; /* Masqué par défaut */
-            margin-bottom: 1.5rem;
+        .btn-item:active {
+            transform: scale(0.96);
+        }
+
+        /* ===== VUES (MASQUER / AFFICHER) ===== */
+        .vue-chapitres {
+            display: none; /* Masqué au départ */
             animation: fadeIn 0.3s ease-in-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
+            from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* ===== BOUTON RETOUR ET CONTENEUR ===== */
         .conteneur-parent {
-            display: none; /* Masqué par défaut (apparaît après le clic) */
+            display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
+            margin-top: 1.5rem;
         }
 
         .btn-retour {
@@ -112,88 +134,110 @@
             width: 18px;
             height: 18px;
             fill: currentColor;
-            flex-shrink: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .grid-container {
+                gap: 0.7rem;
+            }
+
+            .btn-item {
+                font-size: 0.95rem;
+                padding: 1rem 0.2rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="card">
-        <!-- 1. Grille des années -->
-        <div class="grid-annees" id="anneesGrid"></div>
+    <main class="card">
+        
+        <!-- VUE 1 : CHOIX DE L'ANNÉE -->
+        <div id="vueAnnees">
+            <h1>Travaux Dirigés</h1>
+            <p class="subtitle">Sélectionnez une année</p>
 
-        <!-- 2. Zone d'affichage du contenu HTML chargé -->
-        <div class="contenu-dynamique" id="contenuAnnee"></div>
-
-        <!-- 3. Bouton Retour (affiché seulement en vue détail) -->
-        <div class="conteneur-parent" id="zoneRetour">
-            <button class="btn-retour" id="btnRetour">
-                <svg viewBox="0 0 24 24">
-                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-                </svg>
-                Retour aux années
-            </button>
+            <div class="grid-container">
+                <button class="btn-item" onclick="afficherChapitres(2025)">2025</button>
+                <button class="btn-item" onclick="afficherChapitres(2026)">2026</button>
+                <button class="btn-item" onclick="afficherChapitres(2027)">2027</button>
+            </div>
         </div>
-    </div>
+
+        <!-- VUE 2 : CHOIX DU CHAPITRE (Caché par défaut) -->
+        <div id="vueChapitres" class="vue-chapitres">
+            <h1 id="titreAnnee">Année 2026</h1>
+            <p class="subtitle">Choisissez un chapitre</p>
+
+            <div class="grid-container grid-chapitres" id="listeChapitres">
+                <!-- Injecté dynamiquement selon l'année -->
+            </div>
+
+            <!-- Bouton Retour aux Années -->
+            <div class="conteneur-parent">
+                <button class="btn-retour" onclick="afficherAnnees()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                    </svg>
+                    Retour aux années
+                </button>
+            </div>
+        </div>
+
+    </main>
 
     <script>
-        (function () {
-            const years = [2025, 2026, 2027];
-            const grid = document.getElementById('anneesGrid');
-            const contenuAnnee = document.getElementById('contenuAnnee');
-            const zoneRetour = document.getElementById('zoneRetour');
-            const btnRetour = document.getElementById('btnRetour');
+        // Données des chapitres par année (basé sur ton arborescence)
+        const tdData = {
+            2025: [
+                { nom: "Complexe", path: "2025/Complexe/complexe.html" },
+                { nom: "Exp", path: "2025/exp/exp.html" }
+            ],
+            2026: [
+                { nom: "Complexe", path: "2026/Complexe/complexe.html" },
+                { nom: "Exp", path: "2026/exp/exp.html" },
+                { nom: "Fonction Num.", path: "2026/fonctionNumerique/fonctionNumerique.html" },
+                { nom: "Ln", path: "2026/ln/ln.html" }
+            ],
+            2027: [
+                { nom: "Complexe", path: "2027/Complexe/complexe.html" }
+            ]
+        };
 
-            // 1. Génération des boutons d'années
-            if (grid) {
-                grid.innerHTML = years.map(year => 
-                    `<button class="annee-item" data-year="${year}">${year}</button>`
+        const vueAnnees = document.getElementById('vueAnnees');
+        const vueChapitres = document.getElementById('vueChapitres');
+        const titreAnnee = document.getElementById('titreAnnee');
+        const listeChapitres = document.getElementById('listeChapitres');
+
+        // Afficher les chapitres d'une année
+        function afficherChapitres(annee) {
+            titreAnnee.textContent = `Année ${annee}`;
+            
+            const chapitres = tdData[annee] || [];
+            
+            if (chapitres.length > 0) {
+                listeChapitres.innerHTML = chapitres.map(chap => 
+                    `<a href="${chap.path}" class="btn-item">${chap.nom}</a>`
                 ).join('');
+            } else {
+                listeChapitres.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #94a3b8;">Aucun chapitre disponible.</p>`;
             }
 
-            // 2. Gestion du clic sur une année
-            grid.addEventListener('click', async function (e) {
-                const item = e.target.closest('.annee-item');
-                if (!item) return;
+            vueAnnees.style.display = 'none';
+            vueChapitres.style.display = 'block';
+        }
 
-                const year = item.getAttribute('data-year');
-
-                try {
-                    // Charger le fichier HTML externe (ex: 2025.html)
-                    const response = await fetch(`${year}.html`);
-                    
-                    if (!response.ok) {
-                        throw new Error(`Fichier ${year}.html introuvable.`);
-                    }
-
-                    const htmlContent = await response.text();
-
-                    // Injecter le contenu HTML
-                    contenuAnnee.innerHTML = htmlContent;
-
-                    // Afficher le contenu et cacher la grille
-                    grid.style.display = 'none';
-                    contenuAnnee.style.display = 'block';
-                    zoneRetour.style.display = 'flex';
-
-                } catch (error) {
-                    contenuAnnee.innerHTML = `<p style="color: #ef4444; text-align: center;">Erreur : Impossible de charger le fichier <strong>${year}.html</strong>.</p>`;
-                    grid.style.display = 'none';
-                    contenuAnnee.style.display = 'block';
-                    zoneRetour.style.display = 'flex';
-                }
-            });
-
-            // 3. Gestion du bouton Retour
-            btnRetour.addEventListener('click', function () {
-                // Réafficher la grille et masquer le contenu
-                contenuAnnee.style.display = 'none';
-                zoneRetour.style.display = 'none';
-                grid.style.display = 'grid';
-                contenuAnnee.innerHTML = '';
-            });
-        })();
+        // Revenir à l'écran des années
+        function afficherAnnees() {
+            vueChapitres.style.display = 'none';
+            vueAnnees.style.display = 'block';
+        }
     </script>
 
 </body>
