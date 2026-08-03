@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistiques - TS2</title>
+
+    <style>
+        /* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+        :root {
+            --primary: #dc2626;
+            --primary-light: #ef4444;
+            --primary-dark: #991b1b;
+            --secondary: #059669;
+            --accent: #d97706;
+            --danger: #dc2626;
+            --purple: #7c3aed;
+            --green: #16a34a;
+            --bg-body: #f1f5f9;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+            --radius: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           TYPOGRAPHIE
+        ============================================================ */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul,
+        ol {
+            padding-left: 28px;
+            margin: 12px 0 18px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        strong,
+        b {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* ============================================================
+           EN-TÊTE
+        ============================================================ */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 35px 40px;
+            border-radius: var(--radius);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .header h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .chapter-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .header-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            padding-top: 14px;
+            margin-top: 6px;
+        }
+
+        .header-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ============================================================
+           SECTIONS
+        ============================================================ */
+        .section {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-title {
+            color: var(--primary-dark);
+            border-bottom: 4px solid var(--primary-light);
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            display: inline-block;
+        }
+
+        .subsection {
+            margin-bottom: 30px;
+        }
+
+        .subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .subsection-title {
+            color: var(--secondary);
+            margin: 30px 0 16px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid var(--border-light);
+        }
+
+        .subsection-title-red {
+            color: var(--primary);
+            margin: 30px 0 16px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid var(--primary-light);
+        }
+
+        .subsubsection-title {
+            color: var(--primary-dark);
+            margin: 20px 0 12px;
+            font-size: 1.1rem;
+        }
+
+        /* ============================================================
+           ENCADRÉS
+        ============================================================ */
+        .definition-box {
+            background: #eff6ff;
+            border-left: 6px solid var(--primary-light);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .example-box {
+            background: #fffbeb;
+            border-left: 6px solid var(--accent);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .example-box ul,
+        .example-box ol {
+            margin-top: 8px;
+        }
+
+        .exercise-box {
+            background: #ecfdf5;
+            border-left: 6px solid var(--secondary);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .method-box {
+            background: #f5f3ff;
+            border-left: 6px solid var(--purple);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .theorem-box {
+            background: #fef2f2;
+            border: 2px solid var(--danger);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .tip-box {
+            background: #fef9c3;
+            border: 2px dashed #eab308;
+            padding: 16px 22px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .correction-box {
+            background: #f0fdf4;
+            border-left: 6px solid var(--secondary);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .important-box {
+            background: #fef2f2;
+            border: 2px solid var(--primary);
+            padding: 18px 24px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .highlight {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .highlight-red {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .highlight-green {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .tcolorbox {
+            background: #f8fafc;
+            border: 2px solid var(--text-dark);
+            border-radius: var(--radius-sm);
+            padding: 18px 24px;
+            margin: 16px 0;
+        }
+
+        .tcolorbox .box-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* ============================================================
+           FORMULES
+        ============================================================ */
+        .formula-block {
+            text-align: center;
+            padding: 12px 0;
+            margin: 8px 0;
+            overflow-x: auto;
+        }
+
+        .formula-center {
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 6px 0;
+        }
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 16px 0;
+        }
+
+        .formula-grid .formula-block {
+            background: var(--bg-body);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================================
+           TABLEAUX
+        ============================================================ */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tr:hover {
+            background: #f1f5f9;
+        }
+
+        .table-stats {
+            margin: 16px 0;
+        }
+
+        .table-stats th,
+        .table-stats td {
+            text-align: center;
+        }
+
+        /* ============================================================
+           FIGURES / SVG
+        ============================================================ */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ============================================================
+           DETAILS / SUMMARY
+        ============================================================ */
+        details {
+            margin: 12px 0 4px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: 600;
+            color: var(--primary);
+            padding: 6px 0;
+            transition: var(--transition);
+        }
+
+        summary:hover {
+            color: var(--primary-dark);
+        }
+
+        details[open] summary {
+            color: var(--primary-dark);
+        }
+
+        details>div,
+        details>p,
+        details>ul,
+        details>ol {
+            padding: 12px 16px 8px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-sm);
+            margin-top: 4px;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .footer {
+            text-align: center;
+            padding: 30px 0 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 2px solid var(--border-light);
+            margin-top: 20px;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px 10px;
+            }
+
+            .header {
+                padding: 22px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                gap: 6px;
+                font-size: 0.85rem;
+            }
+
+            .section {
+                padding: 18px 16px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .subsection-title {
+                font-size: 1.2rem;
+            }
+
+            .definition-box,
+            .example-box,
+            .exercise-box,
+            .method-box,
+            .theorem-box,
+            .tip-box,
+            .correction-box,
+            .important-box,
+            .tcolorbox {
+                padding: 14px 16px;
+            }
+
+            .formula-center {
+                font-size: 1rem;
+                overflow-x: auto;
+                padding: 4px 0;
+            }
+
+            .formula-block {
+                overflow-x: auto;
+                padding: 8px 0;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.4rem;
+            }
+
+            .section {
+                padding: 12px 10px;
+            }
+
+            .definition-box,
+            .example-box,
+            .exercise-box,
+            .method-box,
+            .theorem-box,
+            .tip-box,
+            .correction-box,
+            .important-box,
+            .tcolorbox {
+                padding: 10px 12px;
+                border-left-width: 4px;
+            }
+
+            table {
+                font-size: 0.7rem;
+            }
+
+            th,
+            td {
+                padding: 4px 6px;
+            }
+        }
+
+        /* ============================================================
+           MATHJAX
+        ============================================================ */
+        .MathJax {
+            font-size: 1.05em !important;
+        }
+
+        .mjx-container {
+            margin: 8px 0 12px 0 !important;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        /* ============================================================
+           ANIMATIONS
+        ============================================================ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .section:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .section:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .section:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .section:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        /* ============================================================
+           SCROLLBAR
+        ============================================================ */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* ============================================================
+           STYLES SPÉCIFIQUES
+        ============================================================ */
+        .red-title {
+            color: var(--primary);
+        }
+
+        .green-title {
+            color: var(--green);
+        }
+
+        .boxed {
+            border: 2px solid var(--primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .boxed-green {
+            border: 2px solid var(--green);
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .fcolorbox-red {
+            background: #fee2e2;
+            border: 2px solid var(--primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .fcolorbox-light {
+            background: #fef2f2;
+            border: 2px solid var(--primary-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .diagbox {
+            border: 1px solid var(--border-light);
+            padding: 4px 8px;
+            text-align: center;
+        }
+
+        /* ============================================================
+           NUAGE DE POINTS SVG
+        ============================================================ */
+        .scatter-plot {
+            background: #fafafa;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 10px;
+            margin: 16px auto;
+            max-width: 450px;
+        }
+
+        .scatter-plot svg {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="chapter-badge">CHAPITRE 10</div>
+        <h1>📊 Statistiques</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    I. VOCABULAIRE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">I. Vocabulaire</h2>
+
+        <ol>
+            <li><strong>Population :</strong> C'est l'ensemble des individus sur lesquels porte une étude statistique.</li>
+            <li><strong>Échantillon :</strong> C'est une partie de la population.</li>
+            <li><strong>Caractère :</strong> Le caractère est l'information sur laquelle l'étude statistique est réalisée. Il peut être <span class="highlight">quantitatif</span> s'il est mesurable, exemple <em>la taille, la masse</em>, etc., ou <span class="highlight">qualitatif</span> dans le cas contraire, exemple <em>la couleur, la nationalité</em>, etc.</li>
+            <li><strong>Effectif :</strong> C'est le nombre d'individus d'une population ou d'une partie de cette population.</li>
+            <li><strong>Modalité :</strong> C'est l'une des différentes valeurs ou qualités de la variable d'une série statistique.</li>
+            <li><strong>Fréquence :</strong> C'est le nombre de fois qu'une modalité est représentée par rapport à l'effectif total. Elle est donc toujours inférieure à 1 et la somme totale de toutes les fréquences donne 1.</li>
+        </ol>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Exemple illustratif du vocabulaire statistique</h3>
+
+            <div class="tcolorbox">
+                <span class="box-title">📌 Situation</span>
+                <p>Un professeur interroge les élèves d'une classe de 4<sup>e</sup> (soit 25 élèves) pour connaître leur moyen de transport principal pour venir à l'école. Il note les réponses suivantes :</p>
+                <div class="text-center" style="font-style: italic; padding: 8px 0;">
+                    Bus, Bus, Voiture, Marche, Bus, Vélo, Voiture, Bus, Vélo, Bus, Voiture, Bus, Marche, Vélo, Bus, Bus, Bus, Voiture, Marche, Bus, Vélo, Voiture, Bus, Vélo, Bus
+                </div>
+            </div>
+
+            <p><strong>Analyse :</strong></p>
+            <ul>
+                <li><strong>Population :</strong> L'ensemble des 25 élèves de la classe.</li>
+                <li><strong>Individu :</strong> Chaque élève interrogé.</li>
+                <li><strong>Échantillon :</strong> Si on avait choisi uniquement 10 élèves sur les 25, cela aurait constitué un échantillon.</li>
+                <li><strong>Caractère :</strong> Le moyen de transport utilisé pour venir à l'école. C'est un caractère <strong>qualitatif</strong>.</li>
+                <li><strong>Modalités :</strong> Les différentes réponses possibles : <em>Bus, Voiture, Marche, Vélo</em>.</li>
+                <li>
+                    <strong>Effectifs :</strong>
+                    <ul>
+                        <li>Bus : 12 élèves</li>
+                        <li>Voiture : 5 élèves</li>
+                        <li>Marche : 3 élèves</li>
+                        <li>Vélo : 5 élèves</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Fréquences :</strong>
+                    <ul>
+                        <li>Bus : $\frac{12}{25} = 0{,}48$</li>
+                        <li>Voiture : $\frac{5}{25} = 0{,}20$</li>
+                        <li>Marche : $\frac{3}{25} = 0{,}12$</li>
+                        <li>Vélo : $\frac{5}{25} = 0{,}20$</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    II. SÉRIE STATISTIQUE D'UNE VARIABLE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">II. Série statistique d'une variable</h2>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">1. Définition</h3>
+            <p>On appelle <span class="highlight">série statistique d'une variable</span> $x$ ou série statistique simple, la série obtenue si l'étude est réalisée sur un seul caractère $x$. Elle peut être <em>groupée</em> ou <em>non groupée</em> en classes.</p>
+            <p>On la note $(x_i, n_i)$. Avec $x = \{x_1, x_2, \dots, x_p\}$ et $n_i$ est l'effectif de la modalité $x_i$.</p>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">2. Effectif total, Moyenne, Variance, Écart-type, Fréquence partielle</h3>
+
+            <div class="formula-grid">
+                <div class="formula-block">
+                    <p><strong>Effectif total :</strong></p>
+                    <span class="fcolorbox-red">$N = \sum\limits_{i=1}^{p} n_i$</span>
+                </div>
+                <div class="formula-block">
+                    <p><strong>Moyenne :</strong></p>
+                    <span class="fcolorbox-red">$\bar{x} = \frac{1}{N} \sum\limits_{i=1}^{p} n_i x_i$</span>
+                </div>
+            </div>
+
+            <p>Si la série est <em>groupée en classes</em>, alors :</p>
+            <div class="formula-center">
+                <span class="fcolorbox-red">$\bar{x} = \frac{1}{N} \sum\limits_{i=1}^{p} n_i c_i$</span>
+                &nbsp; où $c_i = \frac{a + b}{2}$, le centre de la classe $i$ de la forme $[a; b[$.
+            </div>
+
+            <div class="formula-grid">
+                <div class="formula-block">
+                    <p><strong>Variance :</strong></p>
+                    <span class="fcolorbox-red">$V(x) = \frac{1}{N} \sum\limits_{i=1}^{p} n_i x_i^2 - \bar{x}^2$</span>
+                </div>
+                <div class="formula-block">
+                    <p><strong>Écart-type :</strong></p>
+                    <span class="fcolorbox-red">$\sigma(x) = \sqrt{V(x)}$</span>
+                </div>
+            </div>
+
+            <p>Si la série est groupée en classes :</p>
+            <div class="formula-center">
+                <span class="fcolorbox-red">$V(x) = \frac{1}{N} \sum\limits_{i=1}^{p} n_i c_i^2 - \bar{x}^2$</span>
+                &nbsp; <em>La variance est toujours positive.</em>
+            </div>
+
+            <div class="formula-grid">
+                <div class="formula-block">
+                    <p><strong>Fréquence partielle :</strong></p>
+                    <span class="fcolorbox-red">$f_i = \dfrac{n_i}{N}$</span>
+                </div>
+                <div class="formula-block">
+                    <p><strong>Somme des fréquences :</strong></p>
+                    <span class="fcolorbox-red">$\sum\limits_{i=1}^{p} f_i = 1$</span>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple :</strong></p>
+                <p>On représente au tableau N°1 les tailles en cm de 10 jeunes garçons et au tableau N°2, les notes en maths de 11 élèves d'une classe de TS2.</p>
+
+                <p><strong>Tableau N°1</strong></p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tailles $x_i$ en cm</th>
+                                <th>170</th>
+                                <th>172</th>
+                                <th>175</th>
+                                <th>180</th>
+                                <th>185</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Effectifs $n_i$</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>Tableau N°2</strong></p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Notes en maths $x_i$</th>
+                                <th>$[8;10[$</th>
+                                <th>$[10;12[$</th>
+                                <th>$[12;14[$</th>
+                                <th>$[14;16[$</th>
+                                <th>$[16;18[$</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Effectifs $n_i$</strong></td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Pour chacun des tableaux ci-dessus, déterminer l'effectif total, la moyenne, la variance, l'écart-type et les fréquences partielles.</p>
+
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ul>
+                            <li>
+                                <p><strong>Tableau N°1 :</strong> Série non groupée en classes.</p>
+                                <p>$N = 1 + 2 + 3 + 3 + 1 = 10$.</p>
+                                <p>$\bar{x} = \frac{1}{10}(1 \times 170 + 2 \times 172 + 3 \times 175 + 3 \times 180 + 1 \times 185) = 176{,}4\ \text{cm}$.</p>
+                                <p>$V(x) = \frac{1}{10}(1 \times 170^2 + 2 \times 172^2 + 3 \times 175^2 + 3 \times 180^2 + 1 \times 185^2) - (176{,}4)^2 = 19{,}84$.</p>
+                                <p>$\sigma(x) = \sqrt{19{,}84} = 4{,}45$.</p>
+                                <p>$f_1 = \frac{1}{10},\ f_2 = \frac{2}{10},\ f_3 = \frac{3}{10},\ f_4 = \frac{3}{10},\ f_5 = \frac{1}{10}$.</p>
+                            </li>
+                            <li>
+                                <p><strong>Tableau N°2 :</strong> Série groupée en classes.</p>
+                                <p>$N = 3 + 4 + 2 + 1 + 1 = 11$.</p>
+                                <p>$\bar{x} = \frac{1}{11}[3 \times 9 + 4 \times 11 + 2 \times 13 + 1 \times 15 + 1 \times 17] = 11{,}73$.</p>
+                                <p>$V(x) = \frac{1}{11}(3 \times 9^2 + 4 \times 11^2 + 2 \times 13^2 + 1 \times 15^2 + 1 \times 17^2) - (11{,}73)^2 = 5{,}95$.</p>
+                                <p>$\sigma(x) = \sqrt{5{,}95} = 2{,}44$.</p>
+                                <p>$f_1 = \frac{3}{11},\ f_2 = \frac{4}{11},\ f_3 = \frac{2}{11},\ f_4 = \frac{1}{11},\ f_5 = \frac{1}{11}$.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    III. SÉRIE STATISTIQUE DE DEUX VARIABLES
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">III. Série statistique de deux variables</h2>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">1. Définitions : Cas général, série non injective</h3>
+
+            <p>On appelle <span class="highlight">série statistique de deux variables</span> $x$ et $y$, ou série statistique double, la série obtenue si l'étude est réalisée à la fois sur deux caractères différents $x$ et $y$.</p>
+            <p>Elle est donc formée de deux séries simples qui peuvent être groupées ou non ; ou l'une peut être groupée et l'autre non groupée.</p>
+            <p>On la note $(x_i, y_j, n_{ij})$. On la représente dans un tableau à double entrée appelé <span class="highlight">tableau de contingence</span>.</p>
+
+            <p>Si $x = \{x_1, x_2, \dots, x_p\}$ et $y = \{y_1, y_2, \dots, y_q\}$, alors :</p>
+
+            <ul>
+                <li>$n_{ij}$ est l'effectif du couple $(x_i, y_j)$. L'effectif total sera <span class="fcolorbox-red">$N = \sum\limits_{i=1}^{p} \sum\limits_{j=1}^{q} n_{ij}$</span></li>
+                <li>
+                    <span class="fcolorbox-red">$n_{i\bullet} = n_{i1} + n_{i2} + \cdots + n_{iq}$</span> et
+                    <span class="fcolorbox-red">$n_{\bullet j} = n_{1j} + n_{2j} + \cdots + n_{pj}$</span>
+                    sont respectivement les effectifs partiels sur la ligne $i$ et sur la colonne $j$.
+                </li>
+                <li>
+                    <span class="fcolorbox-light">$f_{ij} = \frac{n_{ij}}{N}$</span> est la fréquence du couple $(x_i, y_j)$.
+                    <span class="fcolorbox-light">$f_{i\bullet} = \frac{n_{i\bullet}}{N}$</span> et
+                    <span class="fcolorbox-light">$f_{\bullet j} = \frac{n_{\bullet j}}{N}$</span>
+                    sont les fréquences partielles sur la ligne $i$ et la colonne $j$.
+                </li>
+                <li>
+                    Les fréquences conditionnelles :
+                    <span class="fcolorbox-red">$f_{x_i/y_j} = \frac{n_{ij}}{n_{\bullet j}}$</span> et
+                    <span class="fcolorbox-red">$f_{y_j/x_i} = \frac{n_{ij}}{n_{i\bullet}}$</span>
+                </li>
+                <li>On appelle <span class="highlight">nuage de points</span> l'ensemble des points $M(x_i; y_j)$, que l'on notera $M_{ij}$ dans un repère.</li>
+                <li>On appelle <span class="highlight">point moyen</span> le point $G$, barycentre des points $(M_{ij}; n_{ij})$.</li>
+                <li>
+                    On appelle <span class="highlight">covariance</span> d'une série statistique de deux variables $x$ et $y$, le réel noté :
+                    <span class="fcolorbox-red">$\text{Cov}(x, y) = \frac{1}{N} \sum\limits_{i=1}^{p} \sum\limits_{j=1}^{q} n_{ij} x_i y_j - \bar{x} \cdot \bar{y}$</span>
+                </li>
+            </ul>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple :</strong></p>
+                <p>Le tableau ci-dessous représente les notes $x$ en Maths et les notes $y$ en PC de 10 élèves d'une classe de TS2.</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>$x_i \setminus y_j$</th>
+                                <th>8</th>
+                                <th>11</th>
+                                <th>12</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>9</strong></td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>10</strong></td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>11</strong></td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><strong>12</strong></td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ol>
+                    <li>Donner la valeur de $n_{23}$. Interpréter cette valeur.</li>
+                    <li>Déterminer les séries marginales de $x$ et $y$, puis donner $\bar{x}$ et $\bar{y}$.</li>
+                    <li>Déterminer la série conditionnelle $z = x /_{y=12}$. Calculer sa moyenne puis l'interpréter.</li>
+                    <li>Déterminer $f_{3\bullet}$ et $f_{\bullet 2}$.</li>
+                    <li>Calculer $\text{Cov}(x, y)$.</li>
+                </ol>
+
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ol>
+                            <li>
+                                <p>$n_{23}$ est la valeur qui se situe sur la deuxième ligne et la troisième colonne.</p>
+                                <p>Donc $n_{23} = 1$. Ça veut dire qu'il y a 1 seul élève qui a 10 en Maths et 12 en PC.</p>
+                            </li>
+                            <li>
+                                <p><strong>Série marginale de $x$ :</strong></p>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Notes de Maths $x_i$</th>
+                                                <th>9</th>
+                                                <th>10</th>
+                                                <th>11</th>
+                                                <th>12</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Effectifs $n_i$</strong></td>
+                                                <td>2</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>$\bar{x} = \frac{1}{10}(2 \times 9 + 4 \times 10 + 3 \times 11 + 1 \times 12) = 10{,}3$</p>
+
+                                <p><strong>Série marginale de $y$ :</strong></p>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Notes de PC $y_j$</th>
+                                                <th>8</th>
+                                                <th>11</th>
+                                                <th>12</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Effectifs $n_j$</strong></td>
+                                                <td>2</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>$\bar{y} = \frac{1}{10}(2 \times 8 + 4 \times 11 + 4 \times 12) = 10{,}8$</p>
+                            </li>
+                            <li>
+                                <p><strong>Série conditionnelle $z = x /_{y=12}$ :</strong></p>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>$z_i = x_i /_{y=12}$</th>
+                                                <th>10</th>
+                                                <th>11</th>
+                                                <th>12</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>$n_i$</strong></td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>$\bar{z} = \frac{1}{4}(1 \times 10 + 2 \times 11 + 1 \times 12) = 11$.</p>
+                                <p>C'est la moyenne en Maths des élèves qui ont 12 en PC.</p>
+                            </li>
+                            <li>
+                                <p>$f_{3\bullet} = \frac{n_{3\bullet}}{10}$ et $n_{3\bullet} = 0 + 1 + 2 = 3 \Rightarrow f_{3\bullet} = \frac{3}{10}$</p>
+                                <p>$f_{\bullet 2} = \frac{n_{\bullet 2}}{10}$ et $n_{\bullet 2} = 0 + 3 + 1 + 0 = 4 \Rightarrow f_{\bullet 2} = \frac{4}{10}$</p>
+                            </li>
+                            <li>
+                                <p>$\text{Cov}(x, y) = \frac{(2 \times 8 \times 9 + 3 \times 11 \times 10 + 1 \times 12 \times 10 + 1 \times 11 \times 11 + 2 \times 12 \times 11 + 1 \times 12 \times 12)}{10} - 10{,}3 \times 10{,}8 = 1{,}06$.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">2. Cas particulier : Série injective</h3>
+
+            <p>Une série est dite <span class="highlight">injective</span> si :</p>
+            <div class="formula-center">
+                <span class="fcolorbox-light">$n_{ij} = \begin{cases} 1 & \text{si } i = j \\ 0 & \text{si } i \ne j \end{cases}$</span>
+            </div>
+            <p>Elle est notée <span class="fcolorbox-light">$(x_i; y_i)$</span> et se présente sous forme d'un tableau de deux lignes de même longueur.</p>
+            <p>Dans ce cas, l'effectif total $N$ est le nombre de couples $(x_i; y_i)$.</p>
+
+            <ul>
+                <li>
+                    <span class="fcolorbox-light">$\bar{x} = \frac{1}{N} \sum\limits_{i=1}^{p} x_i$</span> et
+                    <span class="fcolorbox-light">$\bar{y} = \frac{1}{N} \sum\limits_{i=1}^{p} y_i$</span>
+                    si la série n'est pas groupée en classes.
+                </li>
+                <li>
+                    <span class="fcolorbox-light">$\bar{x} = \frac{1}{N} \sum\limits_{i=1}^{p} n_i c_i$</span> et
+                    <span class="fcolorbox-light">$\bar{y} = \frac{1}{N} \sum\limits_{i=1}^{p} n_i c_i$</span>
+                    si la série est groupée en classes.
+                </li>
+                <li>
+                    <span class="fcolorbox-light">$V(x) = \frac{1}{N} \sum\limits_{i=1}^{p} x_i^2 - \bar{x}^2$</span> et
+                    <span class="fcolorbox-light">$V(y) = \frac{1}{N} \sum\limits_{i=1}^{p} y_i^2 - \bar{y}^2$</span>
+                </li>
+                <li>
+                    Plus simplement :
+                    <span class="fcolorbox-light">$V(x) = \overline{x^2} - \bar{x}^2$</span> et
+                    <span class="fcolorbox-light">$V(y) = \overline{y^2} - \bar{y}^2$</span>
+                </li>
+                <li>
+                    <span class="fcolorbox-light">$\sigma(x) = \sqrt{V(x)}$</span> et
+                    <span class="fcolorbox-light">$\sigma(y) = \sqrt{V(y)}$</span>
+                </li>
+                <li>
+                    <span class="fcolorbox-light">$\text{Cov}(x, y) = \frac{1}{N} \sum\limits_{i=1}^{p} x_i y_i - \bar{x} \bar{y}$</span>
+                </li>
+                <li>
+                    Plus simplement :
+                    <span class="fcolorbox-light">$\text{Cov}(x, y) = \overline{xy} - \bar{x} \cdot \bar{y}$</span>
+                </li>
+            </ul>
+
+            <p>Le <em>nuage de points</em> est l'ensemble des points $M(x_i; y_i)$ dans un repère.</p>
+            <p>Le <span class="highlight">point moyen</span> est le point <span class="fcolorbox-light">$G(\bar{x}; \bar{y})$</span>, il sera toujours au centre du nuage (isobarycentre).</p>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple : Série non groupée en classes</strong></p>
+                <p>On donne le tableau statistique ci-dessous :</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>$x_i$</th>
+                                <th>2</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>7</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>$y_i$</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ol>
+                    <li>Représenter le nuage de points de cette série statistique.</li>
+                    <li>Calculer $\bar{x}, \bar{y}, V(x), V(y)$ et $\text{Cov}(x, y)$.</li>
+                    <li>Représenter le point moyen $G$ dans le nuage.</li>
+                </ol>
+
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <ol>
+                            <li>
+                                <p><strong>Nuage de points</strong></p>
+                                <div class="scatter-plot">
+                                    <svg viewBox="0 0 400 300" width="400" height="300">
+                                        <!-- Axes -->
+                                        <line x1="50" y1="260" x2="370" y2="260" stroke="#333" stroke-width="2" />
+                                        <line x1="50" y1="260" x2="50" y2="30" stroke="#333" stroke-width="2" />
+                                        <text x="360" y="280" font-size="14">$x$</text>
+                                        <text x="30" y="35" font-size="14">$y$</text>
+                                        
+                                        <!-- Grille -->
+                                        <line x1="50" y1="260" x2="50" y2="260" stroke="#ddd" stroke-width="0.5" />
+                                        
+                                        <!-- Échelle x -->
+                                        <text x="50" y="278" font-size="12">0</text>
+                                        <text x="114" y="278" font-size="12">2</text>
+                                        <text x="178" y="278" font-size="12">4</text>
+                                        <text x="210" y="278" font-size="12">5</text>
+                                        <text x="274" y="278" font-size="12">7</text>
+                                        
+                                        <!-- Échelle y -->
+                                        <text x="35" y="264" font-size="12">0</text>
+                                        <text x="35" y="217" font-size="12">1</text>
+                                        <text x="35" y="170" font-size="12">2</text>
+                                        <text x="35" y="124" font-size="12">3</text>
+                                        <text x="35" y="78" font-size="12">4</text>
+                                        
+                                        <!-- Points -->
+                                        <circle cx="114" cy="217" r="5" fill="#dc2626" />
+                                        <circle cx="178" cy="170" r="5" fill="#dc2626" />
+                                        <circle cx="210" cy="124" r="5" fill="#dc2626" />
+                                        <circle cx="274" cy="78" r="5" fill="#dc2626" />
+                                        
+                                        <!-- Point moyen G -->
+                                        <circle cx="193" cy="155" r="7" fill="none" stroke="#2563eb" stroke-width="3" />
+                                        <text x="193" y="148" font-size="12" fill="#2563eb" font-weight="bold">G</text>
+                                    </svg>
+                                </div>
+                                <p><em>Si le nuage de points a la forme d'une droite, alors les variables $x$ et $y$ sont liées par une relation linéaire.</em></p>
+                            </li>
+                            <li>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th><strong>Total</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>$x_i$</td>
+                                                <td>2</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>7</td>
+                                                <td><strong>18</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>$y_i$</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td><strong>10</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>$x_i^2$</td>
+                                                <td>4</td>
+                                                <td>16</td>
+                                                <td>25</td>
+                                                <td>49</td>
+                                                <td><strong>94</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>$y_i^2$</td>
+                                                <td>1</td>
+                                                <td>4</td>
+                                                <td>9</td>
+                                                <td>16</td>
+                                                <td><strong>30</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>$x_i y_i$</td>
+                                                <td>2</td>
+                                                <td>8</td>
+                                                <td>15</td>
+                                                <td>28</td>
+                                                <td><strong>53</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <p>$\bar{x} = \frac{18}{4} = 4{,}5$</p>
+                                <p>$\bar{y} = \frac{10}{4} = 2{,}5$</p>
+                                <p>$V(x) = \frac{94}{4} - (4{,}5)^2 = 3{,}25$</p>
+                                <p>$V(y) = \frac{30}{4} - (2{,}5)^2 = 1{,}25$</p>
+                                <p>$\text{Cov}(x, y) = \frac{53}{4} - 4{,}5 \times 2{,}5 = 2$</p>
+                            </li>
+                            <li>
+                                <p>Le point moyen est donc $G(4{,}5; 2{,}5)$. On peut le placer dans le nuage.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>📌 Exemple : Série groupée en classes</strong></p>
+                <p><strong>Durées de connexion (en minutes) de 40 élèves sur une plateforme :</strong></p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Classe</th>
+                                <th>$[0;10[$</th>
+                                <th>$[10;20[$</th>
+                                <th>$[20;30[$</th>
+                                <th>$[30;40[$</th>
+                                <th>$[40;50[$</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Effectif $n_i$</strong></td>
+                                <td>5</td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Centre $c_i$</strong></td>
+                                <td>5</td>
+                                <td>15</td>
+                                <td>25</td>
+                                <td>35</td>
+                                <td>45</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <details>
+                    <summary>📝 Voir la solution</summary>
+                    <div class="correction-box">
+                        <p>Effectif total : $N = 5 + 8 + 12 + 10 + 5 = 40$</p>
+
+                        <p>$\bar{x} = \frac{1}{40}(5 \times 5 + 8 \times 15 + 12 \times 25 + 10 \times 35 + 5 \times 45) = 25$</p>
+
+                        <p>$V(x) = \frac{1}{40}(5 \times 5^2 + 8 \times 15^2 + 12 \times 25^2 + 10 \times 35^2 + 5 \times 45^2) - 25^2 = 125$</p>
+
+                        <p>$\sigma(x) = \sqrt{V(x)} = \sqrt{125} \approx 11{,}18$</p>
+
+                        <p>Fréquence partielle de la classe $[20;30[$ : $f_3 = \frac{12}{40} = 0{,}3$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    IV. AJUSTEMENT LINÉAIRE
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">IV. Ajustement linéaire</h2>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">1. Coefficient de corrélation</h3>
+
+            <p>On appelle <span class="highlight">coefficient de corrélation linéaire</span> entre les variables $x$ et $y$ (le lien entre les deux variables) d'une série statistique double, le réel :</p>
+
+            <div class="formula-center">
+                <span class="fcolorbox-light">$r = \frac{\text{Cov}(x, y)}{\sqrt{V(x) \times V(y)}}$</span>
+                &nbsp; ou encore &nbsp;
+                <span class="fcolorbox-light">$r = \frac{\text{Cov}(x, y)}{\sigma(x) \, \sigma(y)}$</span>
+            </div>
+
+            <ul>
+                <li>On a toujours <span class="fcolorbox-light">$-1 \leq r \leq 1$</span></li>
+                <li>Si $|r| \geq 0{,}87$ ou $r^2 \geq 0{,}75$ alors la <em>corrélation entre $x$ et $y$ est forte</em>.</li>
+                <li>Si $|r| < 0{,}87$ ou $r^2 < 0{,}75$ alors la <em>corrélation entre $x$ et $y$ est faible</em>.</li>
+                <li>Si $r = -1$ ou $r = 1$ alors la <em>corrélation entre $x$ et $y$ est parfaite</em>.</li>
+                <li>Si $r = 0$, alors la <em>corrélation entre $x$ et $y$ est nulle</em>.<br>
+                Dans ce cas, il n'y a aucune relation entre $x$ et $y$.<br>
+                On dira que les variables $x$ et $y$ sont <em>indépendantes</em>.</li>
+            </ul>
+
+            <div class="important-box">
+                <p><strong>Remarque :</strong> Quand la corrélation entre deux variables est forte, alors on peut faire une <strong>estimation</strong> d'une des valeurs connaissant l'autre à l'aide des droites de régression.</p>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">2. Droites de régression : Par la méthode des moindres carrés</h3>
+
+            <p>On peut déterminer les droites de régression linéaires de la manière ci-dessous, appelée la <span class="highlight">méthode des moindres carrés</span> :</p>
+
+            <div class="formula-grid">
+                <div class="formula-block">
+                    <p><strong>Droite de régression de $y$ en $x$</strong></p>
+                    <span class="fcolorbox-light">$(D_{y/x}) : y - \bar{y} = a(x - \bar{x})$</span>
+                    <p>avec $a = \frac{\text{Cov}(x, y)}{V(x)}$</p>
+                </div>
+                <div class="formula-block">
+                    <p><strong>Droite de régression de $x$ en $y$</strong></p>
+                    <span class="fcolorbox-light">$(D_{x/y}) : x - \bar{x} = a'(y - \bar{y})$</span>
+                    <p>avec $a' = \frac{\text{Cov}(x, y)}{V(y)}$</p>
+                </div>
+            </div>
+
+            <ul>
+                <li>Après transformation, elles s'écrivent sous la forme :<br>
+                $(D_{y/x}) : y = ax + b$ et $(D_{x/y}) : x = a'y + b'$</li>
+                <li>On « peut » retrouver $D_{y/x}$ à partir de $D_{x/y}$ et réciproquement.</li>
+                <li>Les droites de régression linéaires passent toujours par le point moyen.</li>
+                <li>
+                    <span class="fcolorbox-light">On a toujours $aa' = r^2$</span> (À démontrer).
+                </li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3 class="subsection-title-red">Exercice d'application</h3>
+
+            <div class="exercise-box">
+                <p><strong>✏️ Exercice :</strong></p>
+                <p>D'après des études scientifiques, la croissance d'un arbre ne s'arrête jamais.</p>
+                <p>On considère un arbre dont la hauteur $x$ en <em>mètres</em> et son âge $y$ en <em>années</em> sont consignés dans le tableau ci-dessous :<br>
+                Les résultats seront donnés à 1 chiffre après la virgule.</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>$x_i$</th>
+                                <th>3</th>
+                                <th>5</th>
+                                <th>7,5</th>
+                                <th>8</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>$y_i$</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ol>
+                    <li>Déterminer le coefficient de corrélation linéaire entre $x$ et $y$.</li>
+                    <li>Justifier qu'on peut estimer la hauteur de cet arbre si on connaît son âge.</li>
+                    <li>Quelle serait sa hauteur à l'âge de 10 ans ?</li>
+                    <li>Si l'arbre mesure 11 mètres, estimer son âge en années.</li>
+                </ol>
+
+                <details>
+                    <summary>📝 Voir la correction</summary>
+                    <div class="correction-box">
+                        <ol>
+                            <li>
+                                <p><strong>Détermination du coefficient de corrélation linéaire</strong></p>
+                                <p>$r = \frac{\text{Cov}(x, y)}{\sigma(x)\sigma(y)} \approx 0{,}995$</p>
+                                <p>Il y a donc une <strong>corrélation linéaire très forte et positive</strong> entre la hauteur et l'âge de l'arbre.</p>
+                            </li>
+                            <li>
+                                <p><strong>Justification de l'utilisation d'une estimation linéaire</strong></p>
+                                <p>Comme $r \approx 1$, la corrélation est très forte. On peut donc utiliser la droite de régression pour estimer la hauteur de l'arbre à partir de son âge, ou inversement.</p>
+                            </li>
+                            <li>
+                                <p><strong>Estimation de la hauteur à 10 ans</strong></p>
+                                <p>Droite de régression de $y$ en fonction de $x$ :</p>
+                                <p>$y = ax + b$ avec $a \approx 0{,}95$ et $b \approx -0{,}83$</p>
+                                <p>$y(10) = 0{,}95 \times 10 - 0{,}83 = \boxed{8{,}7\ \text{mètres}}$</p>
+                            </li>
+                            <li>
+                                <p><strong>Estimation de l'âge si l'arbre mesure 11 mètres</strong></p>
+                                <p>Droite de régression de $x$ en fonction de $y$ :</p>
+                                <p>$x = a'y + b'$ avec $a' \approx 1{,}042$ et $b' \approx 0{,}924$</p>
+                                <p>$y(11) = \frac{11 - 0{,}924}{1{,}042} \approx \boxed{12{,}4\ \text{années}}$</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - Cours de Mathématiques TS2 - Statistiques</p>
+    </footer>
+
+</body>
+</html>
