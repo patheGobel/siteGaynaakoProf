@@ -2,52 +2,200 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MatheuxCodeur - La passion des mathématiques</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Années</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        /* ===== CONTENEUR PRINCIPAL ===== */
+        .card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10), 0 6px 12px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem 2rem;
+            max-width: 500px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        /* ===== GRILLE DES ANNÉES ===== */
+        .grid-annees {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .annee-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.2rem 0.3rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #0f172a;
+            transition: 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .annee-item:hover {
+            background: #ffffff;
+            border-color: #3b82f6;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+            color: #1e40af;
+        }
+
+        /* ===== CONTENEUR DE CONTENU DYNAMIQUE ===== */
+        .contenu-dynamique {
+            display: none; /* Masqué par défaut */
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== BOUTON RETOUR ET CONTENEUR ===== */
+        .conteneur-parent {
+            display: none; /* Masqué par défaut (apparaît après le clic) */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .btn-retour {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e2e8f0;
+            color: #1e293b;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-retour:hover {
+            background: #cbd5e1;
+            transform: scale(1.02);
+        }
+
+        .btn-retour svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Traveaux Dirigé</h1>
+    <div class="card">
+        <!-- 1. Grille des années -->
+        <div class="grid-annees" id="anneesGrid"></div>
+
+        <!-- 2. Zone d'affichage du contenu HTML chargé -->
+        <div class="contenu-dynamique" id="contenuAnnee"></div>
+
+        <!-- 3. Bouton Retour (affiché seulement en vue détail) -->
+        <div class="conteneur-parent" id="zoneRetour">
+            <button class="btn-retour" id="btnRetour">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
+                Retour aux années
+            </button>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <div class="container">
-            <ul>
-                <li class="dropdown">
-                    <a href="#">Séries</a>
-                    <div class="dropdown-content">
-                        <a href="Series/serieTS2.html">2025-2026</a>
-                        <a href="Series/serieTS2.html">2024-2025</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Corrections</a>
-                    <div class="dropdown-content">
-                        <a href="Corrections/correcTdTs2.html">2025-2026</a>
-                        <a href="Corrections/correcTdTs2.html">2024-2025</a>
-                    </div>
-                </li>
-            </ul>
+    <script>
+        (function () {
+            const years = [2025, 2026, 2027];
+            const grid = document.getElementById('anneesGrid');
+            const contenuAnnee = document.getElementById('contenuAnnee');
+            const zoneRetour = document.getElementById('zoneRetour');
+            const btnRetour = document.getElementById('btnRetour');
 
-            <!-- 🔽 Ton bouton expérimental -->
-            <button id="btn">retour</button>
-        </div>
-    </main>
+            // 1. Génération des boutons d'années
+            if (grid) {
+                grid.innerHTML = years.map(year => 
+                    `<button class="annee-item" data-year="${year}">${year}</button>`
+                ).join('');
+            }
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 MathsCodeur. Tous droits réservés.</p>
-        </div>
-    </footer>
+            // 2. Gestion du clic sur une année
+            grid.addEventListener('click', async function (e) {
+                const item = e.target.closest('.annee-item');
+                if (!item) return;
 
-    <!-- On charge le fichier JS -->
-    <script src="script.js"></script>
+                const year = item.getAttribute('data-year');
+
+                try {
+                    // Charger le fichier HTML externe (ex: 2025.html)
+                    const response = await fetch(`${year}.html`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`Fichier ${year}.html introuvable.`);
+                    }
+
+                    const htmlContent = await response.text();
+
+                    // Injecter le contenu HTML
+                    contenuAnnee.innerHTML = htmlContent;
+
+                    // Afficher le contenu et cacher la grille
+                    grid.style.display = 'none';
+                    contenuAnnee.style.display = 'block';
+                    zoneRetour.style.display = 'flex';
+
+                } catch (error) {
+                    contenuAnnee.innerHTML = `<p style="color: #ef4444; text-align: center;">Erreur : Impossible de charger le fichier <strong>${year}.html</strong>.</p>`;
+                    grid.style.display = 'none';
+                    contenuAnnee.style.display = 'block';
+                    zoneRetour.style.display = 'flex';
+                }
+            });
+
+            // 3. Gestion du bouton Retour
+            btnRetour.addEventListener('click', function () {
+                // Réafficher la grille et masquer le contenu
+                contenuAnnee.style.display = 'none';
+                zoneRetour.style.display = 'none';
+                grid.style.display = 'grid';
+                contenuAnnee.innerHTML = '';
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
