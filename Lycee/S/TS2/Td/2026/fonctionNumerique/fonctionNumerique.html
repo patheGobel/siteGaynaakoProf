@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Limites - Continuité - Dérivabilité - TS2</title>
+    <link rel="stylesheet" href="fonctionNumerique.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Ministère de l'Éducation Nationale<br>Inspection Académique de Kédougou<br>Lycée Dindéfelo<br>Cellule de Mathématiques</span>
+            <span class="right" style="text-align:right;">Année scolaire 2025-2026<br>Date : 24/10/2025<br>Classe : Terminale S2<br>Professeur : M. BA</span>
+        </div>
+        <h1>📐 TD Limites - Continuité - Dérivabilité</h1>
+        <div class="header-meta">
+            <span>📚 Classe : TS2</span>
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+
+            <p><strong>1.</strong> Déterminer, si elles existent, les limites suivantes :</p>
+
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{\tan(3x)}{1 - \sqrt{x + 1}}$</span>
+                <span class="lim">$\lim\limits_{x \to 2} \dfrac{\sqrt{x+2} - \sqrt{3x+3}}{x-2}$</span>
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{\cos x - 1}{x^3 + x^2}$</span>
+            </div>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{3 \sin^2 x - \cos x + 1}{x^2}$</span>
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{\sin x - \tan x}{x^3}$</span>
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{1 - \cos x}{x \tan x}$</span>
+            </div>
+
+            <p><strong>2.</strong> Déterminer, si elles existent, les limites suivantes :</p>
+
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \frac{\pi}{2}} \dfrac{1 - \tan x}{1 + \tan x}$</span>
+                <span class="lim">$\lim\limits_{x \to 3} \dfrac{\sqrt{x+1} - 2}{\sqrt{x^2 - x - 6}}$</span>
+                <span class="lim">$\lim\limits_{x \to 1} \dfrac{\sqrt{x+3} - \sqrt{5-x}}{\sqrt{2x+7} - \sqrt{10-x}}$</span>
+            </div>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{\sqrt{1+\sin x} - 1}{\sin 2x}$</span>
+                <span class="lim">$\lim\limits_{x \to \frac{\pi}{2}} \dfrac{\cos x}{1-\sin x}$</span>
+            </div>
+
+            <p><strong>3.</strong> Déterminer, si elles existent, les limites suivantes :</p>
+
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \left(x - \sqrt{x^2 + 3x - 1}\right)$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{2x + \sqrt{x^2 + 1}}{x}$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{x+1}{\sqrt{x+3}-2}$</span>
+            </div>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \left(2x + \sqrt{x - 1}\right)$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \left(x + \sqrt{2x^{2} - 5x + 1}\right)$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \left(x\sqrt{\dfrac{x+1}{x-1}}\right)$</span>
+            </div>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{x - \sqrt{|x|}}{3x + 2}$</span>
+                <span class="lim">$\lim\limits_{x \to +\infty} \sqrt{5x-2} - \sqrt{x+1}$</span>
+            </div>
+
+            <p><strong>4.</strong> Déterminer, si elles existent, les limites suivantes :</p>
+
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{x^2 + \sin x}{x}$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{x + \sin x}{2 - \sin x}$</span>
+                <span class="lim">$\lim\limits_{x \to \pm\infty} \dfrac{x^3}{3 + 2 \sin x}$</span>
+            </div>
+
+            <p><strong>5.</strong> Déterminer les réels $a$ et $b$ pour que la droite d'équation $y = ax + b$ soit une asymptote à la courbe représentative de la fonction $x \mapsto \sqrt{x^2 + 4} - \dfrac{x}{\sqrt{2}}$.</p>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong></p>
+                    <p>$\lim\limits_{x \to 0} \dfrac{\tan(3x)}{1 - \sqrt{x+1}} = \lim\limits_{x \to 0} \dfrac{\tan(3x)}{1 - \sqrt{x+1}} \times \dfrac{1 + \sqrt{x+1}}{1 + \sqrt{x+1}} = \lim\limits_{x \to 0} \dfrac{\tan(3x)(1+\sqrt{x+1})}{-x}$</p>
+                    <p>$= \lim\limits_{x \to 0} \dfrac{\tan(3x)}{3x} \times 3 \times \dfrac{1+\sqrt{x+1}}{-1} = 1 \times 3 \times (-2) = -6$</p>
+                    <p>$\boxed{-6}$</p>
+
+                    <p>$\lim\limits_{x \to 2} \dfrac{\sqrt{x+2} - \sqrt{3x+3}}{x-2} = \lim\limits_{x \to 2} \dfrac{(x+2) - (3x+3)}{(x-2)(\sqrt{x+2} + \sqrt{3x+3})} = \lim\limits_{x \to 2} \dfrac{-2x-1}{(x-2)(\sqrt{x+2} + \sqrt{3x+3})}$</p>
+                    <p>$= \lim\limits_{x \to 2} \dfrac{-2x-1}{x-2} \times \dfrac{1}{\sqrt{x+2} + \sqrt{3x+3}} = -\infty$</p>
+                    <p>$\boxed{-\infty}$</p>
+
+                    <p>$\lim\limits_{x \to 0} \dfrac{\cos x - 1}{x^3 + x^2} = \lim\limits_{x \to 0} \dfrac{-\frac{x^2}{2}}{x^2(x+1)} = \lim\limits_{x \to 0} \dfrac{-1}{2(x+1)} = -\dfrac{1}{2}$</p>
+                    <p>$\boxed{-\dfrac{1}{2}}$</p>
+
+                    <p>$\lim\limits_{x \to 0} \dfrac{3\sin^2 x - \cos x + 1}{x^2} = \lim\limits_{x \to 0} \dfrac{3\sin^2 x + (1-\cos x)}{x^2} = 3 + \dfrac{1}{2} = \dfrac{7}{2}$</p>
+                    <p>$\boxed{\dfrac{7}{2}}$</p>
+
+                    <p>$\lim\limits_{x \to 0} \dfrac{\sin x - \tan x}{x^3} = \lim\limits_{x \to 0} \dfrac{\sin x(1 - \frac{1}{\cos x})}{x^3} = \lim\limits_{x \to 0} \dfrac{\sin x(\cos x - 1)}{x^3 \cos x} = \lim\limits_{x \to 0} \dfrac{\sin x}{x} \times \dfrac{\cos x - 1}{x^2} \times \dfrac{1}{\cos x} = -\dfrac{1}{2}$</p>
+                    <p>$\boxed{-\dfrac{1}{2}}$</p>
+
+                    <p>$\lim\limits_{x \to 0} \dfrac{1 - \cos x}{x \tan x} = \lim\limits_{x \to 0} \dfrac{1 - \cos x}{x^2} \times \dfrac{x}{\tan x} = \dfrac{1}{2} \times 1 = \dfrac{1}{2}$</p>
+                    <p>$\boxed{\dfrac{1}{2}}$</p>
+
+                    <p><strong>2.</strong></p>
+                    <p>$\lim\limits_{x \to \frac{\pi}{2}} \dfrac{1 - \tan x}{1 + \tan x} = 0$</p>
+                    <p>$\lim\limits_{x \to 3} \dfrac{\sqrt{x+1} - 2}{\sqrt{x^2 - x - 6}} = \lim\limits_{x \to 3} \dfrac{(x-3)}{(\sqrt{x+1}+2)\sqrt{(x-3)(x+2)}} = \lim\limits_{x \to 3} \dfrac{\sqrt{x-3}}{(\sqrt{x+1}+2)\sqrt{x+2}} = 0$</p>
+
+                    <p><strong>3.</strong></p>
+                    <p>$\lim\limits_{x \to +\infty} (x - \sqrt{x^2 + 3x - 1}) = \lim\limits_{x \to +\infty} \dfrac{(x - \sqrt{x^2 + 3x - 1})(x + \sqrt{x^2 + 3x - 1})}{x + \sqrt{x^2 + 3x - 1}} = \lim\limits_{x \to +\infty} \dfrac{-3x + 1}{2x} = -\dfrac{3}{2}$</p>
+
+                    <p><strong>5.</strong> $f(x) = \sqrt{x^2 + 4} - \dfrac{x}{\sqrt{2}}$</p>
+                    <p>$f(x) - \left(-\dfrac{1}{\sqrt{2}}x\right) = \sqrt{x^2 + 4}$</p>
+                    <p>Donc $a = -\dfrac{1}{\sqrt{2}}$ et $b$ tel que $f(x) - ax \to b$</p>
+                    <p>$\lim\limits_{x \to +\infty} (\sqrt{x^2 + 4} - x) = 0$, donc $b = 0$</p>
+                    <p>$\boxed{a = -\dfrac{1}{\sqrt{2}}, b = 0}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <p>Calculer les limites suivantes :</p>
+
+            <p><strong>1.</strong></p>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \frac{\pi}{4}} \dfrac{2 \cos x - \sqrt{2}}{x - \frac{\pi}{4}}$</span>
+                <span class="lim">$\lim\limits_{x \to 1} \dfrac{\sin(\pi x)}{x - 1}$</span>
+            </div>
+
+            <p><strong>2.</strong></p>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \frac{\pi}{4}} \dfrac{1 - \sqrt{2} \cos x}{1 - \sqrt{2} \sin x}$</span>
+                <span class="lim">$\lim\limits_{x \to 0^+} \dfrac{x \cos x + \sin x}{\sqrt{x + 1} - 1}$</span>
+            </div>
+
+            <p><strong>3.</strong></p>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to \frac{\pi}{4}} \dfrac{\tan x - 1}{x - \frac{\pi}{4}}$</span>
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{1}{x^2} \left( \dfrac{2}{\cos x} + \cos x - 3 \right)$</span>
+            </div>
+
+            <p><strong>4.</strong></p>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{x \to +\infty} \left( x \arctan (\sqrt{x}) - \dfrac{\pi}{2} x \right)$</span>
+                <span class="lim">$\lim\limits_{x \to 0^+} \dfrac{1}{x} \arctan \left( \dfrac{\sqrt{x}}{x + 1} \right)$</span>
+            </div>
+
+            <p><strong>5.</strong></p>
+            <div class="limit-row">
+                <span class="lim">$\lim\limits_{|x| \to +\infty} \left( 3x - 1 + \sqrt{9x^2 + 3x - 2} \right)$</span>
+                <span class="lim">$\lim\limits_{x \to 0} \dfrac{1 - x^2 E\left(\frac{1}{x}\right)}{1 + x^2 E\left(\frac{1}{x}\right)}$</span>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\lim\limits_{x \to \frac{\pi}{4}} \dfrac{2\cos x - \sqrt{2}}{x - \frac{\pi}{4}} = -2\sin\left(\dfrac{\pi}{4}\right) = -\sqrt{2}$</p>
+                    <p>$\lim\limits_{x \to 1} \dfrac{\sin(\pi x)}{x - 1} = -\pi$</p>
+
+                    <p><strong>2.</strong> $\lim\limits_{x \to \frac{\pi}{4}} \dfrac{1 - \sqrt{2}\cos x}{1 - \sqrt{2}\sin x} = 1$</p>
+                    <p>$\lim\limits_{x \to 0^+} \dfrac{x\cos x + \sin x}{\sqrt{x+1} - 1} = \lim\limits_{x \to 0^+} \dfrac{x(\cos x + 1)}{x} = 2$</p>
+
+                    <p><strong>3.</strong> $\lim\limits_{x \to \frac{\pi}{4}} \dfrac{\tan x - 1}{x - \frac{\pi}{4}} = 1 + \tan^2\left(\dfrac{\pi}{4}\right) = 2$</p>
+
+                    <p><strong>4.</strong> $\lim\limits_{x \to +\infty} \left( x \arctan(\sqrt{x}) - \dfrac{\pi}{2}x \right) = -1$</p>
+                    <p>$\lim\limits_{x \to 0^+} \dfrac{1}{x} \arctan\left( \dfrac{\sqrt{x}}{x+1} \right) = +\infty$</p>
+
+                    <p><strong>5.</strong> $\lim\limits_{x \to +\infty} (3x - 1 + \sqrt{9x^2 + 3x - 2}) = +\infty$</p>
+                    <p>$\lim\limits_{x \to -\infty} (3x - 1 + \sqrt{9x^2 + 3x - 2}) = -1$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 : Continuité
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <div class="exercise-title">Continuité</div>
+
+            <p>Étudier la continuité de la fonction $f$ sur $D_f$ dans chaque cas.</p>
+
+            <ol>
+                <li>$f(x) = x + \sqrt{x+1}$.</li>
+                <li>$f(x) = 4x + 1 + \dfrac{1}{x - 1}$.</li>
+                <li>$f(x) = 2\sqrt{x} - x$.</li>
+                <li>$f(x) = \dfrac{\sqrt{1 + x}}{1 - x}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $f(x) = x + \sqrt{x+1}$, $D_f = [-1; +\infty[$</p>
+                    <p>$f$ est continue sur $[-1; +\infty[$ car c'est la somme d'une fonction polynôme et d'une fonction racine carrée.</p>
+
+                    <p><strong>2.</strong> $f(x) = 4x + 1 + \dfrac{1}{x-1}$, $D_f = \mathbb{R} \setminus \{1\}$</p>
+                    <p>$f$ est continue sur $]-\infty; 1[$ et sur $]1; +\infty[$ car c'est une fonction rationnelle.</p>
+
+                    <p><strong>3.</strong> $f(x) = 2\sqrt{x} - x$, $D_f = [0; +\infty[$</p>
+                    <p>$f$ est continue sur $[0; +\infty[$.</p>
+
+                    <p><strong>4.</strong> $f(x) = \dfrac{\sqrt{1+x}}{1-x}$, $D_f = [-1; 1[ \cup ]1; +\infty[$</p>
+                    <p>$f$ est continue sur $[-1; 1[$ et sur $]1; +\infty[$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4 : Dérivées
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <div class="exercise-title">Dérivées</div>
+
+            <p>Donner la dérivée des fonctions définies par :</p>
+
+            <div class="two-columns">
+                <div>
+                    <p>$f(x) = \dfrac{1 + \cos(2x)}{1 - \sin(2x)}$</p>
+                    <p>$g(x) = \left( x + \dfrac{1}{x} \right) \sqrt{\dfrac{1}{x}}$</p>
+                    <p>$h(x) = \sqrt[3]{x - 6} + \dfrac{1}{x}$</p>
+                    <p>$k(x) = \left| \dfrac{x^2 - x}{x - 1} \right|$</p>
+                </div>
+                <div>
+                    <p>$m(x) = x \sqrt{\dfrac{x^2 - 1}{x^2 + 1}}$</p>
+                    <p>$n(x) = \dfrac{\sqrt{x^2 - 3x + 2}}{x + 1}$</p>
+                    <p>$p(x) = \dfrac{\tan x}{1 - 2 \sin x}$</p>
+                    <p>$q(x) = 3(x^2 - 3x + 5)^4$</p>
+                    <p>$r(x) = \cos^2(3x)$</p>
+                    <p>$s(x) = -2 \tan^2(2x)$</p>
+                </div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>f :</strong> $f'(x) = \dfrac{-2\sin(2x)(1-\sin(2x)) - (1+\cos(2x))(-2\cos(2x))}{(1-\sin(2x))^2}$</p>
+                    <p>$= \dfrac{-2\sin(2x) + 2\sin^2(2x) + 2\cos(2x) + 2\cos^2(2x)}{(1-\sin(2x))^2} = \dfrac{2(\cos(2x) - \sin(2x) + 1)}{(1-\sin(2x))^2}$</p>
+
+                    <p><strong>g :</strong> $g(x) = (x + \frac{1}{x})x^{-1/2} = x^{1/2} + x^{-3/2}$</p>
+                    <p>$g'(x) = \dfrac{1}{2}x^{-1/2} - \dfrac{3}{2}x^{-5/2} = \dfrac{1}{2\sqrt{x}} - \dfrac{3}{2x^2\sqrt{x}}$</p>
+
+                    <p><strong>h :</strong> $h'(x) = \dfrac{1}{3\sqrt[3]{(x-6)^2}} - \dfrac{1}{x^2}$</p>
+
+                    <p><strong>k :</strong> $k(x) = |x|$ (car $\dfrac{x^2-x}{x-1} = x$ pour $x \neq 1$)</p>
+                    <p>$k'(x) = \begin{cases} 1 & \text{si } x > 0 \\ -1 & \text{si } x < 0 \end{cases}$</p>
+
+                    <p><strong>q :</strong> $q'(x) = 12(x^2 - 3x + 5)^3(2x - 3)$</p>
+
+                    <p><strong>r :</strong> $r'(x) = -6\sin(3x)\cos(3x) = -3\sin(6x)$</p>
+
+                    <p><strong>s :</strong> $s'(x) = -8\tan(2x)(1 + \tan^2(2x))$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5 : Lecture graphique
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+            <div class="exercise-title">Étude d'une fonction par lecture graphique</div>
+
+            <div class="placeholder-image">
+                <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de la fonction f</p>
+                <p style="font-size:0.85rem;">[Graphique à insérer - Courbe représentative de f]</p>
+                <img src="images/graphique_fonction.png" alt="Graphique de la fonction f" style="max-width:100%; height:auto; margin-top:0.5rem;" />
+                <p style="font-size:0.8rem; color:var(--text-muted);">La courbe $(C_f)$ est celle d'une fonction $f$ dans un repère orthonormé. $f$ est définie en 0 et on a : $f(0) = 3$.</p>
+            </div>
+
+            <ol>
+                <li>Préciser l'ensemble de définition de $f$.</li>
+                <li>Donner les limites suivantes :
+                    <br><strong>a)</strong> $\lim\limits_{x \to +\infty} f(x)$, $\lim\limits_{x \to -\infty} f(x)$ ;
+                    <br><strong>b)</strong> $\lim\limits_{x \to 0^+} f(x)$, $\lim\limits_{x \to 0^-} f(x)$ ;
+                    <br><strong>c)</strong> $\lim\limits_{x \to 2^+} f(x)$, $\lim\limits_{x \to 2^-} f(x)$ ;
+                </li>
+                <li>La courbe admet-elle une asymptote oblique ? Si oui, donner son équation.</li>
+                <li>Préciser les équations des autres asymptotes.</li>
+                <li>La fonction $f$ est-elle dérivable en 5 ? Justifier la réponse.</li>
+                <li>Dresser le tableau de variation de $f$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $D_f = \mathbb{R} \setminus \{0, 2\}$ (d'après le graphique)</p>
+
+                    <p><strong>2.</strong> a) $\lim\limits_{x \to +\infty} f(x) = +\infty$, $\lim\limits_{x \to -\infty} f(x) = -\infty$</p>
+                    <p>b) $\lim\limits_{x \to 0^+} f(x) = +\infty$, $\lim\limits_{x \to 0^-} f(x) = -\infty$</p>
+                    <p>c) $\lim\limits_{x \to 2^+} f(x) = -\infty$, $\lim\limits_{x \to 2^-} f(x) = +\infty$</p>
+
+                    <p><strong>3.</strong> Oui, $y = x - 1$ est asymptote oblique.</p>
+
+                    <p><strong>4.</strong> $x = 0$ et $x = 2$ sont des asymptotes verticales.</p>
+
+                    <p><strong>5.</strong> Non, car la courbe admet une tangente verticale en 5.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6 : Tableau de variation
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+
+            <p>Le tableau de variation ci-dessous est celui d'une fonction $f$ continue sur son ensemble de définition avec $f'(1) = 0$ et $f'(4) = -1$. La courbe $(C_f)$ de $f$ coupe l'axe des abscisses en $A(-2;0)$ et $B\left(-\frac{1}{2};0\right)$ et l'axe des ordonnées au point $C(0;2)$.</p>
+
+            <p>La droite $(D) : y = x - 3$ est une asymptote oblique en $+\infty$ et est en dessous de $(C_f)$ sur $[0; +\infty[$.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>$x$</th>
+                            <th>$-\infty$</th>
+                            <th>$-3$</th>
+                            <th>$-1$</th>
+                            <th>$1$</th>
+                            <th>$3$</th>
+                            <th>$+\infty$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$f'(x)$</td>
+                            <td></td>
+                            <td>$-$</td>
+                            <td>$+$</td>
+                            <td>$+$</td>
+                            <td>$-$</td>
+                            <td>$+$</td>
+                        </tr>
+                        <tr>
+                            <td>$f(x)$</td>
+                            <td>$-1$</td>
+                            <td>$\searrow$</td>
+                            <td>$-3$</td>
+                            <td>$\nearrow$</td>
+                            <td>$4$</td>
+                            <td>$\searrow$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ol>
+                <li>Déterminer le domaine de définition de $f$ puis donner les limites aux bornes.</li>
+                <li>Déterminer le domaine de dérivabilité de $f$.</li>
+                <li>Déterminer en justifiant toutes les asymptotes à la courbe de $f$.</li>
+                <li>Donner l'équation de chacune des demi-tangentes à la courbe au point d'abscisse 1.</li>
+                <li>Tracer $(D)$ et $(C_f)$ dans un repère orthonormé d'unité 1 cm.</li>
+                <li>Soit $g$ la restriction de $f$ à l'intervalle $[3; +\infty[$.
+                    <ol type="a">
+                        <li>$g$ est-elle bijective ? Justifier.</li>
+                        <li>$g^{-1}$ est-elle dérivable en 2 ? Justifier.</li>
+                    </ol>
+                </li>
+                <li>Graphiquement, déterminer l'ensemble des valeurs de $m$ pour lesquelles l'équation $f(x) = m$ admet exactement 4 solutions réelles distinctes.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $D_f = \mathbb{R} \setminus \{-1\}$ (car discontinuité en $-1$)</p>
+                    <p>$\lim\limits_{x \to -\infty} f(x) = -1$, $\lim\limits_{x \to +\infty} f(x) = +\infty$</p>
+
+                    <p><strong>2.</strong> $D_f' = \mathbb{R} \setminus \{-1\}$</p>
+
+                    <p><strong>3.</strong> $y = -1$ est asymptote horizontale en $-\infty$<br>
+                    $y = x - 3$ est asymptote oblique en $+\infty$<br>
+                    $x = -1$ est asymptote verticale</p>
+
+                    <p><strong>4.</strong> $f'(1) = 0$, tangente horizontale en $x=1$<br>
+                    Demi-tangentes : $y = 2$ à gauche, $y = 2$ à droite</p>
+
+                    <p><strong>6.a)</strong> $g$ est strictement décroissante sur $[3; +\infty[$, donc bijective de $[3; +\infty[$ sur $]-\infty; 4]$.</p>
+
+                    <p><strong>6.b)</strong> $g^{-1}$ est dérivable en 2 car $g'(-3) \neq 0$.</p>
+
+                    <p><strong>7.</strong> Pour $m \in ]-\infty; 4[$, l'équation $f(x) = m$ admet 4 solutions.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 7
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+
+            <p>Soit $f$ la fonction donnée par : $f(x) = \dfrac{2 \sin(2x)}{1 + \cos(x)}$</p>
+
+            <ol>
+                <li>Déterminer le domaine de définition de $f$ puis montrer qu'on peut réduire le domaine d'étude de $f$ à l'intervalle $]0, 2\pi[$.</li>
+                <li>Déterminer la limite de $f$ en $\pi$.</li>
+                <li>Soit $\alpha$ l'unique réel de $]0, 2\pi[$ tel que $\cos(\alpha) = \frac{-1 + \sqrt{5}}{2}$. Montrer que $\cos(2x) + \cos(x) - 1 > 0$ si et seulement si $x \in ]0, \alpha[$.</li>
+                <li>Montrer que $f'(x) = \dfrac{4(\cos^2(2x) + \cos(x) - 1)}{1 + \cos(x)}$, en déduire le signe de $f'(x)$ en utilisant (3), puis dresser le tableau de variation de $f$ sur $]0, 2\pi[$.</li>
+                <li>Tracer la courbe de $f$ sur $]-2\pi, 2\pi[$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $1 + \cos x \neq 0 \iff \cos x \neq -1 \iff x \neq \pi + 2k\pi$</p>
+                    <p>$D_f = \mathbb{R} \setminus \{\pi + 2k\pi, k \in \mathbb{Z}\}$</p>
+                    <p>$f$ est $2\pi$-périodique, donc on étudie sur $]0, 2\pi[$.</p>
+
+                    <p><strong>2.</strong> $\lim\limits_{x \to \pi} \dfrac{2\sin(2x)}{1+\cos x} = \lim\limits_{x \to \pi} \dfrac{4\sin x \cos x}{1+\cos x} = \lim\limits_{x \to \pi} 4\cos x \dfrac{\sin x}{1+\cos x}$</p>
+                    <p>$= \lim\limits_{x \to \pi} 4\cos x \times \dfrac{\sin x}{1+\cos x} = 4(-1) \times \dfrac{0}{0}$</p>
+                    <p>$= \lim\limits_{x \to \pi} 4\cos x \times \dfrac{1 - \cos x}{\sin x} = -4 \times 0 = 0$</p>
+
+                    <p><strong>4.</strong> $f'(x) = \dfrac{4\cos(2x)(1+\cos x) + 2\sin(2x)\sin x}{(1+\cos x)^2}$</p>
+                    <p>$= \dfrac{4(\cos^2(2x) + \cos x - 1)}{1 + \cos x}$</p>
+                    <p>Signe de $f'$ : $f'(x) > 0$ sur $]0, \alpha[$ et $f'(x) < 0$ sur $]\alpha, 2\pi[$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME N°1
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <span class="problem-number">Problème n°1</span>
+
+            <p>Soit la fonction numérique $f : \mathbb{R} \to \mathbb{R}$ définie par :</p>
+
+            <div class="piecewise">
+                <div class="case">$f(x) = -x + 2 - \dfrac{2x}{x^2 + 1}$ si $x \leq 1$</div>
+                <div class="case">$f(x) = x - 1 - 3\sqrt{x^2 - 1}$ si $x > 1$</div>
+            </div>
+
+            <span class="part-label">Partie A</span>
+
+            <ol>
+                <li>Justifier que $D_f = \mathbb{R}$.</li>
+                <li>Étudier la continuité et la dérivabilité de $f$ en $x_0 = 1$.</li>
+                <li>Interpréter les résultats obtenus.</li>
+                <li>Déterminer les limites de $f$ aux bornes de $D_f$.</li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que la courbe $(C_f)$ admet deux asymptotes $(D_1)$ et $(D_2)$ à préciser.</li>
+                        <li>Préciser la position de $(C_f)$ par rapport à $(D_1)$ et $(D_2)$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer $f'(x)$ dans les intervalles où $f$ est dérivable (justifier l'existence de ces dérivées).</li>
+                        <li>Établir le tableau de variations de $f$.</li>
+                        <li>Tracer $(C_f)$ et les asymptotes dans un repère orthonormé $(O; \vec{i}, \vec{j})$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <span class="part-label">Partie B</span>
+
+            <p>Soit $g$ la restriction de $f$ à l'intervalle $]-\infty, 1]$.</p>
+
+            <ol>
+                <li>Montrer que $g$ est bijective de $]-\infty, 1]$ sur un intervalle $J$ à préciser.</li>
+                <li>Montrer que l'équation $g(x) = x$ admet une unique solution $\beta$ et que $\dfrac{1}{3} < \beta < \dfrac{3}{4}$.</li>
+                <li>
+                    <ol type="a">
+                        <li>Étudier la dérivabilité de $g^{-1}$.</li>
+                        <li>Calculer $g^{-1}(2)$.</li>
+                        <li>Construire $(C_{g^{-1}})$ dans le repère précédent.</li>
+                        <li>Montrer que $g$ admet une primitive sur $]-\infty, 1]$ et déterminer cette primitive qui s'annule en 0.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A - 1.</strong> $D_f = \mathbb{R}$ car les deux expressions sont définies sur $\mathbb{R}$.</p>
+
+                    <p><strong>2.</strong> Continuité en 1 :</p>
+                    <p>$f(1) = -1 + 2 - \dfrac{2}{2} = 0$</p>
+                    <p>$\lim\limits_{x \to 1^-} f(x) = 0$, $\lim\limits_{x \to 1^+} f(x) = 0$ donc $f$ est continue en 1.</p>
+                    <p>Dérivabilité en 1 :</p>
+                    <p>$f'_g(1) = \lim\limits_{h \to 0^-} \dfrac{f(1+h)-f(1)}{h} = -2$</p>
+                    <p>$f'_d(1) = \lim\limits_{h \to 0^+} \dfrac{f(1+h)-f(1)}{h} = -\infty$</p>
+                    <p>Donc $f$ n'est pas dérivable en 1.</p>
+
+                    <p><strong>3.</strong> $f$ admet un point anguleux en $x=1$.</p>
+
+                    <p><strong>4.</strong> $\lim\limits_{x \to -\infty} f(x) = +\infty$, $\lim\limits_{x \to +\infty} f(x) = +\infty$</p>
+
+                    <p><strong>5.a)</strong> En $-\infty$ : $f(x) - (-x+2) = -\dfrac{2x}{x^2+1} \to 0$, donc $D_1: y = -x+2$</p>
+                    <p>En $+\infty$ : $f(x) - (x-1-3x) = f(x) - (-2x-1) \to 0$, donc $D_2: y = -2x-1$</p>
+
+                    <p><strong>Partie B - 1.</strong> $g$ est strictement décroissante sur $]-\infty, 1]$ donc bijective de $]-\infty, 1]$ sur $]-\infty, 0]$.</p>
+
+                    <p><strong>Partie B - 3.d)</strong> $G(x) = -\dfrac{x^2}{2} + 2x - \ln(x^2+1)$ sur $]-\infty, 1]$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME N°2
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <span class="problem-number">Problème n°2</span>
+
+            <p>Soit la fonction numérique $f : \mathbb{R} \to \mathbb{R}$ telle que :</p>
+
+            <div class="piecewise">
+                <div class="case">$f(x) = \dfrac{x - 1 + \sqrt{x^2 - x}}{x - 2}$ si $x \geq 1$</div>
+                <div class="case">$f(x) = \dfrac{x - 1}{x^2 - 4x + 3}$ si $x < 1$</div>
+            </div>
+
+            <p>On désigne par $(C_f)$ sa courbe représentative.</p>
+
+            <span class="part-label">Partie A</span>
+
+            <ol>
+                <li>Déterminer le domaine de définition de $f$.</li>
+                <li>Calculer les limites aux bornes de $D_f$.</li>
+                <li>Étudier la continuité de $f$ en 1.</li>
+                <li>Étudier la dérivabilité de $f$ en 1. Interpréter graphiquement les résultats.</li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer les réels $a$, $b$, et $c$ tels que : $f(x) = ax + b + \dfrac{c}{x-2}$, $\forall x < 1$.</li>
+                        <li>En déduire que $(C_f)$ admet au voisinage de $-\infty$ une asymptote oblique $(\Delta)$ dont on précisera son équation.</li>
+                        <li>Étudier la position relative de $(C_f)$ par rapport à $(\Delta)$ sur $]-\infty; 1[$.</li>
+                    </ol>
+                </li>
+                <li>Étudier la nature de la branche infinie de $(C_f)$ au voisinage de $+\infty$, puis étudier sa position relative par rapport à $(C_f)$ s'il s'agit d'une asymptote.</li>
+                <li>Déterminer $f'(x)$ sur chaque intervalle où $f$ est dérivable, puis en déduire son signe.</li>
+                <li>Dresser le tableau de variation de $f$.</li>
+            </ol>
+
+            <span class="part-label">Partie B</span>
+
+            <p>Soit $h$ la restriction de $f$ à l'intervalle $I = ]-\infty; 1[$.</p>
+
+            <ol>
+                <li>Montrer que $h$ réalise une bijection de $I$ vers un intervalle $J$ à préciser.</li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer $h(0)$.</li>
+                        <li>$h^{-1}$ est-elle dérivable en $-\dfrac{3}{2}$ ? Si oui, déterminer $(h^{-1})'\left(-\dfrac{3}{2}\right)$.</li>
+                        <li>Déterminer le sens de variation de $h^{-1}$ puis dresser son tableau de variation.</li>
+                    </ol>
+                </li>
+                <li>Déterminer l'expression de $h^{-1}(x)$.</li>
+                <li>Tracer soigneusement $(C_f)$ et $(C_{h^{-1}})$ dans un repère orthonormé.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A - 1.</strong> $D_f = [0; 1[ \cup ]1; 2[ \cup ]2; +\infty[$</p>
+
+                    <p><strong>2.</strong> $\lim\limits_{x \to 0^+} f(x) = \dfrac{1}{3}$, $\lim\limits_{x \to 1^-} f(x) = -\infty$, $\lim\limits_{x \to 1^+} f(x) = +\infty$</p>
+                    <p>$\lim\limits_{x \to 2^-} f(x) = -\infty$, $\lim\limits_{x \to 2^+} f(x) = +\infty$, $\lim\limits_{x \to +\infty} f(x) = 1$</p>
+
+                    <p><strong>3.</strong> $f$ n'est pas continue en 1 car limites différentes.</p>
+
+                    <p><strong>4.</strong> $f$ n'est pas dérivable en 1.</p>
+
+                    <p><strong>5.a)</strong> $f(x) = x + 3 + \dfrac{2}{x-2}$ sur $]-\infty; 1[$</p>
+
+                    <p><strong>5.b)</strong> $(\Delta) : y = x + 3$</p>
+
+                    <p><strong>6.</strong> En $+\infty$ : $f(x) \to 1$, donc $y=1$ est asymptote horizontale.</p>
+
+                    <p><strong>Partie B - 1.</strong> $h$ est bijective de $]-\infty; 1[$ sur $]-\infty; 0]$</p>
+
+                    <p><strong>Partie B - 2.a)</strong> $h(0) = \dfrac{-1}{3}$</p>
+
+                    <p><strong>Partie B - 3.</strong> $h^{-1}(x) = \dfrac{x - 3 - \sqrt{x^2 - 6x + 1}}{2}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME N°3
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <span class="problem-number">Problème n°3</span>
+
+            <span class="part-label">Étude graphique</span>
+
+            <p>Soit $f$ une fonction dont la courbe représentative est donnée ci-dessous</p>
+
+            <div class="placeholder-image">
+                <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de la fonction f</p>
+                <svg viewBox="0 0 400 250" width="400" height="250">
+                    <line x1="40" y1="220" x2="370" y2="220" stroke="#333" stroke-width="2" />
+                    <line x1="40" y1="220" x2="40" y2="20" stroke="#333" stroke-width="2" />
+                    <text x="360" y="240" font-size="12">x</text>
+                    <text x="25" y="25" font-size="12">y</text>
+                    <path d="M 60 40 Q 100 80 140 120 Q 160 140 180 140 Q 200 140 220 120 Q 260 60 300 40 Q 330 30 360 20" stroke="#2563eb" stroke-width="2.5" fill="none" />
+                    <circle cx="140" cy="120" r="4" fill="none" stroke="#2563eb" />
+                    <circle cx="180" cy="140" r="4" fill="none" stroke="#2563eb" />
+                    <circle cx="220" cy="120" r="4" fill="none" stroke="#2563eb" />
+                    <text x="125" y="135" font-size="10" fill="#2563eb">-1</text>
+                    <text x="175" y="155" font-size="10" fill="#2563eb">2</text>
+                </svg>
+            </div>
+
+            <ol>
+                <li>Déterminer $f(-1)$ ; $f(2)$ et $D_f$.</li>
+                <li>Déterminer les limites de $f$ aux bornes de $D_f$.</li>
+                <li>
+                    <ol type="a">
+                        <li>$f$ est-elle dérivable en $-1$ et en $2$ ?</li>
+                        <li>Déterminer les variations de $f$ sur $]-\infty, -1[$ et sur $]2, +\infty[$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <span class="part-label">Étude numérique</span>
+
+            <p>Dans cette partie, on prend $f(x) = x + 2\sqrt{|x^2 - x - 2|}$.</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer le domaine de définition de $f$.</li>
+                        <li>Écrire $f(x)$ sans symbole de la valeur absolue puis calculer les limites aux bornes de $D_f$.</li>
+                        <li>Montrer que $(C_f)$ admet une asymptote oblique $(D)$ en $+\infty$ et donner l'équation de cette asymptote.</li>
+                        <li>Étudier la position de $(C_f)$ par rapport à $(D)$.</li>
+                        <li>Préciser la nature de l'asymptote à $(C_f)$ en $-\infty$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Étudier la dérivabilité de $f$ en $-1$ et $2$. Interpréter le résultat obtenu.</li>
+                        <li>Donner l'ensemble de dérivabilité de $f$ puis calculer $f'(x)$.</li>
+                        <li>Démontrer que $f'(x) > 0$ sur $]2; +\infty[$ et que $f'(x) < 0$ sur $]-\infty; -1[$.</li>
+                        <li>Résoudre l'inéquation $\sqrt{-x^2 + x + 2} \leq 2x - 1$ sur $]-1; 2[$.</li>
+                        <li>Dresser le tableau de variation de $f$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Soit $g$ la restriction de $f$ sur $I = ]2; +\infty[$. Montrer que $g$ est une bijection de $I$ sur $I$.</li>
+                        <li>En étudiant la fonction $h$ définie par $h(x) = x - g(x)$, montrer qu'il existe un réel $\alpha$ vérifiant $g(\alpha) = \alpha$.</li>
+                        <li>Déterminer par le calcul la valeur exacte de $\alpha$, puis déterminer $(g^{-1})(\alpha)$ si possible.</li>
+                        <li>Tracer dans le même repère $(C_g)$ et $(C_{g^{-1}})$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Étude graphique - 1.</strong> $f(-1) = 1$, $f(2) = 1$, $D_f = \mathbb{R}$</p>
+
+                    <p><strong>Étude graphique - 2.</strong> $\lim\limits_{x \to -\infty} f(x) = +\infty$, $\lim\limits_{x \to +\infty} f(x) = +\infty$</p>
+
+                    <p><strong>Étude numérique - 1.a)</strong> $D_f = \mathbb{R}$</p>
+
+                    <p><strong>1.b)</strong> $f(x) = \begin{cases} x + 2\sqrt{x^2 - x - 2} & \text{si } x \in ]-\infty; -1] \cup [2; +\infty[ \\ x + 2\sqrt{-x^2 + x + 2} & \text{si } x \in ]-1; 2[ \end{cases}$</p>
+
+                    <p><strong>1.c)</strong> $f(x) = x + 2\sqrt{x^2 - x - 2} = x + 2x\sqrt{1 - \frac{1}{x} - \frac{2}{x^2}} = 3x - 1 + o(1)$</p>
+                    <p>Donc $(D) : y = 3x - 1$ est asymptote oblique en $+\infty$.</p>
+
+                    <p><strong>1.d)</strong> $f(x) - (3x-1) = 2\sqrt{x^2 - x - 2} - 2x + 1 < 0$, donc $(C_f)$ est en dessous de $(D)$.</p>
+
+                    <p><strong>1.e)</strong> En $-\infty$ : $f(x) \sim -x + 2|x| = -x - 2x = -3x$, donc branche parabolique de direction $y = -3x$.</p>
+
+                    <p><strong>2.a)</strong> $f$ n'est pas dérivable en $-1$ et $2$ (points anguleux).</p>
+
+                    <p><strong>2.b)</strong> $f'(x) = \begin{cases} 1 + \dfrac{2x-1}{\sqrt{x^2-x-2}} & \text{sur } ]-\infty; -1[ \cup ]2; +\infty[ \\ 1 + \dfrac{2x-1}{\sqrt{-x^2+x+2}} & \text{sur } ]-1; 2[ \end{cases}$</p>
+
+                    <p><strong>2.d)</strong> $x \in \left[\dfrac{1+\sqrt{5}}{2}; 2\right[$</p>
+
+                    <p><strong>3.c)</strong> $\alpha = \dfrac{3+\sqrt{5}}{2}$</p>
+                    <p>$(g^{-1})(\alpha) = \dfrac{1}{g'(\alpha)} = \dfrac{\sqrt{\alpha^2-\alpha-2}}{2\alpha-1 + \sqrt{\alpha^2-\alpha-2}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME N°4
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <span class="problem-number">Problème n°4</span>
+
+            <p>Soit $f$ la fonction définie par :</p>
+
+            <div class="piecewise">
+                <div class="case">$f(x) = -x + \sqrt{x^2 + 4}$ si $x < 0$</div>
+                <div class="case">$f(x) = \sqrt{|4 - x^2|}$ si $x \geq 0$</div>
+            </div>
+
+            <p>On note $(C_f)$ sa courbe représentative dans un repère orthonormé $(O, \vec{i}, \vec{j})$.</p>
+
+            <ol>
+                <li>Déterminer l'ensemble de définition de $f$.</li>
+                <li>Écrire $f(x)$ sans le symbole de la valeur absolue.</li>
+                <li>
+                    <ol type="a">
+                        <li>Étudier la continuité de $f$ en 0.</li>
+                        <li>Étudier la dérivabilité de $f$ en 0. Interpréter les résultats.</li>
+                        <li>Étudier la dérivabilité de $f$ en 2. Interpréter les résultats.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer les limites aux bornes de $D_f$.</li>
+                        <li>Étudier les branches infinies de $(C_f)$.</li>
+                    </ol>
+                </li>
+                <li>On pose pour tout $x \in [0, 2]$, $h(x) = f(x) - x$.
+                    <ol type="a">
+                        <li>Montrer que l'équation $h(x) = 0$ admet une unique solution notée $\alpha$.</li>
+                        <li>Vérifier que $\alpha \in \left[1, \dfrac{3}{2}\right]$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer $f'(x)$ sur chaque intervalle où $f$ est dérivable.</li>
+                        <li>Dresser le tableau de variations de $f$.</li>
+                        <li>Construire $(C_f)$.</li>
+                    </ol>
+                </li>
+                <li>Soit $g$ la restriction de $f$ sur $I = ]2; +\infty[$.
+                    <ol type="a">
+                        <li>Montrer que $g$ est une bijection de $I$ vers un intervalle $J$ à préciser.</li>
+                        <li>Montrer que $g^{-1}$ est dérivable en $\sqrt{5}$ puis calculer $(g^{-1})'(\sqrt{5})$.</li>
+                        <li>Expliciter $g^{-1}(x)$.</li>
+                        <li>Tracer $(C_{g^{-1}})$ dans le même repère que $(C_f)$.</li>
+                    </ol>
+                </li>
+                <li>Montrer que pour tout $x \in \left[1, \dfrac{3}{2}\right]$, $|f'(x)| \leq \dfrac{3\sqrt{7}}{7}$.</li>
+                <li>En déduire que $|f(x) - \alpha| \leq \dfrac{3\sqrt{7}}{7}|x - \alpha|$, pour tout $x \in \left[1, \dfrac{3}{2}\right]$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $D_f = \mathbb{R}$</p>
+
+                    <p><strong>2.</strong> $f(x) = \begin{cases} -x + \sqrt{x^2+4} & \text{si } x < 0 \\ \sqrt{4-x^2} & \text{si } 0 \leq x \leq 2 \\ \sqrt{x^2-4} & \text{si } x > 2 \end{cases}$</p>
+
+                    <p><strong>3.a)</strong> $f(0) = 2$, $\lim\limits_{x \to 0^-} f(x) = 2$, $\lim\limits_{x \to 0^+} f(x) = 2$ donc $f$ est continue en 0.</p>
+
+                    <p><strong>3.b)</strong> $f'_g(0) = -1$, $f'_d(0) = 0$, donc $f$ n'est pas dérivable en 0 (point anguleux).</p>
+
+                    <p><strong>3.c)</strong> $f$ n'est pas dérivable en 2 (tangente verticale).</p>
+
+                    <p><strong>4.a)</strong> $\lim\limits_{x \to -\infty} f(x) = +\infty$, $\lim\limits_{x \to +\infty} f(x) = +\infty$</p>
+
+                    <p><strong>4.b)</strong> En $-\infty$ : $f(x) \sim -x + |x| = -2x$, branche parabolique de direction $y = -2x$</p>
+                    <p>En $+\infty$ : $f(x) \sim x$, asymptote oblique $y = x$</p>
+
+                    <p><strong>5.a)</strong> $h'(x) = -\dfrac{x}{\sqrt{4-x^2}} - 1 < 0$ sur $[0, 2]$, donc $h$ strictement décroissante.</p>
+                    <p>$h(0) = 2 > 0$ et $h(2) = -2 < 0$, donc unique solution $\alpha$.</p>
+
+                    <p><strong>5.b)</strong> $h(1) = \sqrt{3} - 1 > 0$ et $h\left(\dfrac{3}{2}\right) = \sqrt{4 - \dfrac{9}{4}} - \dfrac{3}{2} = \dfrac{\sqrt{7}}{2} - \dfrac{3}{2} < 0$</p>
+                    <p>Donc $\alpha \in \left[1, \dfrac{3}{2}\right]$.</p>
+
+                    <p><strong>6.a)</strong> $f'(x) = \begin{cases} -1 + \dfrac{x}{\sqrt{x^2+4}} & \text{sur } ]-\infty; 0[ \\ -\dfrac{x}{\sqrt{4-x^2}} & \text{sur } ]0; 2[ \\ \dfrac{x}{\sqrt{x^2-4}} & \text{sur } ]2; +\infty[ \end{cases}$</p>
+
+                    <p><strong>7.a)</strong> $g$ est strictement croissante sur $]2; +\infty[$, donc bijective de $]2; +\infty[$ sur $]0; +\infty[$.</p>
+
+                    <p><strong>7.c)</strong> $g^{-1}(x) = \sqrt{x^2 + 4}$ pour $x > 0$</p>
+
+                    <p><strong>8.</strong> Pour $x \in \left[1, \dfrac{3}{2}\right]$, $|f'(x)| = \dfrac{x}{\sqrt{4-x^2}} \leq \dfrac{3\sqrt{7}}{7}$</p>
+
+                    <p><strong>9.</strong> Par l'inégalité des accroissements finis.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Limites, Continuité, Dérivabilité - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 7 + Problèmes n°1 à n°4</p>
+    </footer>
+
+</body>
+</html>
