@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Limites - Fonction ln - TS2</title>
+
+    <link rel="stylesheet" href="td1Ln.css" />  
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 29/12/2025</span>
+        </div>
+        <h1>📐 TD Limites - Fonction ln</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <div class="boxed-title">Déterminer les limites suivantes :</div>
+
+            <div class="limit-grid">
+                <div class="limit-item">1. $\lim\limits_{x \to +\infty} \ln(x+2)$</div>
+                <div class="limit-item">2. $\lim\limits_{x \to 0} (\ln x)^2$</div>
+                <div class="limit-item">3. $\lim\limits_{x \to 0} \dfrac{1}{\ln x}$</div>
+                <div class="limit-item">4. $\lim\limits_{x \to +\infty} \ln(x^2 + x + 1)$</div>
+                <div class="limit-item">5. $\lim\limits_{x \to -\infty} \ln(x^2 + x + 1)$</div>
+                <div class="limit-item">6. $\lim\limits_{x \to +\infty} \ln\left(\dfrac{x+1}{x^2 + x + 1}\right)$</div>
+                <div class="limit-item">7. $\lim\limits_{x \to 1^+} \ln\left(\dfrac{x+2}{x-1}\right)$</div>
+                <div class="limit-item">8. $\lim\limits_{x \to +\infty} \dfrac{\ln(x+2)}{\ln(x+1)}$</div>
+                <div class="limit-item">9. $\lim\limits_{x \to 0^+} \dfrac{\ln x+2}{\ln x+1}$</div>
+                <div class="limit-item">10. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{\sqrt{x}}$</div>
+                <div class="limit-item">11. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{x^2}$</div>
+                <div class="limit-item">12. $\lim\limits_{x \to +\infty} (\ln x - \sqrt{x})$</div>
+                <div class="limit-item">13. $\lim\limits_{x \to 0^+} x^2 \ln x$</div>
+                <div class="limit-item">14. $\lim\limits_{x \to 0^+} \sqrt{x} \ln x$</div>
+                <div class="limit-item">15. $\lim\limits_{x \to +\infty} (\ln x - 2x)$</div>
+                <div class="limit-item">16. $\lim\limits_{x \to +\infty} \dfrac{\ln(x^2 + 1)}{\ln(x+1)}$</div>
+                <div class="limit-item">17. $\lim\limits_{x \to 0} \dfrac{\ln(1 + 2x)}{x}$</div>
+                <div class="limit-item">18. $\lim\limits_{x \to 0} \dfrac{\ln(1 + x^2)}{x}$</div>
+                <div class="limit-item">19. $\lim\limits_{x \to -\infty} \dfrac{\ln(1 + e^x)}{e^x}$</div>
+                <div class="limit-item">20. $\lim\limits_{x \to 0} e^x \ln x$</div>
+                <div class="limit-item">21. $\lim\limits_{x \to -\infty} \dfrac{\ln(1 + e^x)}{x}$</div>
+                <div class="limit-item">22. $\lim\limits_{x \to +\infty} \dfrac{\ln(1 + e^x)}{x}$</div>
+                <div class="limit-item">23. $\lim\limits_{x \to 0} \dfrac{\ln(1 + x^2)}{3x}$</div>
+                <div class="limit-item">24. $\lim\limits_{x \to 0} \dfrac{\ln(e^x - 1)}{x}$</div>
+                <div class="limit-item">25. $\lim\limits_{x \to 0^+} \dfrac{2\ln^2 x}{x}$</div>
+                <div class="limit-item">26. $\lim\limits_{x \to 0} \dfrac{2x + 1}{x} \ln x$</div>
+                <div class="limit-item">27. $\lim\limits_{x \to +\infty} \dfrac{2x + 1}{x} \ln x$</div>
+                <div class="limit-item">28. $\lim\limits_{x \to 0} \dfrac{\ln x - 1}{2x}$</div>
+                <div class="limit-item">29. $\lim\limits_{x \to +\infty} \dfrac{\ln x - 1}{2x}$</div>
+                <div class="limit-item">30. $\lim\limits_{x \to 2^+} \ln(2 - x)$</div>
+                <div class="limit-item">31. $\lim\limits_{x \to +\infty} \ln(x^2 - 2x)$</div>
+                <div class="limit-item">32. $\lim\limits_{x \to -\infty} \ln(x^2 + 4x)$</div>
+                <div class="limit-item">33. $\lim\limits_{x \to 0} \ln\left(\dfrac{2x - 1}{x - 2}\right)$</div>
+                <div class="limit-item">34. $\lim\limits_{x \to 0^+} \ln\left(\dfrac{1 + x}{x}\right)$</div>
+                <div class="limit-item">35. $\lim\limits_{x \to +\infty} \ln\left(\dfrac{1 - x}{-x - 1}\right)$</div>
+                <div class="limit-item">36. $\lim\limits_{x \to -\infty} \ln\left(\dfrac{x^3 + x}{-2x^2 - 1}\right)$</div>
+                <div class="limit-item">37. $\lim\limits_{x \to 0^+} \ln|x^2 + x|$</div>
+                <div class="limit-item">38. $\lim\limits_{x \to 0^-} \ln|x^2 + x|$</div>
+                <div class="limit-item">39. $\lim\limits_{x \to 1} \ln|x^2 - 1|$</div>
+                <div class="limit-item">40. $\lim\limits_{x \to +\infty} \ln|x^2 - 1|$</div>
+                <div class="limit-item">41. $\lim\limits_{x \to +\infty} \dfrac{2x - 1}{x \ln x - x}$</div>
+                <div class="limit-item">42. $\lim\limits_{x \to 0^+} \dfrac{2x - 1}{x \ln x + x}$</div>
+                <div class="limit-item">43. $\lim\limits_{x \to +\infty} \dfrac{-1}{x^2 \ln x}$</div>
+                <div class="limit-item">44. $\lim\limits_{x \to 0^+} \dfrac{2\ln x - 3}{3\ln x + 1}$</div>
+                <div class="limit-item">45. $\lim\limits_{x \to +\infty} \dfrac{2\ln x - 3}{3\ln x + 1}$</div>
+                <div class="limit-item">46. $\lim\limits_{x \to 0^+} \dfrac{\ln x - 3x}{2\ln x + x}$</div>
+                <div class="limit-item">47. $\lim\limits_{x \to +\infty} \dfrac{\ln x - 3x}{2\ln x + x}$</div>
+                <div class="limit-item">48. $\lim\limits_{x \to 0^+} \dfrac{-1}{x^2 \ln x}$</div>
+                <div class="limit-item">49. $\lim\limits_{x \to +\infty} (x - \ln x)$</div>
+                <div class="limit-item">50. $\lim\limits_{x \to +\infty} \dfrac{1 - \ln x}{x}$</div>
+                <div class="limit-item">51. $\lim\limits_{x \to 0^+} \dfrac{1 - \ln x}{x}$</div>
+                <div class="limit-item">52. $\lim\limits_{x \to +\infty} (x \ln x - x)$</div>
+                <div class="limit-item">53. $\lim\limits_{x \to 0} (x \ln x - \ln x)$</div>
+                <div class="limit-item">54. $\lim\limits_{x \to 0^+} x^n \ln^2 x$</div>
+                <div class="limit-item">55. $\lim\limits_{x \to 0^+} x(\ln x - 1)$</div>
+                <div class="limit-item">56. $\lim\limits_{x \to +\infty} \dfrac{\ln(x^2)}{x}$</div>
+                <div class="limit-item">57. $\lim\limits_{x \to +\infty} \dfrac{(x - 1)\ln x}{x}$</div>
+                <div class="limit-item">58. $\lim\limits_{x \to 0^+} \dfrac{(x - 1)\ln x}{x}$</div>
+                <div class="limit-item">59. $\lim\limits_{x \to +\infty} x \ln\left(\dfrac{x+1}{x-1}\right)$</div>
+                <div class="limit-item">60. $\lim\limits_{x \to +\infty} x \ln\left(\dfrac{2x+1}{2x+3}\right)$</div>
+                <div class="limit-item">61. $\lim\limits_{x \to -\infty} \dfrac{\ln(x^2)}{x}$</div>
+                <div class="limit-item">62. $\lim\limits_{x \to 0^+} \left(\ln x + \dfrac{1}{\ln x}\right)$</div>
+                <div class="limit-item">63. $\lim\limits_{x \to +\infty} \left(\dfrac{x^2}{x-1} - \ln x\right)$</div>
+                <div class="limit-item">64. $\lim\limits_{x \to 0^+} x \ln^2 x$</div>
+                <div class="limit-item">65. $\lim\limits_{x \to 0^+} \sqrt{x} \ln\left(\dfrac{x+1}{x}\right)$</div>
+                <div class="limit-item">66. $\lim\limits_{x \to 0^+} x^3 \ln x$</div>
+                <div class="limit-item">67. $\lim\limits_{x \to 0} \dfrac{\ln x - \ln 2}{x-2}$</div>
+                <div class="limit-item">68. $\lim\limits_{x \to 0} \dfrac{\ln(a+x) - \ln a}{x}$</div>
+                <div class="limit-item">69. $\lim\limits_{x \to 0} \dfrac{\ln x - 2}{\ln x + 1}$</div>
+                <div class="limit-item">70. $\lim\limits_{x \to 0^+} \tan x \ln x$</div>
+                <div class="limit-item">71. $\lim\limits_{x \to \frac{\pi}{4}} \dfrac{\ln(\tan x)}{\sin x - \cos x}$</div>
+                <div class="limit-item">72. $\lim\limits_{x \to 0^+} \dfrac{\ln(\cos x)}{x^2}$</div>
+                <div class="limit-item">73. $\lim\limits_{x \to +\infty} \dfrac{x \ln x}{x+1}$</div>
+                <div class="limit-item">74. $\lim\limits_{x \to +\infty} x \ln\left(1 + \dfrac{1}{x}\right)$</div>
+                <div class="limit-item">75. $\lim\limits_{x \to +\infty} \dfrac{\ln(1+x)}{1+x^2}$</div>
+                <div class="limit-item">76. $\lim\limits_{x \to 0^+} \dfrac{\ln x}{1 - \ln x}$</div>
+                <div class="limit-item">77. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{1 - \ln x}$</div>
+                <div class="limit-item">78. $\lim\limits_{x \to 0^+} \dfrac{1}{x^2}\ln\left(\dfrac{1 - x^2}{\cos x}\right)$</div>
+                <div class="limit-item">79. $\lim\limits_{x \to 1} -x + \ln\left|\dfrac{x}{x-1}\right|$</div>
+                <div class="limit-item">80. $\lim\limits_{x \to 1} -x + \ln\left|\dfrac{x}{x-1}\right|$</div>
+                <div class="limit-item">81. $\lim\limits_{x \to -\infty} -x + \ln\left|\dfrac{x}{x-1}\right|$</div>
+                <div class="limit-item">82. $\lim\limits_{x \to +\infty} -x + \ln\left|\dfrac{x}{x-1}\right|$</div>
+                <div class="limit-item">83. $\lim\limits_{x \to +\infty} x \ln\left|\dfrac{x+1}{x-1}\right|$</div>
+                <div class="limit-item">84. $\lim\limits_{x \to -\infty} \dfrac{\ln\sqrt{x^2 - 1}}{x^2 - 1}$</div>
+                <div class="limit-item">85. $\lim\limits_{x \to 1} \dfrac{\ln(x^2 - 2x + 2)}{(x-1)^2}$</div>
+                <div class="limit-item">86. $\lim\limits_{x \to 0} \dfrac{\ln(1+\sqrt{x})}{1-\sqrt{x+1}}$</div>
+                <div class="limit-item">87. $\lim\limits_{x \to +\infty} \left(\ln x + \dfrac{1}{\ln x}\right)$</div>
+                <div class="limit-item">88. $\lim\limits_{x \to 0^+} \dfrac{\ln x}{1+x^2}$</div>
+                <div class="limit-item">89. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{1+x^2}$</div>
+                <div class="limit-item">90. $\lim\limits_{x \to +\infty} \dfrac{x^3}{\ln x}$</div>
+                <div class="limit-item">91. $\lim\limits_{x \to +\infty} \dfrac{\ln(1+\ln x)}{x}$</div>
+                <div class="limit-item">92. $\lim\limits_{x \to +\infty} (x \ln x - \ln x)$</div>
+                <div class="limit-item">93. $\lim\limits_{x \to +\infty} \sqrt{x} \ln x$</div>
+                <div class="limit-item">94. $\lim\limits_{x \to 0} \dfrac{x}{\ln(1+\sin x)}$</div>
+                <div class="limit-item">95. $\lim\limits_{x \to 0} \dfrac{\ln(1+2x)}{\tan x}$</div>
+                <div class="limit-item">96. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{x-1}$</div>
+                <div class="limit-item">97. $\lim\limits_{x \to 1} \dfrac{\ln x}{x-1}$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions (sélectionnées)</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappels des limites fondamentales :</strong></p>
+                    <ul>
+                        <li>$\lim\limits_{x \to +\infty} \ln x = +\infty$</li>
+                        <li>$\lim\limits_{x \to 0^+} \ln x = -\infty$</li>
+                        <li>$\lim\limits_{x \to 0} \dfrac{\ln(1+x)}{x} = 1$</li>
+                        <li>$\lim\limits_{x \to +\infty} \dfrac{\ln x}{x^n} = 0$ pour $n > 0$</li>
+                        <li>$\lim\limits_{x \to 0^+} x^n \ln x = 0$ pour $n > 0$</li>
+                    </ul>
+
+                    <p><strong>Solutions :</strong></p>
+                    <div class="two-columns">
+                        <div>
+                            <p>1. $+\infty$</p>
+                            <p>2. $+\infty$</p>
+                            <p>3. $0^-$</p>
+                            <p>4. $+\infty$</p>
+                            <p>5. $+\infty$</p>
+                            <p>6. $-\infty$</p>
+                            <p>7. $+\infty$</p>
+                            <p>8. $1$</p>
+                            <p>9. $1$</p>
+                            <p>10. $0$</p>
+                            <p>11. $0$</p>
+                            <p>12. $-\infty$</p>
+                            <p>13. $0$</p>
+                            <p>14. $0$</p>
+                            <p>15. $-\infty$</p>
+                            <p>16. $2$</p>
+                            <p>17. $2$</p>
+                            <p>18. $0$</p>
+                            <p>19. $1$</p>
+                            <p>20. $-\infty$</p>
+                            <p>21. $0$</p>
+                            <p>22. $1$</p>
+                            <p>23. $0$</p>
+                            <p>24. $1$</p>
+                        </div>
+                        <div>
+                            <p>25. $+\infty$</p>
+                            <p>26. $-\infty$</p>
+                            <p>27. $+\infty$</p>
+                            <p>28. $+\infty$</p>
+                            <p>29. $0$</p>
+                            <p>30. $-\infty$</p>
+                            <p>31. $+\infty$</p>
+                            <p>32. $+\infty$</p>
+                            <p>33. $\ln\left(\dfrac{1}{2}\right)$</p>
+                            <p>34. $+\infty$</p>
+                            <p>35. $0$</p>
+                            <p>36. $+\infty$</p>
+                            <p>37. $-\infty$</p>
+                            <p>38. $-\infty$</p>
+                            <p>39. $-\infty$</p>
+                            <p>40. $+\infty$</p>
+                            <p>41. $2$</p>
+                            <p>42. $+\infty$</p>
+                            <p>43. $0$</p>
+                            <p>44. $2$</p>
+                            <p>45. $\dfrac{2}{3}$</p>
+                            <p>46. $\dfrac{1}{2}$</p>
+                            <p>47. $-3$</p>
+                            <p>48. $0$</p>
+                            <p>49. $+\infty$</p>
+                            <p>50. $0$</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Limites avec exponentielle
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <div class="boxed-title">Déterminer les limites suivantes :</div>
+
+            <div class="limit-grid">
+                <div class="limit-item">1. $\lim\limits_{x \to +\infty} e^x$</div>
+                <div class="limit-item">2. $\lim\limits_{x \to -\infty} e^x$</div>
+                <div class="limit-item">3. $\lim\limits_{x \to +\infty} \dfrac{e^x}{x}$</div>
+                <div class="limit-item">4. $\lim\limits_{x \to +\infty} \dfrac{e^x}{x^3}$</div>
+                <div class="limit-item">5. $\lim\limits_{x \to +\infty} x e^{-x}$</div>
+                <div class="limit-item">6. $\lim\limits_{x \to +\infty} x^2 e^{-x}$</div>
+                <div class="limit-item">7. $\lim\limits_{x \to +\infty} \dfrac{e^{2x}}{e^x + 1}$</div>
+                <div class="limit-item">8. $\lim\limits_{x \to +\infty} \dfrac{e^{3x} + e^x}{e^{3x} - 2}$</div>
+                <div class="limit-item">9. $\lim\limits_{x \to -\infty} e^{2x}$</div>
+                <div class="limit-item">10. $\lim\limits_{x \to -\infty} \dfrac{e^x}{1 + e^x}$</div>
+                <div class="limit-item">11. $\lim\limits_{x \to +\infty} \dfrac{e^{x+2}}{e^x}$</div>
+                <div class="limit-item">12. $\lim\limits_{x \to +\infty} \dfrac{e^{2x}}{e^{x-1}}$</div>
+                <div class="limit-item">13. $\lim\limits_{x \to +\infty} (e^{x+1} - e^x)$</div>
+                <div class="limit-item">14. $\lim\limits_{x \to +\infty} (e^{2x} - e^x)$</div>
+                <div class="limit-item">15. $\lim\limits_{x \to 0} \dfrac{e^x - 1}{x}$</div>
+                <div class="limit-item">16. $\lim\limits_{x \to 0} \dfrac{e^{2x} - 1}{x}$</div>
+                <div class="limit-item">17. $\lim\limits_{x \to 0} \dfrac{e^x - e^{-x}}{x}$</div>
+                <div class="limit-item">18. $\lim\limits_{x \to 0} \dfrac{e^x - 1 - x}{x^2}$</div>
+                <div class="limit-item">19. $\lim\limits_{x \to 0} \dfrac{e^{3x} - 1 - 3x}{x^2}$</div>
+                <div class="limit-item">20. $\lim\limits_{x \to +\infty} \dfrac{x + e^x}{e^x}$</div>
+                <div class="limit-item">21. $\lim\limits_{x \to +\infty} \dfrac{e^x - x}{e^x}$</div>
+                <div class="limit-item">22. $\lim\limits_{x \to -\infty} (x e^x)$</div>
+                <div class="limit-item">23. $\lim\limits_{x \to -\infty} \dfrac{x}{e^{-x}}$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappels :</strong></p>
+                    <ul>
+                        <li>$\lim\limits_{x \to +\infty} \dfrac{e^x}{x^n} = +\infty$ pour tout $n \in \mathbb{N}$</li>
+                        <li>$\lim\limits_{x \to -\infty} x^n e^x = 0$ pour tout $n \in \mathbb{N}$</li>
+                        <li>$\lim\limits_{x \to 0} \dfrac{e^x - 1}{x} = 1$</li>
+                    </ul>
+
+                    <div class="two-columns">
+                        <div>
+                            <p>1. $+\infty$</p>
+                            <p>2. $0$</p>
+                            <p>3. $+\infty$</p>
+                            <p>4. $+\infty$</p>
+                            <p>5. $0$</p>
+                            <p>6. $0$</p>
+                            <p>7. $+\infty$</p>
+                            <p>8. $1$</p>
+                            <p>9. $0$</p>
+                            <p>10. $0$</p>
+                            <p>11. $e^2$</p>
+                            <p>12. $+\infty$</p>
+                        </div>
+                        <div>
+                            <p>13. $+\infty$</p>
+                            <p>14. $+\infty$</p>
+                            <p>15. $1$</p>
+                            <p>16. $2$</p>
+                            <p>17. $2$</p>
+                            <p>18. $\dfrac{1}{2}$</p>
+                            <p>19. $\dfrac{9}{2}$</p>
+                            <p>20. $1$</p>
+                            <p>21. $1$</p>
+                            <p>22. $0$</p>
+                            <p>23. $-\infty$</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <div class="boxed-title">Calculer les limites suivantes :</div>
+
+            <div class="limit-grid">
+                <div class="limit-item">1. $\lim\limits_{x \to +\infty} \dfrac{\ln(1+e^x)}{x}$</div>
+                <div class="limit-item">2. $\lim\limits_{x \to +\infty} \ln(1 + e^{-x})$</div>
+                <div class="limit-item">3. $\lim\limits_{x \to +\infty} \left(\ln(e^x + x) - x\right)$</div>
+                <div class="limit-item">4. $\lim\limits_{x \to 0^+} x \ln x$</div>
+                <div class="limit-item">5. $\lim\limits_{x \to 0} \dfrac{\ln(1+e^x) - \ln 2}{x}$</div>
+                <div class="limit-item">6. $\lim\limits_{x \to +\infty} \dfrac{\ln x}{e^x}$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\lim\limits_{x \to +\infty} \dfrac{\ln(1+e^x)}{x} = 1$</p>
+                    <p>car $\ln(1+e^x) \sim \ln(e^x) = x$</p>
+
+                    <p><strong>2.</strong> $\lim\limits_{x \to +\infty} \ln(1 + e^{-x}) = 0$</p>
+
+                    <p><strong>3.</strong> $\lim\limits_{x \to +\infty} \left(\ln(e^x + x) - x\right) = \lim\limits_{x \to +\infty} \ln\left(\dfrac{e^x + x}{e^x}\right) = \lim\limits_{x \to +\infty} \ln\left(1 + \dfrac{x}{e^x}\right) = 0$</p>
+
+                    <p><strong>4.</strong> $\lim\limits_{x \to 0^+} x \ln x = 0$</p>
+
+                    <p><strong>5.</strong> $\lim\limits_{x \to 0} \dfrac{\ln(1+e^x) - \ln 2}{x} = \dfrac{1}{2}$</p>
+
+                    <p><strong>6.</strong> $\lim\limits_{x \to +\infty} \dfrac{\ln x}{e^x} = 0$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4 : Étude de fonction
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <div class="boxed-title">Étude d'une fonction</div>
+
+            <p>On considère la fonction</p>
+            <div class="formula-center">
+                $$f(x) = \ln(e^x + 1) - x.$$
+            </div>
+
+            <ol>
+                <li>Déterminer $\displaystyle \lim_{x \to +\infty} f(x)$.</li>
+                <li>Déterminer $\displaystyle \lim_{x \to -\infty} f(x)$.</li>
+                <li>Interpréter graphiquement ces résultats.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} \ln(e^x + 1) - x$</p>
+                    <p>$= \lim\limits_{x \to +\infty} \ln\left(\dfrac{e^x + 1}{e^x}\right) = \lim\limits_{x \to +\infty} \ln(1 + e^{-x}) = 0$</p>
+                    <p>Donc $\boxed{\lim\limits_{x \to +\infty} f(x) = 0}$</p>
+
+                    <p><strong>2.</strong> $\lim\limits_{x \to -\infty} f(x) = \lim\limits_{x \to -\infty} \ln(e^x + 1) - x$</p>
+                    <p>Quand $x \to -\infty$, $e^x \to 0$, donc $\ln(e^x + 1) \to 0$</p>
+                    <p>Donc $\boxed{\lim\limits_{x \to -\infty} f(x) = +\infty}$</p>
+
+                    <p><strong>3.</strong> Interprétation graphique :</p>
+                    <ul>
+                        <li>En $+\infty$, $y = 0$ est une asymptote horizontale.</li>
+                        <li>En $-\infty$, $f(x) \to +\infty$ donc pas d'asymptote horizontale.</li>
+                        <li>On a $f(x) = \ln(e^x + 1) - x = \ln(1 + e^{-x})$, donc $f(x) > 0$.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Limites - Fonction ln - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 4 - 97 limites à déterminer</p>
+    </footer>
+
+</body>
+</html>
