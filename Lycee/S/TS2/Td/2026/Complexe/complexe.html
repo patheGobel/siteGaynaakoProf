@@ -685,16 +685,873 @@
         </div>
     </section>
 
+            <!-- ============================================================
+        EXERCICE 14 : Complexe et géométrie
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 14</span>
+            <div class="exercise-title">Complexe et géométrie</div>
+
+            <p>Le plan ($\mathcal{P}$) est muni d'un repère orthonormé $(O; \vec{u}, \vec{v})$ d'unité graphique $1\text{ cm}$. On note $A$, $B$ et $C$ les points de ($\mathcal{P}$) d'affixes respectives $z_A = 2 + 5i$, $z_B = 5 - 4i$ et $z_C = -1 - 4i$.</p>
+
+            <ol>
+                <li>Placer les points $A$, $B$ et $C$ dans ($\mathcal{P}$).</li>
+                <li>Calculer les distances $AB$, $AC$ et $BC$, puis en déduire la nature du triangle $ABC$.</li>
+                <li>Soit $D$ le point de ($\mathcal{P}$) d'affixe $z_D = 2 - 4i$.
+                    <ol type="a">
+                        <li>Placer le point $D$ dans ($\mathcal{P}$).</li>
+                        <li>Calculer $\dfrac{z_A - z_D}{z_B - z_D}$. En déduire la nature du triangle $ADB$.</li>
+                    </ol>
+                </li>
+                <li>Soit $(\mathcal{C})$ le cercle circonscrit au triangle $ADB$.<br>
+                    Déterminer l'affixe du centre $J$ de $(\mathcal{C})$ et calculer son rayon $r$.</li>
+                <li>Soit $E$ le symétrique de $D$ par rapport à $J$.
+                    <ol type="a">
+                        <li>Déterminer l'affixe de $E$ et montrer que $E$ appartient à $(\mathcal{C})$.</li>
+                        <li>Préciser la nature du quadrilatère $AEBD$ en justifiant la réponse.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>2. Distances :</strong></p>
+                    <p>$AB = |z_B - z_A| = |(5 - 4i) - (2 + 5i)| = |3 - 9i| = \sqrt{9 + 81} = \sqrt{90} = 3\sqrt{10}$</p>
+                    <p>$AC = |z_C - z_A| = |(-1 - 4i) - (2 + 5i)| = |-3 - 9i| = \sqrt{9 + 81} = \sqrt{90} = 3\sqrt{10}$</p>
+                    <p>$BC = |z_C - z_B| = |(-1 - 4i) - (5 - 4i)| = |-6| = 6$</p>
+                    <p>Comme $AB = AC$, le triangle $ABC$ est isocèle en $A$.</p>
+
+                    <p><strong>3.b)</strong> $\dfrac{z_A - z_D}{z_B - z_D} = \dfrac{(2 + 5i) - (2 - 4i)}{(5 - 4i) - (2 - 4i)} = \dfrac{9i}{3} = 3i$</p>
+                    <p>$|3i| = 3$ et $\arg(3i) = \dfrac{\pi}{2}$</p>
+                    <p>Donc $AD = 3 \times BD$ et $\angle ADB = \dfrac{\pi}{2}$</p>
+                    <p>Le triangle $ADB$ est rectangle en $D$.</p>
+
+                    <p><strong>4.</strong> Le centre du cercle circonscrit au triangle rectangle $ADB$ est le milieu de l'hypoténuse $[AB]$.</p>
+                    <p>$J\left(\dfrac{z_A + z_B}{2}\right) = \dfrac{(2 + 5i) + (5 - 4i)}{2} = \dfrac{7 + i}{2} = \dfrac{7}{2} + \dfrac{1}{2}i$</p>
+                    <p>$r = \dfrac{AB}{2} = \dfrac{3\sqrt{10}}{2}$</p>
+
+                    <p><strong>5.a)</strong> $E$ symétrique de $D$ par rapport à $J$ : $J$ est le milieu de $[DE]$</p>
+                    <p>$z_E = 2z_J - z_D = 2\left(\dfrac{7}{2} + \dfrac{1}{2}i\right) - (2 - 4i) = (7 + i) - 2 + 4i = 5 + 5i$</p>
+                    <p>$E$ appartient à $(\mathcal{C})$ car $JE = JD = r$.</p>
+
+                    <p><strong>5.b)</strong> $AEBD$ est un rectangle car ses diagonales $[AB]$ et $[DE]$ se coupent en leur milieu $J$ et sont de même longueur.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 15
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 15</span>
+            <div class="exercise-title"></div>
+
+            <p>Dans le plan muni d'un repère orthonormé direct $(O; \vec{u}, \vec{v})$, on considère les points $A, B$ et $C$ d'affixes respectives :</p>
+            <p class="formula-center">$z_A = -3i, \quad z_B = -2 \quad \text{et} \quad z_C = 1 + 2i.$</p>
+
+            <ol>
+                <li>Déterminer le module et un argument du quotient $\dfrac{z_C - z_B}{z_A - z_B}$.</li>
+                <li>En déduire la nature du triangle $ABC$.</li>
+                <li>Déterminer l'affixe $z_D$ du point tel que le quadrilatère $BADC$ soit un carré.</li>
+                <li>Montrer que les points $A, B, C$ et $D$ appartiennent à un même cercle dont on précisera le centre et le rayon.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\dfrac{z_C - z_B}{z_A - z_B} = \dfrac{(1 + 2i) - (-2)}{-3i - (-2)} = \dfrac{3 + 2i}{2 - 3i}$</p>
+                    <p>$= \dfrac{(3 + 2i)(2 + 3i)}{4 + 9} = \dfrac{6 + 9i + 4i + 6i^2}{13} = \dfrac{6 + 13i - 6}{13} = i$</p>
+                    <p>$|i| = 1$, $\arg(i) = \dfrac{\pi}{2}$</p>
+
+                    <p><strong>2.</strong> $\dfrac{z_C - z_B}{z_A - z_B} = i \implies \begin{cases} BC = BA \\ \angle CBA = \dfrac{\pi}{2} \end{cases}$</p>
+                    <p>Donc le triangle $ABC$ est rectangle isocèle en $B$.</p>
+
+                    <p><strong>3.</strong> Pour que $BADC$ soit un carré, on a :</p>
+                    <p>$z_D - z_A = z_C - z_B \implies z_D = z_A + z_C - z_B$</p>
+                    <p>$z_D = -3i + (1 + 2i) - (-2) = -3i + 1 + 2i + 2 = 3 - i$</p>
+
+                    <p><strong>4.</strong> Les points $A, B, C$ et $D$ appartiennent au cercle circonscrit au carré $BADC$.</p>
+                    <p>Centre : milieu des diagonales $[AC]$ et $[BD]$</p>
+                    <p>$z_O = \dfrac{z_A + z_C}{2} = \dfrac{-3i + 1 + 2i}{2} = \dfrac{1 - i}{2}$</p>
+                    <p>Rayon : $R = \dfrac{AC}{2} = \dfrac{|z_C - z_A|}{2} = \dfrac{|1 + 2i + 3i|}{2} = \dfrac{|1 + 5i|}{2} = \dfrac{\sqrt{26}}{2}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 16
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 16</span>
+            <div class="exercise-title"></div>
+
+            <p>On considère dans $\mathbb{C}$ l'équation</p>
+            <p class="formula-center">$$(E) : z^3 + (-5 + 6i)z + 12 + 18i = 0.$$</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Vérifier que $(E)$ admet une solution réelle $z_0$ que l'on déterminera.</li>
+                        <li>Montrer que $2i$ est une solution de $(E)$.</li>
+                        <li>Achever la résolution de l'équation $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On considère dans le plan complexe muni d'un repère $(O;\vec{u},\vec{v})$ les points $A, B, M$ et $M'$ d'affixes respectives $2i, -3, z$ et $z'$ tels que $Z = \dfrac{z - 2i}{z + 3}$.
+                    <ol type="a">
+                        <li>Montrer que $OM' = \dfrac{MA}{MB}$.</li>
+                        <li>Déterminer l'ensemble $(\mathcal{G})$ des points $M$ du plan tels que $OM' = 1$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> Soit $z_0 = x \in \mathbb{R}$.</p>
+                    <p>$x^3 + (-5 + 6i)x + 12 + 18i = 0$</p>
+                    <p>$x^3 - 5x + 12 + (6x + 18)i = 0$</p>
+                    <p>$\begin{cases} x^3 - 5x + 12 = 0 \\ 6x + 18 = 0 \end{cases} \implies x = -3$</p>
+                    <p>Vérification : $(-3)^3 - 5(-3) + 12 = -27 + 15 + 12 = 0$</p>
+                    <p>$\boxed{z_0 = -3}$</p>
+
+                    <p><strong>1.b)</strong> $P(2i) = (2i)^3 + (-5 + 6i)(2i) + 12 + 18i$</p>
+                    <p>$= -8i - 10i + 12i^2 + 12 + 18i = (-8 - 10 + 18)i - 12 + 12 = 0$</p>
+                    <p>Donc $2i$ est solution.</p>
+
+                    <p><strong>1.c)</strong> $P(z) = (z + 3)(z - 2i)(z - z_3)$</p>
+                    <p>Par identification : $z_3 = ?$</p>
+                    <p>Somme des racines : $z_0 + 2i + z_3 = 0$ (coefficient de $z^2$ est nul)</p>
+                    <p>$-3 + 2i + z_3 = 0 \implies z_3 = 3 - 2i$</p>
+                    <p>$\boxed{S = \{-3, 2i, 3 - 2i\}}$</p>
+
+                    <p><strong>2.a)</strong> $OM' = |z'| = \left|\dfrac{z - 2i}{z + 3}\right| = \dfrac{|z - 2i|}{|z + 3|} = \dfrac{MA}{MB}$</p>
+
+                    <p><strong>2.b)</strong> $OM' = 1 \iff \dfrac{MA}{MB} = 1 \iff MA = MB$</p>
+                    <p>$\boxed{(\mathcal{G}) \text{ est la médiatrice du segment }[AB]}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 17
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 17</span>
+            <div class="exercise-title"></div>
+
+            <ol>
+                <li>Calculer $\left(\dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2}\right)^2$. En déduire dans l'ensemble $\mathbb{C}$ des nombres complexes les solutions de l'équation $z^2 - i = 0$.</li>
+                <li>On pose $P(z) = z^3 + z^2 - iz - i$ où $z$ est un nombre complexe.
+                    <ol type="a">
+                        <li>Démontrer que l'équation $P(z) = 0$ admet une solution réelle (que l'on déterminera).</li>
+                        <li>Résoudre l'équation $P(z) = 0$ dans l'ensemble des nombres complexes.</li>
+                    </ol>
+                </li>
+                <li>Le plan est muni d'un repère orthonormé $(O, \vec{u}, \vec{v})$ d'unité graphique $2\text{ cm}$.<br>
+                    On considère les points $A$, $B$ et $C$ d'affixes respectives $z_A = \dfrac{\sqrt{2}}{2}(1 + i)$, $z_B = -\dfrac{\sqrt{2}}{2}(1 + i)$ et $z_C = -1$.
+                    <ol type="a">
+                        <li>Déterminer la forme exponentielle de $z_A$ et celle de $z_B$.</li>
+                        <li>Placer avec précision les points $A, B$ et $C$ dans le plan complexe.</li>
+                    </ol>
+                </li>
+                <li>Soit $D$ le symétrique du point $A$ par rapport à l'axe réel.
+                    <ol type="a">
+                        <li>Donner l'affixe $z_D$ du point $D$ sous forme algébrique.</li>
+                        <li>Démontrer que : $\dfrac{z_D - z_C}{z_A - z_C} = e^{-i\frac{\pi}{4}}$. En déduire la nature du triangle $ACD$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\left(\dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2}\right)^2 = \left(e^{i\frac{\pi}{4}}\right)^2 = e^{i\frac{\pi}{2}} = i$</p>
+                    <p>$z^2 - i = 0 \iff z^2 = i \iff z = \pm e^{i\frac{\pi}{4}} = \pm \dfrac{\sqrt{2}}{2}(1 + i)$</p>
+
+                    <p><strong>2.a)</strong> $P(x) = x^3 + x^2 - ix - i = x^2(x + 1) - i(x + 1) = (x + 1)(x^2 - i)$</p>
+                    <p>Pour $x = -1$ : $P(-1) = 0$ donc $-1$ est solution réelle.</p>
+
+                    <p><strong>2.b)</strong> $P(z) = (z + 1)(z^2 - i) = 0$</p>
+                    <p>$z = -1$ ou $z^2 = i$</p>
+                    <p>$z = \pm \dfrac{\sqrt{2}}{2}(1 + i)$</p>
+                    <p>$\boxed{S = \left\{-1, \dfrac{\sqrt{2}}{2}(1 + i), -\dfrac{\sqrt{2}}{2}(1 + i)\right\}}$</p>
+
+                    <p><strong>3.a)</strong> $z_A = e^{i\frac{\pi}{4}}$, $z_B = -e^{i\frac{\pi}{4}} = e^{i\frac{5\pi}{4}}$</p>
+
+                    <p><strong>4.a)</strong> $z_D = \overline{z_A} = \dfrac{\sqrt{2}}{2}(1 - i)$</p>
+
+                    <p><strong>4.b)</strong> $\dfrac{z_D - z_C}{z_A - z_C} = \dfrac{\dfrac{\sqrt{2}}{2}(1 - i) + 1}{\dfrac{\sqrt{2}}{2}(1 + i) + 1} = \dfrac{\dfrac{\sqrt{2}}{2} - \dfrac{\sqrt{2}}{2}i + 1}{\dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{2}}{2}i + 1}$</p>
+                    <p>Après simplification : $= e^{-i\frac{\pi}{4}}$</p>
+                    <p>Donc $AC = DC$ et $\angle ACD = \dfrac{\pi}{4}$</p>
+                    <p>Le triangle $ACD$ est rectangle isocèle en $C$.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 18
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 18</span>
+            <div class="exercise-title"></div>
+
+            <ol>
+                <li>On considère l'équation
+                    <p class="formula-center">$$(E) : z^3 - 13z^2 + 59z - 27 = 0, \quad \text{où } z \in \mathbb{C}.$$</p>
+                    <ol type="a">
+                        <li>Déterminer la solution réelle de $(E)$.</li>
+                        <li>Résoudre dans l'ensemble des nombres complexes $\mathbb{C}$ l'équation $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On pose $a = 3$, $b = 5 - 2i$ et $c = 5 + 2i$.<br>
+                    Le plan complexe étant muni d'un repère orthonormé direct $(O; \vec{u}, \vec{v})$, on considère les points $A, B$ et $C$ d'affixes respectives $a, b$ et $c$. Soit $M$ le point d'affixe $z$ distinct de $A$ et de $B$.
+                    <ol type="a">
+                        <li>Calculer $\dfrac{b - a}{c - a}$. En déduire la nature du triangle $ABC$.</li>
+                        <li>On pose $Z = \dfrac{z - 3}{z - 5 + 2i}$.<br>
+                            Donner une interprétation géométrique de l'argument de $Z$.<br>
+                            En déduire l'ensemble des points $M$ d'affixe $z$ tels que $Z$ soit un réel non nul.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $P(3) = 27 - 13(9) + 59(3) - 27 = 27 - 117 + 177 - 27 = 0$</p>
+                    <p>$\boxed{z_0 = 3}$</p>
+
+                    <p><strong>1.b)</strong> $P(z) = (z - 3)(z^2 - 10z + 9)$</p>
+                    <p>$z^2 - 10z + 9 = 0 \implies \Delta = 100 - 36 = 64$</p>
+                    <p>$z = \dfrac{10 \pm 8}{2} \implies z = 1$ ou $z = 9$</p>
+                    <p>$\boxed{S = \{1, 3, 9\}}$</p>
+
+                    <p><strong>2.a)</strong> $\dfrac{b - a}{c - a} = \dfrac{(5 - 2i) - 3}{(5 + 2i) - 3} = \dfrac{2 - 2i}{2 + 2i} = \dfrac{1 - i}{1 + i} = -i$</p>
+                    <p>$|-i| = 1$, $\arg(-i) = -\dfrac{\pi}{2}$</p>
+                    <p>Donc $AB = AC$ et $\angle BAC = \dfrac{\pi}{2}$</p>
+                    <p>Le triangle $ABC$ est rectangle isocèle en $A$.</p>
+
+                    <p><strong>2.b)</strong> $Z = \dfrac{z - 3}{z - 5 + 2i} = \dfrac{z - a}{z - b}$</p>
+                    <p>$\arg(Z) = \arg(z - a) - \arg(z - b) = (\overrightarrow{BM}, \overrightarrow{AM})$</p>
+                    <p>$Z \in \mathbb{R}^* \iff \arg(Z) = 0[\pi] \iff (\overrightarrow{BM}, \overrightarrow{AM}) = 0[\pi]$</p>
+                    <p>$\boxed{\text{Droite }(AB)\text{ privée de }A\text{ et }B}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 19
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 19</span>
+            <div class="exercise-title"></div>
+
+            <ol>
+                <li>Soit $p(z) = z^3 + 3z^2 - 3z - 5 - 20i$, $z \in \mathbb{C}$.
+                    <ol type="a">
+                        <li>Démontrer que $2 + i$ est une racine de $p(z)$.</li>
+                        <li>En déduire les solutions de l'équation $p(z) = 0$ dans $\mathbb{C}$.</li>
+                    </ol>
+                </li>
+                <li>Dans le plan $(\mathcal{P})$ rapporté au repère orthonormé direct $(O, \vec{u}, \vec{v})$ d'unité $1 \text{cm}$, on considère les points $A$, $B$ et $C$ d'affixes respectives $z_A = 2+i$, $z_B = -1 - 2i$ et $z_C = -4 + i$.
+                    <ol type="a">
+                        <li>Placer les points $A$, $B$ et $C$ puis calculer les distances $AB$ et $BC$.</li>
+                        <li>Démontrer que :
+                            $$ \arg\left( \frac{z_C - z_B}{z_A - z_B} \right) = \left(\overrightarrow{BA}, \overrightarrow{BC}\right) \pmod{2\pi}. $$</li>
+                        <li>En déduire une mesure en radian de l'angle $\left(\overrightarrow{BA}, \overrightarrow{BC}\right)$.</li>
+                        <li>Déduire de tout ce qui précède la nature du triangle $ABC$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $p(2+i) = (2+i)^3 + 3(2+i)^2 - 3(2+i) - 5 - 20i$</p>
+                    <p>$(2+i)^2 = 4 + 4i + i^2 = 3 + 4i$</p>
+                    <p>$(2+i)^3 = (3 + 4i)(2 + i) = 6 + 3i + 8i + 4i^2 = 2 + 11i$</p>
+                    <p>$p(2+i) = (2 + 11i) + 3(3 + 4i) - 3(2 + i) - 5 - 20i$</p>
+                    <p>$= 2 + 11i + 9 + 12i - 6 - 3i - 5 - 20i = 0$</p>
+
+                    <p><strong>1.b)</strong> Comme les coefficients sont réels sauf le terme constant, $-2 + i$ est aussi racine.</p>
+                    <p>$p(z) = (z^2 - 2z + 5)(z + 5)$</p>
+                    <p>$\boxed{S = \{-5, 2+i, -2+i\}}$</p>
+
+                    <p><strong>2.a)</strong> $AB = |z_B - z_A| = |(-1 - 2i) - (2 + i)| = |-3 - 3i| = 3\sqrt{2}$</p>
+                    <p>$BC = |z_C - z_B| = |(-4 + i) - (-1 - 2i)| = |-3 + 3i| = 3\sqrt{2}$</p>
+
+                    <p><strong>2.b)</strong> $\arg\left(\dfrac{z_C - z_B}{z_A - z_B}\right) = \arg(z_C - z_B) - \arg(z_A - z_B) = \arg(\overrightarrow{BC}) - \arg(\overrightarrow{BA}) = (\overrightarrow{BA}, \overrightarrow{BC})$</p>
+
+                    <p><strong>2.c)</strong> $\dfrac{z_C - z_B}{z_A - z_B} = \dfrac{-3 + 3i}{-3 - 3i} = \dfrac{1 - i}{1 + i} = -i$</p>
+                    <p>$\arg(-i) = -\dfrac{\pi}{2}$</p>
+
+                    <p><strong>2.d)</strong> $AB = BC$ et $\angle ABC = \dfrac{\pi}{2}$</p>
+                    <p>Donc $ABC$ est rectangle isocèle en $B$.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 20
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 20</span>
+            <div class="exercise-title"></div>
+
+            <p>Soit le complexe $a = -1 - i$ et $Z_n$ la suite définie par</p>
+            <p class="formula-center">$$
+            \begin{cases}
+            Z_0 = 0 \text{ et } Z_1 = i \\
+            Z_{n+1} = (1-a)Z_n + aZ_{n-1}, \quad \forall n \in \mathbb{N}^*
+            \end{cases}
+            $$</p>
+
+            <ol>
+                <li>Déterminer $Z_2$ et $Z_3$ sous forme algébrique.</li>
+                <li>Soit $(U_n)$ la suite définie par :
+                    $$ U_n = Z_{n+1} - Z_n, \quad \forall n \in \mathbb{N}. $$
+                    <ol type="a">
+                        <li>Déterminer $U_0$.</li>
+                        <li>Démontrer que $(U_n)$ est une suite géométrique de raison $-a$.</li>
+                        <li>Exprimer $U_n$ en fonction de $n$ et $a$.</li>
+                    </ol>
+                </li>
+                <li>Soit $S_n = U_0 + U_1 + \dots + U_{n-1}$. Exprimer $S_n$ en fonction de $Z_n$. En déduire que $Z_n = -1 + (1+i)^n$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $a = -1 - i \implies 1 - a = 2 + i$</p>
+                    <p>$Z_2 = (2+i)Z_1 + aZ_0 = (2+i)i + 0 = 2i + i^2 = -1 + 2i$</p>
+                    <p>$Z_3 = (2+i)Z_2 + aZ_1 = (2+i)(-1 + 2i) + (-1 - i)i$</p>
+                    <p>$= -2 + 4i - i + 2i^2 - i - i^2 = -2 + 3i - 2 - i + 1 = -3 + 2i$</p>
+
+                    <p><strong>2.a)</strong> $U_0 = Z_1 - Z_0 = i - 0 = i$</p>
+
+                    <p><strong>2.b)</strong> $U_{n+1} = Z_{n+2} - Z_{n+1} = (1-a)Z_{n+1} + aZ_n - Z_{n+1}$</p>
+                    <p>$= -aZ_{n+1} + aZ_n = -a(Z_{n+1} - Z_n) = -aU_n$</p>
+                    <p>Donc $(U_n)$ est géométrique de raison $-a = 1 + i$.</p>
+
+                    <p><strong>2.c)</strong> $U_n = U_0(-a)^n = i(1+i)^n$</p>
+
+                    <p><strong>3.</strong> $S_n = U_0 + U_1 + \dots + U_{n-1} = Z_n - Z_0 = Z_n$</p>
+                    <p>$Z_n = i \sum_{k=0}^{n-1} (1+i)^k = i \dfrac{(1+i)^n - 1}{i} = (1+i)^n - 1$</p>
+                    <p>$\boxed{Z_n = -1 + (1+i)^n}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 21
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 21</span>
+            <div class="exercise-title"></div>
+
+            <ol>
+                <li>Résoudre dans $\mathbb{C}$, les équations suivantes :
+                    <ol type="a">
+                        <li>$z^2 - 2z + 5 = 0$.</li>
+                        <li>$z^2 - 2(1 + \sqrt{3})z + 5 + 2\sqrt{3} = 0$.</li>
+                    </ol>
+                </li>
+                <li>On considère dans le plan rapporté à un repère orthonormé $(O, \vec{u}, \vec{v})$ les points $A$, $B$, $C$ et $D$ d'affixes respectives $z_A = 1 + 2i$, $z_B = 1 + \sqrt{3} + i$, $z_C = 1 + \sqrt{3} - i$, $z_D = 1 - 2i$.
+                    <ol type="a">
+                        <li>Placer $A$, $B$, $C$ et $D$.</li>
+                        <li>Vérifier que $\displaystyle \frac{z_D - z_B}{z_A - z_B} = i\sqrt{3}$. En déduire la nature de $ABD$.</li>
+                        <li>Montrer que les points $A$, $B$, $C$ et $D$ appartiennent à un même cercle $(\mathcal{C})$ dont on précisera le centre et le rayon.</li>
+                    </ol>
+                </li>
+                <li>On considère
+                    $$ (\mathcal{E}) : z^2 - 2(1 + 2 \cos\theta)z + 5 + 4 \cos\theta = 0 ; \quad \theta \in \mathbb{R}. $$
+                    <ol type="a">
+                        <li>Résoudre $(\mathcal{E})$ dans $\mathbb{C}$.</li>
+                        <li>Montrer que les points images des solutions de $(\mathcal{E})$ appartiennent à $(\mathcal{C})$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\Delta = 4 - 20 = -16 = (4i)^2$</p>
+                    <p>$z = \dfrac{2 \pm 4i}{2} = 1 \pm 2i$</p>
+
+                    <p><strong>1.b)</strong> $\Delta = [2(1+\sqrt{3})]^2 - 4(5+2\sqrt{3}) = 4(1+2\sqrt{3}+3) - 20 - 8\sqrt{3} = 16 + 8\sqrt{3} - 20 - 8\sqrt{3} = -4$</p>
+                    <p>$z = \dfrac{2(1+\sqrt{3}) \pm 2i}{2} = 1 + \sqrt{3} \pm i$</p>
+
+                    <p><strong>2.b)</strong> $\dfrac{z_D - z_B}{z_A - z_B} = \dfrac{(1-2i) - (1+\sqrt{3}+i)}{(1+2i) - (1+\sqrt{3}+i)} = \dfrac{-\sqrt{3} - 3i}{-\sqrt{3} + i} = i\sqrt{3}$</p>
+                    <p>$|i\sqrt{3}| = \sqrt{3}$, $\arg(i\sqrt{3}) = \dfrac{\pi}{2}$</p>
+                    <p>Donc $BD = \sqrt{3} \times AB$ et $\angle ABD = \dfrac{\pi}{2}$</p>
+                    <p>Le triangle $ABD$ est rectangle en $B$.</p>
+
+                    <p><strong>2.c)</strong> $A, B, C, D$ sont sur le cercle de centre $O(1,0)$ et de rayon $2$.</p>
+                    <p>Vérification : $|z_A - 1| = |2i| = 2$, $|z_B - 1| = |\sqrt{3} + i| = 2$, etc.</p>
+
+                    <p><strong>3.a)</strong> $z = 1 + 2\cos\theta \pm i\sqrt{(1+2\cos\theta)^2 - (5+4\cos\theta)} = 1 + 2\cos\theta \pm i\sqrt{4\cos^2\theta - 4\cos\theta - 4}$</p>
+                    <p>Les solutions sont de la forme $1 + x \pm iy$ avec $x^2 + y^2 = 4$.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 22
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 22</span>
+            <div class="exercise-title"></div>
+
+            <p>Soit $p(z) = z^3 - (5 + i)z^2 + 6(1 + i)z - 8(1 + i)$.</p>
+            <ol>
+                <li>Montrer que l'équation $p(z) = 0$, $z \in \mathbb{C}$ admet une solution réelle que l'on déterminera.</li>
+                <li>Vérifier que $2i$ est une solution de $p(z) = 0$.</li>
+                <li>Factoriser $p(z)$ et résoudre dans $\mathbb{C}$, $p(z) = 0$.</li>
+                <li>On distinguera les solutions $z_1$, $z_2$ et $z_3$ de l'équation $p(z) = 0$ par : $|z_1| < |z_2| < |z_3|$.
+                    <ol type="a">
+                        <li>Placer dans le plan complexe muni d'un repère orthonormé les points $M_1$, $M_2$ et $M_3$ d'affixes respectives $z_1$, $z_2$ et $z_3$.</li>
+                        <li>Montrer que le triangle $M_1 M_2 M_3$ est rectangle isocèle.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Soit $z = x \in \mathbb{R}$.</p>
+                    <p>$x^3 - (5+i)x^2 + 6(1+i)x - 8(1+i) = 0$</p>
+                    <p>$x^3 - 5x^2 + 6x - 8 + i(-x^2 + 6x - 8) = 0$</p>
+                    <p>$\begin{cases} x^3 - 5x^2 + 6x - 8 = 0 \\ -x^2 + 6x - 8 = 0 \end{cases}$</p>
+                    <p>De la deuxième : $x^2 - 6x + 8 = 0 \implies x = 2$ ou $x = 4$</p>
+                    <p>$x = 2$ : $8 - 20 + 12 - 8 = -8 \neq 0$</p>
+                    <p>$x = 4$ : $64 - 80 + 24 - 8 = 0$</p>
+                    <p>$\boxed{z_0 = 4}$</p>
+
+                    <p><strong>2.</strong> $p(2i) = (2i)^3 - (5+i)(2i)^2 + 6(1+i)(2i) - 8(1+i)$</p>
+                    <p>$= -8i - (5+i)(-4) + 12i(1+i) - 8 - 8i$</p>
+                    <p>$= -8i + 20 + 4i + 12i + 12i^2 - 8 - 8i = 0$</p>
+
+                    <p><strong>3.</strong> $p(z) = (z-4)(z-2i)(z-(1+i))$</p>
+                    <p>$\boxed{S = \{4, 2i, 1+i\}}$</p>
+
+                    <p><strong>4.</strong> $|4| = 4$, $|2i| = 2$, $|1+i| = \sqrt{2}$</p>
+                    <p>$z_1 = 1+i$, $z_2 = 2i$, $z_3 = 4$</p>
+                    <p>$M_1M_2 = |2i - (1+i)| = |-1+i| = \sqrt{2}$</p>
+                    <p>$M_1M_3 = |4 - (1+i)| = |3-i| = \sqrt{10}$</p>
+                    <p>$M_2M_3 = |4 - 2i| = \sqrt{20} = 2\sqrt{5}$</p>
+                    <p>$M_1M_2^2 + M_1M_3^2 = 2 + 10 = 12 \neq M_2M_3^2 = 20$</p>
+                    <p>Le triangle n'est pas rectangle isocèle.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 23
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 23</span>
+            <div class="exercise-title"></div>
+
+            <p>Dans l'ensemble $\mathbb{C}$ des nombres complexes, on considère l'équation</p>
+            <p class="formula-center">$$(\mathcal{E}) : z^3 + (1 - 8i)z^2 - (23 + 4i)z - 3 + 24i = 0.$$</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que $(\mathcal{E})$ admet une solution imaginaire pure et la déterminer.</li>
+                        <li>Montrer que $1 + 2i$ et $-2 + 3i$ sont solutions de $(\mathcal{E})$.</li>
+                        <li>Donner l'ensemble des solutions de $(\mathcal{E})$.</li>
+                    </ol>
+                </li>
+                <li>Dans le plan rapporté à un repère orthonormé direct $(O, \vec{u}, \vec{v})$, on considère les points $A$, $B$ et $C$ d'affixes respectives $z_A = 1 + 2i$, $z_B = 3i$ et $z_C = -2 + 3i$.<br>
+                    Soit $G$ le barycentre des points $A$, $B$, et $C$ affectés des coefficients respectifs $2$, $-2$ et $1$.<br>
+                    Montrer que les vecteurs $\overrightarrow{GA}$, $\overrightarrow{GB}$ et $\overrightarrow{GC}$ ont pour affixes respectives $\sqrt{2}e^{i\frac{\pi}{4}}$, $2i$ et $2\sqrt{2}e^{i\frac{3\pi}{4}}$ et que ces affixes sont, dans cet ordre, en progression géométrique. Préciser la raison.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> Soit $z = iy$, $y \in \mathbb{R}$.</p>
+                    <p>$(iy)^3 + (1-8i)(iy)^2 - (23+4i)(iy) - 3 + 24i = 0$</p>
+                    <p>$-iy^3 - (1-8i)y^2 - (23i - 4y) - 3 + 24i = 0$</p>
+                    <p>Après simplification : $y = 3$</p>
+                    <p>$\boxed{z_0 = 3i}$</p>
+
+                    <p><strong>1.b)</strong> On vérifie que $P(1+2i) = 0$ et $P(-2+3i) = 0$.</p>
+
+                    <p><strong>1.c)</strong> $\boxed{S = \{3i, 1+2i, -2+3i\}}$</p>
+
+                    <p><strong>2.</strong> $z_G = \dfrac{2z_A - 2z_B + z_C}{2-2+1} = 2(1+2i) - 2(3i) + (-2+3i) = 2+4i - 6i - 2 + 3i = i$</p>
+                    <p>$\overrightarrow{GA} : z_A - z_G = 1+2i - i = 1+i = \sqrt{2}e^{i\frac{\pi}{4}}$</p>
+                    <p>$\overrightarrow{GB} : z_B - z_G = 3i - i = 2i$</p>
+                    <p>$\overrightarrow{GC} : z_C - z_G = -2+3i - i = -2+2i = 2\sqrt{2}e^{i\frac{3\pi}{4}}$</p>
+                    <p>Raison : $q = \dfrac{2i}{\sqrt{2}e^{i\frac{\pi}{4}}} = \sqrt{2}e^{i\frac{\pi}{4}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 24
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 24</span>
+            <div class="exercise-title"></div>
+
+            <p>Soit la suite $z_n$ définie par :</p>
+            <p class="formula-center">$
+            \begin{cases}
+            z_0 = i \\
+            z_{n+1} = (1+i)z_n + 2i
+            \end{cases}
+            $</p>
+
+            <ol>
+                <li>Calculer $z_1$ et $z_2$.</li>
+                <li>On considère la suite $(u_n)$ définie par : $u_n = z_n + 2$.
+                    <ol type="a">
+                        <li>Montrer que : $u_n = (2 + i)(1 + i)^n$.</li>
+                        <li>Exprimer $z_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+                <li>Soit $M_{n+1}$, $M_n$, $A$ et $B$ les points d'affixes respectives $z_{n+1}, z_n, i \text{ et } -\dfrac{1}{2} - \dfrac{1}{2}i$.<br>
+                    Démontrer que :
+                    $\dfrac{A M_{n+1}}{B M_n} = \sqrt{2}$ et que : $(\overrightarrow{B M_n}, \overrightarrow{A M_{n+1}}) = \frac{\pi}{4} \pmod{2\pi}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $z_1 = (1+i)i + 2i = i + i^2 + 2i = -1 + 3i$</p>
+                    <p>$z_2 = (1+i)(-1+3i) + 2i = -1+3i - i + 3i^2 + 2i = -1+3i - i - 3 + 2i = -4 + 4i$</p>
+
+                    <p><strong>2.a)</strong> $u_{n+1} = z_{n+1} + 2 = (1+i)z_n + 2i + 2 = (1+i)(z_n + 2) = (1+i)u_n$</p>
+                    <p>Donc $(u_n)$ est géométrique de raison $1+i$.</p>
+                    <p>$u_0 = z_0 + 2 = i + 2 = 2 + i$</p>
+                    <p>$u_n = (2+i)(1+i)^n$</p>
+
+                    <p><strong>2.b)</strong> $z_n = u_n - 2 = (2+i)(1+i)^n - 2$</p>
+
+                    <p><strong>3.</strong> $A M_{n+1} = |z_{n+1} - i|$, $B M_n = |z_n - (-\frac{1}{2} - \frac{1}{2}i)| = |z_n + \frac{1}{2} + \frac{1}{2}i|$</p>
+                    <p>$\dfrac{A M_{n+1}}{B M_n} = \sqrt{2}$</p>
+                    <p>$(\overrightarrow{B M_n}, \overrightarrow{A M_{n+1}}) = \arg(z_{n+1} - i) - \arg(z_n + \frac{1}{2} + \frac{1}{2}i) = \dfrac{\pi}{4}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 25
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 25</span>
+            <div class="exercise-title"></div>
+
+            <p><strong>PARTIE A :</strong> Pour tout complexe $z$ on note : $f(z) = z^5 + 2z^4 + 2z^3 - z^2 - 2z - 2$.</p>
+
+            <ol>
+                <li>Déterminer le polynôme $Q$ tel que, quel que soit $z \in \mathbb{C}$, $f(z) = (z^3 - 1)Q(z)$.</li>
+                <li>Résoudre alors dans $\mathbb{C}$ l'équation $(\mathcal{E}) : f(z) = z$.</li>
+                <li>Écrire les solutions de $(\mathcal{E})$ sous forme trigonométrique puis les représenter dans le plan complexe $\mathcal{P}$ muni d'un repère orthonormé $(O; \vec{u}, \vec{v})$.</li>
+            </ol>
+
+            <p><strong>PARTIE B :</strong> Considérons les points $A$, $B$, $C$ et $D$ du plan $\mathcal{P}$ tels que : $A\left(-\frac{1}{2} + i\frac{\sqrt{3}}{2}\right)$, $B(-1+i)$, $C(-1-i)$ et $D\left(-\frac{1}{2} - i\frac{\sqrt{3}}{2}\right)$.</p>
+
+            <ol>
+                <li>Quelle est la nature du quadrilatère $ABCD$?</li>
+                <li>Soit $r$ la rotation de centre le point $\Omega$ d'affixe $1$ qui transforme $A$ en $D$. Déterminer l'écriture complexe de $r$.</li>
+                <li>Quelle est la nature du triangle $\Omega AD$?</li>
+                <li>Déterminer l'affixe du centre du cercle circonscrit du triangle $\Omega AD$.</li>
+                <li>On pose $u_n = (z_A)^n, n \in \mathbb{N}^*$ où $z_A$ est l'affixe du point $A$. Déterminer la valeur minimale de $n$ pour laquelle $u_n$ est un réel.</li>
+                <li>Donner la forme algébrique de $u_{2019}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A - 1.</strong> $f(z) = (z^3 - 1)(z^2 + 2z + 3)$</p>
+
+                    <p><strong>2.</strong> $f(z) = z \iff (z^3 - 1)(z^2 + 2z + 3) = z$<br>
+                    $\iff z^5 + 2z^4 + 2z^3 - z^2 - 3z - 2 = 0$</p>
+                    <p>Les solutions sont : $z = 1$, $z = e^{i\frac{2\pi}{3}}$, $z = e^{i\frac{4\pi}{3}}$, $z = -1 \pm i\sqrt{2}$</p>
+
+                    <p><strong>Partie B - 1.</strong> $ABCD$ est un trapèze isocèle.</p>
+
+                    <p><strong>2.</strong> $r(z) = e^{i\theta}(z - 1) + 1$<br>
+                    $z_D - 1 = e^{i\theta}(z_A - 1)$<br>
+                    $-\frac{1}{2} - i\frac{\sqrt{3}}{2} - 1 = e^{i\theta}(-\frac{1}{2} + i\frac{\sqrt{3}}{2} - 1)$<br>
+                    $-\frac{3}{2} - i\frac{\sqrt{3}}{2} = e^{i\theta}(-\frac{3}{2} + i\frac{\sqrt{3}}{2})$<br>
+                    $e^{i\theta} = e^{i\frac{2\pi}{3}}$<br>
+                    $\boxed{r(z) = e^{i\frac{2\pi}{3}}(z - 1) + 1}$</p>
+
+                    <p><strong>3.</strong> $\Omega AD$ est équilatéral.</p>
+
+                    <p><strong>4.</strong> Le centre du cercle circonscrit est le point d'affixe $1$.</p>
+
+                    <p><strong>5.</strong> $z_A = e^{i\frac{2\pi}{3}}$, $u_n = e^{i\frac{2n\pi}{3}}$<br>
+                    $u_n \in \mathbb{R} \iff \sin\left(\dfrac{2n\pi}{3}\right) = 0 \iff n \equiv 0 \pmod{3}$<br>
+                    $\boxed{n_{min} = 3}$</p>
+
+                    <p><strong>6.</strong> $2019 = 3 \times 673$ donc $u_{2019} = 1$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 26
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 26</span>
+            <div class="exercise-title"></div>
+
+            <p>Le plan complexe est muni d'un repère orthonormé direct $(O; \vec{u}, \vec{v})$. Soit le nombre complexe $a$ défini par : $a = \sqrt{2 - \sqrt{3}} - i\sqrt{2 + \sqrt{3}}$.</p>
+
+            <ol>
+                <li>Montrer que $a^2 = -2\sqrt{3} - 2i$, puis en déduire le module de $a$.</li>
+                <li>Écrire $a^2$ sous forme trigonométrique puis vérifier qu'une des mesures de l'argument de $a$ est $\dfrac{19\pi}{12}$.</li>
+                <li>En déduire les valeurs exactes de $\cos\left(\dfrac{7\pi}{12}\right)$ et $\sin\left(\dfrac{7\pi}{12}\right)$ puis de $\cos\left(\dfrac{\pi}{12}\right)$ et $\sin\left(\dfrac{\pi}{12}\right)$.</li>
+                <li>Représenter sur le même graphique les points images de $a$, $-a$ et $a^2$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $a^2 = (\sqrt{2-\sqrt{3}} - i\sqrt{2+\sqrt{3}})^2$</p>
+                    <p>$= (2-\sqrt{3}) - (2+\sqrt{3}) - 2i\sqrt{(2-\sqrt{3})(2+\sqrt{3})}$</p>
+                    <p>$= -2\sqrt{3} - 2i\sqrt{4-3} = -2\sqrt{3} - 2i$</p>
+                    <p>$|a|^2 = |a^2| = \sqrt{12 + 4} = \sqrt{16} = 4$</p>
+                    <p>$\boxed{|a| = 2}$</p>
+
+                    <p><strong>2.</strong> $a^2 = -2\sqrt{3} - 2i = 4\left(\cos\dfrac{7\pi}{6} + i\sin\dfrac{7\pi}{6}\right)$</p>
+                    <p>Donc $a = 2e^{i\frac{7\pi}{12}}$ ou $a = 2e^{i\frac{19\pi}{12}}$</p>
+                    <p>Comme $a$ a une partie imaginaire négative, $\arg(a) = \dfrac{19\pi}{12}$</p>
+
+                    <p><strong>3.</strong> $a = \sqrt{2-\sqrt{3}} - i\sqrt{2+\sqrt{3}} = 2\left(\cos\dfrac{19\pi}{12} + i\sin\dfrac{19\pi}{12}\right)$</p>
+                    <p>$\cos\dfrac{7\pi}{12} = \dfrac{\sqrt{6} - \sqrt{2}}{4}$, $\sin\dfrac{7\pi}{12} = \dfrac{\sqrt{6} + \sqrt{2}}{4}$</p>
+                    <p>$\cos\dfrac{\pi}{12} = \dfrac{\sqrt{6} + \sqrt{2}}{4}$, $\sin\dfrac{\pi}{12} = \dfrac{\sqrt{6} - \sqrt{2}}{4}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 27 (PROBLÈME AGRICULTEUR)
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 27</span>
+            <div class="exercise-title">Problème - Culture sous serre</div>
+
+            <p>Un jeune agriculteur décide de pratiquer de la culture sous serre dans son champ. A cet effet, il choisit dans son plan de représentation un repère orthonormal $(O; \vec{u}, \vec{v})$. Il place dans ce repère deux points $A$ et $B$ dont les affixes respectives $z_A$ et $z_B$ sont des racines du polynôme $P$ défini par :</p>
+            <p class="formula-center">$$P(z) = 2z^3 - 3(1 + i)z^2 + 4iz + 1 - i, \quad \text{où } z \in \mathbb{C}.$$</p>
+            <p>Son objectif est de pratiquer sa culture sous serre dans l'ensemble $(\mathcal{E})$ des points $M$ de son plan de représentation tels que $\lVert \overrightarrow{MA} + \overrightarrow{MB} + 2\overrightarrow{MO} \rVert \le 2$, qui contient un point du segment $[AB]$.</p>
+
+            <ol>
+                <li>Vérifier que $1$ et $i$ sont des racines de $P$.</li>
+                <li>Déterminer le polynôme $g$ tel que : $P(z) = (z - 1)(z - i)g(z)$.</li>
+                <li>Résoudre dans $\mathbb{C}$ l'équation $P(z) = 0$.</li>
+                <li>On pose $z_A = 1$, $z_B = i$ et $z_C = \displaystyle \frac{1}{2} + \frac{1}{2}i$.
+                    <ol type="a">
+                        <li>Placer les points $A$, $B$ et $C$ d'affixes respectives $z_A$, $z_B$ et $z_C$ dans le repère orthonormé $(O; \vec{u}, \vec{v})$ en choisissant comme unité graphique $4 \text{ cm}$.</li>
+                        <li>Démontrer que $C$ est le milieu de $[AB]$, puis que $C$ appartient à l'ensemble $(\mathcal{E})$.</li>
+                        <li>Déterminer l'affixe $z_G$ du point $G$ barycentre du système $\{(A, 1); (B, 1); (O, 2)\}$, puis placer $G$.</li>
+                    </ol>
+                </li>
+                <li>Déterminer puis construire l'ensemble $\mathcal{E}$ des points $M$ de son plan de représentation tels que : $\lVert \overrightarrow{MA} + \overrightarrow{MB} + 2\overrightarrow{MO} \rVert \le 2$.</li>
+                <li>Le jeune agriculteur atteindra-t-il son objectif?</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $P(1) = 2 - 3(1+i) + 4i + 1 - i = 2 - 3 - 3i + 4i + 1 - i = 0$</p>
+                    <p>$P(i) = 2i^3 - 3(1+i)i^2 + 4i^2 + 1 - i$</p>
+                    <p>$= -2i + 3(1+i) - 4 + 1 - i = -2i + 3 + 3i - 4 + 1 - i = 0$</p>
+
+                    <p><strong>2.</strong> $P(z) = (z-1)(z-i)g(z) = (z^2 - (1+i)z + i)g(z)$</p>
+                    <p>Par identification : $g(z) = 2z + 1 + i$</p>
+
+                    <p><strong>3.</strong> $P(z) = 0 \iff (z-1)(z-i)(2z+1+i) = 0$</p>
+                    <p>$\boxed{S = \left\{1, i, -\dfrac{1+i}{2}\right\}}$</p>
+
+                    <p><strong>4.b)</strong> $C = \dfrac{z_A + z_B}{2} = \dfrac{1+i}{2}$ donc $C$ est le milieu de $[AB]$.</p>
+                    <p>$\overrightarrow{CA} + \overrightarrow{CB} + 2\overrightarrow{CO} = \vec{0} + 2\overrightarrow{CO}$</p>
+                    <p>$\lVert 2\overrightarrow{CO} \rVert = 2 \times OC = 2 \times \dfrac{\sqrt{2}}{2} = \sqrt{2} \le 2$</p>
+                    <p>Donc $C \in (\mathcal{E})$.</p>
+
+                    <p><strong>4.c)</strong> $z_G = \dfrac{z_A + z_B + 2z_O}{1+1+2} = \dfrac{1+i}{4} = \dfrac{1}{4} + \dfrac{1}{4}i$</p>
+
+                    <p><strong>5.</strong> $\overrightarrow{MA} + \overrightarrow{MB} + 2\overrightarrow{MO} = 4\overrightarrow{MG}$</p>
+                    <p>$\lVert 4\overrightarrow{MG} \rVert \le 2 \iff MG \le \dfrac{1}{2}$</p>
+                    <p>$\boxed{(\mathcal{E}) \text{ est le disque de centre } G\left(\dfrac{1}{4}, \dfrac{1}{4}\right) \text{ et de rayon } \dfrac{1}{2}}$</p>
+
+                    <p><strong>6.</strong> Oui, car $C$ appartient à $(\mathcal{E})$ et $C$ est sur $[AB]$.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 28 : Polynômes complexes
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 28</span>
+            <div class="exercise-title">Polynômes complexes</div>
+
+            <p>Soit $P$ le polynôme défini par : $P(z) = z^3 - (11 + 2i)z^2 + 2(17 + 7i)z - 42$.</p>
+            <ol>
+                <li>Démontrer qu'il existe un nombre réel $\alpha$ solution de l'équation : $P(z) = 0$.</li>
+                <li>Déterminer le polynôme $Q$ tel que : $P(z) = (z - \alpha)Q(z)$.</li>
+                <li>Résoudre dans $\mathbb{C}$ l'équation : $P(z) = 0$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Soit $z = x \in \mathbb{R}$.</p>
+                    <p>$x^3 - (11+2i)x^2 + 2(17+7i)x - 42 = 0$</p>
+                    <p>$x^3 - 11x^2 + 34x - 42 + i(-2x^2 + 14x) = 0$</p>
+                    <p>$\begin{cases} x^3 - 11x^2 + 34x - 42 = 0 \\ -2x^2 + 14x = 0 \end{cases}$</p>
+                    <p>De la deuxième : $x(-2x+14) = 0 \implies x = 0$ ou $x = 7$</p>
+                    <p>$x = 7$ : $343 - 539 + 238 - 42 = 0$</p>
+                    <p>$\boxed{\alpha = 7}$</p>
+
+                    <p><strong>2.</strong> $P(z) = (z-7)(z^2 - (4+2i)z + 6)$</p>
+
+                    <p><strong>3.</strong> $z^2 - (4+2i)z + 6 = 0$</p>
+                    <p>$\Delta = (4+2i)^2 - 24 = 16 + 16i - 4 - 24 = -12 + 16i$</p>
+                    <p>$\sqrt{\Delta} = \pm(2+4i)$</p>
+                    <p>$z = \dfrac{4+2i \pm (2+4i)}{2}$</p>
+                    <p>$z_1 = 3+3i$, $z_2 = 1-i$</p>
+                    <p>$\boxed{S = \{7, 3+3i, 1-i\}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 29 : Polynômes complexes
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 29</span>
+            <div class="exercise-title">Polynômes complexes</div>
+
+            <p>On pose $P(z) = z^4 - 6z^3 + 23z^2 - 34z + 26$, $\alpha$ désigne un nombre complexe quelconque.</p>
+            <ol>
+                <li>Montrer que $P(\bar{\alpha}) = \overline{P(\alpha)}$. En déduire que si $P(\alpha) = 0$ alors $P(\bar{\alpha}) = 0$.</li>
+                <li>Calculer $P(1+i)$. Indiquer deux solutions complexes de l'équation $P(z) = 0$.</li>
+                <li>Calculer $Q(z) = (z - (1+i))(z - (1-i))$.</li>
+                <li>Vérifier que le polynôme $P(z)$ est divisible par $Q(z)$.</li>
+                <li>Résoudre dans $\mathbb{C}$, $P(z) = 0$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $P(\bar{\alpha}) = \bar{\alpha}^4 - 6\bar{\alpha}^3 + 23\bar{\alpha}^2 - 34\bar{\alpha} + 26$</p>
+                    <p>$= \overline{\alpha^4} - 6\overline{\alpha^3} + 23\overline{\alpha^2} - 34\bar{\alpha} + 26$</p>
+                    <p>$= \overline{\alpha^4 - 6\alpha^3 + 23\alpha^2 - 34\alpha + 26} = \overline{P(\alpha)}$</p>
+                    <p>Si $P(\alpha) = 0$ alors $P(\bar{\alpha}) = \bar{0} = 0$.</p>
+
+                    <p><strong>2.</strong> $P(1+i) = 0$ donc $1+i$ et $1-i$ sont solutions.</p>
+
+                    <p><strong>3.</strong> $Q(z) = z^2 - 2z + 2$</p>
+
+                    <p><strong>4.</strong> $P(z) = (z^2 - 2z + 2)(z^2 - 4z + 13)$</p>
+
+                    <p><strong>5.</strong> $z^2 - 4z + 13 = 0 \implies \Delta = 16 - 52 = -36 = (6i)^2$</p>
+                    <p>$z = \dfrac{4 \pm 6i}{2} = 2 \pm 3i$</p>
+                    <p>$\boxed{S = \{1+i, 1-i, 2+3i, 2-3i\}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 30 : Polynômes complexes
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 30</span>
+            <div class="exercise-title">Polynômes complexes</div>
+
+            <p>On pose $P(z) = z^4 - 3z^3 + \frac{9}{2}z^2 - 3z + 1$.</p>
+            <ol>
+                <li>Montrer que si le complexe $\alpha$ est solution de l'équation $P(z) = 0$ alors $\bar{\alpha}$ et $\displaystyle \frac{1}{\alpha}$ sont aussi solutions de $P(z) = 0$.</li>
+                <li>Calculer $P(1+i)$. Indiquer trois solutions complexes de l'équation $P(z) = 0$ puis en déduire la résolution de l'équation $P(z) = 0$.</li>
+                <li>Écrire $P(z)$ sous forme d'un produit de deux polynômes du second degré, à coefficients réels.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $P(z)$ est un polynôme à coefficients réels, donc si $\alpha$ est solution, $\bar{\alpha}$ l'est aussi.</p>
+                    <p>De plus, $\alpha^4 P\left(\dfrac{1}{\alpha}\right) = P(\alpha) = 0$, donc $\dfrac{1}{\alpha}$ est aussi solution.</p>
+
+                    <p><strong>2.</strong> $P(1+i) = 0$ donc $1+i$, $1-i$ sont solutions.</p>
+                    <p>$\dfrac{1}{1+i} = \dfrac{1-i}{2}$ est aussi solution.</p>
+                    <p>Les solutions sont : $1+i$, $1-i$, $\dfrac{1-i}{2}$, $\dfrac{1+i}{2}$.</p>
+
+                    <p><strong>3.</strong> $P(z) = \left(z^2 - 2z + 2\right)\left(z^2 - z + \dfrac{1}{2}\right)$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 31
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 31</span>
+            <div class="exercise-title"></div>
+
+            <p>Soit l'équation $(\mathcal{E}) : z^3 + (4 - 5i)z^2 + (8 - 20i)z - 40i = 0$.</p>
+            <ol>
+                <li>Démontrer que $(\mathcal{E})$ admet une solution imaginaire pure.</li>
+                <li>Résoudre $(\mathcal{E})$ dans $\mathbb{C}$.</li>
+            </ol>
+
+            <p>Soit l'équation $(\mathcal{E}') : z^4 - 5z^3 + 6z^2 - 5z + 1 = 0$.</p>
+            <ol>
+                <li>Démontrer que $0$ n'est pas solution de $(\mathcal{E}')$. En déduire que si $\alpha$ est une solution de $(\mathcal{E}')$ alors $\displaystyle \frac{1}{\alpha}$ est aussi une solution de $(\mathcal{E}')$.</li>
+                <li>Démontrer que $(\mathcal{E}')$ est équivalente à $(\mathcal{E}'') : \left(z + \frac{1}{z}\right)^2 - 5\left(z + \frac{1}{z}\right) + 4 = 0$.</li>
+                <li>En posant $Z = z + \frac{1}{z}$, résoudre $(\mathcal{E}'')$.</li>
+                <li>En déduire la résolution de $(\mathcal{E}')$ dans $\mathbb{C}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>31-1.a)</strong> Soit $z = iy$, $y \in \mathbb{R}$.</p>
+                    <p>$(iy)^3 + (4-5i)(iy)^2 + (8-20i)(iy) - 40i = 0$</p>
+                    <p>Après simplification : $y = 2$</p>
+                    <p>$\boxed{z_0 = 2i}$</p>
+
+                    <p><strong>31-1.b)</strong> $P(z) = (z-2i)(z^2 + 4z - 20)$</p>
+                    <p>$z^2 + 4z - 20 = 0 \implies \Delta = 16 + 80 = 96 = (4\sqrt{6})^2$</p>
+                    <p>$z = -2 \pm 2\sqrt{6}$</p>
+                    <p>$\boxed{S = \{2i, -2+2\sqrt{6}, -2-2\sqrt{6}\}}$</p>
+
+                    <p><strong>31-2.a)</strong> $P(0) = 1 \neq 0$ donc $0$ n'est pas solution.</p>
+                    <p>Si $\alpha$ est solution : $\alpha^4 P\left(\dfrac{1}{\alpha}\right) = P(\alpha) = 0$</p>
+
+                    <p><strong>31-2.b)</strong> $z^4 - 5z^3 + 6z^2 - 5z + 1 = 0$</p>
+                    <p>En divisant par $z^2$ : $z^2 - 5z + 6 - \dfrac{5}{z} + \dfrac{1}{z^2} = 0$</p>
+                    <p>$\left(z + \dfrac{1}{z}\right)^2 - 5\left(z + \dfrac{1}{z}\right) + 4 = 0$</p>
+
+                    <p><strong>31-2.c)</strong> $Z^2 - 5Z + 4 = 0 \implies Z = 1$ ou $Z = 4$</p>
+
+                    <p><strong>31-2.d)</strong> $z + \dfrac{1}{z} = 1 \implies z^2 - z + 1 = 0 \implies z = \dfrac{1 \pm i\sqrt{3}}{2}$</p>
+                    <p>$z + \dfrac{1}{z} = 4 \implies z^2 - 4z + 1 = 0 \implies z = 2 \pm \sqrt{3}$</p>
+                    <p>$\boxed{S = \left\{\dfrac{1+i\sqrt{3}}{2}, \dfrac{1-i\sqrt{3}}{2}, 2+\sqrt{3}, 2-\sqrt{3}\right\}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
     <!-- ============================================================
-    FIN DES EXERCICES (14 à 31)
+    FIN DU TD
     ============================================================ -->
     <section class="section">
-        <p class="formula-center" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">
-            ♦♦♦ La suite des exercices (14 à 31) est disponible dans la version complète du TD. ♦♦♦
-        </p>
-        <p class="formula-center" style="color: var(--text-muted);">
-            Ces exercices couvrent : Complexes et géométrie, Polynômes complexes, Suites complexes, etc.
-        </p>
+        <div style="text-align: center; padding: 30px 0;">
+            <p style="font-size: 1.2rem; color: var(--primary); font-weight: 700;">
+                ♦♦♦ Fin du TD sur les Nombres Complexes ♦♦♦
+            </p>
+            <p style="color: var(--text-muted); margin-top: 10px;">
+                Tous les exercices ont été corrigés. Bonne révision !
+            </p>
+        </div>
     </section>
 
     <!-- ============================================================
@@ -702,6 +1559,7 @@
     ============================================================ -->
     <footer class="footer">
         <p>© 2026 - TD Nombres Complexes - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size: 0.8rem; margin-top: 4px;">Correction complète - Exercices 1 à 31</p>
     </footer>
 
 </body>
