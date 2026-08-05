@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Fonction Exponentielle - TS2</title>
+
+    <link rel="stylesheet" href="exp.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 29/12/2025</span>
+        </div>
+        <h1>📐 TD : Fonction Exponentielle</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : CALCUL DE LIMITES
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <div class="boxed-title">Déterminer les limites suivantes :</div>
+
+            <div class="limit-grid">
+                <div class="limit-item">1. $\lim\limits_{x \to +\infty} e^{x+2}$</div>
+                <div class="limit-item">2. $\lim\limits_{x \to -\infty} e^{3x-1}$</div>
+                <div class="limit-item">3. $\lim\limits_{x \to +\infty} (e^x)^2$</div>
+                <div class="limit-item">4. $\lim\limits_{x \to -\infty} \dfrac{1}{e^x}$</div>
+                <div class="limit-item">5. $\lim\limits_{x \to +\infty} e^{x^2 + x + 1}$</div>
+                <div class="limit-item">6. $\lim\limits_{x \to -\infty} e^{x^2 + x + 1}$</div>
+                <div class="limit-item">7. $\lim\limits_{x \to +\infty} e^{\frac{x+1}{x^2 + x + 1}}$</div>
+                <div class="limit-item">8. $\lim\limits_{x \to -\infty} e^{\frac{2x+3}{x-1}}$</div>
+                <div class="limit-item">9. $\lim\limits_{x \to +\infty} \dfrac{e^{x+2}}{e^{x+1}}$</div>
+                <div class="limit-item">10. $\lim\limits_{x \to -\infty} \dfrac{e^x + 2}{e^x + 1}$</div>
+                <div class="limit-item">11. $\lim\limits_{x \to +\infty} \dfrac{e^x}{\sqrt{x}}$</div>
+                <div class="limit-item">12. $\lim\limits_{x \to +\infty} \dfrac{e^x}{x^2}$</div>
+                <div class="limit-item">13. $\lim\limits_{x \to +\infty} (e^x - \sqrt{x})$</div>
+                <div class="limit-item">14. $\lim\limits_{x \to -\infty} x^2 e^x$</div>
+                <div class="limit-item">15. $\lim\limits_{x \to -\infty} \sqrt{-x} \, e^x$</div>
+                <div class="limit-item">16. $\lim\limits_{x \to +\infty} (e^x - 2x)$</div>
+                <div class="limit-item">17. $\lim\limits_{x \to +\infty} \dfrac{e^{x^2 + 1}}{e^{x+1}}$</div>
+                <div class="limit-item">18. $\lim\limits_{x \to 0} \dfrac{e^{2x} - 1}{x}$</div>
+                <div class="limit-item">19. $\lim\limits_{x \to 0} \dfrac{e^{x^2} - 1}{x}$</div>
+                <div class="limit-item">20. $\lim\limits_{x \to 0} \dfrac{e^{3x} - 1}{2x}$</div>
+                <div class="limit-item">21. $\lim\limits_{x \to 0} \dfrac{e^{\sin x} - 1}{x}$</div>
+                <div class="limit-item">22. $\lim\limits_{x \to -\infty} \dfrac{e^x - 1}{x}$</div>
+                <div class="limit-item">23. $\lim\limits_{x \to +\infty} \dfrac{e^x - 1}{x}$</div>
+                <div class="limit-item">24. $\lim\limits_{x \to 0} \dfrac{e^{x^2} - 1}{3x}$</div>
+                <div class="limit-item">25. $\lim\limits_{x \to 0} \dfrac{e^{2x} - e^x}{x}$</div>
+                <div class="limit-item">26. $\lim\limits_{x \to -\infty} \dfrac{2e^x + 1}{e^x + 3}$</div>
+                <div class="limit-item">27. $\lim\limits_{x \to +\infty} \dfrac{2e^x + 1}{e^x + 3}$</div>
+                <div class="limit-item">28. $\lim\limits_{x \to -\infty} \dfrac{e^x - 1}{2x}$</div>
+                <div class="limit-item">29. $\lim\limits_{x \to +\infty} \dfrac{e^x - 1}{2x}$</div>
+                <div class="limit-item">30. $\lim\limits_{x \to 2} e^{\frac{1}{2-x}}$</div>
+                <div class="limit-item">31. $\lim\limits_{x \to +\infty} e^{x^2 - 2x}$</div>
+                <div class="limit-item">32. $\lim\limits_{x \to -\infty} e^{x^2 + 4x}$</div>
+                <div class="limit-item">33. $\lim\limits_{x \to 0} e^{\frac{2x - 1}{x - 2}}$</div>
+                <div class="limit-item">34. $\lim\limits_{x \to 0^+} e^{\frac{1 + x}{x}}$</div>
+                <div class="limit-item">35. $\lim\limits_{x \to +\infty} e^{\frac{1 - x}{-x - 1}}$</div>
+                <div class="limit-item">36. $\lim\limits_{x \to -\infty} e^{\frac{x^3 + x}{-2x^2 - 1}}$</div>
+                <div class="limit-item">37. $\lim\limits_{x \to 0} e^{|x^2 + x|}$</div>
+                <div class="limit-item">38. $\lim\limits_{x \to 1} e^{|x^2 - 1|}$</div>
+                <div class="limit-item">39. $\lim\limits_{x \to +\infty} e^{|x^2 - 1|}$</div>
+                <div class="limit-item">40. $\lim\limits_{x \to +\infty} \dfrac{2x - 1}{x e^x - x}$</div>
+                <div class="limit-item">41. $\lim\limits_{x \to -\infty} \dfrac{2x - 1}{x e^x + x}$</div>
+                <div class="limit-item">42. $\lim\limits_{x \to +\infty} \dfrac{-1}{x^2 e^x}$</div>
+                <div class="limit-item">43. $\lim\limits_{x \to -\infty} \dfrac{2e^x - 3}{3e^x + 1}$</div>
+                <div class="limit-item">44. $\lim\limits_{x \to +\infty} \dfrac{2e^x - 3}{3e^x + 1}$</div>
+                <div class="limit-item">45. $\lim\limits_{x \to -\infty} \dfrac{e^x - 3x}{2e^x + x}$</div>
+                <div class="limit-item">46. $\lim\limits_{x \to +\infty} \dfrac{e^x - 3x}{2e^x + x}$</div>
+                <div class="limit-item">47. $\lim\limits_{x \to +\infty} (x - e^x)$</div>
+                <div class="limit-item">48. $\lim\limits_{x \to +\infty} \dfrac{1 - e^x}{x}$</div>
+                <div class="limit-item">49. $\lim\limits_{x \to -\infty} \dfrac{1 - e^x}{x}$</div>
+                <div class="limit-item">50. $\lim\limits_{x \to -\infty} (x e^x - x)$</div>
+                <div class="limit-item">51. $\lim\limits_{x \to -\infty} x^n e^x \quad (n \in \mathbb{N}^*)$</div>
+                <div class="limit-item">52. $\lim\limits_{x \to -\infty} x(e^x - 1)$</div>
+                <div class="limit-item">53. $\lim\limits_{x \to +\infty} \dfrac{e^{2x}}{x}$</div>
+                <div class="limit-item">54. $\lim\limits_{x \to +\infty} \dfrac{(x - 1)e^x}{x}$</div>
+                <div class="limit-item">55. $\lim\limits_{x \to -\infty} \dfrac{(x - 1)e^x}{x}$</div>
+                <div class="limit-item">56. $\lim\limits_{x \to +\infty} x \left(e^{\frac{1}{x}} - 1\right)$</div>
+                <div class="limit-item">57. $\lim\limits_{x \to +\infty} x \left(e^{\frac{2}{x}} - 1\right)$</div>
+                <div class="limit-item">58. $\lim\limits_{x \to -\infty} \dfrac{e^{-x}}{x}$</div>
+                <div class="limit-item">59. $\lim\limits_{x \to -\infty} \left(e^x + \dfrac{1}{e^x}\right)$</div>
+                <div class="limit-item">60. $\lim\limits_{x \to +\infty} \left( \dfrac{x^2}{x-1} - e^x \right)$</div>
+                <div class="limit-item">61. $\lim\limits_{x \to -\infty} x^2 e^x$</div>
+                <div class="limit-item">62. $\lim\limits_{x \to 0} \dfrac{e^x - 1}{x^2 + x}$</div>
+                <div class="limit-item">63. $\lim\limits_{x \to 0} \dfrac{e^x - e^2}{x-2}$</div>
+                <div class="limit-item">64. $\lim\limits_{x \to 0} \dfrac{e^{a+x} - e^a}{x} \quad (a \in \mathbb{R})$</div>
+                <div class="limit-item">65. $\lim\limits_{x \to -\infty} \dfrac{e^x - 2}{e^x + 1}$</div>
+                <div class="limit-item">66. $\lim\limits_{x \to 0} \tan x \cdot e^{\frac{1}{x}}$</div>
+                <div class="limit-item">67. $\lim\limits_{x \to \frac{\pi}{4}} \dfrac{e^{\tan x} - e}{\sin x - \cos x}$</div>
+                <div class="limit-item">68. $\lim\limits_{x \to 0} \dfrac{e^{\cos x - 1} - 1}{x^2}$</div>
+                <div class="limit-item">69. $\lim\limits_{x \to +\infty} \dfrac{x e^x}{x+1}$</div>
+                <div class="limit-item">70. $\lim\limits_{x \to +\infty} \dfrac{e^{1+x}}{1+x^2}$</div>
+                <div class="limit-item">71. $\lim\limits_{x \to -\infty} \dfrac{e^x}{1 - e^x}$</div>
+                <div class="limit-item">72. $\lim\limits_{x \to +\infty} \dfrac{e^x}{1 - e^x}$</div>
+                <div class="limit-item">73. $\lim\limits_{x \to 0} \dfrac{e^{1-\cos x} - 1}{x^2}$</div>
+                <div class="limit-item">74. $\lim\limits_{x \to 1} \left( -x + e^{\frac{x}{x-1}} \right)$</div>
+                <div class="limit-item">75. $\lim\limits_{x \to -\infty} \left( -x + e^{\frac{x}{x-1}} \right)$</div>
+                <div class="limit-item">76. $\lim\limits_{x \to +\infty} \left( -x + e^{\frac{x}{x-1}} \right)$</div>
+                <div class="limit-item">77. $\lim\limits_{x \to +\infty} x \left( e^{\frac{x+1}{x-1}} - e \right)$</div>
+                <div class="limit-item">78. $\lim\limits_{x \to +\infty} \dfrac{e^{\sqrt{x^2 - 1}}}{x^2 - 1}$</div>
+                <div class="limit-item">79. $\lim\limits_{x \to 1} \dfrac{e^{(x-1)^2} - 1}{(x-1)^2}$</div>
+                <div class="limit-item">80. $\lim\limits_{x \to 0} \dfrac{e^{\sqrt{x+1}-1} - 1}{x}$</div>
+                <div class="limit-item">81. $\lim\limits_{x \to +\infty} \left( e^x + \dfrac{1}{e^x} \right)$</div>
+                <div class="limit-item">82. $\lim\limits_{x \to -\infty} \dfrac{e^x}{1+x^2}$</div>
+                <div class="limit-item">83. $\lim\limits_{x \to +\infty} \dfrac{e^x}{1+x^2}$</div>
+                <div class="limit-item">84. $\lim\limits_{x \to +\infty} \dfrac{x^3}{e^x}$</div>
+                <div class="limit-item">85. $\lim\limits_{x \to +\infty} \dfrac{e^{1+e^x}}{e^x}$</div>
+                <div class="limit-item">86. $\lim\limits_{x \to +\infty} (x e^x - e^x)$</div>
+                <div class="limit-item">87. $\lim\limits_{x \to +\infty} \sqrt{x} \, e^{-x}$</div>
+                <div class="limit-item">88. $\lim\limits_{x \to 0} \dfrac{x}{e^{\sin x} - 1}$</div>
+                <div class="limit-item">89. $\lim\limits_{x \to 0} \dfrac{e^{2x} - 1}{\tan x}$</div>
+                <div class="limit-item">90. $\lim\limits_{x \to +\infty} \dfrac{e^x}{x-1}$</div>
+                <div class="limit-item">91. $\lim\limits_{x \to 1} \dfrac{e^{x-1} - 1}{x-1}$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions (sélectionnées)</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappels des limites fondamentales :</strong></p>
+                    <ul>
+                        <li>$\lim\limits_{x \to +\infty} e^x = +\infty$</li>
+                        <li>$\lim\limits_{x \to -\infty} e^x = 0$</li>
+                        <li>$\lim\limits_{x \to +\infty} \dfrac{e^x}{x^n} = +\infty$ pour tout $n \in \mathbb{N}$</li>
+                        <li>$\lim\limits_{x \to -\infty} x^n e^x = 0$ pour tout $n \in \mathbb{N}$</li>
+                        <li>$\lim\limits_{x \to 0} \dfrac{e^x - 1}{x} = 1$</li>
+                    </ul>
+
+                    <div class="two-columns">
+                        <div>
+                            <p>1. $+\infty$</p>
+                            <p>2. $0$</p>
+                            <p>3. $+\infty$</p>
+                            <p>4. $+\infty$</p>
+                            <p>5. $+\infty$</p>
+                            <p>6. $+\infty$</p>
+                            <p>7. $1$</p>
+                            <p>8. $e^2$</p>
+                            <p>9. $e$</p>
+                            <p>10. $2$</p>
+                            <p>11. $+\infty$</p>
+                            <p>12. $+\infty$</p>
+                            <p>13. $+\infty$</p>
+                            <p>14. $0$</p>
+                            <p>15. $0$</p>
+                            <p>16. $+\infty$</p>
+                            <p>17. $+\infty$</p>
+                            <p>18. $2$</p>
+                            <p>19. $0$</p>
+                            <p>20. $\dfrac{3}{2}$</p>
+                            <p>21. $1$</p>
+                            <p>22. $0$</p>
+                            <p>23. $+\infty$</p>
+                            <p>24. $0$</p>
+                            <p>25. $1$</p>
+                            <p>26. $\dfrac{1}{3}$</p>
+                            <p>27. $2$</p>
+                            <p>28. $-\infty$</p>
+                            <p>29. $+\infty$</p>
+                            <p>30. $+\infty$ (à gauche), $0$ (à droite)</p>
+                            <p>31. $+\infty$</p>
+                            <p>32. $+\infty$</p>
+                            <p>33. $e^{\frac{1}{2}}$</p>
+                            <p>34. $+\infty$</p>
+                            <p>35. $e$</p>
+                            <p>36. $+\infty$</p>
+                            <p>37. $1$</p>
+                            <p>38. $1$</p>
+                            <p>39. $+\infty$</p>
+                            <p>40. $0$</p>
+                            <p>41. $-\infty$</p>
+                            <p>42. $0$</p>
+                            <p>43. $-3$</p>
+                            <p>44. $\dfrac{2}{3}$</p>
+                            <p>45. $\dfrac{1}{2}$</p>
+                            <p>46. $\dfrac{1}{2}$</p>
+                            <p>47. $-\infty$</p>
+                            <p>48. $-\infty$</p>
+                            <p>49. $+\infty$</p>
+                            <p>50. $-\infty$</p>
+                            <p>51. $0$</p>
+                            <p>52. $+\infty$</p>
+                            <p>53. $+\infty$</p>
+                            <p>54. $+\infty$</p>
+                            <p>55. $0$</p>
+                            <p>56. $1$</p>
+                            <p>57. $2$</p>
+                            <p>58. $+\infty$</p>
+                            <p>59. $+\infty$</p>
+                            <p>60. $-\infty$</p>
+                            <p>61. $0$</p>
+                            <p>62. $1$</p>
+                            <p>63. $\dfrac{e^2}{2}$</p>
+                            <p>64. $e^a$</p>
+                            <p>65. $-2$</p>
+                            <p>66. $+\infty$ (à droite), $-\infty$ (à gauche)</p>
+                            <p>67. $2e$</p>
+                            <p>68. $-\dfrac{1}{2}$</p>
+                            <p>69. $+\infty$</p>
+                            <p>70. $+\infty$</p>
+                            <p>71. $0$</p>
+                            <p>72. $-1$</p>
+                            <p>73. $\dfrac{1}{2}$</p>
+                            <p>74. $+\infty$ (à gauche), $-\infty$ (à droite)</p>
+                            <p>75. $+\infty$</p>
+                            <p>76. $-\infty$</p>
+                            <p>77. $2e$</p>
+                            <p>78. $+\infty$</p>
+                            <p>79. $1$</p>
+                            <p>80. $\dfrac{1}{2}$</p>
+                            <p>81. $+\infty$</p>
+                            <p>82. $0$</p>
+                            <p>83. $+\infty$</p>
+                            <p>84. $0$</p>
+                            <p>85. $+\infty$</p>
+                            <p>86. $+\infty$</p>
+                            <p>87. $0$</p>
+                            <p>88. $1$</p>
+                            <p>89. $2$</p>
+                            <p>90. $+\infty$</p>
+                            <p>91. $1$</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : ÉQUATIONS ET INÉQUATIONS
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <div class="boxed-title">Équations et inéquations dans $\mathbb{R}$</div>
+
+            <div class="sub-section-title">1. Résoudre dans $\mathbb{R}$ les équations :</div>
+            <div class="two-columns">
+                <ol>
+                    <li>$e^{2x} - 3e^x + 2 = 0$</li>
+                    <li>$e^x - 2e^{-x} - 1 = 0$</li>
+                    <li>$e^{3x-1} = 1$</li>
+                    <li>$e^{x^2 - 4} = e^{3x}$</li>
+                    <li>$\dfrac{e^x + 3}{e^x - 1} = 2$</li>
+                    <li>$e^{2x} + e^x - 6 = 0$</li>
+                </ol>
+            </div>
+
+            <div class="sub-section-title">2. Résoudre dans $\mathbb{R}$ les inéquations :</div>
+            <div class="two-columns">
+                <ol>
+                    <li>$e^{2x} - 4 > 0$</li>
+                    <li>$e^x + 1 - 2e^{-x} \le 0$</li>
+                    <li>$e^{x^2 - 1} < e^{x+1}$</li>
+                    <li>$\dfrac{e^x - 1}{e^x + 2} \ge 0$</li>
+                    <li>$e^{3x} - 2e^{2x} - e^x + 2 > 0$</li>
+                    <li>$\dfrac{2}{e^x - 1} < 1$</li>
+                </ol>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>1. Équations :</strong></p>
+
+                    <p><strong>1.</strong> $e^{2x} - 3e^x + 2 = 0$</p>
+                    <p>Posons $X = e^x > 0$. $X^2 - 3X + 2 = 0 \iff (X-1)(X-2) = 0$</p>
+                    <p>$X = 1 \iff e^x = 1 \iff x = 0$</p>
+                    <p>$X = 2 \iff e^x = 2 \iff x = \ln 2$</p>
+                    <p>$\boxed{S = \{0, \ln 2\}}$</p>
+
+                    <p><strong>2.</strong> $e^x - 2e^{-x} - 1 = 0$</p>
+                    <p>Multiplions par $e^x$ : $e^{2x} - e^x - 2 = 0$</p>
+                    <p>$X = e^x > 0$, $X^2 - X - 2 = 0 \iff (X-2)(X+1) = 0$</p>
+                    <p>$X = 2$ (car $X > 0$) $\iff x = \ln 2$</p>
+                    <p>$\boxed{S = \{\ln 2\}}$</p>
+
+                    <p><strong>3.</strong> $e^{3x-1} = 1 \iff 3x-1 = 0 \iff x = \dfrac{1}{3}$</p>
+                    <p>$\boxed{S = \left\{\dfrac{1}{3}\right\}}$</p>
+
+                    <p><strong>4.</strong> $e^{x^2 - 4} = e^{3x} \iff x^2 - 4 = 3x \iff x^2 - 3x - 4 = 0$</p>
+                    <p>$(x-4)(x+1) = 0 \iff x = 4$ ou $x = -1$</p>
+                    <p>$\boxed{S = \{-1, 4\}}$</p>
+
+                    <p><strong>5.</strong> $\dfrac{e^x + 3}{e^x - 1} = 2$, $e^x \neq 1$</p>
+                    <p>$e^x + 3 = 2e^x - 2 \iff e^x = 5 \iff x = \ln 5$</p>
+                    <p>$\boxed{S = \{\ln 5\}}$</p>
+
+                    <p><strong>6.</strong> $e^{2x} + e^x - 6 = 0$</p>
+                    <p>$X = e^x > 0$, $X^2 + X - 6 = 0 \iff (X+3)(X-2) = 0$</p>
+                    <p>$X = 2 \iff x = \ln 2$</p>
+                    <p>$\boxed{S = \{\ln 2\}}$</p>
+
+                    <p><strong>2. Inéquations :</strong></p>
+
+                    <p><strong>1.</strong> $e^{2x} - 4 > 0 \iff e^{2x} > 4 \iff 2x > \ln 4 \iff x > \ln 2$</p>
+                    <p>$\boxed{S = ]\ln 2; +\infty[}$</p>
+
+                    <p><strong>2.</strong> $e^x + 1 - 2e^{-x} \le 0$</p>
+                    <p>Multiplions par $e^x > 0$ : $e^{2x} + e^x - 2 \le 0$</p>
+                    <p>$X = e^x > 0$, $X^2 + X - 2 \le 0 \iff (X+2)(X-1) \le 0$</p>
+                    <p>$-2 \le X \le 1$ et $X > 0 \implies 0 < X \le 1$</p>
+                    <p>$X \le 1 \iff e^x \le 1 \iff x \le 0$</p>
+                    <p>$\boxed{S = ]-\infty; 0]}$</p>
+
+                    <p><strong>3.</strong> $e^{x^2 - 1} < e^{x+1} \iff x^2 - 1 < x + 1 \iff x^2 - x - 2 < 0$</p>
+                    <p>$(x-2)(x+1) < 0 \iff -1 < x < 2$</p>
+                    <p>$\boxed{S = ]-1; 2[}$</p>
+
+                    <p><strong>4.</strong> $\dfrac{e^x - 1}{e^x + 2} \ge 0$</p>
+                    <p>$e^x + 2 > 0$ pour tout $x$, donc le signe est celui de $e^x - 1$</p>
+                    <p>$e^x - 1 \ge 0 \iff e^x \ge 1 \iff x \ge 0$</p>
+                    <p>$\boxed{S = [0; +\infty[}$</p>
+
+                    <p><strong>5.</strong> $e^{3x} - 2e^{2x} - e^x + 2 > 0$</p>
+                    <p>$(e^x - 2)(e^x - 1)(e^x + 1) > 0$</p>
+                    <p>$e^x + 1 > 0$ donc signe de $(e^x - 2)(e^x - 1)$</p>
+                    <p>$x < 0$ ou $x > \ln 2$</p>
+                    <p>$\boxed{S = ]-\infty; 0[ \cup ]\ln 2; +\infty[}$</p>
+
+                    <p><strong>6.</strong> $\dfrac{2}{e^x - 1} < 1$</p>
+                    <p>$\dfrac{2}{e^x - 1} - 1 < 0 \iff \dfrac{2 - (e^x - 1)}{e^x - 1} < 0 \iff \dfrac{3 - e^x}{e^x - 1} < 0$</p>
+                    <p>Étudions le signe : $e^x - 1 = 0 \iff x = 0$ ; $3 - e^x = 0 \iff x = \ln 3$</p>
+                    <p>Tableau des signes :</p>
+                    <p>$x < 0$ : $e^x - 1 < 0$, $3 - e^x > 0$ $\implies$ quotient $< 0$</p>
+                    <p>$0 < x < \ln 3$ : $e^x - 1 > 0$, $3 - e^x > 0$ $\implies$ quotient $> 0$</p>
+                    <p>$x > \ln 3$ : $e^x - 1 > 0$, $3 - e^x < 0$ $\implies$ quotient $< 0$</p>
+                    <p>$\boxed{S = ]-\infty; 0[ \cup ]\ln 3; +\infty[}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 : ÉTUDE DE FONCTIONS
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <div class="boxed-title">Étude de fonctions comportant la fonction exponentielle</div>
+
+            <p><strong>1.</strong> Soit $f$ la fonction définie sur $\mathbb{R}$ par : $f(x) = (x-1)e^x + 1$.</p>
+            <ol type="a">
+                <li>Étudier les limites de $f$ en $-\infty$ et $+\infty$.</li>
+                <li>Étudier les variations de $f$ et dresser son tableau de variation.</li>
+                <li>Déduire le signe de $f(x)$ sur $\mathbb{R}$.</li>
+            </ol>
+
+            <p><strong>2.</strong> Soit $g$ la fonction définie par : $g(x) = \dfrac{e^x - 1}{e^x + 1}$.</p>
+            <ol type="a">
+                <li>Déterminer l'ensemble de définition $D_g$ de $g$.</li>
+                <li>Montrer que $g$ est une fonction impaire.</li>
+                <li>Calculer la limite de $g$ en $+\infty$ et interpréter géométriquement le résultat.</li>
+                <li>Calculer $g'(x)$ et dresser le tableau de variation de $g$.</li>
+                <li>Déterminer l'équation de la tangente $(T)$ à la courbe de $g$ au point d'abscisse $0$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a) Limites :</strong></p>
+                    <p>$\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} (x-1)e^x + 1 = +\infty$ (car $e^x$ l'emporte)</p>
+                    <p>$\lim\limits_{x \to -\infty} f(x) = \lim\limits_{x \to -\infty} (x-1)e^x + 1 = 0 + 1 = 1$</p>
+
+                    <p><strong>1.b) Variations :</strong></p>
+                    <p>$f'(x) = e^x + (x-1)e^x = x e^x$</p>
+                    <p>$f'(x) = 0 \iff x = 0$</p>
+                    <p>$f'(x) < 0$ sur $]-\infty; 0[$ et $f'(x) > 0$ sur $]0; +\infty[$</p>
+                    <p>$f$ est décroissante sur $]-\infty; 0]$ et croissante sur $[0; +\infty[$</p>
+                    <p>$f(0) = (0-1)e^0 + 1 = 0$</p>
+                    <p>Donc $f(x) \ge 0$ pour tout $x \in \mathbb{R}$.</p>
+
+                    <p><strong>2.a)</strong> $D_g = \mathbb{R}$ car $e^x + 1 > 0$ pour tout $x$.</p>
+
+                    <p><strong>2.b)</strong> $g(-x) = \dfrac{e^{-x} - 1}{e^{-x} + 1} = \dfrac{1 - e^x}{1 + e^x} = -\dfrac{e^x - 1}{e^x + 1} = -g(x)$</p>
+                    <p>Donc $g$ est impaire.</p>
+
+                    <p><strong>2.c)</strong> $\lim\limits_{x \to +\infty} g(x) = \lim\limits_{x \to +\infty} \dfrac{e^x}{e^x} = 1$</p>
+                    <p>$y = 1$ est asymptote horizontale en $+\infty$.</p>
+                    <p>Par imparité, $\lim\limits_{x \to -\infty} g(x) = -1$, $y = -1$ est asymptote horizontale en $-\infty$.</p>
+
+                    <p><strong>2.d)</strong> $g'(x) = \dfrac{e^x(e^x+1) - (e^x-1)e^x}{(e^x+1)^2} = \dfrac{2e^x}{(e^x+1)^2} > 0$</p>
+                    <p>$g$ est strictement croissante sur $\mathbb{R}$.</p>
+
+                    <p><strong>2.e)</strong> $g(0) = \dfrac{1-1}{1+1} = 0$</p>
+                    <p>$g'(0) = \dfrac{2}{4} = \dfrac{1}{2}$</p>
+                    <p>$(T) : y = g'(0)(x-0) + g(0) = \dfrac{1}{2}x$</p>
+                    <p>$\boxed{(T) : y = \dfrac{x}{2}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Fonction Exponentielle - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 3 - 91 limites + équations + études de fonctions</p>
+    </footer>
+
+</body>
+</html>
