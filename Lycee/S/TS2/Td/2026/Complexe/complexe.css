@@ -211,6 +211,9 @@ b {
     padding: 20px 24px;
     margin: 20px 0;
     position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche le conteneur principal de déformer la page */
 }
 
 .exercise-box .exercise-number {
@@ -329,8 +332,12 @@ b {
     text-align: center;
     font-size: 1.05rem;
     padding: 6px 0;
+    max-width: 100%;
+    overflow-x: auto; /* Active le défilement horizontal si la formule dépasse */
+    overflow-y: hidden;
+    white-space: nowrap; /* Conserve la formule sur une seule ligne */
+    -webkit-overflow-scrolling: touch; /* Rend le défilement fluide sur mobile */
 }
-
 /* ============================================================
            TABLEAUX
         ============================================================ */
