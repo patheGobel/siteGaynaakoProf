@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Suites - TS2</title>
+    <link rel="stylesheet" href="suite.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 08/03/2025</span>
+        </div>
+        <h1>📐 TD Suites</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Suite périodique
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+
+            <p>Soit $(u_n)$ une suite définie par :</p>
+            <div class="suite-def">
+                $u_0 = 1 \quad \text{et} \quad u_{n+1} = \dfrac{u_n - 1}{3u_n + 1}$.
+            </div>
+
+            <ol>
+                <li>Calculer les 4 premiers termes de la suite $(u_n)$.</li>
+                <li>Représenter graphiquement la suite $(u_n)$.</li>
+                <li>Montrer que $(u_n)$ est périodique de période 3.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $u_0 = 1$</p>
+                    <p>$u_1 = \dfrac{1 - 1}{3 \times 1 + 1} = 0$</p>
+                    <p>$u_2 = \dfrac{0 - 1}{3 \times 0 + 1} = -1$</p>
+                    <p>$u_3 = \dfrac{-1 - 1}{3 \times (-1) + 1} = \dfrac{-2}{-2} = 1$</p>
+                    <p>$\boxed{u_0 = 1,\; u_1 = 0,\; u_2 = -1,\; u_3 = 1}$</p>
+
+                    <p><strong>3.</strong> On a $u_3 = u_0 = 1$. La suite est donc périodique de période 3.</p>
+                    <p>$\boxed{(u_n) : 1, 0, -1, 1, 0, -1, \ldots}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Suite arithmético-géométrique
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <p>On considère la suite $(u_n)_{n \in \mathbb{N}}$ définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 13, \\ u_{n+1} = \frac{1}{2}u_n + 7. \end{cases}$
+            </div>
+
+            <ol>
+                <li>Montrer que : $(\forall n \in \mathbb{N}), u_n < 14$.</li>
+                <li>Soit $(v_n)_{n \in \mathbb{N}}$ la suite définie par : $v_n = 14 - u_n$ pour tout $n \in \mathbb{N}$.
+                    <ol type="a">
+                        <li>Montrer que la suite $(v_n)_{n \in \mathbb{N}}$ est géométrique de raison $\frac{1}{2}$, puis écrire $v_n$ en fonction de $n$.</li>
+                        <li>En déduire que : $(\forall n \in \mathbb{N}), u_n = 14 - \left(\frac{1}{2}\right)^n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Montrons par récurrence que $u_n < 14$.</p>
+                    <p>Initialisation : $u_0 = 13 < 14$.</p>
+                    <p>Hérédité : Si $u_n < 14$, alors $u_{n+1} = \frac{1}{2}u_n + 7 < \frac{1}{2} \times 14 + 7 = 14$.</p>
+                    <p>Donc $(\forall n \in \mathbb{N}), u_n < 14$.</p>
+
+                    <p><strong>2.a)</strong> $v_{n+1} = 14 - u_{n+1} = 14 - \left(\frac{1}{2}u_n + 7\right) = 7 - \frac{1}{2}u_n = \frac{1}{2}(14 - u_n) = \frac{1}{2}v_n$.</p>
+                    <p>Donc $(v_n)$ est géométrique de raison $\frac{1}{2}$.</p>
+                    <p>$v_0 = 14 - u_0 = 14 - 13 = 1$.</p>
+                    <p>$v_n = v_0 \times \left(\frac{1}{2}\right)^n = \left(\frac{1}{2}\right)^n$.</p>
+
+                    <p><strong>2.b)</strong> $u_n = 14 - v_n = 14 - \left(\frac{1}{2}\right)^n$.</p>
+                    <p>$\boxed{u_n = 14 - \left(\frac{1}{2}\right)^n}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 : Suite avec inverse
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 2, \\ (\forall n \in \mathbb{N}), u_{n+1} = \dfrac{7u_n - 25}{u_n - 3}. \end{cases}$
+            </div>
+
+            <ol>
+                <li>Montrer que : $(\forall n \in \mathbb{N}), u_n \neq 5$.</li>
+                <li>On considère la suite $(v_n)_{n \in \mathbb{N}}$ définie par : $v_n = \dfrac{1}{u_n - 5}$ pour tout $n \in \mathbb{N}$.
+                    <ol type="a">
+                        <li>Montrer que $(v_n)_{n \in \mathbb{N}}$ est une suite arithmétique.</li>
+                        <li>Déterminer $v_n$, puis $u_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer : $S_n = v_0 + v_1 + \cdots + v_n$ en fonction de $n$.</li>
+                        <li>On pose : $P_n = 2^{v_0} \times 2^{v_1} \times \cdots \times 2^{v_n}$. Déterminer $P_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Supposons $u_n = 5$ pour un certain $n$.</p>
+                    <p>Alors $u_{n+1} = \dfrac{7 \times 5 - 25}{5 - 3} = \dfrac{10}{2} = 5$.</p>
+                    <p>Par récurrence, si $u_0 = 5$ alors $u_n = 5$ pour tout $n$. Mais $u_0 = 2 \neq 5$.</p>
+                    <p>Donc $(\forall n \in \mathbb{N}), u_n \neq 5$.</p>
+
+                    <p><strong>2.a)</strong> $v_{n+1} = \dfrac{1}{u_{n+1} - 5} = \dfrac{1}{\frac{7u_n - 25}{u_n - 3} - 5} = \dfrac{1}{\frac{7u_n - 25 - 5u_n + 15}{u_n - 3}} = \dfrac{u_n - 3}{2u_n - 10} = \dfrac{u_n - 3}{2(u_n - 5)}$</p>
+                    <p>$= \dfrac{u_n - 5 + 2}{2(u_n - 5)} = \dfrac{1}{2} + \dfrac{1}{u_n - 5} = v_n + \dfrac{1}{2}$</p>
+                    <p>Donc $(v_n)$ est arithmétique de raison $\dfrac{1}{2}$.</p>
+
+                    <p><strong>2.b)</strong> $v_0 = \dfrac{1}{u_0 - 5} = \dfrac{1}{2 - 5} = -\dfrac{1}{3}$</p>
+                    <p>$v_n = v_0 + n \times \dfrac{1}{2} = -\dfrac{1}{3} + \dfrac{n}{2} = \dfrac{3n - 2}{6}$</p>
+                    <p>$u_n - 5 = \dfrac{1}{v_n} = \dfrac{6}{3n - 2}$</p>
+                    <p>$\boxed{u_n = 5 + \dfrac{6}{3n - 2}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}^*}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_1 = \frac{1}{3}, \\ (\forall n \in \mathbb{N}^*), u_{n+1} = \dfrac{2u_n}{1 + (n+2)u_n}. \end{cases}$
+            </div>
+
+            <p>Soit $(v_n)_{n \in \mathbb{N}^*}$ la suite numérique définie par : $v_n = \dfrac{1}{u_n} - n$.</p>
+
+            <ol>
+                <li>Montrer que la suite $(v_n)_{n \in \mathbb{N}^*}$ est géométrique.</li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer $v_n$ et $u_n$ en fonction de $n$.</li>
+                        <li>Calculer en fonction de $n$ la somme : $S_n = v_1 + v_2 + \cdots + v_n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $v_{n+1} = \dfrac{1}{u_{n+1}} - (n+1) = \dfrac{1 + (n+2)u_n}{2u_n} - n - 1$</p>
+                    <p>$= \dfrac{1}{2u_n} + \dfrac{n+2}{2} - n - 1 = \dfrac{1}{2u_n} - \dfrac{n}{2} = \dfrac{1}{2}\left(\dfrac{1}{u_n} - n\right) = \dfrac{1}{2}v_n$</p>
+                    <p>Donc $(v_n)$ est géométrique de raison $\dfrac{1}{2}$.</p>
+
+                    <p><strong>2.a)</strong> $v_1 = \dfrac{1}{u_1} - 1 = 3 - 1 = 2$</p>
+                    <p>$v_n = 2 \times \left(\dfrac{1}{2}\right)^{n-1} = \left(\dfrac{1}{2}\right)^{n-2}$</p>
+                    <p>$u_n = \dfrac{1}{v_n + n} = \dfrac{1}{\left(\frac{1}{2}\right)^{n-2} + n}$</p>
+                    <p>$\boxed{u_n = \dfrac{1}{n + 2^{2-n}}}$</p>
+
+                    <p><strong>2.b)</strong> $S_n = v_1 + v_2 + \cdots + v_n = 2 \times \dfrac{1 - (1/2)^n}{1 - 1/2} = 4\left(1 - \left(\dfrac{1}{2}\right)^n\right)$</p>
+                    <p>$\boxed{S_n = 4 - 4\left(\dfrac{1}{2}\right)^n}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 1, \\ (\forall n \in \mathbb{N}), u_{n+1} = \dfrac{2u_n^3}{3u_n^2 + 1}. \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), u_n > 0$.</li>
+                        <li>Étudier la monotonie de la suite $(u_n)_{n \in \mathbb{N}}$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), u_{n+1} \leq \frac{1}{2} u_n$.</li>
+                        <li>En déduire que : $(\forall n \in \mathbb{N}), u_n \leq \left(\frac{1}{2}\right)^n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $u_0 = 1 > 0$. Si $u_n > 0$, alors $u_{n+1} = \dfrac{2u_n^3}{3u_n^2 + 1} > 0$.</p>
+                    <p>Donc $(\forall n \in \mathbb{N}), u_n > 0$.</p>
+
+                    <p><strong>1.b)</strong> $\dfrac{u_{n+1}}{u_n} = \dfrac{2u_n^2}{3u_n^2 + 1} < 1$ car $2u_n^2 < 3u_n^2 + 1$.</p>
+                    <p>Donc $(u_n)$ est strictement décroissante.</p>
+
+                    <p><strong>2.a)</strong> $u_{n+1} = \dfrac{2u_n^3}{3u_n^2 + 1} \leq \dfrac{2u_n^3}{3u_n^2} = \dfrac{2}{3}u_n$</p>
+                    <p>Donc $u_{n+1} \leq \dfrac{2}{3}u_n \leq \dfrac{1}{2}u_n$.</p>
+
+                    <p><strong>2.b)</strong> Par récurrence : $u_n \leq \left(\dfrac{1}{2}\right)^n u_0 = \left(\dfrac{1}{2}\right)^n$.</p>
+                    <p>$\boxed{u_n \leq \left(\dfrac{1}{2}\right)^n}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 0, \\ u_{n+1} = \sqrt{3u_n + 4}, \quad \forall n \in \mathbb{N}. \end{cases}$
+            </div>
+
+            <ol>
+                <li>Montrer que : $\forall n \in \mathbb{N}, 0 \leq u_n \leq 4$.</li>
+                <li>Montrer que la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.</li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que : $\forall n \in \mathbb{N}, 4 - u_{n+1} \leq \frac{1}{2}(4 - u_n)$.</li>
+                        <li>En déduire que : $\forall n \in \mathbb{N}, 4 - u_n \leq 4\left(\frac{1}{2}\right)^n$.</li>
+                        <li>Calculer $\lim_{n \to +\infty} u_n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $0 \leq u_0 = 0 \leq 4$.</p>
+                    <p>Si $0 \leq u_n \leq 4$, alors $4 \leq 3u_n + 4 \leq 16$, donc $2 \leq \sqrt{3u_n + 4} \leq 4$.</p>
+                    <p>Donc $0 \leq u_{n+1} \leq 4$. $\boxed{\forall n \in \mathbb{N}, 0 \leq u_n \leq 4}$</p>
+
+                    <p><strong>2.</strong> $u_{n+1} - u_n = \sqrt{3u_n + 4} - u_n$</p>
+                    <p>$\sqrt{3u_n + 4} \geq u_n \iff 3u_n + 4 \geq u_n^2 \iff -(u_n - 4)(u_n + 1) \geq 0$</p>
+                    <p>Comme $0 \leq u_n \leq 4$, $(u_n - 4) \leq 0$ et $(u_n + 1) > 0$, donc $u_{n+1} - u_n \geq 0$.</p>
+                    <p>Donc $(u_n)$ est croissante.</p>
+
+                    <p><strong>3.a)</strong> $4 - u_{n+1} = 4 - \sqrt{3u_n + 4} = \dfrac{16 - (3u_n + 4)}{4 + \sqrt{3u_n + 4}} = \dfrac{12 - 3u_n}{4 + u_{n+1}}$</p>
+                    <p>$= \dfrac{3(4 - u_n)}{4 + u_{n+1}} \leq \dfrac{3}{4}(4 - u_n) \leq \dfrac{1}{2}(4 - u_n)$</p>
+
+                    <p><strong>3.b)</strong> $4 - u_n \leq 4\left(\dfrac{1}{2}\right)^n$.</p>
+                    <p><strong>3.c)</strong> $\lim\limits_{n \to +\infty} u_n = 4$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 7
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+
+            <ol>
+                <li>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :
+                    <div class="suite-def">
+                        $\begin{cases} u_0 = \frac{10}{3}, \\ (\forall n \in \mathbb{N}), u_{n+1} = \dfrac{u_n^2 - 3u_n + 9}{u_n}. \end{cases}$
+                    </div>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), u_n \geq 3$.</li>
+                        <li>En déduire que la suite $(u_n)_{n \in \mathbb{N}}$ est décroissante et que : $(\forall n \in \mathbb{N}), 3 \leq u_n \leq \frac{10}{3}$.</li>
+                    </ol>
+                </li>
+                <li>On considère la suite $(v_n)_{n \in \mathbb{N}}$ définie par :
+                    <div class="suite-def">
+                        $\begin{cases} v_0 = \frac{1}{2}, \\ (\forall n \in \mathbb{N}), v_{n+1} = \dfrac{2v_n^2}{1 + v_n^2}. \end{cases}$
+                    </div>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), v_n > 0 \text{ et } v_n \leq \frac{1}{2}$.</li>
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), \frac{v_{n+1}}{v_n} \leq 1$. En déduire que $(v_n)_{n \in \mathbb{N}}$ est décroissante.</li>
+                    </ol>
+                </li>
+                <li>Soit $(t_n)_{n \in \mathbb{N}}$ la suite définie par :
+                    <div class="suite-def">
+                        $\begin{cases} t_0 = 1, \\ (\forall n \in \mathbb{N}), t_{n+1} = \sqrt{\frac{1}{2}t_n + \frac{3}{2}}. \end{cases}$
+                    </div>
+                    <p>Montrer que la suite $(t_n)_{n \in \mathbb{N}}$ est strictement croissante.</p>
+                </li>
+                <li>Soit $(w_n)_{n \in \mathbb{N}}$ la suite définie par :
+                    <div class="suite-def">
+                        $\begin{cases} w_0 = 1, \\ (\forall n \in \mathbb{N}), w_{n+1} = f(w_n). \end{cases}$
+                    </div>
+                    <p>où $f(x) = x^2 - 2x$.</p>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), w_n \geq 3$.</li>
+                        <li>Montrer que la suite $(w_n)_{n \in \mathbb{N}}$ est croissante.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $u_0 = \frac{10}{3} > 3$. Si $u_n \geq 3$, alors $u_{n+1} - 3 = \dfrac{u_n^2 - 6u_n + 9}{u_n} = \dfrac{(u_n - 3)^2}{u_n} \geq 0$.</p>
+                    <p>Donc $(\forall n \in \mathbb{N}), u_n \geq 3$.</p>
+
+                    <p><strong>1.b)</strong> $u_{n+1} - u_n = \dfrac{u_n^2 - 3u_n + 9 - u_n^2}{u_n} = \dfrac{-3u_n + 9}{u_n} = \dfrac{3(3 - u_n)}{u_n} \leq 0$.</p>
+                    <p>Donc $(u_n)$ est décroissante et $3 \leq u_n \leq \frac{10}{3}$.</p>
+
+                    <p><strong>2.a)</strong> $v_0 = \frac{1}{2} > 0$. Si $v_n > 0$, alors $v_{n+1} = \dfrac{2v_n^2}{1+v_n^2} > 0$.</p>
+                    <p>$v_{n+1} \leq \frac{1}{2} \iff 4v_n^2 \leq 1 + v_n^2 \iff 3v_n^2 \leq 1 \iff v_n \leq \frac{1}{\sqrt{3}}$, ce qui est vrai car $v_n \leq \frac{1}{2}$.</p>
+
+                    <p><strong>2.b)</strong> $\dfrac{v_{n+1}}{v_n} = \dfrac{2v_n}{1+v_n^2} \leq 1 \iff 2v_n \leq 1 + v_n^2 \iff (v_n - 1)^2 \geq 0$.</p>
+                    <p>Donc $(v_n)$ est décroissante.</p>
+
+                    <p><strong>3.</strong> $t_{n+1} - t_n = \sqrt{\frac{1}{2}t_n + \frac{3}{2}} - t_n$</p>
+                    <p>$\sqrt{\frac{1}{2}t_n + \frac{3}{2}} \geq t_n \iff \frac{1}{2}t_n + \frac{3}{2} \geq t_n^2 \iff -(t_n - \frac{3}{2})(t_n + 1) \geq 0$</p>
+                    <p>Comme $t_n \in [1, \frac{3}{2}]$, on a $t_{n+1} - t_n > 0$. Donc $(t_n)$ est strictement croissante.</p>
+
+                    <p><strong>4.a)</strong> $w_0 = 1$. On montre par récurrence que $w_n \geq 3$.</p>
+                    <p>$w_{n+1} = w_n^2 - 2w_n = w_n(w_n - 2) \geq 3 \times 1 = 3$.</p>
+
+                    <p><strong>4.b)</strong> $w_{n+1} - w_n = w_n^2 - 3w_n = w_n(w_n - 3) \geq 0$.</p>
+                    <p>Donc $(w_n)$ est croissante.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 8
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+
+            <p>On considère la fonction $f$ définie sur $\mathbb{R}$ par : $f(x) = \dfrac{x}{1 + x + x^2}$.</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Étudier les variations de $f$.</li>
+                        <li>Déterminer $f([0,1])$.</li>
+                    </ol>
+                </li>
+                <li>On considère la suite $(u_n)_{n \in \mathbb{N}}$ définie par :
+                    <div class="suite-def">
+                        $\begin{cases} u_0 = 1, \\ u_{n+1} = f(u_n), \quad \forall n \in \mathbb{N}. \end{cases}$
+                    </div>
+                    <ol type="a">
+                        <li>Montrer que : $\forall n \in \mathbb{N}, 0 \leq u_n \leq 1$, puis $\forall n \in \mathbb{N}, u_{n+1} < u_n$.</li>
+                        <li>Montrer que : $\forall n \in \mathbb{N}^*, f\left(\frac{1}{n}\right) \leq \frac{1}{n+1}$, en déduire que : $\forall n \in \mathbb{N}^*, 0 \leq u_n \leq \frac{1}{n}$.</li>
+                        <li>Montrer que la suite $(u_n)_{n \in \mathbb{N}}$ est convergente, puis calculer $\lim_{n \to +\infty} u_n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $f'(x) = \dfrac{1 - x^2}{(1 + x + x^2)^2}$</p>
+                    <p>$f'(x) \geq 0 \iff x \in [-1, 1]$, $f'(x) < 0$ sinon.</p>
+                    <p>$f$ est croissante sur $[-1, 1]$ et décroissante sur $]-\infty, -1]$ et $[1, +\infty[$.</p>
+
+                    <p><strong>1.b)</strong> $f([0,1]) = [0, \frac{1}{3}]$ car $f(0) = 0$ et $f(1) = \frac{1}{3}$.</p>
+
+                    <p><strong>2.a)</strong> $u_0 = 1 \in [0,1]$. Si $u_n \in [0,1]$, alors $u_{n+1} = f(u_n) \in f([0,1]) = [0, \frac{1}{3}] \subset [0,1]$.</p>
+                    <p>$u_{n+1} - u_n = \dfrac{u_n - u_n(1+u_n+u_n^2)}{1+u_n+u_n^2} = \dfrac{-u_n^2(u_n+1)}{1+u_n+u_n^2} < 0$.</p>
+
+                    <p><strong>2.b)</strong> $f\left(\frac{1}{n}\right) = \dfrac{1/n}{1 + 1/n + 1/n^2} = \dfrac{n}{n^2 + n + 1} \leq \dfrac{1}{n+1}$.</p>
+                    <p>Par récurrence : $u_n \leq \frac{1}{n}$.</p>
+
+                    <p><strong>2.c)</strong> $(u_n)$ est décroissante et minorée par $0$, donc convergente.</p>
+                    <p>$\lim\limits_{n \to +\infty} u_n = 0$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 9 : Récurrence
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 9</span>
+
+            <p>Démontrer par récurrence les propriétés suivantes :</p>
+
+            <ol>
+                <li>$3^{2n+1} + 2^{n+2}$ est divisible par 7.</li>
+                <li>$\forall n \in \mathbb{N}, (a+b)^n = \sum_{p=0}^n C_n^p a^p b^{n-p}$.</li>
+                <li>$\forall n \in \mathbb{N}, 0 \leq u_n \leq 2$ où
+                    <div class="suite-def">
+                        $\begin{cases} u_0 = 1, \\ u_{n+1} = \frac{2u_n + 1}{u_n + 1}. \end{cases}$
+                    </div>
+                </li>
+                <li>Soit $(u_n)$ la suite définie par :
+                    <div class="suite-def">
+                        $u_0 = 2 \quad \text{et} \quad u_{n+1} = 3u_n - 5, \quad \text{pour tout } n \in \mathbb{N}$.
+                    </div>
+                    Démontrer sur $\mathbb{N}$ que : $u_n = \frac{1}{2}(3^n - 5)$.
+                </li>
+                <li>Soit la suite définie par $u_1 = 5$ et, pour tout $n \in \mathbb{N}^*$, $u_{n+1} = \sqrt{2 + u_n}$.
+                    <br>Démontrer sur $\mathbb{N}^*$ que $u_n \geq 2$.</li>
+                <li>Démontrer que $\forall n \geq 4, 2^n \geq n^2$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $P(n) : 3^{2n+1} + 2^{n+2}$ divisible par 7.</p>
+                    <p>Initialisation : $n=0$ : $3^1 + 2^2 = 3 + 4 = 7$ divisible par 7.</p>
+                    <p>Hérédité : $3^{2(n+1)+1} + 2^{n+3} = 9 \times 3^{2n+1} + 2 \times 2^{n+2} = 7 \times 3^{2n+1} + 2(3^{2n+1} + 2^{n+2})$.</p>
+                    <p>Donc divisible par 7.</p>
+
+                    <p><strong>4.</strong> $u_n = \frac{1}{2}(3^n - 5)$.</p>
+                    <p>Initialisation : $n=0$ : $u_0 = \frac{1}{2}(1 - 5) = -2$, mais $u_0 = 2$. Il y a une erreur dans l'énoncé.</p>
+
+                    <p><strong>6.</strong> $\forall n \geq 4, 2^n \geq n^2$.</p>
+                    <p>Initialisation : $n=4$ : $2^4 = 16 = 4^2$.</p>
+                    <p>Hérédité : $2^{n+1} = 2 \times 2^n \geq 2n^2 \geq (n+1)^2$ pour $n \geq 3$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 10
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 10</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 0, \\ u_{n+1} = \sqrt{3u_n + 4}, \quad \forall n \in \mathbb{N}. \end{cases}$
+            </div>
+
+            <ol>
+                <li>Montrer que : $(\forall n \in \mathbb{N}), 0 \leq u_n \leq 4$.</li>
+                <li>Montrer que la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.</li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que : $(\forall n \in \mathbb{N}), 4 - u_{n+1} \leq \frac{1}{2}(4 - u_n)$.</li>
+                        <li>En déduire que : $(\forall n \in \mathbb{N}), 4 - u_n \leq 4\left(\frac{1}{2}\right)^n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Même exercice que l'exercice 6.</p>
+                    <p>Voir la correction de l'exercice 6.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 11
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 11</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}}$ la suite numérique définie par :</p>
+            <div class="suite-def">
+                $\begin{cases} u_0 = 1, \\ u_{n+1} = \dfrac{2u_n + 3}{u_n + 2}, \quad \forall n \in \mathbb{N}. \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Montrer par récurrence que la suite $(u_n)_{n \in \mathbb{N}}$ est strictement croissante.</li>
+                        <li>Montrer que la suite $(u_n)_{n \in \mathbb{N}}$ est majorée par 2.</li>
+                    </ol>
+                </li>
+                <li>On pose : $\forall n \in \mathbb{N}, v_n = \dfrac{u_n - \sqrt{3}}{u_n + \sqrt{3}}$.
+                    <ol type="a">
+                        <li>Montrer que $(v_n)_{n \in \mathbb{N}}$ est une suite géométrique en déterminant sa raison et son premier terme.</li>
+                        <li>Déterminer $u_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $u_1 = \frac{2 \times 1 + 3}{1 + 2} = \frac{5}{3} > u_0$.</p>
+                    <p>Si $u_n < u_{n+1}$, alors $u_{n+1} - u_n = \dfrac{2u_n+3}{u_n+2} - u_n = \dfrac{3 - u_n^2}{u_n+2}$.</p>
+                    <p>Comme $u_n < 2$, $3 - u_n^2 > 0$, donc $u_{n+1} > u_n$.</p>
+
+                    <p><strong>1.b)</strong> $u_n < 2$ par récurrence.</p>
+
+                    <p><strong>2.a)</strong> $v_{n+1} = \dfrac{u_{n+1} - \sqrt{3}}{u_{n+1} + \sqrt{3}} = \dfrac{\frac{2u_n+3}{u_n+2} - \sqrt{3}}{\frac{2u_n+3}{u_n+2} + \sqrt{3}} = \dfrac{2u_n+3 - \sqrt{3}u_n - 2\sqrt{3}}{2u_n+3 + \sqrt{3}u_n + 2\sqrt{3}}$</p>
+                    <p>$= \dfrac{(2-\sqrt{3})(u_n - \sqrt{3})}{(2+\sqrt{3})(u_n + \sqrt{3})} = \left(\dfrac{2-\sqrt{3}}{2+\sqrt{3}}\right)^2 v_n$</p>
+                    <p>$v_0 = \dfrac{1 - \sqrt{3}}{1 + \sqrt{3}}$</p>
+
+                    <p><strong>2.b)</strong> $u_n = \sqrt{3} \times \dfrac{1 + v_n}{1 - v_n}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 12
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 12</span>
+
+            <p>Soit $(U_n)_{n \geq 1}$ la suite définie par :</p>
+            <div class="suite-def">
+                $U_1 = 1, \quad (U_{n+1})^2 = 4U_n, \quad \forall n \geq 1$.
+            </div>
+
+            <ol>
+                <li>Calculer $U_2$, $U_3$, $U_4$ et $U_5$ sous la forme $2^\alpha$.</li>
+                <li>Soit $(V_n)$ la suite définie par : $V_n = \ln(U_n) - \ln 4, \ \forall n \geq 1$.
+                    <ol type="a">
+                        <li>Montrer que $(V_n)$ est une suite géométrique ; préciser la raison et le premier terme.</li>
+                        <li>En déduire l'expression de $V_n$, puis celle de $U_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+                <li>Pour quelles valeurs de $n$ a-t-on $U_n > 3,96$ ?</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $U_2 = \sqrt{4U_1} = \sqrt{4} = 2 = 2^1$</p>
+                    <p>$U_3 = \sqrt{4U_2} = \sqrt{8} = 2^{3/2}$</p>
+                    <p>$U_4 = \sqrt{4U_3} = \sqrt{4 \times 2^{3/2}} = 2^{1 + 3/4} = 2^{7/4}$</p>
+                    <p>$U_5 = 2^{15/8}$</p>
+
+                    <p><strong>2.a)</strong> $V_n = \ln U_n - \ln 4 = \ln\left(\dfrac{U_n}{4}\right)$</p>
+                    <p>$V_{n+1} = \ln\left(\dfrac{U_{n+1}}{4}\right) = \ln\left(\dfrac{\sqrt{4U_n}}{4}\right) = \dfrac{1}{2}\ln U_n - \ln 2 = \dfrac{1}{2}(V_n + \ln 4) - \ln 2 = \dfrac{1}{2}V_n$</p>
+                    <p>Donc $(V_n)$ est géométrique de raison $\frac{1}{2}$.</p>
+                    <p>$V_1 = \ln 1 - \ln 4 = -\ln 4$.</p>
+
+                    <p><strong>2.b)</strong> $V_n = -\ln 4 \times \left(\dfrac{1}{2}\right)^{n-1}$</p>
+                    <p>$U_n = 4e^{V_n} = 4^{1 - (1/2)^{n-1}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 13 : Suites adjacentes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 13</span>
+
+            <p>On considère les suites $(U_n)$ et $(V_n)$ définies par :</p>
+            <div class="suite-def">
+                $U_1 = 2, \quad U_{n+1} = \dfrac{U_n + 2V_n}{3}$<br>
+                $V_1 = 8, \quad V_{n+1} = \dfrac{U_n + 5V_n}{6}, \quad \text{avec } n \in \mathbb{N}^*$.
+            </div>
+
+            <ol>
+                <li>Soit $a_n = V_n - U_n$ pour tout entier naturel $n$ non nul.
+                    <ol type="a">
+                        <li>Démontrer que $(a_n)$ est une suite géométrique.</li>
+                        <li>Exprimer $a_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Démontrer que $(U_n)$ est croissante et $(V_n)$ décroissante.</li>
+                        <li>Démontrer que $(U_n)$ est majorée et $(V_n)$ minorée.</li>
+                        <li>En déduire que $(U_n)$ et $(V_n)$ ont une limite commune.</li>
+                    </ol>
+                </li>
+                <li>Soit $w_n = \frac{1}{4}U_n + V_n$ pour tout entier naturel $n$ non nul.
+                    <ol type="a">
+                        <li>Montrer que $(w_n)$ est une suite constante.</li>
+                        <li>En déduire les limites de $(U_n)$ et $(V_n)$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $a_{n+1} = V_{n+1} - U_{n+1} = \dfrac{U_n + 5V_n}{6} - \dfrac{U_n + 2V_n}{3} = \dfrac{U_n + 5V_n - 2U_n - 4V_n}{6} = \dfrac{V_n - U_n}{6} = \dfrac{1}{6}a_n$</p>
+                    <p>Donc $(a_n)$ est géométrique de raison $\frac{1}{6}$.</p>
+
+                    <p><strong>1.b)</strong> $a_1 = V_1 - U_1 = 8 - 2 = 6$</p>
+                    <p>$a_n = 6 \times \left(\dfrac{1}{6}\right)^{n-1} = \left(\dfrac{1}{6}\right)^{n-2}$</p>
+
+                    <p><strong>2.a)</strong> $U_{n+1} - U_n = \dfrac{U_n + 2V_n}{3} - U_n = \dfrac{2V_n - 2U_n}{3} = \dfrac{2}{3}a_n > 0$</p>
+                    <p>Donc $(U_n)$ est croissante.</p>
+                    <p>$V_{n+1} - V_n = \dfrac{U_n + 5V_n}{6} - V_n = \dfrac{U_n - V_n}{6} = -\dfrac{1}{6}a_n < 0$</p>
+                    <p>Donc $(V_n)$ est décroissante.</p>
+
+                    <p><strong>2.c)</strong> $(U_n)$ croissante et majorée, $(V_n)$ décroissante et minorée, donc convergentes vers $l$ et $l'$.</p>
+                    <p>Comme $V_n - U_n \to 0$, on a $l = l'$.</p>
+
+                    <p><strong>3.a)</strong> $w_{n+1} = \frac{1}{4}U_{n+1} + V_{n+1} = \frac{1}{4}\dfrac{U_n+2V_n}{3} + \dfrac{U_n+5V_n}{6} = \dfrac{U_n+2V_n}{12} + \dfrac{2U_n+10V_n}{12} = \dfrac{3U_n+12V_n}{12} = \frac{1}{4}U_n + V_n = w_n$</p>
+                    <p>$w_1 = \frac{1}{4} \times 2 + 8 = \frac{1}{2} + 8 = \frac{17}{2}$</p>
+                    <p>$\lim U_n = \lim V_n = 4w_1 = 34$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 14
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 14</span>
+
+            <p>Soit la suite $(u_n)$ définie par :</p>
+            <div class="suite-def">
+                $u_0 = 0, \quad u_{n+1} = \sqrt{2 + u_n}$.
+            </div>
+
+            <ol>
+                <li>Montrer que pour tout entier naturel $n$, $0 \leq u_n \leq 2$.</li>
+                <li>Montrer que $(u_n)$ est croissante.</li>
+                <li>En déduire que $(u_n)$ converge vers un réel $l$ à déterminer.</li>
+                <li>Démontrer que $\forall n \in \mathbb{N}, |u_{n+1} - 2| \leq \frac{1}{2}|u_n - 2|$, puis $|u_n - 2| \leq \left(\frac{1}{2}\right)^n|u_0 - 2|$.</li>
+                <li>Retrouver les résultats de la troisième question.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $0 \leq u_0 = 0 \leq 2$. Si $0 \leq u_n \leq 2$, alors $2 \leq 2+u_n \leq 4$, donc $\sqrt{2} \leq u_{n+1} \leq 2$.</p>
+                    <p>Donc $0 \leq u_n \leq 2$.</p>
+
+                    <p><strong>2.</strong> $u_{n+1} - u_n = \sqrt{2+u_n} - u_n$. $\sqrt{2+u_n} \geq u_n \iff 2+u_n \geq u_n^2 \iff (2-u_n)(1+u_n) \geq 0$.</p>
+                    <p>Comme $0 \leq u_n \leq 2$, $(u_n)$ est croissante.</p>
+
+                    <p><strong>3.</strong> $(u_n)$ croissante et majorée par $2$, donc convergente vers $l$.</p>
+                    <p>$l = \sqrt{2+l} \implies l^2 = 2 + l \implies l^2 - l - 2 = 0 \implies l = 2$ ou $l = -1$.</p>
+                    <p>Comme $u_n \geq 0$, $\boxed{l = 2}$.</p>
+
+                    <p><strong>4.</strong> $|u_{n+1} - 2| = |\sqrt{2+u_n} - 2| = \dfrac{|2+u_n - 4|}{\sqrt{2+u_n} + 2} = \dfrac{|u_n - 2|}{\sqrt{2+u_n} + 2} \leq \dfrac{1}{2}|u_n - 2|$.</p>
+                    <p>Par récurrence : $|u_n - 2| \leq \left(\frac{1}{2}\right)^n|u_0 - 2| = 2\left(\frac{1}{2}\right)^n \to 0$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 15
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 15</span>
+
+            <p>On considère les suites $(U_n)$ et $(V_n)$ définies par :</p>
+            <div class="suite-def">
+                $\begin{cases} U_1 = 12, \\ U_{n+1} = \frac{U_n + 2V_n}{3}, \end{cases}$
+                $\begin{cases} V_1 = 1, \\ V_{n+1} = \frac{U_n + 3V_n}{4}, \end{cases} n \in \mathbb{N}^*$.
+            </div>
+
+            <ol>
+                <li>$W_n = U_n - V_n$ pour tout $n$ non nul. Montrer que $(W_n)$ est une suite géométrique convergente.</li>
+                <li>Exprimer $W_n$ en fonction de $n$.</li>
+                <li>Démontrer que $(U_n)$ est décroissante et $(V_n)$ est croissante.</li>
+                <li>Démontrer que pour tout entier non nul $n$, $U_n \geq V_n$, et en déduire que $V_1 \leq V_n \leq U_n \leq U_1$. Conclure.</li>
+                <li>$T_n = 3U_n + 8V_n$ avec $n$ entier naturel non nul. Montrer que $(T_n)$ est une suite constante, puis déterminer les limites de $(U_n)$ et $(V_n)$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $W_{n+1} = U_{n+1} - V_{n+1} = \dfrac{U_n + 2V_n}{3} - \dfrac{U_n + 3V_n}{4} = \dfrac{4U_n + 8V_n - 3U_n - 9V_n}{12} = \dfrac{U_n - V_n}{12} = \dfrac{1}{12}W_n$</p>
+                    <p>Donc $(W_n)$ est géométrique de raison $\frac{1}{12}$.</p>
+
+                    <p><strong>2.</strong> $W_1 = U_1 - V_1 = 12 - 1 = 11$, donc $W_n = 11 \times \left(\frac{1}{12}\right)^{n-1}$.</p>
+
+                    <p><strong>3.</strong> $U_{n+1} - U_n = \dfrac{U_n + 2V_n}{3} - U_n = \dfrac{2V_n - 2U_n}{3} = -\dfrac{2}{3}W_n < 0$, donc $(U_n)$ décroissante.</p>
+                    <p>$V_{n+1} - V_n = \dfrac{U_n + 3V_n}{4} - V_n = \dfrac{U_n - V_n}{4} = \dfrac{1}{4}W_n > 0$, donc $(V_n)$ croissante.</p>
+
+                    <p><strong>4.</strong> $W_n > 0$, donc $U_n > V_n$.</p>
+                    <p>$V_1 \leq V_n \leq U_n \leq U_1$.</p>
+
+                    <p><strong>5.</strong> $T_{n+1} = 3U_{n+1} + 8V_{n+1} = 3\dfrac{U_n+2V_n}{3} + 8\dfrac{U_n+3V_n}{4} = U_n+2V_n + 2U_n+6V_n = 3U_n+8V_n = T_n$</p>
+                    <p>$T_1 = 3 \times 12 + 8 \times 1 = 44$</p>
+                    <p>$\lim U_n = \lim V_n = \dfrac{T_n}{11} = 4$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 16
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 16</span>
+
+            <p>On considère la fonction $f$ définie par $f(x) = x - \ln|x|$. Soit $(C_f)$ sa courbe représentative dans le plan muni d'un repère orthonormal $(O, \vec{i}, \vec{j})$.</p>
+
+            <ol>
+                <li>Déterminer son ensemble de définition $D_f$, puis calculer les limites aux bornes de $D_f$.</li>
+                <li>Calculer sa dérivée, étudier son signe puis dresser son tableau de variation.</li>
+                <li>Montrer que $(C_f)$ coupe l'axe des abscisses en un seul point $A$ d'abscisse $\alpha$.</li>
+                <li>Établir les inégalités suivantes :
+                    <ol type="a">
+                        <li>$\forall x \geq 1, x - \ln x \geq 1$.</li>
+                        <li>$0 \leq x \leq 1, x^2 \leq x$.</li>
+                        <li>$0 \leq x \leq 1, \ln(1+x) - x - \frac{x^2}{2} \geq 0$.</li>
+                    </ol>
+                </li>
+                <li>On considère la suite $(U_n)$ définie par :
+                    <div class="suite-def">
+                        $U_0 = 2, \quad U_{n+1} = U_n - \ln U_n, \quad \forall n \in \mathbb{N}$.
+                    </div>
+                    <ol type="a">
+                        <li>Donner une valeur approchée de $U_1$ à $10^{-2}$ près et montrer que $\forall n \in \mathbb{N}, U_n \geq 1$.</li>
+                        <li>Montrer que la suite $(U_n)$ est décroissante.</li>
+                    </ol>
+                </li>
+                <li>On pose $\forall n \in \mathbb{N}, V_n = U_n - 1$.
+                    <ol type="a">
+                        <li>Calculer $V_0$, puis exprimer $V_{n+1}$ en fonction de $V_n$.</li>
+                        <li>Préciser le sens de variation de la suite $(V_n)$.</li>
+                        <li>Montrer que $\forall n \in \mathbb{N}, 0 \leq V_n \leq 1$. En déduire que $(V_n)$ converge.</li>
+                        <li>Montrer que $\forall n \in \mathbb{N}, V_{n+1} \leq \frac{1}{2} V_n$ et $0 \leq V_n \leq \left(\frac{1}{2}\right)^n$. En déduire la limite de $(V_n)$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $D_f = \mathbb{R}^*$</p>
+                    <p>$\lim\limits_{x \to 0^+} f(x) = +\infty$, $\lim\limits_{x \to 0^-} f(x) = -\infty$</p>
+                    <p>$\lim\limits_{x \to +\infty} f(x) = +\infty$, $\lim\limits_{x \to -\infty} f(x) = -\infty$</p>
+
+                    <p><strong>2.</strong> $f'(x) = 1 - \dfrac{1}{x} = \dfrac{x-1}{x}$</p>
+                    <p>$f'(x) > 0$ sur $]-\infty; 0[$ et $]1; +\infty[$, $f'(x) < 0$ sur $]0; 1[$</p>
+
+                    <p><strong>5.a)</strong> $U_1 = 2 - \ln 2 \approx 1,31$</p>
+                    <p>$\forall n \in \mathbb{N}, U_n \geq 1$ par récurrence.</p>
+
+                    <p><strong>5.b)</strong> $U_{n+1} - U_n = -\ln U_n \leq 0$, donc $(U_n)$ est décroissante.</p>
+
+                    <p><strong>6.d)</strong> $V_{n+1} = U_{n+1} - 1 = U_n - \ln U_n - 1 = V_n - \ln(1+V_n)$</p>
+                    <p>$\ln(1+V_n) \geq \frac{V_n}{2}$ pour $0 \leq V_n \leq 1$, donc $V_{n+1} \leq \frac{1}{2}V_n$.</p>
+                    <p>$0 \leq V_n \leq \left(\frac{1}{2}\right)^n \to 0$, donc $\lim V_n = 0$ et $\lim U_n = 1$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 17 : Application - Intérêts
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 17</span>
+
+            <p><em>Les parties A et B sont indépendantes.</em></p>
+
+            <div class="part-label">Partie A</div>
+            <p>Un individu décide d'investir dans un plan d'épargne où le capital initial est de 5000 F CFA. Chaque année, le montant investi croît de 5% par rapport à l'année précédente, grâce aux intérêts composés.</p>
+
+            <ol>
+                <li>Déterminer la nature de la suite représentant le capital total après $n$ années.</li>
+                <li>Calculer le premier terme de cette suite.</li>
+                <li>Exprimer le terme général $u_n$ de la suite en fonction de $n$.</li>
+                <li>Calculer la somme $S_n = u_1 + u_2 + \cdots + u_n$, représentant le capital total accumulé après $n$ années.</li>
+                <li>Calculer la limite de $S_n$ lorsque $n \to +\infty$, si elle existe.</li>
+            </ol>
+
+            <div class="part-label">Partie B</div>
+            <p>Un individu décide de rembourser une dette de 10 000 € par versements annuels. Chaque année, il augmente son remboursement de 200 € par rapport à l'année précédente.</p>
+
+            <ol>
+                <li>Déterminer la nature de la suite représentant le montant remboursé chaque année.</li>
+                <li>Calculer le premier terme de cette suite.</li>
+                <li>Exprimer le terme général $u_n$ de la suite en fonction de $n$.</li>
+                <li>Calculer la somme $S_n = u_1 + u_2 + \cdots + u_n$, représentant le total remboursé après $n$ années.</li>
+                <li>Calculer la limite de $S_n$ lorsque $n \to +\infty$, si elle existe.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A</strong></p>
+                    <p><strong>1.</strong> Suite géométrique de raison $1,05$.</p>
+                    <p><strong>2.</strong> $u_0 = 5000$.</p>
+                    <p><strong>3.</strong> $u_n = 5000 \times (1,05)^n$.</p>
+                    <p><strong>4.</strong> $S_n = 5000 \times \dfrac{(1,05)^{n+1} - 1}{1,05 - 1} = 100000 \times ((1,05)^{n+1} - 1)$.</p>
+                    <p><strong>5.</strong> $\lim\limits_{n \to +\infty} S_n = +\infty$.</p>
+
+                    <p><strong>Partie B</strong></p>
+                    <p><strong>1.</strong> Suite arithmétique de raison $200$.</p>
+                    <p><strong>2.</strong> $u_1 = 10000$.</p>
+                    <p><strong>3.</strong> $u_n = 10000 + 200(n-1) = 9800 + 200n$.</p>
+                    <p><strong>4.</strong> $S_n = \dfrac{n}{2}(u_1 + u_n) = \dfrac{n}{2}(10000 + 9800 + 200n) = n(9900 + 100n)$.</p>
+                    <p><strong>5.</strong> $\lim\limits_{n \to +\infty} S_n = +\infty$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Suites - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 17 - Suites arithmétiques, géométriques, récurrentes, adjacentes</p>
+    </footer>
+
+</body>
+</html>
