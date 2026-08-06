@@ -57,7 +57,8 @@
         }
 
         .grid-chapitres {
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les chapitres */
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 colonnes pour les chapitres */
         }
 
         /* ===== STYLES DES BOUTONS ===== */
@@ -92,13 +93,21 @@
 
         /* ===== VUES (MASQUER / AFFICHER) ===== */
         .vue-chapitres {
-            display: none; /* Masqué au départ */
+            display: none;
+            /* Masqué au départ */
             animation: fadeIn 0.3s ease-in-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ===== BOUTON RETOUR ET CONTENEUR ===== */
@@ -157,7 +166,7 @@
 <body>
 
     <main class="card">
-        
+
         <!-- VUE 1 : CHOIX DE L'ANNÉE -->
         <div id="vueAnnees">
             <h1>Travaux Dirigés</h1>
@@ -200,11 +209,18 @@
                 { nom: "Exp", path: "2025/exp/exp.html" }
             ],
             2026: [
-                { nom: "Complexe", path: "2026/Complexe/complexe.html" },
                 { nom: "Fonction Numérique", path: "2026/fonctionNumerique/fonctionNumerique.html" },
+                { nom: "Complexe", path: "2026/Complexe/complexe.html" },
+                { nom: "Similitude", path: "2026/similitude/similitude.html" },
                 { nom: "Ln", path: "2026/ln/td1Ln.html" },
                 { nom: "Expo", path: "2026/exp/exp.html" },
-                { nom: "Suite", path: "2026/suite/suite.html" }
+                { nom: "problemLnExpo", path: "2026/problemLnExpo/problemLnExpo.html" },
+                { nom: "Suite", path: "2026/suite/suite.html" },
+                { nom: "denombrement", path: "2026/denombrement/denombrement.html" },
+                { nom: "Probabilités", path: "2026/poba/proba.html" },
+                { nom: "Statistiques", path: "2026/statistique/statistique.html" },
+                { nom: "Equations Différentielles", path: "2026/equaDiff/equaDiff.html" },
+                { nom: "integrales", path: "2026/integrales/integrales.html" }
             ],
             2027: [
                 { nom: "Complexe", path: "2027/Complexe/complexe.html" }
@@ -219,11 +235,11 @@
         // Afficher les chapitres d'une année
         function afficherChapitres(annee) {
             titreAnnee.textContent = `Année ${annee}`;
-            
+
             const chapitres = tdData[annee] || [];
-            
+
             if (chapitres.length > 0) {
-                listeChapitres.innerHTML = chapitres.map(chap => 
+                listeChapitres.innerHTML = chapitres.map(chap =>
                     `<a href="${chap.path}" class="btn-item">${chap.nom}</a>`
                 ).join('');
             } else {
