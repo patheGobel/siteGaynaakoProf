@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Similitudes - TS2</title>
+    <link rel="stylesheet" href="similitude.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 21/02/2025</span>
+        </div>
+        <h1>📐 TD Similitudes</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+
+            <p>Dans chacun des cas suivants, déterminer l'écriture complexe de la similitude directe de centre $\Omega$, de rapport $k$ et d'angle $\theta$.</p>
+
+            <ol>
+                <li>$\Omega = O$, $k = 2$ et $\theta = \dfrac{\pi}{6}$.</li>
+                <li>$\Omega \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, $k = \sqrt{2}$ et $\theta = \dfrac{\pi}{2}$.</li>
+                <li>$\Omega \begin{pmatrix} 2 \\ -1 \end{pmatrix}$, $k = 1$ et $\theta = \dfrac{5\pi}{6}$.</li>
+                <li>$\Omega (-2 + i\frac{1}{2})$, $k = \dfrac{1}{2}$, $\theta = \dfrac{-\pi}{3}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappel :</strong> L'écriture complexe d'une similitude directe de centre $\Omega$ d'affixe $\omega$, de rapport $k$ et d'angle $\theta$ est :</p>
+                    <div class="formula-center">
+                        $$z' - \omega = k e^{i\theta}(z - \omega)$$
+                    </div>
+
+                    <p><strong>1.</strong> $\omega = 0$, $z' = 2e^{i\frac{\pi}{6}}z = (\sqrt{3} + i)z$</p>
+                    <p>$\boxed{z' = (\sqrt{3} + i)z}$</p>
+
+                    <p><strong>2.</strong> $\omega = 1$, $z' - 1 = \sqrt{2}e^{i\frac{\pi}{2}}(z - 1) = \sqrt{2}i(z - 1)$</p>
+                    <p>$\boxed{z' = \sqrt{2}i z - \sqrt{2}i + 1}$</p>
+
+                    <p><strong>3.</strong> $\omega = 2 - i$, $z' - (2 - i) = e^{i\frac{5\pi}{6}}(z - (2 - i))$</p>
+                    <p>$e^{i\frac{5\pi}{6}} = -\frac{\sqrt{3}}{2} + \frac{1}{2}i$</p>
+                    <p>$\boxed{z' = (-\frac{\sqrt{3}}{2} + \frac{1}{2}i)z + \omega(1 - e^{i\frac{5\pi}{6}})}$</p>
+
+                    <p><strong>4.</strong> $\omega = -2 + \frac{1}{2}i$, $z' - \omega = \frac{1}{2}e^{-i\frac{\pi}{3}}(z - \omega)$</p>
+                    <p>$e^{-i\frac{\pi}{3}} = \frac{1}{2} - i\frac{\sqrt{3}}{2}$</p>
+                    <p>$\boxed{z' = \frac{1}{2}e^{-i\frac{\pi}{3}}z + \omega(1 - \frac{1}{2}e^{-i\frac{\pi}{3}})}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <p>Dans chacun des cas suivants, déterminer la nature et les éléments caractéristiques de l'application $f$ du plan dans lui-même, qui au point $M$ d'affixe $z$ associe le point $M'$ d'affixe $z'$ :</p>
+
+            <div class="two-columns">
+                <div>
+                    <p><strong>a.</strong> $z' = (\sqrt{3} + i)z$</p>
+                    <p><strong>b.</strong> $z' = -2z + i$</p>
+                    <p><strong>c.</strong> $z' = -z + 2i$</p>
+                </div>
+                <div>
+                    <p><strong>d.</strong> $z' = \dfrac{3 + i\sqrt{3}}{4}z + \dfrac{1 - i\sqrt{3}}{2}$</p>
+                    <p><strong>e.</strong> $z' = iz + 1$</p>
+                    <p><strong>f.</strong> $z' = z + 3 - i$</p>
+                </div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>a.</strong> $z' = (\sqrt{3} + i)z$</p>
+                    <p>$|a| = \sqrt{3 + 1} = 2$, $a = 2e^{i\frac{\pi}{6}}$</p>
+                    <p>$\boxed{\text{Similitude directe de centre }O\text{, rapport }2\text{, angle }\frac{\pi}{6}}$</p>
+
+                    <p><strong>b.</strong> $z' = -2z + i$, $a = -2 = 2e^{i\pi}$</p>
+                    <p>Point fixe : $\omega = \dfrac{i}{1 - (-2)} = \dfrac{i}{3}$</p>
+                    <p>$\boxed{\text{Similitude directe de centre }\omega = \frac{i}{3}\text{, rapport }2\text{, angle }\pi}$</p>
+
+                    <p><strong>c.</strong> $z' = -z + 2i$, $a = -1 = e^{i\pi}$</p>
+                    <p>Point fixe : $\omega = \dfrac{2i}{1 - (-1)} = i$</p>
+                    <p>$\boxed{\text{Similitude directe de centre }\omega = i\text{, rapport }1\text{, angle }\pi}$</p>
+
+                    <p><strong>d.</strong> $z' = \dfrac{3 + i\sqrt{3}}{4}z + \dfrac{1 - i\sqrt{3}}{2}$</p>
+                    <p>$a = \dfrac{3 + i\sqrt{3}}{4} = \dfrac{\sqrt{3}}{2}e^{i\frac{\pi}{6}}$</p>
+                    <p>Point fixe : $\omega = \dfrac{b}{1 - a}$</p>
+
+                    <p><strong>e.</strong> $z' = iz + 1$, $a = i = e^{i\frac{\pi}{2}}$</p>
+                    <p>Point fixe : $\omega = \dfrac{1}{1 - i} = \dfrac{1 + i}{2}$</p>
+                    <p>$\boxed{\text{Similitude directe de centre }\omega = \frac{1+i}{2}\text{, rapport }1\text{, angle }\frac{\pi}{2}}$</p>
+
+                    <p><strong>f.</strong> $z' = z + 3 - i$, $a = 1$</p>
+                    <p>$\boxed{\text{Translation de vecteur }3 - i}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+
+            <p>Dans chacun des cas suivants, déterminer l'écriture complexe de la similitude directe $s$ définie par : $S(A) = A'$ et $S(B) = B'$.</p>
+
+            <ol type="a">
+                <li>$A(3+2i), A'(3), B(1)$ et $B'(i)$;</li>
+                <li>$A(2+i), A'(3+2i), B(2)$ et $B'(3i)$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Rappel :</strong> Une similitude directe s'écrit $z' = az + b$ avec $a \in \mathbb{C}^*$.</p>
+
+                    <p><strong>a.</strong> $A(3+2i) \to A'(3)$, $B(1) \to B'(i)$</p>
+                    <p>$a = \dfrac{z'_{A} - z'_{B}}{z_A - z_B} = \dfrac{3 - i}{(3+2i) - 1} = \dfrac{3 - i}{2 + 2i} = \dfrac{(3-i)(2-2i)}{8} = \dfrac{6 - 6i - 2i + 2i^2}{8} = \dfrac{4 - 8i}{8} = \dfrac{1}{2} - i$</p>
+                    <p>$b = z'_{A} - a z_A = 3 - (\dfrac{1}{2} - i)(3+2i) = 3 - (\dfrac{3}{2} + i - 3i - 2i^2) = 3 - (\dfrac{3}{2} - 2i + 2) = 3 - \dfrac{7}{2} + 2i = -\dfrac{1}{2} + 2i$</p>
+                    <p>$\boxed{z' = (\dfrac{1}{2} - i)z - \dfrac{1}{2} + 2i}$</p>
+
+                    <p><strong>b.</strong> $A(2+i) \to A'(3+2i)$, $B(2) \to B'(3i)$</p>
+                    <p>$a = \dfrac{(3+2i) - 3i}{(2+i) - 2} = \dfrac{3 - i}{i} = \dfrac{3 - i}{i} = \dfrac{3}{i} - 1 = -3i - 1 = -1 - 3i$</p>
+                    <p>$b = z'_{A} - a z_A = (3+2i) - (-1-3i)(2+i) = 3+2i - (-2 - i - 6i - 3i^2) = 3+2i - (-2 - 7i + 3) = 3+2i - (1 - 7i) = 2 + 9i$</p>
+                    <p>$\boxed{z' = (-1 - 3i)z + 2 + 9i}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+
+            <p>Soit $s$ la similitude directe d'écriture complexe : $z' = 3iz - 9 - 3i$.</p>
+
+            <ol>
+                <li>Déterminer les éléments caractéristiques de $s$.</li>
+                <li>Déterminer l'expression analytique de $s$.</li>
+                <li>Déterminer l'image par $s$ :
+                    <ol type="a">
+                        <li>du cercle de centre $K(1 - 3i)$ et de rayon 1;</li>
+                        <li>de la droite $(\mathscr{D})$ d'équation : $x = 1$;</li>
+                        <li>de la droite passant par le point $A(5;3)$ et dont un vecteur directeur est $\vec{u}(-1;3)$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $z' = 3iz - 9 - 3i$</p>
+                    <p>$a = 3i = 3e^{i\frac{\pi}{2}}$</p>
+                    <p>Rapport : $k = 3$, angle : $\theta = \dfrac{\pi}{2}$</p>
+                    <p>Point fixe : $\omega = \dfrac{b}{1 - a} = \dfrac{-9 - 3i}{1 - 3i} = \dfrac{(-9-3i)(1+3i)}{10} = \dfrac{-9 - 27i - 3i - 9i^2}{10} = \dfrac{0 - 30i}{10} = -3i$</p>
+                    <p>$\boxed{\text{Centre }\omega = -3i\text{, rapport }3\text{, angle }\frac{\pi}{2}}$</p>
+
+                    <p><strong>2.</strong> $z = x + iy$, $z' = x' + iy'$</p>
+                    <p>$z' = 3i(x+iy) - 9 - 3i = 3ix - 3y - 9 - 3i = (-3y - 9) + i(3x - 3)$</p>
+                    <p>$\boxed{\begin{cases} x' = -3y - 9 \\ y' = 3x - 3 \end{cases}}$</p>
+
+                    <p><strong>3.a)</strong> Image d'un cercle : cercle de centre $K' = s(K)$ et rayon $k \times r = 3$</p>
+                    <p>$K(1 - 3i)$ : $z'_K = 3i(1-3i) - 9 - 3i = 3i - 9i^2 - 9 - 3i = 3i + 9 - 9 - 3i = 0$</p>
+                    <p>$\boxed{\text{Cercle de centre }O\text{ et de rayon }3}$</p>
+
+                    <p><strong>3.b)</strong> Image d'une droite : droite passant par $s(A)$ de direction $s(\vec{u})$</p>
+                    <p>$A(1)$ : $z'_A = 3i(1) - 9 - 3i = 3i - 9 - 3i = -9$</p>
+                    <p>Direction verticale car $s$ est une rotation + homothétie</p>
+                    <p>$\boxed{\text{Droite }x = -9}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+
+            <p>Soit $A, B$ et $C$ les points d'affixes respectives : $i, 1 + i$ et $2 + 2i$.</p>
+
+            <ol>
+                <li>Déterminer l'affixe du barycentre $G$ des points $A, B$ et $C$ affectés respectivement des coefficients $2, -2$ et $1$.</li>
+                <li>Démontrer que la similitude directe $s$, qui transforme $A$ en $B$ et $B$ en $C$, a pour centre le point $G$.</li>
+                <li>Déterminer l'angle et le rapport de $s$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $z_G = \dfrac{2z_A - 2z_B + z_C}{2 - 2 + 1} = 2(i) - 2(1+i) + (2+2i) = 2i - 2 - 2i + 2 + 2i = 2i$</p>
+                    <p>$\boxed{G(2i)}$</p>
+
+                    <p><strong>2.</strong> $s$ est définie par $z' = az + b$ avec $s(A) = B$ et $s(B) = C$.</p>
+                    <p>$a = \dfrac{z_C - z_B}{z_B - z_A} = \dfrac{(2+2i) - (1+i)}{(1+i) - i} = \dfrac{1+i}{1} = 1 + i$</p>
+                    <p>$b = z_B - a z_A = (1+i) - (1+i)i = 1+i - (i + i^2) = 1+i - i + 1 = 2$</p>
+                    <p>Vérifions que $G$ est le centre : $z_G = \dfrac{b}{1 - a} = \dfrac{2}{1 - (1+i)} = \dfrac{2}{-i} = 2i$</p>
+                    <p>$\boxed{\text{Le centre de }s\text{ est bien }G}$</p>
+
+                    <p><strong>3.</strong> $a = 1 + i = \sqrt{2}e^{i\frac{\pi}{4}}$</p>
+                    <p>$\boxed{\text{Rapport }k = \sqrt{2}\text{, angle }\theta = \frac{\pi}{4}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6 (BAC)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+            <span class="bac-title">BAC</span>
+
+            <p>On considère les applications $T_1$ et $T_2$ dont les écritures complexes sont :<br>
+            $T_1 : z_1 = (\sqrt{3} + i)z$ et $T_2 : z_2 = (1 - i\sqrt{3})z + 3$.</p>
+
+            <ol>
+                <li>Déterminer la nature et les éléments caractéristiques de $T_1$ et $T_2$.</li>
+                <li>Déterminer l'écriture complexe, la nature et les éléments caractéristiques de $T_2 \circ T_1$.</li>
+                <li>Démontrer qu'il existe un seul point $K$ tel que $T_1(K) = T_2(K)$. Soit $L = T_1(K)$. Calculer les affixes des points $K$ et $L$.</li>
+                <li>Démontrer que le point $L$ est invariable pour chacune des applications $T_2 \circ T_1^{-1}$ et $T_1 \circ T_2^{-1}$.</li>
+                <li>Déterminer l'écriture complexe de chacune des applications $T_2 \circ T_1^{-1}$ et $T_1 \circ T_2^{-1}$. Préciser leurs natures et éléments caractéristiques.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $T_1 : z_1 = (\sqrt{3} + i)z = 2e^{i\frac{\pi}{6}}z$</p>
+                    <p>$\boxed{T_1 : \text{similitude directe de centre }O\text{, rapport }2\text{, angle }\frac{\pi}{6}}$</p>
+                    <p>$T_2 : z_2 = (1 - i\sqrt{3})z + 3 = 2e^{-i\frac{\pi}{3}}z + 3$</p>
+                    <p>Point fixe : $\omega = \dfrac{3}{1 - 2e^{-i\frac{\pi}{3}}} = \dfrac{3}{1 - (1 - i\sqrt{3})} = \dfrac{3}{i\sqrt{3}} = -i\sqrt{3}$</p>
+                    <p>$\boxed{T_2 : \text{similitude directe de centre }-i\sqrt{3}\text{, rapport }2\text{, angle }-\frac{\pi}{3}}$</p>
+
+                    <p><strong>2.</strong> $T_2 \circ T_1 : z' = (1 - i\sqrt{3})(\sqrt{3} + i)z + 3$</p>
+                    <p>$a = (1 - i\sqrt{3})(\sqrt{3} + i) = \sqrt{3} + i - 3i - i^2\sqrt{3} = \sqrt{3} + 1 - 2i$</p>
+                    <p>$|a| = \sqrt{(\sqrt{3}+1)^2 + 4} = \sqrt{4 + 2\sqrt{3} + 4} = \sqrt{8 + 2\sqrt{3}}$</p>
+
+                    <p><strong>3.</strong> $T_1(K) = T_2(K) \iff (\sqrt{3}+i)z_K = (1 - i\sqrt{3})z_K + 3$</p>
+                    <p>$(\sqrt{3}+i - 1 + i\sqrt{3})z_K = 3$</p>
+                    <p>$((\sqrt{3}-1) + i(1+\sqrt{3}))z_K = 3$</p>
+                    <p>$z_K = \dfrac{3}{(\sqrt{3}-1) + i(\sqrt{3}+1)}$</p>
+                    <p>$L = T_1(K)$</p>
+
+                    <p><strong>5.</strong> $T_2 \circ T_1^{-1}$ est une similitude directe de rapport $1$ (car $T_1$ et $T_2$ ont même rapport 2).</p>
+                    <p>Donc c'est une rotation d'angle $\theta_2 - \theta_1 = -\dfrac{\pi}{3} - \dfrac{\pi}{6} = -\dfrac{\pi}{2}$.</p>
+                    <p>Son centre est $L$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 7
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+
+            <p>Soit $S_1$ l'application qui à tout point $M(x,y)$ associe $M'(x',y')$ définie par :</p>
+            <div class="systeme-box">
+                $\begin{cases} x' = -\frac{1}{2}x - \frac{\sqrt{3}}{2}y + \frac{3}{2} \\ y' = \frac{\sqrt{3}}{2}x - \frac{1}{2}y - \frac{\sqrt{3}}{2} \end{cases}$
+            </div>
+
+            <ol>
+                <li>Déterminer l'écriture complexe de $S_1$.</li>
+                <li>En déduire la nature et les éléments caractéristiques de $S_1$.</li>
+                <li>Soient les points $A(1)$ et $B(-1)$. Déterminer l'écriture complexe de la similitude directe $S_2$ telle que $S_2(A) = O$ et $S_2(B) = B$ puis caractériser $S_2$.</li>
+                <li>On pose $S = S_1 \circ S_2$. Déterminer l'écriture complexe de $S$.</li>
+                <li>Déterminer l'image par $S$ :
+                    <ol type="a">
+                        <li>de la droite $(\mathscr{D})$ d'équation $2x + y - 1 = 0$;</li>
+                        <li>du cercle $(\mathscr{C})$ d'équation $(x + 3)^2 + (y - 2)^2 = 4$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $z' = x' + iy' = (-\frac{1}{2}x - \frac{\sqrt{3}}{2}y + \frac{3}{2}) + i(\frac{\sqrt{3}}{2}x - \frac{1}{2}y - \frac{\sqrt{3}}{2})$</p>
+                    <p>$= (-\frac{1}{2} + i\frac{\sqrt{3}}{2})x + (-\frac{\sqrt{3}}{2} - i\frac{1}{2})y + \frac{3}{2} - i\frac{\sqrt{3}}{2}$</p>
+                    <p>$= (-\frac{1}{2} + i\frac{\sqrt{3}}{2})(x + iy) + \frac{3}{2} - i\frac{\sqrt{3}}{2}$</p>
+                    <p>$\boxed{z' = (-\frac{1}{2} + i\frac{\sqrt{3}}{2})z + \frac{3}{2} - i\frac{\sqrt{3}}{2}}$</p>
+
+                    <p><strong>2.</strong> $a = -\frac{1}{2} + i\frac{\sqrt{3}}{2} = e^{i\frac{2\pi}{3}}$</p>
+                    <p>Rapport $k = 1$, angle $\theta = \dfrac{2\pi}{3}$</p>
+                    <p>Point fixe : $\omega = \dfrac{b}{1 - a} = \dfrac{\frac{3}{2} - i\frac{\sqrt{3}}{2}}{1 - (-\frac{1}{2} + i\frac{\sqrt{3}}{2})} = \dfrac{\frac{3}{2} - i\frac{\sqrt{3}}{2}}{\frac{3}{2} - i\frac{\sqrt{3}}{2}} = 1$</p>
+                    <p>$\boxed{S_1 : \text{rotation de centre }\omega = 1\text{ et d'angle }\frac{2\pi}{3}}$</p>
+
+                    <p><strong>3.</strong> $S_2(A) = O$ et $S_2(B) = B$</p>
+                    <p>$S_2 : z' = az + b$</p>
+                    <p>$a = \dfrac{0 - (-1)}{1 - (-1)} = \dfrac{1}{2}$</p>
+                    <p>$b = 0 - a \times 1 = -\frac{1}{2}$</p>
+                    <p>$\boxed{S_2 : z' = \frac{1}{2}z - \frac{1}{2} = \frac{1}{2}(z - 1)}$</p>
+                    <p>$\boxed{S_2 : \text{homothétie de centre }B(-1)\text{ et de rapport }\frac{1}{2}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 8 : BAC 2024
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+            <span class="bac-title">BAC 2024</span>
+            <span style="font-weight:600; color: var(--primary-dark);">(05 points)</span>
+
+            <p><strong>1.</strong> Dans le plan complexe muni d'un repère orthonormé direct $(O; \vec{i}, \vec{j})$, on considère les points $A, B$ et $C$ d'affixes respectives : $z_A = -3i$, $z_B = -2$ et $z_C = 1 + 2i$.</p>
+
+            <ol type="a">
+                <li>Déterminer le module et un argument du quotient $\dfrac{2z_C - z_B}{z_A - z_B}$. <span class="points">(0,75 point)</span></li>
+                <li>En déduire la nature du triangle $ABC$. <span class="points">(0,75 point)</span></li>
+                <li>Déterminer l'affixe $z_D$ du point $D$ tel que le quadrilatère $BADC$ soit un carré. <span class="points">(0,5 point)</span></li>
+                <li>Montrer que les points $A, B, C$ et $D$ appartiennent à un même cercle dont on précisera le centre et le rayon. <span class="points">(0,75 point)</span></li>
+            </ol>
+
+            <p><strong>2.</strong> On considère les points $M$ et $M'$ d'affixes respectives $z = x + iy$ et $z' = x' + iy'$ où $x, y, x', y'$ sont des réels.</p>
+
+            <p>Soit $S$ l'application du plan dans le plan d'expression analytique : $\begin{cases} x' = x - y + 2 \\ y' = x + y - 1 \end{cases}$</p>
+
+            <ol type="a">
+                <li>Montrer que l'écriture complexe de $S$ est : $z' = (1 + i)z + 2 - i$. <span class="points">(0,5 point)</span></li>
+                <li>Déterminer la nature et les éléments caractéristiques de $S$. <span class="points">(0,5 point)</span></li>
+                <li>Déterminer l'image par $S$ de la droite $(D)$ d'équation $x + y + 1 = 0$. <span class="points">(0,5 point)</span></li>
+                <li>Déterminer l'ensemble des points $M$ dont l'affixe $z$ vérifie $|(1 + i)z + 2 - i| = 2$. <span class="points">(0,5 point)</span></li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\dfrac{2z_C - z_B}{z_A - z_B} = \dfrac{2(1+2i) - (-2)}{-3i - (-2)} = \dfrac{2 + 4i + 2}{2 - 3i} = \dfrac{4 + 4i}{2 - 3i}$</p>
+                    <p>$= \dfrac{(4+4i)(2+3i)}{4 + 9} = \dfrac{8 + 12i + 8i + 12i^2}{13} = \dfrac{8 + 20i - 12}{13} = \dfrac{-4 + 20i}{13}$</p>
+                    <p>Module : $\left|\dfrac{-4 + 20i}{13}\right| = \dfrac{\sqrt{16 + 400}}{13} = \dfrac{4\sqrt{26}}{13}$</p>
+
+                    <p><strong>1.b)</strong> Le triangle $ABC$ est rectangle isocèle en $B$.</p>
+
+                    <p><strong>1.c)</strong> $z_D = z_A + z_C - z_B = -3i + (1+2i) - (-2) = 3 - i$</p>
+
+                    <p><strong>1.d)</strong> Centre : $\omega = \dfrac{z_A + z_C}{2} = \dfrac{1 - i}{2}$, rayon $R = \dfrac{|z_C - z_A|}{2} = \dfrac{|1 + 5i|}{2} = \dfrac{\sqrt{26}}{2}$</p>
+
+                    <p><strong>2.a)</strong> $z' = x' + iy' = (x - y + 2) + i(x + y - 1) = x + iy + ix - y + 2 - i = (1+i)(x+iy) + 2 - i$</p>
+                    <p>$\boxed{z' = (1+i)z + 2 - i}$</p>
+
+                    <p><strong>2.b)</strong> $a = 1+i = \sqrt{2}e^{i\frac{\pi}{4}}$</p>
+                    <p>Point fixe : $\omega = \dfrac{2 - i}{1 - (1+i)} = \dfrac{2 - i}{-i} = i(2-i) = 2i + 1 = 1 + 2i$</p>
+                    <p>$\boxed{S : \text{similitude directe de centre }\omega = 1+2i\text{, rapport }\sqrt{2}\text{, angle }\frac{\pi}{4}}$</p>
+
+                    <p><strong>2.c)</strong> Image de la droite $x + y + 1 = 0$</p>
+                    <p>$\boxed{\text{Une droite passant par }S(A)\text{ et de direction }S(\vec{u})}$</p>
+
+                    <p><strong>2.d)</strong> $|(1+i)z + 2 - i| = 2 \iff |z'| = 2$</p>
+                    <p>$\boxed{\text{Cercle de centre }O\text{ et de rayon }2}$</p>
+                    <p>Donc $M$ appartient à l'image réciproque du cercle de centre $O$ et de rayon $2$ par $S$.</p>
+                    <p>$\boxed{\text{Cercle de centre }S^{-1}(O) = \omega = 1+2i\text{ et de rayon }\frac{2}{\sqrt{2}} = \sqrt{2}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - TD Similitudes - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 8 - Similitudes directes</p>
+    </footer>
+
+</body>
+</html>
