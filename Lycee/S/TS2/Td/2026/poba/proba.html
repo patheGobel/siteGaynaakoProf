@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Probabilités - TS2</title>
+    <link rel="stylesheet" href="proba.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 17/04/2025</span>
+        </div>
+        <h1>📊 TD Probabilités</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+
+            <p>Un jeu de 32 cartes est constitué de 4 couleurs : Piques, cœur, trèfle et carreau. Chaque couleur est composé de 8 cartes : l'As ; le Roi, la Dame, le Valet, le 10, le 9, le 8 et le 7.</p>
+
+            <ol>
+                <li>On tire simultanément 3 cartes de ce jeu. Calculer la probabilité de chacun des événements suivants :
+                    <ol type="a">
+                        <li>$A :$ "Les trois cartes sont des As"</li>
+                        <li>$B :$ "Il y a au moins deux couleurs parmi les trois cartes"</li>
+                        <li>$C :$ "Il n'y a pas d'As parmi les trois cartes"</li>
+                    </ol>
+                </li>
+                <li>On tire successivement avec remise 3 cartes du jeu de 32 cartes. On définit la variable aléatoire $X$ qui est égale au nombre de couleurs tiré. Déterminer la loi de probabilité de $X$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $C_{32}^3 = 4960$</p>
+                    <p>a) $P(A) = \dfrac{C_4^3}{C_{32}^3} = \dfrac{4}{4960} = \dfrac{1}{1240}$</p>
+                    <p>b) $B$ : au moins deux couleurs = total - une seule couleur<br>
+                    $P(B) = 1 - \dfrac{4 \times C_8^3}{C_{32}^3} = 1 - \dfrac{224}{4960} = \dfrac{4736}{4960} = \dfrac{148}{155}$</p>
+                    <p>c) $P(C) = \dfrac{C_{28}^3}{C_{32}^3} = \dfrac{3276}{4960} = \dfrac{819}{1240}$</p>
+
+                    <p><strong>2.</strong> $X$ = nombre de couleurs différentes</p>
+                    <p>$P(X=1) = \dfrac{4 \times 8^3}{32^3} = \dfrac{2048}{32768} = \dfrac{1}{16}$</p>
+                    <p>$P(X=3) = \dfrac{C_4^3 \times 8^3 \times 3!}{32^3} = \dfrac{4 \times 512 \times 6}{32768} = \dfrac{12288}{32768} = \dfrac{3}{8}$</p>
+                    <p>$P(X=2) = 1 - P(X=1) - P(X=3) = 1 - \dfrac{1}{16} - \dfrac{3}{8} = \dfrac{9}{16}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <p>Une urne contient 12 fiches portant chacune une lettre du mot "BACCALAUREAT".</p>
+
+            <ol>
+                <li>On tire successivement et au hasard les 12 fiches en les plaçant l'une après l'autre. Quelle est la probabilité d'obtenir :
+                    <ol type="a">
+                        <li>Un mot commençant par une consonne ?</li>
+                        <li>Un mot commençant par une voyelle ?</li>
+                        <li>Le mot BACCALAUREAT ?</li>
+                    </ol>
+                </li>
+                <li>On remet les fiches dans l'urne et on en tire que 3 fiches toujours successivement et sans remise. Quelle est la probabilité d'obtenir :
+                    <ol type="a">
+                        <li>Le mot BAC.</li>
+                        <li>Trois voyelles.</li>
+                        <li>Un seul A.</li>
+                        <li>Au moins un A.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>BACCALAUREAT : B(1), A(4), C(2), L(1), U(1), R(1), E(1), T(1) soit 12 lettres</p>
+                    <p><strong>1.</strong> a) Consonnes : B(1), C(2), L(1), R(1), T(1) = 6<br>
+                    $P = \dfrac{6}{12} = \dfrac{1}{2}$</p>
+                    <p>b) Voyelles : A(4), U(1), E(1) = 6<br>
+                    $P = \dfrac{6}{12} = \dfrac{1}{2}$</p>
+                    <p>c) $P = \dfrac{1}{12!}$</p>
+
+                    <p><strong>2.</strong> a) $P(\text{BAC}) = \dfrac{1}{12} \times \dfrac{4}{11} \times \dfrac{2}{10} = \dfrac{8}{1320} = \dfrac{1}{165}$</p>
+                    <p>b) $P(\text{3 voyelles}) = \dfrac{6}{12} \times \dfrac{5}{11} \times \dfrac{4}{10} = \dfrac{120}{1320} = \dfrac{1}{11}$</p>
+                    <p>c) $P(\text{un seul A}) = \dfrac{C_4^1 \times C_8^2}{C_{12}^3} = \dfrac{4 \times 28}{220} = \dfrac{112}{220} = \dfrac{28}{55}$</p>
+                    <p>d) $P(\text{au moins un A}) = 1 - P(\text{aucun A}) = 1 - \dfrac{C_8^3}{C_{12}^3} = 1 - \dfrac{56}{220} = \dfrac{164}{220} = \dfrac{41}{55}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+
+            <p>Les laboratoires pharmaceutiques indiquent pour chaque test sa sensibilité $\alpha$, qui est la probabilité que le test soit positif si le sujet est malade, et sa spécificité $\beta$, qui est la probabilité que le test soit négatif si le sujet est sain. Sachant qu'en moyenne il y a un malade sur 1000 personnes, calculer la probabilité d'être un sujet sain alors que le test est positif, avec $\alpha = 95\%$ et $\beta = 97\%$. Calculer la probabilité d'être malade alors que le test est négatif.</p>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$P(M) = \frac{1}{1000} = 0,001$, $P(\overline{M}) = 0,999$</p>
+                    <p>$P(T^+ | M) = \alpha = 0,95$, $P(T^- | \overline{M}) = \beta = 0,97$</p>
+                    <p>$P(T^+ | \overline{M}) = 0,03$</p>
+
+                    <p>$P(\overline{M} | T^+) = \dfrac{P(T^+ | \overline{M}) \times P(\overline{M})}{P(T^+)}$</p>
+                    <p>$P(T^+) = 0,95 \times 0,001 + 0,03 \times 0,999 = 0,00095 + 0,02997 = 0,03092$</p>
+                    <p>$P(\overline{M} | T^+) = \dfrac{0,03 \times 0,999}{0,03092} = \dfrac{0,02997}{0,03092} \approx 0,9693$</p>
+
+                    <p>$P(M | T^-) = \dfrac{P(T^- | M) \times P(M)}{P(T^-)}$</p>
+                    <p>$P(T^- | M) = 0,05$, $P(T^-) = 0,05 \times 0,001 + 0,97 \times 0,999 = 0,00005 + 0,96903 = 0,96908$</p>
+                    <p>$P(M | T^-) = \dfrac{0,05 \times 0,001}{0,96908} \approx 0,0000516$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+
+            <p>Un porte monnaie comprend quatre pièces de 500F et six pièces de 200F. Un enfant tire au hasard simultanément 3 pièces de ce porte monnaie.</p>
+
+            <ol>
+                <li>Calculer la probabilité de l'événement $A$ : "tirer 3 pièces de 500F".</li>
+                <li>Soit $X$ la variable aléatoire égale au nombre de pièces de 500F tiré.
+                    <ol type="a">
+                        <li>Déterminer la loi de probabilité de $X$.</li>
+                        <li>Calculer l'espérance mathématique de $X$ et son écart type.</li>
+                    </ol>
+                </li>
+                <li>L'enfant répète 5 fois la même épreuve en remettant à chaque fois les trois pièces tirées dans le porte monnaie. Quelle est la probabilité que l'événement $A$ se réalise trois fois à l'issue de l'épreuve ?</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Total : 10 pièces (4 de 500F, 6 de 200F)</p>
+                    <p><strong>1.</strong> $P(A) = \dfrac{C_4^3}{C_{10}^3} = \dfrac{4}{120} = \dfrac{1}{30}$</p>
+
+                    <p><strong>2.</strong> $X$ suit une loi hypergéométrique : $P(X=k) = \dfrac{C_4^k C_6^{3-k}}{C_{10}^3}$</p>
+                    <p>$P(X=0) = \dfrac{C_6^3}{120} = \dfrac{20}{120} = \dfrac{1}{6}$</p>
+                    <p>$P(X=1) = \dfrac{C_4^1 C_6^2}{120} = \dfrac{4 \times 15}{120} = \dfrac{60}{120} = \dfrac{1}{2}$</p>
+                    <p>$P(X=2) = \dfrac{C_4^2 C_6^1}{120} = \dfrac{6 \times 6}{120} = \dfrac{36}{120} = \dfrac{3}{10}$</p>
+                    <p>$P(X=3) = \dfrac{C_4^3}{120} = \dfrac{4}{120} = \dfrac{1}{30}$</p>
+
+                    <p>$E(X) = \sum k P(X=k) = 0 \times \frac{1}{6} + 1 \times \frac{1}{2} + 2 \times \frac{3}{10} + 3 \times \frac{1}{30} = \frac{6}{5}$</p>
+                    <p>$V(X) = \sum k^2 P(X=k) - E(X)^2 = \frac{14}{25}$, $\sigma(X) = \sqrt{\frac{14}{25}} = \frac{\sqrt{14}}{5}$</p>
+
+                    <p><strong>3.</strong> $P = C_5^3 \times (\frac{1}{30})^3 \times (\frac{29}{30})^2 = 10 \times \frac{1}{27000} \times \frac{841}{900} = \frac{841}{2430000}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+
+            <p>Une urne contient neuf boules : trois rouges numérotées $-1$, $-1$, $1$, deux vertes numérotées $-2$, $2$ et quatre blanches numérotées $1$, $-2$, $2$, $2$. Toutes les boules sont indiscernables au toucher.</p>
+
+            <ol>
+                <li>On tire simultanément trois boules de l'urne. Calculer la probabilité des événements suivants :
+                    <ul>
+                        <li>$A$ : "avoir trois boules de même couleur"</li>
+                        <li>$B$ : "avoir trois boules dont le produit des numéros marqués est négatif"</li>
+                        <li>$C$ : "avoir trois boules de même couleur et de produit négatif"</li>
+                        <li>$D$ : "avoir trois boules de produit négatif ou de même couleur"</li>
+                    </ul>
+                </li>
+                <li>On tire 3 boules successivement et avec remise. Calculer la probabilité des événements suivants :
+                    <ul>
+                        <li>$E$ : "Avoir trois boules de couleurs différentes"</li>
+                        <li>$F$ : "avoir trois boules de couleurs différentes dont le premier est rouge"</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Boules : R3 (rouge -1,-1,1), V2 (verte -2,2), B4 (blanche 1,-2,2,2) Total : 9</p>
+                    <p><strong>1.</strong> $C_9^3 = 84$</p>
+                    <p>$P(A) = \dfrac{C_3^3 + C_2^3 + C_4^3}{84} = \dfrac{1 + 0 + 4}{84} = \dfrac{5}{84}$</p>
+                    <p>$P(B) = \dfrac{\text{nombre de triplets de produit négatif}}{84}$</p>
+                    <p>$P(C) = \dfrac{\text{triplets de même couleur et produit négatif}}{84}$</p>
+                    <p>$P(D) = P(A \cup B) = P(A) + P(B) - P(A \cap B)$</p>
+
+                    <p><strong>2.</strong> $E$ : 3 couleurs différentes = permutations de (R,V,B) : $3! \times 3 \times 2 \times 4 = 6 \times 24 = 144$</p>
+                    <p>$P(E) = \dfrac{144}{9^3} = \dfrac{144}{729} = \dfrac{16}{81}$</p>
+                    <p>$F$ : premier rouge, puis deux couleurs différentes parmi V et B : $3 \times (2 \times 4 + 4 \times 2) = 3 \times 16 = 48$</p>
+                    <p>$P(F) = \dfrac{48}{729} = \dfrac{16}{243}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+
+            <p>On dispose de deux dés cubiques parfaits $A$ et $B$. Les faces du dé $A$ sont numérotées $0,1,1,-1,-1,-1$ et celles du dé $B$ sont numérotées $0,0,0,1,1,1$.</p>
+
+            <ol>
+                <li>On lance les deux dés. À chaque lancer, on construit un nombre complexe $z = a + ib$ où $a$ est le numéro obtenu du dé $A$ et $b$ le numéro obtenu du dé $B$. Calculer la probabilité des événements suivants :
+                    <ul>
+                        <li>$A$ : "$z = 0$"</li>
+                        <li>$B$ : "$z$ est réel"</li>
+                        <li>$C$ : "$z$ est imaginaire pur non nul"</li>
+                        <li>$D$ : "$|Z| = \sqrt{2}$"</li>
+                        <li>$E$ : "$\Re(z) > 0$"</li>
+                        <li>$F$ : "$D \cup E$"</li>
+                    </ul>
+                </li>
+                <li>On lance le dé $A$ quatre fois de suite.
+                    <ol type="a">
+                        <li>Calculer la probabilité pour que la somme des numéros obtenus soit nulle.</li>
+                        <li>Calculer la probabilité pour que le produit des numéros obtenus soit nul.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Dé A : 0(1), 1(2), -1(3). Dé B : 0(3), 1(3). Total : 36 issues</p>
+                    <p><strong>1.</strong> $P(A) = P(a=0 \cap b=0) = \frac{1}{6} \times \frac{3}{6} = \frac{3}{36} = \frac{1}{12}$</p>
+                    <p>$P(B) = P(b=0) = \frac{3}{6} = \frac{1}{2}$</p>
+                    <p>$P(C) = P(a=0 \cap b \neq 0) = \frac{1}{6} \times \frac{3}{6} = \frac{3}{36} = \frac{1}{12}$</p>
+                    <p>$P(D) = |z| = \sqrt{2} \iff a^2 + b^2 = 2$ : (1,1) et (-1,1) $\to 2 \times 2 + 2 \times 3 = 10$ issues, $P(D) = \frac{10}{36} = \frac{5}{18}$</p>
+                    <p>$P(E) = P(a>0) = \frac{2}{6} = \frac{1}{3}$</p>
+
+                    <p><strong>2.</strong> a) Somme nulle en 4 lancers du dé A (valeurs 0,1,-1)<br>
+                    Combinaisons : 0+0+0+0, 1+1-1-1 (C_4^2=6), 1+0+0-1 (4! / 2! = 12)<br>
+                    Total : $1 + 6 + 12 = 19$<br>
+                    $P = \dfrac{19}{6^4} = \dfrac{19}{1296}$</p>
+                    <p>b) Produit nul = au moins un 0 : $1 - P(\text{pas de 0}) = 1 - (\frac{5}{6})^4 = 1 - \frac{625}{1296} = \frac{671}{1296}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 7
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+
+            <p>Une usine fabrique en grande série de climatiseurs susceptibles de présenter deux défauts $a$ et $b$. Une étude statistique de la production conduit aux résultats suivants :</p>
+            <ul>
+                <li>7% des climatiseurs présentent le défaut $a$.</li>
+                <li>Parmi les climatiseurs présentant le défaut $a$, 9% présentent le défaut $b$.</li>
+                <li>Parmi les climatiseurs ne présentant pas le défaut $a$, 6% présentent le défaut $b$.</li>
+            </ul>
+            <p>On prélève au hasard un climatiseur de la production. On désigne par $A$ et $B$ les événements suivants :<br>
+            $A$ « le climatiseur présente le défaut $a$ » et $B$ « le climatiseur présente le défaut $b$ ».</p>
+
+            <div class="tree-container">
+                <svg viewBox="0 0 500 380" width="500" height="380">
+                    <!-- Racine -->
+                    <circle cx="30" cy="190" r="4" fill="#2563eb" />
+                    <text x="15" y="175" font-size="12" fill="#2563eb">$\Omega$</text>
+
+                    <!-- Branche vers A -->
+                    <line x1="34" y1="190" x2="160" y2="110" stroke="#2563eb" stroke-width="2" />
+                    <text x="90" y="130" font-size="12" fill="#2563eb">0,07</text>
+
+                    <!-- Branche vers ¬A -->
+                    <line x1="34" y1="190" x2="160" y2="270" stroke="#2563eb" stroke-width="2" />
+
+                    <!-- Nœud A -->
+                    <circle cx="160" cy="110" r="4" fill="#2563eb" />
+                    <text x="150" y="95" font-size="14" font-weight="bold" fill="#2563eb">A</text>
+
+                    <!-- Nœud ¬A -->
+                    <circle cx="160" cy="270" r="4" fill="#2563eb" />
+                    <text x="145" y="285" font-size="14" font-weight="bold" fill="#2563eb">$\bar{A}$</text>
+
+                    <!-- Branches de A -->
+                    <line x1="164" y1="110" x2="290" y2="70" stroke="#2563eb" stroke-width="2" />
+                    <text x="220" y="85" font-size="11" fill="#2563eb">0,09</text>
+                    <line x1="164" y1="110" x2="290" y2="150" stroke="#2563eb" stroke-width="2" />
+
+                    <!-- Branches de ¬A -->
+                    <line x1="164" y1="270" x2="290" y2="230" stroke="#2563eb" stroke-width="2" />
+                    <text x="220" y="245" font-size="11" fill="#2563eb">0,06</text>
+                    <line x1="164" y1="270" x2="290" y2="310" stroke="#2563eb" stroke-width="2" />
+
+                    <!-- Nœuds finaux -->
+                    <circle cx="290" cy="70" r="3" fill="#2563eb" />
+                    <text x="280" y="55" font-size="11" fill="#2563eb">$A\cap B$</text>
+
+                    <circle cx="290" cy="150" r="3" fill="#2563eb" />
+                    <text x="280" y="165" font-size="11" fill="#2563eb">$A\cap\bar{B}$</text>
+
+                    <circle cx="290" cy="230" r="3" fill="#2563eb" />
+                    <text x="280" y="245" font-size="11" fill="#2563eb">$\bar{A}\cap B$</text>
+
+                    <circle cx="290" cy="310" r="3" fill="#2563eb" />
+                    <text x="280" y="325" font-size="11" fill="#2563eb">$\bar{A}\cap\bar{B}$</text>
+                </svg>
+            </div>
+
+            <ol>
+                <li>L'arbre pondéré ci-contre représente cette situation. Recopier et compléter cet arbre.</li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer $p(A \cap B)$.</li>
+                        <li>Montrer que $p(B) = 0.0621$.</li>
+                        <li>Quelle est la probabilité que le climatiseur ne présente aucun défaut ?</li>
+                    </ol>
+                </li>
+                <li>Sachant que le climatiseur présente le défaut $b$, quelle est la probabilité que ce climatiseur présente le défaut $a$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Arbre complété avec $P(A)=0,07$, $P(\bar{A})=0,93$, $P(B|A)=0,09$, $P(B|\bar{A})=0,06$</p>
+                    <p><strong>2.a)</strong> $P(A \cap B) = P(A) \times P(B|A) = 0,07 \times 0,09 = 0,0063$</p>
+                    <p><strong>2.b)</strong> $P(B) = P(A \cap B) + P(\bar{A} \cap B) = 0,0063 + 0,93 \times 0,06 = 0,0063 + 0,0558 = 0,0621$</p>
+                    <p><strong>2.c)</strong> $P(\bar{A} \cap \bar{B}) = P(\bar{A}) \times P(\bar{B}|\bar{A}) = 0,93 \times 0,94 = 0,8742$</p>
+                    <p><strong>3.</strong> $P(A|B) = \dfrac{P(A \cap B)}{P(B)} = \dfrac{0,0063}{0,0621} \approx 0,1014$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 8 : BAC S2 2003
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+            <span class="bac-tag">BAC S2 2003</span>
+
+            <p>Dans un pays donné, la maladie du sida touche cinq pour mille de sa population.</p>
+            <p>Des études statistiques montrent que la probabilité pour un individu d'avoir un test positif à cette maladie sachant qu'il est malade est 0,8 et celui d'avoir un test négatif sachant qu'il n'est pas atteint par la maladie est 0,9.</p>
+            <p>On note : $T$ l'événement « avoir un test positif à cette maladie », $M$ l'événement « être malade ».</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Réécrire la relation $A = (A \cap B) \cup (A \cap \overline{B})$ pour $A = T$ et $B = M$, puis pour $A = \overline{M}$ et $B = \overline{T}$.</li>
+                        <li>En déduire que $P(A \cap \overline{M}) = P(\overline{M})[1 - P_{\overline{M}}(\overline{T})]$</li>
+                        <li>Calculer la probabilité pour qu'un individu ait un test positif à cette maladie.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer la probabilité pour qu'un individu soit malade sachant qu'il a un test positif à cette maladie.</li>
+                        <li>Calculer la probabilité pour qu'un individu soit malade sachant qu'il a un test négatif à cette maladie.</li>
+                    </ol>
+                    On donnera les résultats sous forme de fraction irréductible.
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$P(M) = \frac{5}{1000} = \frac{1}{200}$, $P(\overline{M}) = \frac{199}{200}$</p>
+                    <p>$P(T|M) = 0,8 = \frac{4}{5}$, $P(\overline{T}|\overline{M}) = 0,9 = \frac{9}{10}$</p>
+
+                    <p><strong>1.c)</strong> $P(T) = P(T \cap M) + P(T \cap \overline{M}) = P(T|M)P(M) + (1 - P(\overline{T}|\overline{M}))P(\overline{M})$</p>
+                    <p>$= \frac{4}{5} \times \frac{1}{200} + \frac{1}{10} \times \frac{199}{200} = \frac{4}{1000} + \frac{199}{2000} = \frac{8}{2000} + \frac{199}{2000} = \frac{207}{2000}$</p>
+
+                    <p><strong>2.a)</strong> $P(M|T) = \dfrac{P(T|M)P(M)}{P(T)} = \dfrac{\frac{4}{5} \times \frac{1}{200}}{\frac{207}{2000}} = \dfrac{4}{1000} \times \dfrac{2000}{207} = \dfrac{8}{207}$</p>
+
+                    <p><strong>2.b)</strong> $P(M|\overline{T}) = \dfrac{P(\overline{T}|M)P(M)}{P(\overline{T})}$<br>
+                    $P(\overline{T}|M) = \frac{1}{5}$, $P(\overline{T}) = 1 - P(T) = \frac{1793}{2000}$<br>
+                    $P(M|\overline{T}) = \dfrac{\frac{1}{5} \times \frac{1}{200}}{\frac{1793}{2000}} = \dfrac{1}{1000} \times \dfrac{2000}{1793} = \dfrac{2}{1793}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 9
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 9</span>
+
+            <p>Soit un dé cubique dont les faces sont numérotées de 1 à 6. Lorsqu'on lance ce dé, on note par $p_i$ la probabilité d'apparition de la face numérotée $i$ ($i = 1, 2, 3, 4, 5, 6$).</p>
+            <ul>
+                <li>$p_1, p_3$ et $p_5$ sont dans cet ordre en progression géométrique de raison $\frac{1}{2}$.</li>
+                <li>$p_2, p_4$ et $p_6$ sont dans cet ordre en progression arithmétique de raison $\frac{1}{8}$ et $2p_2 = 3p_1$.</li>
+            </ul>
+
+            <ol>
+                <li>Déterminer $p_1, p_2, p_3, p_4, p_5$ et $p_6$.</li>
+                <li>On lance ce dé 4 fois de suite et on note $X$ la variable aléatoire égale au nombre de fois qu'on obtient un nombre pair au cours des 4 lancers.
+                    <ol type="a">
+                        <li>Déterminer la loi de probabilité de $X$.</li>
+                        <li>Déterminer $E(X)$ et $\sigma(X)$.</li>
+                        <li>Déterminer la fonction de répartition de $X$.</li>
+                    </ol>
+                </li>
+                <li>Cette fois-ci on lance $n$ fois de suite. Déterminer le plus petit entier naturel $n$ pour que la probabilité d'avoir au moins une fois un numéro pair soit supérieur ou égal à 0,99.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $p_1 + p_2 + p_3 + p_4 + p_5 + p_6 = 1$</p>
+                    <p>$p_1 = x$, $p_3 = \frac{x}{2}$, $p_5 = \frac{x}{4}$</p>
+                    <p>$p_2 = \frac{3x}{2}$, $p_4 = \frac{3x}{2} + \frac{1}{8}$, $p_6 = \frac{3x}{2} + \frac{1}{4}$</p>
+                    <p>$x + \frac{3x}{2} + \frac{x}{2} + \frac{3x}{2} + \frac{1}{8} + \frac{x}{4} + \frac{3x}{2} + \frac{1}{4} = 1$</p>
+                    <p>$p_1 = \frac{1}{12}$, $p_2 = \frac{1}{8}$, $p_3 = \frac{1}{24}$, $p_4 = \frac{1}{4}$, $p_5 = \frac{1}{48}$, $p_6 = \frac{3}{8}$</p>
+
+                    <p><strong>2.</strong> $P(\text{pair}) = p_2 + p_4 + p_6 = \frac{1}{8} + \frac{1}{4} + \frac{3}{8} = \frac{3}{4}$</p>
+                    <p>$X \sim B(4, \frac{3}{4})$ : $P(X=k) = C_4^k (\frac{3}{4})^k (\frac{1}{4})^{4-k}$</p>
+                    <p>$E(X) = 4 \times \frac{3}{4} = 3$, $\sigma(X) = \sqrt{4 \times \frac{3}{4} \times \frac{1}{4}} = \sqrt{\frac{3}{4}} = \frac{\sqrt{3}}{2}$</p>
+
+                    <p><strong>3.</strong> $P(\text{au moins une fois pair}) = 1 - (\frac{1}{4})^n \ge 0,99$<br>
+                    $(\frac{1}{4})^n \le 0,01 \iff n \ge \frac{\ln 0,01}{\ln 0,25} \approx 3,32$<br>
+                    $\boxed{n = 4}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 10
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 10</span>
+
+            <p>On dispose d'un dé cubique dont les faces sont numérotées de 1 à 6. On désigne par $p_i$ la probabilité d'apparition de la face $i$ lors d'un lancer du dé. Le dé est pipé de telle manière que $p_1, p_2, p_3, p_4, p_5$ et $p_6$ sont dans cet ordre six termes consécutifs d'une suite géométrique de raison $q = \frac{1}{2}$.</p>
+
+            <ol>
+                <li>Montrer que $p_1 = \frac{32}{63}$ puis en déduire $p_2, p_3, p_4, p_5$ et $p_6$.</li>
+                <li>Soit $A$ l'événement « obtenir un chiffre pair », montrer que $p(A) = \frac{1}{3}$.</li>
+                <li>On dispose maintenant d'une urne $U$ contenant ...
+                    <ul>
+                        <li>si $A$ est réalisé alors on tire successivement et sans remise deux jetons de $U$.</li>
+                        <li>sinon on tire simultanément deux jetons de $U$.</li>
+                    </ul>
+                    Soit $D$ l'événement « les deux jetons tirés sont de couleurs différentes ».
+                    <ol type="a">
+                        <li>Calculer $p(D \cap A)$ et $p(D \cap \overline{A})$.</li>
+                        <li>En déduire que $p(D) = \frac{3}{5}$ puis calculer $p_D(A)$.</li>
+                    </ol>
+                </li>
+                <li>On répète 10 fois de suite dans les mêmes conditions et de façon indépendantes le tirage précédent. Soit $X$ la variable aléatoire égale aux nombres de réalisations de l'événement $D$ à l'issu des deux tirages.
+                    <ol type="a">
+                        <li>Déterminer la probabilité d'avoir exactement deux fois l'événement $D$.</li>
+                        <li>Déterminer la probabilité d'avoir au moins une fois l'événement $D$ à l'issu des 10 tirages.</li>
+                        <li>Calculer l'espérance mathématique et l'écart type de $X$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $p_1 + p_2 + \cdots + p_6 = p_1(1 + \frac{1}{2} + \cdots + \frac{1}{32}) = p_1 \times \frac{63}{32} = 1$<br>
+                    $p_1 = \frac{32}{63}$, $p_2 = \frac{16}{63}$, $p_3 = \frac{8}{63}$, $p_4 = \frac{4}{63}$, $p_5 = \frac{2}{63}$, $p_6 = \frac{1}{63}$</p>
+
+                    <p><strong>2.</strong> $P(A) = p_2 + p_4 + p_6 = \frac{16}{63} + \frac{4}{63} + \frac{1}{63} = \frac{21}{63} = \frac{1}{3}$</p>
+
+                    <p><strong>3.</strong> $X \sim B(10, \frac{3}{5})$</p>
+                    <p>a) $P(X=2) = C_{10}^2 (\frac{3}{5})^2 (\frac{2}{5})^8$</p>
+                    <p>b) $P(X \ge 1) = 1 - P(X=0) = 1 - (\frac{2}{5})^{10}$</p>
+                    <p>c) $E(X) = 10 \times \frac{3}{5} = 6$, $\sigma(X) = \sqrt{10 \times \frac{3}{5} \times \frac{2}{5}} = \sqrt{\frac{12}{5}} = \frac{2\sqrt{15}}{5}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 11 : BAC S2 2011
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 11</span>
+            <span class="bac-tag">BAC S2 2011</span>
+
+            <p><strong>I.</strong> On considère $\Omega$ l'univers associé à une expérience aléatoire, $A$ et $B$ deux événements. Dans le cas d'équiprobabilité rappeler les probabilités des événements suivants : $A$, $A$ sachant $B$, $A \cap B$, $(A \cap B) \cup (A \cap \overline{B})$.</p>
+
+            <p><strong>II.</strong> Une société de distribution d'électricité ayant une production insuffisante en électricité pour assurer une alimentation continue dans tout le pays, procède à des délestages. Ainsi à partir d'un certain jour les délestages ont débuté dans une ville à un rythme décrit comme suit :</p>
+            <ul>
+                <li>Le premier jour la ville est délestée.</li>
+                <li>Si la ville est délestée un jour, la probabilité qu'elle soit délestée le jour suivant est $\frac{2}{9}$.</li>
+                <li>Si elle n'est pas délestée un jour, la probabilité qu'elle soit délestée le jour suivant est $\frac{5}{6}$.</li>
+            </ul>
+            <p>On désigne par $D_n$ l'événement « la ville est délestée le $n^{\text{ième}}$ jour » et $p_n = P(D_n)$.</p>
+
+            <ol>
+                <li>Montrer les égalités suivantes : $p(D_1) = 1$ ; $p(D_{n+1} | D_n) = \frac{2}{9}$ et $p(D_{n+1} | \overline{D_n}) = \frac{5}{6}$.</li>
+                <li>Exprimer $p_{n+1}$ en fonction de $p(D_{n+1} \cap D_n)$ et $p(D_{n+1} \cap \overline{D_n})$.</li>
+                <li>En déduire que, quel que soit $n \in \mathbb{N}^*$, on a : $p_{n+1} = -\frac{11}{18}p_n + \frac{5}{6}$.</li>
+                <li>On pose $U_n = 6p_n - \frac{90}{29}$, pour $n \in \mathbb{N}^*$.
+                    <ol type="a">
+                        <li>Montrer que la suite $(U_n)$ est géométrique. Préciser sa raison et son premier terme.</li>
+                        <li>Exprimer $U_n$ puis $p_n$ en fonction de $n$.</li>
+                        <li>Un match de football doit se jouer le $20^{\text{ème}}$ jour. Quelle est la probabilité pour que les habitants de la ville le suivent sans délestage.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>I.</strong> En cas d'équiprobabilité :</p>
+                    <p>$P(A) = \dfrac{\text{card}(A)}{\text{card}(\Omega)}$, $P(A|B) = \dfrac{\text{card}(A \cap B)}{\text{card}(B)}$, $P(A \cap B) = \dfrac{\text{card}(A \cap B)}{\text{card}(\Omega)}$, $P((A \cap B) \cup (A \cap \overline{B})) = P(A)$</p>
+
+                    <p><strong>II. 1.</strong> $p(D_1) = 1$ (premier jour délesté)</p>
+                    <p>$p(D_{n+1} | D_n) = \frac{2}{9}$, $p(D_{n+1} | \overline{D_n}) = \frac{5}{6}$</p>
+
+                    <p><strong>2.</strong> $p_{n+1} = p(D_{n+1} \cap D_n) + p(D_{n+1} \cap \overline{D_n})$</p>
+
+                    <p><strong>3.</strong> $p_{n+1} = p(D_{n+1}|D_n)p_n + p(D_{n+1}|\overline{D_n})(1-p_n) = \frac{2}{9}p_n + \frac{5}{6}(1-p_n)$<br>
+                    $= \frac{2}{9}p_n + \frac{5}{6} - \frac{5}{6}p_n = -\frac{11}{18}p_n + \frac{5}{6}$</p>
+
+                    <p><strong>4.a)</strong> $U_{n+1} = 6p_{n+1} - \frac{90}{29} = 6(-\frac{11}{18}p_n + \frac{5}{6}) - \frac{90}{29}$<br>
+                    $= -\frac{11}{3}p_n + 5 - \frac{90}{29} = -\frac{11}{3}p_n + \frac{55}{29}$<br>
+                    $= -\frac{11}{18}(6p_n - \frac{90}{29}) = -\frac{11}{18}U_n$<br>
+                    $U_1 = 6p_1 - \frac{90}{29} = 6 - \frac{90}{29} = \frac{84}{29}$</p>
+
+                    <p><strong>4.b)</strong> $U_n = \frac{84}{29}(-\frac{11}{18})^{n-1}$<br>
+                    $p_n = \frac{1}{6}(U_n + \frac{90}{29}) = \frac{15}{29} + \frac{14}{29}(-\frac{11}{18})^{n-1}$</p>
+
+                    <p><strong>4.c)</strong> $P(\text{sans délestage au 20ème jour}) = 1 - p_{20} = \frac{14}{29} - \frac{14}{29}(-\frac{11}{18})^{19}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 12
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 12</span>
+
+            <p>Un jeu réunit 35 hommes, 40 femmes et 25 enfants. Sur une table, il y a 3 urnes $U_1$, $U_2$ et $U_3$ contenant des boules indiscernables au toucher. L'urne $U_1$ contient 1 boule noire, 5 boules blanches et 4 boules rouges ; l'urne $U_2$ contient 4 boules noires, 5 boules blanches et 1 boule rouge ; l'urne $U_3$ contient 8 boules noires et 2 boules rouges.</p>
+
+            <p>Un présentateur aux yeux bandés désigne une personne au hasard et lui demande de tirer une boule de $U_1$ si cette personne est un homme, dans $U_2$ si cette personne est une femme et dans $U_3$ si cette personne est un enfant.</p>
+
+            <ol>
+                <li>Calculer la probabilité de tirer une boule noire sachant que le présentateur a choisi un homme.</li>
+                <li>Calculer la probabilité de tirer une boule noire sachant que le présentateur a choisi une femme.</li>
+                <li>Calculer la probabilité de tirer une boule noire sachant que le présentateur a choisi un enfant.</li>
+                <li>Montrer que la probabilité de tirer une boule noire est égale à $\frac{79}{200}$.</li>
+                <li>Calculer la probabilité de tirer une boule blanche puis celle de tirer une boule rouge.</li>
+                <li>La boule tirée est noire, quelle est la probabilité pour que la boule soit tirée par un homme ?</li>
+                <li>On définit la règle suivante :
+                    <ul>
+                        <li>si une boule noire est tirée, le joueur gagne 1000 FCFA,</li>
+                        <li>si une boule blanche est tirée, le joueur gagne 500 FCFA,</li>
+                        <li>si une boule rouge est tirée, le joueur perd 500 FCFA.</li>
+                    </ul>
+                    Soit $X$ la variable aléatoire qui est égale au gain algébrique d'un joueur.
+                    <ol type="a">
+                        <li>Déterminer la loi de probabilité de $X$.</li>
+                        <li>Calculer l'espérance mathématique et la variance de $X$.</li>
+                        <li>Déterminer la fonction de répartition de $X$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Total : 100 personnes (35 H, 40 F, 25 E)</p>
+                    <p>$P(H) = \frac{35}{100}$, $P(F) = \frac{40}{100}$, $P(E) = \frac{25}{100}$</p>
+
+                    <p><strong>1.</strong> $P(N|H) = \frac{1}{10}$</p>
+                    <p><strong>2.</strong> $P(N|F) = \frac{4}{10}$</p>
+                    <p><strong>3.</strong> $P(N|E) = \frac{8}{10}$</p>
+
+                    <p><strong>4.</strong> $P(N) = \frac{1}{10}\frac{35}{100} + \frac{4}{10}\frac{40}{100} + \frac{8}{10}\frac{25}{100} = \frac{35 + 160 + 200}{1000} = \frac{395}{1000} = \frac{79}{200}$</p>
+
+                    <p><strong>5.</strong> $P(B) = \frac{5}{10}\frac{35}{100} + \frac{5}{10}\frac{40}{100} = \frac{175 + 200}{1000} = \frac{375}{1000} = \frac{3}{8}$</p>
+                    <p>$P(R) = \frac{4}{10}\frac{35}{100} + \frac{1}{10}\frac{40}{100} + \frac{2}{10}\frac{25}{100} = \frac{140 + 40 + 50}{1000} = \frac{230}{1000} = \frac{23}{100}$</p>
+
+                    <p><strong>6.</strong> $P(H|N) = \frac{P(N|H)P(H)}{P(N)} = \frac{\frac{1}{10}\frac{35}{100}}{\frac{79}{200}} = \frac{35}{1000} \times \frac{200}{79} = \frac{7}{79}$</p>
+
+                    <p><strong>7.</strong> $X \in \{1000, 500, -500\}$</p>
+                    <p>$P(X=1000) = P(N) = \frac{79}{200}$</p>
+                    <p>$P(X=500) = P(B) = \frac{3}{8}$</p>
+                    <p>$P(X=-500) = P(R) = \frac{23}{100}$</p>
+                    <p>$E(X) = 1000 \times \frac{79}{200} + 500 \times \frac{3}{8} - 500 \times \frac{23}{100} = 395 + 187,5 - 115 = 467,5$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 13 : BAC S2 2018
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 13</span>
+            <span class="bac-tag">BAC S2 2018</span>
+
+            <p>On considère la fonction de répartition $F$ de la variable aléatoire $X$, étant une loi de probabilité définie sur un univers fini et non vide. Dans un repère orthogonal, la représentation graphique de $F$ est donnée.</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer $\lim_{x \to -\infty} F(x)$ et $\lim_{x \to +\infty} F(x)$.</li>
+                        <li>Déterminer la loi de probabilité de $X$.</li>
+                        <li>Calculer les probabilités $P(X \leq 0)$ et $P(X \geq 1)$.</li>
+                        <li>Calculer l'espérance mathématique $E(X)$.</li>
+                        <li>Vérifier que l'écart-type $\sigma(X)$ de $X$ est égal à $\frac{\sqrt{12}}{3}$.</li>
+                    </ol>
+                </li>
+                <li>On dispose de deux urnes $U_1$ et $U_2$ contenant chacune 3 boules. Les boules de $U_1$ sont numérotées 1, 2 et 3 et celles de $U_2$ sont numérotées -2, -1 et 0. On tire simultanément une boule de chaque urne et on effectue la somme $Y$ des numéros des boules tirées.
+                    <ol type="a">
+                        <li>Dresser un tableau à double entrée permettant d'obtenir les valeurs possibles de $Y$.</li>
+                        <li>En déduire que $X$ et $Y$ ont la même loi de probabilité.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\lim_{x \to -\infty} F(x) = 0$, $\lim_{x \to +\infty} F(x) = 1$</p>
+                    <p><strong>1.b)</strong> D'après le graphique : $X \in \{-1, 0, 1, 2\}$</p>
+                    <p>$P(X=-1) = F(-1) - F(-1^-) = \frac{1}{6}$</p>
+                    <p>$P(X=0) = F(0) - F(0^-) = \frac{1}{3} - \frac{1}{6} = \frac{1}{6}$</p>
+                    <p>$P(X=1) = F(1) - F(1^-) = \frac{2}{3} - \frac{1}{3} = \frac{1}{3}$</p>
+                    <p>$P(X=2) = 1 - \frac{2}{3} = \frac{1}{3}$</p>
+
+                    <p><strong>1.c)</strong> $P(X \leq 0) = F(0) = \frac{1}{3}$<br>
+                    $P(X \geq 1) = 1 - P(X \leq 0) = \frac{2}{3}$</p>
+
+                    <p><strong>1.d)</strong> $E(X) = -1 \times \frac{1}{6} + 0 \times \frac{1}{6} + 1 \times \frac{1}{3} + 2 \times \frac{1}{3} = \frac{5}{6}$</p>
+
+                    <p><strong>2.</strong> Tableau de la somme $Y$ :</p>
+                    <div class="systeme-box">
+                        $\begin{array}{c|ccc} & U_2: -2 & -1 & 0 \\ \hline U_1: 1 & -1 & 0 & 1 \\ 2 & 0 & 1 & 2 \\ 3 & 1 & 2 & 3 \end{array}$
+                    </div>
+                    <p>Les valeurs et probabilités correspondent à celles de $X$.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 14 : BAC S2 2019
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 14</span>
+            <span class="bac-tag">BAC S2 2019</span>
+
+            <p>Dans une classe de première S2, sur 45 élèves 30 ont eu la moyenne au premier devoir de mathématiques. On considère que dans cette classe si un élève a la moyenne à un devoir donné la probabilité qu'il ait la moyenne au devoir suivant est $\frac{1}{2}$ et s'il a raté la moyenne à un devoir donné la probabilité qu'il ait la moyenne au devoir suivant est $\frac{1}{3}$.</p>
+
+            <p>Soit $E_n$ l'événement « l'élève a eu la moyenne au $n^{\text{ième}}$ devoir » et $p_n$ la probabilité de l'événement $E_n$.</p>
+
+            <ol>
+                <li>Déterminer $p_1$.</li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer $P(E_2 | E_1)$ et $P(E_2 | \overline{E_1})$.</li>
+                        <li>En déduire $p_2$.</li>
+                    </ol>
+                </li>
+                <li>Montrer que pour tout entier naturel non nul $n$, on a : $p_{n+1} = \frac{1}{6}p_n + \frac{1}{3}$.</li>
+                <li>Soit $(u_n)$ la suite définie pour tout entier naturel non nul, par : $u_n = p_n - \frac{2}{5}$.
+                    <ol type="a">
+                        <li>Montrer que $(u_n)$ est une suite géométrique dont on précisera la raison et le premier terme.</li>
+                        <li>Exprimer $u_n$ en fonction de $n$ puis $p_n$ en fonction de $n$.</li>
+                        <li>Calculer la limite de $p_n$ quand $n$ tend vers l'infini.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $p_1 = P(E_1) = \frac{30}{45} = \frac{2}{3}$</p>
+
+                    <p><strong>2.a)</strong> $P(E_2|E_1) = \frac{1}{2}$, $P(E_2|\overline{E_1}) = \frac{1}{3}$</p>
+                    <p><strong>2.b)</strong> $p_2 = P(E_2|E_1)P(E_1) + P(E_2|\overline{E_1})P(\overline{E_1}) = \frac{1}{2}\frac{2}{3} + \frac{1}{3}\frac{1}{3} = \frac{1}{3} + \frac{1}{9} = \frac{4}{9}$</p>
+
+                    <p><strong>3.</strong> $p_{n+1} = \frac{1}{2}p_n + \frac{1}{3}(1-p_n) = \frac{1}{6}p_n + \frac{1}{3}$</p>
+
+                    <p><strong>4.a)</strong> $u_{n+1} = p_{n+1} - \frac{2}{5} = \frac{1}{6}p_n + \frac{1}{3} - \frac{2}{5} = \frac{1}{6}p_n - \frac{1}{15} = \frac{1}{6}(p_n - \frac{2}{5}) = \frac{1}{6}u_n$<br>
+                    $u_1 = p_1 - \frac{2}{5} = \frac{2}{3} - \frac{2}{5} = \frac{4}{15}$</p>
+                    <p><strong>4.b)</strong> $u_n = \frac{4}{15}(\frac{1}{6})^{n-1}$, $p_n = \frac{2}{5} + \frac{4}{15}(\frac{1}{6})^{n-1}$</p>
+                    <p><strong>4.c)</strong> $\lim_{n \to \infty} p_n = \frac{2}{5}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 15 : BAC S2 2020
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 15</span>
+            <span class="bac-tag">BAC S2 2020</span>
+
+            <ol>
+                <li>On dispose de deux dés cubiques dont les faces sont numérotées de 1 à 6. On lance simultanément les deux dés et on s'intéresse à la somme $S$ des chiffres apparus sur la face de dessus.
+                    <ol type="a">
+                        <li>Déterminer les valeurs possibles de $S$.</li>
+                        <li>Déterminer la probabilité d'obtenir une somme égale à 9.</li>
+                    </ol>
+                </li>
+                <li>Marame et Birane disposent chacun de deux dés et s'adonnent au jeu précédent, chacun de son côté.
+                    <ol type="a">
+                        <li>Quelle est la probabilité que chacun affiche un même score de 9, 7 ou 8 ?</li>
+                        <li>Quelle est la probabilité qu'ils affichent le même score ?</li>
+                        <li>Celui qui affiche le plus grand score gagne. Calculer la probabilité pour que Marame gagne.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $S \in \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$</p>
+                    <p><strong>1.b)</strong> $P(S=9) = \frac{4}{36} = \frac{1}{9}$ (couples : (3,6),(4,5),(5,4),(6,3))</p>
+
+                    <p><strong>2.</strong> Pour un joueur, les probabilités :</p>
+                    <p>$P(9) = \frac{4}{36}$, $P(7) = \frac{6}{36}$, $P(8) = \frac{5}{36}$</p>
+                    <p>a) $P(\text{même score 9,7 ou 8}) = P(9)^2 + P(7)^2 + P(8)^2 = \frac{16+36+25}{1296} = \frac{77}{1296}$</p>
+                    <p>b) $P(\text{même score}) = \sum_{k=2}^{12} P(k)^2$</p>
+                    <p>c) $P(\text{Marame gagne}) = \frac{1}{2}(1 - P(\text{même score}))$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 16 : BAC S2 2021
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 16</span>
+            <span class="bac-tag">BAC S2 2021</span>
+
+            <p>Une urne $U_1$ contient quatre boules noires et trois boules blanches. Une urne $U_2$ contient trois boules noires et deux boules blanches.</p>
+
+            <p>Expérience : on jette un dé à 6 faces numérotées de 1 à 6, chaque face ayant la même probabilité d'apparaître. Si la face numérotée 6 apparaît, on tire une boule de $U_1$ sinon on tire une boule de $U_2$.</p>
+            <p>On considère les événements suivants : $A$ : « obtenir une face numérotée 6 », $B$ : « tirer une boule blanche ».</p>
+
+            <ol>
+                <li>Schématiser la situation de l'expérience sous forme d'un arbre pondéré.</li>
+                <li>Déterminer les probabilités de $A$ et $\overline{A}$.</li>
+                <li>Déterminer la probabilité de l'événement $B$.</li>
+                <li>Déterminer $P_B(A)$, la probabilité de $A$ sachant $B$.</li>
+                <li>L'expérience précédente se déroule 5 fois de suite de façon indépendante. Soit $X$ la variable aléatoire égale au nombre de boules blanches obtenues.
+                    <ol type="a">
+                        <li>Déterminer la loi de probabilité de $X$.</li>
+                        <li>Trouver l'espérance mathématique de $X$, $E(X)$ et la variance de $X$, $V(X)$.</li>
+                    </ol>
+                </li>
+                <li>L'expérience se déroule en $n$ parties indépendantes. Déterminer la valeur minimale de $n$ pour laquelle la probabilité d'obtenir au moins une boule blanche dépasse 0,99.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>2.</strong> $P(A) = \frac{1}{6}$, $P(\overline{A}) = \frac{5}{6}$</p>
+                    <p>Urne $U_1$ : 4N, 3B (7 boules), $P(B|A) = \frac{3}{7}$<br>
+                    Urne $U_2$ : 3N, 2B (5 boules), $P(B|\overline{A}) = \frac{2}{5}$</p>
+
+                    <p><strong>3.</strong> $P(B) = P(B|A)P(A) + P(B|\overline{A})P(\overline{A}) = \frac{3}{7}\frac{1}{6} + \frac{2}{5}\frac{5}{6} = \frac{3}{42} + \frac{10}{30} = \frac{1}{14} + \frac{1}{3} = \frac{17}{42}$</p>
+
+                    <p><strong>4.</strong> $P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{\frac{3}{7}\frac{1}{6}}{\frac{17}{42}} = \frac{3}{42} \times \frac{42}{17} = \frac{3}{17}$</p>
+
+                    <p><strong>5.</strong> $X \sim B(5, \frac{17}{42})$</p>
+                    <p>$P(X=k) = C_5^k (\frac{17}{42})^k (\frac{25}{42})^{5-k}$</p>
+                    <p>$E(X) = 5 \times \frac{17}{42} = \frac{85}{42}$, $V(X) = 5 \times \frac{17}{42} \times \frac{25}{42} = \frac{2125}{1764}$</p>
+
+                    <p><strong>6.</strong> $P(\text{au moins une blanche}) = 1 - (\frac{25}{42})^n \ge 0,99$<br>
+                    $(\frac{25}{42})^n \le 0,01 \iff n \ge \frac{\ln 0,01}{\ln(25/42)} \approx 5,03$<br>
+                    $\boxed{n = 6}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 17 : BAC S2 2022
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 17</span>
+            <span class="bac-tag">BAC S2 2022</span>
+
+            <p>On jette trois fois de suite un dé non truqué à six faces portant les chiffres allant de 1 à 6. On lit les numéros des faces supérieures et on les note dans l'ordre $a$, $b$ et $c$. Puis on forme l'équation du second degré $(E) : ax^2 + bx + c = 0$. On note $\Omega$ l'univers de cette expérience aléatoire.</p>
+
+            <ol>
+                <li>Soit $A$ « $-1$ est solution de $(E)$ et $b = 6$ ». Justifier que la probabilité de l'événement $A$ est $p(A) = \frac{5}{216}$.</li>
+                <li>On considère les événements suivants :
+                    <ul>
+                        <li>$B$ : « $-2$ est solution de $(E)$ et $c = 4$ ».</li>
+                        <li>$C$ : « la somme des solutions est $-2$ et leur produit est $1$ ».</li>
+                        <li>$D$ : « les deux solutions sont confondues et $b = 4$ ».</li>
+                    </ul>
+                    La probabilité de chacun des événements $B$, $C$ et $D$ appartient à l'intervalle $I = \{\frac{1}{72}, \frac{1}{108}, \frac{1}{54}\}$. Donner la probabilité de chacun des événements $B$, $C$ et $D$ en le justifiant.
+                </li>
+                <li>L'épreuve précédente est répétée 10 fois de suite et de façon indépendante.
+                    <ol type="a">
+                        <li>Soit $F$ l'événement : « L'événement $A$ se réalise une seule fois au $3^{\text{ème}}$ essai ». Montrer que la probabilité de l'événement $F$ est $p(F) = \frac{5 \times (211)^9}{(216)^{10}}$.</li>
+                        <li>Soit $Y$ la variable aléatoire égale au nombre de réalisations de l'événement $A$ à l'issue des 10 épreuves.
+                            <ol type="a">
+                                <li>Déterminer la loi de probabilité de $Y$.</li>
+                                <li>Montrer que le nombre espéré de réalisations de $A$ est égal à $\frac{25}{108}$.</li>
+                                <li>Calculer la variance de $Y$.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $-1$ solution : $a - b + c = 0$ et $b=6$ $\implies a + c = 6$<br>
+                    $(a,c) \in \{(1,5),(2,4),(3,3),(4,2),(5,1)\}$ : 5 cas sur $6^3 = 216$<br>
+                    $\boxed{P(A) = \frac{5}{216}}$</p>
+
+                    <p><strong>2.</strong> $B$ : $-2$ solution $\implies 4a - 2b + c = 0$ et $c=4$ $\implies 4a - 2b + 4 = 0 \implies 2a - b + 2 = 0$<br>
+                    Solutions : $(a,b) \in \{(1,4),(2,6)\}$ : 2 cas $\implies P(B) = \frac{2}{216} = \frac{1}{108}$</p>
+
+                    <p>$C$ : somme $-2$, produit $1$ $\implies$ racines de $t^2 + 2t + 1 = 0 \implies (t+1)^2 = 0 \implies$ racine double $-1$<br>
+                    Donc $-\frac{b}{a} = -2 \implies b = 2a$ et $\frac{c}{a} = 1 \implies c = a$<br>
+                    $(a,b,c) = (1,2,1)$ : 1 cas $\implies P(C) = \frac{1}{216}$</p>
+
+                    <p>$D$ : solutions confondues $\implies \Delta = 0 \implies b^2 - 4ac = 0$ et $b=4$ $\implies 16 - 4ac = 0 \implies ac = 4$<br>
+                    $(a,c) \in \{(1,4),(2,2),(4,1)\}$ : 3 cas $\implies P(D) = \frac{3}{216} = \frac{1}{72}$</p>
+
+                    <p><strong>3.</strong> $Y \sim B(10, \frac{5}{216})$</p>
+                    <p>$E(Y) = 10 \times \frac{5}{216} = \frac{50}{216} = \frac{25}{108}$</p>
+                    <p>$V(Y) = 10 \times \frac{5}{216} \times \frac{211}{216} = \frac{10550}{46656} = \frac{5275}{23328}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CORRECTION
+    ============================================================ -->
+    <section class="section">
+        <div class="correction-title">
+            📝 Correction
+        </div>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--primary-dark); font-weight: 600;">
+            Think first !!
+        </p>
+        <p style="text-align: center; color: var(--text-muted);">
+            Les corrections sont disponibles en cliquant sur "Voir la solution" pour chaque exercice.
+        </p>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - TD Probabilités - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 17 - Probabilités</p>
+    </footer>
+
+</body>
+</html>
