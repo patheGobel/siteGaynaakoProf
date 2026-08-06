@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Dénombrement - TS2</title>
+    <link rel="stylesheet" href="denombrement.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 21/02/2025</span>
+        </div>
+        <h1>📊 TD Dénombrement</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICES 1 à 31
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title-red">Exercices</h2>
+
+        <!-- Exercice 1 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <p>Combien de menus différents peut-on composer si on a le choix entre 3 entrées, 2 plats et 4 desserts ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>D'après le principe multiplicatif : $3 \times 2 \times 4 = 24$</p>
+                    <p>$\boxed{24 \text{ menus différents}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 2 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <p>Une femme a dans sa garde-robe 4 jupes, 5 chemisiers et 3 vestes. Elle choisit au hasard une jupe, un chemisier et une veste. De combien de façons différentes peut-elle s'habiller ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$4 \times 5 \times 3 = 60$</p>
+                    <p>$\boxed{60 \text{ façons différentes}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 3 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <p>Deux équipes de hockey de 12 et 15 joueurs échangent une poignée de main à la fin d'un match : chaque joueur d'une équipe serre la main de chaque joueur de l'autre équipe. Combien de poignées de main ont été échangées ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$12 \times 15 = 180$</p>
+                    <p>$\boxed{180 \text{ poignées de main}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 4 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <p>Un questionnaire à choix multiples, autorisant une seule réponse par question, comprend 15 questions. Pour chaque question, on propose 4 réponses possibles. De combien de façons peut-on répondre à ce questionnaire ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$4^{15}$</p>
+                    <p>$\boxed{4^{15} \text{ façons de répondre}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 5 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+            <p>Raymond Queneau a écrit un ouvrage intitulé <em>Cent mille milliards de poèmes</em>. Il est composé de 10 pages contenant chacune 14 vers. Le lecteur peut composer son propre poème de 14 vers en prenant le premier vers de l'une des 10 pages puis le deuxième vers de l'une des 10 pages et ainsi de suite jusqu'au quatorzième vers. Justifier le titre de l'ouvrage.</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$10^{14} = 100\,000\,000\,000\,000 = 10^{14}$</p>
+                    <p>Cent mille milliards = $10^5 \times 10^9 = 10^{14}$</p>
+                    <p>$\boxed{\text{Le titre est justifié : } 10^{14} \text{ poèmes possibles}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 6 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+            <p>En informatique, on utilise le système binaire pour coder les caractères. Un bit <em>(binary digit : chiffre binaire)</em> est un élément qui prend la valeur 0 ou la valeur 1. Avec 8 chiffres binaires <em>(un octet)</em>, combien de caractères peut-on coder ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$2^8 = 256$</p>
+                    <p>$\boxed{256 \text{ caractères}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 7 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+            <p>Combien peut-on former de numéros de téléphone à 8 chiffres ?<br>
+            Combien peut-on former de numéros de téléphone à 8 chiffres ne comportant pas le chiffre 0 ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $10^8 = 100\,000\,000$</p>
+                    <p>2) $9^8 = 43\,046\,721$</p>
+                    <p>$\boxed{10^8 \text{ et } 9^8}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 8 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+            <p>À l'occasion d'une compétition sportive groupant 18 athlètes, on attribue une médaille d'or, une d'argent, une de bronze. Combien y a-t-il de distributions possibles (avant la compétition, bien sûr…) ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$A_{18}^3 = 18 \times 17 \times 16 = 4896$</p>
+                    <p>$\boxed{4896 \text{ distributions possibles}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 9 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 9</span>
+            <p>Un groupe d'élèves de terminale constitue le bureau de l'association "L'association des Maitres de l'Absence". Ce bureau est composé d'un président, d'un secrétaire et d'un trésorier. Combien y a-t-il de bureaux possibles ? (il y a 24 élèves dans la classe)</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$A_{24}^3 = 24 \times 23 \times 22 = 12\,144$</p>
+                    <p>$\boxed{12\,144 \text{ bureaux possibles}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 10 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 10</span>
+            <p>Six personnes choisissent mentalement un nombre entier compris entre 1 et 6.</p>
+            <ol>
+                <li>Combien de résultats peut-on obtenir ?</li>
+                <li>Combien de résultats ne comportant pas deux fois le même nombre peut-on obtenir ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $6^6 = 46\,656$</p>
+                    <p>2) $A_6^6 = 6! = 720$</p>
+                    <p>$\boxed{6^6 \text{ et } 6!}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 11 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 11</span>
+            <p>Soit A l'ensemble des nombres de quatre chiffres, le premier étant non nul.</p>
+            <ol>
+                <li>Calculer le nombre d'éléments de A.</li>
+                <li>Dénombrer les éléments de A :<br>
+                    a) composés de quatre chiffres distincts<br>
+                    b) composés d'au moins deux chiffres identiques<br>
+                    c) composés de quatre chiffres distincts autres que 5 et 7</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $9 \times 10^3 = 9000$</p>
+                    <p>2) a) $9 \times 9 \times 8 \times 7 = 4536$</p>
+                    <p>b) $9000 - 4536 = 4464$</p>
+                    <p>c) $7 \times 7 \times 6 \times 5 = 1470$ (chiffres possibles : 0,1,2,3,4,6,8,9 soit 8 chiffres, premier chiffre non nul et ≠5,7 donc 7 possibilités)</p>
+                    <p>$\boxed{9000,\ 4536,\ 4464,\ 1470}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 12 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 12</span>
+            <p>Un clavier de 9 touches permet de composer le code d'entrée d'un immeuble, à l'aide d'une lettre suivie d'un nombre de 3 chiffres distincts ou non.</p>
+            <div class="clavier">
+                <div class="touche chiffre">1</div>
+                <div class="touche chiffre">2</div>
+                <div class="touche chiffre">3</div>
+                <div class="touche chiffre">4</div>
+                <div class="touche chiffre">5</div>
+                <div class="touche chiffre">6</div>
+                <div class="touche lettre">A</div>
+                <div class="touche lettre">B</div>
+                <div class="touche lettre">C</div>
+            </div>
+            <ol>
+                <li>Combien de codes différents peut-on former ?</li>
+                <li>Combien y a-t-il de codes sans le chiffre 1 ?</li>
+                <li>Combien y a-t-il de codes comportant au moins une fois le chiffre 1 ?</li>
+                <li>Combien y a-t-il de codes comportant des chiffres distincts ?</li>
+                <li>Combien y a-t-il de codes comportant au moins deux chiffres identiques ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $3 \times 6^3 = 648$</p>
+                    <p>2) $3 \times 5^3 = 375$</p>
+                    <p>3) $648 - 375 = 273$</p>
+                    <p>4) $3 \times 6 \times 5 \times 4 = 360$</p>
+                    <p>5) $648 - 360 = 288$</p>
+                    <p>$\boxed{648,\ 375,\ 273,\ 360,\ 288}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 13 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 13</span>
+            <p>Le groupe des élèves de Terminale doit s'inscrire au concours par EAMAC. Il faut établir une liste de passage. Combien y a-t-il de manières de constituer cette liste ? (il y a 24 élèves dans la classe)</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$24!$</p>
+                    <p>$\boxed{24! \text{ manières}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 14 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 14</span>
+            <p>Les nombres 5, -1 et 3 constituent la solution d'un système de trois équations à trois inconnues. Donner tous les triplets différents qui peuvent être la solution de ce système.</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Les triplets sont les permutations de 5, -1 et 3 : $3! = 6$</p>
+                    <p>$\boxed{(5,-1,3),\ (5,3,-1),\ (-1,5,3),\ (-1,3,5),\ (3,5,-1),\ (3,-1,5)}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 15 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 15</span>
+            <p>Combien y a-t-il d'anagrammes du mot MATH ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>4 lettres distinctes : $4! = 24$</p>
+                    <p>$\boxed{24 \text{ anagrammes}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 16 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 16</span>
+            <p>1) Dénombrer les anagrammes du mot DIEYNABA</p>
+            <p>2) Dans chacun des cas suivants, dénombrer les anagrammes du mot DIEYNABA :<br>
+            a) commençant et finissant par une consonne ;<br>
+            b) commençant et finissant par une voyelle ;<br>
+            c) commençant par une consonne et finissant par une voyelle ;<br>
+            d) commençant par une voyelle et finissant par une consonne.</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>DIEYNABA : 8 lettres avec A qui se répète 3 fois (D,I,E,Y,N,B,A,A,A)</p>
+                    <p>1) $\dfrac{8!}{3!} = \dfrac{40320}{6} = 6720$</p>
+                    <p>2) Consonnes : D,Y,N,B (4), Voyelles : I,E,A,A,A (4 dont 3 A)</p>
+                    <p>a) $4 \times 3 \times \dfrac{6!}{3!} = 12 \times 120 = 1440$ (choix consonne début:4, fin:3)</p>
+                    <p>b) $4 \times 3 \times \dfrac{6!}{3!} = 1440$ (choix voyelle début:4, fin:3)</p>
+                    <p>c) $4 \times 4 \times \dfrac{6!}{3!} = 16 \times 120 = 1920$</p>
+                    <p>d) $4 \times 4 \times \dfrac{6!}{3!} = 16 \times 120 = 1920$</p>
+                    <p>$\boxed{6720,\ 1440,\ 1440,\ 1920,\ 1920}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 17 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 17</span>
+            <p>Combien y a-t-il d'anagrammes du mot TABLEAU ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>TABLEAU : 7 lettres distinctes : $7! = 5040$</p>
+                    <p>$\boxed{5040 \text{ anagrammes}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 18 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 18</span>
+            <p>1) Combien peut-on réaliser de mots de n lettres comportant k lettres se répétant $p_1, p_2, \dots, p_k$ fois ?</p>
+            <p>2) Quel est le nombre d'anagrammes du mot "MATHEMATICIENNE" ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $\dfrac{n!}{p_1! \times p_2! \times \cdots \times p_k!}$</p>
+                    <p>2) MATHEMATICIENNE : 15 lettres<br>
+                    M:2, A:2, T:2, E:3, H:1, I:2, C:1, N:2</p>
+                    <p>$\dfrac{15!}{2! \times 2! \times 2! \times 3! \times 2! \times 2!} = \dfrac{15!}{2^5 \times 6}$</p>
+                    <p>$\boxed{\dfrac{n!}{p_1! \cdots p_k!} \text{ et } \dfrac{15!}{2^5 \times 6}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 19 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 19</span>
+            <p>Dénombrer toutes les anagrammes possibles du mot PRISÉE</p>
+            <ol>
+                <li>En tenant compte de l'accent</li>
+                <li>En ne tenant pas compte de l'accent sur le "e"</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>PRISÉE : 6 lettres avec É distinct de E</p>
+                    <p>1) 6 lettres distinctes : $6! = 720$</p>
+                    <p>2) Sans accent : PRISEE avec E qui se répète 2 fois : $\dfrac{6!}{2!} = 360$</p>
+                    <p>$\boxed{720 \text{ et } 360}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 20 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 20</span>
+            <p>Un groupe de 3 élèves de Terminale doit aller chercher des livres au CDI. De combien de manières peut-on former ce groupe ? (il y a 24 élèves dans la classe)</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$C_{24}^3 = \dfrac{24 \times 23 \times 22}{6} = 2024$</p>
+                    <p>$\boxed{2024 \text{ groupes}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 21 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 21</span>
+            <p>Un tournoi sportif compte 8 équipes engagées. Chaque équipe doit rencontrer toutes les autres une seule fois. Combien doit-on organiser de matchs ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$C_8^2 = \dfrac{8 \times 7}{2} = 28$</p>
+                    <p>$\boxed{28 \text{ matchs}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 22 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 22</span>
+            <p>Au loto, il y a 49 numéros. Une grille de loto est composée de 6 de ces numéros. Quel est le nombre de grilles différentes ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$C_{49}^6 = \dfrac{49 \times 48 \times 47 \times 46 \times 45 \times 44}{6!} = 13\,983\,816$</p>
+                    <p>$\boxed{13\,983\,816 \text{ grilles}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 23 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 23</span>
+            <p>De combien de façons peut-on choisir 3 femmes et 2 hommes parmi 10 femmes et 5 hommes ?</p>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>$C_{10}^3 \times C_5^2 = 120 \times 10 = 1200$</p>
+                    <p>$\boxed{1200 \text{ façons}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 24 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 24</span>
+            <p>Dans une classe de 32 élèves, on compte 19 garçons et 13 filles. On doit élire deux délégués.</p>
+            <ol>
+                <li>Quel est le nombre de choix possibles ?</li>
+                <li>Quel est le nombre de choix si l'on impose un garçon et une fille ?</li>
+                <li>Quel est le nombre de choix si l'on impose 2 garçons ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $C_{32}^2 = 496$</p>
+                    <p>2) $C_{19}^1 \times C_{13}^1 = 19 \times 13 = 247$</p>
+                    <p>3) $C_{19}^2 = 171$</p>
+                    <p>$\boxed{496,\ 247,\ 171}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 25 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 25</span>
+            <p>Christian et Claude font partie d'un club de 18 personnes. On doit former un groupe constitué de cinq d'entre elles pour représenter le club à un spectacle.</p>
+            <ol>
+                <li>Combien de groupes de 5 personnes peut-on constituer ?</li>
+                <li>Dans combien de ces groupes peut figurer Christian ?</li>
+                <li>Christian et Claude ne pouvant se supporter, combien de groupes de 5 personnes peut-on constituer de telle façon que Christian et Claude ne se retrouvent pas ensemble ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $C_{18}^5 = 8568$</p>
+                    <p>2) $C_{17}^4 = 2380$ (Christian est choisi, on choisit 4 parmi les 17 restants)</p>
+                    <p>3) Total - groupes avec Christian et Claude ensemble<br>
+                    $C_{18}^5 - C_{16}^3 = 8568 - 560 = 8008$</p>
+                    <p>$\boxed{8568,\ 2380,\ 8008}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 26 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 26</span>
+            <p>Au service du personnel, on compte 12 célibataires parmi les 30 employés. On désire faire un sondage : pour cela on choisit un échantillon de quatre personnes dans ce service.</p>
+            <ol>
+                <li>Quel est le nombre d'échantillons différents possibles ?</li>
+                <li>Quel est le nombre d'échantillons ne contenant aucun célibataire ?</li>
+                <li>Quel est le nombre d'échantillons contenant au moins un célibataire ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $C_{30}^4 = 27\,405$</p>
+                    <p>2) $C_{18}^4 = 3060$ (18 non-célibataires)</p>
+                    <p>3) $C_{30}^4 - C_{18}^4 = 27\,405 - 3\,060 = 24\,345$</p>
+                    <p>$\boxed{27\,405,\ 3\,060,\ 24\,345}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 27 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 27</span>
+            <p>On constitue un groupe de 6 personnes choisies parmi 25 femmes et 32 hommes.</p>
+            <ol>
+                <li>De combien de façons peut-on constituer ce groupe de 6 personnes ?</li>
+                <li>Dans chacun des cas suivants, de combien de façons peut-on constituer ce groupe avec :<br>
+                    a) uniquement des hommes ;<br>
+                    b) des personnes de même sexe ;<br>
+                    c) au moins une femme et au moins un homme.</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Total : $25 + 32 = 57$ personnes</p>
+                    <p>1) $C_{57}^6$</p>
+                    <p>2) a) $C_{32}^6$</p>
+                    <p>b) $C_{32}^6 + C_{25}^6$</p>
+                    <p>c) $C_{57}^6 - C_{32}^6 - C_{25}^6$</p>
+                    <p>$\boxed{C_{57}^6,\ C_{32}^6,\ C_{32}^6 + C_{25}^6,\ C_{57}^6 - C_{32}^6 - C_{25}^6}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 28 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 28</span>
+            <p>On extrait simultanément 5 cartes d'un jeu de 32. Cet ensemble de 5 cartes est appelé une "main".</p>
+            <ol>
+                <li>Combien y a-t-il de mains différentes possibles ?</li>
+                <li>Dénombrer les mains de 5 cartes contenant :<br>
+                    a) un carré<br>
+                    b) deux paires distinctes<br>
+                    c) un full (trois cartes de même valeur, et deux autres de même valeur)<br>
+                    d) un brelan (trois cartes de même valeur, sans full ni carré)<br>
+                    e) une quinte (5 cartes de même couleur, se suivant dans l'ordre croissant)</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Jeu de 32 cartes : 8 valeurs × 4 couleurs</p>
+                    <p>1) $C_{32}^5 = 201\,376$</p>
+                    <p>2) a) Carré : $8 \times C_{28}^1 = 8 \times 28 = 224$</p>
+                    <p>b) Deux paires : $C_8^2 \times C_4^2 \times C_4^2 \times C_{24}^1 = 28 \times 6 \times 6 \times 24 = 24\,192$</p>
+                    <p>c) Full : $8 \times C_4^3 \times 7 \times C_4^2 = 8 \times 4 \times 7 \times 6 = 1344$</p>
+                    <p>d) Brelan : $8 \times C_4^3 \times C_7^2 \times 4^2 = 8 \times 4 \times 21 \times 16 = 10\,752$</p>
+                    <p>e) Quinte : 4 couleurs × 4 quintes possibles = 16</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 29 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 29</span>
+            <p>Un sac contient 5 jetons verts (numérotés de 1 à 5) et 4 jetons rouges (numérotés de 1 à 4).</p>
+            <ol>
+                <li>On tire successivement et au hasard 3 jetons du sac, sans remettre le jeton tiré. Calculer les probabilités :<br>
+                    a) De ne tirer que 3 jetons verts ;<br>
+                    b) De ne tirer aucun jeton vert ;<br>
+                    c) De tirer au plus 2 jetons verts ;<br>
+                    d) De tirer exactement 1 jeton vert.</li>
+                <li>On tire simultanément et au hasard 3 jetons du sac. Reprendre alors les questions a), b), c) et d).</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>Total : 9 jetons (5 V, 4 R)</p>
+                    <p><strong>1) Successif sans remise :</strong> $A_9^3 = 504$</p>
+                    <p>a) $A_5^3 = 60$, $P = \dfrac{60}{504} = \dfrac{5}{42}$</p>
+                    <p>b) $A_4^3 = 24$, $P = \dfrac{24}{504} = \dfrac{1}{21}$</p>
+                    <p>c) $1 - P(\text{3 verts}) = 1 - \dfrac{60}{504} = \dfrac{444}{504} = \dfrac{37}{42}$</p>
+                    <p>d) $A_5^1 \times A_4^2 \times 3 = 5 \times 12 \times 3 = 180$, $P = \dfrac{180}{504} = \dfrac{5}{14}$</p>
+
+                    <p><strong>2) Simultané :</strong> $C_9^3 = 84$</p>
+                    <p>a) $C_5^3 = 10$, $P = \dfrac{10}{84} = \dfrac{5}{42}$</p>
+                    <p>b) $C_4^3 = 4$, $P = \dfrac{4}{84} = \dfrac{1}{21}$</p>
+                    <p>c) $1 - \dfrac{10}{84} = \dfrac{74}{84} = \dfrac{37}{42}$</p>
+                    <p>d) $C_5^1 \times C_4^2 = 5 \times 6 = 30$, $P = \dfrac{30}{84} = \dfrac{5}{14}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 30 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 30</span>
+            <p>Un portemanteau comporte 5 patères alignées. Combien a-t-on de dispositions distinctes (sans mettre deux manteaux l'un sur l'autre) :</p>
+            <ol type="a">
+                <li>pour 3 manteaux sur ces 5 patères ?</li>
+                <li>pour 5 manteaux ?</li>
+                <li>pour 6 manteaux ?</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>a) $A_5^3 = 5 \times 4 \times 3 = 60$</p>
+                    <p>b) $5! = 120$</p>
+                    <p>c) $A_5^6 = 0$ (impossible car 6 > 5)</p>
+                    <p>$\boxed{60,\ 120,\ 0}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Exercice 31 -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 31</span>
+            <p>Quatre garçons et deux filles s'assoient sur un banc.</p>
+            <ol>
+                <li>Quel est le nombre de dispositions possibles ?</li>
+                <li>Même question si les garçons sont d'un côté et les filles de l'autre.</li>
+                <li>Même question si chaque fille est intercalée entre deux garçons.</li>
+                <li>Même question si les filles veulent rester l'une à côté de l'autre.</li>
+            </ol>
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p>1) $6! = 720$</p>
+                    <p>2) Garçons ensemble d'un côté, filles de l'autre : $4! \times 2! \times 2 = 48$</p>
+                    <p>3) Chaque fille entre deux garçons : 4 garçons créent 3 espaces entre eux, il faut placer 2 filles dans ces espaces : $4! \times A_3^2 = 24 \times 6 = 144$</p>
+                    <p>4) Les 2 filles ensemble : bloc de 2 filles + 4 garçons = 5 éléments : $5! \times 2! = 120 \times 2 = 240$</p>
+                    <p>$\boxed{720,\ 48,\ 144,\ 240}$</p>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+    CORRECTION
+    ============================================================ -->
+    <section class="section">
+        <div class="correction-title">
+            📝 Correction
+        </div>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--primary-dark); font-weight: 600;">
+            Think first !!
+        </p>
+        <p style="text-align: center; color: var(--text-muted);">
+            Les corrections sont disponibles en cliquant sur "Voir la solution" pour chaque exercice.
+        </p>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - TD Dénombrement - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 31 - Dénombrement</p>
+    </footer>
+
+</body>
+</html>
