@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Équations Différentielles - TS2</title>
+    <link rel="stylesheet" href="equaDiff.css" />
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 21/02/2025</span>
+        </div>
+        <h1>📐 Équations Différentielles</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    SECTION I : Généralités et équations du premier ordre
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">I. Généralités et équations du premier ordre</h2>
+
+        <!-- ============================================================
+        EXERCICE 1
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+
+            <p>Montrer que chacune des fonctions $f$ est solution de l'équation différentielle $(E)$ associée :</p>
+
+            <ol>
+                <li>$f(x) = \cos(2x+3) \quad \text{pour } (E) : y'' = -4y$</li>
+                <li>$f(x) = \sin(2x) \quad \text{pour } (E) : y'' + 3y = -2\sin x \cos x$</li>
+                <li>$f(x) = x\mathrm{e}^{x} \quad \text{pour } (E) : y' - y = \mathrm{e}^{x}$</li>
+                <li>$f(x) = \mathrm{e}^{x}\ln x \quad \text{pour } (E) : y'' - 2y' + y =
+                    -\dfrac{1}{x^{2}}\mathrm{e}^{x}$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $f(x) = \cos(2x+3)$</p>
+                    <p>$f'(x) = -2\sin(2x+3)$, $f''(x) = -4\cos(2x+3) = -4f(x)$</p>
+                    <p>Donc $f'' = -4f \iff f'' + 4f = 0$</p>
+
+                    <p><strong>2.</strong> $f(x) = \sin(2x)$</p>
+                    <p>$f''(x) = -4\sin(2x)$, $3f(x) = 3\sin(2x)$</p>
+                    <p>$f'' + 3f = -4\sin(2x) + 3\sin(2x) = -\sin(2x) = -2\sin x \cos x$</p>
+
+                    <p><strong>3.</strong> $f(x) = xe^x$</p>
+                    <p>$f'(x) = e^x + xe^x = (x+1)e^x$</p>
+                    <p>$f' - f = (x+1)e^x - xe^x = e^x$</p>
+
+                    <p><strong>4.</strong> $f(x) = e^x\ln x$</p>
+                    <p>$f'(x) = e^x\ln x + \frac{e^x}{x}$, $f''(x) = e^x\ln x + \frac{2e^x}{x} - \frac{e^x}{x^2}$</p>
+                    <p>$f'' - 2f' + f = -\frac{e^x}{x^2}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 2
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <p>Déterminer la solution $f$ de chacune des équations différentielles $(E)$ suivantes vérifiant la
+                condition initiale $f(x_0) = y_0$ :</p>
+
+            <ol>
+                <li>$(E) : -3y' + 2y = 0 \quad \text{avec } x_0 = 3 \text{ et } y_0 = 1$</li>
+                <li>$(E) : 3y' + 6y = 0 \quad \text{avec } x_0 = -4 \text{ et } y_0 = 2$</li>
+                <li>$(E) : 5y' + y = 0 \quad \text{avec } x_0 = -5 \text{ et } y_0 = 1$</li>
+                <li>$(E) : 2y - 5y' = 0 \quad \text{avec } x_0 = 1 \text{ et } y_0 = -3$</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $-3y' + 2y = 0 \iff y' = \frac{2}{3}y$</p>
+                    <p>$y = Ce^{\frac{2}{3}x}$, $y(3) = 1 \implies Ce^2 = 1 \implies C = e^{-2}$</p>
+                    <p>$\boxed{f(x) = e^{\frac{2}{3}x - 2}}$</p>
+
+                    <p><strong>2.</strong> $3y' + 6y = 0 \iff y' = -2y$</p>
+                    <p>$y = Ce^{-2x}$, $y(-4) = 2 \implies Ce^8 = 2 \implies C = 2e^{-8}$</p>
+                    <p>$\boxed{f(x) = 2e^{-2x-8}}$</p>
+
+                    <p><strong>3.</strong> $5y' + y = 0 \iff y' = -\frac{1}{5}y$</p>
+                    <p>$y = Ce^{-\frac{x}{5}}$, $y(-5) = 1 \implies Ce^1 = 1 \implies C = e^{-1}$</p>
+                    <p>$\boxed{f(x) = e^{-\frac{x}{5} - 1}}$</p>
+
+                    <p><strong>4.</strong> $2y - 5y' = 0 \iff y' = \frac{2}{5}y$</p>
+                    <p>$y = Ce^{\frac{2}{5}x}$, $y(1) = -3 \implies Ce^{\frac{2}{5}} = -3 \implies C =
+                        -3e^{-\frac{2}{5}}$</p>
+                    <p>$\boxed{f(x) = -3e^{\frac{2}{5}x - \frac{2}{5}}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SECTION II : Équations du second ordre sans second membre
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">II. Équations du second ordre sans second membre</h2>
+
+        <!-- ============================================================
+        EXERCICE 3
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+
+            <p>Déterminer la solution $f$ de chacune des équations différentielles $(E)$ suivantes vérifiant les
+                conditions $f(x_0) = y_0$ et $f'(x_0) = y'_0$ :</p>
+
+            <div class="eq-grid">
+                <div class="equation-item">1. $2y'' - 3y' - 2y = 0 \quad \text{avec } f(0) = 2 \text{ et } f'(0) = 3$
+                </div>
+                <div class="equation-item">2. $y'' + y' + y = 0 \quad \text{avec } f(0) = 1 \text{ et } f'(0) = -1$
+                </div>
+                <div class="equation-item">3. $4y'' - 4y' + y = 0 \quad \text{avec } f(0) = -3 \text{ et } f'(0) = 2$
+                </div>
+                <div class="equation-item">4. $y'' - 5y' + 6y = 0 \quad \text{avec } f(0) = 0 \text{ et } f'(0) = 6$
+                </div>
+                <div class="equation-item">5. $9y'' + 6y' + y = 0 \quad \text{avec } f(0) = 1 \text{ et } f'(0) = 2$
+                </div>
+                <div class="equation-item">6. $y'' - 4y' + 5y = 0 \quad \text{avec } f(0) = -1 \text{ et } f'(0) = 3$
+                </div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $2r^2 - 3r - 2 = 0 \implies r = -\frac{1}{2}$ ou $r = 2$</p>
+                    <p>$y = Ae^{-\frac{x}{2}} + Be^{2x}$</p>
+                    <p>$y(0) = A + B = 2$, $y'(0) = -\frac{A}{2} + 2B = 3$</p>
+                    <p>$\boxed{f(x) = \frac{2}{5}e^{-\frac{x}{2}} + \frac{8}{5}e^{2x}}$</p>
+
+                    <p><strong>2.</strong> $r^2 + r + 1 = 0 \implies \Delta = -3 \implies r = -\frac{1}{2} \pm
+                        i\frac{\sqrt{3}}{2}$</p>
+                    <p>$y = e^{-\frac{x}{2}}(A\cos\frac{\sqrt{3}}{2}x + B\sin\frac{\sqrt{3}}{2}x)$</p>
+                    <p>$\boxed{f(x) = e^{-\frac{x}{2}}(\cos\frac{\sqrt{3}}{2}x -
+                        \frac{\sqrt{3}}{3}\sin\frac{\sqrt{3}}{2}x)}$</p>
+
+                    <p><strong>3.</strong> $4r^2 - 4r + 1 = 0 \implies r = \frac{1}{2}$ (double)</p>
+                    <p>$y = (Ax + B)e^{\frac{x}{2}}$, $y(0) = B = -3$, $y'(0) = \frac{B}{2} + A = 2 \implies A =
+                        \frac{7}{2}$</p>
+                    <p>$\boxed{f(x) = (\frac{7}{2}x - 3)e^{\frac{x}{2}}}$</p>
+
+                    <p><strong>4.</strong> $r^2 - 5r + 6 = 0 \implies r = 2$ ou $r = 3$</p>
+                    <p>$y = Ae^{2x} + Be^{3x}$, $y(0) = A + B = 0$, $y'(0) = 2A + 3B = 6$</p>
+                    <p>$A = -6$, $B = 6$</p>
+                    <p>$\boxed{f(x) = -6e^{2x} + 6e^{3x}}$</p>
+
+                    <p><strong>5.</strong> $9r^2 + 6r + 1 = 0 \implies r = -\frac{1}{3}$ (double)</p>
+                    <p>$y = (Ax + B)e^{-\frac{x}{3}}$, $y(0) = B = 1$, $y'(0) = -\frac{B}{3} + A = 2 \implies A =
+                        \frac{7}{3}$</p>
+                    <p>$\boxed{f(x) = (\frac{7}{3}x + 1)e^{-\frac{x}{3}}}$</p>
+
+                    <p><strong>6.</strong> $r^2 - 4r + 5 = 0 \implies \Delta = -4 \implies r = 2 \pm i$</p>
+                    <p>$y = e^{2x}(A\cos x + B\sin x)$, $y(0) = A = -1$, $y'(0) = 2A + B = 3 \implies B = 5$</p>
+                    <p>$\boxed{f(x) = e^{2x}(-\cos x + 5\sin x)}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 4
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+
+            <p>Soit $(E)$ l'équation différentielle du second ordre : $y'' - 3y' + 2y = 0$.</p>
+
+            <ol type="a">
+                <li>Quelles sont les solutions de $(E)$ ?</li>
+                <li>Quelle est la solution de $(E)$ dont la courbe représentative $\mathcal{C}$ admet au point
+                    d'abscisse $x=0$ la même tangente que la courbe $\mathcal{C'}$ d'équation $y=x$ ?</li>
+                <li>Préciser les positions relatives de $\mathcal{C}$ et $\mathcal{C'}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>a.</strong> $r^2 - 3r + 2 = 0 \implies r = 1$ ou $r = 2$</p>
+                    <p>$\boxed{y = Ae^x + Be^{2x}}$</p>
+
+                    <p><strong>b.</strong> Tangente de $\mathcal{C'}$ en 0 : $y = x$ donc $y'(0) = 1$ et $y(0) = 0$</p>
+                    <p>$y(0) = A + B = 0$, $y'(0) = A + 2B = 1 \implies A = -1$, $B = 1$</p>
+                    <p>$\boxed{y = -e^x + e^{2x}}$</p>
+
+                    <p><strong>c.</strong> $y - x = e^{2x} - e^x - x$</p>
+                    <p>Étudier le signe de $h(x) = e^{2x} - e^x - x$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 5
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+
+            <ol>
+                <li>Résoudre l'équation différentielle : $y'' + 16y = 0$.</li>
+                <li>Trouver la solution $f$ de cette équation vérifiant : $f(0) = 1 \text{ et } f'(0) = 4$.</li>
+                <li>Trouver deux réels positifs $\omega$ et $\varphi$ tels que pour tout réel $t$, $f(t) = \sqrt{2}
+                    \cos(\omega t - \varphi)$.</li>
+                <li>Calculer la valeur moyenne de $f$ sur l'intervalle $\left[0\,;\ \dfrac{\pi}{8}\right]$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $r^2 + 16 = 0 \implies r = \pm 4i$</p>
+                    <p>$\boxed{y = A\cos(4x) + B\sin(4x)}$</p>
+
+                    <p><strong>2.</strong> $f(0) = A = 1$, $f'(0) = 4B = 4 \implies B = 1$</p>
+                    <p>$\boxed{f(x) = \cos(4x) + \sin(4x)}$</p>
+
+                    <p><strong>3.</strong> $f(x) = \sqrt{2}\cos(4x - \frac{\pi}{4})$</p>
+                    <p>$\boxed{\omega = 4,\ \varphi = \frac{\pi}{4}}$</p>
+
+                    <p><strong>4.</strong> Valeur moyenne = $\frac{1}{\pi/8} \int_0^{\pi/8} f(x) dx = \frac{8}{\pi}
+                        \left[\frac{1}{4}\sin(4x) - \frac{1}{4}\cos(4x)\right]_0^{\pi/8}$</p>
+                    <p>$= \frac{8}{\pi} \times \frac{1}{4}(\sin\frac{\pi}{2} - \cos\frac{\pi}{2} - \sin 0 + \cos 0) =
+                        \frac{2}{\pi}(1 - 0 - 0 + 1) = \frac{4}{\pi}$</p>
+                    <p>$\boxed{\frac{4}{\pi}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SECTION III : Équations linéaires du second ordre avec second membre
+    ============================================================ -->
+    <section class="section">
+        <h2 class="section-title">III. Équations linéaires du second ordre avec second membre</h2>
+
+        <!-- ============================================================
+        EXERCICE 6 - Partie A
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+
+            <p>On considère l'équation $(E) : y'' + my' + py = g(x)$ où $m$ et $p$ sont deux réels et $g$ une fonction
+                continue sur $\mathbb{R}$.</p>
+
+            <div class="part-label">Partie A : Étude générale</div>
+
+            <p>On suppose qu'il existe une solution particulière $f_1$ de $(E)$.</p>
+
+            <ol>
+                <li>Prouver que si $f$ est solution de $(E)$, alors $f - f_1$ est solution de l'équation homogène
+                    associée : $(E_0) : y'' + my' + py = 0$.</li>
+                <li>Prouver que si $h$ est solution de $(E_0)$, alors $h + f_1$ est solution de $(E)$.</li>
+                <li>En déduire l'ensemble des solutions de $(E)$ dès qu'une solution particulière est connue.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Si $f$ est solution de $(E)$ et $f_1$ est solution de $(E)$, alors :</p>
+                    <p>$(f - f_1)'' + m(f - f_1)' + p(f - f_1) = (f'' + mf' + pf) - (f_1'' + mf_1' + pf_1) = g(x) - g(x)
+                        = 0$</p>
+                    <p>Donc $f - f_1$ est solution de $(E_0)$.</p>
+
+                    <p><strong>2.</strong> Si $h$ est solution de $(E_0)$ et $f_1$ solution de $(E)$, alors :</p>
+                    <p>$(h + f_1)'' + m(h + f_1)' + p(h + f_1) = 0 + g(x) = g(x)$</p>
+                    <p>Donc $h + f_1$ est solution de $(E)$.</p>
+
+                    <p><strong>3.</strong> L'ensemble des solutions de $(E)$ est :</p>
+                    <p>$\boxed{\{f_1 + h \mid h \text{ solution de } (E_0)\}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 6 - Partie B
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6 (suite)</span>
+
+            <div class="part-label">Partie B : Cas où $g$ est une fonction polynôme</div>
+
+            <ol>
+                <li>On considère l'équation $(E) : y'' - 3y' + 2y = x + 1$.
+                    <ol type="a">
+                        <li>Déterminer les réels $a$ et $b$ tels que $f_1 : x \mapsto ax + b$ soit solution de $(E)$.
+                        </li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On considère l'équation $(E) : y'' - 3y' + 2y = x^2 + 2x + 3$.
+                    <ol type="a">
+                        <li>Déterminer les réels $a, b$ et $c$ tels que $f_1 : x \mapsto ax^2 + bx + c$ soit solution de
+                            $(E)$.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>Résoudre de manière analogue :
+                    <ol type="a">
+                        <li>$y'' - 8y' + 17y = x^2 - x + 2$</li>
+                        <li>$y'' + 4y' + 4y = x^2 + 1$</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $y = ax + b$, $y' = a$, $y'' = 0$</p>
+                    <p>$0 - 3a + 2(ax + b) = x + 1 \implies (2a - 3a)x + (2b - 3a) = x + 1$</p>
+                    <p>$\begin{cases} -a = 1 \\ 2b - 3a = 1 \end{cases} \implies a = -1,\ b = -1$</p>
+                    <p>$\boxed{f_1(x) = -x - 1}$</p>
+
+                    <p><strong>1.b)</strong> $r^2 - 3r + 2 = 0 \implies r = 1$ ou $r = 2$</p>
+                    <p>$\boxed{y = Ae^x + Be^{2x} - x - 1}$</p>
+
+                    <p><strong>2.a)</strong> $y = ax^2 + bx + c$, $y' = 2ax + b$, $y'' = 2a$</p>
+                    <p>$2a - 3(2ax + b) + 2(ax^2 + bx + c) = 2ax^2 + (-6a + 2b)x + (2a - 3b + 2c) = x^2 + 2x + 3$</p>
+                    <p>$\begin{cases} 2a = 1 \\ -6a + 2b = 2 \\ 2a - 3b + 2c = 3 \end{cases} \implies a = \frac{1}{2},\
+                        b = \frac{5}{2},\ c = \frac{17}{4}$</p>
+
+                    <p><strong>2.b)</strong> $\boxed{y = Ae^x + Be^{2x} + \frac{1}{2}x^2 + \frac{5}{2}x + \frac{17}{4}}$
+                    </p>
+
+                    <p><strong>3.a)</strong> $r^2 - 8r + 17 = 0 \implies \Delta = -4 \implies r = 4 \pm i$</p>
+                    <p>Solution particulière : $y = \frac{1}{17}x^2 + \frac{1}{17}x + \frac{31}{289}$</p>
+                    <p>$\boxed{y = e^{4x}(A\cos x + B\sin x) + \frac{1}{17}x^2 + \frac{1}{17}x + \frac{31}{289}}$</p>
+
+                    <p><strong>3.b)</strong> $r^2 + 4r + 4 = 0 \implies r = -2$ (double)</p>
+                    <p>Solution particulière : $y = \frac{1}{4}x^2 - \frac{1}{2}x + \frac{3}{4}$</p>
+                    <p>$\boxed{y = (Ax + B)e^{-2x} + \frac{1}{4}x^2 - \frac{1}{2}x + \frac{3}{4}}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 6 - Partie C
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6 (suite)</span>
+
+            <div class="part-label">Partie C : Cas où $g(x) = \alpha\cos(\omega x) + \beta\sin(\omega x)$</div>
+
+            <ol>
+                <li>On considère l'équation $(E) : y'' + 4y' + 5y = 2\cos(3x) - \sin(3x)$.
+                    <ol type="a">
+                        <li>Déterminer les réels $a$ et $b$ tels que $f_1 : x \mapsto a\cos(3x) + b\sin(3x)$ soit
+                            solution de $(E)$.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On considère l'équation $(E) : y'' + 4y' + 5y = \alpha\cos(3x) + \beta\sin(3x)$.
+                    <ol type="a">
+                        <li>Déterminer les réels $a$ et $b$ tels que $f_1 : x \mapsto a\cos(3x) + b\sin(3x)$ soit
+                            solution de $(E)$.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>Résoudre :
+                    <ol type="a">
+                        <li>$y'' - 6y' + 8y = \cos x + 2\sin x$</li>
+                        <li>$y'' + 4y' + 4y = \sin(5x)$</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $y = a\cos(3x) + b\sin(3x)$</p>
+                    <p>$y' = -3a\sin(3x) + 3b\cos(3x)$, $y'' = -9a\cos(3x) - 9b\sin(3x)$</p>
+                    <p>Identification : $a = -\frac{1}{2}$, $b = \frac{3}{2}$</p>
+
+                    <p><strong>1.b)</strong> $r^2 + 4r + 5 = 0 \implies r = -2 \pm i$</p>
+                    <p>$\boxed{y = e^{-2x}(A\cos x + B\sin x) - \frac{1}{2}\cos(3x) + \frac{3}{2}\sin(3x)}$</p>
+
+                    <p><strong>3.a)</strong> $r^2 - 6r + 8 = 0 \implies r = 2$ ou $r = 4$</p>
+                    <p>Solution particulière : $y = \frac{1}{25}\cos x + \frac{7}{25}\sin x$</p>
+                    <p>$\boxed{y = Ae^{2x} + Be^{4x} + \frac{1}{25}\cos x + \frac{7}{25}\sin x}$</p>
+
+                    <p><strong>3.b)</strong> $r^2 + 4r + 4 = 0 \implies r = -2$ (double)</p>
+                    <p>Solution particulière : $y = -\frac{5}{169}\cos(5x) - \frac{12}{169}\sin(5x)$</p>
+                    <p>$\boxed{y = (Ax + B)e^{-2x} - \frac{5}{169}\cos(5x) - \frac{12}{169}\sin(5x)}$</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================================================
+        EXERCICE 6 - Partie D
+        ============================================================ -->
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6 (suite et fin)</span>
+
+            <div class="part-label">Partie D : Cas où $g(x) = \mathrm{e}^{ax}$</div>
+
+            <ol>
+                <li>On considère l'équation $(E) : y'' - 4y' + 4y = \mathrm{e}^{-2x}$.
+                    <ol type="a">
+                        <li>Déterminer le réel $a$ tel que $f_1 : x \mapsto a\mathrm{e}^{-2x}$ soit solution de $(E)$.
+                        </li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On considère l'équation $(E) : y'' - 5y' + 6y = \mathrm{e}^{2x}$.
+                    <ol type="a">
+                        <li>Peut-on déterminer une solution particulière de la forme $x \mapsto a\mathrm{e}^{2x}$ ?</li>
+                        <li>Déterminer les réels $a$ et $b$ tels que $f_1 : x \mapsto (ax + b)\mathrm{e}^{2x}$ soit
+                            solution de $(E)$.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>On considère l'équation $(E) : y'' - 4y' + 4y = \mathrm{e}^{2x}$.
+                    <ol type="a">
+                        <li>Peut-on déterminer une solution particulière de la forme $x \mapsto a\mathrm{e}^{2x}$ ?</li>
+                        <li>Peut-on en trouver une de la forme $x \mapsto (ax + b)\mathrm{e}^{2x}$ ?</li>
+                        <li>Déterminer les réels $a, b$ et $c$ tels que $f_1 : x \mapsto (ax^2 + bx + c)\mathrm{e}^{2x}$
+                            soit solution de $(E)$.</li>
+                        <li>Résoudre $(E)$.</li>
+                    </ol>
+                </li>
+                <li>Cas général pour $(E) : y'' + my' + py = \mathrm{e}^{ax}$ :
+                    <ol type="a">
+                        <li>Prouver que si $a$ n'est pas racine de $r^2 + mr + p = 0$, il existe une solution de la
+                            forme $x \mapsto A\mathrm{e}^{ax}$.</li>
+                        <li>Prouver que si $a$ est racine simple de $r^2 + mr + p = 0$, il existe une solution de la
+                            forme $x \mapsto (Ax + B)\mathrm{e}^{ax}$.</li>
+                        <li>Prouver que si $a$ est racine double de $r^2 + mr + p = 0$, il existe une solution de la
+                            forme $x \mapsto (Ax^2 + Bx + C)\mathrm{e}^{ax}$.</li>
+                        <li>Résoudre :
+                            <ol type="i">
+                                <li>$y'' - 2y' + 2y = \mathrm{e}^{3x}$</li>
+                                <li>$y'' + 2y' - 3y = \mathrm{e}^{x}$</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $y = ae^{-2x}$, $y' = -2ae^{-2x}$, $y'' = 4ae^{-2x}$</p>
+                    <p>$4a + 8a + 4a = 16a = 1 \implies a = \frac{1}{16}$</p>
+                    <p>$\boxed{f_1(x) = \frac{1}{16}e^{-2x}}$</p>
+
+                    <p><strong>1.b)</strong> $r^2 - 4r + 4 = 0 \implies r = 2$ (double)</p>
+                    <p>$\boxed{y = (Ax + B)e^{2x} + \frac{1}{16}e^{-2x}}$</p>
+
+                    <p><strong>2.a)</strong> $r^2 - 5r + 6 = 0 \implies r = 2$ ou $r = 3$. $a=2$ est racine simple.</p>
+
+                    <p><strong>2.b)</strong> $y = (ax + b)e^{2x}$</p>
+                    <p>$y' = (2ax + a + 2b)e^{2x}$, $y'' = (4ax + 4a + 4b)e^{2x}$</p>
+                    <p>$(4a - 10a)e^{2x} = e^{2x} \implies -6a = 1 \implies a = -\frac{1}{6}$</p>
+                    <p>$\boxed{f_1(x) = -\frac{1}{6}x e^{2x}}$</p>
+
+                    <p><strong>2.c)</strong> $\boxed{y = Ae^{2x} + Be^{3x} - \frac{1}{6}x e^{2x}}$</p>
+
+                    <p><strong>3.a)</strong> Non, car $a=2$ est racine double de $r^2 - 4r + 4 = 0$.</p>
+                    <p><strong>3.b)</strong> Non, on ne peut pas avec un polynôme de degré 1.</p>
+
+                    <p><strong>3.c)</strong> $y = (ax^2 + bx + c)e^{2x}$</p>
+                    <p>On trouve : $2a = 1 \implies a = \frac{1}{2}$, $b = 0$, $c = 0$</p>
+                    <p>$\boxed{f_1(x) = \frac{1}{2}x^2 e^{2x}}$</p>
+
+                    <p><strong>3.d)</strong> $\boxed{y = (Ax + B)e^{2x} + \frac{1}{2}x^2 e^{2x}}$</p>
+
+                    <p><strong>4.d-i)</strong> $r^2 - 2r + 2 = 0 \implies r = 1 \pm i$</p>
+                    <p>$a=3$ n'est pas racine : $y = A e^{3x}$ avec $A = \frac{1}{5}$</p>
+                    <p>$\boxed{y = e^x(A\cos x + B\sin x) + \frac{1}{5}e^{3x}}$</p>
+
+                    <p><strong>4.d-ii)</strong> $r^2 + 2r - 3 = 0 \implies r = 1$ ou $r = -3$</p>
+                    <p>$a=1$ est racine simple : $y = \frac{1}{4}x e^x$</p>
+                    <p>$\boxed{y = Ae^x + Be^{-3x} + \frac{1}{4}x e^x}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - TD Équations Différentielles - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 6 - Équations différentielles linéaires</p>
+    </footer>
+
+</body>
+
+</html>
