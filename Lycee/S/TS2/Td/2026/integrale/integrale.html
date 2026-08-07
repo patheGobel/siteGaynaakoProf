@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Intégrales - TS2</title>
+    <link rel="stylesheet" href="integrale.css" />
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 02/06/2026</span>
+        </div>
+        <h1>📐 TD Intégrales</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Calcul d'intégrales
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <div class="boxed-title">Calculer les intégrales</div>
+
+            <div class="integral-grid">
+                <div class="integral-item">1. $\int_1^2 2t^2 \, dt$</div>
+                <div class="integral-item">2. $\int_{-1}^3 -t^4 \, dt$</div>
+                <div class="integral-item">3. $\int_1^2 \frac{1}{s^4} \, ds$</div>
+                <div class="integral-item">4. $\int_0^2 \frac{1}{(x+2)^2} \, dx$</div>
+                <div class="integral-item">5. $\int_0^2 \frac{x}{(x^2 + 2)^2} \, dx$</div>
+                <div class="integral-item">6. $\int_0^\frac{\pi}{2} (2 - 3\sin t) \, dt$</div>
+                <div class="integral-item">7. $\int_0^\frac{\pi}{2} \sin(x + \frac{\pi}{4}) \, dx$</div>
+                <div class="integral-item">8. $\int_0^2 \frac{e^x}{e^x + 3} \, dx$</div>
+                <div class="integral-item">9. $\int_{-1}^5 |x^2 - 9| \, dx$</div>
+                <div class="integral-item">10. $\int_0^2 e^x(e^x - 3) \, dx$</div>
+                <div class="integral-item">11. $\int_e^{e^3} \frac{dx}{x\ln x}$</div>
+                <div class="integral-item">12. $\int_0^\frac{\pi}{4} \tan^2 x \, dx$</div>
+                <div class="integral-item">13. $\int_{-3}^{-2} \frac{x}{\sqrt{x^2 - 1}} \, dx$</div>
+                <div class="integral-item">14. $\int_0^\pi \frac{\sin x}{(2 + \cos x)^2} \, dx$</div>
+                <div class="integral-item">15. $\int_0^\pi \frac{dx}{\cos^2 x}$</div>
+                <div class="integral-item">16. $\int_{\frac{\pi}{4}}^{\frac{\pi}{4}} \frac{1 + \tan^2 x}{\tan x} \, dx$
+                </div>
+                <div class="integral-item">17. $\int_0^1 \frac{e^x + 1}{e^x + x} \, dx$</div>
+                <div class="integral-item">18. $\int_e^{e^2} \frac{\ln u}{u} \, du$</div>
+                <div class="integral-item">19. $\int_0^{\frac{\pi}{4}} \cos 2u \, du$</div>
+                <div class="integral-item">20. $\int_{-2}^1 |2x - 1| \, dx$</div>
+                <div class="integral-item">21. $\int_0^{\frac{\pi}{4}} \tan^2 x \, dx$</div>
+            </div>
+
+            <div class="integral-grid" style="margin-top: 10px;">
+                <div class="integral-item">22. $\int_0^1 (\sqrt{2t + 1} + \frac{1}{\sqrt{t + 5}}) \, dt$</div>
+                <div class="integral-item">23. $\int_0^2 (2t + 3)\sqrt{t^2 + 3t} \, dt$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <div class="two-columns">
+                        <div>
+                            <p><strong>1.</strong> $\left[\frac{2t^3}{3}\right]_1^2 = \frac{16}{3} - \frac{2}{3} =
+                                \frac{14}{3}$</p>
+                            <p><strong>2.</strong> $\left[-\frac{t^5}{5}\right]_{-1}^3 = -\frac{243}{5} - \frac{1}{5} =
+                                -\frac{244}{5}$</p>
+                            <p><strong>3.</strong> $\left[-\frac{1}{3s^3}\right]_1^2 = -\frac{1}{24} + \frac{1}{3} =
+                                \frac{7}{24}$</p>
+                            <p><strong>4.</strong> $\left[-\frac{1}{x+2}\right]_0^2 = -\frac{1}{4} + \frac{1}{2} =
+                                \frac{1}{4}$</p>
+                            <p><strong>5.</strong> $\left[-\frac{1}{2(x^2+2)}\right]_0^2 = -\frac{1}{12} + \frac{1}{4} =
+                                \frac{1}{6}$</p>
+                            <p><strong>6.</strong> $\left[2t + 3\cos t\right]_0^{\pi/2} = \pi - 3$</p>
+                            <p><strong>7.</strong> $\left[-\cos(x+\frac{\pi}{4})\right]_0^{\pi/2} = \frac{\sqrt{2}}{2} +
+                                \frac{\sqrt{2}}{2} = \sqrt{2}$</p>
+                            <p><strong>8.</strong> $\left[\ln(e^x+3)\right]_0^2 = \ln(e^2+3) - \ln 4$</p>
+                            <p><strong>9.</strong> $\int_{-1}^3 (9-x^2)dx + \int_3^5 (x^2-9)dx = \frac{68}{3} +
+                                \frac{44}{3} = \frac{112}{3}$</p>
+                            <p><strong>10.</strong> $\left[\frac{e^{2x}}{2} - 3e^x\right]_0^2 = \frac{e^4}{2} - 3e^2 +
+                                \frac{5}{2}$</p>
+                            <p><strong>11.</strong> $\left[\ln(\ln x)\right]_e^{e^3} = \ln 3$</p>
+                            <p><strong>12.</strong> $\left[\tan x - x\right]_0^{\pi/4} = 1 - \frac{\pi}{4}$</p>
+                            <p><strong>13.</strong> $\left[\sqrt{x^2-1}\right]_{-3}^{-2} = \sqrt{3} - \sqrt{8}$</p>
+                            <p><strong>14.</strong> $\left[\frac{1}{2+\cos x}\right]_0^\pi = \frac{1}{1} - \frac{1}{3} =
+                                \frac{2}{3}$</p>
+                            <p><strong>15.</strong> Non définie car $\cos x = 0$ en $\frac{\pi}{2}$</p>
+                            <p><strong>16.</strong> $\left[\ln(\tan x)\right]_{\pi/4}^{\pi/4} = 0$</p>
+                            <p><strong>17.</strong> $\left[\ln(e^x+x)\right]_0^1 = \ln(e+1) - \ln 1 = \ln(e+1)$</p>
+                            <p><strong>18.</strong> $\left[\frac{(\ln u)^2}{2}\right]_e^{e^2} = \frac{4}{2} -
+                                \frac{1}{2} = \frac{3}{2}$</p>
+                            <p><strong>19.</strong> $\left[\frac{\sin 2u}{2}\right]_0^{\pi/4} = \frac{1}{2}$</p>
+                            <p><strong>20.</strong> $\int_{-2}^{1/2} (1-2x)dx + \int_{1/2}^{1} (2x-1)dx = \frac{25}{4}$
+                            </p>
+                            <p><strong>22.</strong> $\left[\frac{1}{3}(2t+1)^{3/2} + 2\sqrt{t+5}\right]_0^1 =
+                                \frac{1}{3}(\sqrt{27}-1) + 2(\sqrt{6}-\sqrt{5})$</p>
+                            <p><strong>23.</strong> $\left[\frac{2}{3}(t^2+3t)^{3/2}\right]_0^2 = \frac{2}{3}(10)^{3/2}$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+
+            <ol>
+                <li>Sans chercher de primitives, calculer les intégrales :
+                    <div class="integral-grid">
+                        <div class="integral-item">$\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \sin 4t \, dt$</div>
+                        <div class="integral-item">$\int_{-\frac{\pi}{3}}^{\frac{\pi}{3}} \cos 3x \, dx$</div>
+                        <div class="integral-item">$\int_{-1}^{1} \ln\left(\frac{2-x}{2+x}\right) \, dx$</div>
+                        <div class="integral-item">$\int_{\ln 2}^{\ln 2} \frac{1-e^x}{1+e^x} \, dx$</div>
+                    </div>
+                </li>
+                <li>Calculer les intégrales suivantes :
+                    <div class="integral-grid">
+                        <div class="integral-item">$\int_0^{\frac{\pi}{2}} \sin x \cos^2 x \, dx$</div>
+                        <div class="integral-item">$\int_0^{\frac{\pi}{3}} \sin^3 x \, dx$</div>
+                        <div class="integral-item">$\int_0^{\frac{\pi}{4}} \cos^4 u \, du$</div>
+                        <div class="integral-item">$\int_0^{\frac{\pi}{3}} \sin^2 x \cos^3 x \, dx$</div>
+                    </div>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\sin 4t$ est impaire sur $[-\pi/4; \pi/4]$ donc $\int = 0$</p>
+                    <p><strong>1.b)</strong> $\cos 3x$ est paire sur $[-\pi/3; \pi/3]$ donc $\int = 2\int_0^{\pi/3} \cos
+                        3x \, dx = \frac{2}{3}[\sin 3x]_0^{\pi/3} = 0$</p>
+                    <p><strong>1.c)</strong> $f(x) = \ln\left(\frac{2-x}{2+x}\right)$ est impaire, donc $\int_{-1}^{1} =
+                        0$</p>
+                    <p><strong>1.d)</strong> Les bornes sont égales donc $\int = 0$</p>
+
+                    <p><strong>2.a)</strong> $\left[-\frac{\cos^3 x}{3}\right]_0^{\pi/2} = \frac{1}{3}$</p>
+                    <p><strong>2.b)</strong> $\int_0^{\pi/3} \sin^3 x \, dx = \left[-\cos x + \frac{\cos^3
+                        x}{3}\right]_0^{\pi/3} = \frac{5}{24}$</p>
+                    <p><strong>2.c)</strong> $\int_0^{\pi/4} \cos^4 u \, du = \frac{3\pi}{32} + \frac{1}{8}$</p>
+                    <p><strong>2.d)</strong> $\int_0^{\pi/3} \sin^2 x \cos^3 x \, dx = \frac{19}{120}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 : Décomposition en éléments simples
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Vérifier que : $\forall x \in \mathbb{R} \setminus \{-1; -\frac{1}{2}\}$,
+                            $\frac{8x+5}{2x^2+3x+1} = \frac{3}{x+1} + \frac{2}{2x+1}$.</li>
+                        <li>En déduire la valeur de : $\int_0^2 \frac{8x+5}{2x^2+3x+1} \, dx$.</li>
+                    </ol>
+                </li>
+                <li>Soit la fonction $f$ définie par : $f(x) = \frac{3x^3 - 5x^2 + 2x - 1}{(x-2)^2}$.
+                    <ol type="a">
+                        <li>Déterminer les réels $a$, $b$, $c$ et $d$ tels que : $f(x) = ax + b + \frac{c}{x-2} +
+                            \frac{d}{(x-2)^2}$.</li>
+                        <li>En déduire une primitive de $f$ sur $[-1; 1]$ puis calculer : $\int_{-1}^1 f(x) \, dx$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\frac{3}{x+1} + \frac{2}{2x+1} = \frac{3(2x+1) + 2(x+1)}{(x+1)(2x+1)} =
+                        \frac{6x+3+2x+2}{2x^2+3x+1} = \frac{8x+5}{2x^2+3x+1}$</p>
+
+                    <p><strong>1.b)</strong> $\int_0^2 \frac{8x+5}{2x^2+3x+1} \, dx = \int_0^2 \left(\frac{3}{x+1} +
+                        \frac{2}{2x+1}\right) dx = [3\ln(x+1) + \ln(2x+1)]_0^2$</p>
+                    <p>$= 3\ln 3 + \ln 5 - \ln 1 = \boxed{\ln(27 \times 5) = \ln 135}$</p>
+
+                    <p><strong>2.a)</strong> $f(x) = 3x + 1 + \frac{3}{x-2} + \frac{3}{(x-2)^2}$</p>
+
+                    <p><strong>2.b)</strong> $F(x) = \frac{3x^2}{2} + x + 3\ln|x-2| - \frac{3}{x-2}$</p>
+                    <p>$\int_{-1}^1 f(x) \, dx = \left[\frac{3x^2}{2} + x + 3\ln|x-2| - \frac{3}{x-2}\right]_{-1}^1 = 6
+                        + 3\ln 3$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4 : Intégration par parties
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <div class="boxed-title">Calculer en utilisant une intégration par parties</div>
+
+            <div class="integral-grid">
+                <div class="integral-item">1. $\int_0^{\frac{\pi}{2}} x \sin x \, dx$</div>
+                <div class="integral-item">2. $\int_1^e x \ln x \, dx$</div>
+                <div class="integral-item">3. $\int_0^{\frac{\pi}{2}} x \cos x \, dx$</div>
+                <div class="integral-item">4. $\int_1^e \ln x \, dx$</div>
+                <div class="integral-item">5. $\int_1^e (2 - t) e^t \, dt$</div>
+                <div class="integral-item">6. $\int_0^{\frac{\pi}{2}} (x - 1) \sin x \, dx$</div>
+                <div class="integral-item">7. $\int_1^3 (2x + 1) \ln x \, dx$</div>
+                <div class="integral-item">8. $\int_0^{\frac{\pi}{2}} (u - 1)^2 \sin u \, du$</div>
+                <div class="integral-item">9. $\int_0^{\frac{\pi}{2}} e^x \sin x \, dx$</div>
+                <div class="integral-item">10. $\int_0^1 (x^2 - 1) e^{2x} \, dx$</div>
+                <div class="integral-item">11. $\int_0^\pi e^{-x} \cos x \, dx$</div>
+                <div class="integral-item">12. $\int_1^2 x \sqrt{3 - x} \, dx$</div>
+                <div class="integral-item">13. $\int_1^2 (3x^2 + 1)^2 e^x \, dx$</div>
+                <div class="integral-item">14. $\int_1^2 u (\ln u)^2 \, du$</div>
+                <div class="integral-item">15. $\int_0^1 (x + 1)\sqrt{x + 1} \, dx$</div>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir les solutions</span></summary>
+                <div class="correction-box">
+                    <div class="two-columns">
+                        <div>
+                            <p><strong>1.</strong> $[-x\cos x + \sin x]_0^{\pi/2} = 1$</p>
+                            <p><strong>2.</strong> $\left[\frac{x^2}{2}\ln x - \frac{x^2}{4}\right]_1^e =
+                                \frac{e^2+1}{4}$</p>
+                            <p><strong>3.</strong> $[x\sin x + \cos x]_0^{\pi/2} = \frac{\pi}{2} - 1$</p>
+                            <p><strong>4.</strong> $[x\ln x - x]_1^e = 1$</p>
+                            <p><strong>5.</strong> $[(3-t)e^t]_1^e = 2e^e - 2e$</p>
+                            <p><strong>6.</strong> $[-(x-1)\cos x + \sin x]_0^{\pi/2} = 1 - 1 = 0$</p>
+                            <p><strong>7.</strong> $\left[(x^2+x)\ln x - \frac{x^2}{2} - x\right]_1^3 = 12\ln 3 - 6$</p>
+                            <p><strong>8.</strong> $[-(u-1)^2\cos u + 2(u-1)\sin u + 2\cos u]_0^{\pi/2} = 2 -
+                                \frac{\pi^2}{4}$</p>
+                            <p><strong>9.</strong> $\frac{1}{2}(e^{\pi/2} + 1)$</p>
+                            <p><strong>10.</strong> $\frac{5e^2}{4} - \frac{3}{4}$</p>
+                            <p><strong>11.</strong> $-\frac{1}{2}(e^{-\pi} + 1)$</p>
+                            <p><strong>12.</strong> $\frac{34}{15}$</p>
+                            <p><strong>13.</strong> $[(3x^2+1)^2e^x - 6x(3x^2+1)e^x + (18x^2+6)e^x - 36xe^x +
+                                36e^x]_1^2$</p>
+                            <p><strong>14.</strong> $\left[\frac{u^2}{2}(\ln u)^2 - \frac{u^2}{2}\ln u +
+                                \frac{u^2}{4}\right]_1^2 = 2(\ln 2)^2 - 2\ln 2 + \frac{3}{4}$</p>
+                            <p><strong>15.</strong> $\left[\frac{2}{3}(x+1)^{3/2}(x+1)\right]_0^1 = \frac{8\sqrt{2}}{3}$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+
+            <p>Soit $f$ la fonction numérique de la variable réelle $x$ définie par : $f(x) = \frac{x+1}{x} + \ln x -
+                \ln(x+1)$.</p>
+
+            <ol>
+                <li>Étudier les variations de $f$ et tracer sa courbe.</li>
+                <li>Soit $\lambda$ un réel supérieur à 1 et $D_{\lambda} = \{M(x,y),\ 1 \leq x \leq \lambda \text{ et }
+                    1 \leq y \leq f(x)\}$.<br>
+                    Calculer l'aire $A(D_{\lambda})$ de $D_{\lambda}$. Étudier la limite de $A(D_{\lambda})$ quand
+                    $\lambda$ tend vers $+\infty$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $f(x) = 1 + \frac{1}{x} + \ln\left(\frac{x}{x+1}\right)$</p>
+                    <p>$f'(x) = -\frac{1}{x^2} + \frac{1}{x} - \frac{1}{x+1} = -\frac{1}{x^2} + \frac{1}{x(x+1)} =
+                        \frac{-x-1+1}{x^2(x+1)} = -\frac{1}{x^2(x+1)} < 0$</p>
+                            <p>$f$ est strictement décroissante sur $]0; +\infty[$.</p>
+
+                            <p><strong>2.</strong> $A(D_{\lambda}) = \int_1^{\lambda} (f(x) - 1) \, dx =
+                                \int_1^{\lambda} \left(\frac{1}{x} + \ln x - \ln(x+1)\right) dx$</p>
+                            <p>$= [\ln x + x\ln x - x - (x+1)\ln(x+1) + (x+1)]_1^{\lambda}$</p>
+                            <p>$= \lambda\ln\lambda - (\lambda+1)\ln(\lambda+1) + \ln 2 + 1$</p>
+                            <p>$\lim\limits_{\lambda \to +\infty} A(D_{\lambda}) = \lim\limits_{\lambda \to +\infty}
+                                \left[\ln\left(\frac{\lambda^{\lambda}}{(\lambda+1)^{\lambda+1}}\right) + \ln 2 +
+                                1\right] = 1 + \ln 2$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+
+            <p>On pose $I = \int_0^{\frac{\pi}{4}} \left( \int_0^x \sin^5 t \cos t \, dt \right) dx$.</p>
+
+            <ol>
+                <li>Linéariser $\sin^6 x$.</li>
+                <li>Démontrer que $I = \frac{15\pi - 44}{1152}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\sin^6 x = \frac{1}{32}(10 - 15\cos 2x + 6\cos 4x - \cos 6x)$</p>
+
+                    <p><strong>2.</strong> $I = \int_0^{\pi/4} \left[\frac{\sin^6 t}{6}\right]_0^x dx = \int_0^{\pi/4}
+                        \frac{\sin^6 x}{6} dx$</p>
+                    <p>$= \frac{1}{192}\int_0^{\pi/4} (10 - 15\cos 2x + 6\cos 4x - \cos 6x) dx$</p>
+                    <p>$= \frac{1}{192}\left[10x - \frac{15}{2}\sin 2x + \frac{3}{2}\sin 4x - \frac{1}{6}\sin
+                        6x\right]_0^{\pi/4}$</p>
+                    <p>$= \frac{1}{192}\left(\frac{5\pi}{2} - \frac{15}{2} + 0 + \frac{1}{6}\right) = \frac{15\pi -
+                        44}{1152}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 7
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 7</span>
+
+            <p>Soit $f$ la fonction définie sur $]0; +\infty[$ par : $f(x) = \frac{2\ln x}{x^2 + x}$. On se propose de
+                trouver un encadrement de l'aire $A$ de l'ensemble des points $M(x; y)$ tels que $1 \leq x \leq
+                \frac{3}{2}$ et $0 \leq y \leq f(x)$.</p>
+
+            <ol>
+                <li>Étudier et tracer $(C_f)$.</li>
+                <li>Montrer que pour tout $x \geq 1$, $\frac{\ln x}{x^2} \leq f(x) \leq \frac{\ln x}{x}$.</li>
+                <li>Calculer $I = \int_1^{\frac{3}{2}} \frac{\ln x}{x} \, dx$ et $\int_1^{\frac{3}{2}} \frac{\ln x}{x^2}
+                    \, dx$.</li>
+                <li>En déduire un encadrement de $\int_1^{\frac{3}{2}} f(x) \, dx$ puis un encadrement de $A$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>2.</strong> Pour $x \geq 1$, $\ln x \geq 0$ et $x^2 \leq x^2 + x \leq 2x^2$</p>
+                    <p>Donc $\frac{\ln x}{2x^2} \leq f(x) \leq \frac{\ln x}{x}$</p>
+
+                    <p><strong>3.</strong> $I = \left[\frac{(\ln x)^2}{2}\right]_1^{3/2} = \frac{(\ln 3/2)^2}{2}$</p>
+                    <p>$\int_1^{3/2} \frac{\ln x}{x^2} \, dx = \left[-\frac{\ln x}{x} - \frac{1}{x}\right]_1^{3/2} =
+                        -\frac{2}{3}\ln\frac{3}{2} - \frac{2}{3} + 1 = \frac{1}{3} - \frac{2}{3}\ln\frac{3}{2}$</p>
+
+                    <p><strong>4.</strong> $\frac{1}{3} - \frac{2}{3}\ln\frac{3}{2} \leq \int_1^{3/2} f(x) \, dx \leq
+                        \frac{(\ln 3/2)^2}{2}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 8
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 8</span>
+
+            <p>On se propose de calculer l'intégrale $J = \int_0^1 \frac{x e^x}{(1 + e^x)^3} \, dx$.</p>
+
+            <ol>
+                <li>Calculer les deux intégrales suivantes : $A = \int_0^1 \frac{e^x}{e^x + 1} \, dx$ et $B = \int_0^1
+                    \frac{e^x}{(e^x + 1)^2} \, dx$.</li>
+                <li>Déterminer les réels $a$, $b$ et $c$ tels que pour $x \geq 0$ : $\frac{1}{(1+t)^2} = a +
+                    \frac{bt}{t+1} + \frac{ct}{(1+t)^2}$.</li>
+                <li>En posant $t = e^x$ dans l'égalité (1), calculer l'intégrale $I = \int_0^1 \frac{dx}{(1 + e^x)^2}$.
+                </li>
+                <li>Établir une relation entre $I$ et $J$ et en déduire $J$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $A = [\ln(e^x+1)]_0^1 = \ln(e+1) - \ln 2 = \ln\left(\frac{e+1}{2}\right)$</p>
+                    <p>$B = \left[-\frac{1}{e^x+1}\right]_0^1 = -\frac{1}{e+1} + \frac{1}{2} = \frac{e-1}{2(e+1)}$</p>
+
+                    <p><strong>2.</strong> $a = 0$, $b = 0$, $c = 1$</p>
+
+                    <p><strong>3.</strong> $I = \int_0^1 \frac{dx}{(1+e^x)^2} = \frac{1}{2} - \frac{1}{e+1} -
+                        \ln\left(\frac{e+1}{2}\right)$</p>
+
+                    <p><strong>4.</strong> $J = I - B = \frac{1}{2} - \frac{1}{e+1} - \ln\left(\frac{e+1}{2}\right) -
+                        \frac{e-1}{2(e+1)} = \frac{e}{2(e+1)} - \ln\left(\frac{e+1}{2}\right)$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 9
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 9</span>
+
+            <p>On pose, pour tout nombre entier naturel non nul : $I_n = \int_1^0 x^n (\ln x)^n \, dx$, où $\ln$ désigne
+                la fonction logarithme népérien, et $I_0 = \int_1^e x^2 \, dx$.</p>
+
+            <ol>
+                <li>Calculer $I_0$ et $I_1$.</li>
+                <li>En utilisant une intégration par parties, démontrer que pour tout entier naturel $n$ non nul :
+                    $3I_{n+1} + (n+1)I_n = e^3$. En déduire $I_2$.</li>
+                <li>
+                    <ol type="a">
+                        <li>Démontrer que pour tout entier naturel $n$, $I_n$ est positif.</li>
+                        <li>Déduire de l'égalité (1) pour tout entier naturel non nul, $I_n \leq \frac{e^3}{n+1}$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $I_0 = \left[\frac{x^3}{3}\right]_1^e = \frac{e^3 - 1}{3}$</p>
+                    <p>$I_1 = \int_1^e x\ln x \, dx = \left[\frac{x^2}{2}\ln x - \frac{x^2}{4}\right]_1^e =
+                        \frac{e^2+1}{4}$</p>
+
+                    <p><strong>2.</strong> $I_{n+1} = \int_1^e x^{n+1}(\ln x)^{n+1} dx$</p>
+                    <p>IPP : $u = (\ln x)^{n+1}$, $dv = x^{n+1}dx$</p>
+                    <p>$3I_{n+1} + (n+1)I_n = e^3$</p>
+                    <p>$I_2 = \frac{e^3 - 2I_1}{3} = \frac{e^3}{3} - \frac{e^2+1}{6}$</p>
+
+                    <p><strong>3.a)</strong> $x^n(\ln x)^n \geq 0$ sur $[1; e]$, donc $I_n \geq 0$.</p>
+                    <p><strong>3.b)</strong> $3I_{n+1} \geq 0 \implies (n+1)I_n \leq e^3 \implies I_n \leq
+                        \frac{e^3}{n+1}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 10
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 10</span>
+
+            <p>Soient $f, g, h$ et $k$ les fonctions de $\mathbb{R}$ vers $\mathbb{R}$ telles que :<br>
+                $f(x) = \sqrt{x^2 + 1}$, $g(x) = x + \sqrt{x^2 + 1}$, $h(x) = \ln(x + \sqrt{x^2 + 1})$ et $k(x) =
+                x\sqrt{x^2 + 1}$.</p>
+            <p>Soit $\alpha$ un réel, on pose $\forall n \in \mathbb{N}, I_n = \int_0^\alpha \frac{x^n}{\sqrt{x^2 + 1}}
+                \, dx$ et</p>
+            <p>$F = \int_0^\alpha \sqrt{x^2 + 1} \, dx$, $G = \int_0^\alpha (x + \sqrt{x^2 + 1}) \, dx$, $H =
+                \int_0^\alpha \ln(x + \sqrt{x^2 + 1}) \, dx$.</p>
+
+            <ol>
+                <li>Démontrer que les fonctions $f$, $g$, $h$ et $k$ sont dérivables sur $\mathbb{R}$, et déterminer
+                    leurs applications dérivées $f'$, $g'$, $h'$ et $k'$.</li>
+                <li>Justifier l'existence de $I_n$ pour tout entier naturel $n$. Calculer $I_0$ et $I_1$.</li>
+                <li>Justifier l'existence de $F$. Calculer $F + I_2$ et $F - I_2$. En déduire $I_2$. Justifier
+                    l'existence de $G$, calculer $G$.</li>
+                <li>Justifier l'existence de $H$. Par une intégration par parties, calculer $H$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $f'(x) = \frac{x}{\sqrt{x^2+1}}$, $g'(x) = 1 + \frac{x}{\sqrt{x^2+1}} =
+                        \frac{x+\sqrt{x^2+1}}{\sqrt{x^2+1}} = \frac{g(x)}{\sqrt{x^2+1}}$</p>
+                    <p>$h'(x) = \frac{1}{\sqrt{x^2+1}}$, $k'(x) = \sqrt{x^2+1} + \frac{x^2}{\sqrt{x^2+1}} =
+                        \frac{2x^2+1}{\sqrt{x^2+1}}$</p>
+
+                    <p><strong>2.</strong> $I_0 = \int_0^\alpha \frac{dx}{\sqrt{x^2+1}} = [\ln(x+\sqrt{x^2+1})]_0^\alpha
+                        = \ln(\alpha + \sqrt{\alpha^2+1})$</p>
+                    <p>$I_1 = \int_0^\alpha \frac{x}{\sqrt{x^2+1}} dx = [\sqrt{x^2+1}]_0^\alpha = \sqrt{\alpha^2+1} - 1$
+                    </p>
+
+                    <p><strong>3.</strong> $F + I_2 = \int_0^\alpha \frac{x^2+1}{\sqrt{x^2+1}} dx = \int_0^\alpha
+                        \sqrt{x^2+1} dx = F$</p>
+                    <p>$F - I_2 = \int_0^\alpha \frac{x^2-1}{\sqrt{x^2+1}} dx$</p>
+                    <p>$G = \int_0^\alpha x \, dx + F = \frac{\alpha^2}{2} + F$</p>
+
+                    <p><strong>4.</strong> $H = [x h(x)]_0^\alpha - \int_0^\alpha \frac{x}{\sqrt{x^2+1}} dx =
+                        \alpha\ln(\alpha+\sqrt{\alpha^2+1}) - (\sqrt{\alpha^2+1} - 1)$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 11
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 11</span>
+
+            <p>Pour tout entier naturel $n$, on considère les intégrales :<br>
+                $I_n = \int_0^{\frac{\pi}{2}} e^{-nx} \sin x \, dx$ et $J_n = \int_0^{\frac{\pi}{2}} e^{-nx} \cos x \,
+                dx$.</p>
+
+            <ol>
+                <li>Calculer $I_0$ et $J_0$.</li>
+                <li>Soit $n$ un entier naturel non nul.
+                    <ol type="a">
+                        <li>En intégrant par parties $I_n$ puis $J_n$, montrer que :<br>
+                            $\begin{cases} I_n + nJ_n = 1 \\ -nI_n + J_n = e^{-n\frac{\pi}{2}} \end{cases}$</li>
+                        <li>En déduire les expressions de $I_n$ et $J_n$ en fonction de $n$.</li>
+                    </ol>
+                </li>
+                <li>Déterminer $\lim\limits_{n \to +\infty} I_n$ et $\lim\limits_{n \to +\infty} J_n$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $I_0 = \int_0^{\pi/2} \sin x \, dx = 1$, $J_0 = \int_0^{\pi/2} \cos x \, dx =
+                        1$</p>
+
+                    <p><strong>2.a)</strong> $I_n = \int_0^{\pi/2} e^{-nx}\sin x \, dx$</p>
+                    <p>IPP : $u = \sin x$, $dv = e^{-nx}dx \implies du = \cos x dx$, $v = -\frac{1}{n}e^{-nx}$</p>
+                    <p>$I_n = \left[-\frac{1}{n}e^{-nx}\sin x\right]_0^{\pi/2} + \frac{1}{n}\int_0^{\pi/2} e^{-nx}\cos x
+                        \, dx = \frac{1}{n}J_n$</p>
+                    <p>De même : $J_n = \frac{1}{n} - \frac{1}{n}I_n$</p>
+
+                    <p><strong>2.b)</strong> $I_n = \frac{n - e^{-n\pi/2}}{n^2+1}$, $J_n = \frac{1 + n
+                        e^{-n\pi/2}}{n^2+1}$</p>
+
+                    <p><strong>3.</strong> $\lim\limits_{n \to +\infty} I_n = 0$, $\lim\limits_{n \to +\infty} J_n = 0$
+                    </p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 12
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 12</span>
+
+            <p>Dans cet exercice $n$ est un entier naturel non nul. On considère la suite $(U_n)$ par : $U_n = \int_0^2
+                \left(\frac{2t+3}{t+2}\right)e^{\frac{7}{n}} \, dt$.</p>
+
+            <ol>
+                <li>Soit $f$ la fonction définie sur $[0; 2]$ par : $f(t) = \frac{2t+3}{t+2}$. Étudier les variations de
+                    $f$ sur $[0; 2]$.</li>
+                <li>En déduire que pour tout réel $t$ de $[0; 2]$ : $\frac{3}{2} \leq f(t) \leq \frac{7}{4}$.</li>
+                <li>Montrer que pour tout réel $t$ de $[0; 2]$ : $\frac{3}{2}e^{\frac{1}{n}} \leq f(t)e^{\frac{1}{n}}
+                    \leq \frac{7}{4}e^{\frac{1}{n}}$.</li>
+                <li>Par une intégration par parties, déduire que : $\frac{3}{2}n(e^{\frac{2}{n}} - 1) \leq U_n \leq
+                    \frac{7}{4}n(e^{\frac{2}{n}} - 1)$.<br>
+                    On rappelle que $\lim\limits_{h \to 0} \frac{e^h - 1}{h} = 1$. Montrer que si $(U_n)$ possède une
+                    limite $L$, alors $3 \leq L \leq \frac{7}{2}$.</li>
+                <li>Vérifier que, pour tout réel $t$ dans $[0; 2]$ : $\frac{2t+3}{t+2} = 2 - \frac{1}{t+2}$.
+                    <ol type="a">
+                        <li>En déduire l'intégrale $I = \int_0^2 \frac{2t+3}{t+2} \, dt$.</li>
+                        <li>Montrer que pour tout $t$ de $[0; 2]$ : $1 \leq e^{\frac{t}{n}} \leq e^{\frac{2}{n}}$.</li>
+                        <li>En déduire que : $I \leq U_n \leq e^{\frac{2}{n}} \times I$.</li>
+                        <li>Montrer que $(U_n)$ est convergente et déterminer sa limite $L$.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $f'(t) = \frac{2(t+2) - (2t+3)}{(t+2)^2} = \frac{1}{(t+2)^2} > 0$ sur $[0;
+                        2]$ donc $f$ est strictement croissante.</p>
+
+                    <p><strong>2.</strong> $f(0) = \frac{3}{2}$, $f(2) = \frac{7}{4}$ donc $\frac{3}{2} \leq f(t) \leq
+                        \frac{7}{4}$.</p>
+
+                    <p><strong>3.</strong> $e^{\frac{1}{n}} > 0$ donc $\frac{3}{2}e^{\frac{1}{n}} \leq
+                        f(t)e^{\frac{1}{n}} \leq \frac{7}{4}e^{\frac{1}{n}}$.</p>
+
+                    <p><strong>4.</strong> $U_n = e^{\frac{7}{n}}\int_0^2 f(t)dt$</p>
+                    <p>$\frac{3}{2}e^{\frac{7}{n}} \times 2 \leq U_n \leq \frac{7}{4}e^{\frac{7}{n}} \times 2$</p>
+                    <p>$\frac{3}{2}n(e^{\frac{2}{n}} - 1) \leq U_n \leq \frac{7}{4}n(e^{\frac{2}{n}} - 1)$</p>
+
+                    <p><strong>5.a)</strong> $I = \int_0^2 \left(2 - \frac{1}{t+2}\right) dt = [2t - \ln(t+2)]_0^2 = 4 -
+                        \ln 4 + \ln 2 = 4 - \ln 2$</p>
+
+                    <p><strong>5.b)</strong> $0 \leq \frac{t}{n} \leq \frac{2}{n}$ donc $1 \leq e^{t/n} \leq e^{2/n}$
+                    </p>
+
+                    <p><strong>5.c)</strong> $U_n = \int_0^2 f(t)e^{t/n}dt$ donc $I \leq U_n \leq e^{2/n}I$</p>
+
+                    <p><strong>5.d)</strong> $e^{2/n} \to 1$ donc $U_n \to I = 4 - \ln 2$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 13
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 13</span>
+
+            <div class="part-label">PARTIE A</div>
+
+            <ol>
+                <li>Étudier sur $\mathbb{R}$ le signe de $4e^{2x} - 5e^x + 1$.</li>
+                <li>Soit $\varphi$ la fonction définie par : $\varphi(x) = \ln x - 2\sqrt{x} + 2$.
+                    <ol type="a">
+                        <li>Déterminer son domaine de définition $D_\varphi$ et calculer ses limites aux bornes de
+                            $D_\varphi$.</li>
+                        <li>Étudier ses variations et dresser son tableau de variations.</li>
+                        <li>En déduire son signe.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <div class="part-label">PARTIE B</div>
+
+            <p>Soit $f$ la fonction définie par : $f(x) = \begin{cases} x + \frac{e^x}{2e^x - 1} & \text{si } x \leq 0
+                \\ 1 - x + \sqrt{x}\ln x & \text{si } x > 0 \end{cases}$.</p>
+            <p>On désigne par $(\tau)$ la courbe représentative de $f$ dans un repère orthonormé d'unité 2 cm.</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer $D_f$ le domaine de définition de $f$.</li>
+                        <li>Calculer les limites de $f$ aux bornes de $D_f$ et étudier les branches infinies de
+                            $(\tau)$.</li>
+                        <li>Étudier la position de $(\tau)$ par rapport à l'asymptote non parallèle aux axes dans
+                            $]-\infty; 0]$.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Étudier la continuité de $f$ en $0$.</li>
+                        <li>Étudier la dérivabilité de $f$ en $0$ et interpréter graphiquement les résultats.</li>
+                    </ol>
+                </li>
+                <li>Déterminer la dérivée de $f$ et dresser le tableau de variations de $f$.</li>
+                <li>Construire $(\tau)$, les asymptotes et les demi-tangentes. On remarquera que $f(1) = 0$ et $f'(1) =
+                    0$.</li>
+                <li>Calculer en cm$^2$ l'aire du domaine limité par $(\tau)$, la droite d'équation $y = x$ et les
+                    droites d'équations $x = -\ln 8$ et $x = -\ln 4$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A - 1.</strong> $4e^{2x} - 5e^x + 1 = 0 \iff e^x = \frac{1}{4}$ ou $e^x = 1$</p>
+                    <p>Signe : positif sur $]-\infty; -\ln 4[ \cup ]0; +\infty[$, négatif sur $]-\ln 4; 0[$</p>
+
+                    <p><strong>Partie A - 2.a)</strong> $D_\varphi = ]0; +\infty[$, $\lim\limits_{x \to 0^+} \varphi(x)
+                        = -\infty$, $\lim\limits_{x \to +\infty} \varphi(x) = -\infty$</p>
+                    <p><strong>2.b)</strong> $\varphi'(x) = \frac{1}{x} - \frac{1}{\sqrt{x}} = \frac{1-\sqrt{x}}{x}$</p>
+                    <p>$\varphi$ est croissante sur $]0; 1]$ et décroissante sur $[1; +\infty[$</p>
+                    <p><strong>2.c)</strong> $\varphi(1) = 0$, donc $\varphi(x) \leq 0$ sur $]0; +\infty[$</p>
+
+                    <p><strong>Partie B - 5.</strong> Aire = $\int_{-\ln 8}^{-\ln 4} |f(x) - x| \, dx$ (en unités
+                        d'aire) puis multiplier par 4 (car 1 ua = 4 cm²).</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 14 (BAC 1999)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 14</span>
+            <span class="bac-tag">BAC 1999 Remplacement</span>
+
+            <div class="part-label">Partie A</div>
+
+            <p>Soit $f$ la fonction définie sur $\mathbb{R}$ par : $f(x) = \begin{cases} e^{-\frac{1}{x^2}}, & x \in
+                ]-\infty; 0[ \\ \ln\left|\frac{x-1}{x+1}\right|, & x \in [0; 1] \cup ]1; +\infty[ \end{cases}$</p>
+            <p>et $(C_f)$ sa courbe représentative dans un repère orthonormé $(O; \vec{i}; \vec{j})$ d'unité 2 cm.</p>
+
+            <ol>
+                <li>Étudier la continuité de $f$ en $0$.</li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que pour tout $x \in [0; 1]$, $f(x) = \frac{\ln(1-x)}{x} - \frac{\ln(1+x)}{x}$.</li>
+                        <li>Étudier la dérivabilité de $f$ en $0$.</li>
+                        <li>En déduire que $(C_f)$ admet au point d'abscisse $0$ deux demi-tangentes dont on donnera les
+                            équations.</li>
+                    </ol>
+                </li>
+                <li>Étudier les variations de $f$.</li>
+                <li>Tracer $(C_f)$.</li>
+            </ol>
+
+            <div class="part-label">Partie B</div>
+
+            <p>Soit $g$ la restriction de $f$ à $]1; +\infty[$.</p>
+
+            <ol>
+                <li>Montrer que $g$ est une bijection de $]1; +\infty[$ vers un intervalle $J$ à préciser. On notera
+                    $g^{-1}$ la bijection réciproque de $g$.</li>
+                <li>Montrer que l'équation $g(x) = -e$ admet une unique solution $\alpha$ sur l'intervalle $]1;
+                    +\infty[$. <em>(On ne demande pas de calculer $\alpha$).</em></li>
+                <li>Montrer que $\forall x \in J, g^{-1}(x) = 1 - \frac{e^x}{e^x - 1}$.</li>
+                <li>Construire $(C_{g^{-1}})$. <em>(On indiquera la nature et l'équation de chacune des asymptotes à
+                        $(C_g)$ et $(C_{g^{-1}})$.)</em></li>
+                <li>Calculer en cm$^2$ l'aire $A$ de l'ensemble des points $M(x; y)$ défini par : $\begin{cases} -\ln 7
+                    \leq x \leq -1, \\ 0 \leq y \leq g^{-1}(x) \end{cases}$.</li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>Partie A - 1.</strong> $\lim\limits_{x \to 0^-} e^{-1/x^2} = 0$, $\lim\limits_{x \to 0^+}
+                        \ln\left|\frac{x-1}{x+1}\right| = \ln 1 = 0$</p>
+                    <p>Donc $f$ est continue en $0$.</p>
+
+                    <p><strong>Partie A - 2.b)</strong> $\lim\limits_{x \to 0} \frac{f(x)-f(0)}{x} = -2$</p>
+                    <p><strong>2.c)</strong> Demi-tangentes : $y = -2x$ pour $x < 0$ et $y=-2x$ pour $x> 0$ (même
+                            tangente)</p>
+
+                    <p><strong>Partie B - 1.</strong> $g$ est strictement décroissante sur $]1; +\infty[$</p>
+                    <p>$\lim\limits_{x \to 1^+} g(x) = +\infty$, $\lim\limits_{x \to +\infty} g(x) = 0$</p>
+                    <p>Donc $g$ est une bijection de $]1; +\infty[$ sur $]0; +\infty[$.</p>
+
+                    <p><strong>Partie B - 3.</strong> $y = \ln\left(\frac{x-1}{x+1}\right) \iff e^y = \frac{x-1}{x+1}
+                        \iff e^y(x+1) = x-1$</p>
+                    <p>$\iff x(e^y - 1) = -e^y - 1 \iff x = \frac{e^y+1}{1-e^y} = 1 - \frac{e^y}{e^y-1}$</p>
+
+                    <p><strong>Partie B - 5.</strong> Aire en cm² = $4 \times \int_{-\ln 7}^{-1} g^{-1}(x) \, dx$</p>
+                    <p>$= 4 \times [x - \ln(e^x - 1)]_{-\ln 7}^{-1}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - TD Intégrales - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 14 - Calculs d'intégrales</p>
+    </footer>
+
+</body>
+
+</html>
