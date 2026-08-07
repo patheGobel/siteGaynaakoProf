@@ -326,6 +326,14 @@ details>ol {
     padding: 4px 0;
 }
 
+/* Rend tous les conteneurs de texte et blocs défilables SANS défilement vertical */
+p, div, li, section, article {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden; /* Empêche le défilement vertical parasite */
+    -webkit-overflow-scrolling: touch;
+}
+
 /* ============================================================
            FOOTER
         ============================================================ */
