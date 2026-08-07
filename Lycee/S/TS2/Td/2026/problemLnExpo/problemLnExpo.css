@@ -1,6 +1,6 @@
-    /* ============================================================
-           RESET & VARIABLES
-        ============================================================ */
+/* ============================================================
+   RESET & VARIABLES
+============================================================ */
 :root {
     --primary: #7c3aed;
     --primary-light: #8b5cf6;
@@ -41,12 +41,9 @@ body {
 }
 
 /* ============================================================
-           TYPOGRAPHIE
-        ============================================================ */
-h1,
-h2,
-h3,
-h4 {
+   TYPOGRAPHIE
+============================================================ */
+h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.3;
@@ -56,8 +53,7 @@ p {
     margin-bottom: 12px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 28px;
     margin: 12px 0 18px;
 }
@@ -66,15 +62,14 @@ li {
     margin-bottom: 6px;
 }
 
-strong,
-b {
+strong, b {
     font-weight: 600;
     color: var(--text-dark);
 }
 
 /* ============================================================
-           EN-TÊTE
-        ============================================================ */
+   EN-TÊTE
+============================================================ */
 .header {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     color: white;
@@ -148,8 +143,8 @@ b {
 }
 
 /* ============================================================
-           SECTIONS
-        ============================================================ */
+   SECTIONS
+============================================================ */
 .section {
     background: var(--bg-white);
     border-radius: var(--radius);
@@ -174,8 +169,37 @@ b {
 }
 
 /* ============================================================
-           EXERCICE BOX
-        ============================================================ */
+   DÉFILEMENT HORIZONTAL - Pour les formules qui débordent
+============================================================ */
+.formula-center {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    max-width: 100%;
+    overflow-x: auto;
+    /* Active le défilement horizontal si la formule dépasse */
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* Conserve la formule sur une seule ligne */
+    -webkit-overflow-scrolling: touch;
+    /* Rend le défilement fluide sur mobile */
+}
+
+/* Rend tous les conteneurs de texte et blocs défilables SANS défilement vertical */
+p,
+div,
+section,
+article {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Empêche le défilement vertical parasite */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================================
+   EXERCICE BOX
+============================================================ */
 .exercise-box {
     background: #faf5ff;
     border: 2px solid var(--primary-light);
@@ -204,8 +228,8 @@ b {
 }
 
 /* ============================================================
-           ENCADRÉS
-        ============================================================ */
+   ENCADRÉS
+============================================================ */
 .correction-box {
     background: #f0fdf4;
     border-left: 6px solid var(--secondary);
@@ -246,8 +270,8 @@ b {
 }
 
 /* ============================================================
-           DETAILS / SUMMARY
-        ============================================================ */
+   DETAILS / SUMMARY
+============================================================ */
 details {
     margin: 10px 0 4px;
     cursor: pointer;
@@ -269,10 +293,10 @@ details[open] summary {
     color: var(--primary-dark);
 }
 
-details>div,
-details>p,
-details>ul,
-details>ol {
+details > div,
+details > p,
+details > ul,
+details > ol {
     padding: 10px 14px 6px 14px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: var(--radius-sm);
@@ -317,19 +341,13 @@ details>ol {
 }
 
 /* ============================================================
-           FORMULES
-        ============================================================ */
+   FORMULES
+============================================================ */
 .formula-block {
     text-align: center;
     padding: 6px 0;
     margin: 4px 0;
     overflow-x: auto;
-}
-
-.formula-center {
-    text-align: center;
-    font-size: 1.05rem;
-    padding: 4px 0;
 }
 
 .two-columns {
@@ -346,8 +364,8 @@ details>ol {
 }
 
 /* ============================================================
-           FOOTER
-        ============================================================ */
+   FOOTER
+============================================================ */
 .footer {
     text-align: center;
     padding: 25px 0 10px;
@@ -358,8 +376,8 @@ details>ol {
 }
 
 /* ============================================================
-           RESPONSIVE
-        ============================================================ */
+   RESPONSIVE
+============================================================ */
 @media (max-width: 768px) {
     body {
         padding: 10px 8px;
@@ -417,8 +435,8 @@ details>ol {
 }
 
 /* ============================================================
-           MATHJAX
-        ============================================================ */
+   MATHJAX
+============================================================ */
 .MathJax {
     font-size: 1.05em !important;
 }
@@ -430,8 +448,8 @@ details>ol {
 }
 
 /* ============================================================
-           ANIMATIONS
-        ============================================================ */
+   ANIMATIONS
+============================================================ */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -449,8 +467,8 @@ details>ol {
 }
 
 /* ============================================================
-           SCROLLBAR
-        ============================================================ */
+   SCROLLBAR
+============================================================ */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -471,8 +489,8 @@ details>ol {
 }
 
 /* ============================================================
-           STYLES SPÉCIFIQUES
-        ============================================================ */
+   STYLES SPÉCIFIQUES
+============================================================ */
 .text-center {
     text-align: center;
 }
