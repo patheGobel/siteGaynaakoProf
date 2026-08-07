@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TD Statistiques - TS2</title>
+    <link rel="stylesheet" href="statistque.css" />
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 09/06/2026</span>
+        </div>
+        <h1>📊 TD Statistiques</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 (BAC 2005)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="bac-tag">BAC 2005</span>
+            <span class="points">(02,5 points)</span>
+
+            <p>Une entreprise a mis au point un nouveau produit et cherche à fixer le prix de vente. Une enquête est réalisée auprès des clients potentiels ; les résultats sont donnés dans le tableau suivant où $y_i$ représente le nombre d'exemplaires du produit que les clients sont disposés à acheter si le prix de vente, exprimé en milliers de francs, est $x_i$ :</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>$x_i$</th>
+                            <th>60</th>
+                            <th>80</th>
+                            <th>100</th>
+                            <th>120</th>
+                            <th>140</th>
+                            <th>160</th>
+                            <th>180</th>
+                            <th>200</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>$y_i$</strong></td>
+                            <td>952</td>
+                            <td>805</td>
+                            <td>630</td>
+                            <td>522</td>
+                            <td>510</td>
+                            <td>324</td>
+                            <td>205</td>
+                            <td>84</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ol>
+                <li><span class="highlight-red">Calculer le coefficient de corrélation linéaire de $y$ et $x$.</span> La valeur trouvée justifie-t-elle la recherche d'un ajustement linéaire ?</li>
+                <li><span class="highlight-red">Déterminer l'équation de la droite de régression de $y$ en $x$.</span></li>
+                <li>Les frais de conception du produit se sont élevés à 28 millions de francs. Le prix de fabrication de chaque produit est de 25 000 francs.
+                    <ol type="a">
+                        <li>Déduire de la précédente question que le bénéfice $z$ en fonction du prix de vente $x$ est donné par l'égalité :
+                        $$z = -5{,}95x^2 + 1426{,}25x - 59937{,}5$$
+                        où $x$ et $z$ sont exprimés en milliers de francs.</li>
+                        <li>Déterminer le prix de vente $x$ permettant de réaliser un bénéfice maximum et calculer ce bénéfice.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <div class="note-box">
+                <p><strong>NB :</strong> Prendre 2 chiffres après la virgule sans arrondir.</p>
+            </div>
+
+            <div class="rappel-box">
+                <p><strong>Rappel :</strong> Bénéfice = Prix de vente – prix de revient.</p>
+            </div>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Calcul de la covariance et des écarts-types :</p>
+                    <p>$\bar{x} = 130$, $\bar{y} = 504$</p>
+                    <p>$V(x) = 2150$, $V(y) = 65590$</p>
+                    <p>$\text{Cov}(x,y) = -11855$</p>
+                    <p>$r = \dfrac{-11855}{\sqrt{2150 \times 65590}} = -0,998$</p>
+                    <p>$|r| \approx 0,998 > 0,87$ donc la corrélation est très forte, un ajustement linéaire est justifié.</p>
+
+                    <p><strong>2.</strong> $a = \dfrac{\text{Cov}(x,y)}{V(x)} = \dfrac{-11855}{2150} = -5,51$</p>
+                    <p>$b = \bar{y} - a\bar{x} = 504 - (-5,51) \times 130 = 504 + 716,3 = 1220,3$</p>
+                    <p>$\boxed{y = -5,51x + 1220,3}$</p>
+
+                    <p><strong>3.a)</strong> Prix de revient = $28000 + 25x$ (en milliers de francs)</p>
+                    <p>Bénéfice = $x \times y - (28000 + 25x) = x(-5,51x + 1220,3) - 28000 - 25x$</p>
+                    <p>$= -5,51x^2 + 1195,3x - 28000$</p>
+
+                    <p><strong>3.b)</strong> $z'(x) = -11,02x + 1195,3 = 0 \implies x \approx 108,5$</p>
+                    <p>$\boxed{x = 108,5 \text{ milliers de francs}}$</p>
+                    <p>$z(108,5) \approx 36850$ milliers de francs</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 (BAC 2008)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="bac-tag">BAC 2008</span>
+            <span class="points">(04,5 points)</span>
+
+            <p>Dans cet exercice, le détail des calculs n'est pas exigé. On donnera les formules utilisées pour répondre aux questions. Les résultats seront donnés à $10^{-1}$ près.</p>
+
+            <p>Le tableau ci-dessous donne le poids moyen ($y$) d'un enfant en fonction de son âge ($x$).</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>$x$ (années)</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>4</th>
+                            <th>7</th>
+                            <th>11</th>
+                            <th>12</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>$y$ (kg)</strong></td>
+                            <td>3,5</td>
+                            <td>6,5</td>
+                            <td>9,5</td>
+                            <td>14</td>
+                            <td>21</td>
+                            <td>32,5</td>
+                            <td>34</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ol>
+                <li>Représenter le nuage de points de cette série statistique dans le plan muni du repère orthonormal.<br>
+                <em>Unité graphique : en abscisse 1 cm pour 1 année et en ordonnée 1 cm pour 2 kg.</em> <span class="points">(01 point)</span></li>
+                <li>Déterminer les coordonnées du point moyen $G$ puis placer $G$. <span class="points">(0,5 point)</span></li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer le coefficient de corrélation linéaire $r$. <span class="points">(0,5 point)</span></li>
+                        <li>Interpréter votre résultat. <span class="points">(0,5 point)</span></li>
+                    </ol>
+                </li>
+                <li>Donner une équation de la droite de régression (D) de $y$ en $x$. Tracer (D). <span class="points">(0,5 point + 0,5 point)</span></li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer graphiquement, à partir de quel âge le poids sera supérieur à 15 kg. Expliciter votre raisonnement. <span class="points">(0,5 point)</span></li>
+                        <li>Retrouver ce résultat par le calcul. <span class="points">(0,5 point)</span></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Nuage de points :</p>
+                    <div class="scatter-plot">
+                        <svg viewBox="0 0 450 300" width="450" height="300">
+                            <!-- Axes -->
+                            <line x1="50" y1="260" x2="420" y2="260" stroke="#333" stroke-width="2" />
+                            <line x1="50" y1="260" x2="50" y2="20" stroke="#333" stroke-width="2" />
+                            <text x="410" y="280" font-size="12">$x$ (années)</text>
+                            <text x="20" y="25" font-size="12">$y$ (kg)</text>
+
+                            <!-- Grille y (1 cm = 2 kg) -->
+                            <line x1="50" y1="260" x2="50" y2="260" stroke="#ddd" stroke-width="0.5" />
+                            <text x="35" y="264" font-size="10">0</text>
+                            <text x="35" y="224" font-size="10">10</text>
+                            <text x="35" y="184" font-size="10">20</text>
+                            <text x="35" y="144" font-size="10">30</text>
+                            <text x="35" y="104" font-size="10">40</text>
+
+                            <!-- Grille x (1 cm = 1 an) -->
+                            <text x="50" y="278" font-size="10">0</text>
+                            <text x="110" y="278" font-size="10">5</text>
+                            <text x="170" y="278" font-size="10">10</text>
+                            <text x="230" y="278" font-size="10">15</text>
+
+                            <!-- Points -->
+                            <circle cx="50" cy="253" r="4" fill="#dc2626" />
+                            <circle cx="80" cy="239" r="4" fill="#dc2626" />
+                            <circle cx="110" cy="225" r="4" fill="#dc2626" />
+                            <circle cx="170" cy="206" r="4" fill="#dc2626" />
+                            <circle cx="260" cy="179" r="4" fill="#dc2626" />
+                            <circle cx="380" cy="149" r="4" fill="#dc2626" />
+                            <circle cx="410" cy="145" r="4" fill="#dc2626" />
+
+                            <!-- Point moyen G -->
+                            <circle cx="210" cy="199" r="6" fill="none" stroke="#2563eb" stroke-width="3" />
+                            <text x="210" y="192" font-size="11" fill="#2563eb" font-weight="bold">G</text>
+
+                            <!-- Droite de régression -->
+                            <line x1="30" y1="265" x2="430" y2="140" stroke="#059669" stroke-width="2" stroke-dasharray="4,4" />
+                        </svg>
+                    </div>
+
+                    <p><strong>2.</strong> $\bar{x} = \frac{0+1+2+4+7+11+12}{7} = \frac{37}{7} \approx 5,3$</p>
+                    <p>$\bar{y} = \frac{3,5+6,5+9,5+14+21+32,5+34}{7} = \frac{121}{7} \approx 17,3$</p>
+                    <p>$\boxed{G(5,3 ; 17,3)}$</p>
+
+                    <p><strong>3.a)</strong> $r \approx 0,993$</p>
+                    <p><strong>3.b)</strong> $|r| \approx 0,993 > 0,87$ donc corrélation très forte et positive.</p>
+
+                    <p><strong>4.</strong> $y = 2,75x + 2,7$</p>
+
+                    <p><strong>5.</strong> $y > 15 \iff 2,75x + 2,7 > 15 \iff x > \frac{12,3}{2,75} \approx 4,47$</p>
+                    <p>$\boxed{\text{À partir de 4,5 ans}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 (BAC 2009)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <span class="bac-tag">BAC 2009</span>
+            <span class="points">(03 points)</span>
+
+            <ol>
+                <li>($X, Y$) est une série statistique double. Soit $(D_1)$ la droite de régression de $Y$ en $X$. Soit $(D_2)$ la droite de régression de $X$ en $Y$. On suppose que :
+                    $$(D_1) : y = ax + b \quad \text{et} \quad (D_2) : x = a'y + b'$$
+                    Soit $r$ le coefficient de corrélation linéaire entre $X$ et $Y$. Établir que $r^2 = aa'$. <span class="points">(01 point)</span></li>
+                <li>Dans une entreprise, une étude simultanée portant sur deux caractères $X$ et $Y$ donne les résultats suivants :
+                    <ul>
+                        <li>la droite de régression de $Y$ en $X$ a pour équation : $2{,}4x - y = 0$</li>
+                        <li>la droite de régression de $X$ en $Y$ a pour équation : $3{,}5y - 9x + 24 = 0$</li>
+                    </ul>
+                    <ol type="a">
+                        <li>Calculer le coefficient de corrélation linéaire entre $X$ et $Y$, sachant que leur covariance est positive. <span class="points">(0,5 point)</span></li>
+                        <li>Calculer la moyenne de chacun des caractères $X$ et $Y$. <span class="points">(0,75 + 0,75 point)</span></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $a = \dfrac{\text{Cov}(X,Y)}{V(X)}$, $a' = \dfrac{\text{Cov}(X,Y)}{V(Y)}$</p>
+                    <p>$aa' = \dfrac{\text{Cov}(X,Y)^2}{V(X)V(Y)} = r^2$</p>
+                    <p>$\boxed{r^2 = aa'}$</p>
+
+                    <p><strong>2.a)</strong> $y = 2,4x$ donc $a = 2,4$</p>
+                    <p>$3,5y - 9x + 24 = 0 \implies 9x = 3,5y + 24 \implies x = \frac{3,5}{9}y + \frac{24}{9} \implies a' = \frac{3,5}{9}$</p>
+                    <p>$r = \sqrt{aa'} = \sqrt{2,4 \times \frac{3,5}{9}} = \sqrt{\frac{8,4}{9}} = \sqrt{0,933} \approx 0,966$</p>
+                    <p>$\boxed{r \approx 0,966}$</p>
+
+                    <p><strong>2.b)</strong> Le point moyen $G(\bar{x}, \bar{y})$ appartient aux deux droites :</p>
+                    <p>$\begin{cases} \bar{y} = 2,4\bar{x} \\ 3,5\bar{y} - 9\bar{x} + 24 = 0 \end{cases}$</p>
+                    <p>$3,5(2,4\bar{x}) - 9\bar{x} + 24 = 0 \implies 8,4\bar{x} - 9\bar{x} + 24 = 0 \implies -0,6\bar{x} + 24 = 0$</p>
+                    <p>$\bar{x} = 40$, $\bar{y} = 2,4 \times 40 = 96$</p>
+                    <p>$\boxed{\bar{x} = 40,\ \bar{y} = 96}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 4 (BAC 2010)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 4</span>
+            <span class="bac-tag">BAC 2010</span>
+            <span class="points">(03 points)</span>
+
+            <p>Une étude sur le nombre d'années d'exercice $X$, des ouvriers d'une entreprise et leur salaire mensuel $Y$ en milliers de francs, a donné les résultats indiqués dans le tableau ci-dessous avec des données manquantes désignées par $a$ et $b$.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>$Y \setminus X$</th>
+                            <th>2</th>
+                            <th>6</th>
+                            <th>10</th>
+                            <th>14</th>
+                            <th>18</th>
+                            <th>22</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>75</strong></td>
+                            <td>$a$</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>125</strong></td>
+                            <td>0</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>175</strong></td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>225</strong></td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>$b$</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ol>
+                <li>Déterminer $a$ et $b$ pour que la moyenne de la série marginale de $X$ soit égale à $\frac{596}{59}$ et celle de la série marginale de $Y$ soit $\frac{8450}{59}$. <span class="points">(0,25 + 0,25 pt)</span></li>
+                <li>Dans la suite, on suppose que $a = 40$ et $b = 20$. À chaque valeur $x_i$ de $X$, on associe la moyenne $m_i$ de la série conditionnelle : $Y/X = x_i$. On obtient ainsi la série double $(X, M)$ définie par le tableau ci-dessous. Les calculs se feront à deux chiffres après la virgule.
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>$X$</th>
+                                    <th>2</th>
+                                    <th>6</th>
+                                    <th>10</th>
+                                    <th>14</th>
+                                    <th>18</th>
+                                    <th>22</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>$M$</strong></td>
+                                    <td>80</td>
+                                    <td>113</td>
+                                    <td>170</td>
+                                    <td>189</td>
+                                    <td>199</td>
+                                    <td>185</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ol type="a">
+                        <li>Calculer le coefficient de corrélation de $X$ et $M$ puis interpréter le résultat. <span class="points">(1,75 pt)</span></li>
+                        <li>Déterminer l'équation de la droite de régression de $M$ en $X$. <span class="points">(0,5 pt)</span></li>
+                        <li>Quelle serait le salaire moyen d'un ouvrier de l'entreprise si son ancienneté était 30 ans, si cette tendance se poursuit. <span class="points">(0,25 pt)</span></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> Effectif total : $N = a + b + 40$</p>
+                    <p>$\bar{x} = \frac{2a + 3 \times 6 + 10 \times 10 + 14 \times 4 + 18(b+7) + 22 \times 5}{N} = \frac{596}{59}$</p>
+                    <p>$\bar{y} = \frac{75(a+5) + 125 \times 10 + 175 \times 21 + 225(b+4)}{N} = \frac{8450}{59}$</p>
+                    <p>$\boxed{a = 2,\ b = 17}$</p>
+
+                    <p><strong>2.a)</strong> $r \approx 0,85$</p>
+                    <p>$0,87 > 0,85$ donc corrélation moyenne, un ajustement linéaire est acceptable mais pas excellent.</p>
+
+                    <p><strong>2.b)</strong> $M = 6,82X + 66,57$</p>
+
+                    <p><strong>2.c)</strong> $M(30) = 6,82 \times 30 + 66,57 = 271,17$ milliers de francs</p>
+                    <p>$\boxed{271,17 \text{ milliers de francs}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 5 (BAC 2013)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 5</span>
+            <span class="bac-tag">BAC 2013</span>
+            <span class="points">(05 points)</span>
+
+            <p>Le tableau statistique ci-dessous donne le degré de salinité $Y_i$ du Lac Rose pendant le $i^\text{ème}$ mois de pluie, noté $X_i$.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>$X_i$</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>$Y_i$</strong></td>
+                            <td>4,26</td>
+                            <td>3,4</td>
+                            <td>2,01</td>
+                            <td>1,16</td>
+                            <td>1,01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Dans ce qui suit il faudra rappeler chaque formule le cas échéant, avant de faire les calculs. On donnera les valeurs approchées par excès des résultats à $10^{-3}$ près.</p>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer le coefficient de corrélation linéaire de cette série $(X, Y)$ et interpréter le résultat. <span class="points">(01,5 point = 0,25pt + 1,25pt)</span></li>
+                        <li>Quelle est l'équation de la droite de régression de $Y$ en $X$. <span class="points">(0,5 pt = 0,25pt + 0,25pt)</span></li>
+                        <li>Cette équation permet-elle d'estimer le degré de salinité du lac au $6^\text{ième}$ mois de pluie, le cas échéant ? Justifier la réponse. <span class="points">(0,25pt)</span></li>
+                    </ol>
+                </li>
+                <li>On pose $Z = \ln(Y - 1)$.
+                    <ol type="a">
+                        <li>Donner le tableau correspondant à la série $(X, Z)$. Les résultats seront arrondis au millième près. <span class="points">(0,5 pt)</span></li>
+                        <li>Donner le coefficient de corrélation linéaire de cette série $(X, Z)$. <span class="points">(01,5 point = 0,25pt + 1,25pt)</span></li>
+                        <li>Donner l'équation de la droite de régression de $Z$ en $X$, puis exprimer $Y$ en fonction de $X$. <span class="points">(0,5 pt = 0,25pt + 0,25pt)</span></li>
+                        <li>Utiliser cette équation pour répondre à la question 1(c). <span class="points">(0,25pt)</span></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.a)</strong> $\bar{x} = 2$, $\bar{y} = 2,368$</p>
+                    <p>$V(x) = 2$, $V(y) = 1,534$</p>
+                    <p>$\text{Cov}(x,y) = -1,742$</p>
+                    <p>$r = \dfrac{-1,742}{\sqrt{2 \times 1,534}} = -0,994$</p>
+                    <p>$|r| \approx 0,994 > 0,87$ donc corrélation très forte et négative.</p>
+
+                    <p><strong>1.b)</strong> $a = \dfrac{\text{Cov}(x,y)}{V(x)} = -0,871$, $b = \bar{y} - a\bar{x} = 2,368 + 1,742 = 4,11$</p>
+                    <p>$\boxed{y = -0,871x + 4,11}$</p>
+
+                    <p><strong>1.c)</strong> Pour $x=6$, $y = -0,871 \times 6 + 4,11 = -1,116$ (négatif), donc l'estimation n'est pas fiable.</p>
+
+                    <p><strong>2.a)</strong> Tableau $(X, Z)$ avec $Z = \ln(Y-1)$ :</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr><th>$X$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>$Z$</strong></td><td>1,178</td><td>0,875</td><td>0,307</td><td>-0,845</td><td>-3,219</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>2.b)</strong> $r \approx -0,997$ (très forte corrélation)</p>
+
+                    <p><strong>2.c)</strong> $z = -0,925x + 1,482$</p>
+                    <p>$Y = e^{z} + 1 = e^{-0,925x + 1,482} + 1$</p>
+
+                    <p><strong>2.d)</strong> Pour $x=6$, $Y = e^{-0,925 \times 6 + 1,482} + 1 = e^{-4,068} + 1 \approx 1,017$</p>
+                    <p>$\boxed{Y \approx 1,017}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 6 (BAC 2015)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 6</span>
+            <span class="bac-tag">BAC 2015</span>
+            <span class="points">(02,5 points)</span>
+
+            <p>Au Sénégal, une entreprise veut vérifier l'efficacité de son service de publicité. Elle a relevé chaque mois durant une période de 6 mois les sommes $X$ consacrées à la publicité et le chiffre d'affaire constaté $Y$ (en milliards de FCFA).</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rang du mois</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>$X$</strong></td>
+                            <td>1,2</td>
+                            <td>0,5</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1,5</td>
+                            <td>1,8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>$Y$</strong></td>
+                            <td>19</td>
+                            <td>49</td>
+                            <td>100</td>
+                            <td>125</td>
+                            <td>148</td>
+                            <td>181</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Les résultats seront donnés au centième près. Le détail des calculs n'est pas indispensable. On précisera les formules utilisées.</p>
+
+            <ol>
+                <li>Calculer le coefficient de corrélation linéaire de $X$ et $Y$. <span class="points">(01 pt)</span></li>
+                <li>
+                    <ol type="a">
+                        <li>Déterminer l'équation de la droite de régression de $Y$ en $X$. <span class="points">(01 pt)</span></li>
+                        <li>Déterminer la somme qu'il faut investir en publicité si l'on désire avoir un chiffre d'affaire de 300 milliards si cette tendance se poursuit. <span class="points">(0,5 pt)</span></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <details class="solution-details">
+                <summary><span class="btn-solution">Voir la solution</span></summary>
+                <div class="correction-box">
+                    <p><strong>1.</strong> $\bar{x} = 1,17$, $\bar{y} = 103,67$</p>
+                    <p>$V(x) = 0,1967$, $V(y) = 3134,56$</p>
+                    <p>$\text{Cov}(x,y) = 24,62$</p>
+                    <p>$r = \dfrac{24,62}{\sqrt{0,1967 \times 3134,56}} = \dfrac{24,62}{24,83} = 0,99$</p>
+                    <p>$\boxed{r \approx 0,99}$</p>
+
+                    <p><strong>2.a)</strong> $a = \dfrac{\text{Cov}(x,y)}{V(x)} = \dfrac{24,62}{0,1967} = 125,15$</p>
+                    <p>$b = \bar{y} - a\bar{x} = 103,67 - 125,15 \times 1,17 = 103,67 - 146,43 = -42,76$</p>
+                    <p>$\boxed{y = 125,15x - 42,76}$</p>
+
+                    <p><strong>2.b)</strong> $300 = 125,15x - 42,76 \implies 125,15x = 342,76$</p>
+                    <p>$x = \dfrac{342,76}{125,15} = 2,74$</p>
+                    <p>$\boxed{2,74 \text{ milliards de FCFA}}$</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2026 - TD Statistiques - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Exercices 1 à 6 - Statistiques descriptives</p>
+    </footer>
+
+</body>
+</html>
