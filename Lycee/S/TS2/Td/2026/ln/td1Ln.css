@@ -181,6 +181,9 @@ b {
     display: inline-block;
     font-size: 1.6rem;
 }
+/* ============================================================
+           Défilement horizontal
+        ============================================================ */
 .formula-center {
     text-align: center;
     font-size: 1.05rem;
