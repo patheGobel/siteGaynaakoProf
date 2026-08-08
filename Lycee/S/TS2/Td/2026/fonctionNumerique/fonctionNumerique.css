@@ -185,6 +185,36 @@
        font-size: 1.2rem;
    }
 
+   /*====================================================*/
+
+   /* 1. Rendre la boîte globale défilable si besoin */
+   .correction-box {
+       width: 100%;
+       max-width: 100%;
+       overflow-x: auto;
+       overflow-y: hidden;
+       -webkit-overflow-scrolling: touch;
+       /* Défilement fluide sur iOS/Android */
+   }
+
+   /* 2. Cibler les paragraphes et les formules mathématiques internes */
+   .correction-box p {
+       max-width: 100%;
+       overflow-x: auto;
+       overflow-y: hidden;
+       white-space: nowrap;
+       /* Empêche le retour à la ligne forcé pour préserver l'alignement */
+   }
+
+   /* 3. Optionnel : rendre les conteneurs MathJax/KaTeX directement défilables */
+   .correction-box .mjx-chtml,
+   .correction-box .katex-display,
+   .correction-box .MathJax {
+       max-width: 100%;
+       overflow-x: auto;
+       overflow-y: hidden;
+   }
+
    /* ============================================================
            EXERCICE BOX
         ============================================================ */
