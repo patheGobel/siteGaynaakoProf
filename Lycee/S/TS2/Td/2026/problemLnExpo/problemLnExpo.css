@@ -189,7 +189,8 @@ b {
 }
 
 /* 2. Protection des listes et numérotations */
-ol, ul {
+ol,
+ul {
     padding-left: 1.5rem;
     margin-left: 0;
 }
@@ -201,7 +202,8 @@ li {
 /* 3. Défilement uniquement sur les div de contenu spécifiques (exercices, corrections) */
 .exercise-box,
 .correction-box,
-.exercise-content, /* ou toute autre classe de conteneur d'exercice */
+.exercise-content,
+/* ou toute autre classe de conteneur d'exercice */
 p,
 .mjx-chtml,
 .katex-display,
@@ -268,10 +270,14 @@ p,
 
     /* Correction du problème : */
     max-width: 100%;
-    overflow-x: auto;                  /* Active le défilement horizontal dans la boîte */
-    overflow-y: hidden;                /* Évite tout saut vertical */
-    white-space: nowrap;               /* Empêche l'équation de se casser sauvagement */
-    -webkit-overflow-scrolling: touch; /* Fluidité au toucher sur mobile */
+    overflow-x: auto;
+    /* Active le défilement horizontal dans la boîte */
+    overflow-y: hidden;
+    /* Évite tout saut vertical */
+    white-space: nowrap;
+    /* Empêche l'équation de se casser sauvagement */
+    -webkit-overflow-scrolling: touch;
+    /* Fluidité au toucher sur mobile */
 }
 
 .part-label {
