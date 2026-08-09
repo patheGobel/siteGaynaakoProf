@@ -162,6 +162,67 @@
         }
 
         /* ============================================================
+   DÉFILEMENT HORIZONTAL - Pour les formules qui débordent
+============================================================ */
+        /* 1. Formules centrées */
+        .formula-center {
+            text-align: center;
+            font-size: 1.05rem;
+            padding: 6px 0;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* 2. Protection des listes et numérotations */
+        ol,
+        ul {
+            padding-left: 1.5rem;
+            margin-left: 0;
+        }
+
+        li {
+            max-width: 100%;
+        }
+
+        /* 3. Défilement uniquement sur les div de contenu spécifiques (exercices, corrections) */
+        .exercise-box,
+        .correction-box,
+        .exercise-content,
+        /* ou toute autre classe de conteneur d'exercice */
+        p,
+        .mjx-chtml,
+        .katex-display,
+        .MathJax {
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .fonction-def {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 10px 16px;
+            margin: 8px 0;
+            text-align: center;
+
+            /* Correction du problème : */
+            max-width: 100%;
+            overflow-x: auto;
+            /* Active le défilement horizontal dans la boîte */
+            overflow-y: hidden;
+            /* Évite tout saut vertical */
+            white-space: nowrap;
+            /* Empêche l'équation de se casser sauvagement */
+            -webkit-overflow-scrolling: touch;
+            /* Fluidité au toucher sur mobile */
+        }
+
+        /* ============================================================
            EXERCICE BOX
         ============================================================ */
         .exercise-box {
