@@ -1,0 +1,446 @@
+/* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+:root {
+    --primary: #1e40af;
+    --primary-light: #3b82f6;
+    --primary-dark: #1e3a8a;
+    --secondary: #059669;
+    --accent: #d97706;
+    --danger: #dc2626;
+    --purple: #7c3aed;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+           EN-TÊTE
+        ============================================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 20px 25px;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.header-top .left {
+    font-weight: 600;
+}
+
+.header-top .right {
+    text-align: right;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.header-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ============================================================
+           ZONE DE TEST
+        ============================================================ */
+.test-box {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px 35px;
+    border: 1px solid var(--border-light);
+    margin-bottom: 25px;
+}
+
+.test-box .test-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 6px;
+}
+
+.test-box .test-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.test-box .test-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 8px 0;
+    border-bottom: 2px solid var(--border-light);
+    margin-bottom: 16px;
+}
+
+.test-box .test-meta .note {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Nom de l'élève */
+.student-name {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.student-name .underline {
+    display: inline-block;
+    width: 60%;
+    border-bottom: 2px solid var(--text-dark);
+    margin-left: 8px;
+}
+
+/* ============================================================
+           QUESTIONS
+        ============================================================ */
+.question {
+    margin: 20px 0 16px 0;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--primary);
+}
+
+.question .q-title {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.question .q-title .points {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.question .q-text {
+    margin-bottom: 8px;
+}
+
+.question .q-text .math {
+    font-style: italic;
+}
+
+/* Lignes de réponse */
+.answer-line {
+    display: inline-block;
+    width: 80px;
+    border-bottom: 2px solid var(--text-dark);
+    margin: 0 4px;
+    height: 1.2em;
+}
+
+.answer-line-long {
+    display: inline-block;
+    width: 200px;
+    border-bottom: 2px solid var(--text-dark);
+    margin: 0 4px;
+    height: 1.2em;
+}
+
+.answer-line-xl {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid var(--text-dark);
+    margin: 4px 0;
+    height: 1.5em;
+}
+
+.answer-block {
+    min-height: 2em;
+    margin: 4px 0;
+}
+
+.answer-block .line {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid var(--text-dark);
+    height: 1.5em;
+    margin: 4px 0;
+}
+
+/* ============================================================
+           FORMULES
+        ============================================================ */
+.formula-center {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.formula-block {
+    text-align: center;
+    padding: 8px 0;
+    margin: 6px 0;
+    overflow-x: auto;
+}
+
+/* ============================================================
+           LISTES PERSONNALISÉES
+        ============================================================ */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.custom-list li {
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.custom-list li .bullet {
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 20px;
+}
+
+.custom-list li .answer-space {
+    flex: 1;
+    border-bottom: 2px solid var(--text-dark);
+    min-height: 1.8em;
+    margin-top: 4px;
+}
+
+/* ============================================================
+           MATHJAX
+        ============================================================ */
+.MathJax {
+    font-size: 1.05em !important;
+}
+
+.mjx-container {
+    margin: 4px 0 8px 0 !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ============================================================
+           RESPONSIVE
+        ============================================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 12px 10px;
+    }
+
+    .header {
+        padding: 16px 14px;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-top {
+        flex-direction: column;
+        gap: 2px;
+        font-size: 0.75rem;
+    }
+
+    .header-top .right {
+        text-align: left;
+    }
+
+    .header-meta {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .test-box {
+        padding: 16px 14px;
+    }
+
+    .test-box .test-title {
+        font-size: 1.2rem;
+    }
+
+    .test-box .test-meta {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8rem;
+    }
+
+    .question {
+        padding: 10px 12px;
+    }
+
+    .answer-line {
+        width: 50px;
+    }
+
+    .answer-line-long {
+        width: 120px;
+    }
+
+    .student-name .underline {
+        width: 50%;
+    }
+
+    .custom-list li {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.1rem;
+    }
+
+    .test-box {
+        padding: 10px 8px;
+    }
+
+    .test-box .test-title {
+        font-size: 1rem;
+    }
+
+    .question {
+        padding: 8px 10px;
+    }
+
+    .answer-line {
+        width: 35px;
+    }
+
+    .answer-line-long {
+        width: 80px;
+    }
+
+    .student-name .underline {
+        width: 40%;
+    }
+}
+
+/* ============================================================
+           SCROLLBAR
+        ============================================================ */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ============================================================
+           ANIMATIONS
+        ============================================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.test-box {
+    animation: fadeIn 0.5s ease-out;
+}
