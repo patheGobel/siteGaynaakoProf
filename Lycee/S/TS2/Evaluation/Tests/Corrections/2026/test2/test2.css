@@ -1,0 +1,377 @@
+/* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+:root {
+    --primary: #1e40af;
+    --primary-light: #3b82f6;
+    --primary-dark: #1e3a8a;
+    --secondary: #059669;
+    --accent: #d97706;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+           EN-TÊTE
+        ============================================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 20px 25px;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.header-top .left {
+    font-weight: 600;
+}
+
+.header-top .right {
+    text-align: right;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.header-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ============================================================
+           CORRECTION
+        ============================================================ */
+.correction-box {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px 35px;
+    border: 1px solid var(--border-light);
+    margin-bottom: 25px;
+}
+
+.correction-box .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 6px;
+}
+
+.correction-box .subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.correction-box .meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 8px 0;
+    border-bottom: 2px solid var(--border-light);
+    margin-bottom: 20px;
+}
+
+.correction-box .meta .note {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* ============================================================
+           QUESTION CORRECTION
+        ============================================================ */
+.question-correction {
+    margin: 20px 0 16px 0;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--primary);
+}
+
+.question-correction .q-title {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.question-correction .q-title .points {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.question-correction .q-text {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.question-correction .answer {
+    padding: 10px 14px;
+    background: #f0fdf4;
+    border-left: 4px solid var(--success);
+    border-radius: var(--radius-sm);
+    margin-top: 6px;
+}
+
+.question-correction .answer .label {
+    font-weight: 600;
+    color: var(--success);
+    font-size: 0.85rem;
+}
+
+.question-correction .answer .content {
+    margin-top: 4px;
+}
+
+.question-correction .answer .content .math {
+    display: block;
+    padding: 4px 0;
+}
+
+/* ============================================================
+           FORMULES
+        ============================================================ */
+.formula-center {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.formula-block {
+    text-align: center;
+    padding: 8px 0;
+    margin: 6px 0;
+    overflow-x: auto;
+}
+
+/* ============================================================
+           BADGES
+        ============================================================ */
+.badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.badge-info {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* ============================================================
+           MATHJAX
+        ============================================================ */
+.MathJax {
+    font-size: 1.05em !important;
+}
+
+.mjx-container {
+    margin: 4px 0 8px 0 !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ============================================================
+           RESPONSIVE
+        ============================================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 12px 10px;
+    }
+
+    .header {
+        padding: 16px 14px;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-top {
+        flex-direction: column;
+        gap: 2px;
+        font-size: 0.75rem;
+    }
+
+    .header-top .right {
+        text-align: left;
+    }
+
+    .header-meta {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .correction-box {
+        padding: 16px 14px;
+    }
+
+    .correction-box .title {
+        font-size: 1.2rem;
+    }
+
+    .correction-box .meta {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8rem;
+    }
+
+    .question-correction {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.1rem;
+    }
+
+    .correction-box {
+        padding: 10px 8px;
+    }
+
+    .correction-box .title {
+        font-size: 1rem;
+    }
+
+    .question-correction {
+        padding: 8px 10px;
+    }
+}
+
+/* ============================================================
+           SCROLLBAR
+        ============================================================ */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ============================================================
+           ANIMATIONS
+        ============================================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.correction-box {
+    animation: fadeIn 0.5s ease-out;
+}
