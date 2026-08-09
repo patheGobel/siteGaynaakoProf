@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction - Test 7 - Nombres Complexes et Propriétés</title>
+    <link rel="stylesheet" href="test7.css" />
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Lycée Dindéfélo</span>
+            <span class="right">Correction Test 7 &nbsp;|&nbsp; 03 Décembre 2025</span>
+        </div>
+        <h1>📝 Nombres Complexes et Propriétés</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Professeur : M. BA</span>
+            <span>📚 Classe : Terminale S2</span>
+            <span>⏱️ Durée : 10 minutes</span>
+            <span>📝 Note : <span style="border-bottom: 2px solid white; padding: 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> / 5</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CORPS DE LA CORRECTION
+    ============================================================ -->
+    <div class="correction-box">
+
+        <div class="title">📌 Correction du Test</div>
+        <div class="meta">
+            <span>Nombres Complexes et Propriétés</span>
+            <span class="note">Total : 5 points</span>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 1
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 1 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Définir le <strong>conjugué</strong> d'un nombre complexe $z = a + ib + c - id$.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>
+                        Le conjugué d'un nombre complexe $z = a + ib + c - id$ s'obtient en <strong>changeant le signe</strong> de la partie imaginaire.
+                    </p>
+                    <p style="margin-top: 4px; color: var(--text-dark);">
+                        On a d'abord : $z = (a + c) + i(b - d)$
+                    </p>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\overline{z} = (a + c) - i(b - d) = a + c - ib + id}
+                        $$
+                    </div>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Remarque</span> Le conjugué de $z$ est noté $\overline{z}$.
+                    </p>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> La définition est correcte.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 2
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 2 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Donner la définition du <strong>module</strong> d'un complexe et sa <strong>signification géométrique</strong>.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>Définition :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Le module d'un nombre complexe $z = a + ib$ est le réel positif défini par :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \boxed{|z| = \sqrt{a^2 + b^2}}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Remarque</span> Le module est toujours positif ou nul.
+                        </p>
+                    </div>
+
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>Signification géométrique :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Le module $|z|$ représente la <strong>distance</strong> du point $M(z)$ à l'origine $O$ du repère complexe.
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            |z| = OM = \sqrt{x^2 + y^2}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Interprétation</span> C'est la norme du vecteur $\overrightarrow{OM}$.
+                        </p>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> La définition et l'interprétation sont correctes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 3
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 3 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Définir l'<strong>argument</strong> d'un nombre complexe non nul et sa <strong>signification géométrique</strong>.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>Définition :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            L'argument d'un nombre complexe non nul $z = a + ib$ est l'angle $\theta$ (à $2\pi$ près) tel que :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \boxed{\arg(z) \equiv \theta \pmod{2\pi}}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Avec :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \cos\theta = \dfrac{a}{|z|} \quad \text{et} \quad \sin\theta = \dfrac{b}{|z|}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Remarque</span> L'argument n'est défini que pour $z \neq 0$.
+                        </p>
+                    </div>
+
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>Signification géométrique :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            L'argument $\arg(z)$ représente l'<strong>angle orienté</strong> que fait le vecteur $\overrightarrow{OM}$ avec l'axe réel $(Ox)$.
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \arg(z) = \left(\overrightarrow{OI}, \overrightarrow{OM}\right) \pmod{2\pi}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Interprétation</span> C'est la mesure de l'angle polaire du point $M$.
+                        </p>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> La définition et l'interprétation sont correctes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 4
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 4 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Citer <strong>trois propriétés importantes</strong> du module et du conjugué.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="property-box">
+                        <div class="property-title">📌 Propriétés du module</div>
+                        <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                            <p><strong>1. Produit :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                |z_1 \times z_2| = |z_1| \times |z_2|
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>2. Quotient :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \left|\dfrac{z_1}{z_2}\right| = \dfrac{|z_1|}{|z_2|} \quad (z_2 \neq 0)
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>3. Inégalité triangulaire :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                |z_1 + z_2| \leq |z_1| + |z_2|
+                                $$
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-box" style="margin-top: 12px;">
+                        <div class="property-title">📌 Propriétés du conjugué</div>
+                        <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                            <p><strong>1. Somme :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>2. Produit :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \overline{z_1 \times z_2} = \overline{z_1} \times \overline{z_2}
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>3. Conjugué du conjugué :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \overline{\overline{z}} = z
+                                $$
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Les propriétés sont correctes (0,5 point pour le module, 0,5 point pour le conjugué).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 5
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 5 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Citer <strong>trois propriétés importantes</strong> de l'argument.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="property-box">
+                        <div class="property-title">📌 Propriétés de l'argument</div>
+                        <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                            <p><strong>1. Argument d'un produit :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \arg(z_1 \times z_2) \equiv \arg(z_1) + \arg(z_2) \pmod{2\pi}
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>2. Argument d'un quotient :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \arg\left(\dfrac{z_1}{z_2}\right) \equiv \arg(z_1) - \arg(z_2) \pmod{2\pi} \quad (z_2 \neq 0)
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>3. Argument d'une puissance :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \arg(z^n) \equiv n \cdot \arg(z) \pmod{2\pi} \quad (n \in \mathbb{N})
+                                $$
+                            </div>
+                            <p style="margin-top: 6px;"><strong>4. Argument du conjugué :</strong></p>
+                            <div class="formula-block">
+                                $$
+                                \arg(\overline{z}) \equiv -\arg(z) \pmod{2\pi}
+                                $$
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Trois propriétés correctes sont citées.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer style="text-align: center; padding: 20px 0 5px; color: var(--text-muted); font-size: 0.8rem; border-top: 2px solid var(--border-light); margin-top: 10px;">
+        <p>© 2025 - Lycée Dindéfélo - Terminale S2</p>
+        <p style="font-size: 0.75rem; margin-top: 4px;">Correction réalisée par M. BA</p>
+    </footer>
+
+</body>
+</html>
