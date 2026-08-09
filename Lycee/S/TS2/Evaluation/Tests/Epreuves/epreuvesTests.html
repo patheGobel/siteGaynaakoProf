@@ -4,39 +4,267 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MatheuxCodeur - TS2</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Série de TD - Terminale S2</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        /* ===== CONTENEUR PRINCIPAL ===== */
+        .card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10), 0 6px 12px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem 2rem;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 1.8rem;
+        }
+
+        /* ===== GRILLES DES BOUTONS ===== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .grid-chapitres {
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 colonnes pour les chapitres */
+        }
+
+        /* ===== STYLES DES BOUTONS ===== */
+        .btn-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.2rem 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0f172a;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-item:hover {
+            background: #ffffff;
+            border-color: #3b82f6;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+            color: #1e40af;
+        }
+
+        .btn-item:active {
+            transform: scale(0.96);
+        }
+
+        /* ===== VUES (MASQUER / AFFICHER) ===== */
+        .vue-chapitres {
+            display: none;
+            /* Masqué au départ */
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== BOUTON RETOUR ET CONTENEUR ===== */
+        .conteneur-parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .btn-retour {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e2e8f0;
+            color: #1e293b;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-retour:hover {
+            background: #cbd5e1;
+            transform: scale(1.02);
+        }
+
+        .btn-retour svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .grid-container {
+                gap: 0.7rem;
+            }
+
+            .btn-item {
+                font-size: 0.95rem;
+                padding: 1rem 0.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Epreuves</h1>
-    <div class="container">
-        <div class="card-container">
-            <div class="card">
-                <button class="dropdown-toggle" type="button">Test 2025-2026</button>
-                <div class="dropdown-content">
-                    <a href="2026/build/test02.pdf">Test02</a>
-                    <a href="2026/build/test03.pdf">Test03</a>
-                    <a href="2026/build/test04.pdf">Test04</a>
-                    <a href="2026/build/test05.pdf">Test05</a>
-                    <a href="2026/build/test06.pdf">Test06</a>
-                    <a href="2026/build/test07.pdf">Test07</a>
-                    <a href="2026/build/test08.pdf">Test08</a>
-                </div>
+
+    <main class="card">
+
+        <!-- VUE 1 : CHOIX DE L'ANNÉE -->
+        <div id="vueAnnees">
+            <h1>Tests</h1>
+            <p class="subtitle">Sélectionnez une année</p>
+
+            <div class="grid-container">
+                <button class="btn-item" onclick="afficherChapitres(2025)">2025</button>
+                <button class="btn-item" onclick="afficherChapitres(2026)">2026</button>
+                <button class="btn-item" onclick="afficherChapitres(2027)">2027</button>
             </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <button class="dropdown-toggle" type="button">Test 2024-2025</button>
-                <div class="dropdown-content">
-                    <a href="2026/build/test02.pdf">Vide</a>
-                </div>
+
+        <!-- VUE 2 : CHOIX DU CHAPITRE (Caché par défaut) -->
+        <div id="vueChapitres" class="vue-chapitres">
+            <h1 id="titreAnnee">Année 2026</h1>
+            <p class="subtitle">Choisissez un chapitre</p>
+
+            <div class="grid-container grid-chapitres" id="listeChapitres">
+                <!-- Injecté dynamiquement selon l'année -->
+            </div>
+
+            <!-- Bouton Retour aux Années -->
+            <div class="conteneur-parent">
+                <button class="btn-retour" onclick="afficherAnnees()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                    </svg>
+                    Retour aux années
+                </button>
             </div>
         </div>
-        <button id="btn" onclick="window.history.back()">Retour</button>
-    </div>
-    <!-- On charge le fichier JS -->
-    <script src="script.js"></script>
+
+    </main>
+
+    <script>
+        // Données des chapitres par année (basé sur ton arborescence)
+        const tdData = {
+            2025: [
+                { nom: "Test 1", path: "2025/test1/test1.html" },
+                { nom: "Test 2", path: "2025/test2/test2.html" },
+                { nom: "Test 3", path: "2025/test1/test1.html" },
+            ],
+            2026: [
+                { nom: "Test 1", path: "2026/test1/test1.html" },
+                { nom: "Test 2", path: "2026/test2/test2.html" },
+                { nom: "Test 3", path: "2026/test2/test3.html" },
+                { nom: "Test 4", path: "2026/test2/test4.html" },
+                { nom: "Test 5", path: "2026/test2/test5.html" },
+                { nom: "Test 6", path: "2026/test2/test6.html" },
+                { nom: "Test 7", path: "2026/test2/test7.html" },
+                { nom: "Test 8", path: "2026/test2/test8.html" },
+                { nom: "Test 9", path: "2026/test2/test9.html" },
+                { nom: "Test 10", path: "2026/test2/test10.html" }
+            ],
+            2027: [
+                { nom: "Test 1", path: "2027/test1/test1.html" },
+                { nom: "Test 2", path: "2027/test2/test2.html" },
+                { nom: "Test 3", path: "2027/test3/test3.html" },
+                { nom: "Test 4", path: "2027/test4/test4.html" },
+                { nom: "Test 5", path: "2027/test5/test5.html" },
+                { nom: "Test 6", path: "2027/test6/test6.html" },
+                { nom: "Test 7", path: "2027/test7/test7.html" },
+                { nom: "Test 8", path: "2027/test8/test8.html" },
+                { nom: "Test 9", path: "2027/test9/test9.html" },
+                { nom: "Test 10", path: "2027/test10/test10.html" } 
+            ]
+        };
+
+        const vueAnnees = document.getElementById('vueAnnees');
+        const vueChapitres = document.getElementById('vueChapitres');
+        const titreAnnee = document.getElementById('titreAnnee');
+        const listeChapitres = document.getElementById('listeChapitres');
+
+        // Afficher les chapitres d'une année
+        function afficherChapitres(annee) {
+            titreAnnee.textContent = `Année ${annee}`;
+
+            const chapitres = tdData[annee] || [];
+
+            if (chapitres.length > 0) {
+                listeChapitres.innerHTML = chapitres.map(chap =>
+                    `<a href="${chap.path}" class="btn-item">${chap.nom}</a>`
+                ).join('');
+            } else {
+                listeChapitres.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #94a3b8;">Aucun chapitre disponible.</p>`;
+            }
+
+            vueAnnees.style.display = 'none';
+            vueChapitres.style.display = 'block';
+        }
+
+        // Revenir à l'écran des années
+        function afficherAnnees() {
+            vueChapitres.style.display = 'none';
+            vueAnnees.style.display = 'block';
+        }
+    </script>
+
 </body>
 
 </html>
