@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - Limites et Continuité</title>
+    <link rel="stylesheet" href="test3.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Lycée Dindéfélo</span>
+            <span class="right">Test 3 &nbsp;|&nbsp; 14 Novembre 2025</span>
+        </div>
+        <h1>Limites et Continuité</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Professeur : M. BA</span>
+            <span>📚 Classe : Terminale S2</span>
+            <span>⏱️ Durée : 10 minutes</span>
+            <span>📝 Note : <span style="border-bottom: 2px solid white; padding: 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> / 5</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CORPS DU TEST
+    ============================================================ -->
+    <div class="test-box">
+
+        <!-- Nom de l'élève -->
+        <div class="student-name">
+            <strong>Nom de l'élève :</strong>
+            <span class="underline">&nbsp;</span>
+        </div>
+
+        <!-- Introduction -->
+        <p style="margin-bottom: 16px; font-size: 0.95rem; color: var(--text-muted);">
+            Complétez les exercices suivants en utilisant le cours et vos connaissances sur la continuité des fonctions.
+        </p>
+
+        <!-- ============================================================
+        QUESTION 1
+        ============================================================ -->
+        <div class="question">
+            <div class="q-title">
+                Question 1 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Pour calculer la limite $\lim\limits_{x \to a} g(f(x))$, il faut d'abord déterminer $\lim\limits_{x \to a} f(x) = \dots$ puis, en utilisant cette valeur, calculer $\lim\limits_{y \to \dots} g(y) = \dots$.
+            </div>
+            <div class="answer-block">
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 2
+        ============================================================ -->
+        <div class="question">
+            <div class="q-title">
+                Question 2 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Complétez la phrase suivante : Une fonction est dite <strong>continue sur un intervalle $I$</strong> si elle est continue
+                <span class="answer-line-long">&nbsp;</span>
+            </div>
+            <div class="answer-block">
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 3
+        ============================================================ -->
+        <div class="question">
+            <div class="q-title">
+                Question 3 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <p>
+                    Si $\lim\limits_{x \to -\infty} h(x) = -\infty$ et
+                    $\lim\limits_{x \to -\infty} \dfrac{h(x)}{x} = +\infty$ alors $(C_h)$
+                    <span class="answer-line-long">&nbsp;</span>
+                </p>
+                <div class="answer-block">
+                    <span class="line"></span>
+                </div>
+                <p style="margin-top: 12px;">
+                    Si $\lim\limits_{x \to +\infty} h(x) = +\infty$ et
+                    $\lim\limits_{x \to +\infty} \dfrac{h(x)}{x} = \gamma \in \mathbb{R}^*$ et
+                    $\lim\limits_{x \to +\infty} [h(x) - \gamma x] = +\infty$ alors
+                    <span class="answer-line-long">&nbsp;</span>
+                </p>
+                <div class="answer-block">
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 4
+        ============================================================ -->
+        <div class="question">
+            <div class="q-title">
+                Question 4 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Soit $g(x) = \begin{cases} x^2 + 1 & \text{si } x \leq 1 \\ 3x - 1 & \text{si } x > 1 \end{cases}$.
+            </div>
+            <div class="formula-block">
+                $$
+                \lim_{x \to 1^-} g(x) = \underline{\hspace{2cm}}, \quad
+                \lim_{x \to 1^+} g(x) = \underline{\hspace{2cm}}, \quad
+                g(1) = \underline{\hspace{2cm}}
+                $$
+            </div>
+            <div style="margin-top: 8px;">
+                <strong>Conclure :</strong>
+                <div class="answer-block">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 5
+        ============================================================ -->
+        <div class="question">
+            <div class="q-title">
+                Question 5 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <p>
+                    Soit $h$ une fonction <strong>continue et croissante</strong> sur $[a;b]$ alors
+                    $h([a;b]) = \underline{\hspace{5cm}}$
+                </p>
+                <div class="answer-block">
+                    <span class="line"></span>
+                </div>
+                <p style="margin-top: 10px;">
+                    Soit $g$ une fonction <strong>continue et décroissante</strong> sur $[a;b[$ alors
+                    $g([a;b[) = \underline{\hspace{5cm}}$
+                </p>
+                <div class="answer-block">
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer style="text-align: center; padding: 20px 0 5px; color: var(--text-muted); font-size: 0.8rem; border-top: 2px solid var(--border-light); margin-top: 10px;">
+        <p>© 2025 - Lycée Dindéfélo - Terminale S2</p>
+    </footer>
+
+</body>
+</html>
