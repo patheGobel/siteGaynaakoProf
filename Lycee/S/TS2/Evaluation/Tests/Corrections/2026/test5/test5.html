@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction - Test 5 - Limites, Continuité et Dérivabilité</title>
+    <link rel="stylesheet" href="test5.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Lycée Dindéfélo</span>
+            <span class="right">Correction Test 5 &nbsp;|&nbsp; 19 Novembre 2025</span>
+        </div>
+        <h1>📝 Limites, Continuité et Dérivabilité</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Professeur : M. BA</span>
+            <span>📚 Classe : Terminale S2</span>
+            <span>⏱️ Durée : 10 minutes</span>
+            <span>📝 Note : <span style="border-bottom: 2px solid white; padding: 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> / 5</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CORPS DE LA CORRECTION
+    ============================================================ -->
+    <div class="correction-box">
+
+        <div class="title">📌 Correction du Test</div>
+        <div class="meta">
+            <span>Limites, Continuité et Dérivabilité</span>
+            <span class="note">Total : 5 points</span>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 1
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 1 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <strong>Énoncer le théorème des valeurs intermédiaires.</strong>
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="theorem-box">
+                        <div class="theorem-title">📖 Théorème des valeurs intermédiaires (TVI)</div>
+                        <p>
+                            Soit $f$ une fonction <strong>continue</strong> sur un intervalle $[a; b]$ avec $a \leq b$.
+                            <br><br>
+                            Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, il existe <strong>au moins un</strong> réel $c \in [a; b]$ tel que :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \boxed{f(c) = k}
+                            $$
+                        </div>
+                        <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">
+                            <span class="badge badge-info">Remarque</span> Si $f(a) = f(b)$, on prend $k = f(a) = f(b)$.
+                        </p>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Les mots-clés : continue, intervalle, $k$ compris entre $f(a)$ et $f(b)$.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 2
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 2 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <strong>Énoncer le théorème d'existence et d'unicité d'une solution.</strong>
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="theorem-box">
+                        <div class="theorem-title">📖 Théorème d'existence et d'unicité</div>
+                        <p>
+                            Soit $f$ une fonction <strong>continue</strong> et <strong>strictement monotone</strong> sur un intervalle $[a; b]$.
+                            <br><br>
+                            Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet une <strong>unique</strong> solution dans $[a; b]$.
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \boxed{\exists ! c \in [a; b] \text{ tel que } f(c) = k}
+                            $$
+                        </div>
+                        <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">
+                            <span class="badge badge-info">Remarque</span> La fonction doit être continue et strictement monotone (croissante ou décroissante).
+                        </p>
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Les mots-clés : continue, strictement monotone, unique solution.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 3
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 3 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Soit $f(x) = 2x + 3$. Calculer $f^{-1}(5)$ <strong>sans déterminer l'expression de $f^{-1}$</strong>.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>
+                        $f^{-1}(5)$ est l'antécédent de $5$ par la fonction $f$.
+                        On cherche donc $x$ tel que $f(x) = 5$.
+                    </p>
+                    <div class="formula-block">
+                        $$
+                        2x + 3 = 5
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        2x = 2 \implies x = 1
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{f^{-1}(5) = 1}
+                        $$
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> On résout $f(x) = 5$ sans calculer $f^{-1}$.
+                    </p>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Vérification</span> $f(1) = 2(1) + 3 = 5$.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 4
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 4 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                $f$ est dérivable en $x_0$ si et seulement si
+                <br><br>
+                Dans ce cas donner l'équation de la tangente
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>a) Condition de dérivabilité :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            $f$ est dérivable en $x_0$ si et seulement si la limite suivante existe et est finie :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = \ell \in \mathbb{R}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Ce nombre $\ell$ est appelé le <strong>nombre dérivé</strong> de $f$ en $x_0$, noté $f'(x_0)$.
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Remarque</span> La limite doit être la même à gauche et à droite.
+                        </p>
+                    </div>
+
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>b) Équation de la tangente :</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            La tangente à la courbe $(C_f)$ au point $A(x_0; f(x_0))$ a pour équation :
+                        </p>
+                        <div class="formula-block">
+                            $$
+                            \boxed{y = f'(x_0)(x - x_0) + f(x_0)}
+                            $$
+                        </div>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Remarque</span> Cette équation peut aussi s'écrire $y = f'(x_0)x + b$ où $b = f(x_0) - f'(x_0)x_0$.
+                        </p>
+                    </div>
+                    <p style="margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> La condition de dérivabilité et l'équation de la tangente sont correctes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 5
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 5 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <strong>Interprétation géométrique du nombre dérivé</strong>
+                <br><br>
+                Si $\lim\limits_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0)$ alors
+                <br><br>
+                Si $\lim\limits_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0} = +\infty$ alors
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>Cas 1 : $\lim\limits_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0)$</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Alors la courbe $(C_f)$ admet une <strong>tangente</strong> au point $A(x_0; f(x_0))$ de
+                            <strong>pente $a$</strong> (non horizontale car $a \neq 0$).
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Interprétation</span> La pente de la tangente est $a$.
+                        </p>
+                    </div>
+
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>Cas 2 : $\lim\limits_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0} = +\infty$</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Alors la courbe $(C_f)$ admet une <strong>tangente verticale</strong> au point $A(x_0; f(x_0))$ à gauche.
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Interprétation</span> La limite infinie indique que la tangente est verticale (ou qu'il y a un point anguleux).
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-warning">À retenir</span> Une limite infinie du taux d'accroissement signifie une tangente verticale.
+                        </p>
+                    </div>
+                    <p style="margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Chaque cas rapporte 0,5 point.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer style="text-align: center; padding: 20px 0 5px; color: var(--text-muted); font-size: 0.8rem; border-top: 2px solid var(--border-light); margin-top: 10px;">
+        <p>© 2025 - Lycée Dindéfélo - Terminale S2</p>
+        <p style="font-size: 0.75rem; margin-top: 4px;">Correction réalisée par M. BA</p>
+    </footer>
+
+</body>
+</html>
