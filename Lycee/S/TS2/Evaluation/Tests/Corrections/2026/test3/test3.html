@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction - Test 2 - Limites et Continuité</title>
+    <link rel="stylesheet" href="test3.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Lycée Dindéfélo</span>
+            <span class="right">Correction Test 2 &nbsp;|&nbsp; 14 Novembre 2025</span>
+        </div>
+        <h1>📝 Limites et Continuité</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Professeur : M. BA</span>
+            <span>📚 Classe : Terminale S2</span>
+            <span>⏱️ Durée : 10 minutes</span>
+            <span>📝 Note : <span style="border-bottom: 2px solid white; padding: 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> / 5</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CORPS DE LA CORRECTION
+    ============================================================ -->
+    <div class="correction-box">
+
+        <div class="title">📌 Correction du Test</div>
+        <div class="meta">
+            <span>Limites et Continuité</span>
+            <span class="note">Total : 5 points</span>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 1
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 1 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Pour calculer la limite $\lim\limits_{x \to a} g(f(x))$, il faut d'abord déterminer $\lim\limits_{x \to a} f(x) = \dots$ puis, en utilisant cette valeur, calculer $\lim\limits_{y \to \dots} g(y) = \dots$.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>
+                        Pour calculer la limite $\lim\limits_{x \to a} g(f(x))$, il faut d'abord déterminer
+                        <strong>$\lim\limits_{x \to a} f(x) = L$</strong> puis, en utilisant cette valeur,
+                        calculer <strong>$\lim\limits_{y \to L} g(y)$</strong>.
+                    </p>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\lim_{x \to a} g(f(x)) = \lim_{y \to L} g(y) \quad \text{où } L = \lim_{x \to a} f(x)}
+                        $$
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Il faut que $f$ ait une limite $L$ en $a$ et que $g$ ait une limite en $L$.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 2
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 2 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Complétez la phrase suivante : Une fonction est dite continue sur un intervalle $I$ si elle est continue
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>
+                        Une fonction est dite <strong>continue sur un intervalle $I$</strong> si elle est continue
+                        <strong>en tout point de $I$</strong>.
+                    </p>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \text{Si } \forall a \in I, \lim_{x \to a} f(x) = f(a) \text{ alors } f \text{ est continue sur } I
+                        $$
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> La continuité sur un intervalle signifie la continuité en chaque point de cet intervalle.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 3
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 3 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <p>
+                    Si $\lim\limits_{x \to -\infty} h(x) = -\infty$ et $\lim\limits_{x \to -\infty} \dfrac{h(x)}{x} = +\infty$ alors $(C_h)$
+                </p>
+                <p style="margin-top: 12px;">
+                    Si $\lim\limits_{x \to +\infty} h(x) = +\infty$ et $\lim\limits_{x \to +\infty} \dfrac{h(x)}{x} = \gamma \in \mathbb{R}^*$ et $\lim\limits_{x \to +\infty} [h(x) - \gamma x] = +\infty$ alors
+                </p>
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>Cas 1 :</strong>
+                        $$
+                        \lim_{x \to -\infty} h(x) = -\infty \quad \text{et} \quad \lim_{x \to -\infty} \dfrac{h(x)}{x} = +\infty
+                        $$
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Alors $(C_h)$ admet une <strong>branche parabolique de direction asymptotique l'axe des ordonnées</strong> $(Oy)$.
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            <span class="badge badge-info">Rappel</span> Comme $\lim \dfrac{h(x)}{x} = +\infty$, la courbe s'éloigne plus vite que la droite $y = x$.
+                        </p>
+                    </div>
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>Cas 2 :</strong>
+                        $$
+                        \lim_{x \to +\infty} h(x) = +\infty, \quad \lim_{x \to +\infty} \dfrac{h(x)}{x} = \gamma \in \mathbb{R}^* \quad \text{et} \quad \lim_{x \to +\infty} [h(x) - \gamma x] = +\infty
+                        $$
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            Alors $(C_h)$ admet une <strong>branche parabolique de direction asymptotique la droite $y = \gamma x$</strong>.
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            <span class="badge badge-info">Rappel</span> La courbe se rapproche de la direction de $y = \gamma x$ mais s'en éloigne à l'infini.
+                        </p>
+                    </div>
+                    <p style="margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Chaque cas rapporte 0,5 point.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 4
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 4 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Soit $g(x) = \begin{cases} x^2 + 1 & \text{si } x \leq 1 \\ 3x - 1 & \text{si } x > 1 \end{cases}$.
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block">
+                        $$
+                        \lim_{x \to 1^-} g(x) = \lim_{x \to 1^-} (x^2 + 1) = 1^2 + 1 = 2
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        \lim_{x \to 1^+} g(x) = \lim_{x \to 1^+} (3x - 1) = 3(1) - 1 = 2
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        g(1) = 1^2 + 1 = 2
+                        $$
+                    </div>
+                    <p style="margin-top: 8px; font-weight: 600; color: var(--success);">
+                        ✅ Conclusion : $g$ est continue en $x = 1$ car :
+                    </p>
+                    <div class="formula-block">
+                        $$
+                        \lim_{x \to 1^-} g(x) = \lim_{x \to 1^+} g(x) = g(1) = 2
+                        $$
+                    </div>
+                    <p style="margin-top: 6px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Les trois limites sont égales, la fonction est continue en 1.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 5
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 5 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                <p>
+                    Soit $h$ une fonction <strong>continue et croissante</strong> sur $[a;b]$ alors $h([a;b]) =$
+                </p>
+                <p style="margin-top: 12px;">
+                    Soit $g$ une fonction <strong>continue et décroissante</strong> sur $[a;b[$ alors $g([a;b[) =$
+                </p>
+            </div>
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <div class="formula-block" style="text-align: left; padding-left: 20px;">
+                        <strong>Cas 1 : $h$ continue et croissante sur $[a;b]$</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            $$
+                            h([a;b]) = [h(a); h(b)]
+                            $$
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Explication</span> L'image d'un intervalle par une fonction continue et croissante est l'intervalle entre les images des bornes.
+                        </p>
+                    </div>
+                    <div class="formula-block" style="text-align: left; padding-left: 20px; margin-top: 12px;">
+                        <strong>Cas 2 : $g$ continue et décroissante sur $[a;b[$</strong>
+                        <p style="margin-top: 4px; color: var(--text-dark);">
+                            $$
+                            g([a;b[) = ]g(b); g(a)] \quad \text{ou} \quad g([a;b[) = ]\lim_{x \to b^-} g(x); g(a)]
+                            $$
+                        </p>
+                        <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                            <span class="badge badge-info">Explication</span> La borne supérieure est ouverte car $b$ n'est pas inclus dans l'intervalle de départ.
+                        </p>
+                    </div>
+                    <p style="margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-success">1 point</span> Chaque cas rapporte 0,5 point.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer style="text-align: center; padding: 20px 0 5px; color: var(--text-muted); font-size: 0.8rem; border-top: 2px solid var(--border-light); margin-top: 10px;">
+        <p>© 2025 - Lycée Dindéfélo - Terminale S2</p>
+        <p style="font-size: 0.75rem; margin-top: 4px;">Correction réalisée par M. BA</p>
+    </footer>
+
+</body>
+</html>
