@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction - Test 8 - Nombres Complexes et Propriétés</title>
+    <link rel="stylesheet" href="test8.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">Lycée Dindéfélo</span>
+            <span class="right">Correction Test 8 &nbsp;|&nbsp; 05 Décembre 2025</span>
+        </div>
+        <h1>📝 Nombres Complexes et Propriétés</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Professeur : M. BA</span>
+            <span>📚 Classe : Terminale S2</span>
+            <span>⏱️ Durée : 10 minutes</span>
+            <span>📝 Note : <span style="border-bottom: 2px solid white; padding: 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> / 5</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CORPS DE LA CORRECTION
+    ============================================================ -->
+    <div class="correction-box">
+
+        <div class="title">📌 Correction du Test</div>
+        <div class="meta">
+            <span>Nombres Complexes et Propriétés</span>
+            <span class="note">Total : 5 points</span>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 1
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 1 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Donner le <strong>conjugué</strong>.
+            </div>
+
+            <div class="complex-expr">
+                $z_{1} = 2i \left( \dfrac{1}{\sqrt{2}} - \dfrac{1}{\sqrt{2}} i \right)$
+            </div>
+
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On commence par simplifier $z_1$ :</p>
+                    <div class="formula-block">
+                        $$
+                        z_1 = 2i \cdot \dfrac{1}{\sqrt{2}} - 2i \cdot \dfrac{1}{\sqrt{2}}i
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        = \dfrac{2i}{\sqrt{2}} - \dfrac{2}{\sqrt{2}} i^2
+                        = \sqrt{2}i + \dfrac{2}{\sqrt{2}}
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        z_1 = \sqrt{2} + i\sqrt{2}
+                        $$
+                    </div>
+                    <p>Le conjugué est donc :</p>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\overline{z_1} = \sqrt{2} - i\sqrt{2}}
+                        $$
+                    </div>
+                </div>
+            </div>
+
+            <div class="complex-expr" style="margin-top: 12px;">
+                $z_{2} = (1 + i)(1 - 2i)(1 + 3i)$
+            </div>
+
+            <div class="answer" style="margin-top: 0;">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On sait que $\overline{z_2} = \overline{1+i} \cdot \overline{1-2i} \cdot \overline{1+3i}$</p>
+                    <div class="formula-block">
+                        $$
+                        \overline{z_2} = (1 - i)(1 + 2i)(1 - 3i)
+                        $$
+                    </div>
+                    <p>On peut aussi développer $z_2$ d'abord :</p>
+                    <div class="formula-block">
+                        $$
+                        z_2 = (1 + i)(1 - 2i)(1 + 3i)
+                        = (1 + i)(1 + i - 6i^2)
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        = (1 + i)(7 + i) = 7 + i + 7i + i^2 = 6 + 8i
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\overline{z_2} = 6 - 8i}
+                        $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 2
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 2 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Donner la <strong>forme algébrique</strong>.
+            </div>
+
+            <div class="complex-expr">
+                $z_{1} = 2i \left( \dfrac{1}{\sqrt{2}} - \dfrac{1}{\sqrt{2}} i \right)$
+            </div>
+
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On a déjà calculé $z_1$ :</p>
+                    <div class="formula-block">
+                        $$
+                        z_1 = \dfrac{2i}{\sqrt{2}} - \dfrac{2}{\sqrt{2}} i^2
+                        = \sqrt{2}i + \sqrt{2}
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{z_1 = \sqrt{2} + i\sqrt{2}}
+                        $$
+                    </div>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Rappel</span> La forme algébrique est $a + ib$ avec $a, b \in \mathbb{R}$.
+                    </p>
+                </div>
+            </div>
+
+            <div class="complex-expr" style="margin-top: 12px;">
+                $z_{2} = (1 + i)(1 - 2i)(1 + 3i)$
+            </div>
+
+            <div class="answer" style="margin-top: 0;">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On a déjà calculé $z_2$ :</p>
+                    <div class="formula-block">
+                        $$
+                        (1 + i)(1 - 2i) = 1 - 2i + i - 2i^2 = 1 - i + 2 = 3 - i
+                        $$
+                    </div>
+                    <div class="formula-block">
+                        $$
+                        (3 - i)(1 + 3i) = 3 + 9i - i - 3i^2 = 3 + 8i + 3 = 6 + 8i
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{z_2 = 6 + 8i}
+                        $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 3
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 3 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Donner le <strong>module</strong>.
+            </div>
+
+            <div class="complex-expr">
+                $z_{2} = (1 + i)(1 - 2i)(1 + 3i)$
+            </div>
+
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On a $z_2 = 6 + 8i$.</p>
+                    <div class="formula-block">
+                        $$
+                        |z_2| = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{|z_2| = 10}
+                        $$
+                    </div>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Méthode</span> $|z_1 \times z_2 \times z_3| = |z_1| \times |z_2| \times |z_3|$
+                    </p>
+                </div>
+            </div>
+
+            <div class="complex-expr" style="margin-top: 12px;">
+                $z_{3} = \left( \dfrac{1}{2} - \dfrac{\sqrt{3}}{2} i \right)^{4}$
+            </div>
+
+            <div class="answer" style="margin-top: 0;">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On remarque que $\dfrac{1}{2} - \dfrac{\sqrt{3}}{2}i = e^{-i\frac{\pi}{3}}$</p>
+                    <div class="formula-block">
+                        $$
+                        z_3 = \left(e^{-i\frac{\pi}{3}}\right)^4 = e^{-i\frac{4\pi}{3}}
+                        $$
+                    </div>
+                    <p>Donc :</p>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        |z_3| = \left|e^{-i\frac{4\pi}{3}}\right| = 1
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{|z_3| = 1}
+                        $$
+                    </div>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Rappel</span> Le module d'un nombre complexe de la forme $e^{i\theta}$ est 1.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        QUESTION 4
+        ============================================================ -->
+        <div class="question-correction">
+            <div class="q-title">
+                Question 4 <span class="points">(1 point)</span>
+            </div>
+            <div class="q-text">
+                Donner l'<strong>argument</strong>.
+            </div>
+
+            <div class="complex-expr">
+                $z_{1} = 2i \left( \dfrac{1}{\sqrt{2}} - \dfrac{1}{\sqrt{2}} i \right)$
+            </div>
+
+            <div class="answer">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On a $z_1 = \sqrt{2} + i\sqrt{2}$.</p>
+                    <p>Donc $z_1 = 2\left(\dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2}\right)$</p>
+                    <div class="formula-block">
+                        $$
+                        z_1 = 2\left(\cos\dfrac{\pi}{4} + i\sin\dfrac{\pi}{4}\right)
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\arg(z_1) \equiv \dfrac{\pi}{4} \pmod{2\pi}}
+                        $$
+                    </div>
+                </div>
+            </div>
+
+            <div class="complex-expr" style="margin-top: 12px;">
+                $z_{3} = \left( \dfrac{1}{2} - \dfrac{\sqrt{3}}{2} i \right)^{4}$
+            </div>
+
+            <div class="answer" style="margin-top: 0;">
+                <div class="label">✅ Réponse :</div>
+                <div class="content">
+                    <p>On a $\dfrac{1}{2} - \dfrac{\sqrt{3}}{2}i = e^{-i\frac{\pi}{3}}$</p>
+                    <div class="formula-block">
+                        $$
+                        z_3 = \left(e^{-i\frac{\pi}{3}}\right)^4 = e^{-i\frac{4\pi}{3}}
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \arg(z_3) \equiv -\dfrac{4\pi}{3} \equiv \dfrac{2\pi}{3} \pmod{2\pi}
+                        $$
+                    </div>
+                    <div class="formula-block" style="margin-top: 8px;">
+                        $$
+                        \boxed{\arg(z_3) \equiv \dfrac{2\pi}{3} \pmod{2\pi}}
+                        $$
+                    </div>
+                    <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.9rem;">
+                        <span class="badge badge-info">Méthode</span> $\arg(z^n) \equiv n \cdot \arg(z) \pmod{2\pi}$
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer style="text-align: center; padding: 20px 0 5px; color: var(--text-muted); font-size: 0.8rem; border-top: 2px solid var(--border-light); margin-top: 10px;">
+        <p>© 2025 - Lycée Dindéfélo - Terminale S2</p>
+        <p style="font-size: 0.75rem; margin-top: 4px;">Correction réalisée par M. BA</p>
+    </footer>
+
+</body>
+</html>
