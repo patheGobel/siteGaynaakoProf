@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°1 - 1er Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir1.css" />
+   
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 26/11/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°1 du 1er Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Théorèmes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">0,5 × 10 = 5 points</span>
+
+            <ol>
+                <li>Énoncer le théorème des valeurs intermédiaires et son corollaire.</li>
+                <li>Énoncer Théorème de la bijection.</li>
+                <li>Énoncer le théorème de l'inégalité des accroissements finis (IAF).</li>
+                <li>Théorème de la bijection.</li>
+                <li>Si $\lim\limits_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0)$ alors ...</li>
+                <li>Si $\lim\limits_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0} = +\infty$ alors ...</li>
+                <li>Si $\lim\limits_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = 0$ alors ...</li>
+                <li>Si $\lim\limits_{x \to +\infty} f(x) = +\infty$ et $\lim\limits_{x \to +\infty} \dfrac{f(x)}{x} = \beta \in \mathbb{R}^*$ et $\lim\limits_{x \to +\infty} [f(x) - \beta x] = +\infty$ alors ...</li>
+                <li>Si $f$ est continue et strictement décroissante sur $]-\infty; b]$, alors $f(]-\infty; b]) = ...$</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Limites et primitives
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">5,5 points</span>
+
+            <ol>
+                <li>
+                    Calculer les limites suivantes : <span class="points">(4 × 1 pt)</span>
+                    <div class="formula-center">
+                        $\lim\limits_{x \to 0} \dfrac{\sqrt{1+\sin x} - 1}{\sin 2x}$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $\lim\limits_{x \to 0} \dfrac{\cos x - 1}{x^3 + x^2}$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $\lim\limits_{x \to 1} \dfrac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $\lim\limits_{x \to 1} \dfrac{\sin(\pi x)}{x - 1}$
+                    </div>
+                </li>
+                <li>
+                    Donner les primitives des fonctions $f$, $g$ et $h$ respectivement sur $\mathbb{R}$ et $\mathbb{R} \setminus \{1; 2\}$. <span class="points">(3 × 0,5 pt)</span>
+                    <div class="formula-center">
+                        $f(x) = 2\cos(x) - 3\sin(x)$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $g(x) = (3x-1)(3x^2-2x+3)^3$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $h(x) = \dfrac{1-x^2}{(x^3-3x+2)^3}$
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 9,5 points</div>
+
+            <div class="part-label">Partie A</div>
+
+            <p>Soit la fonction $f$ définie par :</p>
+
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                \dfrac{x^2-2x}{x-1} & \text{si } x < 0, \\[4mm]
+                x + \sqrt{x^2+x} & \text{si } x \ge 0,
+                \end{cases}$
+                &nbsp; et $(\mathcal{C}_f)$ sa courbe représentative dans un repère orthonormé $(O, \vec{i}, \vec{j})$.
+            </div>
+
+            <ol>
+                <li>Déterminer l'ensemble de définition $\mathcal{D}_f$ de $f$. <span class="points">(0,5 pt)</span></li>
+                <li>Déterminer les limites aux bornes de $\mathcal{D}_f$. <span class="points">(0,5 pt)</span></li>
+                <li>Étudier la continuité et la dérivabilité de $f$ en $0$. Interpréter les résultats obtenus. <span class="points">(1,5 pt)</span></li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que $(\mathcal{C}_f)$ admet en $-\infty$ une asymptote oblique $(\Delta_1)$ dont on déterminera l'équation. <span class="points">(0,5 pt)</span></li>
+                        <li>Étudier la position relative de $(\mathcal{C}_f)$ par rapport à $\Delta_1$ sur $]-\infty; 0[$. <span class="points">(0,5 pt)</span></li>
+                    </ol>
+                </li>
+                <li>Montrer que $(\mathcal{C}_f)$ admet en $+\infty$ une asymptote oblique $(\Delta_2)$ dont on déterminera l'équation. <span class="points">(0,5 pt)</span></li>
+                <li>Préciser l'ensemble de dérivabilité de $f$ puis calculer $f'(x)$ sur chaque intervalle où $f$ est dérivable. <span class="points">(0,5 pt)</span></li>
+                <li>Dresser le tableau de variation de $f$. <span class="points">(0,5 pt)</span></li>
+                <li>Préciser les points d'intersection de $(\mathcal{C}_f)$ avec les axes du repère. <span class="points">(0,25 pt)</span></li>
+                <li>Construire la courbe $(\mathcal{C}_f)$. <span class="points">(1,5 pt)</span></li>
+            </ol>
+
+            <div class="part-label">Partie B</div>
+
+            <p>Soit $h$ la restriction de $f$ à l'intervalle $I = [0; +\infty[$.</p>
+
+            <ol>
+                <li>Montrer que $h$ réalise une bijection de $I$ dans un intervalle $J$ à préciser. <span class="points">(0,25 pt)</span></li>
+                <li>La bijection réciproque $h^{-1}$ est-elle dérivable sur $J$ ? <span class="points">(0,25 pt)</span></li>
+                <li>Calculer $h\left(\dfrac{4}{5}\right)$ puis $(h^{-1})'(2)$. <span class="points">(0,5 pt)</span></li>
+                <li>Construire $(\mathcal{C}_{h^{-1}})$ la courbe représentative de $h^{-1}$ dans le même repère. <span class="points">(0,5 pt)</span></li>
+                <li>Exprimer $h^{-1}(x)$ pour tout $x \in J$. <span class="points">(0,5 pt)</span></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°1 - 1er Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>
