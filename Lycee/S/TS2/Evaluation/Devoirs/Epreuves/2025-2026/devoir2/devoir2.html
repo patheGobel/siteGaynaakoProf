@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°2 - 1er Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir2.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 18/12/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°2 du 1er Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Primitives et équation complexe
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">(02,5 points ≈ 36 mns)</span>
+
+            <ol>
+                <li>
+                    Déterminer une primitive $F$ de la fonction $f$ sur $I$.
+                    <ol type="a">
+                        <li>
+                            $f(x) = (6x - 3)(4x^2 - 4x + 2)^3 \quad ; I = \mathbb{R}$
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                        <li>
+                            $f(x) = \dfrac{\sin x}{\sqrt{3 + \cos x}} \quad ; I = \mathbb{R}$
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                        <li>
+                            $f(x) = 2\cos 3x - 3\sin 2x \quad ; I = \mathbb{R}$
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                        <li>
+                            $f(x) = \dfrac{3x}{\sqrt{x^2 - 1}} + \sin x \sin 2x \quad ; I = ]-\infty; -1[$
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Résoudre dans $\mathbb{C}$ l'équation $z^2 - (1 + i)z + i = 0$.
+                    <span class="points">(0,5pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Nombres complexes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">(04,75 points ≈ 60 mns)</span>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Écrivez le complexe $z = -1 + i\sqrt{3}$ sous forme trigonométrique puis sous forme exponentielle.
+                            <span class="points">(0,75pt)</span>
+                        </li>
+                        <li>
+                            Donner le module et un argument de $z = (1 - \sqrt{2})e^{i\frac{\pi}{4}}$.
+                            <span class="points">(1pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Donner le module et un argument de $z_1 = \dfrac{\sqrt{6} - i\sqrt{2}}{2}$ et $z_2 = 1 - i$.
+                            <span class="points">(1pt)</span>
+                        </li>
+                        <li>
+                            Déduis en le module et un argument de chacun des complexes $u = \dfrac{z_1}{z_2}$ et $u^5$.
+                            <span class="points">(1pt)</span>
+                        </li>
+                        <li>
+                            Déduis en les valeurs exactes de $\cos\left(\frac{\pi}{12}\right)$ et $\sin\left(\frac{\pi}{12}\right)$.
+                            <span class="points">(1pt)</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 12,75 points ≈ 144 mns</div>
+
+            <p>On note $(C_f)$ la courbe représentative de la fonction $f$ dans un repère orthonormé direct $(O; \vec{i}, \vec{j})$ d'unité $1cm$ avec</p>
+
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                \dfrac{x^3 - 2x^2}{x^2 - 1} & \text{; si } x \leq 0 \\
+                x + \sqrt{x^2 + x} & \text{; si } x > 0
+                \end{cases}$
+            </div>
+
+            <div class="part-label-red">Partie A : Étude d'une fonction auxiliaire : <span class="points">(2pts)</span></div>
+
+            <p>Soit $g$ la fonction numérique définie par : $g(x) = -x^3 + 3x - 4$.</p>
+
+            <ol>
+                <li>
+                    Étudier les variations de $g$ puis dresser son tableau de variations.
+                    <span class="points">(0,75pt)</span>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Montrer que l'équation $g(x) = 0$ admet une unique solution $\alpha \in \mathbb{R}$.
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                        <li>
+                            Donner un encadrement de $\alpha$ à $10^{-1}$.
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    En déduire le signe de $g(x)$ sur $]-\infty; 0]$.
+                    <span class="points">(0,25pt)</span>
+                </li>
+            </ol>
+
+            <hr class="hrule" />
+
+            <div class="part-label-red">Partie B : Étude de la fonction $f$ <span class="points">(9pts)</span></div>
+
+            <ol>
+                <li>
+                    Déterminer l'ensemble de définition $D_f$ de $f$.
+                    <span class="points">(0,5pt)</span>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Calculer les limites de $f$ aux bornes de $D_f$
+                            <span class="points">(1pt)</span>
+                            et en déduire l'existence d'une asymptote dont on précisera.
+                            <span class="points">(0,25pt)</span>
+                        </li>
+                        <li>
+                            Pour $x \leq 0$, déterminer les réels $a, b, c$ et $d$ tels que :
+                            $f(x) = ax + b + \dfrac{cx + d}{x^2 - 1}$
+                            <span class="points">(0,5pt)</span>
+                            et en déduire la nature de l'asymptote en $-\infty$.
+                            <span class="points">(0,25pt)</span>
+                        </li>
+                        <li>
+                            Donner la nature de l'asymptote en $+\infty$.
+                            <span class="points">(0,5pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Montrer que $f$ est continue sur $D_f$.
+                            <span class="points">(0,75pt)</span>
+                        </li>
+                        <li>
+                            Étudier la dérivabilité de $f$ en $0$ puis interpréter le résultat obtenu.
+                            <span class="points">(1,5pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Démontrer que : $f(\alpha) = -2 + \dfrac{3(\alpha - 2)}{\alpha^2 - 1}$.
+                    <span class="points">(0,5pt)</span>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Montrer que $\forall x \in ]-\infty; -1[ \cup ]-1; 0[$, on a :
+                            $f'(x) = \dfrac{-xg(x)}{(x^2 - 1)^2}$ puis étudier son signe.
+                            <span class="points">(1pt)</span>
+                        </li>
+                        <li>
+                            Calculer $f'(x)$ sur $]0; +\infty[$ et étudier son signe.
+                            <span class="points">(0,75pt)</span>
+                        </li>
+                        <li>
+                            Dresser le tableau de variation de $f$ sur $D_f$.
+                            <span class="points">(0,75pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Construire soigneusement la courbe $(C_f)$.
+                    <span class="points">(0,75pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label-red">Partie C : Bijection <span class="points">(1,75pts)</span></div>
+
+            <p>Soit $h$ la restriction de $f$ sur $I = ]0; +\infty[$.</p>
+
+            <ol>
+                <li>
+                    Montrer que $h$ réalise une bijection de $I$ vers un intervalle $J$ à préciser.
+                    <span class="points">(0,25pt)</span>
+                </li>
+                <li>
+                    Calculer $h(1)$ et $(h^{-1})'(\sqrt{2} + 1)$.
+                    <span class="points">(0,5pt)</span>
+                </li>
+                <li>
+                    Expliciter $h^{-1}(x)$.
+                    <span class="points">(0,5pt)</span>
+                </li>
+                <li>
+                    Construire $(C_{h^{-1}})$ dans le repère précédent.
+                    <span class="points">(0,5pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°2 - 1er Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,574 @@
+/* ============================================================
+           RESET & VARIABLES
+        ============================================================ */
+:root {
+    --primary: #dc2626;
+    --primary-light: #ef4444;
+    --primary-dark: #991b1b;
+    --secondary: #059669;
+    --accent: #d97706;
+    --danger: #dc2626;
+    --purple: #7c3aed;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+           TYPOGRAPHIE
+        ============================================================ */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+ul,
+ol {
+    padding-left: 28px;
+    margin: 12px 0 18px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+strong,
+b {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ============================================================
+           EN-TÊTE
+        ============================================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 25px 30px;
+    border-radius: var(--radius);
+    margin-bottom: 35px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.header-top .left {
+    font-weight: 600;
+}
+
+.header-top .right {
+    text-align: right;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    margin-top: 8px;
+}
+
+.header-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ============================================================
+           SECTIONS
+        ============================================================ */
+.section {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.section:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.section-title {
+    color: var(--primary-dark);
+    border-bottom: 4px solid var(--primary-light);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+/* ============================================================
+   DÉFILEMENT HORIZONTAL - Pour les formules qui débordent
+============================================================ */
+.exercise-box,
+/* ou toute autre classe de conteneur d'exercice */
+.mjx-chtml,
+.katex-display,
+.MathJax {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.systeme-box {
+    background: #f8fafc;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    margin: 8px 0;
+    text-align: center;
+
+    /* Correction du problème : */
+    max-width: 100%;
+    overflow-x: auto;
+    /* Active le défilement horizontal dans la boîte */
+    overflow-y: hidden;
+    /* Évite tout saut vertical */
+    white-space: nowrap;
+    /* Empêche l'équation de se casser sauvagement */
+    -webkit-overflow-scrolling: touch;
+    /* Fluidité au toucher sur mobile */
+}
+
+/* ============================================================
+           EXERCICE BOX
+        ============================================================ */
+.exercise-box {
+    background: #fef2f2;
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.exercise-box .exercise-number {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    padding: 2px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.exercise-box .exercise-title {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.points {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+           FORMULES
+        ============================================================ */
+.formula-block {
+    text-align: center;
+    padding: 6px 0;
+    margin: 4px 0;
+    overflow-x: auto;
+}
+
+.formula-center {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 4px 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================================
+           EN-TÊTE DE DEVOIR
+        ============================================================ */
+.devoir-header {
+    background: var(--bg-white);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.devoir-header .dh-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.devoir-header .dh-row.border-bottom {
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+}
+
+.devoir-header .dh-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    padding: 8px 0;
+    letter-spacing: 1px;
+}
+
+.devoir-header .dh-title .diamonds {
+    color: var(--primary);
+}
+
+.devoir-header .dh-school {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.devoir-header .dh-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.devoir-header .dh-meta strong {
+    color: var(--text-dark);
+}
+
+/* ============================================================
+           PROBLÈME
+        ============================================================ */
+.problem-box {
+    background: #fef2f2;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.problem-box .problem-title {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.part-label {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin: 14px 0 8px 0;
+    display: block;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 4px;
+}
+
+.part-label-red {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1rem;
+    margin: 14px 0 8px 0;
+    display: block;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 4px;
+}
+
+.systeme-box {
+    background: #f8fafc;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.hrule {
+    border: none;
+    border-top: 2px solid var(--border-light);
+    margin: 16px 0;
+}
+
+/* ============================================================
+           FOOTER
+        ============================================================ */
+.footer {
+    text-align: center;
+    padding: 25px 0 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 2px solid var(--border-light);
+    margin-top: 16px;
+}
+
+/* ============================================================
+           RESPONSIVE
+        ============================================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 8px;
+    }
+
+    .header {
+        padding: 16px 14px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-top {
+        flex-direction: column;
+        gap: 3px;
+        font-size: 0.75rem;
+    }
+
+    .header-top .right {
+        text-align: left;
+    }
+
+    .header-meta {
+        flex-direction: column;
+        gap: 3px;
+        font-size: 0.75rem;
+    }
+
+    .section {
+        padding: 14px 12px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .exercise-box {
+        padding: 12px 14px;
+    }
+
+    .devoir-header {
+        padding: 12px 14px;
+    }
+
+    .devoir-header .dh-title {
+        font-size: 1.1rem;
+    }
+
+    .problem-box {
+        padding: 12px 14px;
+    }
+
+    .formula-center {
+        font-size: 0.9rem;
+        white-space: normal;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 10px 8px;
+    }
+
+    .exercise-box {
+        padding: 8px 10px;
+    }
+
+    .devoir-header {
+        padding: 8px 10px;
+    }
+
+    .devoir-header .dh-title {
+        font-size: 0.95rem;
+    }
+
+    .problem-box {
+        padding: 8px 10px;
+    }
+
+    .formula-center {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================================
+           MATHJAX
+        ============================================================ */
+.MathJax {
+    font-size: 1.05em !important;
+}
+
+.mjx-container {
+    margin: 4px 0 8px 0 !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding: 2px 0;
+}
+
+/* ============================================================
+           ANIMATIONS
+        ============================================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================================
+           SCROLLBAR
+        ============================================================ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ============================================================
+           STYLES SPÉCIFIQUES
+        ============================================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 8px;
+}
+
+.mb-10 {
+    margin-bottom: 8px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.underline-title {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.text-red {
+    color: var(--primary);
+}
