@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°1 - 2nd Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir3.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2025/2026</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 18/05/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°1 du 2nd Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Probabilités
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">(5,75 points ≈ 36 mns)</span>
+
+            <p>Le mois d'Août est très pluvieux. Le premier Août 2020, il a plu. Une étude a montré que :</p>
+            <ul>
+                <li>S'il a plu un jour, la probabilité qu'il pleuve le jour suivant est $1/3$.</li>
+                <li>S'il n'a pas plu un jour, la probabilité qu'il ne pleuve pas le jour suivant est de $2/5$.</li>
+            </ul>
+
+            <p>On note par :</p>
+            <ul>
+                <li>$A_n$ : "Il a plu au $n$-ième jour du mois d'Août"</li>
+                <li>et $P_n = P(A_n)$</li>
+            </ul>
+
+            <ol>
+                <li>
+                    Donner $P_1$.
+                    <span class="points">(0,25 pt)</span>
+                </li>
+                <li>
+                    Calculer $P_2$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Montrer que $P_{n+1} = -\dfrac{4}{15}P_n + \dfrac{3}{5}$.
+                    <span class="points">(1,5 pt)</span>
+                </li>
+                <li>
+                    On note $u_n = P_n - \dfrac{9}{19}$.
+                    <ol type="a">
+                        <li>
+                            Montrer que $(u_n)$ est une suite géométrique.
+                            <span class="points">(1 pt)</span>
+                        </li>
+                        <li>
+                            Exprimer $P_n$ en fonction de $n$.
+                            <span class="points">(1,25 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Quelle est la probabilité qu'il pleuve le 5 Août ?
+                    <span class="points">(1 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Suites
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">(04 points ≈ 30 mns)</span>
+
+            <p>On considère la suite numérique $(u_n)_{n \in \mathbb{N}}$ définie par :</p>
+            <div class="systeme-box">
+                $\begin{cases}
+                U_0 = 6 \\
+                U_{n+1} = \dfrac{1}{U_n} + \dfrac{3}{4}U_n, \quad n \in \mathbb{N}
+                \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    Calculer $u_1$ et $u_2$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Démontrer par récurrence que : $\forall n \in \mathbb{N}, \quad u_n \ge \sqrt{3}$.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Soit $f$ la fonction définie sur $]0, +\infty[$ par $f(x) = \dfrac{1}{x} + \dfrac{3}{4}x$.
+                    <ol type="a">
+                        <li>
+                            Étudier le sens de variations de $f$.
+                            <span class="points">(1 pt)</span>
+                        </li>
+                        <li>
+                            En déduire par récurrence que $(u_n)_{n \in \mathbb{N}}$ est strictement décroissante.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Montrer que $(u_n)_{n \in \mathbb{N}}$ est convergente et déterminer sa limite.
+                    <span class="points">(1 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 10,25 points ≈ 144 mns</div>
+
+            <div class="part-label">Partie A</div>
+
+            <p>Soit les fonctions $g$ et $h$ définies respectivement par :</p>
+            <ul>
+                <li>$g(x) = x^2 + x - 2 + 2\ln(x)$ sur $]0; +\infty[$</li>
+                <li>$h(x) = 1 - (x+1)^2e^x$ sur $]-\infty; 0]$</li>
+            </ul>
+
+            <ol>
+                <li>
+                    Étudier les variations de $g$ et $h$ respectivement sur leurs domaines de définitions.
+                    <span class="points">(1,5 pt)</span>
+                </li>
+                <li>
+                    Calculer $g(1)$ puis déduire le signe de $g$ sur $]0; +\infty[$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Donner le signe de $h$ sur $]-\infty; 0]$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">Partie B</div>
+
+            <p>Soit $f$ la fonction définie par :</p>
+
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                x + \left(1 - \dfrac{2}{x}\right)\ln(x) & \text{si } x > 0 \\[4mm]
+                x + 1 - (x^2 + 1)e^x & \text{si } x \le 0
+                \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    Montrer que le domaine de définition $D_f = \mathbb{R}$. Calculer les limites aux bornes de $D_f$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Étudier les branches infinies.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Étudier la position de $(\mathcal{C}_f)$ par rapport à $(\Delta)$ d'équation $y = x + 1$ en $-\infty$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Étudier la continuité de $f$ en 0.
+                    <span class="points">(0,25 pt)</span>
+                </li>
+                <li>
+                    $f$ est-elle dérivable à droite de 0 ? Étudier la dérivabilité à gauche de 0 puis interpréter le résultat.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Montrer que $\forall x > 0, f'(x) = \dfrac{g(x)}{x^2}$. En déduire le signe de $f'(x)$ sur $]0; +\infty[$.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Montrer que $\forall x < 0, f'(x) = h(x)$. En déduire le signe de $f'(x)$ sur $]-\infty; 0[$.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Dresser le tableau de variation de $f$ sur $D_f$. Puis tracer $(\mathcal{C}_f)$.
+                    <span class="points">(1,5 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">Partie C</div>
+
+            <p>Soit $k$ la restriction de $f$ sur $I = ]1; +\infty[$.</p>
+
+            <ol>
+                <li>
+                    Montrer que $k$ réalise une bijection de $I$ vers un intervalle $J$ à préciser.
+                    <span class="points">(0,25 pt)</span>
+                </li>
+                <li>
+                    $k^{-1}$ est-elle dérivable en 1 ? $k^{-1}$ est-elle dérivable sur $J$ ?
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Tracer la courbe de $(\mathcal{C}_{k^{-1}})$
+                    <span class="points">(0,25 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°1 - 2nd Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>
