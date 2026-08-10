@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°1 - 2nd Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir3.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 19/03/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°1 du 2nd Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Nombres complexes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">6 points</span>
+
+            <div class="part-label">A) Questions de cours</div>
+
+            <ol>
+                <li>
+                    Rappeler les formes algébrique, exponentielle et trigonométrique d'un nombre complexe $z$ non nul.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Donner l'écriture complexe de la rotation $r$ de centre $K(z_0)$, d'angle $\theta$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">B) On donne $z_0 = 1 - i\sqrt{3}$.</div>
+
+            <ol>
+                <li>
+                    Donner une écriture trigonométrique de $z_0$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Montrer que : $z_0^4 = -8 + 8i\sqrt{3}$.
+                    <span class="points">(0,25 pt)</span>
+                </li>
+                <li>
+                    Résoudre dans $\mathbb{C}$ l'équation $Z^4 = 1$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    En déduire les solutions de (E) : $z^4 = -8 + 8i\sqrt{3}$ sous la forme algébrique et sous la forme trigonométrique.
+                    <span class="points">(1 pt)</span>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">On peut remarquer que (E) équivaut à : $\left( \frac{z}{1 - i\sqrt{3}} \right)^4 = 1$</p>
+                </li>
+                <li>
+                    Dans le plan complexe muni d'un repère orthonormal direct $(O, \vec{u}, \vec{v})$, unité graphique 2 cm, placer les points $A$, $B$, $C$ et $D$ d'affixes respectives $z_A = 1 - i\sqrt{3}$, $z_B = -1 + i\sqrt{3}$, $z_C = \sqrt{3} + i$ et $z_D = -\sqrt{3} - i$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Donner une écriture complexe de la rotation $r$ de centre $O$ et d'angle $\frac{\pi}{2}$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Vérifier que : $r(A) = C$ ; $r(C) = B$ et $r(B) = D$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    En déduire que les points $A$, $B$, $C$ et $D$ sont situés sur un même cercle dont on précisera le centre et le rayon.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Limites avec logarithme
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">2,25 points</span>
+
+            <p>Déterminer les limites suivantes :</p>
+
+            <div class="formula-center" style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+                <div><strong>1.</strong> $\lim\limits_{x \to +\infty} \ln\left[ \dfrac{x+1}{x^2 + x + 1} \right]$</div>
+                <div><strong>2.</strong> $\lim\limits_{x \to +\infty} \dfrac{\ln(x+2)}{\ln(x+1)}$</div>
+                <div><strong>3.</strong> $\lim\limits_{x \to 0^+} \dfrac{\ln x + 2}{\ln x + 1}$</div>
+                <div><strong>4.</strong> $\lim\limits_{x \to +\infty} \dfrac{\ln x}{\sqrt{x}}$</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 11,75 points</div>
+
+            <div class="part-label">Partie A : 2,75 pts</div>
+
+            <p>Soit $g(x) = 2x \ln(-x) + x + 1$.</p>
+
+            <ol>
+                <li>
+                    Déterminer l'ensemble de définition $D_g$ de $g$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Calculer les limites aux bornes de $D_g$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Étudier les variations de $g$.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Calculer $g(-1)$ puis en déduire le signe de $g(x)$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">Partie B : 7 pts</div>
+
+            <p>On considère la fonction $f$ définie par :</p>
+
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                x^2 \ln(-x) + x + 1 & \text{si } x < 0 \\
+                x \ln(x)^2 + x + 1 & \text{si } x > 0 \\
+                1 & \text{si } x = 0
+                \end{cases}$
+            </div>
+
+            <p>On note $(C_f)$ sa courbe représentative dans un repère orthonormé.</p>
+
+            <ol>
+                <li>
+                    Justifier que $f$ est définie sur $\mathbb{R}$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Étudier la continuité et la dérivabilité de $f$ en 0. Interprétez graphiquement les résultats.
+                    <span class="points">(1,5 pt)</span>
+                </li>
+                <li>
+                    Donner le domaine de dérivabilité de $f$ puis montrer que
+                    <div class="systeme-box">
+                        $f'(x) = \begin{cases}
+                        g(x) & \text{si } x < 0 \\
+                        (1 + \ln x)^2 & \text{si } x > 0
+                        \end{cases}$
+                    </div>
+                    <span class="points">(0,5 × 3 pts)</span>
+                </li>
+                <li>
+                    Calculer les limites de $f$ aux bornes de son domaine de définition.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Étudier les branches infinies de $(C_f)$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Dresser le tableau de variations de $f$.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Montrer que dans $]-\infty; -1[$, l'équation $f(x) = 1$ admet une unique solution $\alpha$ puis vérifier que $-1,8 < \alpha < -1,7$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Construire $(C_f)$ (unité 2 cm) (on précisera la tangente au point d'abscisse $e^{-1}$ et on placera le point d'abscisse 1).
+                    <span class="points">(0,75 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">Partie C : 2 pts</div>
+
+            <p>Soit $h$ la restriction de $f$ à $I = ]0; +\infty[$.</p>
+
+            <ol>
+                <li>
+                    Montrer que $h$ admet une bijection réciproque $h^{-1}$ définie sur un intervalle $J$ à préciser.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+                <li>
+                    Étudier la dérivabilité de $h^{-1}$ sur $J$.
+                    <span class="points">(0,25 pt)</span>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Calculer $h(1)$.
+                            <span class="points">(0,25 point)</span>
+                        </li>
+                        <li>
+                            Calculer $(h^{-1})'(2)$.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Construire la courbe de $h^{-1}$.
+                    <span class="points">(0,5 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°1 - 2nd Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>
