@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°2 - 1er Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir2.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 21/01/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°2 du 1er Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Suites
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">4 points</span>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-style:italic;">[Déjà corrigé en classe]</span>
+
+            <p>Soit $(u_n)_{n \in \mathbb{N}^*}$ la suite numérique définie par :</p>
+
+            <div class="systeme-box">
+                $\begin{cases}
+                u_1 = \frac{1}{3}, \\
+                (\forall n \in \mathbb{N}^*), \ u_{n+1} = \dfrac{2u_n}{1 + (n+2)u_n}.
+                \end{cases}$
+            </div>
+
+            <p>Soit $(v_n)_{n \in \mathbb{N}^*}$ la suite numérique définie par : $v_n = \dfrac{1}{u_n} - n$.</p>
+
+            <ol>
+                <li>
+                    Montrer que la suite $(v_n)_{n \in \mathbb{N}^*}$ est géométrique.
+                    <span class="points">1,5 pt</span>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Déterminer $v_n$ et $u_n$ en fonction de $n$.
+                            <span class="points">1 pt</span>
+                        </li>
+                        <li>
+                            Calculer en fonction de $n$ la somme : $S_n = v_1 + v_2 + \cdots + v_n$.
+                            <span class="points">1,5 pt</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Nombres complexes (BAC 2022)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">4 points (BAC 2022)</span>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-style:italic;">[Déjà corrigé en classe par moi-même]</span>
+
+            <p>Le plan complexe est muni d'un repère orthonormé direct $(O; \vec{u}, \vec{v})$. Soit le nombre complexe $a$ défini par</p>
+            <div class="formula-center">
+                $a = \sqrt{2} - \sqrt{3} - i\sqrt{2} + \sqrt{3}$.
+            </div>
+
+            <ol>
+                <li>
+                    Montrer que $a^2 = -2\sqrt{3} - 2i$, puis en déduire le module de $a$.
+                    <span class="points">0,5 + 0,5 pt</span>
+                </li>
+                <li>
+                    Écrire $a^2$ sous forme trigonométrique puis vérifier qu'une des mesures de l'argument de $a$ est $\frac{19\pi}{12}$.
+                    <span class="points">0,5 + 0,5 pt</span>
+                </li>
+                <li>
+                    En déduire les valeurs exactes de $\cos\left(\frac{7\pi}{12}\right)$ et $\sin\left(\frac{7\pi}{12}\right)$, puis de $\cos\left(\frac{\pi}{12}\right)$ et $\sin\left(\frac{\pi}{12}\right)$.
+                    <span class="points">1 pt</span>
+                </li>
+                <li>
+                    Représenter sur le même graphique les points images de $a$, $-a$ et $a^2$.
+                    <span class="points">1 pt</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 3 : Limites et primitives
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 3</span>
+            <span class="points">4 points</span>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-style:italic;">[Exercice 1 du devoir N1 déjà corrigé par moi-même]</span>
+
+            <ol>
+                <li>
+                    Calculer les limites suivantes :
+                    <span class="points">(0,5 pt × 3 + 0,25 pt)</span>
+                    <div class="formula-center">
+                        $\lim\limits_{x \to 0} \dfrac{\sqrt{1+\sin x} - 1}{\sin 2x}$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $\lim\limits_{x \to 0} \dfrac{\cos x - 1}{x^3 + x^2}$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $\lim\limits_{x \to 1} \dfrac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}$
+                    </div>
+                </li>
+                <li>
+                    Donner les primitives des fonctions $f$ et $g$ respectivement sur $\mathbb{R}$ et $\mathbb{R} \setminus \{1; 2\}$.
+                    <span class="points">(2 × 0,5 pt)</span>
+                    <div class="formula-center">
+                        $f(x) = (3x-1)(3x^2-2x+3)^3$
+                        &nbsp;&nbsp;;&nbsp;&nbsp;
+                        $g(x) = \dfrac{1-x^2}{(x^3-3x+2)^3}$
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 9,75 points</div>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-style:italic;">[Exercice d'application déjà corrigé par moi-même]</span>
+
+            <p>Soit $f$ la fonction définie par :</p>
+
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                2x\sqrt{1 - x^2} & \text{si } x > 0 \\[4mm]
+                -x + \sqrt{x^2 - 2x} & \text{si } x \leq 0
+                \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    Déterminer $D_f$, les limites aux bornes et préciser la branche infinie.
+                    <span class="points">(0,5 pt × 3)</span>
+                </li>
+                <li>
+                    Étudier la dérivabilité de $f$ en 0 et 1. Interpréter géométriquement les résultats obtenus.
+                    <span class="points">(0,5 pt × 3 + 0,5 pt × 3)</span>
+                </li>
+                <li>
+                    Calculer $f'(x)$ là où $f$ est définie, puis dresser le tableau de variation de $f$.
+                    <span class="points">(0,5 pt × 2 + 0,5 pt × 2 + 0,5 pt)</span>
+                </li>
+                <li>
+                    Tracer la courbe de $f$.
+                    <span class="points">(0,75 pt)</span>
+                </li>
+                <li>
+                    Soit $h$ la restriction de $f$ à l'intervalle $]-\infty ; 0]$.
+                    <ol type="a">
+                        <li>
+                            Montrer que $h$ admet une bijection réciproque $h^{-1}$ dont on précisera l'ensemble de définition, l'ensemble de dérivabilité et le tableau de variation.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                        <li>
+                            Sans utiliser l'expression de $h^{-1}(x)$, calculer $(h^{-1})'(2)$.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                        <li>
+                            Déterminer explicitement $h^{-1}$.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                        <li>
+                            Tracer la courbe de $h^{-1}$ dans le même repère que celle de $f$.
+                            <span class="points">(0,5 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°2 - 1er Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>
