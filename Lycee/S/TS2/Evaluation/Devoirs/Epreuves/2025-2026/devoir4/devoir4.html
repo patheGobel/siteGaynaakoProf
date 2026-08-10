@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devoir n°2 - 2nd Semestre - TS2</title>
+    <link rel="stylesheet" href="devoir4.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 19/04/2025</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Devoir n°2 du 2nd Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Nombres complexes (BAC 2022)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">5 points (BAC 2022)</span>
+
+            <p>Le plan complexe est muni d'un repère orthonormé $(O ; \vec{u}, \vec{v})$, d'unité graphique 1cm.</p>
+
+            <ol>
+                <li>
+                    On considère dans $\mathbb{C}$ le polynôme $P(z) = z^3 - 5z^2 + 19z + 25$.
+                    <ol type="a">
+                        <li>
+                            Montrer que $-1$ est solution de l'équation $P(z) = 0$.
+                            <span class="points">(0.25 pt)</span>
+                        </li>
+                        <li>
+                            En déduire les solutions dans $\mathbb{C}$ de l'équation $P(z) = 0$.
+                            <span class="points">(1.25 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    On considère les points $A, B, C$ et $D$ d'affixes respectives :
+                    $z_A = -1 ; z_B = 3 + 4i ; z_C = 3 - 4i ; z_D = -7z_A$.
+                    <ol type="a">
+                        <li>
+                            On note $z_1$ et $z_2$ les affixes respectives des vecteurs $\overrightarrow{AB}$ et $\overrightarrow{DC}$. Montrer que $\overrightarrow{AB}$ et $\overrightarrow{DC}$ sont parallèles.
+                            <span class="points">(01 pt)</span>
+                        </li>
+                        <li>
+                            Calculer $|z_1|$ et $|z_2|$ puis interpréter géométriquement le résultat.
+                            <span class="points">(0.5 pt)</span>
+                        </li>
+                        <li>
+                            On note $z_3$ l'affixe du vecteur $\overrightarrow{BD}$. Comparer $|z_1|$ et $|z_3|$ puis interpréter géométriquement le résultat.
+                            <span class="points">(0.5 pt)</span>
+                        </li>
+                        <li>
+                            Calculer $\arg\left(\frac{z_1}{z_2}\right)$, puis interpréter géométriquement le résultat.
+                            <span class="points">(0.5 pt)</span>
+                        </li>
+                        <li>
+                            En déduire la nature précise du quadrilatère $ABDC$.
+                            <span class="points">(1 pt)</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Probabilités (BAC 2008)
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">5,5 points (BAC 2008)</span>
+
+            <p>On dispose de trois urnes $U_1$, $U_2$ et $U_3$</p>
+            <ul>
+                <li>$U_1$ contient 3 boules vertes et 2 boules rouges;</li>
+                <li>$U_2$ contient 4 boules vertes et 5 boules jaunes;</li>
+                <li>$U_3$ contient 5 boules jaunes, 4 boules rouges et 1 boule verte.</li>
+            </ul>
+
+            <p><strong>Description de l'épreuve</strong></p>
+            <p>L'épreuve consiste à tirer une boule dans $U_1$.</p>
+            <ul>
+                <li>Si elle est verte, on la met dans $U_2$ puis on tire une boule dans $U_2$.</li>
+                <li>Si elle est rouge, on la met dans $U_3$ puis on tire une boule dans $U_3$.</li>
+            </ul>
+
+            <p><strong>Question</strong></p>
+
+            <p><strong>A)</strong></p>
+            <ol>
+                <li>
+                    Calculer la probabilité d'avoir une boule verte au deuxième tirage sachant que la première tirée est verte.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Calculer la probabilité d'avoir une boule verte au deuxième tirage sachant que la première est rouge.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    En déduire la probabilité d'avoir une boule verte au deuxième tirage.
+                    <span class="points">(1 pt)</span>
+                </li>
+                <li>
+                    Calculer la probabilité d'avoir une boule jaune au second tirage.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Calculer la probabilité d'avoir une boule rouge au deuxième tirage.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+            </ol>
+
+            <p><strong>B)</strong> Au cours de cette épreuve si on obtient au deuxième tirage :</p>
+            <ul>
+                <li>Une boule verte, on gagne 1000 F</li>
+                <li>Une boule jaune, on gagne 500 F</li>
+                <li>Une boule rouge, on perd 500 F</li>
+            </ul>
+            <p>Soit $X$ la variable aléatoire qui, à chaque boule obtenue au second tirage, associe un gain défini ci-dessus.</p>
+            <ol>
+                <li>
+                    Déterminer la loi de probabilité de $X$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Calculer l'espérance mathématique de $X$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+            </ol>
+
+            <p><strong>C)</strong> Cette épreuve est faite par chacun des 15 élèves d'une classe dans les mêmes conditions et d'une manière indépendante. Les résultats seront donnés au centième près par défaut.</p>
+            <ol>
+                <li>
+                    Calculer la probabilité pour que 8 élèves obtiennent une boule verte au deuxième tirage.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Calculer la probabilité pour que seulement les 8 premiers obtiennent une boule verte au deuxième tirage.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Calculer la probabilité pour qu'au moins un élève obtienne une boule verte au second tirage.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME (BAC 2007)
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 9,5 points (BAC 2007)</div>
+
+            <div class="part-label">Partie A : 3 pts</div>
+
+            <p>Soit $g$ la fonction définie sur $]0 ; +\infty[$ par : $g(x) = 1 + x + \ln x$.</p>
+
+            <ol>
+                <li>
+                    Dresser le tableau de variation de $g$.
+                    <span class="points">(1.5 pt)</span>
+                </li>
+                <li>
+                    Montrer qu'il existe un unique réel $\alpha$ solution de l'équation $g(x) = 0$. Vérifier que $\alpha$ appartient à $]0.2 ; 0.3[$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    En déduire le signe de $g$ sur $]0 ; +\infty[$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Établir la relation $\ln(\alpha) = -1 - \alpha$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+            </ol>
+
+            <div class="part-label">Partie B : 6,5 pts</div>
+
+            <p>On considère la fonction $f$ définie par :</p>
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                \dfrac{x \ln x}{1 + x} & \text{si } x > 0 \\
+                0 & \text{si } x = 0
+                \end{cases}$
+            </div>
+
+            <ol>
+                <li>
+                    Montrer que $f$ est continue en $0$ puis sur $]0 ; +\infty[$.
+                    <span class="points">(0.5 + 0.5 pt)</span>
+                </li>
+                <li>
+                    Étudier la dérivabilité de $f$ en $0$. Interpréter graphiquement ce résultat.
+                    <span class="points">(0.5 + 0.5 pt)</span>
+                </li>
+                <li>
+                    Déterminer la limite de $f$ en $+\infty$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Montrer que, quel que soit $x$ élément de $]0 ; +\infty[$,
+                    $f'(x) = \dfrac{g(x)}{(1 + x)^2}$.
+                    En déduire le signe de $f'(x)$ sur $]0 ; +\infty[$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Montrer que $f(\alpha) = -\alpha$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Dresser le tableau de variations de la fonction $f$.
+                    <span class="points">(0.5 pt)</span>
+                </li>
+                <li>
+                    Représenter la courbe de $f$ dans le plan muni du repère orthonormal $(O ; \vec{i}, \vec{j})$. Unité graphique : 5 cm. Prendre $\alpha \approx 0.3$.
+                    <span class="points">(1.5 pt)</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2025 - Devoir n°2 - 2nd Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+</html>
