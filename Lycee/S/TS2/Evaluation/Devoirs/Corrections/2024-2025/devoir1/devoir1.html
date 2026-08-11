@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Devoir n°1 - 1er Semestre - TS2</title>
+
+    <link rel="stylesheet" href="devoir1.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 09/12/2024</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Correction du Devoir n°1 du 1er Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Théorèmes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">0,5 × 10 = 5 points</span>
+
+            <ol>
+                <!-- Question 1 -->
+                <li>
+                    <p><strong>Théorème des valeurs intermédiaires (TVI).</strong></p>
+                    <p>Soit \(f\) une fonction continue sur l'intervalle \([a,b]\).</p>
+                    <p>Pour tout réel \(k\) compris entre \(f(a)\) et \(f(b)\), il existe \(c \in [a,b]\) tel que</p>
+                    <div class="formula-center">
+                        $$f(c) = k.$$
+                    </div>
+
+                    <p><strong>Corollaire.</strong></p>
+                    <p>L'image d'un intervalle par une fonction continue est un intervalle.</p>
+                    <p>En particulier, si \(f(a)f(b) < 0\), alors \(f\) admet au moins une solution de l'équation
+                            \(f(x)=0\) dans \([a,b]\).</p>
+                </li>
+
+                <!-- Question 2 -->
+                <li>
+                    <p><strong>Théorème de la bijection.</strong></p>
+                    <p>Si \(f\) est continue et strictement monotone sur un intervalle \(I\), alors :</p>
+                    <ul>
+                        <li>\(f\) est bijective de \(I\) vers \(J=f(I)\),</li>
+                        <li>l'application réciproque \(f^{-1} : J \to I\) est continue,</li>
+                        <li>\(f^{-1}\) est strictement monotone (même sens si \(f\) est croissante, sens opposé si \(f\)
+                            est décroissante).</li>
+                    </ul>
+                </li>
+
+                <!-- Question 3 -->
+                <li>
+                    <p><strong>Théorème des accroissements finis (TAF).</strong></p>
+                    <p>Si \(f\) est continue sur \([a,b]\) et dérivable sur \(]a,b[\), alors il existe \(c \in ]a,b[\)
+                        tel que :</p>
+                    <div class="formula-center">
+                        $$f'(c) = \frac{f(b) - f(a)}{b - a}.$$
+                    </div>
+
+                    <p><strong>Inégalité des accroissements finis (IAF).</strong></p>
+                    <p>Si de plus \(|f'(x)| \le M\) pour tout \(x \in ]a,b[\), alors :</p>
+                    <div class="formula-center">
+                        $$|f(x) - f(y)| \le M |x - y|,\qquad \forall x,y \in [a,b].$$
+                    </div>
+                </li>
+
+                <!-- Question 4 -->
+                <li>
+                    <p><strong>(Rappel) Théorème de la bijection.</strong></p>
+                    <p>Même énoncé que dans la question 2.</p>
+                </li>
+
+                <!-- Question 5 -->
+                <li>
+                    <div class="formula-center">
+                        $$\text{Si } \lim_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} = a \ (a \neq 0),$$
+                    </div>
+                    <p>alors \(f\) est dérivable en \(x_0\) et :</p>
+                    <div class="formula-center">
+                        $$f'(x_0) = a.$$
+                    </div>
+                    <p>En particulier, \(f\) est localement strictement monotone en \(x_0\) et \(x_0\) n'est pas un
+                        extremum.</p>
+                </li>
+
+                <!-- Question 6 -->
+                <li>
+                    <div class="formula-center">
+                        $$\text{Si } \lim_{x \to x_0^-} \frac{f(x)-f(x_0)}{x-x_0} = +\infty,$$
+                    </div>
+                    <p>alors la dérivée à gauche de \(f\) en \(x_0\) est \(+\infty\).</p>
+                    <p>La pente est verticale du côté gauche (pas de dérivée finie).</p>
+                </li>
+
+                <!-- Question 7 -->
+                <li>
+                    <div class="formula-center">
+                        $$\text{Si } \lim_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} = 0,$$
+                    </div>
+                    <p>alors \(f\) est dérivable en \(x_0\) et :</p>
+                    <div class="formula-center">
+                        $$f'(x_0) = 0.$$
+                    </div>
+                    <p>La tangente en \(x_0\) est horizontale.</p>
+                </li>
+
+                <!-- Question 8 -->
+                <li>
+                    <p>Si</p>
+                    <div class="formula-center">
+                        $$\lim_{x \to +\infty} f(x) = +\infty,\qquad \lim_{x \to +\infty} \frac{f(x)}{x} = \beta \in
+                        \mathbb{R}^*,\qquad \lim_{x \to +\infty} [f(x) - \beta x] = +\infty,$$
+                    </div>
+                    <p>alors la droite d'équation \(y = \beta x + b\) n'est <strong>pas</strong> une asymptote oblique
+                        pour \(f\).</p>
+                    <p>L'écart entre \(f(x)\) et \(\beta x\) diverge vers \(+\infty\).</p>
+                </li>
+
+                <!-- Question 9 -->
+                <li>
+                    <p>Si \(f\) est continue et strictement décroissante sur \(]-\infty, b]\), alors :</p>
+                    <div class="formula-center">
+                        $$f(]-\infty, b]) = ]\ell,\, f(b)],$$
+                    </div>
+                    <p>où \(\ell = \lim_{x \to -\infty} f(x)\).</p>
+                    <p>L'intervalle est ouvert à gauche car \(-\infty\) n'est pas un réel.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Limites et primitives
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">4 points</span>
+
+            <ol>
+                <li>
+                    <p>Calculons les limites suivantes : <span class="points">(3 × 1 pt)</span></p>
+
+                    <!-- Limite 1 -->
+                    <div class="correction-box">
+                        <p><strong>1.</strong></p>
+                        <div class="formula-center">
+                            $$
+                            \begin{aligned}
+                            \lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x} &= \lim_{x \to 0} \frac{\sin x}{\sin
+                            2x(\sqrt{1+\sin x} + 1)}\\
+                            &= \lim_{x \to 0} \frac{\frac{\sin x}{x}}{\frac{2\sin 2x}{2x}} \times \frac{1}{(\sqrt{1+\sin
+                            x} + 1)}\\
+                            &= \frac{1}{2} \times \frac{1}{2}\\
+                            &= \frac{1}{4}
+                            \end{aligned}
+                            $$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{\lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x} = \frac{1}{4}} \quad \text{1
+                            point}$$
+                        </div>
+                    </div>
+
+                    <!-- Limite 2 -->
+                    <div class="correction-box">
+                        <p><strong>2.</strong></p>
+                        <div class="formula-center">
+                            $$
+                            \begin{aligned}
+                            \lim_{x \to 0} \frac{\cos x - 1}{x^3 + x^2} &= \lim_{x \to 0} \frac{\cos x - 1}{x^2(x +
+                            1)}\\
+                            &= \lim_{x \to 0} \frac{\cos x - 1}{x^2} \times \frac{1}{x+1}\\
+                            &= -\frac{1}{2} \times 1\\
+                            &=-\frac{1}{2}
+                            \end{aligned}
+                            $$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{\lim_{x \to 0} \frac{\cos x - 1}{x^3 + x^2} = -\frac{1}{2}} \quad \text{1 point}$$
+                        </div>
+                    </div>
+
+                    <!-- Limite 3 -->
+                    <div class="correction-box">
+                        <p><strong>3.</strong></p>
+                        <div class="formula-center">
+                            $$
+                            \begin{aligned}
+                            \lim_{x \to 1} \dfrac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}&=\lim_{x
+                            \to 0}\dfrac{\left( \sqrt{x + 3} - \sqrt{5 - x}\right)\left( \sqrt{x + 3} + \sqrt{5 -
+                            x}\right)\left( \sqrt{2x + 7} - \sqrt{10 - x}\right) }{\left( \sqrt{2x + 7} - \sqrt{10 -
+                            x}\right) \left( \sqrt{2x + 7} - \sqrt{10 - x}\right) \left( \sqrt{x + 3} - \sqrt{5 -
+                            x}\right)}\\
+                            &=\lim_{x \to 1} \dfrac{\left[ x + 3 - (5 - x)\right]\left( \sqrt{2x + 7} + \sqrt{10 -
+                            x}\right) }{ \left[ 2x + 7 - (10 - x) \right] \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+                            &=\lim_{x \to 1} \dfrac{2(-1+x)\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3( x - 1 )
+                            \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+                            &=\lim_{x \to 1} \dfrac{2(x-1)\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3( x - 1 )
+                            \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+                            &=\lim_{x \to 1} \dfrac{2\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3\left( \sqrt{x + 3}
+                            + \sqrt{5 - x}\right)}\\
+                            &=\dfrac{2}{3} \times \dfrac{6}{4}
+                            \end{aligned}
+                            $$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{\lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}} =
+                            1} \quad \text{1 point}$$
+                        </div>
+                    </div>
+
+                    <!-- Limite 4 -->
+                    <div class="correction-box">
+                        <p><strong>4.</strong></p>
+                        <div class="formula-center">
+                            $$\begin{aligned}
+                            \lim_{x \to 1} \dfrac{\sin(\pi x)}{x - 1}&=\lim_{X \to 0}\dfrac{\sin(\pi X)}{X}\\
+                            &=\lim_{X \to 0}\pi\dfrac{\sin(\pi X)}{\pi X}\\
+                            &=1
+                            \end{aligned}$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{\lim_{x \to 1} \frac{\sin(\pi x)}{x - 1} = \pi} \quad \text{1 point}$$
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <p>Donnons les primitives des fonctions \(f\), \(g\) et \(h\) respectivement sur \(\mathbb{R}\) et
+                        \(\mathbb{R} \setminus \{1; 2\}\). <span class="points">(3 × 0,5 pt)</span></p>
+
+                    <!-- Primitive f -->
+                    <div class="correction-box">
+                        <p><strong>f.</strong> \(f(x) = 2\cos(x) - 3\sin(x)\)</p>
+                        <div class="formula-center">
+                            $$F(x) = 2\sin(x) + 3\cos(x) + k$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{F(x) = 2\sin(x) + 3\cos(x) + k} \quad \text{0,5 point}$$
+                        </div>
+                    </div>
+
+                    <!-- Primitive g -->
+                    <div class="correction-box">
+                        <p><strong>g.</strong> \(g(x) = (3x-1)(3x^2-2x+3)^3\)</p>
+                        <div class="formula-center">
+                            $$G(x) = \frac{1}{8}(3x^2-2x+3)^4 + k$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{G(x) = \frac{1}{8}(3x^2-2x+3)^4 + k} \quad \text{0,5 point}$$
+                        </div>
+                    </div>
+
+                    <!-- Primitive h -->
+                    <div class="correction-box">
+                        <p><strong>h.</strong> \(h(x) = \dfrac{1-x^2}{(x^3-3x+2)^3}\)</p>
+                        <div class="formula-center">
+                            $$H(x) = \frac{1}{3(x^3-3x+2)^2} + k$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{H(x) = \frac{1}{3(x^3-3x+2)^2} + k} \quad \text{0,5 point}$$
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME - PARTIE A
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 9,5 points</div>
+
+            <div class="part-label">Partie A</div>
+
+            <p>Soit la fonction \(f\) définie par :</p>
+            <div class="systeme-box">
+                $f(x) = \begin{cases}
+                \dfrac{x^2-2x}{x-1} & \text{si } x < 0, \\[4mm] x + \sqrt{x^2+x} & \text{si } x \ge 0, \end{cases}$
+                    &nbsp; et $(\mathcal{C}_f)$ sa courbe représentative dans un repère orthonormé $(O, \vec{i},
+                    \vec{j})$. </div>
+
+                    <ol>
+                        <!-- Question 1 -->
+                        <li>
+                            <p>Déterminons l'ensemble de définition \(\mathcal{D}_f\) de \(f\). <span
+                                    class="points">(0,5 pt)</span></p>
+
+                            <p>Posons \(f(x) = \begin{cases} f_1(x) & \text{si } x < 0, \\ f_2(x) & \text{si } x \ge 0.
+                                    \end{cases}\)</p>
+
+                                    <ul>
+                                        <li>
+                                            <p>\(f_1\) existe ssi \(x - 1 \neq 0\) et \(x < 0\)</p>
+                                                    <p>\(x - 1 \neq 0 \implies x \neq 1\) et \(x < 0\)</p>
+                                                            <p class="text-red text-bold">\(Df_1 = ]-\infty ; 0[\)</p>
+                                        </li>
+                                        <li>
+                                            <p>\(f_2\) existe ssi \(x^2 + x \ge 0\) et \(x \ge 0\)</p>
+                                            <p>\(x^2 + x = 0 \implies x = 0\) ou \(x = -1\)</p>
+                                            <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                                            <p class="text-red text-bold">\(Df_2 = [0 ; +\infty[\)</p>
+                                        </li>
+                                    </ul>
+
+                                    <p>Donc</p>
+                                    <div class="formula-center">
+                                        $$Df = Df_1 \cup Df_2 = ]-\infty ; 0[ \cup [0 ; +\infty[ = \mathbb{R}$$
+                                    </div>
+                                    <div class="green-box">
+                                        $$\boxed{Df = \mathbb{R}}$$
+                                    </div>
+                        </li>
+
+                        <!-- Question 2 -->
+                        <li>
+                            <p>Déterminons les limites aux bornes de \(\mathcal{D}_f\). <span class="points">(0,5
+                                    pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>En \(-\infty\) :</strong> \(f(x) = f_1(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to -\infty} f(x) = \lim_{x \to -\infty} \frac{x^2-2x}{x-1} = \lim_{x
+                                        \to -\infty} \frac{x^2}{x} = \lim_{x \to -\infty} x = -\infty$$
+                                    </div>
+                                    <p class="text-red text-bold">\(\lim_{x \to -\infty} f(x) = -\infty\) <span
+                                            class="points">(0,25 pt)</span></p>
+                                </li>
+                                <li>
+                                    <p><strong>En \(+\infty\) :</strong> \(f(x) = f_2(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} x + \sqrt{x^2+x} = +\infty$$
+                                    </div>
+                                    <p class="text-red text-bold">\(\lim_{x \to +\infty} f(x) = +\infty\) <span
+                                            class="points">(0,25 pt)</span></p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Question 3 -->
+                        <li>
+                            <p>Étudions la continuité et la dérivabilité de \(f\) en \(0\). Interprétons les résultats
+                                obtenus. <span class="points">(1,5 pt)</span></p>
+
+                            <p><strong>Étudions la continuité de \(f\) en \(0\)</strong></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>En \(0^-\) :</strong> \(f(x) = f_1(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \frac{x^2-2x}{x-1} = 0$$
+                                    </div>
+                                    <p class="text-red">\(\lim_{x \to 0^-} f(x) = 0\)</p>
+                                </li>
+                                <li>
+                                    <p><strong>En \(0^+\) :</strong> \(f(x) = f_2(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x + \sqrt{x^2+x} = 0$$
+                                    </div>
+                                    <p class="text-red">\(\lim_{x \to 0^+} f(x) = 0\)</p>
+                                </li>
+                            </ul>
+
+                            <p>On a \(f(0) = 0\)</p>
+                            <p class="text-red text-bold">Finalement \(\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x) =
+                                f(0)\) donc \(f\) est continue en \(0\)</p>
+
+                            <p><strong>Étudions la dérivabilité de \(f\) en \(0\)</strong></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>En \(0^-\) :</strong> \(f(x) = f_1(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to 0^-} \frac{f(x)-f(0)}{x} = \lim_{x \to 0^-}
+                                        \frac{\frac{x^2-2x}{x-1}}{x} = \lim_{x \to 0^-} \frac{x^2-2x}{x^2-x} = \lim_{x
+                                        \to 0^-} \frac{x-2}{x-1} = 2$$
+                                    </div>
+                                    <p class="text-red">\(f\) est dérivable à gauche de \(0\) et \(y = 2x\) est une
+                                        demi-tangente en \(0^-\)</p>
+                                </li>
+                                <li>
+                                    <p><strong>En \(0^+\) :</strong> \(f(x) = f_2(x)\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to 0^+} \frac{f(x)-f(0)}{x} = \lim_{x \to 0^+} \frac{x +
+                                        \sqrt{x^2+x}}{x}$$
+                                    </div>
+                                    <div class="formula-center">
+                                        $$= \lim_{x \to 0^+} \frac{-1}{x - \sqrt{x^2+x}} = \frac{-1}{0^-} = +\infty$$
+                                    </div>
+                                    <p class="text-red">\(f\) n'est pas dérivable à droite de \(0\) donc admet une
+                                        demi-tangente orientée vers le haut en \(0^+\)</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Question 4 -->
+                        <li>
+                            <ol type="a">
+                                <li>
+                                    <p>Montrons que \((\mathcal{C}_f)\) admet en \(-\infty\) une asymptote oblique
+                                        \(\Delta_1\) dont on déterminera l'équation. <span class="points">(0,5
+                                            pt)</span></p>
+
+                                    <p>Comme \(\lim_{x \to -\infty} f(x) = -\infty\)</p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Cherchons \(\lim_{x \to -\infty} \frac{f(x)}{x}\)</p>
+                                            <div class="formula-center">
+                                                $$\lim_{x \to -\infty} \frac{f(x)}{x} = \lim_{x \to -\infty}
+                                                \frac{\frac{x^2-2x}{x-1}}{x} = \lim_{x \to -\infty} \frac{x^2-2x}{x^2-x}
+                                                = \lim_{x \to -\infty} \frac{x^2}{x^2} = 1$$
+                                            </div>
+                                            <p>Donc \(\lim_{x \to -\infty} \frac{f(x)}{x} = 1\)</p>
+                                        </li>
+                                        <li>
+                                            <p>Cherchons \(\lim_{x \to -\infty} f(x) - x\)</p>
+                                            <div class="formula-center">
+                                                $$\lim_{x \to -\infty} f(x) - x = \lim_{x \to -\infty}
+                                                \frac{x^2-2x}{x-1} - x = \lim_{x \to -\infty} \frac{-x}{x-1} = \lim_{x
+                                                \to -\infty} \frac{-x}{x} = -1$$
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <p class="text-red text-bold">Donc \((\Delta_1) : y = x - 1\) est une asymptote
+                                        oblique à \((\mathcal{C}_f)\) en \(-\infty\)</p>
+                                </li>
+                                <li>
+                                    <p>Étudions la position relative de \((\mathcal{C}_f)\) par rapport à \(\Delta_1\)
+                                        sur \(]-\infty; 0[\). <span class="points">(0,5 pt)</span></p>
+
+                                    <p>Étudions le signe de \(f(x) - y\)</p>
+                                    <div class="formula-center">
+                                        $$f(x) - y = f(x) - (x-1) = \frac{x^2-2x}{x-1} - (x-1) = -\frac{1}{x-1}$$
+                                    </div>
+
+                                    <p>Sur \(]-\infty; 0[\), \(f(x) - y > 0\) donc \((\mathcal{C}_f)\) est au-dessus de
+                                        \((\Delta_1)\)</p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- Question 5 -->
+                        <li>
+                            <p>Montrons que \((\mathcal{C}_f)\) admet en \(+\infty\) une asymptote oblique \(\Delta_2\)
+                                dont on déterminera l'équation. <span class="points">(0,5 pt)</span></p>
+
+                            <p>Comme \(\lim_{x \to +\infty} f(x) = +\infty\)</p>
+
+                            <ul>
+                                <li>
+                                    <p>Cherchons \(\lim_{x \to +\infty} \frac{f(x)}{x}\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to +\infty} \frac{f(x)}{x} = \lim_{x \to +\infty} \frac{x +
+                                        \sqrt{x^2+x}}{x} = \lim_{x \to +\infty} \left(1 + \sqrt{1+\frac{1}{x}}\right) =
+                                        2$$
+                                    </div>
+                                    <p>Donc \(\lim_{x \to +\infty} \frac{f(x)}{x} = 2\)</p>
+                                </li>
+                                <li>
+                                    <p>Cherchons \(\lim_{x \to +\infty} f(x) - 2x\)</p>
+                                    <div class="formula-center">
+                                        $$\lim_{x \to +\infty} f(x) - 2x = \lim_{x \to +\infty} \sqrt{x^2+x} - x =
+                                        \lim_{x \to +\infty} \frac{x}{\sqrt{x^2+x} + x} = \frac{1}{2}$$
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="text-red text-bold">Donc \((\Delta_2) : y = 2x + \frac{1}{2}\) est une asymptote
+                                oblique à \((\mathcal{C}_f)\) en \(+\infty\)</p>
+                        </li>
+
+                        <!-- Question 6 -->
+                        <li>
+                            <p>Précisons l'ensemble de dérivabilité de \(f\) puis calculons \(f'(x)\) sur chaque
+                                intervalle où \(f\) est dérivable. <span class="points">(0,5 pt)</span></p>
+
+                            <p class="text-red text-bold">\(Df' = \mathbb{R}^*\)</p>
+
+                            <div class="formula-center">
+                                $$f'(x) = \begin{cases}
+                                \dfrac{x^2-2x+2}{(x-1)^2} & \text{si } x < 0, \\[4mm]
+                                    \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0
+                                    \end{cases}$$
+                            </div>
+                        </li>
+
+                        <!-- Question 7 -->
+                        <li>
+                            <p>Dressons le tableau de variation de \(f\). <span class="points">(0,5 pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p>Si \(x < 0\), \(f'(x)=\dfrac{x^2-2x+2}{(x-1)^2}\). Le signe dépend du
+                                            numérateur.</p>
+                                            <p>\(x^2-2x+2 = 0 \implies \Delta < 0\)</p>
+                                                    <p class="text-red text-bold">Ainsi, si \(x < 0\), \(f'(x)> 0\) donc
+                                                            \(f\) est croissante sur \(]-\infty; 0[\)</p>
+                                </li>
+                                <li>
+                                    <p>Si \(x > 0\), \(f'(x) = \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}\). Le signe
+                                        dépend du numérateur.</p>
+                                    <p class="text-red text-bold">Or \(2\sqrt{x^2+x}+2x+1 > 0\) pour tout \(x \in ]0;
+                                        +\infty[\)</p>
+                                    <p class="text-red text-bold">Ainsi, pour tout \(x \in ]0; +\infty[\), \(f'(x) > 0\)
+                                        donc \(f\) est croissante sur \(]0; +\infty[\)</p>
+                                </li>
+                            </ul>
+
+                            <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                        </li>
+
+                        <!-- Question 8 -->
+                        <li>
+                            <p>Précisons les points d'intersection de \((\mathcal{C}_f)\) avec les axes du repère. <span
+                                    class="points">(0,25 pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p>Pour \(x < 0\), \(f(x)=\dfrac{x^2-2x}{x-1}\)</p>
+                                            <ul>
+                                                <li>Avec \((ox)\) : on ne peut pas calculer \(f(0)\) car \(x < 0\)</li>
+                                                <li>Avec \((oy)\) : résolvons \(f(x) = 0\)</li>
+                                            </ul>
+                                            <div class="formula-center">
+                                                $$f(x) = 0 \implies x = 0 \text{ ou } x = 2 \text{ (or } x < 0 \text{)}
+                                                    \implies \text{pas de solution}$$ </div>
+                                </li>
+                                <li>
+                                    <p>Pour \(x \ge 0\), \(f(x) = x + \sqrt{x^2+x}\)</p>
+                                    <ul>
+                                        <li>Avec \((ox)\) : \(f(0) = 0\)</li>
+                                        <li>Avec \((oy)\) : résolvons \(f(x) = 0\)</li>
+                                    </ul>
+                                    <div class="formula-center">
+                                        $$x + \sqrt{x^2+x} = 0 \implies \sqrt{x^2+x} = -x$$
+                                    </div>
+                                    <div class="formula-center">
+                                        $$x^2+x = x^2 \implies x = 0$$
+                                    </div>
+                                    <p>Donc la solution est \(0\)</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Question 9 -->
+                        <li>
+                            <p>Construire la courbe \((\mathcal{C}_f)\). <span class="points">(1,5 pt)</span></p>
+
+                            <div class="figure-placeholder">
+                                <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de la fonction f</p>
+                                <p>Courbe représentative de \(f\) avec les asymptotes \(\Delta_1: y = x - 1\) et
+                                    \(\Delta_2: y = 2x + \frac{1}{2}\)</p>
+                                <p style="font-size:0.85rem; margin-top:8px;">
+                                    <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici
+                                        pour voir la courbe sur Geogebra</a>
+                                </p>
+                                <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                            </div>
+                        </li>
+                    </ol>
+            </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME - PARTIE B
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="part-label">Partie B</div>
+
+            <p>Soit \(h\) la restriction de \(f\) à l'intervalle \(I = [0; +\infty[\).</p>
+
+            <ol>
+                <!-- Question 1 -->
+                <li>
+                    <p>Montrons que \(h\) réalise une bijection de \(I\) dans un intervalle \(J\) que l'on précisera.
+                        <span class="points">(0,25 pt)</span>
+                    </p>
+
+                    <p>Sur \(I\), \(h\) est continue et strictement croissante donc réalise une bijection de \(I\) vers
+                    </p>
+                    <div class="green-box">
+                        $$J = [0; +\infty[$$
+                    </div>
+                </li>
+
+                <!-- Question 2 -->
+                <li>
+                    <p>La bijection réciproque \(h^{-1}\) est-elle dérivable sur \(J\) ? <span class="points">(0,25
+                            pt)</span></p>
+
+                    <p>Comme \(\forall x \in I\), \(h'(x) \neq 0\) donc \(h^{-1}\) est dérivable sur \(J\).</p>
+                </li>
+
+                <!-- Question 3 -->
+                <li>
+                    <p>Calculons \(h\left(\frac{4}{5}\right)\) puis \((h^{-1})'(2)\). <span class="points">(0,5
+                            pt)</span></p>
+
+                    <div class="correction-box">
+                        <p><strong>Calcul de \(h\left(\frac{4}{5}\right)\) :</strong></p>
+                        <div class="formula-center">
+                            $$h\left(\frac{4}{5}\right) = \frac{4}{5} + \sqrt{\left(\frac{4}{5}\right)^2 + \frac{4}{5}}
+                            = \frac{4}{5} + \frac{6}{5} = 2$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{h\left(\frac{4}{5}\right) = 2}$$
+                        </div>
+                    </div>
+
+                    <div class="correction-box">
+                        <p><strong>Calcul de \((h^{-1})'(2)\) :</strong></p>
+                        <div class="formula-center">
+                            $$(h^{-1})'(2) = \frac{1}{h'\left(\frac{4}{5}\right)} = \frac{12}{25}$$
+                        </div>
+                        <div class="green-box">
+                            $$\boxed{(h^{-1})'(2) = \frac{12}{25}}$$
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Question 4 -->
+                <li>
+                    <p>Construction de \((\mathcal{C}_{h^{-1}})\) la courbe représentative de \(h^{-1}\) dans le même
+                        repère. <span class="points">(0,5 pt)</span></p>
+
+                    <div class="figure-placeholder">
+                        <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de \(h^{-1}\)</p>
+                        <p>Courbe représentative de la bijection réciproque</p>
+                        <p style="font-size:0.85rem; margin-top:8px;">
+                            <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici pour voir
+                                la courbe sur Geogebra</a>
+                        </p>
+                        <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                    </div>
+                </li>
+
+                <!-- Question 5 -->
+                <li>
+                    <p>Exprimons \(h^{-1}(x)\) pour tout \(x \in J\). <span class="points">(0,5 pt)</span></p>
+
+                    <div class="correction-box">
+                        <p>Soit \(y = h(x) = x + \sqrt{x^2+x}\).</p>
+                        <p>On isole la racine : \(y - x = \sqrt{x^2+x}\).</p>
+                        <p>En élevant au carré : \((y-x)^2 = x^2+x\).</p>
+                        <p>\(y^2 - 2xy + x^2 = x^2 + x\).</p>
+                        <p>En simplifiant : \(y^2 - 2xy = x\).</p>
+                        <p>On factorise par \(x\) : \(y^2 = x(1+2y)\).</p>
+                        <p>D'où :</p>
+                        <div class="green-box">
+                            $$\boxed{h^{-1}(x) = \frac{x^2}{1+2x}}$$
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2024 - Correction Devoir n°1 - 1er Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+
+</html>
