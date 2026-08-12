@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Devoir n°2 - 1er Semestre - TS2</title>
+
+    <link rel="stylesheet" href="devoir2.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    EN-TÊTE DU DEVOIR
+    ============================================================ -->
+    <header class="header">
+        <div class="header-top">
+            <span class="left">♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+            <span class="right"><strong>A.S. :</strong> 2024/2025</span>
+        </div>
+        <div class="header-top" style="border-bottom: none; padding-bottom: 4px; margin-bottom: 4px;">
+            <span><strong>Matière :</strong> Mathématiques</span>
+            <span><strong>Niveau :</strong> TS2</span>
+            <span><strong>Date :</strong> 09/12/2024</span>
+            <span><strong>Durée :</strong> 4 heures</span>
+        </div>
+        <h1>📝 Correction du Devoir n°2 du 1er Semestre</h1>
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span>📚 Classe : TS2</span>
+            <span>📅 Année : 2024 – 2025</span>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    EXERCICE 1 : Primitives et équation complexe
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 1</span>
+            <span class="points">4 points</span>
+
+            <ol>
+                <li>
+                    <p>Déterminons une primitive \(F\) de la fonction \(f\) sur \(I\).</p>
+
+                    <ol type="a">
+                        <!-- 1.a -->
+                        <li>
+                            <p>\(f(x) = (6x - 3)(4x^2 - 4x + 2)^3 \quad ; I = \mathbb{R}\) <span
+                                    class="points">(0,5pt)</span></p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f(x) &= (6x - 3)(4x^2 - 4x + 2)^3\\
+                                &= 3(2x - 1)(4x^2 - 4x + 2)^3\\
+                                &= 3\times \dfrac{1}{4}(8x - 4)(4x^2 - 4x + 2)^3\\
+                                &= 3\times \dfrac{1}{4}(4x^2 - 4x + 2)'(4x^2 - 4x + 2)^3\\
+                                &=3\times \dfrac{1}{4}u'u^{3}
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                F(x) &=3\times \dfrac{1}{4}\times \dfrac{1}{4}u^{4} +k\\
+                                &= 3\times \dfrac{1}{4} \times \dfrac{1}{4} (4x^2 - 4x + 2)^4 +k\\
+                                &= \dfrac{3}{16} (4x^2 - 4x + 2)^4 +k\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="result-box">
+                                $$ \mathbf{F(x) = \dfrac{3}{16} (4x^2 - 4x + 2)^4}+k $$
+                            </div>
+                        </li>
+
+                        <!-- 1.b -->
+                        <li>
+                            <p>\(f(x) = \dfrac{\sin x}{\sqrt{3 + \cos x}} \quad ; I = \mathbb{R}\) <span
+                                    class="points">(0,5pt)</span></p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f(x) &= \dfrac{\sin x}{\sqrt{3 + \cos x}}\\
+                                &= \dfrac{-(3 + \cos x)'}{\sqrt{3 + \cos x}}\\
+                                &= \dfrac{-(u)'}{\sqrt{u}}\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                F(x) &= -2\sqrt{u}+k\\
+                                &= -2\sqrt{3 + \cos x} +k
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="result-box">
+                                $$ \mathbf{F(x) = -2\sqrt{3 + \cos x} +k } $$
+                            </div>
+                        </li>
+
+                        <!-- 1.c -->
+                        <li>
+                            <p>\(f(x) = 2\cos 3x - 3\sin 2x \quad ; I = \mathbb{R}\) <span class="points">(0,5pt)</span>
+                            </p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f(x) &= 2\cos 3x - 3\sin 2x\\
+                                &= 2 \times \cos (ax+b) - 3 \times \sin (ax+b)\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                F(x) &= 2 \times \dfrac{1}{a} \sin (ax+b) + 3 \times \dfrac{1}{a} \cos (ax+b)\\
+                                &= 2 \times \dfrac{1}{3} \sin (3x) + 3 \times \dfrac{1}{2} \cos (2x)\\
+                                &= \dfrac{2}{3} \sin (3x) + \dfrac{3}{2} \cos (2x)\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="result-box">
+                                $$ \mathbf{F(x) = \dfrac{2}{3} \sin (3x) + \dfrac{3}{2} \cos (2x) +k } $$
+                            </div>
+                        </li>
+
+                        <!-- 1.d -->
+                        <li>
+                            <p>\(f(x) = \dfrac{3x}{\sqrt{x^2 - 1}} + \sin x \sin 2x \quad ; I = ]-\infty; -1[\) <span
+                                    class="points">(0,5pt)</span></p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f(x) &= \dfrac{3x}{\sqrt{x^2 - 1}} + \sin x \sin 2x\\
+                                &= \dfrac{3x}{\sqrt{x^2 - 1}} + \sin x \times \cos x \times \sin x\\
+                                &= \dfrac{3x}{\sqrt{x^2 - 1}} + \cos x \times \sin^{2} x\\
+                                &= \dfrac{3}{2}\dfrac{(x^2 - 1)'}{\sqrt{x^2 - 1}} +\dfrac{1}{3} (\sin^{3} x)'\\
+                                &= \dfrac{3}{2}\dfrac{(u)'}{\sqrt{u}} +\dfrac{1}{n+1} (\sin^{n+1} x)'\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                F(x) &= \dfrac{3}{2}\times 2\sqrt{u} +\dfrac{1}{3} \sin^{3} x + k\\
+                                &= 3\sqrt{x^2 - 1} +\dfrac{1}{3} \sin^{3} x +k\\
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="result-box">
+                                $$ \mathbf{F(x) = 3\sqrt{x^2 - 1} +\dfrac{1}{3} \sin^{3} x +k } $$
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+
+                <!-- 2. Équation complexe -->
+                <li>
+                    <p>Résolvons dans \(\mathbb{C}\) l'équation \(z^2 - (1 + i)z + i = 0\). <span
+                            class="points">(0,5pt)</span></p>
+
+                    <p>\(\Delta = -2i\)</p>
+
+                    <p><strong>Posons</strong> \(\Delta = \delta^2\) avec \(\delta = x + yi\) et \(x, y \in \mathbb{R}\)
+                    </p>
+
+                    <div class="formula-center">
+                        $$
+                        \delta^2 = \Delta \implies x^2 - y^2 + 2xyi = -2i.
+                        $$
+                    </div>
+
+                    <p>et \(|\Delta| = 2\)</p>
+
+                    <p>Cela donne le système suivant :</p>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        \begin{cases}
+                        x^2 + y^2 = | \Delta |, \\
+                        x^2 - y^2 = 0, \\
+                        2xy = -2.
+                        \end{cases} &\implies
+                        \begin{cases}
+                        x^2 + y^2 = 2, \\
+                        x^2 - y^2 = 0, \\
+                        xy = -1.
+                        \end{cases}\\&\implies
+                        \begin{cases}
+                        2x^2 = 2, \\
+                        2y^2 = 2, \\
+                        2xy = -1.
+                        \end{cases}\\&\implies
+                        \begin{cases}
+                        x^2 = 1, \\
+                        y^2 = 1, \\
+                        xy = -1.
+                        \end{cases}\\&\implies
+                        \begin{cases}
+                        x = 1, x = -1 , \\
+                        y = 1, y = -1 \\
+                        xy = -1.
+                        \end{cases}
+                        \end{aligned}
+                        $$
+                    </div>
+
+                    <ul>
+                        <li>Si \(x = 1\), alors \(y = -1\).</li>
+                        <li>Si \(x = -1\), alors \(y = 1\).</li>
+                    </ul>
+
+                    <div class="formula-center">
+                        $$ \delta_1 = 1 - i \quad \text{et} \quad \delta_2 = -1 + i. $$
+                    </div>
+
+                    <p>Les solutions de l'équation quadratique sont données par :</p>
+                    <div class="formula-center">
+                        $$ z = \frac{-b \pm \sqrt{\Delta}}{2a}. $$
+                    </div>
+
+                    <ul>
+                        <li>
+                            <p>Pour \(\delta_1 = 1 - i\) :</p>
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                z_1 &= \frac{-(-1 - i) + (1 - i)}{2}\\
+                                &= \frac{1 + i + 1 - i}{2}\\
+                                &= \frac{2}{2}\\
+                                &= 1.
+                                \end{aligned}
+                                \]
+                            </div>
+                        </li>
+                        <li>
+                            <p>Pour \(\delta_2 = -1 + i\) :</p>
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                z_2 &= \frac{-(-1 - i) - (-1 + i)}{2}\\
+                                &= \frac{1 + i - (-1 + i)}{2}\\
+                                &= \frac{1 + i + 1 - i}{2}\\
+                                &= \frac{2i}{2}\\
+                                &= i.
+                                \end{aligned}
+                                \]
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p><strong>Résultat final :</strong></p>
+                    <div class="result-box">
+                        $$ \mathbf{ S = \{ 1, i \} } $$
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXERCICE 2 : Nombres complexes
+    ============================================================ -->
+    <section class="section">
+        <div class="exercise-box">
+            <span class="exercise-number">Exercice 2</span>
+            <span class="points">(04,75 points ≈ 60 mns)</span>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <!-- 2.a.1 -->
+                        <li>
+                            <p>Écrivons le complexe \(z = -1 + i\sqrt{3}\) sous forme trigonométrique puis sous forme
+                                exponentielle. <span class="points">(0,75pt)</span></p>
+
+                            <div class="formula-center">
+                                $$ z = -1 + i\sqrt{3} \implies z = 2\left( -\dfrac{1}{2} + \dfrac{\sqrt{3}}{2} i \right)
+                                $$
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <p><strong>Forme trigonométrique</strong></p>
+                                    <div class="formula-center">
+                                        $$ z = 2\left[ \cos \left(\dfrac{2\pi}{3}\right) + i\sin
+                                        \left(\dfrac{2\pi}{3}\right) \right] $$
+                                    </div>
+                                    <div class="result-box">
+                                        $$ \mathbf{ z = 2\left[ \cos \left(\dfrac{2\pi}{3}\right) + i\sin
+                                        \left(\dfrac{2\pi}{3}\right) \right] } $$
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Forme exponentielle</strong></p>
+                                    <div class="formula-center">
+                                        $$ z = 2e^{i\frac{2\pi}{3}} $$
+                                    </div>
+                                    <div class="result-box">
+                                        $$ \mathbf{ z = 2e^{i\frac{2\pi}{3}} } $$
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 2.a.2 -->
+                        <li>
+                            <p>Donnons le module et un argument de \(z = (1 - \sqrt{2})e^{i\frac{\pi}{4}}\). <span
+                                    class="points">(1pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>Module</strong></p>
+                                    <div class="formula-center">
+                                        $$ |z| = (1 - \sqrt{2}) $$
+                                    </div>
+                                    <div class="result-box">
+                                        $$ \mathbf{ |z| = (1 - \sqrt{2}) } $$
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Argument</strong></p>
+                                    <div class="formula-center">
+                                        $$ \arg(z) = \frac{\pi}{4} [2\pi] $$
+                                    </div>
+                                    <div class="result-box">
+                                        $$ \mathbf{ \arg(z) = \frac{\pi}{4}[2\pi] } $$
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <ol type="a">
+                        <!-- 2.b.1 -->
+                        <li>
+                            <p>Donnons le module et un argument de \(z_1 = \dfrac{\sqrt{6}-i\sqrt{2}}{2}\) et \(z_2 = 1
+                                - i\). <span class="points">(1pt)</span></p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                z_1 = \dfrac{\sqrt{6}-i\sqrt{2}}{2} &\implies z_1 = \sqrt{2} \left(
+                                \dfrac{\sqrt{3}}{2}-\dfrac{1}{2}i \right)\\
+                                &\implies z_1 = \sqrt{2} \left[ \cos\left( -\frac{\pi}{6} \right) + i \sin\left(
+                                -\frac{\pi}{6} \right) \right]
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <p><strong>Pour \(z_1\)</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Module</strong></p>
+                                            <div class="formula-center">
+                                                $$ |z_1| = \sqrt{2} $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ |z_1| = \sqrt{2} } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>Argument</strong></p>
+                                            <div class="formula-center">
+                                                $$ \arg(z_1) = -\frac{\pi}{6}[2\pi] $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ \arg(z_1) = -\frac{\pi}{6}[2\pi] } $$
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Pour \(z_2\)</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Module</strong></p>
+                                            <div class="formula-center">
+                                                $$ |z_2| = \sqrt{2} $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ |z_2| = \sqrt{2} } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>Argument</strong></p>
+                                            <div class="formula-center">
+                                                $$ \arg(z_2) = -\frac{\pi}{4}[2\pi] $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ \arg(z_2) = -\frac{\pi}{4}[2\pi] } $$
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 2.b.2 -->
+                        <li>
+                            <p>Déduisons le module et un argument de chacun des complexes \(u = \dfrac{z_1}{z_2}\) et
+                                \(u^5\). <span class="points">(1pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>Pour \(u\)</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Module</strong></p>
+                                            <div class="formula-center">
+                                                $$ |u| = \dfrac{|z_1|}{|z_2|} = 1 $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ |u| = 1 } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>Argument</strong></p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \arg(u) = \arg\left( \dfrac{z_1}{z_2} \right) &\implies \arg(u) =
+                                                \arg(z_1) - \arg(z_2) \\
+                                                &\implies \arg(u) = -\frac{\pi}{6} - \left( -\frac{\pi}{4} \right)
+                                                [2\pi]\\
+                                                &\implies \arg(u) = -\frac{\pi}{6} + \frac{\pi}{4} [2\pi]\\
+                                                &\implies \arg(u) = \frac{\pi}{12} [2\pi]\\
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ \arg(u) = \frac{\pi}{12}[2\pi] } $$
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Pour \(u^5\)</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Module</strong></p>
+                                            <div class="formula-center">
+                                                $$ |u^5| = 1 $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>Argument</strong></p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \arg(u^{5}) = 5\arg(u) &\implies 5\arg(u) = \frac{5\pi}{12} [2\pi]\\
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{ \arg(u^{5}) = \frac{5\pi}{12}[2\pi] } $$
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 2.b.3 -->
+                        <li>
+                            <p>Déduis en les valeurs exactes de \(\cos\left(\frac{\pi}{12}\right)\) et
+                                \(\sin\left(\frac{\pi}{12}\right)\). <span class="points">(1pt)</span></p>
+
+                            <p>On a : \(u = e^{i\frac{\pi}{12}} = \cos\left(\frac{\pi}{12}\right) +
+                                i\sin\left(\frac{\pi}{12}\right)\).</p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                u = \frac{z_1}{z_2}
+                                &= \frac{\dfrac{\sqrt{6}-i\sqrt{2}}{2}}{1-i} \\
+                                &= \frac{\sqrt{6}-i\sqrt{2}}{2(1-i)} \\
+                                &= \frac{\sqrt{6}-i\sqrt{2}}{2(1-i)} \cdot \frac{1+i}{1+i} \\
+                                &= \frac{(\sqrt{6}-i\sqrt{2})(1+i)}{2(1+1)} \\
+                                &= \frac{\sqrt{6}+\sqrt{2} + i(\sqrt{6}-\sqrt{2})}{4}
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <div class="result-box">
+                                $$ \mathbf{ \cos\left(\frac{\pi}{12}\right) = \frac{\sqrt{6}+\sqrt{2}}{4} \quad
+                                \text{et} \quad \sin\left(\frac{\pi}{12}\right) = \frac{\sqrt{6}-\sqrt{2}}{4} } $$
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="problem-title">Problème : 12,75 points ≈ 144 mns</div>
+
+            <p>On note \((C_f)\) la courbe représentative de la fonction \(f\) dans un repère orthonormé direct
+                \((O;\vec{i},\vec{j})\) d'unité \(1cm\) avec</p>
+
+            <div class="systeme-box">
+                $$ f(x) = \begin{cases}
+                \dfrac{x^3 - 2x^2}{x^2 - 1} & \text{; si } x \leq 0 \\
+                x + \sqrt{x^2 + x} & \text{; si } x > 0
+                \end{cases} $$
+            </div>
+
+            <!-- Partie A -->
+            <div class="part-label">Partie A : Étude d'une fonction auxiliaire : <span class="points">(2pts)</span>
+            </div>
+
+            <p>Soit \(g\) la fonction numérique définie par : \(g(x) = -x^3 + 3x - 4\).</p>
+
+            <ol>
+                <li>
+                    <p>Étudions les variations de \(g\) puis dressons son tableau de variations. <span
+                            class="points">(0,75pt)</span></p>
+
+                    <div class="formula-center">
+                        $$ g'(x) = -3x^2 + 3 $$
+                    </div>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        g'(x) = 0 &\implies -3x^2 + 3 = 0\\
+                        &\implies -x^2 + 1 = 0\\
+                        &\implies x = -1 \textbf{ ou } x = 1\\
+                        \end{aligned}
+                        $$
+                    </div>
+
+                    <div class="image">
+                        <img src="images/tabSignes1.png" alt="Tableau des signes">
+                    </div>
+
+                    <ul>
+                        <li>Sur \(]-\infty; -1] \cup [1; +\infty[\), \(g'(x) \leq 0\) donc \(g\) est décroissante.</li>
+                        <li>Sur \([-1; 1]\), \(g'(x) \geq 0\) donc \(g\) est croissante.</li>
+                    </ul>
+
+                    <p><strong>Limites</strong></p>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        \lim\limits_{x \to -\infty}g(x)&=\lim\limits_{x \to -\infty}-x^3 + 3x - 4\\
+                        &=\lim\limits_{x \to -\infty}-x^3\\
+                        &=+\infty
+                        \end{aligned}
+                        $$
+                    </div>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        \lim\limits_{x \to +\infty}g(x)&=\lim\limits_{x \to +\infty}-x^3 + 3x - 4\\
+                        &=\lim\limits_{x \to +\infty}-x^3\\
+                        &=-\infty
+                        \end{aligned}
+                        $$
+                    </div>
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        g(-1) &= -(-1)^3 + 3(-1) - 4\\
+                        g(-1) &= 1 -3 - 4\\
+                        &=-6
+                        \end{aligned}
+                        $$
+
+                        $$
+                        \begin{aligned}
+                        g(1) &= -(1)^3 + 3(1) - 4\\
+                        g(1) &= -1 +3 - 4\\
+                        &=-2
+                        \end{aligned}
+                        $$
+                    </div>
+                </li>
+                <div class="image">
+                    <img src="images/tabVar1.png" alt="Tableau des signes">
+                </div>
+                <li>
+                    <ol type="a">
+                        <li>
+                            <p>Montrons que l'équation \(g(x) = 0\) admet une unique solution \(\alpha \in \mathbb{R}\).
+                                <span class="points">(0,5pt)</span>
+                            </p>
+
+                            <p><strong>Existence</strong></p>
+                            <p>D'après le tableau de vairation $\lim\limits_{x \to -\infty}g(x) \times g(-1) < 0 $ d'où
+                                    l'existance d'une solution</p>
+
+                                    <p><strong>Unicité</strong></p>
+                                    <p>\(g\) est continue et strictement décroissante de \(]-\infty, -1[\) vers
+                                        \(]+\infty, -6[\) d'où l'unicité de la solution.</p>
+                        </li>
+                        <li>
+                            <p>Donnons un encadrement de \(\alpha\) à \(10^{-1}\). <span class="points">(0,5pt)</span>
+                            </p>
+
+                            <p>On sait que la solution unique \(\alpha\) vérifie \(\alpha < -1\).</p>
+
+                                    <div class="formula-center">
+                                        $$ g(-2) = -(-8) + 3(-2) - 4 = 8 - 6 - 4 = -2 < 0 $$ </div>
+
+                                            <div class="formula-center">
+                                                $$ g(-1.5) = -(-3.375) + 3(-1.5) - 4 = 3.375 - 4.5 - 4 = -5.125 < 0 $$
+                                                    </div>
+
+                                                    <p>On cherche donc plus à gauche.</p>
+
+                                                    <div class="formula-center">
+                                                        $$ g(-2.1) = -(-9.261) + 3(-2.1) - 4 = 9.261 - 6.3 - 4 = -1.039
+                                                        < 0 $$ </div>
+
+                                                            <div class="formula-center">
+                                                                $$ g(-2.2) = -(-10.648) + 3(-2.2) - 4 = 10.648 - 6.6 - 4
+                                                                = 0.048 > 0 $$
+                                                            </div>
+
+                                                            <p>La fonction \(g\) est continue et strictement
+                                                                décroissante sur \(]-\infty,-1]\), donc elle change de
+                                                                signe une seule fois sur cet intervalle.</p>
+
+                                                            <div class="result-box">
+                                                                $$ \mathbf{ -2.2 < \alpha < -2.1 } $$ </div>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <p>En déduire le signe de \(g(x)\) sur \(]-\infty; 0]\). <span class="points">(0,25pt)</span></p>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{array}{ll}
+                        g(x) > 0 & \text{si } x \in ]-\infty, \alpha[ \\
+                        g(x) = 0 & \text{si } x = \alpha \\
+                        g(x) < 0 & \text{si } x \in ]\alpha, 0] \end{array} $$ </div>
+                </li>
+            </ol>
+
+            <hr class="hrule" />
+
+            <!-- Partie B -->
+            <div class="part-label">Partie B : Étude de la fonction \(f\) <span class="points">(9pts)</span></div>
+
+            <ol>
+                <!-- B.1 -->
+                <li>
+                    <p>Déterminons l'ensemble de définition \(D_f\) de \(f\). <span class="points">(0,5pt)</span></p>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        f(x) = \begin{cases}
+                        \dfrac{x^3 - 2x^2}{x^2 - 1} & \text{; si } x \leq 0 \\[4mm]
+                        x + \sqrt{x^2 + x} & \text{; si } x > 0
+                        \end{cases}
+                        \quad \text{Posons } f(x) = \begin{cases}
+                        f_1(x) & \text{; si } x \leq 0 \\[4mm]
+                        f_2(x) & \text{; si } x > 0
+                        \end{cases}
+                        \end{aligned}
+                        $$
+                    </div>
+
+                    <ul>
+                        <li>
+                            <p>\(f_1\)</p>
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f_1 \quad \exists \quad \text{ ssi } & x^2 - 1 \neq 0 \text{ et } x \leq 0\\
+                                & x \neq -1 \text{ et } x \neq -1 \text{ et } x \in ]-\infty,0] \\
+                                & -1 \in ]-\infty,0] \text{ et } 1 \notin ]-\infty,0] \\
+                                \end{aligned}
+                                $$
+                            </div>
+                            <p>\(\underline{Df_1 = ]-\infty; -1[ \cap ]-1; 0[}\)</p>
+                        </li>
+                        <li>
+                            <p>\(f_2\)</p>
+                            <p>\(f_2 \quad \exists \quad\) ssi \(x^2 + x \geq 0\) et \(x > 0\)</p>
+                            <p>Posons \(x^2 + x = 0 \)</p>
+                            <p>\( x^2 + x = 0 \implies x=0 \textbf{ ou } x=-1 \)</p>
+                            <div class="image">
+                                <img src="images/tabVar1.png" alt="Tableau des signes">
+                            </div>
+                            <p>\(\underline{Df_2 = ]0; +\infty[}\)</p>
+                        </li>
+                    </ul>
+
+                    <div class="formula-center">
+                        $$
+                        \begin{aligned}
+                        Df & = Df_1 \cup Df_2 \\
+                        & = ]-\infty; -1[ \cap ]-1; 0[ \cup ]0; +\infty[\\
+                        & = \mathbb{R} \setminus \{-1\}
+                        \end{aligned}
+                        $$
+                    </div>
+
+                    <div class="result-box">
+                        $$ \mathbf{Df = \mathbb{R} \setminus \{-1\} } $$
+                    </div>
+                </li>
+
+                <!-- B.2 -->
+                <li>
+                    <ol type="a">
+                        <li>
+                            <ul>
+                                <li>
+                                    <p>Calculons les limites de \(f\) aux bornes de \(D_f\). <span
+                                            class="points">(1pt)</span></p>
+
+                                    <ul>
+                                        <li>
+                                            <p><strong>En \(-\infty\)</strong> : \(f(x) = f_1(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim_{x \to -\infty} f(x) &= \lim_{x \to -\infty} \dfrac{x^3 - 2x^2}{x^2
+                                                - 1}\\
+                                                &= \lim_{x \to -\infty} \dfrac{x^3}{x^2}\\
+                                                &= \lim_{x \to -\infty} x\\
+                                                &= -\infty
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{\lim_{x \to -\infty} f(x) = -\infty } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>En \(+\infty\)</strong> : \(f(x) = f_2(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim\limits_{x \to +\infty} f(x) &= \lim\limits_{x \to +\infty} x +
+                                                \sqrt{x^2+x}\\
+                                                &= \lim\limits_{x \to +\infty} x + \sqrt{x^2+x}\\
+                                                &= +\infty
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{\lim_{x \to +\infty} f(x) = +\infty } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>En \(-1^{-}\)</strong> : \(f(x) = f_1(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim\limits_{x \to -1^{-}} f(x) &= \lim\limits_{x \to 1^{-}} \dfrac{x^3
+                                                - 2x^2}{x^2 - 1}\\
+                                                &= "\dfrac{-3}{0}"\\
+                                                &= \dfrac{-3}{0^{+}}\\
+                                                &= -\infty
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="image">
+                                                <img src="images/tabSignes3.png" alt="Tableau des signes">
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{\lim_{x \to -1^{-}} f(x) = -\infty } $$
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p><strong>En \(-1^{+}\)</strong> : \(f(x) = f_1(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim\limits_{x \to -1^{+}} f(x) &= \lim\limits_{x \to 1^{+}} \dfrac{x^3
+                                                - 2x^2}{x^2 - 1}\\
+                                                &= \dfrac{-3}{0^{-}}\\
+                                                &= +\infty
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <div class="result-box">
+                                                $$ \mathbf{\lim\limits_{x \to -1^{+}} f(x) = +\infty } $$
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Déduisons-en l'existence d'une asymptote dont on précisera. <span
+                                            class="points">(0,25pt)</span></p>
+                                    <p>Comme \(\lim\limits_{x \to -1} f(x) = \infty\) donc \(x = -1\) est une asymptote
+                                        verticale.</p>
+                                    <div class="result-box">
+                                        $$ \mathbf{ \text{Donc } x = -1 \text{ est une asymptote verticale à }
+                                        (\mathcal{C}_f) } $$
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <ul>
+                                <li>
+                                    <p>Pour \(x \leq 0\), déterminons les réels \(a, b, c\) et \(d\) tels que : \(f(x) =
+                                        ax + b + \dfrac{cx + d}{x^2 - 1}\). <span class="points">(0,5pt)</span></p>
+
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        f(x) = ax + b + \dfrac{cx + d}{x^2 - 1} &\implies f(x) =
+                                        \dfrac{(ax+b)(x^2-1)+cx+d}{x^2-1}\\
+                                        &\implies f(x) = \dfrac{ax^3+bx^2-ax-b+cx+d}{x^2-1}\\
+                                        &\implies f(x) = \dfrac{ax^3+bx^2+(c-a)x+(d-b)}{x^2-1}
+                                        \end{aligned}
+                                        $$
+                                    </div>
+                                    <p>On a $\dfrac{x^3 - 2x^2}{x^2 - 1}=\dfrac{ax^3+bx^2+(c-a)x+(d-b)}{x^2-1}$ </p>
+                                    <p>Par identification :</p>
+
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \begin{cases} a = 1\\ b = -2\\ c-a = 0\\ d-b = 0 \end{cases}
+                                        &\implies \begin{cases} a = 1\\ b = -2\\ c-1 = 0\\ d+2 = 0 \end{cases}
+                                        &\implies \begin{cases} a = 1\\ b = -2\\ c = 1\\ d = -2 \end{cases}
+                                        \end{aligned}
+                                        $$
+                                    </div>
+
+                                    <p>Ainsi, \(f(x) = x - 2 + \dfrac{x - 2}{x^2 - 1}\).</p>
+                                </li>
+                                <li>
+                                    <p>Déduisons-en la nature de la branche infinie en \(-\infty\). <span
+                                            class="points">(0,25pt)</span></p>
+
+                                    <p>En posant \((\Delta_1): y = x - 2\), si \(\lim\limits_{x \to -\infty} f(x) - y =
+                                        0\)
+                                        alors \(y = x - 2\) est asymptote oblique.</p>
+
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \lim\limits_{x \to -\infty} f(x) - y &= \lim\limits_{x \to
+                                        -\infty}\dfrac{x-2}{x^2-1} \\
+                                        &= \lim\limits_{x \to -\infty} \dfrac{x}{x^2}\\
+                                        &= 0\\
+                                        \end{aligned}
+                                        $$
+                                    </div>
+
+                                    <p class="result-box">$$ \mathbf{ \text{Donc } (\Delta_1): y = x - 2 \text{ est une
+                                        asymptote oblique à
+                                        } (\mathcal{C}_f) \text{ en } -\infty } $$</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>Donner la nature de l'asymptote en \(+\infty\). <span class="points">(0,5pt)</span></p>
+
+                            <p>Comme \(\lim\limits_{x \to +\infty} f(x) = +\infty\)</p>
+
+                            <ul>
+                                <li>
+                                    <p>Cherchons \(\lim\limits_{x \to +\infty} \dfrac{f(x)}{x}\)</p>
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \lim\limits_{x \to +\infty} \dfrac{f(x)}{x} &= \lim\limits_{x \to +\infty}
+                                        \dfrac{x + \sqrt{x^2+x}}{x}\\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x\left(1 +
+                                        \sqrt{1+\dfrac{1}{x}}\right)}{x}\\
+                                        &= \lim\limits_{x \to +\infty} \left(1 + \sqrt{1+\dfrac{1}{x}}\right)\\
+                                        &= 2
+                                        \end{aligned}
+                                        $$
+                                    </div>
+                                    <p>Donc \( \lim\limits_{x \to +\infty} \dfrac{f(x)}{x} = 2\).</p>
+                                </li>
+                                <li>
+                                    <p>Cherchons \( \lim\limits_{x \to +\infty} f(x) - 2x\)</p>
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \lim\limits_{x \to +\infty} f(x)-2x &= \lim\limits_{x \to +\infty} x +
+                                        \sqrt{x^2+x}-2x\\
+                                        &= \lim\limits_{x \to +\infty} \sqrt{x^2+x}-x\\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x^2+x-x^2}{\sqrt{x^2+x}+x} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x}{\sqrt{x^2+x}+x} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x}{x\left(1 +
+                                        \sqrt{1+\dfrac{1}{x}}\right)} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{1}{\left(1 + \sqrt{1+\dfrac{1}{x}}\right)}
+                                        \\
+                                        &= \dfrac{1}{2}
+                                        \end{aligned}
+                                        $$
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="result-box">
+                                $$ \mathbf{ \text{Donc } (\Delta_2): y = 2x + \dfrac{1}{2} \text{ est une asymptote
+                                oblique à } (\mathcal{C}_f) \text{ en } +\infty } $$
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+
+                <!-- B.3 -->
+                <li>
+                    <ol type="a">
+                        <li>
+                            <p>Montrons que \(f\) est continue sur \(D_f\). <span class="points">(0,75pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>Continuité sur chaque intervalle</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Sur \(]-\infty,0]\setminus\{-1\}\)</strong></p>
+                                            <p>La fonction \(x \mapsto \dfrac{x^3-2x^2}{x^2-1}\) est une fonction
+                                                rationnelle. Elle est donc continue sur son domaine de définition
+                                                \(\mathbb{R}\setminus\{-1,1\}\). En particulier, elle est continue sur
+                                                \(]-\infty,0]\setminus\{-1\}\).</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Sur \(]0,+\infty[\)</strong></p>
+                                            <p>Pour tout \(x>0\), on a \(x^2+x>0\), donc la fonction \(x \mapsto
+                                                \sqrt{x^2+x}\) est bien définie et continue sur \(]0,+\infty[\). Ainsi,
+                                                la fonction \(x \mapsto x+\sqrt{x^2+x}\) étant somme de fonctions
+                                                continues, est continue sur \(]0,+\infty[\).</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Continuité en \(0\)</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>En \(0^-\)</strong> : \(f(x) = f_1(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim\limits_{x \to 0^-} f(x) &= \lim\limits_{x \to
+                                                0^-}\dfrac{x^3-2x^2}{x^2-1}\\
+                                                &= 0
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <p class="text-red">$\lim\limits_{x \to 0^-} f(x) = 0$</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>En \(0^+\)</strong> : \(f(x) = f_2(x)\)</p>
+                                            <div class="formula-center">
+                                                $$
+                                                \begin{aligned}
+                                                \lim\limits_{x \to 0^+} f(x) &= \lim\limits_{x \to 0^+}
+                                                \bigl(x+\sqrt{x^2+x}\bigr)\\
+                                                &=0
+                                                \end{aligned}
+                                                $$
+                                            </div>
+                                            <p class="text-red">$\lim\limits_{x \to 0^+} f(x) = 0$</p>
+                                        </li>
+                                    </ul>
+                                    <p>On a \(f(0) = \dfrac{0^3-2\cdot0^2}{0^2-1} = 0\)</p>
+                                    <p class="text-red">Finalement \(\lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to
+                                        0^+} f(x) =
+                                        f(0)\) donc \(f\) est continue en \(0\).</p>
+                                </li>
+                                <li>
+                                    <p><strong>Conclusion</strong></p>
+                                    <p>La fonction \(f\) est continue sur \(]-\infty,0]\setminus\{-1\}\), sur
+                                        \(]0,+\infty[\) et en \(0\).</p>
+                                    <div class="result-box">
+                                        $$ \mathbf{ \lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to 0^+} f(x) = f(0) =
+                                        0 \text{ donc
+                                        } f \text{ est continue sur } D_f = \mathbb{R}\setminus\{-1\}. } $$
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>Étudions la dérivabilité de \(f\) en \(0\) puis interprétons le résultat obtenu. <span
+                                    class="points">(1,5pt)</span></p>
+
+                            <ul>
+                                <li>
+                                    <p><strong>En \(0^-\)</strong> : \(f(x) = f_1(x)\)</p>
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \lim_{x \to 0^-} \dfrac{f(x)-f(0)}{x} &= \lim_{x \to 0^-}
+                                        \dfrac{\dfrac{x^3-2x^2}{x^2-1}}{x}\\
+                                        &= \lim_{x \to 0^-} \dfrac{x^3-2x^2}{x^3-x}\\
+                                        &= \lim_{x \to 0^-} \dfrac{x^2-2x}{x^2-1}\\
+                                        &= 0
+                                        \end{aligned}
+                                        $$
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>En \(0^+\)</strong> : \(f(x) = f_2(x)\)</p>
+                                    <div class="formula-center">
+                                        $$
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} &=\lim\limits_{x \to 0^+} \dfrac{x
+                                        + \sqrt{x^2+x}}{x}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{x^2-x^2-x}{x(x - \sqrt{x^2+x})}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{-x}{x(x - \sqrt{x^2+x})}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
+                                        &="\dfrac{-1}{0}"\\
+                                        \end{aligned}
+                                        $$
+                                    </div>
+                                    <p>Supposons que $ x - \sqrt{x^2+x} > 0 $</p>
+                                    <p>$ x - \sqrt{x^2+x} > 0 \implies \sqrt{x^2+x} < x $</p>
+
+                                            <p>$ \begin{aligned} \sqrt{x^2+x} < x &\implies \begin{cases} x^2+x> 0\\
+                                                    x > 0\\
+                                                    x^2+x < x^{2} \end{cases}\\ &\implies \begin{cases} x^2+x> 0\\
+                                                        x > 0\\
+                                                        x < 0 \end{cases}\\ \end{aligned} $</p>
+                                                            <p>$ \begin{aligned}
+                                                                \begin{cases}
+                                                                x^2+x=0\\ x=0 \end{cases}\implies \begin{cases} x=0
+                                                                \textbf{
+                                                                ou } x=-1\\
+                                                                x=0 \end{cases} \end{aligned} $</p>
+                                </li>
+                            </ul>
+                            <div class="image">
+                                <img src="images/tabSignes4.png" alt="Tableau des signes">
+                            </div>
+                            <p>$$ S = \emptyset $$</p>
+                            <p>Ainsi, il n'existe pas de $ x > 0 $ pour lequel $ x-\sqrt{x^2+x} > 0 $</p>
+                            <p>$$ \textbf{Donc } x-\sqrt{x^2+x} <0, \, \forall x\in ]0;+\infty[ $$</p>
+                                    <p class="text-red">Ainsi $\forall x\in ]0;+\infty[$ $f'(x)> 0 $ donc f est
+                                        croissant $0;+\infty[$</p>
+                                    <p>\(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} &=\lim\limits_{x \to 0^+}
+                                        \dfrac{-1}{(x
+                                        -
+                                        \sqrt{x^2+x})}\\
+                                        &=\dfrac{-1}{0^-}\\
+                                        &=+\infty \\
+                                        \end{aligned}
+                                        \)</p>
+                                    <p class="text-red">Autre Méthode</p>
+                                    +++++++++++++++++++++++++++++++++++++++++++++
+
+                                    <p>On calcule la dérivée à droite en $0$ :</p>
+                                    <p>\[
+                                        f'_+(0)=\lim_{x\to 0^+}\frac{f(x)-f(0)}{x}
+                                        =\lim_{x\to 0^+}\frac{x+\sqrt{x^2+x}}{x}.
+                                        \]</p>
+
+                                    <p>On écrit :</p>
+                                    <p>\[
+                                        \frac{x+\sqrt{x^2+x}}{x}
+                                        =1+\frac{\sqrt{x^2+x}}{x}.
+                                        \]</p>
+
+                                    <p>Or,
+                                        \[
+                                        \frac{\sqrt{x^2+x}}{x}
+                                        =\sqrt{\frac{x^2+x}{x^2}}
+                                        =\sqrt{1+\frac{1}{x}}.
+                                        \]</p>
+
+                                    <p>Lorsque $x\to 0^+$, on a $\dfrac{1}{x}\to +\infty$, donc
+                                        \[
+                                        \sqrt{1+\frac{1}{x}}\to +\infty.
+                                        \]</p>
+
+                                    <p>Ainsi,
+                                        \[
+                                        f'_+(0)=+\infty.
+                                        \]</p>
+
+                                    ++++++++++++++++++++++++++++++++++++++++++++++++
+                                    <div class="result-box">
+                                        $$ \mathbf{ \lim_{x \to 0^-} \dfrac{f(x)-f(0)}{x} = 0 \text{ et } \lim_{x \to
+                                        0^+}
+                                        \dfrac{f(x)-f(0)}{x} = +\infty } $$
+                                    </div>
+
+                                    <p><strong>Interprétation :</strong></p>
+                                    <ul>
+                                        <li><span class="text-red">\(f\) est dérivable à gauche de \(0\) et \(y = 2x\)
+                                                est
+                                                une
+                                                demi-tangente en \(0^-\)</span></li>
+                                        <li><span class="text-red">\(f\) n'est pas dérivable à droite de \(0\) donc
+                                                admet
+                                                une
+                                                demi-tangente orientée vers le haut en \(0^+\)</span></li>
+                                    </ul>
+                                    <p>Le point d'abscisse \(0\) est donc un point anguleux, ce qui explique la
+                                        non-dérivabilité
+                                        de \(f\) en \(0\).</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <!-- B.4 -->
+                <li>
+                    <p>Démontrons que : \(f(\alpha) = -2 + \dfrac{3(\alpha-2)}{\alpha^2 - 1}\). <span
+                            class="points">(0,5pt)</span></p>
+                    <p>$f(x) = \dfrac{x^3 - 2x^2}{x^2 - 1} \implies f(x) = \dfrac{\alpha^3 - 2\alpha^2}{\alpha^2 - 1} $
+                    </p>
+                    <p>Comme $g(\alpha) = 0 $ alos $ -\alpha^3 + 3\alpha - 4 = 0$ donc $\alpha^3 = 3\alpha - 4$</p>
+                    <div class="formula-center">
+                        Ainsi,<br>
+                        $$\begin{aligned}
+                        f(\alpha) = \dfrac{\alpha^3 - 2\alpha^2}{\alpha^2 - 1} &\implies f(\alpha) = \dfrac{\alpha^3 -
+                        2\alpha^2}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = \dfrac{3\alpha - 4 - 2\alpha^2}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = -\dfrac{2\alpha^2-3\alpha+4}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = -\dfrac{2(\alpha^2-1)-3(\alpha-2)}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = \dfrac{-2(\alpha^2-1)+3(\alpha-2)}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = \dfrac{-2(\alpha^2-1)}{\alpha^2 - 1}+\dfrac{3(\alpha-2)}{\alpha^2 - 1}\\
+                        &\implies f(\alpha) = -2+\dfrac{3(\alpha-2)}{\alpha^2 - 1}\\
+                        \end{aligned}$$
+                    </div>
+                </li>
+
+                <!-- B.5 -->
+                <li>
+                    <ol type="a">
+                        <li>
+                            <p>Montrons que \(\forall x \in ]-\infty; -1[ \cup ]-1; 0[\), on a : \(f'(x) =
+                                \dfrac{-xg(x)}{(x^2-1)^2}\) puis étudier son signe. <span class="points">(1pt)</span>
+                            </p>
+
+                            <p>Montrons que $\forall x \in ]-\infty; -1[ \cup ]-1; 0[$, on a :
+                                $f'(x) = \dfrac{-xg(x)}{(x^2-1)^2}$ $\textbf{(0,5pt)}$</p>
+
+                            On a : $ f'(x)=\dfrac{-xg(x)}{(x^2-1)^2} $
+
+                            <p>La fonction $f$ est dérivable sur $]-\infty,-1[ \cup ]-1,0[$ comme quotient de fonctions
+                                dérivables,
+                                avec $x^2-1\neq 0$ sur ces intervalles.</p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f'(x) &= \dfrac{(x^3-2x^2)'(x^2-1)-(x^3-2x^2)(x^2-1)'}{(x^2-1)^2}\\
+                                &= \dfrac{(3x^2-4x)(x^2-1)-(x^3-2x^2)(2x)}{(x^2-1)^2}.\\
+                                &= \dfrac{3x^4-3x^2-4x^3+4x-(2x^4-4x^3)}{(x^2-1)^2}\\
+                                &= \dfrac{x^4-3x^2+4x}{(x^2-1)^2}\\
+                                &= \dfrac{-x(-x^3+3x-4)}{(x^2-1)^2}\\
+                                &=\dfrac{-xg(x)}{(x^2-1)^2}
+                                \end{aligned}
+                                $$
+                            </div>
+                            <p>Ainsi,
+                                \(
+                                \forall x \in ]-\infty,-1[ \cup ]-1,0[, \quad
+                                f'(x)=\dfrac{-xg(x)}{(x^2-1)^2}.
+                                \) </p>
+                            <p><strong>Signe de \(f'(x)\)</strong></p>
+
+                            <ul>
+                                <li><span class="text-red">Si \(x \in ]-\infty, \alpha]\), \(f'(x) \geq 0\) donc \(f\)
+                                        est croissante sur \(]-\infty; \alpha]\).</span></li>
+                                <li><span class="text-red">Si \(x \in [\alpha, -1[ \cup ]-1, 0]\), \(f'(x) \leq 0\) donc
+                                        \(f\) est décroissante sur \([\alpha, -1[ \cup ]-1, 0]\).</span></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p>Calculons \(f'(x)\) sur \(]0; +\infty[\) et étudions son signe. <span
+                                    class="points">(0,75pt)</span></p>
+
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                f'(x) &= 1 + \dfrac{2x+1}{2\sqrt{x^2+x}}\\
+                                &= \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}
+                                \end{aligned}
+                                $$
+                            </div>
+
+                            <p>Si \(x > 0\), \(f'(x) = \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}\). Le signe dépend du
+                                numérateur.</p>
+
+                            <p><span class="text-red">Or \(2\sqrt{x^2+x}+2x+1 > 0\) pour tout \(x \in ]0;
+                                    +\infty[\).</span></p>
+                            <p><span class="text-red">Ainsi, pour tout \(x \in ]0; +\infty[\), \(f'(x) > 0\) donc \(f\)
+                                    est croissante sur \(]0; +\infty[\).</span></p>
+                        </li>
+
+                        <li>
+                            <p>Dressons le tableau de variation de \(f\) sur \(D_f\). <span
+                                    class="points">(0,75pt)</span></p>
+
+                            <div class="variation-table">
+                                <div class="row header">
+                                    <div class="cell">\(x\)</div>
+                                    <div class="cell">\(-\infty\)</div>
+                                    <div class="cell">\(\alpha\)</div>
+                                    <div class="cell">\(-1\)</div>
+                                    <div class="cell">\(0\)</div>
+                                    <div class="cell">\(+\infty\)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">\(f'(x)\)</div>
+                                    <div class="cell">+</div>
+                                    <div class="cell">0</div>
+                                    <div class="cell">-</div>
+                                    <div class="cell">||</div>
+                                    <div class="cell">-</div>
+                                    <div class="cell">||</div>
+                                    <div class="cell">+</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">\(f(x)\)</div>
+                                    <div class="cell">\(-\infty\)</div>
+                                    <div class="cell">\(\nearrow\)</div>
+                                    <div class="cell">\(f(\alpha)\)</div>
+                                    <div class="cell">\(\searrow\)</div>
+                                    <div class="cell">\(+\infty\)</div>
+                                    <div class="cell">||</div>
+                                    <div class="cell">\(-\infty\)</div>
+                                    <div class="cell">\(\nearrow\)</div>
+                                    <div class="cell">\(+\infty\)</div>
+                                </div>
+                                <div class="row" style="border-top: 2px solid var(--border-light);">
+                                    <div class="cell" colspan="7" style="font-size: 0.85rem; color: var(--text-muted);">
+                                        \(f(0) = 0\) &nbsp; (point de non dérivabilité)
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+
+                <!-- B.6 -->
+                <li>
+                    <p>Construisons soigneusement la courbe \((C_f)\). <span class="points">(0,75 pt)</span></p>
+
+                    <div class="figure-placeholder">
+                        <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de la fonction f</p>
+                        <p>Courbe représentative de \(f\) avec les asymptotes \((\Delta_1): y = x - 2\) et \((\Delta_2):
+                            y = 2x + \frac{1}{2}\)</p>
+                        <p style="font-size:0.85rem; margin-top:8px;">
+                            <a href="https://www.geogebra.org/classic/q97sf6ew" target="_blank">👉 Clique ici pour voir
+                                la courbe sur Geogebra</a>
+                        </p>
+                        <svg viewBox="0 0 500 300" width="500" height="300" style="margin-top: 12px;">
+                            <line x1="40" y1="260" x2="470" y2="260" stroke="#333" stroke-width="2" />
+                            <line x1="40" y1="260" x2="40" y2="20" stroke="#333" stroke-width="2" />
+                            <text x="460" y="280" font-size="12">x</text>
+                            <text x="25" y="25" font-size="12">y</text>
+                            <!-- Courbe -->
+                            <path d="M 60 250 Q 120 120 200 100 Q 250 80 300 60 Q 350 40 420 20" stroke="#dc2626"
+                                stroke-width="2.5" fill="none" />
+                            <!-- Asymptote 1 -->
+                            <line x1="60" y1="250" x2="250" y2="50" stroke="#2563eb" stroke-width="1.5"
+                                stroke-dasharray="5,5" />
+                            <text x="255" y="45" font-size="10" fill="#2563eb">Δ₁</text>
+                            <!-- Asymptote 2 -->
+                            <line x1="200" y1="120" x2="460" y2="20" stroke="#2563eb" stroke-width="1.5"
+                                stroke-dasharray="5,5" />
+                            <text x="445" y="15" font-size="10" fill="#2563eb">Δ₂</text>
+                            <!-- Point O -->
+                            <circle cx="160" cy="160" r="4" fill="#2563eb" />
+                            <text x="155" y="150" font-size="10" fill="#2563eb">O</text>
+                            <!-- Asymptote verticale x=-1 -->
+                            <line x1="120" y1="20" x2="120" y2="260" stroke="#7c3aed" stroke-width="1.5"
+                                stroke-dasharray="5,5" />
+                            <text x="110" y="15" font-size="10" fill="#7c3aed">x=-1</text>
+                        </svg>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROBLÈME - PARTIE C
+    ============================================================ -->
+    <section class="section">
+        <div class="problem-box">
+            <div class="part-label">Partie C : Bijection <span class="points">(1,75pts)</span></div>
+
+            <p>Soit \(h\) la restriction de \(f\) sur \(I = ]0; +\infty[\).</p>
+
+            <ol>
+                <li>
+                    <p>Montrons que \(h\) réalise une bijection de \(I\) vers un intervalle \(J\) à préciser. <span
+                            class="points">(0,25pt)</span></p>
+
+                    <p>Sur \(I\), \(h\) est continue et strictement croissante donc réalise une bijection de \(I\) vers
+                        \(J = [0, +\infty[\).</p>
+                    <p>Comme \(\forall x \in I\), \(h'(x) \neq 0\) donc \(h^{-1}\) est dérivable sur \(J\).</p>
+                </li>
+
+                <li>
+                    <p>Calculons \(h(1)\) et \((h^{-1})'(\sqrt{2}+1)\). <span class="points">(0,5pt)</span></p>
+
+                    <div class="formula-center">
+                        $$ h(x) = x + \sqrt{x^2+x} $$
+                    </div>
+
+                    <ul>
+                        <li>
+                            <p><strong>Calcul de \(h(1)\)</strong></p>
+                            <div class="formula-center">
+                                $$ h(1) = \sqrt{2} + 1 $$
+                            </div>
+                            <div class="result-box">
+                                $$ \mathbf{ h(1) = \sqrt{2} + 1 } $$
+                            </div>
+                        </li>
+                        <li>
+                            <p><strong>Calcul de \((h^{-1})'(\sqrt{2}+1)\)</strong></p>
+                            <div class="formula-center">
+                                $$ (h^{-1})'(\sqrt{2}+1) = \dfrac{1}{h'(h^{-1}(\sqrt{2}+1))} \quad \text{Or } h(1) =
+                                \sqrt{2}+1 \text{ donc } h^{-1}(\sqrt{2}+1) = 1 $$
+                            </div>
+                            <div class="formula-center">
+                                $$
+                                \begin{aligned}
+                                (h^{-1})'(\sqrt{2}+1) &= \dfrac{1}{h'(1)} \quad \text{comme } h'(x) = 1 +
+                                \dfrac{2x+1}{2\sqrt{x^2+x}}\\
+                                &= \dfrac{1}{1 + \dfrac{3}{2\sqrt{2}}}\\
+                                &= \dfrac{2\sqrt{2}}{2\sqrt{2}+3}
+                                \end{aligned}
+                                $$
+                            </div>
+                            <div class="result-box">
+                                $$ \mathbf{(h^{-1})'(\sqrt{2}+1) = \dfrac{2\sqrt{2}}{2\sqrt{2}+3}} $$
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <p>Explicitons \(h^{-1}(x)\). <span class="points">(0,5pt)</span></p>
+
+                    <p>Soit \(y = h(x) = x + \sqrt{x^2+x}\).</p>
+
+                    <p>On isole la racine : \(y - x = \sqrt{x^2+x}\).</p>
+
+                    <p>En élevant au carré : \((y-x)^2 = x^2+x\).</p>
+
+                    <div class="formula-center">
+                        $$ y^2 - 2xy + x^2 = x^2 + x $$
+                    </div>
+
+                    <p>En simplifiant : \(y^2 - 2xy = x\).</p>
+
+                    <p>On factorise par \(x\) : \(y^2 = x(1+2y)\).</p>
+
+                    <div class="result-box">
+                        $$ \mathbf{h^{-1}(x) = \dfrac{x^2}{1+2x}} $$
+                    </div>
+                </li>
+
+                <li>
+                    <p>Construisons \((C_{h^{-1}})\) dans le repère précédent. <span class="points">(0,5pt)</span></p>
+
+                    <div class="figure-placeholder">
+                        <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de \(h^{-1}\)</p>
+                        <p>Courbe représentative de la bijection réciproque</p>
+                        <p style="font-size:0.85rem; margin-top:8px;">
+                            <a href="https://www.geogebra.org/classic/q97sf6ew" target="_blank">👉 Clique ici pour voir
+                                la courbe sur Geogebra</a>
+                        </p>
+                        <svg viewBox="0 0 500 300" width="500" height="300" style="margin-top: 12px;">
+                            <line x1="40" y1="260" x2="470" y2="260" stroke="#333" stroke-width="2" />
+                            <line x1="40" y1="260" x2="40" y2="20" stroke="#333" stroke-width="2" />
+                            <text x="460" y="280" font-size="12">x</text>
+                            <text x="25" y="25" font-size="12">y</text>
+                            <!-- Courbe de h -->
+                            <path d="M 40 260 Q 80 200 150 160 Q 250 100 350 60 Q 420 30 460 20" stroke="#dc2626"
+                                stroke-width="2.5" fill="none" />
+                            <!-- Courbe de h^{-1} (symétrique) -->
+                            <path d="M 40 260 Q 80 200 150 160 Q 250 100 350 60 Q 420 30 460 20" stroke="#16a34a"
+                                stroke-width="2.5" stroke-dasharray="8,4" fill="none" />
+                            <!-- Ligne y=x -->
+                            <line x1="40" y1="260" x2="460" y2="20" stroke="#333" stroke-width="1"
+                                stroke-dasharray="3,3" />
+                            <text x="445" y="280" font-size="10" fill="#333">y=x</text>
+                            <text x="200" y="130" font-size="12" fill="#dc2626">(C_f)</text>
+                            <text x="380" y="90" font-size="12" fill="#16a34a">(C_{h^{-1}})</text>
+                        </svg>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <p>© 2024 - Correction Devoir n°2 - 1er Semestre - TS2 - Lycée de Dindéfélo</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Durée : 4 heures - Coefficient : 4</p>
+    </footer>
+
+</body>
+
+</html>
