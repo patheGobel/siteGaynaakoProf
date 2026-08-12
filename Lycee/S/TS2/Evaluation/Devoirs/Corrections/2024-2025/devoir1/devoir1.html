@@ -197,8 +197,8 @@
                             $$
                         </div>
                         <div class="green-box">
-                            $$\boxed{\lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x} = \frac{1}{4}} \quad \text{1
-                            point}$$
+                            $$\boxed{\lim\limits_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x} = \frac{1}{4}} \quad
+                            \text{1 point}$$
                         </div>
                     </div>
 
@@ -634,28 +634,28 @@
 
                             <p class="text-red text-bold">\(Df' = \mathbb{R}^*\)</p>
 
-                            <div class="formula-center">
-                                \[
+                            <p>\[
                                 f(x)=
                                 \begin{cases}
                                 \dfrac{x^2-2x}{x-1} & \text{si } x<0,\\[4mm] x + \sqrt{x^2+x} & \text{si } x\ge 0,
-                                    \end{cases} \qquad \text{et } (\mathcal{C}_f) \text{ sa courbe représentative dans
-                                    un repère orthonormé } (O,\vec{i},\vec{j}). \] \[ \begin{aligned}
-                                    f'(x)=\begin{cases} \dfrac{(2x-2)(x-1)-(x^2-2x)}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
-                                    1 + \dfrac{2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
-                                    \end{cases}&\implies
-                                    \begin{cases}
-                                    \dfrac{2x^2-2x-2x+2-x^2+2x}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
-                                        \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
-                                        \end{cases}\\
-                                        &\implies
-                                        \begin{cases}
-                                        \dfrac{x^2-2x+2}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
-                                            \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
-                                            \end{cases}
-                                            \end{aligned}
-                                            \]
-                            </div>
+                                    \end{cases} \qquad \text{et } (\mathcal{C}_f) \text{ sa courbe représentative dans}
+                                    \text{ un repère orthonormé } (O,\vec{i},\vec{j}). \] </p>
+
+                                    <p>\[ \begin{aligned} f'(x)=\begin{cases}
+                                        \dfrac{(2x-2)(x-1)-(x^2-2x)}{(x-1)^{2}} & \text{si } x<0,\\[4mm] 1 +
+                                            \dfrac{2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                            \end{cases}&\implies
+                                            \begin{cases}
+                                            \dfrac{2x^2-2x-2x+2-x^2+2x}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
+                                                \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                                \end{cases}\\
+                                                &\implies
+                                                \begin{cases}
+                                                \dfrac{x^2-2x+2}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
+                                                    \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                                    \end{cases}
+                                                    \end{aligned}
+                                                    \]</p>
                         </li>
 
                         <!-- Question 7 -->
@@ -738,123 +738,128 @@
                             </div>
                         </li>
                     </ol>
-            <!-- ============================================================
+                    <!-- ============================================================
     PROBLÈME - PARTIE B
     ============================================================ -->
 
-            <div class="part-label">Partie B</div>
-            <p>Soit \(h\) la restriction de \(f\) à l'intervalle \(I = [0; +\infty[\).</p>
+                    <div class="part-label">Partie B</div>
+                    <p>Soit \(h\) la restriction de \(f\) à l'intervalle \(I = [0; +\infty[\).</p>
 
-            <ol>
-                <!-- Question 1 -->
-                <li>
-                    <p>Montrons que \(h\) réalise une bijection de \(I\) dans un intervalle \(J\) que l'on précisera.
-                        <span class="points">(0,25 pt)</span>
-                    </p>
+                    <ol>
+                        <!-- Question 1 -->
+                        <li>
+                            <p>Montrons que \(h\) réalise une bijection de \(I\) dans un intervalle \(J\) que l'on
+                                précisera.
+                                <span class="points">(0,25 pt)</span>
+                            </p>
 
-                    <p>Sur \(I\), \(h\) est continue et strictement croissante donc réalise une bijection de \(I\) vers
-                    </p>
-                    <div class="green-box">
-                        $$J = [0; +\infty[$$
-                    </div>
-                </li>
+                            <p>Sur \(I\), \(h\) est continue et strictement croissante donc réalise une bijection de
+                                \(I\) vers
+                            </p>
+                            <div class="green-box">
+                                $$J = [0; +\infty[$$
+                            </div>
+                        </li>
 
-                <!-- Question 2 -->
-                <li>
-                    <p>La bijection réciproque \(h^{-1}\) est-elle dérivable sur \(J\) ? <span class="points">(0,25
-                            pt)</span></p>
+                        <!-- Question 2 -->
+                        <li>
+                            <p>La bijection réciproque \(h^{-1}\) est-elle dérivable sur \(J\) ? <span
+                                    class="points">(0,25
+                                    pt)</span></p>
 
-                    <p>Comme \(\forall x \in I\), \(h'(x) \neq 0\) donc \(h^{-1}\) est dérivable sur \(J\).</p>
-                </li>
+                            <p>Comme \(\forall x \in I\), \(h'(x) \neq 0\) donc \(h^{-1}\) est dérivable sur \(J\).</p>
+                        </li>
 
-                <!-- Question 3 -->
-                <li>
-                    <p>Calculons \(h\left(\frac{4}{5}\right)\) puis \((h^{-1})'(2)\). <span class="points">(0,5
-                            pt)</span></p>
+                        <!-- Question 3 -->
+                        <li>
+                            <p>Calculons \(h\left(\frac{4}{5}\right)\) puis \((h^{-1})'(2)\). <span class="points">(0,5
+                                    pt)</span></p>
 
-                    <div class="correction-box">
-                        <p><strong>Calcul de \(h\left(\frac{4}{5}\right)\) :</strong></p>
-                        <div class="formula-center">
-                            \(
-                            \begin{aligned}
-                            h\!\left(\frac{4}{5}\right)
-                            &= \frac{4}{5} + \sqrt{\left(\frac{4}{5}\right)^2 + \frac{4}{5}}\\
-                            &= \frac{4}{5} + \sqrt{\frac{16}{25} + \frac{20}{25}}\\
-                            &= \frac{4}{5} + \frac{6}{5}\\
-                            &= \frac{10}{5}\\
-                            &= 2
-                            \end{aligned}
-                            \)
-                        </div>
-                        <div class="green-box">
-                            $$\boxed{h\left(\frac{4}{5}\right) = 2}$$
-                        </div>
-                    </div>
+                            <div class="correction-box">
+                                <p><strong>Calcul de \(h\left(\frac{4}{5}\right)\) :</strong></p>
+                                <div class="formula-center">
+                                    \(
+                                    \begin{aligned}
+                                    h\!\left(\frac{4}{5}\right)
+                                    &= \frac{4}{5} + \sqrt{\left(\frac{4}{5}\right)^2 + \frac{4}{5}}\\
+                                    &= \frac{4}{5} + \sqrt{\frac{16}{25} + \frac{20}{25}}\\
+                                    &= \frac{4}{5} + \frac{6}{5}\\
+                                    &= \frac{10}{5}\\
+                                    &= 2
+                                    \end{aligned}
+                                    \)
+                                </div>
+                                <div class="green-box">
+                                    $$\boxed{h\left(\frac{4}{5}\right) = 2}$$
+                                </div>
+                            </div>
 
-                    <div class="correction-box">
-                        <p><strong>Calcul de \((h^{-1})'(2)\) :</strong></p>
-                        <p>$(h^{-1})'(2) = \dfrac{1}{h'\left(\frac{4}{5}\right)}$</p>
-                        <p>Or $h'(x)=\dfrac{1}{\dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}}$ donc
-                            $h'(2)=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}$
-                        </p>
+                            <div class="correction-box">
+                                <p><strong>Calcul de \((h^{-1})'(2)\) :</strong></p>
+                                <p>$(h^{-1})'(2) = \dfrac{1}{h'\left(\frac{4}{5}\right)}$</p>
+                                <p>Or $h'(x)=\dfrac{1}{\dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}}$ donc
+                                    $h'(2)=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}$
+                                </p>
 
-                        <p>
-                            \(
-                            \begin{aligned}
-                            (h^{-1})'(2)
-                            &= \dfrac{1}{h'\!\left(\frac{4}{5}\right)}\\[0.2cm]
-                            &=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}\\[0.2cm]
-                            &=\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}
-                            {2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}\\[0.2cm]
-                            &=\dfrac{2\cdot \frac{6}{5}}{2\cdot \frac{6}{5} + \frac{8}{5} + 1}\\[0.2cm]
-                            &=\dfrac{\frac{12}{5}}{\frac{12}{5}+\frac{8}{5}+\frac{5}{5}}\\[0.2cm]
-                            &=\dfrac{\frac{12}{5}}{\frac{25}{5}}\\[0.2cm]
-                            &=\dfrac{12}{25}
-                            \end{aligned}
-                            \)
-                        </p>
-                        <div class="green-box">
-                            $$\boxed{(h^{-1})'(2) = \frac{12}{25}}$$
-                        </div>
-                    </div>
-                </li>
+                                <p>
+                                    \(
+                                    \begin{aligned}
+                                    (h^{-1})'(2)
+                                    &= \dfrac{1}{h'\!\left(\frac{4}{5}\right)}\\[0.2cm]
+                                    &=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}\\[0.2cm]
+                                    &=\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}
+                                    {2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}\\[0.2cm]
+                                    &=\dfrac{2\cdot \frac{6}{5}}{2\cdot \frac{6}{5} + \frac{8}{5} + 1}\\[0.2cm]
+                                    &=\dfrac{\frac{12}{5}}{\frac{12}{5}+\frac{8}{5}+\frac{5}{5}}\\[0.2cm]
+                                    &=\dfrac{\frac{12}{5}}{\frac{25}{5}}\\[0.2cm]
+                                    &=\dfrac{12}{25}
+                                    \end{aligned}
+                                    \)
+                                </p>
+                                <div class="green-box">
+                                    $$\boxed{(h^{-1})'(2) = \frac{12}{25}}$$
+                                </div>
+                            </div>
+                        </li>
 
-                <!-- Question 4 -->
-                <li>
-                    <p>Construction de \((\mathcal{C}_{h^{-1}})\) la courbe représentative de \(h^{-1}\) dans le même
-                        repère. <span class="points">(0,5 pt)</span></p>
+                        <!-- Question 4 -->
+                        <li>
+                            <p>Construction de \((\mathcal{C}_{h^{-1}})\) la courbe représentative de \(h^{-1}\) dans le
+                                même
+                                repère. <span class="points">(0,5 pt)</span></p>
 
-                    <div class="figure-placeholder">
-                        <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de \(h^{-1}\)</p>
-                        <p>Courbe représentative de la bijection réciproque</p>
-                        <p style="font-size:0.85rem; margin-top:8px;">
-                            <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici pour voir
-                                la courbe sur Geogebra</a>
-                        </p>
-                        <img src="images/courbe2.png" alt="image" class="image-center"
-                            style="max-width: auto; height: auto;">
-                    </div>
-                </li>
+                            <div class="figure-placeholder">
+                                <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de \(h^{-1}\)</p>
+                                <p>Courbe représentative de la bijection réciproque</p>
+                                <p style="font-size:0.85rem; margin-top:8px;">
+                                    <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici
+                                        pour voir
+                                        la courbe sur Geogebra</a>
+                                </p>
+                                <img src="images/courbe2.png" alt="image" class="image-center"
+                                    style="max-width: auto; height: auto;">
+                            </div>
+                        </li>
 
-                <!-- Question 5 -->
-                <li>
-                    <p>Exprimons \(h^{-1}(x)\) pour tout \(x \in J\). <span class="points">(0,5 pt)</span></p>
+                        <!-- Question 5 -->
+                        <li>
+                            <p>Exprimons \(h^{-1}(x)\) pour tout \(x \in J\). <span class="points">(0,5 pt)</span></p>
 
-                    <div class="correction-box">
-                        <p>Soit \(y = h(x) = x + \sqrt{x^2+x}\).</p>
-                        <p>On isole la racine : \(y - x = \sqrt{x^2+x}\).</p>
-                        <p>En élevant au carré : \((y-x)^2 = x^2+x\).</p>
-                        <p>\(y^2 - 2xy + x^2 = x^2 + x\).</p>
-                        <p>En simplifiant : \(y^2 - 2xy = x\).</p>
-                        <p>On factorise par \(x\) : \(y^2 = x(1+2y)\).</p>
-                        <p>D'où :</p>
-                        <div class="green-box">
-                            $$\boxed{h^{-1}(x) = \frac{x^2}{1+2x}}$$
-                        </div>
-                    </div>
-                </li>
-            </ol>
-        </div>
+                            <div class="correction-box">
+                                <p>Soit \(y = h(x) = x + \sqrt{x^2+x}\).</p>
+                                <p>On isole la racine : \(y - x = \sqrt{x^2+x}\).</p>
+                                <p>En élevant au carré : \((y-x)^2 = x^2+x\).</p>
+                                <p>\(y^2 - 2xy + x^2 = x^2 + x\).</p>
+                                <p>En simplifiant : \(y^2 - 2xy = x\).</p>
+                                <p>On factorise par \(x\) : \(y^2 = x(1+2y)\).</p>
+                                <p>D'où :</p>
+                                <div class="green-box">
+                                    $$\boxed{h^{-1}(x) = \frac{x^2}{1+2x}}$$
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+            </div>
     </section>
     <!-- ============================================================
     FOOTER
