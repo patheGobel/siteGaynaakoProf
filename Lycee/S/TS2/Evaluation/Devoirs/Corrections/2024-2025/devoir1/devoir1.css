@@ -161,6 +161,7 @@ b {
     border-radius: 4px;
     font-size: 0.8rem;
     margin-bottom: 8px;
+    margin-right: 450px;
 }
 .points {
     color: var(--text-muted);
