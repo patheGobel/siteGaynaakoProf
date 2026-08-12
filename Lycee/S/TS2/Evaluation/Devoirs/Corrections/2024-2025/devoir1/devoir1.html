@@ -306,16 +306,16 @@
             </ol>
         </div>
     </section>
-
     <!-- ============================================================
+    PROBLÈME
+    ============================================================ -->
+    <section class="sectionn">
+        <div class="problem-box">
+            <div class="problem-number">Problème : 9,5 points</div>
+            <!-- ============================================================
     PROBLÈME - PARTIE A
     ============================================================ -->
-    <section class="section">
-        <div class="problem-box">
-            <div class="problem-title">Problème : 9,5 points</div>
-
             <div class="part-label">Partie A</div>
-
             <p>Soit la fonction \(f\) définie par :</p>
             <div class="systeme-box">
                 $f(x) = \begin{cases}
@@ -341,7 +341,8 @@
                                         <li>
                                             <p>\(f_2\) existe ssi \(x^2 + x \ge 0\) et \(x \ge 0\)</p>
                                             <p>\(x^2 + x = 0 \implies x = 0\) ou \(x = -1\)</p>
-                                            <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                                            <img src="images/tabSigne1.png" alt="image" class="image-center"
+                                                style="max-width: auto; height: auto;">
                                             <p class="text-red text-bold">\(Df_2 = [0 ; +\infty[\)</p>
                                         </li>
                                     </ul>
@@ -364,18 +365,32 @@
                                 <li>
                                     <p><strong>En \(-\infty\) :</strong> \(f(x) = f_1(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to -\infty} f(x) = \lim_{x \to -\infty} \frac{x^2-2x}{x-1} = \lim_{x
-                                        \to -\infty} \frac{x^2}{x} = \lim_{x \to -\infty} x = -\infty$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to -\infty} f(x) &= \lim\limits_{x \to -\infty}
+                                        \dfrac{x^2-2x}{x-1}\\
+                                        &= \lim\limits_{x \to -\infty} \dfrac{x^2}{x}\\
+                                        &= \lim\limits_{x \to -\infty} x\\
+                                        &= -\infty
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <p class="text-red text-bold">\(\lim_{x \to -\infty} f(x) = -\infty\) <span
+                                    <p class="text-red text-bold">\(\lim\limits_{x \to -\infty} f(x) = -\infty\) <span
                                             class="points">(0,25 pt)</span></p>
                                 </li>
                                 <li>
                                     <p><strong>En \(+\infty\) :</strong> \(f(x) = f_2(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} x + \sqrt{x^2+x} = +\infty$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to +\infty} f(x) &= \lim\limits_{x \to +\infty} x +
+                                        \sqrt{x^2+x}\\
+                                        &= \lim\limits_{x \to +\infty} x + \sqrt{x^2+x}\\
+                                        &= +\infty
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <p class="text-red text-bold">\(\lim_{x \to +\infty} f(x) = +\infty\) <span
+                                    <p class="text-red text-bold">\(\lim\limits_{x \to +\infty} f(x) = +\infty\) <span
                                             class="points">(0,25 pt)</span></p>
                                 </li>
                             </ul>
@@ -392,21 +407,32 @@
                                 <li>
                                     <p><strong>En \(0^-\) :</strong> \(f(x) = f_1(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \frac{x^2-2x}{x-1} = 0$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^-} f(x) &= \lim\limits_{x \to 0^-} \dfrac{x^2-2x}{x-1}\\
+                                        &= 0
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <p class="text-red">\(\lim_{x \to 0^-} f(x) = 0\)</p>
+                                    <p class="text-red">\(\lim\limits_{x \to 0^-} f(x) = 0\)</p>
                                 </li>
                                 <li>
                                     <p><strong>En \(0^+\) :</strong> \(f(x) = f_2(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x + \sqrt{x^2+x} = 0$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^+} f(x) &= \lim\limits_{x \to 0^+} x + \sqrt{x^2+x}\\
+                                        &=0
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <p class="text-red">\(\lim_{x \to 0^+} f(x) = 0\)</p>
+                                    <p class="text-red">\(\lim\limits_{x \to 0^+} f(x) = 0\)</p>
                                 </li>
                             </ul>
 
                             <p>On a \(f(0) = 0\)</p>
-                            <p class="text-red text-bold">Finalement \(\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x) =
+                            <p class="text-red text-bold">Finalement \(\lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to
+                                0^+} f(x) =
                                 f(0)\) donc \(f\) est continue en \(0\)</p>
 
                             <p><strong>Étudions la dérivabilité de \(f\) en \(0\)</strong></p>
@@ -415,9 +441,15 @@
                                 <li>
                                     <p><strong>En \(0^-\) :</strong> \(f(x) = f_1(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to 0^-} \frac{f(x)-f(0)}{x} = \lim_{x \to 0^-}
-                                        \frac{\frac{x^2-2x}{x-1}}{x} = \lim_{x \to 0^-} \frac{x^2-2x}{x^2-x} = \lim_{x
-                                        \to 0^-} \frac{x-2}{x-1} = 2$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^-} \dfrac{f(x)-f(0)}{x} &= \lim\limits_{x \to 0^-}
+                                        \dfrac{\dfrac{x^2-2x}{x-1}}{x}\\
+                                        &= \lim\limits_{x \to 0^-} \dfrac{x^2-2x}{x^2-x}\\
+                                        &= \lim\limits_{x \to 0^-} \dfrac{x-2}{x-1}\\
+                                        &=2
+                                        \end{aligned}
+                                        \)
                                     </div>
                                     <p class="text-red">\(f\) est dérivable à gauche de \(0\) et \(y = 2x\) est une
                                         demi-tangente en \(0^-\)</p>
@@ -425,14 +457,53 @@
                                 <li>
                                     <p><strong>En \(0^+\) :</strong> \(f(x) = f_2(x)\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to 0^+} \frac{f(x)-f(0)}{x} = \lim_{x \to 0^+} \frac{x +
-                                        \sqrt{x^2+x}}{x}$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} &=\lim\limits_{x \to 0^+} \dfrac{x
+                                        + \sqrt{x^2+x}}{x}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{x^2-x^2-x}{x(x - \sqrt{x^2+x})}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{-x}{x(x - \sqrt{x^2+x})}\\
+                                        &=\lim\limits_{x \to 0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
+                                        &="\dfrac{-1}{0}"\\
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <div class="formula-center">
-                                        $$= \lim_{x \to 0^+} \frac{-1}{x - \sqrt{x^2+x}} = \frac{-1}{0^-} = +\infty$$
-                                    </div>
-                                    <p class="text-red">\(f\) n'est pas dérivable à droite de \(0\) donc admet une
-                                        demi-tangente orientée vers le haut en \(0^+\)</p>
+                                    <p>Supposons que $ x - \sqrt{x^2+x} > 0 $</p>
+                                    <p>$ x - \sqrt{x^2+x} > 0 \implies \sqrt{x^2+x} < x $</p>
+                                            <p>$ \begin{aligned} \sqrt{x^2+x} < x &\implies \begin{cases} x^2+x> 0\\
+                                                    x > 0\\
+                                                    x^2+x < x^{2} \end{cases}\\ &\implies \begin{cases} x^2+x> 0\\
+                                                        x > 0\\
+                                                        x < 0 \end{cases}\\ \end{aligned} $</p>
+                                                            <p>$ \begin{aligned}
+                                                                \begin{cases}
+                                                                x^2+x=0\\ x=0 \end{cases}\implies \begin{cases} x=0
+                                                                \textbf{ ou
+                                                                } x=-1\\
+                                                                x=0 \end{cases} \end{aligned} $ </p>
+                                                            <img src="images/tabSigne2.png" alt="image"
+                                                                class="image-center"
+                                                                style="max-width: auto; height: auto;">
+                                                            <p>$$ S = \emptyset $$ Ainsi, il n'existe pas de $ x > 0 $
+                                                                pour lequel $ x-\sqrt{x^2+x} > 0 $</p>
+                                                            <p>$$ \textbf{Donc } x-\sqrt{x^2+x} <0, \, \forall x\in
+                                                                    ]0;+\infty[ $$</p>
+                                                                    <p class="text-red">Ainsi $\forall x\in ]0;+\infty[$
+                                                                        $f'(x) > 0 $ donc f est croissant $0;+\infty[$
+                                                                    </p>
+                                                                    <p>\(
+                                                                        \begin{aligned}
+                                                                        \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x}
+                                                                        &=\lim\limits_{x \to 0^+} \dfrac{-1}{(x -
+                                                                        \sqrt{x^2+x})}\\
+                                                                        &=\dfrac{-1}{0^-}\\
+                                                                        &=+\infty \\
+                                                                        \end{aligned}
+                                                                        \)</p>
+                                                                    <p class="text-red">$f$ n'est pas dérivable à droite
+                                                                        de $0$ donc admet une démi-tangent orientée vers
+                                                                        le haut en $0^+$</p>
+
                                 </li>
                             </ul>
                         </li>
@@ -445,24 +516,37 @@
                                         \(\Delta_1\) dont on déterminera l'équation. <span class="points">(0,5
                                             pt)</span></p>
 
-                                    <p>Comme \(\lim_{x \to -\infty} f(x) = -\infty\)</p>
+                                    <p>Comme \( \lim\limits_{x \to -\infty} f(x) = -\infty \)</p>
 
                                     <ul>
                                         <li>
-                                            <p>Cherchons \(\lim_{x \to -\infty} \frac{f(x)}{x}\)</p>
+                                            <p>Cherchons \( \lim\limits_{x \to -\infty} \dfrac{f(x)}{x} \)</p>
                                             <div class="formula-center">
-                                                $$\lim_{x \to -\infty} \frac{f(x)}{x} = \lim_{x \to -\infty}
-                                                \frac{\frac{x^2-2x}{x-1}}{x} = \lim_{x \to -\infty} \frac{x^2-2x}{x^2-x}
-                                                = \lim_{x \to -\infty} \frac{x^2}{x^2} = 1$$
+                                                \(
+                                                \begin{aligned}
+                                                \lim\limits_{x \to -\infty} \dfrac{f(x)}{x} &= \lim\limits_{x \to
+                                                -\infty} \dfrac{\dfrac{x^2-2x}{x-1}}{x}\\
+                                                &= \lim\limits_{x \to -\infty} \dfrac{x^2-2x}{x^2-x}\\
+                                                &= \lim\limits_{x \to -\infty} \dfrac{x^2}{x^2}\\
+                                                &= 1
+                                                \end{aligned}
+                                                \)
                                             </div>
-                                            <p>Donc \(\lim_{x \to -\infty} \frac{f(x)}{x} = 1\)</p>
+                                            <p>Donc \( \lim\limits_{x \to -\infty} \dfrac{f(x)}{x} = 1 \)</p>
                                         </li>
                                         <li>
-                                            <p>Cherchons \(\lim_{x \to -\infty} f(x) - x\)</p>
+                                            <p>Cherchons \( \lim\limits_{x \to -\infty} f(x)-x \)</p>
                                             <div class="formula-center">
-                                                $$\lim_{x \to -\infty} f(x) - x = \lim_{x \to -\infty}
-                                                \frac{x^2-2x}{x-1} - x = \lim_{x \to -\infty} \frac{-x}{x-1} = \lim_{x
-                                                \to -\infty} \frac{-x}{x} = -1$$
+                                                \(
+                                                \begin{aligned}
+                                                \lim\limits_{x \to -\infty} f(x)-x &= \lim\limits_{x \to -\infty}
+                                                \dfrac{x^2-2x}{x-1}-x\\
+                                                &= \lim\limits_{x \to -\infty} \dfrac{x^2-2x-x^2+x}{x-1}\\
+                                                &= \lim\limits_{x \to -\infty} \dfrac{-x}{x-1}\\
+                                                &= \lim\limits_{x \to -\infty} \dfrac{-x}{x}\\
+                                                &= -1
+                                                \end{aligned}
+                                                \)
                                             </div>
                                         </li>
                                     </ul>
@@ -476,10 +560,19 @@
 
                                     <p>Étudions le signe de \(f(x) - y\)</p>
                                     <div class="formula-center">
-                                        $$f(x) - y = f(x) - (x-1) = \frac{x^2-2x}{x-1} - (x-1) = -\frac{1}{x-1}$$
+                                        \(
+                                        \begin{aligned}
+                                        f(x)-y &= f(x)-(x-1)\\
+                                        &= \dfrac{x^2-2x}{x-1}-(x-1)\\
+                                        &= x-1-\dfrac{1}{x-1}-x+1\\
+                                        &= -\dfrac{1}{x-1}\\
+                                        \end{aligned}
+                                        \)
                                     </div>
-
-                                    <p>Sur \(]-\infty; 0[\), \(f(x) - y > 0\) donc \((\mathcal{C}_f)\) est au-dessus de
+                                    <img src="images/tabSigne3.png" alt="image" class="image-center"
+                                        style="max-width: auto; height: auto;">
+                                    <p class="text-red">Sur \(]-\infty; 0[\), \(f(x) - y > 0\) donc \((\mathcal{C}_f)\)
+                                        est au-dessus de
                                         \((\Delta_1)\)</p>
                                 </li>
                             </ol>
@@ -490,23 +583,42 @@
                             <p>Montrons que \((\mathcal{C}_f)\) admet en \(+\infty\) une asymptote oblique \(\Delta_2\)
                                 dont on déterminera l'équation. <span class="points">(0,5 pt)</span></p>
 
-                            <p>Comme \(\lim_{x \to +\infty} f(x) = +\infty\)</p>
+                            <p>Comme \(\lim\limits_{x \to +\infty} f(x) = +\infty\)</p>
 
                             <ul>
                                 <li>
-                                    <p>Cherchons \(\lim_{x \to +\infty} \frac{f(x)}{x}\)</p>
+                                    <p>Cherchons \(\lim\limits_{x \to +\infty} \frac{f(x)}{x}\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to +\infty} \frac{f(x)}{x} = \lim_{x \to +\infty} \frac{x +
-                                        \sqrt{x^2+x}}{x} = \lim_{x \to +\infty} \left(1 + \sqrt{1+\frac{1}{x}}\right) =
-                                        2$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to +\infty} \dfrac{f(x)}{x} &= \lim\limits_{x \to +\infty}
+                                        \dfrac{x + \sqrt{x^2+x}}{x}\\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x\left(1 +
+                                        \sqrt{1+\dfrac{1}{x}}\right)}{x}\\
+                                        &= \lim\limits_{x \to +\infty} \left(1 + \sqrt{1+\dfrac{1}{x}}\right)\\
+                                        &= 2
+                                        \end{aligned}
+                                        \)
                                     </div>
-                                    <p>Donc \(\lim_{x \to +\infty} \frac{f(x)}{x} = 2\)</p>
+                                    <p>Donc \(\lim\limits_{x \to +\infty} \frac{f(x)}{x} = 2\)</p>
                                 </li>
                                 <li>
-                                    <p>Cherchons \(\lim_{x \to +\infty} f(x) - 2x\)</p>
+                                    <p>Cherchons \(\lim\limits_{x \to +\infty} f(x) - 2x\)</p>
                                     <div class="formula-center">
-                                        $$\lim_{x \to +\infty} f(x) - 2x = \lim_{x \to +\infty} \sqrt{x^2+x} - x =
-                                        \lim_{x \to +\infty} \frac{x}{\sqrt{x^2+x} + x} = \frac{1}{2}$$
+                                        \(
+                                        \begin{aligned}
+                                        \lim\limits_{x \to +\infty} f(x)-2x &= \lim\limits_{x \to +\infty} x +
+                                        \sqrt{x^2+x}-2x\\
+                                        &= \lim\limits_{x \to +\infty} \sqrt{x^2+x}-x\\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x^2+x-x^2}{\sqrt{x^2+x}+x} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x}{\sqrt{x^2+x}+x} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{x}{x\left(1 +
+                                        \sqrt{1+\dfrac{1}{x}}\right)} \\
+                                        &= \lim\limits_{x \to +\infty} \dfrac{1}{\left(1 + \sqrt{1+\dfrac{1}{x}}\right)}
+                                        \\
+                                        &= \dfrac{1}{2}
+                                        \end{aligned}
+                                        \)
                                     </div>
                                 </li>
                             </ul>
@@ -523,10 +635,26 @@
                             <p class="text-red text-bold">\(Df' = \mathbb{R}^*\)</p>
 
                             <div class="formula-center">
-                                $$f'(x) = \begin{cases}
-                                \dfrac{x^2-2x+2}{(x-1)^2} & \text{si } x < 0, \\[4mm]
-                                    \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0
-                                    \end{cases}$$
+                                \[
+                                f(x)=
+                                \begin{cases}
+                                \dfrac{x^2-2x}{x-1} & \text{si } x<0,\\[4mm] x + \sqrt{x^2+x} & \text{si } x\ge 0,
+                                    \end{cases} \qquad \text{et } (\mathcal{C}_f) \text{ sa courbe représentative dans
+                                    un repère orthonormé } (O,\vec{i},\vec{j}). \] \[ \begin{aligned}
+                                    f'(x)=\begin{cases} \dfrac{(2x-2)(x-1)-(x^2-2x)}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
+                                    1 + \dfrac{2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                    \end{cases}&\implies
+                                    \begin{cases}
+                                    \dfrac{2x^2-2x-2x+2-x^2+2x}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
+                                        \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                        \end{cases}\\
+                                        &\implies
+                                        \begin{cases}
+                                        \dfrac{x^2-2x+2}{(x-1)^{2}} & \text{si } x<0,\\[4mm]
+                                            \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} & \text{si } x> 0,
+                                            \end{cases}
+                                            \end{aligned}
+                                            \]
                             </div>
                         </li>
 
@@ -545,14 +673,15 @@
                                 <li>
                                     <p>Si \(x > 0\), \(f'(x) = \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}\). Le signe
                                         dépend du numérateur.</p>
-                                    <p class="text-red text-bold">Or \(2\sqrt{x^2+x}+2x+1 > 0\) pour tout \(x \in ]0;
+                                    <p>Or \(2\sqrt{x^2+x}+2x+1 > 0\) pour tout \(x \in ]0;
                                         +\infty[\)</p>
                                     <p class="text-red text-bold">Ainsi, pour tout \(x \in ]0; +\infty[\), \(f'(x) > 0\)
                                         donc \(f\) est croissante sur \(]0; +\infty[\)</p>
                                 </li>
                             </ul>
 
-                            <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                            <img src="images/tabSigne4.png" alt="image" class="image-center"
+                                style="max-width: auto; height: auto;">
                         </li>
 
                         <!-- Question 8 -->
@@ -568,20 +697,24 @@
                                                 <li>Avec \((oy)\) : résolvons \(f(x) = 0\)</li>
                                             </ul>
                                             <div class="formula-center">
-                                                $$f(x) = 0 \implies x = 0 \text{ ou } x = 2 \text{ (or } x < 0 \text{)}
-                                                    \implies \text{pas de solution}$$ </div>
+                                                $
+                                                \begin{aligned}
+                                                f(x)=0 &\implies \dfrac{x^2-2x}{x-1} = 0\\
+                                                &\implies x= 0 \text{ ou } x=2 \text{ Or } x<0\\ \end{aligned} $ </div>
                                 </li>
                                 <li>
                                     <p>Pour \(x \ge 0\), \(f(x) = x + \sqrt{x^2+x}\)</p>
                                     <ul>
                                         <li>Avec \((ox)\) : \(f(0) = 0\)</li>
-                                        <li>Avec \((oy)\) : résolvons \(f(x) = 0\)</li>
+                                        <li>Avec \((oy)\) : résolvons \(f(x) = 0\) \(
+                                            \implies x+\sqrt{x^2+x}=0.
+                                            \)</li>
                                     </ul>
                                     <div class="formula-center">
-                                        $$x + \sqrt{x^2+x} = 0 \implies \sqrt{x^2+x} = -x$$
+                                        $x + \sqrt{x^2+x} = 0 \implies \sqrt{x^2+x} = -x$
                                     </div>
                                     <div class="formula-center">
-                                        $$x^2+x = x^2 \implies x = 0$$
+                                        $x^2+x = x^2 \implies x = 0$
                                     </div>
                                     <p>Donc la solution est \(0\)</p>
                                 </li>
@@ -600,20 +733,17 @@
                                     <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici
                                         pour voir la courbe sur Geogebra</a>
                                 </p>
-                                <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                                <img src="images/courbe1.png" alt="image" class="image-center"
+                                    style="max-width: auto; height: auto;">
                             </div>
                         </li>
                     </ol>
             </div>
-    </section>
-
-    <!-- ============================================================
+            <!-- ============================================================
     PROBLÈME - PARTIE B
     ============================================================ -->
-    <section class="section">
-        <div class="problem-box">
-            <div class="part-label">Partie B</div>
 
+            <div class="part-label">Partie B</div>
             <p>Soit \(h\) la restriction de \(f\) à l'intervalle \(I = [0; +\infty[\).</p>
 
             <ol>
@@ -646,8 +776,16 @@
                     <div class="correction-box">
                         <p><strong>Calcul de \(h\left(\frac{4}{5}\right)\) :</strong></p>
                         <div class="formula-center">
-                            $$h\left(\frac{4}{5}\right) = \frac{4}{5} + \sqrt{\left(\frac{4}{5}\right)^2 + \frac{4}{5}}
-                            = \frac{4}{5} + \frac{6}{5} = 2$$
+                            \(
+                            \begin{aligned}
+                            h\!\left(\frac{4}{5}\right)
+                            &= \frac{4}{5} + \sqrt{\left(\frac{4}{5}\right)^2 + \frac{4}{5}}\\
+                            &= \frac{4}{5} + \sqrt{\frac{16}{25} + \frac{20}{25}}\\
+                            &= \frac{4}{5} + \frac{6}{5}\\
+                            &= \frac{10}{5}\\
+                            &= 2
+                            \end{aligned}
+                            \)
                         </div>
                         <div class="green-box">
                             $$\boxed{h\left(\frac{4}{5}\right) = 2}$$
@@ -656,9 +794,26 @@
 
                     <div class="correction-box">
                         <p><strong>Calcul de \((h^{-1})'(2)\) :</strong></p>
-                        <div class="formula-center">
-                            $$(h^{-1})'(2) = \frac{1}{h'\left(\frac{4}{5}\right)} = \frac{12}{25}$$
-                        </div>
+                        <p>$(h^{-1})'(2) = \dfrac{1}{h'\left(\frac{4}{5}\right)}$</p>
+                        <p>Or $h'(x)=\dfrac{1}{\dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}}$ donc
+                            $h'(2)=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}$
+                        </p>
+
+                        <p>
+                            \(
+                            \begin{aligned}
+                            (h^{-1})'(2)
+                            &= \dfrac{1}{h'\!\left(\frac{4}{5}\right)}\\[0.2cm]
+                            &=\dfrac{1}{\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}}\\[0.2cm]
+                            &=\dfrac{2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}}
+                            {2\sqrt{\left(\frac{4}{5}\right)^2+\left(\frac{4}{5}\right)}+2\left(\frac{4}{5}\right)+1}\\[0.2cm]
+                            &=\dfrac{2\cdot \frac{6}{5}}{2\cdot \frac{6}{5} + \frac{8}{5} + 1}\\[0.2cm]
+                            &=\dfrac{\frac{12}{5}}{\frac{12}{5}+\frac{8}{5}+\frac{5}{5}}\\[0.2cm]
+                            &=\dfrac{\frac{12}{5}}{\frac{25}{5}}\\[0.2cm]
+                            &=\dfrac{12}{25}
+                            \end{aligned}
+                            \)
+                        </p>
                         <div class="green-box">
                             $$\boxed{(h^{-1})'(2) = \frac{12}{25}}$$
                         </div>
@@ -677,7 +832,8 @@
                             <a href="https://www.geogebra.org/classic/wkappehb" target="_blank">👉 Clique ici pour voir
                                 la courbe sur Geogebra</a>
                         </p>
-                        <img src="images/tabVar1.png" alt="image" class="image-center" style="max-width: auto; height: auto;">
+                        <img src="images/courbe2.png" alt="image" class="image-center"
+                            style="max-width: auto; height: auto;">
                     </div>
                 </li>
 
@@ -701,7 +857,6 @@
             </ol>
         </div>
     </section>
-
     <!-- ============================================================
     FOOTER
     ============================================================ -->
