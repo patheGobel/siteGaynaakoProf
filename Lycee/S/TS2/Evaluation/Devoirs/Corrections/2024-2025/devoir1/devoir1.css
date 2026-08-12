@@ -125,7 +125,7 @@ b {
     margin: 20px 0;
     display: inline-block;
 }
-.sectionn {
+.problem-box {
     background: #fef2f2;
     border: 2px solid var(--primary-light);
     border-radius: var(--radius-sm);
@@ -153,7 +153,7 @@ b {
     font-size: 0.8rem;
     margin-bottom: 8px;
 }
-.part-label {
+.part-label {   
     background: var(--secondary);
     color: white;
     font-weight: 700;
