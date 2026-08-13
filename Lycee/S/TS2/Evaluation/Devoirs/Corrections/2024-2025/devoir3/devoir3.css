@@ -513,8 +513,8 @@ mjx-container {
 
 .figure-center {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex;
+    align-items: flex;
 
     margin: 25px 0;
 }
