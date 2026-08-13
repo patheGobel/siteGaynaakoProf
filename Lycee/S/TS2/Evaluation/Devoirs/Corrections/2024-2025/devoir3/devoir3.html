@@ -615,7 +615,7 @@
 
                         <li>
                             <p></p><br>
-                            <div >
+                            <div>
                                 \(
                                 \begin{aligned}
                                 r(A)=C
@@ -890,7 +890,328 @@
                         Partie A
                         <span class="points">(1,75 pt)</span>
                     </div>
+                    <!-- ============================================================
+     ÉTUDE DE LA FONCTION g
+     ============================================================ -->
 
+                    <p>
+                        Soit \(g(x)=2x\ln(-x)+x+1\).
+                    </p>
+
+                    <ol>
+
+                        <!-- ========================================================
+         QUESTION 1
+         ======================================================== -->
+
+                        <li>
+
+                            <p>
+                                Déterminons l’ensemble de définition \(D_g\) de \(g\).
+                                <strong class="points-inline">(0,5 pt)</strong>
+                            </p>
+
+                            <p>
+                                \(g\) existe ssi \(-x>0\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                -x>0 &\implies x<0\\ &\implies x\in]-\infty;0[ \end{aligned} \] </div>
+
+                                    <p>
+                                        Donc \(D_g=]-\infty;0[\).
+                                    </p>
+
+                                    <div class="resultbox">
+                                        \[
+                                        \mathbf{D_g=]-\infty;0[}
+                                        \qquad\qquad
+                                        \textbf{(0,5 pt)}
+                                        \]
+                                    </div>
+
+                        </li>
+
+
+                        <!-- ========================================================
+         QUESTION 2
+         ======================================================== -->
+
+                        <li>
+
+                            <p>
+                                Calculons les limites aux bornes de \(D_g\).
+                                <strong class="points-inline">(0,5 pt)</strong>
+                            </p>
+
+                            <!-- Limite en -∞ -->
+
+                            <p>
+                                <u>En \(-\infty\)</u>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to-\infty}g(x)
+                                &=
+                                \lim_{x\to-\infty}
+                                \left(2x\ln(-x)+x+1\right)
+                                \\[5pt]
+                                &=-\infty
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                \(\displaystyle \lim_{x\to-\infty}g(x)=-\infty\).
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to-\infty}g(x)=-\infty
+                                }
+                                \qquad\qquad
+                                \textbf{(0,25 pt)}
+                                \]
+                            </div>
+
+
+                            <!-- Limite en 0⁻ -->
+
+                            <p>
+                                <u>En \(0^{-}\)</u>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to0^-}g(x)
+                                &=
+                                \lim_{x\to0^-}
+                                \left(2x\ln(-x)+x+1\right)
+                                \\[5pt]
+                                &=
+                                \lim_{x\to0^-}
+                                \left[-2(-x\ln(-x))+x+1\right]
+                                \\[5pt]
+                                &=1
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                \(\displaystyle \lim_{x\to0^-}g(x)=1\).
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to0^-}g(x)=1
+                                }
+                                \qquad\qquad
+                                \textbf{(0,25 pt)}
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ========================================================
+         QUESTION 3
+         ======================================================== -->
+
+                        <li>
+
+                            <p>
+                                Étudions les variations de \(g\).
+                                <strong class="points-inline">(1 pt)</strong>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                g(x)
+                                &=2x\ln(-x)+x+1
+                                \\[4pt]
+                                &=2(x\ln(-x))'+(x+1)'
+                                \\[4pt]
+                                &=2\left[(x)'\ln(-x)+x(\ln(-x))'\right]+1
+                                \\[4pt]
+                                &=2\left[
+                                \ln(-x)+x\left(\frac{1}{x}\right)
+                                \right]+1
+                                \\[4pt]
+                                &=2\left[\ln(-x)+1\right]+1
+                                \\[4pt]
+                                &=2\ln(-x)+3
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                g'(x)=2\ln(-x)+3
+                                }
+                                \qquad\qquad
+                                \textbf{(0,5 pt)}
+                                \]
+                            </div>
+
+
+                            <p>
+                                Étudions le signe de \(g'\).
+                            </p>
+
+                            <p>
+                                Supposons que \(2\ln(-x)+3>0\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                2\ln(-x)+3>0
+                                &\implies
+                                \ln(-x)>-\frac{3}{2}
+                                \\[5pt]
+                                &\implies
+                                \ln(-x)>
+                                \ln\left(e^{-\frac{3}{2}}\right)
+                                \\[5pt]
+                                &\implies
+                                -x>e^{-\frac{3}{2}}
+                                \\[5pt]
+                                &\implies
+                                x<-e^{-\frac{3}{2}} \\[5pt] &\implies x\in \left]-\infty;-e^{-\frac{3}{2}}\right[
+                                    \end{aligned} \] </div>
+
+                                    <div class="formula-center">
+                                        \[
+                                        \begin{cases}
+                                        \forall x\in
+                                        \left]-\infty;-e^{-\frac{3}{2}}\right[,
+                                        \quad g'(x)>0
+                                        \quad\text{donc \(g\) y est croissant}
+                                        \\[8pt]
+
+                                        \forall x\in
+                                        \left]-e^{-\frac{3}{2}};0\right[,
+                                        \quad g'(x)<0 \quad\text{donc \(g\) y est décroissant} \end{cases} \] </div>
+
+
+                                            <!-- ====================================================
+             TABLEAU DE VARIATIONS
+             ==================================================== -->
+
+                                            <!-- ====================================================
+     TABLEAU DE VARIATIONS
+     ==================================================== -->
+
+                                            <div class="variation-image">
+                                                <img src="images/tabVar1.png"
+                                                    alt="Tableau de variations de la fonction g">
+                                            </div>
+
+
+                                            <!-- Calcul du maximum -->
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                g\left(-e^{-\frac{3}{2}}\right)
+                                                &=
+                                                2\left(-e^{-\frac{3}{2}}\right)
+                                                \ln\left(-\left(-e^{-\frac{3}{2}}\right)\right)
+                                                -e^{-\frac{3}{2}}+1
+                                                \\[5pt]
+                                                &=
+                                                -2e^{-\frac{3}{2}}
+                                                \ln\left(e^{-\frac{3}{2}}\right)
+                                                -e^{-\frac{3}{2}}+1
+                                                \\[5pt]
+                                                &=
+                                                -2e^{-\frac{3}{2}}
+                                                \times\left(-\frac{3}{2}\right)
+                                                -e^{-\frac{3}{2}}+1
+                                                \\[5pt]
+                                                &=
+                                                3e^{-\frac{3}{2}}
+                                                -e^{-\frac{3}{2}}+1
+                                                \\[5pt]
+                                                &=2e^{-\frac{3}{2}}+1
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <div class="resultbox">
+                                                \[
+                                                \mathbf{
+                                                g\left(-e^{-\frac{3}{2}}\right)
+                                                =2e^{-\frac{3}{2}}+1
+                                                }
+                                                \]
+                                            </div>
+
+                        </li>
+
+
+                        <!-- ========================================================
+         QUESTION 4
+         ======================================================== -->
+
+                        <li>
+
+                            <p>
+                                Calculons \(g(-1)\).
+                                <strong class="points-inline">(0,75 pt)</strong>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                g(-1)
+                                &=2(-1)\ln(-(-1))+(-1)+1
+                                \\[5pt]
+                                &=-2\ln(1)-1+1
+                                \\[5pt]
+                                g(-1)
+                                &=-2\times0-1+1
+                                \\[5pt]
+                                &=0
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{g(-1)=0}
+                                \]
+                            </div>
+
+
+                            <p>
+                                Le signe de \(g(x)\).
+                            </p>
+
+                            <p>
+                                D’après le tableau de variation :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{cases}
+                                \forall x\in]-\infty;-1[,\quad g(x)<0 \\[8pt] \forall x\in]-1;0[,\quad g(x)>0
+                                    \end{cases}
+                                    \]
+                            </div>
+
+                        </li>
+
+                    </ol>
                 </section>
 
                 <!-- Partie B -->

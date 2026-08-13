@@ -523,3 +523,83 @@ mjx-container {
     max-width: 100%;
     height: auto;
 }
+
+/* ============================================================
+   TABLEAU DE VARIATIONS
+   ============================================================ */
+
+.variation-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+.variation-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+}
+
+.variation-table th,
+.variation-table td {
+    border: 1px solid #000;
+    padding: 12px 15px;
+}
+
+.variation-table th {
+    background: #f1f5f9;
+    font-weight: 700;
+}
+
+.variation-table .sign-positive {
+    color: #15803d;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.variation-table .sign-negative {
+    color: #dc2626;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.variation-table .zero {
+    font-weight: bold;
+}
+
+.variation-table .maximum {
+    font-weight: bold;
+}
+
+.variation-table .value {
+    font-weight: 500;
+}
+
+.variation-row {
+    height: 80px;
+}
+
+/* ============================================================
+   TABLEAU DE VARIATIONS — IMAGE
+   ============================================================ */
+
+.variation-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 25px 0;
+}
+
+.variation-image img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
