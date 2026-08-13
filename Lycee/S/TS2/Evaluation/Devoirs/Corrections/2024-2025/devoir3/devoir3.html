@@ -71,11 +71,595 @@
 
             <div class="exercise-content">
 
-                <!-- Questions -->
+                <div class="exercise-content">
 
-                <!-- Corrections -->
+                    <!-- ========================================================
+             A) RÉPONSES AUX QUESTIONS DE COURS
+             ======================================================== -->
 
-                <!-- Remarques -->
+                    <p>
+                        <strong>A) Réponses aux questions de cours</strong>
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            <p>
+                                Soit \(z\) un nombre complexe non nul donné.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    L’écriture algébrique de \(z\) est de la forme :
+                                    \(z=a+ib\), avec \(a\) sa partie réelle et \(b\) sa partie imaginaire.
+                                </li>
+
+                                <li>
+                                    L’écriture exponentielle de \(z\) est de la forme :
+                                    \(z=re^{i\theta}\), avec \(r\) son module et \(\theta\) un de ses arguments.
+                                </li>
+
+                                <li>
+                                    L’écriture trigonométrique de \(z\) est de la forme :
+                                    \(z=r(\cos\theta+i\sin\theta)\), avec \(r\) son module et
+                                    \(\theta\) un de ses arguments.
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+
+                            <p>
+                                Soient \(K(z_0)\), \(M(z)\) et \(M'(z')\) et soit \(r\) la rotation
+                                de centre \(K(z_0)\) qui transforme \(M(z)\) en \(M'(z')\) on a :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{cases}
+                                KM'=KM \\[5pt]
+                                (\overrightarrow{KM},\overrightarrow{KM'})
+                                =\theta \quad [2\pi]
+                                \end{cases}
+                                \tag{1}
+                                \]
+                            </div>
+
+                            <p>
+                                ce qui est équivalent à
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{cases}
+                                |z'-z_0|=|z-z_0| \\[5pt]
+                                \displaystyle
+                                \arg\frac{z'-z_0}{z-z_0}
+                                \equiv\theta \quad [2\pi]
+                                \end{cases}
+                                \tag{2}
+                                \]
+                            </div>
+
+                            <p>
+                                D’où
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                z'=e^{i\theta}z+z_0(1-e^{i\theta})
+                                \]
+                            </div>
+
+                        </li>
+
+                    </ol>
+
+
+                    <!-- ========================================================
+             B) ÉTUDE DE z₀
+             ======================================================== -->
+
+                    <p>
+                        <strong>B) Soit \(z_0=1-i\sqrt{3}\).</strong>
+                    </p>
+
+                    <ol>
+
+                        <!-- ----------------------------------------------------
+                 B1
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Écriture trigonométrique de \(z_0\).
+                            </p>
+
+                            <p>
+                                On a
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                |z_0|=\sqrt{1+3}=2
+                                \]
+                            </div>
+
+                            <p>
+                                soit \(\theta\) un argument de \(z_0\) alors
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \cos\theta=\frac{1}{2}
+                                \qquad\text{et}\qquad
+                                \sin\theta=-\frac{\sqrt{3}}{2}
+                                \]
+                            </div>
+
+                            <p>
+                                ce qui donne
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \theta=-\frac{\pi}{3}\ [2\pi]
+                                \]
+                            </div>
+
+                            <p>
+                                d’où
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                z_0=
+                                2\left(
+                                \cos\frac{\pi}{3}
+                                -i\sin\frac{\pi}{3}
+                                \right)
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B2
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Calculons \(z_0^4\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                z_0^4
+                                &=
+                                \left[
+                                2\left(
+                                \cos\frac{\pi}{3}
+                                -i\sin\frac{\pi}{3}
+                                \right)
+                                \right]^4
+                                \\[6pt]
+                                &=
+                                16\left(
+                                \cos\frac{4\pi}{3}
+                                -i\sin\frac{4\pi}{3}
+                                \right)
+                                \\[6pt]
+                                &=
+                                16\left(
+                                -\frac{1}{2}
+                                +i\frac{\sqrt{3}}{2}
+                                \right)
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                D’où
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                z_0^4=-8+i8\sqrt{3}
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B3
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Résolvons l’équation
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                z^4=1
+                                \]
+                            </div>
+
+                            <p>
+                                \(z^4=1\) implique
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                |z|^4=1
+                                \qquad\text{et}\qquad
+                                4\arg z=0\ [2\pi]
+                                \]
+                            </div>
+
+                            <p>
+                                ce qui donne
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                |z|=1
+                                \qquad\text{et}\qquad
+                                \arg z=k\frac{\pi}{2},
+                                \quad k\in\mathbb{Z}
+                                \]
+                            </div>
+
+                            <p>
+                                d’où l’ensemble des solutions \(S\) de l’équation
+                                \(z^4=1\) est
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                S=\{-1\,;\,1\,;\,i\,;\,-i\}
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B4
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Déduisons-en les solutions de l’équation (E) :
+                                \(z^4=-8+i8\sqrt{3}\).
+                            </p>
+
+                            <p>
+                                \(z^4=-8+i8\sqrt{3}\) est équivalent à
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \frac{z^4}{-8+i8\sqrt{3}}=1
+                                \]
+                            </div>
+
+                            <p>
+                                ce qui est équivalent, d’après B)2), à
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \left(
+                                \frac{z}{1-i\sqrt{3}}
+                                \right)^4=1
+                                \]
+                            </div>
+
+                            <p>
+                                Ce qui donne d’après B)3) les solutions suivantes :
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    Sous forme algébrique :
+                                </li>
+
+                            </ul>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                z_0&=1-i\sqrt{3},
+                                &
+                                z_1&=-1+i\sqrt{3},
+                                \\[4pt]
+                                z_2&=\sqrt{3}+i,
+                                &
+                                z_3&=-\sqrt{3}-i
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <ul>
+
+                                <li>
+                                    Sous forme trigonométrique :
+                                </li>
+
+                            </ul>
+
+                            <div class="resultbox">
+                                \[
+                                \begin{aligned}
+                                z_0
+                                &=
+                                2\left(
+                                \cos\frac{\pi}{3}
+                                -i\sin\frac{\pi}{3}
+                                \right),
+                                \\[5pt]
+                                z_1
+                                &=
+                                2\left(
+                                \cos\frac{2\pi}{3}
+                                +i\sin\frac{2\pi}{3}
+                                \right),
+                                \\[5pt]
+                                z_2
+                                &=
+                                2\left(
+                                \cos\frac{\pi}{6}
+                                +i\sin\frac{\pi}{6}
+                                \right),
+                                \\[5pt]
+                                z_3
+                                &=
+                                2\left(
+                                \cos\frac{7\pi}{6}
+                                +i\sin\frac{7\pi}{6}
+                                \right)
+                                \end{aligned}
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B5
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Plaçons les points.
+                            </p>
+
+                            <div class="figure-center">
+
+                                <!-- Remplacer par ton image ou ton SVG du plan complexe -->
+
+                                <svg viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+                                    <!-- Axes -->
+                                    <line x1="40" y1="200" x2="360" y2="200" stroke="black" stroke-width="1.5" />
+
+                                    <line x1="200" y1="360" x2="200" y2="40" stroke="black" stroke-width="1.5" />
+
+                                    <!-- Flèches -->
+                                    <polygon points="360,200 350,195 350,205" fill="black" />
+
+                                    <polygon points="200,40 195,50 205,50" fill="black" />
+
+                                    <!-- Cercle -->
+                                    <circle cx="200" cy="200" r="120" fill="none" stroke="black" stroke-width="2" />
+
+                                    <!-- Points -->
+                                    <circle cx="304" cy="140" r="5" fill="blue" />
+                                    <circle cx="140" cy="96" r="5" fill="blue" />
+                                    <circle cx="88" cy="242" r="5" fill="blue" />
+                                    <circle cx="260" cy="304" r="5" fill="blue" />
+
+                                    <!-- Labels -->
+                                    <text x="312" y="135" fill="blue">C</text>
+                                    <text x="130" y="90" fill="blue">B</text>
+                                    <text x="78" y="255" fill="blue">D</text>
+                                    <text x="268" y="315" fill="blue">A</text>
+
+                                    <!-- Vecteur v -->
+                                    <line x1="200" y1="200" x2="200" y2="120" stroke="black" stroke-width="2" />
+
+                                    <polygon points="200,120 195,130 205,130" fill="black" />
+
+                                    <text x="185" y="115">v</text>
+
+                                    <!-- Vecteur u -->
+                                    <line x1="200" y1="200" x2="280" y2="200" stroke="black" stroke-width="2" />
+
+                                    <polygon points="280,200 270,195 270,205" fill="black" />
+
+                                    <text x="285" y="215">u</text>
+
+                                    <!-- Axes X et Y -->
+                                    <text x="365" y="215">X</text>
+                                    <text x="210" y="35">Y</text>
+
+                                </svg>
+
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B6
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Soit la rotation de centre \(O\) d’angle
+                                \(\frac{\pi}{2}\).
+                            </p>
+
+                            <p>
+                                D’après A)2), si \(M'(z')\) est l’image de \(M(z)\)
+                                par \(r\) alors
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                z'=ze^{i\frac{\pi}{2}}
+                                \]
+                            </div>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B7
+                 ---------------------------------------------------- -->
+
+                        <li>
+
+                            <p>
+                                Soient les points \(A\), \(B\), \(C\) et \(D\)
+                                d’affixes respectives
+                                \(z_A=z_0\), \(z_B=z_1\),
+                                \(z_C=z_2\) et \(z_D=z_3\).
+                            </p>
+
+                            <p>
+                                Vérifions que \(r(A)=C\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                z_Ae^{i\frac{\pi}{2}}
+                                =
+                                2e^{-i\frac{\pi}{3}}
+                                e^{i\frac{\pi}{2}}
+                                =
+                                2e^{i\frac{\pi}{6}}
+                                =
+                                z_C
+                                \]
+                            </div>
+
+                            <p>
+                                d’où \(r(A)=C\).
+                            </p>
+
+                            <p>
+                                Vérifions que \(r(C)=B\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                z_Ce^{i\frac{\pi}{2}}
+                                =
+                                2e^{i\frac{\pi}{6}}
+                                e^{i\frac{\pi}{2}}
+                                =
+                                2e^{i\frac{4\pi}{6}}
+                                =
+                                2e^{i\frac{2\pi}{3}}
+                                =
+                                z_B
+                                \]
+                            </div>
+
+                            <p>
+                                d’où \(r(C)=B\).
+                            </p>
+
+                            <p>
+                                Vérifions que \(r(B)=D\).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                z_Be^{i\frac{\pi}{2}}
+                                =
+                                2e^{i\frac{2\pi}{3}}
+                                e^{i\frac{\pi}{2}}
+                                =
+                                2e^{i\frac{7\pi}{6}}
+                                =
+                                z_D
+                                \]
+                            </div>
+
+                            <p>
+                                d’où \(r(B)=D\).
+                            </p>
+
+                        </li>
+
+
+                        <!-- ----------------------------------------------------
+                 B8
+                 ---------------------------------------------------- -->
+
+                        <li>
+                            <p></p><br>
+                            <div >
+                                \(
+                                \begin{aligned}
+                                r(A)=C
+                                &\implies |z_A|=|z_C|,
+                                \\[5pt]
+                                r(C)=B
+                                &\implies |z_C|=|z_B|,
+                                \\[5pt]
+                                r(B)=D
+                                &\implies |z_B|=|z_D|
+                                \end{aligned}
+                                \)
+                            </div>
+
+                            <p>
+                                D’où
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                |z_A|=|z_C|=|z_B|=|z_D|=2
+                                \]
+                            </div>
+
+                            <p>
+                                Ce qui est équivalent à
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                OA=OB=OC=OD=2
+                                \]
+                            </div>
+
+                            <p>
+                                D’où \(A\), \(B\), \(C\) et \(D\) sont sur le même
+                                cercle \((C)\) de centre \(O\) et de rayon \(2\).
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </div>
 
             </div>
 

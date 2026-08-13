@@ -484,3 +484,42 @@ mjx-container {
 
     margin: 12px 0;
 }
+
+/* ============================================================
+   LISTES DES EXERCICES
+   ============================================================ */
+
+.exercise-content ol {
+    padding-left: 30px;
+}
+
+.exercise-content ol>li {
+    padding-left: 5px;
+    margin-bottom: 18px;
+}
+
+.exercise-content ul {
+    padding-left: 25px;
+}
+
+.exercise-content li {
+    margin-bottom: 8px;
+}
+
+
+/* ============================================================
+   FIGURE
+   ============================================================ */
+
+.figure-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px 0;
+}
+
+.figure-center svg {
+    max-width: 100%;
+    height: auto;
+}
