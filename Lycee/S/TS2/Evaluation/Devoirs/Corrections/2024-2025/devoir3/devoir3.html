@@ -94,7 +94,9 @@
             <div class="exercise-content">
 
                 <p>Déterminons les limites suivantes :</p>
-                <!-- Corrections -->
+                <!-- ============================================================
+     1.
+     ============================================================ -->
                 <p>
                     \( \textbf{1.} \displaystyle \lim_{x \to +\infty}
                     \ln\left[ \frac{x+1}{x^2 + x + 1}\right] \)
@@ -115,13 +117,13 @@
                     \end{cases}
                     \quad
                     \text{Par composition, }
-                    \lim_{x \to +\infty} \ln\left[
+                    \lim\limits_{x \to +\infty} \ln\left[
                     \frac{x+1}{x^2 + x + 1}\right]=-\infty
                     \end{aligned}
                     \]
                 </div>
                 <div class="resultbox">
-                    \[
+                    \[\lim\limits_{x \to +\infty}
                     \mathbf{
                     \ln\left[
                     \frac{x+1}{x^2 + x + 1}\right]=-\infty
@@ -129,7 +131,161 @@
                     \]
                 </div>
             </div>
+            <!-- ============================================================
+     2.
+     ============================================================ -->
+            <p>
+                \( \textbf{2.} \displaystyle
+                \lim_{x \to +\infty}
+                \frac{\ln(x+2)}{\ln(x+1)} \)
+            </p>
 
+            <div class="formula-center">
+                \[
+                \begin{aligned}
+                \lim_{x \to +\infty}
+                \frac{\ln(x+2)}{\ln(x+1)}
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                \ln\left[x\left(1+\frac{2}{x}\right)\right]
+                }{
+                \ln\left[x\left(1+\frac{1}{x}\right)\right]
+                }
+                \\[8pt]
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                \ln(x)+\ln\left(1+\frac{2}{x}\right)
+                }{
+                \ln(x)+\ln\left(1+\frac{1}{x}\right)
+                }
+                \\[8pt]
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                \ln(x)
+                \left[
+                1+\frac{\ln\left(1+\frac{2}{x}\right)}{\ln(x)}
+                \right]
+                }{
+                \ln(x)
+                \left[
+                1+\frac{\ln\left(1+\frac{1}{x}\right)}{\ln(x)}
+                \right]
+                }
+                \\[8pt]
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                \left[
+                1+\frac{\ln\left(1+\frac{2}{x}\right)}{\ln(x)}
+                \right]
+                }{
+                \left[
+                1+\frac{\ln\left(1+\frac{1}{x}\right)}{\ln(x)}
+                \right]
+                }
+                \\[8pt]
+                &= 1
+                \end{aligned}
+                \]
+            </div>
+
+            <div class="resultbox">
+                \[
+                \mathbf{
+                \lim_{x \to +\infty}
+                \frac{\ln(x+2)}{\ln(x+1)}=1
+                }
+                \]
+            </div>
+            <!-- ============================================================
+     3.
+     ============================================================ -->
+
+            <p>
+                \( \textbf{3.} \displaystyle
+                \lim_{x \to 0^+}
+                \frac{\ln x+2}{\ln x+1} \)
+            </p>
+
+            <div class="formula-center">
+                \[
+                \begin{aligned}
+                \lim_{x \to 0^+}
+                \frac{\ln x+2}{\ln x+1}
+                &=
+                \lim_{x \to 0^+}
+                \frac{
+                \ln x
+                \left(1+\frac{2}{\ln x}\right)
+                }{
+                \ln x
+                \left(1+\frac{1}{\ln x}\right)
+                }
+                \\[8pt]
+                &=
+                \lim_{x \to 0^+}
+                \frac{
+                \left(1+\frac{2}{\ln x}\right)
+                }{
+                \left(1+\frac{1}{\ln x}\right)
+                }
+                \\[8pt]
+                &= 1
+                \end{aligned}
+                \]
+            </div>
+
+            <div class="resultbox">
+                \[
+                \mathbf{
+                \lim_{x \to 0^+}
+                \frac{\ln x+2}{\ln x+1}=1
+                }
+                \]
+            </div>
+            <!-- ============================================================
+     4.
+     ============================================================ -->
+
+            <p>
+                \( \textbf{4.} \displaystyle
+                \lim_{x \to +\infty}
+                \frac{\ln x}{\sqrt{x}} \)
+            </p>
+
+            <div class="formula-center">
+                \[
+                \begin{aligned}
+                \lim_{x \to +\infty}
+                \frac{\ln x}{\sqrt{x}}
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                \ln\left[(\sqrt{x})^2\right]
+                }{\sqrt{x}}
+                \\[8pt]
+                &=
+                \lim_{x \to +\infty}
+                \frac{
+                2\ln\left[\sqrt{x}\right]
+                }{\sqrt{x}}
+                \\[8pt]
+                &=0
+                \end{aligned}
+                \]
+            </div>
+
+            <div class="resultbox">
+                \[
+                \mathbf{
+                \lim_{x \to +\infty}
+                \frac{\ln x}{\sqrt{x}}=0
+                }
+                \]
+            </div>
         </section>
 
         <!-- ============================================================
