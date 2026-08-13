@@ -1182,145 +1182,91 @@
                                 \dfrac{-xg(x)}{(x^2-1)^2}\) puis étudier son signe. <span class="points">(1pt)</span>
                             </p>
 
-                            <p>Montrons que $\forall x \in ]-\infty; -1[ \cup ]-1; 0[$, on a :
-                                $f'(x) = \dfrac{-xg(x)}{(x^2-1)^2}$ $\textbf{(0,5pt)}$</p>
-
-                            On a : $ f'(x)=\dfrac{-xg(x)}{(x^2-1)^2} $
-
-                            <p>La fonction $f$ est dérivable sur $]-\infty,-1[ \cup ]-1,0[$ comme quotient de fonctions
-                                dérivables,
-                                avec $x^2-1\neq 0$ sur ces intervalles.</p>
-
-                            <div class="formula-center">
-                                $$
-                                \begin{aligned}
-                                f'(x) &= \dfrac{(x^3-2x^2)'(x^2-1)-(x^3-2x^2)(x^2-1)'}{(x^2-1)^2}\\
-                                &= \dfrac{(3x^2-4x)(x^2-1)-(x^3-2x^2)(2x)}{(x^2-1)^2}.\\
-                                &= \dfrac{3x^4-3x^2-4x^3+4x-(2x^4-4x^3)}{(x^2-1)^2}\\
-                                &= \dfrac{x^4-3x^2+4x}{(x^2-1)^2}\\
-                                &= \dfrac{-x(-x^3+3x-4)}{(x^2-1)^2}\\
-                                &=\dfrac{-xg(x)}{(x^2-1)^2}
-                                \end{aligned}
-                                $$
-                            </div>
-                            <p>Ainsi,
-                                \(
-                                \forall x \in ]-\infty,-1[ \cup ]-1,0[, \quad
-                                f'(x)=\dfrac{-xg(x)}{(x^2-1)^2}.
-                                \) </p>
-                            <p><strong>Signe de \(f'(x)\)</strong></p>
-
                             <ul>
-                                <li><span class="text-red">Si \(x \in ]-\infty, \alpha]\), \(f'(x) \geq 0\) donc \(f\)
-                                        est croissante sur \(]-\infty; \alpha]\).</span></li>
-                                <li><span class="text-red">Si \(x \in [\alpha, -1[ \cup ]-1, 0]\), \(f'(x) \leq 0\) donc
-                                        \(f\) est décroissante sur \([\alpha, -1[ \cup ]-1, 0]\).</span></li>
-                            </ul>
+                                <li>Montrons que $\forall x \in ]-\infty; -1[ \cup ]-1; 0[$, on a :
+                                    $f'(x) = \dfrac{-xg(x)}{(x^2-1)^2}$ $\textbf{(0,5pt)}$</li>
+
+                                On a : $ f'(x)=\dfrac{-xg(x)}{(x^2-1)^2} $
+
+                                <p>La fonction $f$ est dérivable sur $]-\infty,-1[ \cup ]-1,0[$ comme quotient de
+                                    fonctions
+                                    dérivables,
+                                    avec $x^2-1\neq 0$ sur ces intervalles.</p>
+
+                                <div class="formula-center">
+                                    $$
+                                    \begin{aligned}
+                                    f'(x) &= \dfrac{(x^3-2x^2)'(x^2-1)-(x^3-2x^2)(x^2-1)'}{(x^2-1)^2}\\
+                                    &= \dfrac{(3x^2-4x)(x^2-1)-(x^3-2x^2)(2x)}{(x^2-1)^2}.\\
+                                    &= \dfrac{3x^4-3x^2-4x^3+4x-(2x^4-4x^3)}{(x^2-1)^2}\\
+                                    &= \dfrac{x^4-3x^2+4x}{(x^2-1)^2}\\
+                                    &= \dfrac{-x(-x^3+3x-4)}{(x^2-1)^2}\\
+                                    &=\dfrac{-xg(x)}{(x^2-1)^2}
+                                    \end{aligned}
+                                    $$
+                                </div>
+                                <p>Ainsi,
+                                    \(
+                                    \forall x \in ]-\infty,-1[ \cup ]-1,0[, \quad
+                                    f'(x)=\dfrac{-xg(x)}{(x^2-1)^2}.
+                                    \) </p>
+                                <li>Signe de \(f'(x)\) \( \textbf{(0,5pt)} \)</li>
+                                <p>le signe de $f'(x)$ dépend du numérateur</p>
+                                <div class="image">
+                                    <img src="images/tabSignes5.png" alt="Tableau des signes">
+                                </div>
+                                <p>Ansi,</p>
+                                <ul>
+                                    <li><span class="text-red">Si \(x \in ]-\infty, \alpha]\), \(f'(x) \geq 0\) donc
+                                            \(f\)
+                                            est croissante sur \(]-\infty; \alpha]\).</span></li>
+                                    <li><span class="text-red">Si \(x \in [\alpha, -1[ \cup ]-1, 0]\), \(f'(x) \leq 0\)
+                                            donc
+                                            \(f\) est décroissante sur \([\alpha, -1[ \cup ]-1, 0]\).</span></li>
+                                </ul>
                         </li>
+                        </ul>
 
                         <li>
                             <p>Calculons \(f'(x)\) sur \(]0; +\infty[\) et étudions son signe. <span
                                     class="points">(0,75pt)</span></p>
 
-                            <div class="formula-center">
-                                $$
-                                \begin{aligned}
-                                f'(x) &= 1 + \dfrac{2x+1}{2\sqrt{x^2+x}}\\
-                                &= \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}
-                                \end{aligned}
-                                $$
-                            </div>
-
-                            <p>Si \(x > 0\), \(f'(x) = \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}\). Le signe dépend du
-                                numérateur.</p>
-
-                            <p><span class="text-red">Or \(2\sqrt{x^2+x}+2x+1 > 0\) pour tout \(x \in ]0;
-                                    +\infty[\).</span></p>
-                            <p><span class="text-red">Ainsi, pour tout \(x \in ]0; +\infty[\), \(f'(x) > 0\) donc \(f\)
-                                    est croissante sur \(]0; +\infty[\).</span></p>
+                            <ul>
+                                <li>Calculons $f'(x)$ sur $]0; +\infty[$ $\textbf{(0,5pt)}$</li>
+                                <div class="formula-center">
+                                    $$
+                                    \begin{aligned}
+                                    f'(x) &= 1 + \dfrac{2x+1}{2\sqrt{x^2+x}}\\
+                                    &= \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}\\
+                                    &= \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}} \\
+                                    \end{aligned}
+                                    $$
+                                </div>
+                                <li>étudions son signe $\textbf{(0,25pt)}$</li>
+                                <p> Si $ x>0\,, f'(x)= \dfrac{2\sqrt{x^2+x}+2x+1}{2\sqrt{x^2+x}}$ le signe dépend du
+                                    numérateur</p>
+                                <p>$ \textbf{Or } 2\sqrt{x^2+x}+2x+1 > 0 \, \forall x\in ]0;+\infty[ $</p>
+                                <p><span class="text-red">Ainsi $\forall x\in ]0;+\infty[$ $f'(x) > 0 $ donc f est
+                                        croissant
+                                        $]0;+\infty[$</span></p>
+                            </ul>
                         </li>
 
                         <li>
                             <p>Dressons le tableau de variation de \(f\) sur \(D_f\). <span
                                     class="points">(0,75pt)</span></p>
-
-                            <div class="variation-table">
-                                <div class="row header">
-                                    <div class="cell">\(x\)</div>
-                                    <div class="cell">\(-\infty\)</div>
-                                    <div class="cell">\(\alpha\)</div>
-                                    <div class="cell">\(-1\)</div>
-                                    <div class="cell">\(0\)</div>
-                                    <div class="cell">\(+\infty\)</div>
-                                </div>
-                                <div class="row">
-                                    <div class="cell">\(f'(x)\)</div>
-                                    <div class="cell">+</div>
-                                    <div class="cell">0</div>
-                                    <div class="cell">-</div>
-                                    <div class="cell">||</div>
-                                    <div class="cell">-</div>
-                                    <div class="cell">||</div>
-                                    <div class="cell">+</div>
-                                </div>
-                                <div class="row">
-                                    <div class="cell">\(f(x)\)</div>
-                                    <div class="cell">\(-\infty\)</div>
-                                    <div class="cell">\(\nearrow\)</div>
-                                    <div class="cell">\(f(\alpha)\)</div>
-                                    <div class="cell">\(\searrow\)</div>
-                                    <div class="cell">\(+\infty\)</div>
-                                    <div class="cell">||</div>
-                                    <div class="cell">\(-\infty\)</div>
-                                    <div class="cell">\(\nearrow\)</div>
-                                    <div class="cell">\(+\infty\)</div>
-                                </div>
-                                <div class="row" style="border-top: 2px solid var(--border-light);">
-                                    <div class="cell" colspan="7" style="font-size: 0.85rem; color: var(--text-muted);">
-                                        \(f(0) = 0\) &nbsp; (point de non dérivabilité)
-                                    </div>
-                                </div>
-                            </div>
                         </li>
+                        <div class="image">
+                            <img src="images/tabVar2.png" alt="Tableau des signes">
+                        </div>
                     </ol>
                 </li>
 
                 <!-- B.6 -->
                 <li>
                     <p>Construisons soigneusement la courbe \((C_f)\). <span class="points">(0,75 pt)</span></p>
-
-                    <div class="figure-placeholder">
-                        <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de la fonction f</p>
-                        <p>Courbe représentative de \(f\) avec les asymptotes \((\Delta_1): y = x - 2\) et \((\Delta_2):
-                            y = 2x + \frac{1}{2}\)</p>
-                        <p style="font-size:0.85rem; margin-top:8px;">
-                            <a href="https://www.geogebra.org/classic/q97sf6ew" target="_blank">👉 Clique ici pour voir
-                                la courbe sur Geogebra</a>
-                        </p>
-                        <svg viewBox="0 0 500 300" width="500" height="300" style="margin-top: 12px;">
-                            <line x1="40" y1="260" x2="470" y2="260" stroke="#333" stroke-width="2" />
-                            <line x1="40" y1="260" x2="40" y2="20" stroke="#333" stroke-width="2" />
-                            <text x="460" y="280" font-size="12">x</text>
-                            <text x="25" y="25" font-size="12">y</text>
-                            <!-- Courbe -->
-                            <path d="M 60 250 Q 120 120 200 100 Q 250 80 300 60 Q 350 40 420 20" stroke="#dc2626"
-                                stroke-width="2.5" fill="none" />
-                            <!-- Asymptote 1 -->
-                            <line x1="60" y1="250" x2="250" y2="50" stroke="#2563eb" stroke-width="1.5"
-                                stroke-dasharray="5,5" />
-                            <text x="255" y="45" font-size="10" fill="#2563eb">Δ₁</text>
-                            <!-- Asymptote 2 -->
-                            <line x1="200" y1="120" x2="460" y2="20" stroke="#2563eb" stroke-width="1.5"
-                                stroke-dasharray="5,5" />
-                            <text x="445" y="15" font-size="10" fill="#2563eb">Δ₂</text>
-                            <!-- Point O -->
-                            <circle cx="160" cy="160" r="4" fill="#2563eb" />
-                            <text x="155" y="150" font-size="10" fill="#2563eb">O</text>
-                            <!-- Asymptote verticale x=-1 -->
-                            <line x1="120" y1="20" x2="120" y2="260" stroke="#7c3aed" stroke-width="1.5"
-                                stroke-dasharray="5,5" />
-                            <text x="110" y="15" font-size="10" fill="#7c3aed">x=-1</text>
-                        </svg>
+                    <div class="image">
+                        <img src="images/courbe1.png" alt="Tableau des signes">
                     </div>
                 </li>
             </ol>
@@ -1372,10 +1318,12 @@
                             <div class="formula-center">
                                 $$
                                 \begin{aligned}
-                                (h^{-1})'(\sqrt{2}+1) &= \dfrac{1}{h'(1)} \quad \text{comme } h'(x) = 1 +
-                                \dfrac{2x+1}{2\sqrt{x^2+x}}\\
-                                &= \dfrac{1}{1 + \dfrac{3}{2\sqrt{2}}}\\
-                                &= \dfrac{2\sqrt{2}}{2\sqrt{2}+3}
+                                (h^{-1})'(\sqrt{2}+1)
+                                &= \dfrac{1}{h'\!\left(1\right)} \textbf{ comme } h'(x)=1+\dfrac{2x+1}{2\sqrt{x^2+x}}\\
+                                &=\dfrac{1}{1+\dfrac{2+1}{2\sqrt{1^2+1}}}\\
+                                &=\dfrac{1}{1+\dfrac{3}{2\sqrt{2}}}\\
+                                &=\dfrac{1}{ \dfrac{2\sqrt{2}+3}{2\sqrt{2}}}\\
+                                &=\dfrac{2\sqrt{2}}{2\sqrt{2}+3}
                                 \end{aligned}
                                 $$
                             </div>
@@ -1396,7 +1344,7 @@
                     <p>En élevant au carré : \((y-x)^2 = x^2+x\).</p>
 
                     <div class="formula-center">
-                        $$ y^2 - 2xy + x^2 = x^2 + x $$
+                        $ y^2 - 2xy + x^2 = x^2 + x $
                     </div>
 
                     <p>En simplifiant : \(y^2 - 2xy = x\).</p>
@@ -1404,38 +1352,21 @@
                     <p>On factorise par \(x\) : \(y^2 = x(1+2y)\).</p>
 
                     <div class="result-box">
-                        $$ \mathbf{h^{-1}(x) = \dfrac{x^2}{1+2x}} $$
+                        $ \mathbf{h^{-1}(x) = \dfrac{x^2}{1+2x}} $
                     </div>
                 </li>
 
                 <li>
                     <p>Construisons \((C_{h^{-1}})\) dans le repère précédent. <span class="points">(0,5pt)</span></p>
 
-                    <div class="figure-placeholder">
+                    <div class="image">
                         <p style="font-weight:600; color: var(--primary-dark);">📈 Courbe de \(h^{-1}\)</p>
                         <p>Courbe représentative de la bijection réciproque</p>
                         <p style="font-size:0.85rem; margin-top:8px;">
                             <a href="https://www.geogebra.org/classic/q97sf6ew" target="_blank">👉 Clique ici pour voir
                                 la courbe sur Geogebra</a>
                         </p>
-                        <svg viewBox="0 0 500 300" width="500" height="300" style="margin-top: 12px;">
-                            <line x1="40" y1="260" x2="470" y2="260" stroke="#333" stroke-width="2" />
-                            <line x1="40" y1="260" x2="40" y2="20" stroke="#333" stroke-width="2" />
-                            <text x="460" y="280" font-size="12">x</text>
-                            <text x="25" y="25" font-size="12">y</text>
-                            <!-- Courbe de h -->
-                            <path d="M 40 260 Q 80 200 150 160 Q 250 100 350 60 Q 420 30 460 20" stroke="#dc2626"
-                                stroke-width="2.5" fill="none" />
-                            <!-- Courbe de h^{-1} (symétrique) -->
-                            <path d="M 40 260 Q 80 200 150 160 Q 250 100 350 60 Q 420 30 460 20" stroke="#16a34a"
-                                stroke-width="2.5" stroke-dasharray="8,4" fill="none" />
-                            <!-- Ligne y=x -->
-                            <line x1="40" y1="260" x2="460" y2="20" stroke="#333" stroke-width="1"
-                                stroke-dasharray="3,3" />
-                            <text x="445" y="280" font-size="10" fill="#333">y=x</text>
-                            <text x="200" y="130" font-size="12" fill="#dc2626">(C_f)</text>
-                            <text x="380" y="90" font-size="12" fill="#16a34a">(C_{h^{-1}})</text>
-                        </svg>
+                        <img src="images/courbe2.png" alt="Tableau des signes">
                     </div>
                 </li>
             </ol>
