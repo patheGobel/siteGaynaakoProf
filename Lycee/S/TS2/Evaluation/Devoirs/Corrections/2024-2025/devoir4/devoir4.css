@@ -615,3 +615,21 @@ mjx-container {
     padding: 8px 15px;
     text-align: center;
 }
+/*arbre Pondéré*/
+.image-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 2rem 0;
+}
+
+.image-container img {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: auto;
+
+    object-fit: contain;
+}

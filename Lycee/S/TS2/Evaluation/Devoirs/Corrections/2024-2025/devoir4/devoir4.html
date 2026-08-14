@@ -516,15 +516,165 @@
             </div>
 
             <div class="exercise-content">
+                <h3>A)</h3>
 
-                <div class="resultbox">
+                <ol>
 
-                </div>
+                    <li>
 
-                <div class="formula-center">
+                        <p>
+                            Si la première boule tirée est verte, on la met dans \(U_2\).
+                        </p>
 
-                </div>
+                        <p>
+                            Dans ce cas, \(U_2\) comporte maintenant 5 boules vertes \(V\) et 5 boules jaunes \(J\).
+                        </p>
 
+                        <p>
+                            On a par conséquent :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            p(V_2 \mid V_1)=\frac{5}{10}
+                            \Rightarrow
+                            p(V_2 \mid V_1)=\frac{1}{2}
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>De même,</p>
+
+                        <div class="formula-center">
+                            \[
+                            p(V_2 \mid R_1)=\frac{1}{11}
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>Dressons un arbre pondéré de la situation.</p>
+
+                        <div class="image-container">
+                            <img src="images/arbre1.png" alt="Arbre pondéré">
+                        </div>
+
+                        <p>
+                            D'après la formule des probabilités totales,
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            p(V_2)=p(V_2\mid V_1)p(V_1)+p(V_2\mid R_1)p(R_1)
+                            \]
+                        </div>
+
+                        <p>Soit :</p>
+
+                        <div class="formula-center">
+                            \[
+                            p(V_2)
+                            =
+                            \frac{1}{2}\times\frac{3}{5}
+                            +
+                            \frac{1}{11}\times\frac{2}{5}
+                            \Rightarrow
+                            p(V_2)=\frac{37}{110}
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>De manière analogue,</p>
+
+                        <div class="formula-center">
+                            \[
+                            p(J_2)
+                            =
+                            p(J_2\mid V_1)p(V_1)
+                            +
+                            p(J_2\mid R_1)p(R_1)
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            =
+                            \frac{1}{2}\times\frac{3}{5}
+                            +
+                            \frac{1}{11}\times\frac{2}{5}
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            =
+                            \frac{53}{110}
+                            \]
+                        </div>
+
+                        <p>On trouve :</p>
+
+                        <div class="resultbox">
+                            \[
+                            \mathbf{
+                            p(J_2)=\frac{53}{110}
+                            }
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>
+                            De manière analogue à la question 3, on a :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            p(R_2)
+                            =
+                            p(R_2\mid V_1)p(V_1)
+                            +
+                            p(R_2\mid R_1)p(R_1)
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            =
+                            0+\frac{5}{11}\times\frac{2}{5}
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            =
+                            \frac{2}{11}
+                            \]
+                        </div>
+
+                        <p>On trouve :</p>
+
+                        <div class="resultbox">
+                            \[
+                            \mathbf{
+                            p(R_2)=\frac{2}{11}
+                            }
+                            \]
+                        </div>
+
+                    </li>
+
+                </ol>
             </div>
 
         </section>
