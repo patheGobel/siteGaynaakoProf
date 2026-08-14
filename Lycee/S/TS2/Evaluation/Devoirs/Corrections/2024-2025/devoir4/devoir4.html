@@ -891,6 +891,212 @@
                         <span class="points">(1,75 pt)</span>
                     </div>
 
+                    <p>
+                        Soit \(g\) la fonction définie sur \(]0;+\infty[\) par :
+                    </p>
+
+                    <div class="formula-center">
+                        \[
+                        g(x)=1+x+\ln x
+                        \]
+                    </div>
+
+                    <ol>
+
+                        <li>
+
+                            <p>
+                                Dressons le tableau de variation de \(g\).
+                            </p>
+
+                            <p>
+                                Soit \(g'\) la fonction dérivée de \(g\), alors on a :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                g'(x)=1+\frac{1}{x}
+                                \]
+                            </div>
+
+                            <p>
+                                Donc,
+                                \(\forall x\in]0;+\infty[,\;g'(x)>0\).
+                            </p>
+
+                            <p>
+                                Par suite, \(g\) est strictement croissante sur \(]0;+\infty[\).
+                            </p>
+
+                            <p>
+                                Par ailleurs,
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim\limits_{x\to0^+}g(x)
+                                &=\lim\limits_{x\to0^+}(1+x+\ln x)\\
+                                &=-\infty
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim\limits_{x\to+\infty}g(x)
+                                &=\lim\limits_{x\to+\infty}(1+x+\ln x)\\
+                                &=+\infty
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                D'où, le tableau de variations de \(g\) suivant :
+                            </p>
+
+                            <div class="variation-image">
+                                <img src="images/tabVar1.png" alt="Tableau de variation de g">
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Montrons qu'il existe un unique réel \(\alpha\) solution de
+                                l'équation \(g(x)=0\).
+                            </p>
+
+                            <p>
+                                En effet, \(g\) est continue et strictement croissante sur
+                                \(]0;+\infty[\).
+                            </p>
+
+                            <p>
+                                Or, \(0\in]-\infty;+\infty[\) donc, d'après le théorème de la
+                                bijection, il existe un unique réel
+                                \(\alpha\in]0;+\infty[\) tel que \(g(\alpha)=0\).
+                            </p>
+
+                            <p>
+                                Vérifions que \(\alpha\) appartient à \(]0.2;0.3[\).
+                            </p>
+
+                            <p>
+                                Soit :
+                                \(g(0.2)=1+0.2+\ln(0.2)=-0.40\)
+                                et
+                                \(g(0.3)=1+0.3+\ln(0.3)=0.09\).
+                            </p>
+
+                            <p>
+                                Alors,
+                                \(g(0.2)\times g(0.3)=-0.36<0\). </p>
+
+                                    <p>
+                                        Ainsi, \(g\) est continue sur \(]0.2;0.3[\) et
+                                        \(g(0.2)\times g(0.3)<0\). </p>
+
+                                            <p>
+                                                Donc, d'après le corollaire du théorème des valeurs
+                                                intermédiaires, il existe
+                                                \(\beta\in]0.2;0.3[\) solution de l'équation \(g(x)=0\).
+                                            </p>
+
+                                            <p>
+                                                L'unique solution de cette équation est le réel \(\alpha\).
+                                            </p>
+
+                                            <p>
+                                                Par conséquent, \(\alpha=\beta\).
+                                                D'où,
+                                                \(\alpha\in]0.2;0.3[\).
+                                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                En déduisons le signe de \(g\) sur \(]0;+\infty[\).
+                            </p>
+
+                            <p>
+                                D'après les questions précédentes, on peut alors écrire :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                g([0;\alpha])=]-\infty;0]
+                                \qquad\text{et}\qquad
+                                g([\alpha;+\infty[)=[0;+\infty[
+                                \]
+                            </div>
+
+                            <p>
+                                Ainsi,
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                g(x)\le0\text{ sur } ]0;\alpha[
+                                \qquad\text{et}\qquad
+                                g(x)\ge0\text{ sur } [\alpha;+\infty[
+                                \]
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Établissons la relation
+                                \(\ln(\alpha)=-1-\alpha\).
+                            </p>
+
+                            <p>
+                                D'après la question 2), \(\alpha\) est l'unique solution de
+                                l'équation \(g(x)=0\).
+                            </p>
+
+                            <p>
+                                Ce qui signifie que \(g(\alpha)=0\).
+                            </p>
+
+                            <p>
+                                Par suite,
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                g(\alpha)=0
+                                \iff
+                                1+\alpha+\ln\alpha=0
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                \iff
+                                \ln\alpha=-1-\alpha
+                                \]
+                            </div>
+
+                            <p>
+                                D'où, la relation :
+                            </p>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{\ln(\alpha)=-1-\alpha}
+                                \]
+                            </div>
+
+                        </li>
+
+                    </ol>
                 </section>
 
                 <!-- Partie B -->
