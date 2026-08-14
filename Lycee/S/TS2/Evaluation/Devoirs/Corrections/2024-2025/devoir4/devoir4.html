@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Devoir n°2 - 2nd Semestre - TS2</title>
+
+    <link rel="stylesheet" href="devoir4.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- ============================================================
+        EN-TÊTE DU DEVOIR
+        ============================================================ -->
+        <header class="header">
+
+            <div class="header-top">
+                <span>♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+                <span><strong>A.S. :</strong> 2024/2025</span>
+            </div>
+
+            <div class="header-top header-top-secondary">
+                <span><strong>Matière :</strong> Mathématiques</span>
+                <span><strong>Niveau :</strong> TS2</span>
+                <span><strong>Date :</strong> 09/12/2024</span>
+                <span><strong>Durée :</strong> 4 heures</span>
+            </div>
+
+            <h1>📝 Correction du devoir n°2 du 2nd semestre</h1>
+
+            <div class="header-meta">
+                <span>👨‍🏫 Professeur : M. BA</span>
+                <span>📚 Classe : TS2</span>
+                <span>📅 Année : 2024-2025</span>
+            </div>
+
+        </header>
+
+        <!-- ============================================================
+        EXERCICE 1
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="exercise-number">Exercice 1</span>
+                <span class="points">4 points</span>
+            </div>
+
+            <div class="exercise-content">
+                <section class="exercise-question">
+
+                    <ol>
+
+                        <li>
+
+                            <p>
+                                On considère dans \( \mathbb{C} \) le polynôme
+                                \( P(z)=z^3-5z^2+19z+25 \).
+                            </p>
+
+                            <ol type="a">
+
+                                <li>
+
+                                    <p>
+                                        Montrons que \( -1 \) est solution de l'équation
+                                        \( P(z)=0 \).
+                                    </p>
+
+                                    <p>
+                                        \(-1\text{ est solution ssi }P(-1)=0\)
+                                    </p>
+
+                                    <div class="formula-center">
+                                        \[
+                                        \begin{aligned}
+                                        P(z)
+                                        &=(-1)^3-5(-1)^2+19(-1)+25\\
+                                        &=-1-5-19+25\\
+                                        &=-25+25\\
+                                        &=0
+                                        \end{aligned}
+                                        \]
+                                    </div>
+
+                                    <p>
+                                        \(P(-1)=0\) donc \(-1\) est bien solution.
+                                    </p>
+
+                                    <div class="resultbox">
+                                        \[
+                                        \mathbf{
+                                        P(-1)=0
+                                        \text{ donc -1 est bien solution }
+                                        \hspace{3.6cm}
+                                        \textbf{(0,25 pt)}
+                                        }
+                                        \]
+                                    </div>
+
+                                </li>
+
+                                <li>
+
+                                    <p>
+                                        Déduisons-en les solutions dans \( \mathbb{C} \)
+                                        de l'équation \( P(z)=0 \).
+                                    </p>
+
+                                    <table class="division-table">
+
+                                        <tr>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>-5</td>
+                                            <td>19</td>
+                                            <td>25</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>-1</td>
+                                            <td></td>
+                                            <td>-1</td>
+                                            <td>6</td>
+                                            <td>-25</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>-6</td>
+                                            <td>25</td>
+                                            <td>0</td>
+                                        </tr>
+
+                                    </table>
+
+                                    <p>
+                                        Donc
+                                        \(P(z)=(z+1)(z^2-6z+25)\).
+                                    </p>
+
+                                    <div class="formula-center">
+                                        \[
+                                        \begin{aligned}
+
+                                        P(z)=0
+                                        &\implies (z+1)(z^2-6z+25)=0\\
+
+                                        &\implies (z+1)=0
+                                        \text{ ou }
+                                        (z^2-6z+25)=0\\
+
+                                        &\implies
+                                        \hspace{3cm}
+                                        \Delta'=(3)^2-25\\
+
+                                        &\implies
+                                        \hspace{3.6cm}
+                                        =(3)^2-25\\
+
+                                        &\implies
+                                        \hspace{3.6cm}
+                                        =-16\\
+
+                                        &\implies
+                                        \hspace{3.6cm}
+                                        =4i\\
+
+                                        &\implies
+                                        z=-1
+                                        \text{ ou }
+                                        z=3-4i
+                                        \text{ ou }
+                                        z=3+4i
+
+                                        \end{aligned}
+                                        \]
+                                    </div>
+
+                                    <div class="resultbox">
+                                        \[
+                                        \mathbf{
+                                        S=
+                                        \left\lbrace
+                                        -1,3-4i,3+4i
+                                        \right\rbrace
+                                        }
+                                        \hspace{3.6cm}
+                                        \textbf{(1,25 pt)}
+                                        \]
+                                    </div>
+
+                                </li>
+
+                            </ol>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        EXERCICE 2
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="exercise-number">Exercice 2</span>
+                <span class="points">(4,75 points ≈ 60 min)</span>
+            </div>
+
+            <div class="exercise-content">
+
+                <div class="resultbox">
+
+                </div>
+
+                <div class="formula-center">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        PROBLÈME
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="problem-title">Problème</span>
+            </div>
+
+            <div class="exercise-content">
+
+                <!-- Partie A -->
+                <section class="problem-part">
+
+                    <div class="part-label">
+                        Partie A
+                        <span class="points">(1,75 pt)</span>
+                    </div>
+
+                </section>
+
+                <!-- Partie B -->
+                <section class="problem-part">
+
+                    <div class="part-label">
+                        Partie B
+                        <span class="points">(9 pts)</span>
+                    </div>
+
+                </section>
+
+                <!-- Partie C -->
+                <section class="problem-part">
+
+                    <div class="part-label">
+                        Partie C
+                        <span class="points">(1,75 pt)</span>
+                    </div>
+                    <ol>
+
+                        <li>
+
+                            <p>
+                                <strong>(0,5 pt)</strong>
+                            </p>
+
+                        </li>
+
+                    </ol>
+                </section>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        PIED DE PAGE
+        ============================================================ -->
+        <footer class="footer">
+
+            <p>
+                © 2024 - Correction du devoir n°2 - 1er semestre - TS2 -
+                Lycée de Dindéfélo
+            </p>
+
+            <p class="footer-details">
+                Durée : 4 heures - Coefficient : 4
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
