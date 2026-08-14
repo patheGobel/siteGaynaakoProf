@@ -598,8 +598,34 @@ mjx-container {
 .variation-image img {
     display: block;
 
+    width: 650px;
     max-width: 100%;
     height: auto;
+}
+/* ============================================================
+   Couleur de text
+   ============================================================ */
+.text-red{
+    color: #dc2626;
+}
+/* ============================================================
+   Courbe
+   ============================================================ */
+.graph-figure {
+    margin: 30px auto;
+    text-align: center;
+}
 
-    object-fit: contain;
+.graph-figure img {
+    max-width: 80%;
+    height: auto;
+}
+
+.graph-figure figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.graph-link {
+    text-align: center;
 }
