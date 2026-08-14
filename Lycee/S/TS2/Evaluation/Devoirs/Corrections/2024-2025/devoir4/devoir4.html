@@ -675,6 +675,199 @@
                     </li>
 
                 </ol>
+
+                <h3>B)</h3>
+
+                <ol>
+
+                    <li>
+
+                        <p>
+                            La loi de probabilité de \(X\) est donnée par le tableau suivant :
+                        </p>
+
+                        <table class="probability-table">
+
+                            <thead>
+                                <tr>
+                                    <th>\(X\)</th>
+                                    <th>\(1000\)</th>
+                                    <th>\(500\)</th>
+                                    <th>\(-500\)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>\(p(X)\)</td>
+                                    <td>\(\dfrac{37}{110}\)</td>
+                                    <td>\(\dfrac{53}{110}\)</td>
+                                    <td>\(\dfrac{2}{11}\)</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </li>
+
+                    <li>
+
+                        <div class="formula-center">
+                            \[
+                            E(X)=\sum x_i p_i
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            E(X)
+                            =
+                            \left(
+                            1000\times\frac{37}{110}
+                            \right)
+                            +
+                            \left(
+                            500\times\frac{53}{110}
+                            \right)
+                            -
+                            \left(
+                            500\times\frac{2}{11}
+                            \right)
+                            \]
+                        </div>
+
+                        <div class="formula-center">
+                            \[
+                            E(X)=\frac{5350}{11}
+                            \]
+                        </div>
+
+                        <p>
+                            Donc,
+                        </p>
+
+                        <div class="resultbox">
+                            \[
+                            \mathbf{
+                            E(X)=\frac{5350}{11}
+                            }
+                            \]
+                        </div>
+
+                    </li>
+
+                </ol>
+
+                <h3>C)</h3>
+
+                <ol>
+
+                    <li>
+
+                        <p>
+                            On a affaire à un schéma de Bernoulli, la probabilité du succès étant
+                            \(p(E)=\dfrac{37}{110}\)
+                            et le nombre d'épreuves étant 15.
+                        </p>
+
+                        <p>
+                            La probabilité d'avoir exactement 8 succès est :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            P_8
+                            =
+                            C_8^{15}
+                            \left(
+                            \frac{37}{110}
+                            \right)^8
+                            \left(
+                            \frac{73}{110}
+                            \right)^7
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>
+                            C'est l'événement :
+                            <strong>
+                                \(\underbrace{\text{SSSSSSSS}}_{\text{8 fois}}
+                                \quad
+                                \underbrace{\text{EEEEEEE}}_{\text{7 fois}}\)
+                            </strong>
+                            (8 succès consécutifs suivis de 7 échecs consécutifs).
+                        </p>
+
+                        <p>
+                            Sa probabilité est :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            p(S)^8\times p(E)^7
+                            =
+                            \left(
+                            \frac{37}{110}
+                            \right)^8
+                            \times
+                            \left(
+                            \frac{73}{110}
+                            \right)^7
+                            \approx 9.3\times10^{-6}
+                            \]
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <p>
+                            L'événement contraire est :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            P_0
+                            =
+                            C_0^{15}
+                            \left(
+                            \frac{37}{110}
+                            \right)^0
+                            \left(
+                            \frac{73}{110}
+                            \right)^{15}
+                            \]
+                        </div>
+
+                        <p>
+                            La probabilité cherchée est donc :
+                        </p>
+
+                        <div class="formula-center">
+                            \[
+                            \begin{aligned}
+
+                            p
+                            &=1-P_0\\
+
+                            &=1-
+                            \left(
+                            \frac{73}{110}
+                            \right)^{15}\\
+
+                            &\approx0.997
+
+                            \end{aligned}
+                            \]
+                        </div>
+
+                    </li>
+
+                </ol>
             </div>
 
         </section>
