@@ -1106,26 +1106,301 @@
                         Partie B
                         <span class="points">(9 pts)</span>
                     </div>
+                    <p>On considère la fonction \( f \) définie par :</p>
 
-                </section>
-
-                <!-- Partie C -->
-                <section class="problem-part">
-
-                    <div class="part-label">
-                        Partie C
-                        <span class="points">(1,75 pt)</span>
+                    <div class="formula-center">
+                        \[
+                        f(x)=
+                        \begin{cases}
+                        \dfrac{x\ln x}{1+x} & \text{si } x>0 \\
+                        0 & \text{si } x=0
+                        \end{cases}
+                        \]
                     </div>
+
                     <ol>
-
                         <li>
-
                             <p>
-                                <strong>(0,5 pt)</strong>
+                                Montrons que \( f \) est continue en 0 puis sur
+                                \( ]0;+\infty[ \).
                             </p>
 
+                            <p>
+                                Calculons \( \lim\limits_{x\to0^+}f(x) \).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim\limits_{x\to0^+}f(x)
+                                &=\lim\limits_{x\to0^+}\frac{x\ln x}{1+x}\\
+                                &=\lim\limits_{x\to0^+}\frac{0}{1}\\
+                                &=0
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                Donc,
+                                \( \lim\limits_{x\to0^+}f(x)=f(0) \).
+                            </p>
+
+                            <p>
+                                D'où, \( f \) est continue en 0.
+                            </p>
+
+                            <p>
+                                Par ailleurs,
+                                \( \forall x_0\in]0;+\infty[ \),
+                                \( f \) est continue en \( x_0 \).
+                            </p>
+
+                            <p>
+                                Par conséquent,
+                                \( f \) est continue sur \( ]0;+\infty[ \).
+                            </p>
                         </li>
 
+                        <li>
+                            <p>
+                                Étudions la dérivabilité de \( f \) en 0.
+                            </p>
+
+                            <p>
+                                Calculons :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \lim\limits_{x\to0^+}\frac{f(x)-f(0)}{x-0}
+                                \]
+                            </div>
+
+                            <p>On a :</p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim\limits_{x\to0^+}\frac{f(x)-f(0)}{x}
+                                &=\lim\limits_{x\to0^+}\frac{x\ln x}{(1+x)x}\\
+                                &=\lim\limits_{x\to0^+}\frac{x\ln x}{x(1+x)}\\
+                                &=\lim\limits_{x\to0^+}\frac{\ln x}{1+x}\\
+                                &=\lim\limits_{x\to0^+}\frac{-\infty}{1}\\
+                                &=-\infty
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                Donc :
+                            </p>
+
+                            <div class="result-box">
+                                \[
+                                \mathbf{
+                                \lim\limits_{x\to0^+}\frac{f(x)-f(0)}{x}
+                                =-\infty
+                                }
+                                \]
+                            </div>
+
+                            <p>
+                                Ainsi, la fonction \( f \) n'est pas dérivable en 0.
+                            </p>
+
+                            <p>
+                                Interprétons graphiquement ce résultat.
+                            </p>
+
+                            <p>
+                                Comme
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \lim\limits_{x\to0^+}
+                                \frac{f(x)-f(0)}{x-0}
+                                =-\infty
+                                \]
+                            </div>
+
+                            <p>
+                                alors la courbe représentative de \( f \) admet une
+                                demi-tangente verticale au point d'abscisse 0.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Déterminons la limite de \( f \) en \( +\infty \).
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim\limits_{x\to+\infty}f(x)
+                                &=\lim\limits_{x\to+\infty}\frac{x\ln x}{1+x}\\
+                                &=\lim\limits_{x\to+\infty}
+                                \frac{x}{x}
+                                \times
+                                \frac{\ln x}{\frac{1+x}{x}}\\
+                                &=\lim\limits_{x\to+\infty}
+                                \frac{\ln x}{\frac{1}{x}+1}\\
+                                &=\lim\limits_{x\to+\infty}
+                                \frac{\infty}{0+1}\\
+                                &=+\infty
+                                \end{aligned}
+                                \]
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>
+                                Montrons que, quel que soit \( x \) élément de
+                                \( ]0;+\infty[ \),
+                                \( f'(x)=\dfrac{g(x)}{(1+x)^2} \).
+                            </p>
+
+                            <p>
+                                On a :
+                                \( \forall x\in]0;+\infty[ \),
+                                \( f(x)=\dfrac{x\ln x}{1+x} \).
+                            </p>
+
+                            <p>
+                                Par suite :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                f'(x)
+                                &=
+                                \frac{(1+\ln x)(1+x)-x\ln x}{(1+x)^2}\\
+                                &=
+                                \frac{1+x+\ln x+x\ln x-x\ln x}{(1+x)^2}\\
+                                &=
+                                \frac{1+x+\ln x}{(1+x)^2}\\
+                                &=
+                                \frac{g(x)}{(1+x)^2}
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="result-box">
+                                \[
+                                \mathbf{
+                                f'(x)=\frac{g(x)}{(1+x)^2}
+                                }
+                                \]
+                            </div>
+
+                            <p>
+                                En déduisons le signe de \( f'(x) \) sur
+                                \( ]0;+\infty[ \).
+                            </p>
+
+                            <p>
+                                Comme \( (1+x)^2>0 \), le signe de \( f'(x) \)
+                                dépend uniquement du signe de \( g(x) \).
+                            </p>
+
+                            <p>
+                                Or, \( g(x) \) est négatif sur
+                                \( ]0;\alpha[ \) et positif sur
+                                \( [\alpha;+\infty[ \).
+                            </p>
+
+                            <p>
+                                Par conséquent :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{cases}
+                                f'(x)\le0 \text{ sur } ]0;\alpha[\\
+                                f'(x)\ge0 \text{ sur } [\alpha;+\infty[
+                                \end{cases}
+                                \]
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>
+                                Montrons que \( f(\alpha)=-\alpha \).
+                            </p>
+
+                            <p>
+                                Soit :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                f(\alpha)
+                                =
+                                \frac{\alpha\ln\alpha}{1+\alpha}
+                                \]
+                            </div>
+
+                            <p>
+                                Or, dans la première partie, à la question 4),
+                                on avait :
+                                \( \ln\alpha=-1-\alpha \).
+                            </p>
+
+                            <p>
+                                Donc, en remplaçant \( \ln\alpha \) par son expression,
+                                on obtient :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                f(\alpha)
+                                &=
+                                \frac{\alpha\ln\alpha}{1+\alpha}\\
+                                &=
+                                \frac{\alpha(-1-\alpha)}{1+\alpha}\\
+                                &=
+                                \frac{-\alpha(1+\alpha)}{1+\alpha}\\
+                                &=
+                                -\alpha
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="result-box">
+                                \[
+                                \mathbf{
+                                f(\alpha)=-\alpha
+                                }
+                                \]
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>
+                                Dressons le tableau de variations de la fonction \( f \).
+                            </p>
+
+                            <div class="image-container">
+                                <img src="images/tabSignes1.png"
+                                    alt="Tableau de variations de la fonction f">
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>
+                                Représentons la courbe de \( f \) dans le plan muni du
+                                repère orthonormal \( (O;\vec{i},\vec{j}) \).
+                                Unité graphique : 5 cm.
+                                Prendre \( \alpha\approx0,3 \).
+                            </p>
+
+                            <div class="image-container">
+                                <img src="images/courbe1.png" alt="Courbe de la fonction f">
+                            </div>
+                        </li>
                     </ol>
                 </section>
 
