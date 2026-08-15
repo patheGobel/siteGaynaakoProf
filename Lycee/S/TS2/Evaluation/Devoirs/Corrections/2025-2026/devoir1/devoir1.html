@@ -866,8 +866,9 @@
                                                                             \] </div>
 
                                                                             <p class="text-red">
-                                                                                 Ainsi,  \( \forall
-                                                                                x\in]0;+\infty[, f'(x)>0 \), donc \( f \)
+                                                                                Ainsi, \( \forall
+                                                                                x\in]0;+\infty[, f'(x)>0 \), donc \( f
+                                                                                \)
                                                                                 est croissante sur \( ]0;+\infty[ \)
                                                                             </p>
 
@@ -892,6 +893,81 @@
 
                                     </ul>
 
+                                </li>
+                                <li>
+                                    <ol type="a">
+                                        <li> Montrons que \((\mathcal{C}_f)\) admet en \(-\infty\) une asymptote
+                                            oblique \(\Delta_1\) dont on déterminera l’équation.
+                                            <strong>(0,5 pt)</strong>
+                                        </li>
+
+                                        <p>
+                                            Comme \(\lim\limits_{x\to-\infty}f(x)=-\infty\)
+                                        </p>
+
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Cherchons
+                                                    \(\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}\).
+                                                </p>
+
+                                                <div class="formula-center">
+                                                    \[
+                                                    \begin{aligned}
+                                                    \lim\limits_{x\to-\infty}\dfrac{f(x)}{x}
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{\dfrac{x^2-2x}{x-1}}{x}\\
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{x^2-2x}{x^2-x}\\
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{x^2}{x^2}\\
+                                                    &=1
+                                                    \end{aligned}
+                                                    \]
+                                                </div>
+
+                                                <p>
+                                                    Donc,
+                                                    \(\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}=1\).
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p>
+                                                    Cherchons
+                                                    \(\lim\limits_{x\to-\infty}(f(x)-x)\).
+                                                </p>
+
+                                                <div class="formula-center">
+                                                    \[
+                                                    \begin{aligned}
+                                                    \lim\limits_{x\to-\infty}(f(x)-x)
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{x^2-2x}{x-1}-x\\
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{x^2-2x-x^2+x}{x-1}\\
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{-x}{x-1}\\
+                                                    &=\lim\limits_{x\to-\infty}
+                                                    \dfrac{-x}{x}\\
+                                                    &=-1
+                                                    \end{aligned}
+                                                    \]
+                                                </div>
+
+                                                <p class="text-red">
+                                                    \(
+                                                    \mathbf{
+                                                    \text{Donc }(\Delta_1):\;y=x-1
+                                                    \text{ est une asymptote oblique à }
+                                                    (\mathcal{C}_f)\text{ en }-\infty.
+                                                    }
+                                                    \)
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </ol>
                                 </li>
                             </ol>
 
