@@ -39,13 +39,13 @@
 
             <div class="header-top">
                 <span>♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
-                <span><strong>A.S. :</strong> 2024/2025</span>
+                <span><strong>A.S. :</strong> 2025/2026</span>
             </div>
 
             <div class="header-top header-top-secondary">
                 <span><strong>Matière :</strong> Mathématiques</span>
                 <span><strong>Niveau :</strong> TS2</span>
-                <span><strong>Date :</strong> 09/12/2024</span>
+                <span><strong>Date :</strong> 09/12/2025</span>
                 <span><strong>Durée :</strong> 4 heures</span>
             </div>
 
@@ -54,7 +54,7 @@
             <div class="header-meta">
                 <span>👨‍🏫 Professeur : M. BA</span>
                 <span>📚 Classe : TS2</span>
-                <span>📅 Année : 2024-2025</span>
+                <span>📅 Année : 2025-2026</span>
             </div>
 
         </header>
@@ -247,8 +247,8 @@
                             </p>
 
                             <p>
-                                L’intervalle est ouvert à gauche car
-                                \(-\infty\) n’est pas un réel.
+                                L'intervalle est ouvert à gauche car
+                                \(-\infty\) n'est pas un réel.
                             </p>
                         </li>
                     </ol>
@@ -265,11 +265,295 @@
 
             <div class="exercise-header">
                 <span class="exercise-number">Exercice 2</span>
-                <span class="points">(4,75 points ≈ 60 min)</span>
+                <span class="points">(4 points)</span>
             </div>
 
             <div class="exercise-content">
+                <section class="exercise-question">
 
+                    <ol>
+                        <li>
+                            <p>
+                                Calculons les limites suivantes :
+                                <strong>(3 × 1 pt)</strong>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to0}
+                                \frac{\sqrt{1+\sin x}-1}{\sin2x}
+                                &=
+                                \lim_{x\to0}
+                                \dfrac{\sin x}
+                                {\sin2x\left(\sqrt{1+\sin x}+1\right)}
+                                \\
+                                &=
+                                \lim_{x\to0}
+                                \dfrac{\frac{\sin x}{x}}
+                                {\dfrac{2\sin2x}{2x}}
+                                \times
+                                \dfrac{1}
+                                {\left(\sqrt{1+\sin x}+1\right)}
+                                \\
+                                &=
+                                \dfrac{1}{2}
+                                \times
+                                \dfrac{1}{2}
+                                \\
+                                &=
+                                \dfrac{1}{4}
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to0}
+                                \dfrac{\sqrt{1+\sin x}-1}{\sin2x}
+                                =
+                                \frac{1}{4}
+                                }
+                                \qquad
+                                \textbf{1 point}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to0}
+                                \dfrac{\cos x-1}{x^3+x^2}
+                                &=
+                                \lim_{x\to0}
+                                \dfrac{\cos x-1}{x^2(x+1)}
+                                \\
+                                &=
+                                \lim_{x\to0}
+                                \dfrac{\cos x-1}{x^2}
+                                \times
+                                \dfrac{1}{x+1}
+                                \\
+                                &=
+                                -\dfrac{1}{2}
+                                \times
+                                1
+                                \\
+                                &=
+                                -\dfrac{1}{2}
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to0}
+                                \dfrac{\cos x-1}{x^3+x^2}
+                                =
+                                -\frac{1}{2}
+                                }
+                                \qquad
+                                \textbf{1 point}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to1}
+                                \dfrac{\sqrt{x+3}-\sqrt{5-x}}
+                                {\sqrt{2x+7}-\sqrt{10-x}}
+                                &=
+                                \lim_{x\to0}
+                                \dfrac{
+                                \left(\sqrt{x+3}-\sqrt{5-x}\right)
+                                \left(\sqrt{x+3}+\sqrt{5-x}\right)
+                                \left(\sqrt{2x+7}-\sqrt{10-x}\right)}
+                                {
+                                \left(\sqrt{2x+7}-\sqrt{10-x}\right)
+                                \left(\sqrt{2x+7}-\sqrt{10-x}\right)
+                                \left(\sqrt{x+3}-\sqrt{5-x}\right)}
+                                \\
+                                &=
+                                \lim_{x\to1}
+                                \dfrac{
+                                \left[x+3-(5-x)\right]
+                                \left(\sqrt{2x+7}+\sqrt{10-x}\right)}
+                                {
+                                \left[2x+7-(10-x)\right]
+                                \left(\sqrt{x+3}+\sqrt{5-x}\right)}
+                                \\
+                                &=
+                                \lim_{x\to1}
+                                \dfrac{
+                                2(-1+x)
+                                \left(\sqrt{2x+7}+\sqrt{10-x}\right)}
+                                {
+                                3(x-1)
+                                \left(\sqrt{x+3}+\sqrt{5-x}\right)}
+                                \\
+                                &=
+                                \lim_{x\to1}
+                                \dfrac{
+                                2(x-1)
+                                \left(\sqrt{2x+7}+\sqrt{10-x}\right)}
+                                {
+                                3(x-1)
+                                \left(\sqrt{x+3}+\sqrt{5-x}\right)}
+                                \\
+                                &=
+                                \lim_{x\to1}
+                                \dfrac{
+                                2\left(\sqrt{2x+7}+\sqrt{10-x}\right)}
+                                {
+                                3\left(\sqrt{x+3}+\sqrt{5-x}\right)}
+                                \\
+                                &=
+                                \dfrac{2}{3}
+                                \times
+                                \dfrac{6}{4}
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to1}
+                                \dfrac{\sqrt{x+3}-\sqrt{5-x}}
+                                {\sqrt{2x+7}-\sqrt{10-x}}
+                                =1
+                                }
+                                \qquad
+                                \textbf{1 point}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                \begin{aligned}
+                                \lim_{x\to1}
+                                \dfrac{\sin(\pi x)}{x-1}
+                                &=
+                                \lim_{X\to0}
+                                \dfrac{\sin(\pi X)}{X}
+                                \\
+                                &=
+                                \lim_{X\to0}
+                                \pi
+                                \dfrac{\sin(\pi X)}{\pi X}
+                                \\
+                                &=
+                                1
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                \lim_{x\to1}
+                                \dfrac{\sin(\pi x)}{x-1}
+                                =1
+                                }
+                                \qquad
+                                \textbf{1 point}
+                                \]
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>
+                                Donnons les primitives des fonctions
+                                \(f\), \(g\) et \(h\) respectivement sur
+                                \(\mathbb{R}\) et
+                                \(\mathbb{R}\setminus\{1;2\}\).
+                                <strong>(2 × 0,5 pt)</strong>
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                f(x)=2\cos(x)-3\sin(x)
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                F(x)=2\sin(x)+3\cos(x)+k
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                F(x)=2\sin(x)+3\cos(x)+k
+                                }
+                                \qquad
+                                \textbf{0,5 point}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                g(x)
+                                =
+                                (3x-1)(3x^2-2x+3)^3
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                G(x)
+                                =
+                                \dfrac{1}{8}(3x^2-2x+3)^4+k
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                G(x)
+                                =
+                                \dfrac{1}{8}(3x^2-2x+3)^4+k
+                                }
+                                \qquad
+                                \textbf{0,5 point}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                h(x)
+                                =
+                                \dfrac{1-x^2}{(x^3-3x+2)^3}
+                                \]
+                            </div>
+
+                            <div class="formula-center">
+                                \[
+                                H(x)
+                                =
+                                \dfrac{1}{3(x^3-3x+2)}+k
+                                \]
+                            </div>
+
+                            <div class="resultbox">
+                                \[
+                                \mathbf{
+                                H(x)
+                                =
+                                \dfrac{1}{3(x^3-3x+2)}+k
+                                }
+                                \qquad
+                                \textbf{0,5 point}
+                                \]
+                            </div>
+                        </li>
+                    </ol>
+
+                </section>
             </div>
 
         </section>
