@@ -656,3 +656,10 @@ mjx-container {
 .probability-table th {
     font-weight: 700;
 }
+/* ============================================================
+   Classes utilitaires
+============================================================ */
+.text-red {
+    color:#dc2626;
+    font-weight: 600;
+}
