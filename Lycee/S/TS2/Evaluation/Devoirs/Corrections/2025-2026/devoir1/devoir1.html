@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Devoir n°1 - 1er Semestre - TS2</title>
+
+    <link rel="stylesheet" href="devoir1.css" />
+
+    <!-- ===== Configuration MathJax ===== -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- ============================================================
+        EN-TÊTE DU DEVOIR
+        ============================================================ -->
+        <header class="header">
+
+            <div class="header-top">
+                <span>♦♦♦ Lycée de Dindéfélo ♦♦♦</span>
+                <span><strong>A.S. :</strong> 2024/2025</span>
+            </div>
+
+            <div class="header-top header-top-secondary">
+                <span><strong>Matière :</strong> Mathématiques</span>
+                <span><strong>Niveau :</strong> TS2</span>
+                <span><strong>Date :</strong> 09/12/2024</span>
+                <span><strong>Durée :</strong> 4 heures</span>
+            </div>
+
+            <h1>📝 Correction du devoir n°1 du 1er semestre</h1>
+
+            <div class="header-meta">
+                <span>👨‍🏫 Professeur : M. BA</span>
+                <span>📚 Classe : TS2</span>
+                <span>📅 Année : 2024-2025</span>
+            </div>
+
+        </header>
+
+        <!-- ============================================================
+        EXERCICE 1
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="exercise-number">Exercice 1</span>
+                <span class="points">0,5 × 10 = 5 points</span>
+            </div>
+
+            <div class="exercise-content">
+                <section class="exercise-question">
+
+                    <ol>
+                        <!-- 1 -->
+                        <li>
+                            <p>
+                                <strong>Théorème des valeurs intermédiaires (TVI).</strong>
+                            </p>
+
+                            <p>
+                                Soit \(f\) une fonction continue sur l’intervalle \([a,b]\).
+                            </p>
+
+                            <p>
+                                Pour tout réel \(k\) compris entre \(f(a)\) et \(f(b)\), il existe
+                                \(c\in[a,b]\) tel que :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                f(c)=k.
+                                \]
+                            </div>
+
+                            <p>
+                                <strong>Corollaire.</strong>
+                            </p>
+
+                            <p>
+                                L’image d’un intervalle par une fonction continue est un intervalle.
+                            </p>
+
+                            <p>
+                                En particulier, si \(f(a)f(b)<0\), alors \(f\) admet au moins une solution de l’équation
+                                    \(f(x)=0\) dans \([a,b]\). </p>
+                        </li>
+
+                        <!-- 2 -->
+                        <li>
+                            <p>
+                                <strong>Théorème de la bijection.</strong>
+                            </p>
+
+                            <p>
+                                Si \(f\) est continue et strictement monotone sur un intervalle \(I\),
+                                alors :
+                            </p>
+
+                            <ul>
+                                <li>\(f\) est bijective de \(I\) vers \(J=f(I)\).</li>
+
+                                <li>
+                                    L’application réciproque
+                                    \(f^{-1}:J\to I\) est continue.
+                                </li>
+
+                                <li>
+                                    \(f^{-1}\) est strictement monotone (même sens si \(f\) est
+                                    croissante, sens opposé si \(f\) est décroissante).
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 3 -->
+                        <li>
+                            <p>
+                                <strong>Théorème des accroissements finis (TAF).</strong>
+                            </p>
+
+                            <p>
+                                Si \(f\) est continue sur \([a,b]\) et dérivable sur \((a,b)\),
+                                alors il existe \(c\in(a,b)\) tel que :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                f'(c)=\frac{f(b)-f(a)}{b-a}.
+                                \]
+                            </div>
+
+                            <p>
+                                <strong>Inégalité des accroissements finis (IAF).</strong>
+                            </p>
+
+                            <p>
+                                Si, de plus, \(|f'(x)|\le M\) pour tout \(x\in(a,b)\), alors :
+                            </p>
+
+                            <div class="formula-center">
+                                \[
+                                |f(x)-f(y)|\le M|x-y|,
+                                \qquad
+                                \forall x,y\in[a,b].
+                                \]
+                            </div>
+                        </li>
+
+                        <!-- 4 -->
+                        <li>
+                            <p>
+                                \(\displaystyle
+                                \text{Si }
+                                \lim\limits_{x\to x_0}
+                                \frac{f(x)-f(x_0)}{x-x_0}=a
+                                \qquad
+                                (a\neq0),
+                                \) alors \(f\) est dérivable en \(x_0\) et \( f'(x_0)=a. \)
+                            </p>
+
+                            <p>
+                                En particulier, \(f\) est localement strictement monotone en \(x_0\)
+                                et \(x_0\) n’est pas un extremum.
+                            </p>
+
+                        </li>
+
+                        <!-- 5 -->
+                        <li>
+                            <p>
+                                \(\displaystyle \text{Si } \lim\limits_{x \to x_0^-} \frac{f(x)-f(x_0)}{x-x_0} =
+                                +\infty,\) alors la
+                                dérivée à gauche de \(f\) en \(x_0\) est \(+\infty\).
+                            </p>
+
+                            <p>
+                                La pente est verticale du côté gauche
+                                (pas de dérivée finie).
+                            </p>
+                        </li>
+
+                        <!-- 6 -->
+                        <li>
+                            <p>\(\displaystyle \text{Si } \lim\limits_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = 0, \) alors
+                                \(f\) est dérivable en \(x_0\) et f'(x_0)=0</p>
+
+                            <p>
+
+                            </p>
+
+                            <p>
+                                La tangente en \(x_0\) est horizontale.
+                            </p>
+                        </li>
+
+                        <!-- 7 -->
+                        <li>
+                            <p>Si \( \lim\limits_{x\to+\infty}f(x)=+\infty, \qquad
+                                \lim\limits_{x\to+\infty}\frac{f(x)}{x} =\beta\in\mathbb{R}^{*}, \qquad
+                                \lim\limits_{x\to+\infty} [f(x)-\beta x] =+\infty\),</p>
+
+
+                            <p>
+                                alors la droite d’équation
+                                \(y=\beta x+b\)
+                                n’est <strong>pas</strong> une asymptote oblique pour \(f\).
+                            </p>
+
+                            <p>
+                                L’écart entre \(f(x)\) et \(\beta x\) diverge vers \(+\infty\).
+                            </p>
+                        </li>
+
+                        <!-- 8 -->
+                        <li>
+                            <p>
+                                Si \(f\) est continue et strictement décroissante sur
+                                \(]-\infty,b]\), alors :\(\displaystyle f( ]-\infty,b])= ]\ell,f(b)]\)
+                            </p>
+
+                            <p>
+                                où
+                                \(\displaystyle
+                                \ell=\lim_{x\to-\infty}f(x)
+                                \).
+                            </p>
+
+                            <p>
+                                L’intervalle est ouvert à gauche car
+                                \(-\infty\) n’est pas un réel.
+                            </p>
+                        </li>
+                    </ol>
+
+                </section>
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        EXERCICE 2
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="exercise-number">Exercice 2</span>
+                <span class="points">(4,75 points ≈ 60 min)</span>
+            </div>
+
+            <div class="exercise-content">
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        PROBLÈME
+        ============================================================ -->
+        <section class="exercise-section">
+
+            <div class="exercise-header">
+                <span class="problem-title">Problème</span>
+            </div>
+
+            <div class="exercise-content">
+
+                <!-- Partie A -->
+                <section class="problem-part">
+
+                    <div class="part-label">
+                        Partie A
+                        <span class="points">(1,75 pt)</span>
+                    </div>
+
+                </section>
+
+                <!-- Partie B -->
+                <section class="problem-part">
+
+                    <div class="part-label">
+                        Partie B
+                        <span class="points">(9 pts)</span>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        PIED DE PAGE
+        ============================================================ -->
+        <footer class="footer">
+
+            <p>
+                © 2025 - Correction du devoir n°1 - 1er semestre - TS2 -
+                Lycée de Dindéfélo
+            </p>
+
+            <p class="footer-details">
+                Durée : 4 heures - Coefficient : 4
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
