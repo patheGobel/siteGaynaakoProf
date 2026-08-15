@@ -640,13 +640,15 @@
                                                 \]
                                             </div>
                                 </li>
+
                                 <li>
                                     Déterminons les limites aux bornes de \(D_f\).
 
                                     <ul>
 
                                         <li>
-                                            <u>En \(-\infty\)</u> : \(f(x)=f_1(x)\)<span class="points">(0,25 point)</span>
+                                            <u>En \(-\infty\)</u> : \(f(x)=f_1(x)\)<span class="points">(0,25
+                                                point)</span>
 
                                             <div class="formula-center">
                                                 \[
@@ -669,7 +671,8 @@
                                         </li>
 
                                         <li>
-                                            <u>En \(+\infty\)</u> : \(f(x)=f_2(x)\)<span class="points">( 0,25 point)</span>
+                                            <u>En \(+\infty\)</u> : \(f(x)=f_2(x)\)<span class="points">( 0,25
+                                                point)</span>
 
                                             <div class="formula-center">
                                                 \[
@@ -687,6 +690,203 @@
                                                 \mathbf{\lim\limits_{x\to+\infty}f(x)=+\infty}
                                                 \]
                                             </div>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    Étudions la continuité et la dérivabilité de \(f\) en \(0\).
+                                    Interprétons les résultats obtenus.
+
+                                    <span class="point">(1,5 pt)</span>
+
+                                    <p><u><strong>Étudions la continuité de \(f\) en \(0\)</strong></u></p>
+
+                                    <ul>
+
+                                        <li>
+                                            <u>En \(0^-\)</u> : \(f(x)=f_1(x)\)
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to0^-}f(x)
+                                                &=\lim\limits_{x\to0^-}\dfrac{x^2-2x}{x-1}\\
+                                                &=0
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <div class="resultbox">
+                                                \[
+                                                \mathbf{\lim\limits_{x\to0^-}f(x)=0}
+                                                \]
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <u>En \(0^+\)</u> : \(f(x)=f_2(x)\)
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to0^+}f(x)
+                                                &=\lim\limits_{x\to0^+}\left(x+\sqrt{x^2+x}\right)\\
+                                                &=0
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <div class="resultbox">
+                                                \[
+                                                \mathbf{\lim\limits_{x\to0^+}f(x)=0}
+                                                \]
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+
+                                    <p>On a \(f(0)=0\).</p>
+
+                                    <div class="resultbox">
+                                        \[
+                                        \mathbf{
+                                        \lim\limits_{x\to0^-}f(x)
+                                        =
+                                        \lim\limits_{x\to0^+}f(x)
+                                        =
+                                        f(0)
+                                        } \text{donc \(f\) est continue en \(0\).}
+                                        \]
+                                    </div>
+
+                                    <p><u><strong>Étudions la dérivabilité de \(f\) en \(0\)</strong></u></p>
+
+                                    <ul>
+
+                                        <li>
+                                            <u>En \(0^-\)</u> : \(f(x)=f_1(x)\)
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to0^-}\dfrac{f(x)-f(0)}{x}
+                                                &=
+                                                \lim\limits_{x\to0^-}
+                                                \dfrac{\dfrac{x^2-2x}{x-1}}{x}\\
+                                                &=
+                                                \lim\limits_{x\to0^-}
+                                                \dfrac{x^2-2x}{x^2-x}\\
+                                                &=
+                                                \lim\limits_{x\to0^-}
+                                                \dfrac{x-2}{x-1}\\
+                                                &=2
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <div class="resultbox">
+                                                \[ \text{\(f\) est dérivable à gauche de \(0\) et
+                                                \(y=2x\) est une demi-tangente en \(0^-\).} \]
+                                            </div>
+
+                                        </li>
+
+                                        <li>
+                                            <u>En \(0^+\)</u> : \(f(x)=f_2(x)\)
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to0^+}\dfrac{f(x)-f(0)}{x}
+                                                &=
+                                                \lim\limits_{x\to0^+}
+                                                \dfrac{x+\sqrt{x^2+x}}{x}\\
+                                                &=
+                                                \lim\limits_{x\to0^+}
+                                                \dfrac{x^2-x^2-x}
+                                                {x\left(x-\sqrt{x^2+x}\right)}\\
+                                                &=
+                                                \lim\limits_{x\to0^+}
+                                                \dfrac{-x}
+                                                {x\left(x-\sqrt{x^2+x}\right)}\\
+                                                &=
+                                                \lim\limits_{x\to0^+}
+                                                \dfrac{-1}
+                                                {x-\sqrt{x^2+x}}\\
+                                                &=
+                                                \text{``}\dfrac{-1}{0}\text{''}
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <p>Supposons que :\(\quad x-\sqrt{x^2+x}>0 \)</p>
+
+                                            <p>\( x - \sqrt{x^2+x} > 0 \implies \sqrt{x^2+x} < x \)</p>
+                                                    <p>\( \begin{aligned}
+                                                        \sqrt{x^2+x} < x &\implies \begin{cases} x^2+x> 0\\
+                                                            x > 0\\
+                                                            x^2+x < x^{2} \end{cases}\\ &\implies \begin{cases} x^2+x>
+                                                                0\\
+                                                                x > 0\\
+                                                                x < 0 \end{cases}\\ \end{aligned} \)</p>
+                                                                    <p>\( \begin{aligned}
+                                                                        \begin{cases}
+                                                                        x^2+x = 0\\
+                                                                        x = 0
+                                                                        \end{cases}\implies
+                                                                        \begin{cases}
+                                                                        x=0 \textbf{ ou } x=-1\\
+                                                                        x = 0
+                                                                        \end{cases}
+                                                                        \end{aligned} \)</p>
+                                                                    <div class="image-container">
+                                                                        <img src="images/tabSigne2.png"
+                                                                            alt="Tableau de signe">
+                                                                    </div>
+
+                                                                    <div class="formula-center">
+                                                                        \[
+                                                                        S=\varnothing
+                                                                        \]
+                                                                    </div>
+
+                                                                    <p>
+                                                                        Ainsi, il n'existe pas de \(x>0\) pour lequel
+                                                                        \(x-\sqrt{x^2+x}>0\).
+                                                                    </p>
+
+                                                                    <div class="formula-center">
+                                                                        \[
+                                                                        \textbf{Donc }
+                                                                        x-\sqrt{x^2+x}<0, \qquad \forall x\in]0;+\infty[
+                                                                            \] </div>
+
+                                                                            <div class="resultbox">
+                                                                                   \[ \text{ Ainsi, }  \forall x\in]0;+\infty[, f'(x)>0, \text{donc f est croissante sur }]0;+\infty[\]
+                                                                            </div>
+
+                                                                            <div class="formula-center">
+                                                                                \[
+                                                                                \begin{aligned}
+                                                                                \lim\limits_{x\to0^+}\dfrac{f(x)-f(0)}{x}
+                                                                                &=
+                                                                                \lim\limits_{x\to0^+}
+                                                                                \dfrac{-1}{x-\sqrt{x^2+x}}\\
+                                                                                &=
+                                                                                \dfrac{-1}{0^-}\\
+                                                                                &=+\infty
+                                                                                \end{aligned}
+                                                                                \]
+                                                                            </div>
+
+                                                                            <div class="resultbox">
+                            \[ \text{ f n'est pas dérivable à droite de \(0\). Elle admet donc une demi-tangente orientée vers le haut en \(0^+\).} \]
+                                                                            </div>
+
                                         </li>
 
                                     </ul>
