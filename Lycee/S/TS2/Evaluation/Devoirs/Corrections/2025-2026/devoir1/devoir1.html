@@ -894,6 +894,7 @@
                                     </ul>
 
                                 </li>
+
                                 <li>
                                     <ol type="a">
                                         <li> Montrons que \((\mathcal{C}_f)\) admet en \(-\infty\) une asymptote
@@ -1000,10 +1001,97 @@
                                             </div>
 
                                             <p class="text-red">
-                                                Sur $]-\infty;0[,\, f(x)-y > 0 $ donc $(\mathcal{C}_f)$ est au-dessus de $(\Delta_1)$
+                                                Sur $]-\infty;0[,\, f(x)-y > 0 $ donc $(\mathcal{C}_f)$ est au-dessus de
+                                                $(\Delta_1)$
                                             </p>
                                         </li>
                                     </ol>
+                                </li>
+
+                                <li>
+                                    <p>Montrons que \((\mathcal{C}_f)\) admet en \(+\infty\) une asymptote oblique
+                                        \((\Delta_2)\) dont on déterminera l'équation.
+                                        <span class="points">(0,5 pt)</span>
+                                    </p>
+
+                                    <p>
+                                        Comme \(\displaystyle \lim\limits_{x\to+\infty}f(x)=+\infty\).
+                                    </p>
+
+                                    <ul>
+
+                                        <li>
+                                            <p>
+                                                Cherchons
+                                                \(\displaystyle \lim\limits_{x\to+\infty}\dfrac{f(x)}{x}\).
+                                            </p>
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to+\infty}\dfrac{f(x)}{x}
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac{x+\sqrt{x^2+x}}{x}\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac{x\left(1+\sqrt{1+\dfrac1x}\right)}{x}\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \left(1+\sqrt{1+\dfrac1x}\right)\\
+                                                &=2
+                                                \end{aligned}
+                                                \]
+                                            </div>
+
+                                            <p class="text-red">
+                                                \(
+                                                \mathbf{
+                                                \lim\limits_{x\to+\infty}\dfrac{f(x)}{x}=2
+                                                }
+                                                \)
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <p>
+                                                Cherchons
+                                                \(\displaystyle \lim\limits_{x\to+\infty}(f(x)-2x)\).
+                                            </p>
+
+                                            <div class="formula-center">
+                                                \[
+                                                \begin{aligned}
+                                                \lim\limits_{x\to+\infty}(f(x)-2x)
+                                                &=\lim\limits_{x\to+\infty}
+                                                \left(x+\sqrt{x^2+x}-2x\right)\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \left(\sqrt{x^2+x}-x\right)\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac{x^2+x-x^2}
+                                                {\sqrt{x^2+x}+x}\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac{x}
+                                                {\sqrt{x^2+x}+x}\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac{x}
+                                                {x\left(1+\sqrt{1+\dfrac1x}\right)}\\
+                                                &=\lim\limits_{x\to+\infty}
+                                                \dfrac1{1+\sqrt{1+\dfrac1x}}\\
+                                                &=\dfrac12
+                                                \end{aligned}
+                                                \]
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <p class="text-red">
+                                        \(
+                                        \mathbf{
+                                        \text{Donc }(\Delta_2):\;y=2x+\dfrac12
+                                        \text{ est une asymptote oblique à }
+                                        (\mathcal{C}_f)\text{ en }+\infty.
+                                        }
+                                        \)
+                                    </p>
                                 </li>
                             </ol>
 
