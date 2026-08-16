@@ -66,12 +66,41 @@
 
             <div class="exercise-header">
                 <span class="exercise-number">Exercice 1</span>
-                <span class="points">2,5 points</span>
+                <span class="points">(02,5 points $\approx$ 36 mns)</span>
             </div>
 
             <div class="exercise-content">
                 <section class="exercise-question">
-
+                    <ol>
+                        <li>
+                            <p>Déterminons une primitive $F$ de la fonction $f$ sur $I$.</p>
+                            <ol type="a">
+                                <li>
+                                    <p>$f(x) = (6x - 3)(4x^2 - 4x + 2)^3 \quad ; I = \mathbb{R}$<span
+                                            class="points">(0,5pt)</span></p>
+                                    <p>$
+                                        \begin{aligned}
+                                        f(x) &= (6x - 3)(4x^2 - 4x + 2)^3\\
+                                        &= 3(2x - 1)(4x^2 - 4x + 2)^3\\
+                                        &= 3\times \dfrac{1}{4}(8x - 4)(4x^2 - 4x + 2)^3\\
+                                        &= 3\times \dfrac{1}{4}(4x^2 - 4x + 2)'(4x^2 - 4x + 2)^3\\
+                                        &=3\times \dfrac{1}{4}u'u^{3}
+                                        \end{aligned}
+                                        $</p>
+                                    <p>$
+                                        \begin{aligned}
+                                        F(x) &=3\times \dfrac{1}{4}\times \dfrac{1}{4}u^{4} +k\\
+                                        &= 3\times \dfrac{1}{4} \times \dfrac{1}{4} (4x^2 - 4x + 2)^4 +k\\
+                                        &= \dfrac{3}{16} (4x^2 - 4x + 2)^4 +k\\
+                                        \end{aligned}
+                                        $ </p>
+                                        <div class="resultbox">\[
+    \mathbf{F(x) = \dfrac{3}{16} (4x^2 - 4x + 2)^4}+k
+    \]</div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
                 </section>
             </div>
 
