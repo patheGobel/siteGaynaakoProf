@@ -639,6 +639,7 @@
                                             <p>$g$ est continue et strictement décroissant de $]-\infty , -1[$ vers
                                                 $]+\infty , -6[$ d'où l'unicité de la solution </p>
                                 </li>
+
                                 <li>
                                     <p>Donnons un encadrement de $\alpha$ à $10^{-1}$. <span class="points">
                                             (0,5pt)</span></p>
@@ -683,10 +684,7 @@
                                 \begin{aligned}
                                 g(x)>0 & \text{ si } x\in ]-\infty,\alpha[ \\
                                 g(x)=0 & \text{ si } x=\alpha \\
-                                g(x)<0 & \text{ si } x \in ]\alpha,0] 
-                                \end{aligned} 
-                                \)
-                            </p>
+                                g(x)<0 & \text{ si } x \in ]\alpha,0] \end{aligned} \) </p>
                         </li>
                     </ol>
                 </section>
@@ -698,7 +696,47 @@
                         Partie B
                         <span class="points">(9 points)</span>
                     </div>
-
+                    <ol>
+                        <li>
+                            <p>Déterminons l'ensemble de définition $D_f$ de $f$.<span class="points">(0,5pt)</span></p>
+                            <p>$$
+                                f(x) =
+                                \begin{cases}
+                                \dfrac{x^3 - 2x^2}{x^2 - 1} & \text{; si } x \leq 0 \\[3mm]
+                                x + \sqrt{x^2 + x} & \text{; si } x > 0
+                                \end{cases}
+                                $$ </p>
+                            <p>$$\text{ Posons }
+                                f(x) =
+                                \begin{cases}
+                                f_{1}(x) & \text{; si } x \leq 0 \\[3mm]
+                                f_{2}(x) & \text{; si } x > 0
+                                \end{cases}$$</p>
+                            <ul>
+                                <li>
+                                    <p>$f_{1}$</p>
+                                    <p>$
+                                        \begin{aligned}
+                                        f_{1} \quad &\exists \quad \text{ ssi } x^2 - 1 \neq 0 &\text{ et }& x \leq
+                                        0\\[3mm]
+                                        & x \neq -1 \text{ et } x \neq -1 &\text{ et }& x \in ]-\infty,0] \\[3mm]
+                                        & -1 \in ]-\infty,0] &\text{ et }& 1 \notin ]-\infty,0]
+                                        \end{aligned}
+                                        $ </p>
+                                    <p>$\underline{Df_{1} = ]-\infty ; -1[ \cap ]-1 ; 0[}$</p>
+                                </li>
+                                <li>
+                                    <p>$f_{2}$</p>
+                                    <p>$ f_{2} \quad \exists \quad$ ssi $x^2 + x \geq 0 $ et $x > 0$</p>
+                                    <p>Posons $x^2 + x = 0 $</p>
+                                    <p>$x^2 + x = 0 \implies x=0 \textbf{ ou } x=-1$</p>
+                                    <div class="image-container">
+                                        <img src="images/tabSignes2.png" alt="Tableau de signe de">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
                 </section>
 
             </div>
