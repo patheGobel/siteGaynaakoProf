@@ -1,0 +1,12 @@
+.resultbox {
+    background-color: #fca5a5;
+    /* red!30 */
+    border: 0.5px solid #000000;
+
+    border-radius: 0;
+    /* sharp corners */
+
+    padding: 2px 5px;
+
+    margin: 12px 0;
+}
