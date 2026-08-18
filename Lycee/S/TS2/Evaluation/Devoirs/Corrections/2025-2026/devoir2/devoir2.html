@@ -1370,6 +1370,47 @@
                                 vers $J=[0,+\infty[$</p>
                             <p>Comme $\forall x \in I$, $h'(x)\neq 0$ donc $h^{-1}$ est dérivable sur $J$</p>
                         </li>
+
+                        <li>
+                            <p>Calculons $h^{-1}(1)$ et $(h^{-1})'(\sqrt{2}+1)$.<span class="points">(0,5pt)</span></p>
+                            <p>\(
+                                h(x)=x+\sqrt{x^2+x}.
+                                \)</p>
+                            <ul>
+                                <li>
+                                    <p><b>Calcul de $h(1)$</b></p>
+                                    <p>$h(1) = \sqrt{2}+1$ </p>
+                                    <div class="text-red"> \[
+                                        \mathbf{ h(1) = \sqrt{2}+1 }
+                                        \]</div>
+                                </li>
+
+                                <li>
+                                    <p><b>Calcul de $(h^{-1})'(\sqrt{2}+1)$</b></p>
+                                    <p>\(
+                                        (h^{-1})'(\sqrt{2}+1)=\dfrac{1}{h'(h^{-1}(\sqrt{2}+1))}
+                                        \)</p>
+                                    <p>\( \textbf{ Or } h(1) =
+                                        \sqrt{2}+1 \)</p>
+                                    <p>\( \textbf{ donc } h^{-1}(\sqrt{2}+1) = 1 \) </p>
+                                    \(
+                                    \begin{aligned}
+                                    (h^{-1})'(\sqrt{2}+1)
+                                    &= \dfrac{1}{h'\!\left(1\right)} \textbf{ comme }
+                                    h'(x)=1+\dfrac{2x+1}{2\sqrt{x^2+x}}\\
+                                    &=\dfrac{1}{1+\dfrac{2+1}{2\sqrt{1^2+1}}}\\
+                                    &=\dfrac{1}{1+\dfrac{3}{2\sqrt{2}}}\\
+                                    &=\dfrac{1}{ \dfrac{2\sqrt{2}+3}{2\sqrt{2}}}\\
+                                    &=\dfrac{2\sqrt{2}}{2\sqrt{2}+3}
+                                    \end{aligned}
+                                    \)
+
+                                    <div class="resultbox"> \[
+                                        \mathbf{(h^{-1})'(\sqrt{2}+1)=\dfrac{2\sqrt{2}}{2\sqrt{2}+3}}
+                                        \]</div>
+                                </li>
+                            </ul>
+                        </li>
                     </ol>
                 </section>
             </div>
