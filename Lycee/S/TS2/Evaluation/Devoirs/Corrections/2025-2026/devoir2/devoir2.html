@@ -846,6 +846,7 @@
                                         </li>
                                     </ul>
                                 </li>
+
                                 <li>
                                     <p>Pour $x \leq 0$, déterminons les réels $a, b, c$ et $d$ tels que :
                                         $f(x)=ax+b+\dfrac{cx+d}{x^2-1}$ <span class="points">(0,5pt)</span></p>
@@ -913,7 +914,49 @@
                                             \)
                                             <div class="resultbox">\[
                                                 \mathbf{ \text{Donc } (\Delta_1): y = x -2 \text{ est une asymptote }
-                                                \text{oblique à}  (\mathcal{C}_f) \text{en } -\infty }
+                                                \text{oblique à} (\mathcal{C}_f) \text{en } -\infty }
+                                                \]</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Donner la nature de l'asymptote en $+\infty$.<span class="points">(0,5pt)</span>
+                                    </p>
+                                    <p>Comme $\lim\limits_{x \to +\infty} f(x) = -\infty$ </p>
+                                    <ul>
+                                        <li>
+                                            <p>Cherchons $\lim\limits_{x \to +\infty} \dfrac{f(x)}{x} $</p>
+                                            \(
+                                            \begin{aligned}
+                                            \lim\limits_{x \to +\infty} \dfrac{f(x)}{x} &= \lim\limits_{x \to +\infty}
+                                            \dfrac{x + \sqrt{x^2+x}}{x}\\
+                                            &= \lim\limits_{x \to +\infty} \dfrac{x\left(1 +
+                                            \sqrt{1+\dfrac{1}{x}}\right)}{x}\\
+                                            &= \lim\limits_{x \to +\infty} \left(1 + \sqrt{1+\dfrac{1}{x}}\right)\\
+                                            &= 2
+                                            \end{aligned}
+                                            \)
+                                            <p>Donc $\lim\limits_{x \to +\infty} \dfrac{f(x)}{x} = 2 $</p>
+                                        </li>
+                                        <li>
+                                            <p>Cherchons $\lim\limits_{x \to +\infty} f(x)-2x $</p>
+                                            \(
+                                            \begin{aligned}
+                                            \lim\limits_{x \to +\infty} f(x)-2x &= \lim\limits_{x \to +\infty} x +
+                                            \sqrt{x^2+x}-2x\\
+                                            &= \lim\limits_{x \to +\infty} \sqrt{x^2+x}-x\\
+                                            &= \lim\limits_{x \to +\infty} \dfrac{x^2+x-x^2}{\sqrt{x^2+x}+x} \\
+                                            &= \lim\limits_{x \to +\infty} \dfrac{x}{\sqrt{x^2+x}+x} \\
+                                            &= \lim\limits_{x \to +\infty} \dfrac{x}{x\left(1 +
+                                            \sqrt{1+\dfrac{1}{x}}\right)} \\
+                                            &= \lim\limits_{x \to +\infty} \dfrac{1}{\left(1 +
+                                            \sqrt{1+\dfrac{1}{x}}\right)} \\
+                                            &= \dfrac{1}{2}
+                                            \end{aligned}
+                                            \)
+                                            <div class="resultbox">\[
+                                                \mathbf{ \text{Donc } (\Delta_2): y = 2x+\dfrac{1}{2} \text{ est une}
+                                                \text{asymptote oblique à } (\mathcal{C}_f) \text{en } +\infty }
                                                 \]</div>
                                         </li>
                                     </ul>
