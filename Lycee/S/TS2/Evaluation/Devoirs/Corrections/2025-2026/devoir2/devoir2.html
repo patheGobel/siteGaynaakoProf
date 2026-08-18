@@ -919,6 +919,7 @@
                                         </li>
                                     </ul>
                                 </li>
+
                                 <li>
                                     <p>Donner la nature de l'asymptote en $+\infty$.<span class="points">(0,5pt)</span>
                                     </p>
@@ -938,6 +939,7 @@
                                             \)
                                             <p>Donc $\lim\limits_{x \to +\infty} \dfrac{f(x)}{x} = 2 $</p>
                                         </li>
+
                                         <li>
                                             <p>Cherchons $\lim\limits_{x \to +\infty} f(x)-2x $</p>
                                             \(
@@ -964,6 +966,96 @@
                             </ol>
                         </li>
 
+                        <li>
+                            <ol type="a">
+                                <li>
+                                    <p>Montrons que $f$ est continue sur $D_f$.</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>Continuité sur chaque intervalle</b></p>
+                                            <ul>
+                                                <li>
+                                                    <p>Sur $]-\infty,0]\setminus\{-1\}$</p>
+                                                    <p>La fonction
+                                                        \(
+                                                        x\longmapsto \dfrac{x^3-2x^2}{x^2-1}
+                                                        \)est une fonction rationnelle.</p>
+
+                                                    <p>Elle est donc continue sur son domaine de définition
+                                                        \(
+                                                        \mathbb{R}\setminus\{-1,1\}.
+                                                        \)</p>
+
+                                                    <p>En particulier, elle est continue sur
+                                                        $]-\infty,0]\setminus\{-1\}$.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p>Sur $]0,+\infty[$</p>
+                                                    <p>Pour tout $x>0$, on a $x^2+x>0$,</p>
+                                                    <p>donc la fonction
+                                                        \(
+                                                        x\longmapsto \sqrt{x^2+x}
+                                                        \)
+                                                        est bien définie et continue sur $]0,+\infty[$.</p>
+
+                                                    <p>Ainsi, la fonction
+                                                        \(
+                                                        x\longmapsto x+\sqrt{x^2+x}
+                                                        \)
+                                                        étant somme de fonctions continues, est continue sur
+                                                        $]0,+\infty[$.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p><b>Continuité en $0$</b></p>
+                                            <ul>
+                                                <li>
+                                                    <p>$\underline{\text{En } 0^-}: f(x)=f_{1}(x)$</p>
+                                                    <p>\(
+                                                        \begin{aligned}
+                                                        \lim\limits_{x \to 0^-} f(x) &= \lim\limits_{x \to 0^-}
+                                                        \dfrac{x^3-2x^2}{x^2-1}\\
+                                                        &= 0
+                                                        \end{aligned}
+                                                        \)</p>
+                                                    <p class="text-red">$\underline{\lim\limits_{x \to 0^-} f(x) = 0}$
+                                                    </p>
+                                                </li>
+
+                                                <li>
+                                                    <p>$\underline{\text{En } 0^+}: f(x)=f_{2}(x)$</p>
+                                                    <p>\(
+                                                        \begin{aligned}
+                                                        \lim\limits_{x \to 0^+} f(x) &= \lim\limits_{x \to 0^+}
+                                                        \bigl(x+\sqrt{x^2+x}\bigr)\\
+                                                        &=0
+                                                        \end{aligned}
+                                                        \)</p>
+                                                    <p class="text-red">$\underline{\lim\limits_{x \to 0^+} f(x) = 0}$
+                                                    </p>
+                                                    <p>On a $f(0)=\dfrac{0^3-2\cdot 0^2}{0^2-1}=0$</p>
+                                                    <p class="text-red">Finalement $\lim\limits_{x \to 0^-} f(x) =
+                                                        \lim\limits_{x \to 0^+} f(x) = f(0)$ donc f est continue en $0$
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p>Conclusion</p>
+                                            <p>La fonction $f$ est continue sur $]-\infty,0]\setminus\{-1\}$, sur
+                                                $]0,+\infty[$ et en $0$.</p>
+                                            <div class="resultbox">\[
+                                                \mathbf{ \lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to 0^+} f(x) =
+                                                f(0)=0 \text{ donc } f \text{ est continue sur }
+                                                D_f=\mathbb{R}\setminus\{-1\}. }
+                                                \]</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
                     </ol>
                 </section>
 
