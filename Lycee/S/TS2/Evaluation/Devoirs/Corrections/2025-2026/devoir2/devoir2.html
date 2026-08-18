@@ -1056,142 +1056,155 @@
                                         </li>
                                     </ul>
                                 </li>
-                            </ol>
-                        </li>
 
-                        <li>
-                            <p>Étudions la dérivabilité de $f$ en $0$ puis interprétons le résultat obtenu.<span
-                                    class="points">(1,5pt)</span></p>
-                            <ul>
                                 <li>
-                                    <p>Étudions la dérivabilité de $f$ en $0$</p>
+                                    <p>Étudions la dérivabilité de $f$ en $0$ puis interprétons le résultat obtenu.<span
+                                            class="points">(1,5pt)</span></p>
                                     <ul>
                                         <li>
-                                            <p>$\underline{\text{En } 0^-}: f(x)=f_{1}(x)$</p>
-                                            \(
-                                            \begin{aligned}
-                                            \lim\limits_{x \to 0^-} \dfrac{f(x)-f(0)}{x} &= \lim\limits_{x \to 0^-}
-                                            \dfrac{\dfrac{x^3-2x^2}{x^2-1}}{x}\\
-                                            &= \lim\limits_{x \to 0^-} \dfrac{x^3-2x^2}{x^2-x}\\
-                                            &= \lim\limits_{x \to 0^-} \dfrac{x^2-2x}{x-1}\\
-                                            &=0
-                                            \end{aligned}
-                                            \)
-                                        </li>
-
-                                        <li>
-                                            <p>$\underline{\text{En } 0^+}: f(x)=f_{2}(x)$</p>
-                                            \(
-                                            \begin{aligned}
-                                            \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} &=\lim\limits_{x \to 0^+}
-                                            \dfrac{x + \sqrt{x^2+x}}{x}\\
-                                            &=\lim\limits_{x \to 0^+} \dfrac{x^2-x^2-x}{x(x - \sqrt{x^2+x})}\\
-                                            &=\lim\limits_{x \to 0^+} \dfrac{-x}{x(x - \sqrt{x^2+x})}\\
-                                            &=\lim\limits_{x \to 0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
-                                            &="\dfrac{-1}{0}"\\
-                                            \end{aligned}
-                                            \)
-                                            <p>Supposons que $ x - \sqrt{x^2+x} > 0 $</p>
-                                            <p>$ x - \sqrt{x^2+x} > 0 \implies \sqrt{x^2+x} < x $</p>
-                                                    $
+                                            <p>Étudions la dérivabilité de $f$ en $0$</p>
+                                            <ul>
+                                                <li>
+                                                    <p>$\underline{\text{En } 0^-}: f(x)=f_{1}(x)$</p>
+                                                    \(
                                                     \begin{aligned}
-                                                    \sqrt{x^2+x} < x &\implies \begin{cases} x^2+x> 0\\
-                                                        x > 0\\
-                                                        x^2+x < x^{2} \end{cases}\\ &\implies \begin{cases} x^2+x> 0\\
-                                                            x > 0\\
-                                                            x < 0 \end{cases}\\ \end{aligned} $ <p>$
-                                                                \begin{aligned}
-                                                                \begin{cases}
-                                                                x^2+x = 0\\
-                                                                x = 0
-                                                                \end{cases}\implies
-                                                                \begin{cases}
-                                                                x=0 \textbf{ ou } x=-1\\
-                                                                x = 0
-                                                                \end{cases}
-                                                                \end{aligned}
-                                                                $</p>
-                                            <div class="image-container">
-                                                <img src="images/tabSignes4.png"
-                                                    alt="Tableau de signe de \(x-3x^2 + 3\)">
-                                            </div>
-                                            $ S = \emptyset $
-                                            <p>Ainsi, il n'existe pas de $ x > 0 $ pour lequel $ x-\sqrt{x^2+x} > 0 $
-                                            </p>
-                                            <p>$ \textbf{Donc } x-\sqrt{x^2+x} <0, \, \forall x\in ]0;+\infty[ $</p>
-                                                    <p class="text-red">Ainsi $\forall x\in ]0;+\infty[$ $f'(x) > 0 $
-                                                        donc f est croissant $0;+\infty[$</p>
+                                                    \lim\limits_{x \to 0^-} \dfrac{f(x)-f(0)}{x} &= \lim\limits_{x \to
+                                                    0^-}
+                                                    \dfrac{\dfrac{x^3-2x^2}{x^2-1}}{x}\\
+                                                    &= \lim\limits_{x \to 0^-} \dfrac{x^3-2x^2}{x^2-x}\\
+                                                    &= \lim\limits_{x \to 0^-} \dfrac{x^2-2x}{x-1}\\
+                                                    &=0
+                                                    \end{aligned}
+                                                    \)
+                                                </li>
+
+                                                <li>
+                                                    <p>$\underline{\text{En } 0^+}: f(x)=f_{2}(x)$</p>
                                                     \(
                                                     \begin{aligned}
                                                     \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} &=\lim\limits_{x \to
-                                                    0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
-                                                    &=\dfrac{-1}{0^-}\\
-                                                    &=+\infty \\
+                                                    0^+}
+                                                    \dfrac{x + \sqrt{x^2+x}}{x}\\
+                                                    &=\lim\limits_{x \to 0^+} \dfrac{x^2-x^2-x}{x(x - \sqrt{x^2+x})}\\
+                                                    &=\lim\limits_{x \to 0^+} \dfrac{-x}{x(x - \sqrt{x^2+x})}\\
+                                                    &=\lim\limits_{x \to 0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
+                                                    &="\dfrac{-1}{0}"\\
                                                     \end{aligned}
                                                     \)
-                                                    <p class="text-red"><b>Autre Méthode</b></p>
+                                                    <p>Supposons que $ x - \sqrt{x^2+x} > 0 $</p>
+                                                    <p>$ x - \sqrt{x^2+x} > 0 \implies \sqrt{x^2+x} < x $</p>
+                                                            $
+                                                            \begin{aligned}
+                                                            \sqrt{x^2+x} < x &\implies \begin{cases} x^2+x> 0\\
+                                                                x > 0\\
+                                                                x^2+x < x^{2} \end{cases}\\ &\implies \begin{cases}
+                                                                    x^2+x> 0\\
+                                                                    x > 0\\
+                                                                    x < 0 \end{cases}\\ \end{aligned} $ <p>$
+                                                                        \begin{aligned}
+                                                                        \begin{cases}
+                                                                        x^2+x = 0\\
+                                                                        x = 0
+                                                                        \end{cases}\implies
+                                                                        \begin{cases}
+                                                                        x=0 \textbf{ ou } x=-1\\
+                                                                        x = 0
+                                                                        \end{cases}
+                                                                        \end{aligned}
+                                                                        $</p>
+                                                    <div class="image-container">
+                                                        <img src="images/tabSignes4.png"
+                                                            alt="Tableau de signe de \(x-3x^2 + 3\)">
+                                                    </div>
+                                                    $ S = \emptyset $
+                                                    <p>Ainsi, il n'existe pas de $ x > 0 $ pour lequel $ x-\sqrt{x^2+x}
+                                                        > 0 $
+                                                    </p>
+                                                    <p>$ \textbf{Donc } x-\sqrt{x^2+x} <0, \, \forall x\in ]0;+\infty[
+                                                            $</p>
+                                                            <p class="text-red">Ainsi $\forall x\in ]0;+\infty[$ $f'(x)
+                                                                > 0 $
+                                                                donc f est croissant $0;+\infty[$</p>
+                                                            \(
+                                                            \begin{aligned}
+                                                            \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x}
+                                                            &=\lim\limits_{x \to
+                                                            0^+} \dfrac{-1}{(x - \sqrt{x^2+x})}\\
+                                                            &=\dfrac{-1}{0^-}\\
+                                                            &=+\infty \\
+                                                            \end{aligned}
+                                                            \)
+                                                            <p class="text-red"><b>Autre Méthode</b></p>
 
-                                                    +++++++++++++++++++++++++++++++++++++++++++++
+                                                            +++++++++++++++++++++++++++++++++++++++++++++
 
-                                                    <p>On calcule la dérivée à droite en $0$ :</p>
+                                                            <p>On calcule la dérivée à droite en $0$ :</p>
 
-                                                    <p>\(
-                                                        f'_+(0)=\lim\limits_{x\to 0^+}\frac{f(x)-f(0)}{x}
-                                                        =\lim\limits_{x\to 0^+}\frac{x+\sqrt{x^2+x}}{x}.
-                                                        \)</p>
+                                                            <p>\(
+                                                                f'_+(0)=\lim\limits_{x\to 0^+}\frac{f(x)-f(0)}{x}
+                                                                =\lim\limits_{x\to 0^+}\frac{x+\sqrt{x^2+x}}{x}.
+                                                                \)</p>
 
-                                                    <p>On écrit :
-                                                        \(
-                                                        \frac{x+\sqrt{x^2+x}}{x}
-                                                        =1+\frac{\sqrt{x^2+x}}{x}.
-                                                        \)</p>
+                                                            <p>On écrit :
+                                                                \(
+                                                                \frac{x+\sqrt{x^2+x}}{x}
+                                                                =1+\frac{\sqrt{x^2+x}}{x}.
+                                                                \)</p>
 
-                                                    <p>Or,
-                                                        \(
-                                                        \frac{\sqrt{x^2+x}}{x}
-                                                        =\sqrt{\frac{x^2+x}{x^2}}
-                                                        =\sqrt{1+\frac{1}{x}}.
-                                                        \)</p>
+                                                            <p>Or,
+                                                                \(
+                                                                \frac{\sqrt{x^2+x}}{x}
+                                                                =\sqrt{\frac{x^2+x}{x^2}}
+                                                                =\sqrt{1+\frac{1}{x}}.
+                                                                \)</p>
 
-                                                    <p>Lorsque $x\to 0^+$, on a $\dfrac{1}{x}\to +\infty$, donc
-                                                        \(
-                                                        \sqrt{1+\frac{1}{x}}\to +\infty.
-                                                        \)</p>
+                                                            <p>Lorsque $x\to 0^+$, on a $\dfrac{1}{x}\to +\infty$, donc
+                                                                \(
+                                                                \sqrt{1+\frac{1}{x}}\to +\infty.
+                                                                \)</p>
 
-                                                    <p>Ainsi,
-                                                        \(
-                                                        f'_+(0)=+\infty.
-                                                        \)</p>
+                                                            <p>Ainsi,
+                                                                \(
+                                                                f'_+(0)=+\infty.
+                                                                \)</p>
 
-                                                    ++++++++++++++++++++++++++++++++++++++++++++++++
+                                                            ++++++++++++++++++++++++++++++++++++++++++++++++
 
-                                                    <div class="resultbox">\[
-                                                        \mathbf{ \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} = 0 \text{
-                                                        et } \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} = +\infty }
-                                                        \]</div>
+                                                            <div class="resultbox">\[
+                                                                \mathbf{ \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} =
+                                                                0 \text{
+                                                                et } \lim\limits_{x \to 0^+} \dfrac{f(x)-f(0)}{x} =
+                                                                +\infty }
+                                                                \]</div>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+
+                                        <li>
+                                            <p>Interprétons le résultat obtenu.</p>
+                                            <ul>
+                                                <li>
+                                                    <p>$f$ est dérivable à gauche de $0$ et $y=2x$ est une démi-tangent
+                                                        en $0^-$
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>$f$ n'est pas dérivable à droite de $0$ donc admet une
+                                                        démi-tangent
+                                                        orientée vers le haut en $0^+$</p>
+                                                </li>
+                                                <p>Le point d’abscisse $0$ est donc un point anguleux, ce qui explique
+                                                    la
+                                                    non-dérivabilité de $f$ en $0$.</p>
+                                            </ul>
+
                                         </li>
                                     </ul>
-
                                 </li>
-
-                                <li>
-                                    <p>Interprétons le résultat obtenu.</p>
-                                    <ul>
-                                        <li>
-                                            <p>$f$ est dérivable à gauche de $0$ et $y=2x$ est une démi-tangent en $0^-$
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>$f$ n'est pas dérivable à droite de $0$ donc admet une démi-tangent
-                                                orientée vers le haut en $0^+$</p>
-                                        </li>
-                                        <p>Le point d’abscisse $0$ est donc un point anguleux, ce qui explique la
-                                            non-dérivabilité de $f$ en $0$.</p>
-                                    </ul>
-
-                                </li>
-                            </ul>
+                            </ol>
                         </li>
+
                     </ol>
                 </section>
 
