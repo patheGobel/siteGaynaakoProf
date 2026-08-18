@@ -846,7 +846,78 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li></li>
+                                <li>
+                                    <p>Pour $x \leq 0$, déterminons les réels $a, b, c$ et $d$ tels que :
+                                        $f(x)=ax+b+\dfrac{cx+d}{x^2-1}$ <span class="points">(0,5pt)</span></p>
+                                    <p>et en déduire la nature de l'asymptote $-\infty$<span
+                                            class="points">(0,25pt)</span></p>
+                                    <ul>
+                                        <li>
+                                            <p>Pour $x \leq 0$, déterminons les réels $a, b, c$ et $d$ tels que :
+                                                $f(x)=ax+b+\dfrac{cx+d}{x^2-1}$ <span class="points">(0,5pt)</span></p>
+                                        </li>
+
+                                        $
+                                        \begin{aligned}
+                                        f(x)=ax+b+\dfrac{cx+d}{x^2-1} &\implies
+                                        f(x)=\frac{(ax+b)(x^2-1)+cx+d}{x^2-1}\\
+                                        &\implies f(x)=\frac{ax^3+bx^2-ax-b+cx+d}{x^2-1}\\
+                                        &\implies f(x)=\frac{ax^3+bx^2+(c-a)x+(d-b)}{x^2-1}
+                                        \end{aligned}
+                                        $
+                                        <p>On a $\dfrac{x^3 - 2x^2}{x^2 - 1}=\dfrac{ax^3+bx^2+(c-a)x+(d-b)}{x^2-1}$
+                                        </p>
+                                        par identification
+                                        $
+                                        \begin{aligned}
+                                        \begin{cases}
+                                        a = 1\\
+                                        b = -2\\
+                                        c-a = 0\\
+                                        d-b = 0
+                                        \end{cases}
+                                        &\implies
+                                        \begin{cases}
+                                        a = 1\\
+                                        b = -2\\
+                                        c-1 = 0\\
+                                        d+2 = 0
+                                        \end{cases}
+                                        &\implies
+                                        \begin{cases}
+                                        a = 1\\
+                                        b = -2\\
+                                        c= 1\\
+                                        d = -2
+                                        \end{cases}
+                                        \end{aligned}
+                                        $
+                                        <p>Ainsi, $f(x)=x-2+\dfrac{x-2}{x^2-1}$</p>
+
+                                        <li>
+                                            <p>Déduisons-en la nature de l'asymptote $-\infty$<span
+                                                    class="points">(0,25pt)</span></p>
+                                            <p>En posant $(\Delta_1): y = x -2$, si $ \lim\limits_{x \to -\infty} f(x) -
+                                                y
+                                                = 0 $ alors $y=x-2$ est asymptote oblique</p>
+
+                                            <p>En effet</p>
+
+                                            \(
+                                            \begin{aligned}
+                                            \lim\limits_{x \to -\infty} f(x) - y &= \lim\limits_{x \to
+                                            -\infty}\dfrac{x-2}{x^2-1} \\
+                                            &= \lim\limits_{x \to -\infty} \dfrac{x}{x^2}\\
+                                            &= 0\\
+                                            \end{aligned}
+                                            \)
+                                            <div class="resultbox">\[
+                                                \mathbf{ \text{Donc } (\Delta_1): y = x -2 \text{ est une asymptote }
+                                                \text{oblique à}  (\mathcal{C}_f) \text{en } -\infty }
+                                                \]</div>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ol>
                         </li>
 
