@@ -66,7 +66,7 @@
                     <p>L'énoncé précise que le premier Août 2020, il a plu. L'événement $A_1$ est donc certain.
                         $ P_1 = 1 $</p>
                 </li>
-
+                <!-- Question 2 -->
                 <li>
                     <p><strong>Calculer $P_2$</strong></p>
                     <p>D'après la formule des probabilités totales en utilisant le système complet d'événements $\{A_1,
@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                 </li>
-
+                <!-- Question 3 -->
                 <li>
                     <p>Montrer que $P_{n+1} = -\frac{4}{15} P_n + \frac{3}{5}$</p>
                     <p>Appliquons la formule des probabilités totales pour le jour $n+1$ :</p>
@@ -104,7 +104,46 @@
                     &=-\dfrac{4}{15} P_n + \dfrac{3}{5}
                     \end{aligned}
                     $
+                </li>
+                <!-- Question 4 -->
+                <li>
                     <p>Étude de la suite $(u_n)$</p>
+                    <p>Soit $u_n = P_n - \frac{9}{19}$.s</p>
+                    <ol type="a">
+                        <li>
+                            <p>Montrer que $(u_n)$ est une suite géométrique :</p>
+                            <p>
+                                $
+                                \begin{aligned}
+                                u_{n+1} &= P_{n+1} - \frac{9}{19}\\
+                                &= \left( -\dfrac{4}{15} P_n + \dfrac{3}{5} \right) - \dfrac{9}{19}
+                                \end{aligned}
+                                $
+                            </p>
+                            <p>En remplaçant $P_n$ par $u_n + \dfrac{9}{19}$ :</p>
+                            <p>
+                                $
+                                \begin{aligned}
+                                u_{n+1} &= -\dfrac{4}{15} \left( u_n + \dfrac{9}{19} \right) + \dfrac{3}{5} -
+                                \dfrac{9}{19}\\
+                                &= -\frac{4}{15} u_n - \frac{36}{285} + \frac{171}{285} - \frac{135}{285}\\
+                                &= -\frac{4}{15} u_n
+                                \end{aligned}
+                                $
+                            </p>
+                            <p>$(u_n)$ est une suite géométrique de raison $q = -\dfrac{4}{15}$</p>
+                            <p>et de premier terme </p>
+                            <p>
+                                $
+                                \begin{aligned}
+                                u_1 &= P_1 - \frac{9}{19}\\
+                                &= 1 - \dfrac{9}{19}\\
+                                &=\dfrac{10}{19}
+                                \end{aligned}
+                                $.
+                            </p>
+                        </li>
+                    </ol>
                 </li>
             </ol>
         </div>
