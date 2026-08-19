@@ -221,7 +221,48 @@
 
                 </li>
 
+                <!-- Question 2 -->
+                <li>
+                    <p>Démontrons par récurrence que : $\forall n \in \mathbb{N}, \quad u_n \ge \sqrt{3}$ <span
+                            class="points">(3 × 0,5 pt)</span></p>
+                    <p>Soit $\mathcal{P}(n)$ la propriété : « $u_n \ge \sqrt{3}$ ».</p>
 
+                    <ul>
+                        <li>
+                            <p><b>Initialisation :</b>></p>
+                            <p>Pour $n = 0$, $u_0 = 6$. Or $6 \ge \sqrt{3}$ (car $36 \ge 3$). Donc $\mathcal{P}(0)$ est
+                                vraie.</p>
+                        </li>
+
+                        <li>
+                            <p><b>Hérédité :</b></p>
+                            <p>Supposons que pour un entier $n \ge 0$ fixé, $\mathcal{P}(n)$ soit vraie, c'est-à-dire
+                                que $u_n \ge \sqrt{3}$.</p>
+                            <p>Montrons que $\mathcal{P}(n+1)$ est vraie,</p>
+                            <p>soit $u_{n+1} \ge \sqrt{3}$.</p>
+                            <p>Considérons la différence $u_{n+1} - \sqrt{3}$ :</p>
+                            <p>$
+                                \begin{aligned}
+                                u_{n+1} - \sqrt{3} &= \frac{1}{u_n} + \frac{3}{4}u_n - \sqrt{3}\\
+                                &= \frac{4 + 3u_n^2 - 4\sqrt{3}u_n}{4u_n}
+                                \end{aligned}
+                                $
+                            </p>
+                            <p>On reconnaît une identité remarquable au numérateur :</p>
+                            <p>$3u_n^2 - 4\sqrt{3}u_n + 4 = (\sqrt{3}u_n - 2)^2$</p>
+                            <p>D'où :</p>
+                            <p>$u_{n+1} - \sqrt{3} = \frac{(\sqrt{3}u_n - 2)^2}{4u_n}$</p>
+                            <p>Par hypothèse de récurrence, $u_n \ge \sqrt{3} > 0$, donc le dénominateur $4u_n$ est
+                                strictement positif. Le numérateur étant un carré parfait, il est positif ou nul.</p>
+                            <p>On en déduit que :</p>
+                            <p>$u_{n+1} - \sqrt{3} \ge 0 \implies u_{n+1} \ge \sqrt{3}$</p>
+                            <p>La propriété est donc héréditaire.</p>
+                            <p><b>Conclusion :</b></p>
+                            <p>Par le principe de récurrence, $\forall n \in \mathbb{N}, \quad u_n \ge \sqrt{3}$.</p>
+                        </li>
+                    </ul>
+
+                </li>
             </ol>
         </div>
     </section>
