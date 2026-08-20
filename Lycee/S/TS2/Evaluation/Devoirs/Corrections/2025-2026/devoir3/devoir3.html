@@ -269,6 +269,8 @@
                     <p>Convergence et limite de la suite $(u_n)$</p>
 
                     <ol type="a">
+
+                        <!-- Question 3.a -->
                         <li>
                             <p>Sens de variations de $f$</p>
                             <p>La fonction $f$ est dérivable sur $]0, +\infty[$ comme somme de fonctions dérivables.</p>
@@ -293,8 +295,44 @@
                                 +\infty[$ est inclus dans l'intervalle où $f$ est strictement croissante. Donc
                                 $f$ est strictement croissante sur $[\sqrt{3}, +\infty[$.</p>
                         </li>
+                        <!-- Question 3.b -->
+                        <li>
+                            <p>Déduisons-en par récurrence que $(u_n)$ est strictement décroissante</p>
+                            <p>Soit $\mathcal{Q}(n)$ la propriété : « $u_{n+1} < u_n$ ».</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>Initialisation :</b></p>
+                                            <p>Pour $n = 0$, $u_1 = \frac{14}{3} \approx 4,67$ et $u_0 = 6$. On a bien
+                                                $u_1 < u_0$.</p>
+                                                    <p>Donc $\mathcal{Q}(0)$ est vraie.</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Hérédité :</b></p>
+                                            <p>Supposons que $\mathcal{Q}(n)$ soit vraie pour un entier $n \ge 0$,
+                                                c'est-à-dire $u_{n+1} < u_n$.</p>
+                                                    <p>D'après la question 2, nous savons que $u_{n+1} \ge \sqrt{3}$ et
+                                                        $u_n \ge \sqrt{3}$.</p>
+                                                    <p>Comme la fonction $f$ est strictement croissante sur $[\sqrt{3},
+                                                        +\infty[$, elle conserve l'ordre de l'inégalité :</p>
+                                                    <p>\[ u_{n+1} < u_n \implies f(u_{n+1}) < f(u_n) \]</p>
+                                                            <p>Par définition de la suite, $f(u_{n+1}) = u_{n+2}$ et
+                                                                $f(u_n) = u_{n+1}$. On obtient donc :</p>
+                                                            <p>\[ u_{n+2} < u_{n+1} \]</p>
+                                                                    <p>La propriété est donc héréditaire.</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Conclusion :</b></p>
+                                            <p>Par le principe de récurrence, la suite $(u_n)_{n \in \mathbb{N}}$ est
+                                                strictement décroissante.</p>
+                                        </li>
+                                    </ul>
+                        </li>
                     </ol>
                 </li>
+                <!-- Question 4 -->
+                
             </ol>
         </div>
     </section>
