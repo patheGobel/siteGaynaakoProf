@@ -390,17 +390,31 @@
                     <p>Variations de $g$ et $h$</p>
                     <ul>
                         <li>
-                            <p>Pour la fonction $g$ sur $]0; +\infty[$ :</p>
+                            <p><b>Pour la fonction $g$ sur $]0; +\infty[$ :</b></p>
                             <p>$g$ est dérivable sur $]0; +\infty[$ comme somme de fonctions dérivables.</p>
                             <p>\[ \forall x \in ]0; +\infty[, \quad g'(x) = 2x + 1 + \dfrac{2}{x} \]</p>
                             <p>Pour tout $x > 0$, $2x > 0$, $1 > 0$ et $\frac{2}{x} > 0$.</p>
                             <p>Donc $g'(x) > 0$.</p>
                             <p>La fonction $g$ est donc <b>strictement croissante</b> sur $]0; +\infty[$.</p>
                         </li>
-                        <li></li>
+
+                        <li>
+                            <p><b>Pour la fonction $h$ sur $]-\infty; 0]$ :</b></p>
+                            <p>$h$ est dérivable sur $]-\infty; 0[$.</p>
+                            <p>En posant $u(x) = (x+1)^2$, on a $u'(x) = 2(x+1)$.</p>
+                            <p>\[ h'(x) = 0 - \left[ 2(x+1)e^x + (x+1)^2e^x \right] = -(x+1)e^x \left[ 2 + (x+1) \right]
+                                = -(x+1)(x+3)e^x \]</p>
+                            <p>Le signe de $h'(x)$ dépend du trinôme $-(x+1)(x+3)$ car $e^x > 0$. Les racines sont $-3$
+                                et $-1$.</p>
+                        </li>
                         <ul>
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <p>Sur $]-\infty; -3[$ et $]-1; 0]$, $h'(x) < 0$, donc $h$ est <b>strictement
+                                        décroissante</b>.</p>
+                            </li>
+                            <li>
+                                <p>Sur $]-3; -1[$, $h'(x) > 0$, donc $h$ est <b>strictement croissante</b>.</p>
+                            </li>
                         </ul>
                     </ul>
                 </li>
