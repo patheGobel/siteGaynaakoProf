@@ -485,6 +485,7 @@
                                 f_2(x) &\text{si } x \le 0
                                 \end{cases}$</p>
                             <ul>
+
                                 <li>
                                     <p>$f_1(x)$</p>
                                     <p>$
@@ -496,6 +497,7 @@
 
                                     <p>$Df_1=]0; +\infty[$</p>
                                 </li>
+
                                 <li>
                                     <p>$f_2(x)$</p>
                                     <p>$
@@ -506,20 +508,54 @@
                                         $</p>
                                     <p>$Df_2=]-\infty; 0]$</p>
                                 </li>
+
                             </ul>
                             <p>Donc:</p>
                             <p>
                                 $
-                                \begin{aligned} 
+                                \begin{aligned}
                                 Df&=Df_1 \cup Df_2\\
-                                  &=]-\infty; 0]\cup]0; +\infty[\\
-                                  &=\mathbb{R}
+                                &=]-\infty; 0]\cup]0; +\infty[\\
+                                &=\mathbb{R}
                                 \end{aligned}
                                 $
                             </p>
                         </li>
                         <li>
                             <p>Calculons les limites aux bornes de $D_f$.<span class="points"> ( 0,5 pt) </span></p>
+                            <ul>
+
+                                <li>
+                                    <p><b><u>En $-\infty$:</u></b></p>
+                                    $
+                                    \begin{aligned}
+                                    \lim\limits_{x \to -\infty} f(x) &= \lim\limits_{x \to -\infty} \left[ x + 1 -
+                                    (x^2+1)e^x \right]\\
+                                    &= \lim\limits_{x \to -\infty} x + 1 -
+                                    x^2e^x+e^x:
+                                    \begin{cases}
+                                    \text{Par croissances comparées}\\
+                                    \lim\limits_{x \to -\infty} x^2e^x = 0\\
+                                    \lim\limits_{x \to -\infty} e^x = 0
+                                    \end{cases}
+                                    \end{aligned}
+                                    $
+                                    <p>$ \textbf{Donc }\lim\limits_{x \to -\infty} f(x) = -\infty$.</p>
+                                </li>
+
+                                <li>
+                                    <p><b><u>En $+\infty$:</u></b></p>
+                                    $
+                                    \begin{aligned}
+                                    \lim\limits_{x \to +\infty} f(x) &= \lim\limits_{x \to +\infty} \left[ x + \left(1 -
+                                    \dfrac{2}{x}\right)\ln(x) \right]\\
+                                    &=\lim\limits_{x \to +\infty} \left(1 - \frac{2}{x}\right) = 1 et \lim\limits_{x \to +\infty}
+                                    \ln(x) = +\infty
+                                    \end{aligned}
+                                    $
+                                </li>
+
+                            </ul>
                         </li>
                     </ul>
                     </p>
