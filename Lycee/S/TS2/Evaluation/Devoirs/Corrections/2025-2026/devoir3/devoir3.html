@@ -581,8 +581,8 @@
                             <p>On remarque que</p>
                             <p> $\begin{aligned} \lim\limits_{x \to -\infty} [f(x) - (x+1)] &=
                                 \lim\limits_{x \to -\infty} -(x^2+1)e^x\\ &= 0 \end{aligned}$</p>
-                            <p><b>La droite $(\Delta) : y = x + 1$ est donc une asymptote oblique à
-                                    $(\mathcal{C}_f)$ en $-\infty$.</b></p>
+                            <p class="text-red">La droite $(\Delta) : y = x + 1$ est donc une asymptote oblique à
+                                    $(\mathcal{C}_f)$ en $-\infty$.</p>
                         </li>
 
                         <li>
@@ -602,8 +602,8 @@
                                 \frac{2}{x}\right)\ln(x)\\
                                 &= +\infty\end{aligned}$
                             </p>
-                            <p><b>$(\mathcal{C}_f)$ admet une branche parabolique de direction la droite $y = x$
-                                    en $+\infty$.</b></p>
+                            <p class="text-red">$(\mathcal{C}_f)$ admet une branche parabolique de direction la droite $y = x$
+                                    en $+\infty$.</p>
                         </li>
 
                     </ul>
@@ -615,7 +615,7 @@
                     <p>On étudie le signe de $f(x) - (x+1) = -(x^2+1)e^x$.</p>
                     <p>Pour tout $x \in ]-\infty; 0]$, $x^2+1 > 0$ et $e^x > 0$</p>
                     <p>donc $f(x) - (x+1) \le 0$.</p>
-                    <p>La courbe $(\mathcal{C}_f)$ est <b>en dessous</b>> de l'asymptote $(\Delta)$.</p>
+                    <p class="text-red">La courbe $(\mathcal{C}_f)$ est en dessous de l'asymptote $(\Delta)$.</p>
                 </li>
 
                 <!-- Question 4 -->
@@ -643,10 +643,11 @@
                             <p>
                                 $
                                 \begin{aligned}
-                                \displaystyle \lim\limits_{x \to 0^+} f(x) &=\lim\limits_{x \to 0^+} x + \left(1 - \dfrac{2}{x}\right) \ln(x)\\
+                                \displaystyle \lim\limits_{x \to 0^+} f(x) &=\lim\limits_{x \to 0^+} x + \left(1 -
+                                \dfrac{2}{x}\right) \ln(x)\\
                                 \displaystyle &=\lim\limits_{x \to 0^+} \left[ x + \ln(x) - \dfrac{2\ln(x)}{x} \right]\\
-                                \displaystyle &=\lim\limits_{x \to 0^+} \lim_{x \to 0^+} \left[ x + \ln(x)\left(1 - \dfrac{2}{x}\right) \right]\\
-                                &= 0
+                                \displaystyle &=0-\infty-2\times 0\\
+                                &= -\infty
                                 \end{aligned}
                                 $
                             </p>
@@ -654,11 +655,12 @@
 
                         <li>
                             <p><b>En $0$</b></p>
-                            <p></p>
+                            <p>$f(0) = 0 + 1 - (0+1)e^0 = 0$.</p>
                         </li>
 
                     </ul>
 
+                    <p class="text-red">La fonction $f$ n'est pas continue en $0$.</p>
                 </li>
             </ol>
         </div>
