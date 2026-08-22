@@ -582,7 +582,7 @@
                             <p> $\begin{aligned} \lim\limits_{x \to -\infty} [f(x) - (x+1)] &=
                                 \lim\limits_{x \to -\infty} -(x^2+1)e^x\\ &= 0 \end{aligned}$</p>
                             <p class="text-red">La droite $(\Delta) : y = x + 1$ est donc une asymptote oblique à
-                                    $(\mathcal{C}_f)$ en $-\infty$.</p>
+                                $(\mathcal{C}_f)$ en $-\infty$.</p>
                         </li>
 
                         <li>
@@ -602,8 +602,9 @@
                                 \frac{2}{x}\right)\ln(x)\\
                                 &= +\infty\end{aligned}$
                             </p>
-                            <p class="text-red">$(\mathcal{C}_f)$ admet une branche parabolique de direction la droite $y = x$
-                                    en $+\infty$.</p>
+                            <p class="text-red">$(\mathcal{C}_f)$ admet une branche parabolique de direction la droite
+                                $y = x$
+                                en $+\infty$.</p>
                         </li>
 
                     </ul>
@@ -661,7 +662,42 @@
                     </ul>
 
                     <p class="text-red">La fonction $f$ n'est pas continue en $0$.</p>
-                    
+
+                </li>
+
+                <!-- Question 4 -->
+                <li>
+                    <p>Dérivabilité en $0$</p>
+                    <ul>
+
+                        <li>
+                            <p>En $0^-$</p>
+                            $
+                            \begin{aligned}
+                            \lim\limits_{x \to 0^-} \dfrac{f(x) - f(0)}{x-0} &= \lim\limits_{x \to 0^-} \dfrac{x + 1 -
+                            (x^2+1)e^x}{x}\\
+                            &=\lim\limits_{x \to 0^-} \left[ 1 + \dfrac{1 - e^x}{x} - xe^x \right]\\
+                            &=\lim\limits_{x \to 0^-} \left[ 1 - \dfrac{e^x-1}{x} - xe^x \right]:
+                            \begin{cases}
+                            \lim\limits_{x \to 0^-} \dfrac{e^x-1}{x} = 1\\[3mm]
+                            &\textbf{Par Somme}\\
+                            \lim\limits_{x \to 0^-} xe^x = 0
+                            \end{cases}\\
+                            &=1-1-0\\
+                            &=0
+                            \end{aligned}
+                            $
+                            <p><b>Donc $f$ est dérivable à gauche de $0$ et $f'_g(0) = 0$.</b></p>
+                            <p><b>$(\mathcal{C}_f)$ admet une
+                                    demi-tangente horizontale à gauche au point $(0,0)$</b></p>
+                        </li>
+
+                        <li>
+                            <p>En $0^+$</p>
+                            <p>Comme $f$ n'est pas continue à droite de $0$, elle n'y est <b>pas dérivable</b>.</p>
+                        </li>
+
+                    </ul>
                 </li>
             </ol>
         </div>
