@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plan du cours : Équations - Inéquations - Systèmes</title>
+    <title>Équations - Inéquations - Systèmes</title>
 
-    <link rel="stylesheet" href="equations.css" />
+    <!-- CSS pour Ordinateur (écrans > 768px) -->
+    <link rel="stylesheet" href="equations.css" media="screen and (min-width: 769px)" />
 
-    <!-- ===== Configuration MathJax ===== -->
+    <!-- CSS pour Android / Mobile (écrans <= 768px) -->
+    <link rel="stylesheet" href="equations-mobile.css" media="screen and (max-width: 768px)" />
+
+    <!-- Configuration MathJax -->
     <script>
         MathJax = {
             tex: {
@@ -23,9 +27,6 @@
 
 <body>
 
-    <!-- ============================================================
-    EN-TÊTE DU COURS
-    ============================================================ -->
     <header class="header">
         <h1>📖 Équations - Inéquations - Systèmes</h1>
         <div class="header-meta">
@@ -72,12 +73,9 @@
         </section>
     </main>
 
-    <!-- ============================================================
-    FOOTER
-    ============================================================ -->
     <footer class="footer">
         <p>© 2026 - Équations - Inéquations - Systèmes - 1er S2 - Lycée de Dindéfélo</p>
-        <p style="font-size:0.8rem; margin-top:4px;">Discipline : Mathématiques - Pathé BA</p>
+        <p style="font-size:0.8rem; margin-top:4px;">Discipline : Mathématiques - Pathé Gobel BA</p>
     </footer>
 
 </body>
