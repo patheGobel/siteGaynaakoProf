@@ -93,20 +93,31 @@ p {
 /* ============================================================
    Exemple Solution
 ============================================================ */
+
 .exemple-content {
     font-weight: bold;
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     color: #1f4e79;
 }
-/* Case à cocher invisible */
+
+
+/* ============================================================
+   CASE À COCHER
+============================================================ */
+
 .solution-checkbox {
     display: none;
 }
 
-/* Bouton Solution */
+
+/* ============================================================
+   BOUTON SOLUTION
+============================================================ */
+
 .solution-btn {
     display: inline-block;
+
     margin-top: 15px;
     padding: 8px 16px;
 
@@ -114,31 +125,40 @@ p {
     color: white;
 
     border-radius: 6px;
-    cursor: pointer;
 
     font-size: 16px;
+    cursor: pointer;
+
+    user-select: none;
 }
 
-/* Effet au survol */
 .solution-btn:hover {
     background-color: #34495e;
 }
 
-/* Solution cachée */
+
+/* ============================================================
+   SOLUTION
+============================================================ */
+
 .solution-content {
     display: none;
+
     margin-top: 15px;
-    padding-left: 25px;
+    padding: 10px 0 10px 25px;
 
     border-left: 4px solid #2c3e50;
     background-color: #f5f5f5;
 }
 
-/* Lorsque la case est cochée, afficher la solution */
+
+/* ============================================================
+   AFFICHER LA SOLUTION
+============================================================ */
+
 .solution-checkbox:checked ~ .solution-content {
     display: block;
 }
-
 .footer {
     text-align: center;
     padding: 20px;
