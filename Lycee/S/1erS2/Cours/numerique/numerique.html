@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Numérique - 1er S2</title>
+
+    <link rel="stylesheet" href="styleNumerique.css">
+</head>
+
+<body>
+
+    <main class="card">
+
+        <!-- ==================== -->
+        <!-- VUE : CHOIX DE L'ANNÉE -->
+        <!-- ==================== -->
+
+        <div id="vueAnnees">
+
+            <h1>Numérique</h1>
+
+            <p class="subtitle">
+                Sélectionnez une année
+            </p>
+
+            <div class="grid-container">
+
+                <button class="btn-item" onclick="afficherChapitres('2023-2024')">
+                    2023-2024
+                </button>
+
+                <button class="btn-item" onclick="afficherChapitres('2024-2025')">
+                    2024-2025
+                </button>
+
+                <button class="btn-item" onclick="afficherChapitres('2025-2026')">
+                    2025-2026
+                </button>
+
+                <button class="btn-item" onclick="afficherChapitres('2026-2027')">
+                    2026-2027
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- VUE : CHOIX DU CHAPITRE -->
+        <!-- ==================== -->
+
+        <div id="vueChapitres" class="vue-chapitres">
+
+            <h1 id="titreAnnee">
+                Année 2023-2024
+            </h1>
+
+            <p class="subtitle">
+                Choisissez un chapitre
+            </p>
+
+            <div class="grid-container grid-chapitres" id="listeChapitres">
+            </div>
+
+
+            <!-- ==================== -->
+            <!-- RETOUR AUX ANNÉES -->
+            <!-- ==================== -->
+
+            <div class="conteneur-parent">
+
+                <button class="btn-retour" onclick="afficherAnnees()">
+
+                    <span>←</span>
+
+                    Retour aux années
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- RETOUR À 1erS2 -->
+        <!-- ==================== -->
+
+        <div class="conteneur-parent">
+
+            <button class="btn-retour" onclick="window.history.back()">
+
+                <span>←</span>
+
+                Retour à 1erS2
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        /*
+         * ============================
+         * DONNÉES DES CHAPITRES
+         * ============================
+         */
+
+        const numeriqueData = {
+
+            "2023-2024": [
+
+                {
+                    nom: "Chapitre 1",
+                    path: "2023-2024/chapitre1/chapitre1.html"
+                },
+
+                {
+                    nom: "Chapitre 2",
+                    path: "2023-2024/chapitre2/chapitre2.html"
+                },
+
+                {
+                    nom: "Chapitre 3",
+                    path: "2023-2024/chapitre3/chapitre3.html"
+                },
+
+                {
+                    nom: "Chapitre 4",
+                    path: "2023-2024/chapitre4/chapitre4.html"
+                }
+
+            ],
+
+
+            "2024-2025": [
+                {
+                    nom: "Equations",
+                    path: "2024-2025/equations/equations.html"
+                },
+
+                {
+                    nom: "Applications",
+                    path: "2024-2025/applications/applications.html"
+                },
+
+                {
+                    nom: "Chapitre 2",
+                    path: "2024-2025/chapitre2/chapitre2.html"
+                },
+
+                {
+                    nom: "Chapitre 3",
+                    path: "2024-2025/chapitre3/chapitre3.html"
+                },
+
+                {
+                    nom: "Chapitre 4",
+                    path: "2024-2025/chapitre4/chapitre4.html"
+                }
+
+            ],
+
+
+            "2025-2026": [
+
+                {
+                    nom: "Chapitre 1",
+                    path: "2025-2026/chapitre1/chapitre1.html"
+                },
+
+                {
+                    nom: "Chapitre 2",
+                    path: "2025-2026/chapitre2/chapitre2.html"
+                },
+
+                {
+                    nom: "Chapitre 3",
+                    path: "2025-2026/chapitre3/chapitre3.html"
+                },
+
+                {
+                    nom: "Chapitre 4",
+                    path: "2025-2026/chapitre4/chapitre4.html"
+                }
+
+            ],
+
+
+            "2026-2027": [
+
+                {
+                    nom: "Chapitre 1",
+                    path: "2026-2027/chapitre1/chapitre1.html"
+                },
+
+                {
+                    nom: "Chapitre 2",
+                    path: "2026-2027/chapitre2/chapitre2.html"
+                },
+
+                {
+                    nom: "Chapitre 3",
+                    path: "2026-2027/chapitre3/chapitre3.html"
+                },
+
+                {
+                    nom: "Chapitre 4",
+                    path: "2026-2027/chapitre4/chapitre4.html"
+                }
+
+            ]
+
+        };
+
+
+        /*
+         * ============================
+         * RÉCUPÉRATION DES ÉLÉMENTS
+         * ============================
+         */
+
+        const vueAnnees =
+            document.getElementById("vueAnnees");
+
+        const vueChapitres =
+            document.getElementById("vueChapitres");
+
+        const titreAnnee =
+            document.getElementById("titreAnnee");
+
+        const listeChapitres =
+            document.getElementById("listeChapitres");
+
+
+        /*
+         * ============================
+         * AFFICHER LES CHAPITRES
+         * ============================
+         */
+
+        function afficherChapitres(annee) {
+
+            titreAnnee.textContent =
+                `Année ${annee}`;
+
+
+            const chapitres =
+                numeriqueData[annee] || [];
+
+
+            if (chapitres.length > 0) {
+
+                listeChapitres.innerHTML =
+                    chapitres.map(chapitre => `
+
+                        <a
+                            href="${chapitre.path}"
+                            class="btn-item">
+
+                            ${chapitre.nom}
+
+                        </a>
+
+                    `).join("");
+
+            }
+
+            else {
+
+                listeChapitres.innerHTML = `
+
+                    <p class="aucun-contenu">
+
+                        Aucun chapitre disponible.
+
+                    </p>
+
+                `;
+
+            }
+
+
+            vueAnnees.style.display = "none";
+
+            vueChapitres.style.display = "block";
+
+        }
+
+
+        /*
+         * ============================
+         * RETOUR AUX ANNÉES
+         * ============================
+         */
+
+        function afficherAnnees() {
+
+            vueChapitres.style.display = "none";
+
+            vueAnnees.style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
