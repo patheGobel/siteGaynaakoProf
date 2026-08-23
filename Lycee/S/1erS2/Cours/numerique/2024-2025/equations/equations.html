@@ -50,7 +50,7 @@
 
                     <ol type="a">
                         <li>
-                            
+
                             <h4>Équations du type $\sqrt{f(x)} = \sqrt{g(x)}$</h4>
                             <p>\( \sqrt{x^{2}+3x-1} = \sqrt{x+2} \) est une équation irrationnelle du type \(
                                 \sqrt{f(x)} = \sqrt{g(x)} \) avec :</p>
@@ -109,6 +109,7 @@
 
                             </ul>
 
+                            <!--Exemple 1-->
                             <div class="exemple-box">
 
                                 <p class="exemple-content">Exemple 1</p>
@@ -254,6 +255,7 @@
 
                             </div>
 
+                            <!--Exemple 2-->
                             <div class="exemple-box">
 
                                 <p class="exemple-content">Exemple 2</p>
@@ -324,7 +326,101 @@
 
                         <li>
                             <h4>Équations du type $\sqrt{f(x)} = ax + b$</h4>
-                            <p>Résoudre l'équation:</p>
+
+                            <p class="text-red"><b>Méthode de Résolution</b></p>
+                            <ul>
+
+                                <li>
+                                    <p><b>1ère étape : Vérification des conditions de validité.</b></p>
+
+                                    <p>On a les équivalences suivantes :</p>
+                                    <p>$\sqrt{f(x)} = g(x) \Leftrightarrow \begin{cases}
+                                        f(x) \geq 0 \\[3mm]
+                                        g(x) \geq 0 \\[3mm]
+                                        f(x) = g(x)^{2}
+                                        \end{cases}$</p>
+                                    <p class="text-redd">Explication :</p>
+
+                                    <ul>
+                                        <li>
+                                            <p class="text-green">\( f(x) \geq 0 \) : Pour que la racine carrée \(
+                                                \sqrt{f(x)} \) soit
+                                                définie, il est nécessaire que l'expression sous la racine soit positive
+                                                ou nulle, d'où \( f(x) \geq 0 \).</p>
+                                        </li>
+
+                                        <li>
+                                            <p class="text-green">\( g(x) \geq 0 \) : Comme la racine carrée d'un nombre
+                                                est toujours
+                                                positive, il faut également que \( g(x) \), qui représente l'autre
+                                                membre de l'équation, soit positif ou nul.</p>
+                                        </li>
+
+                                        <li>
+                                            <p class="text-green">\( f(x) = g(x)^2 \) : Une fois ces conditions
+                                                vérifiées, on élève les
+                                                deux membres de l'équation au carré afin d'éliminer la racine carrée, ce
+                                                qui donne \( f(x) = g(x)^2 \).</p>
+                                        </li>
+                                    </ul>
+
+                                    <p><b>En simplifiant, on obtient :</b></p>
+                                    <p>$\Leftrightarrow \begin{cases}
+                                        g(x) \geq 0 \\
+                                        f(x) = g(x)^{2}
+                                        \end{cases}$</p>
+                                    <p></p>
+                                    <p class="text-redd">Explication :</p>
+                                    <p class="text-green">Dans certains cas, la condition \( f(x) \geq 0 \) devient
+                                        redondante, car l'égalité \( f(x) = g(x)^2 \) implique que \( f(x) \) est
+                                        nécessairement positive si \( g(x) \geq 0 \).
+                                    </p>
+                                </li>
+
+                            </ul>
+
+
+                            <!--Exemple 3-->
+                            <div class="exemple-box">
+
+                                <p class="exemple-content">Exemple 3</p>
+                                <p>Résoudre l'équation:</p>
+
+                                <p>\( \sqrt{2x^{2}+4x-6} = 2x - 1 \)</p>
+                                <!-- Bouton Solution -->
+                                <input type="checkbox" id="solution3" class="solution-checkbox">
+
+                                <label for="solution3" class="solution-btn">
+                                    Solution
+                                </label>
+
+
+                                <!-- Solution cachée -->
+                                <div class="solution-content">
+
+
+                                </div>
+
+                            </div>
+
+                            <!--Exemple 4-->
+                            <div class="exemple-box">
+
+                                <p class="exemple-content">Exemple 4</p>
+
+                                <input type="checkbox" id="solution4" class="solution-checkbox">
+
+                                <label for="solution4" class="solution-btn">
+                                    Solution
+                                </label>
+
+                                <div class="solution-content">
+
+
+                                </div>
+
+                            </div>
+
                         </li>
                     </ol>
 
