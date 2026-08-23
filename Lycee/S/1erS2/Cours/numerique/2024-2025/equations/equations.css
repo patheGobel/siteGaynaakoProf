@@ -1,218 +1,91 @@
-/* =========================================================
-   Cours de mathématiques — 1ère S2
-   Équations — Inéquations — Systèmes
-   ========================================================= */
-
+/* ============================================================
+   RESET & VARIABLES
+============================================================ */
 :root {
-    --bg: #f5f7fa;
-    --surface: #ffffff;
-    --text: #20242a;
-    --muted: #667085;
-    --primary: #b42318;
-    --primary-light: #fff1f0;
-    --accent: #f59e0b;
-    --border: #e4e7ec;
-    --shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
-    --radius: 12px;
+    --primary: #dc2626;
+    --primary-light: #ef4444;
+    --primary-dark: #991b1b;
+    --secondary: #059669;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Segoe UI", Arial, sans-serif;
-    line-height: 1.75;
+    font-family: var(--font-sans);
+    background: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    padding: 30px 20px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
-.course-header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 20px 42px;
-    text-align: center;
-}
-
-.header-inner {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.school {
-    margin: 0 0 4px;
-    font-weight: 700;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.9rem;
-}
-
-.level {
-    margin: 0;
-    color: var(--muted);
-    font-size: 1rem;
-}
-
-.course-header h1 {
-    margin: 12px 0;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1.15;
-    color: #101828;
-}
-
-.teacher {
-    margin: 0;
-    color: var(--muted);
-}
-
-.course {
-    width: min(1000px, calc(100% - 32px));
-    margin: 32px auto 60px;
-    background: var(--surface);
-    padding: clamp(24px, 5vw, 56px);
+/* ============================================================
+   EN-TÊTE
+============================================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 25px 30px;
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    margin-bottom: 35px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
 }
 
-.section-title {
-    margin: 48px 0 28px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--primary);
-    color: var(--primary);
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
-}
-
-h2 {
-    margin: 38px 0 18px;
-    padding-left: 14px;
-    border-left: 5px solid var(--primary);
-    color: #344054;
-    font-size: 1.45rem;
-}
-
-h3 {
-    margin: 30px 0 14px;
-    color: #475467;
-    font-size: 1.15rem;
-}
-
-p {
-    margin: 12px 0;
-}
-
-ul {
-    margin: 12px 0 20px;
-    padding-left: 28px;
-}
-
-li {
-    margin: 8px 0;
-}
-
-strong {
-    font-weight: 700;
-}
-
-u {
-    text-underline-offset: 3px;
-}
-
-.equation {
-    overflow-x: auto;
-    margin: 22px 0;
-    padding: 18px 16px;
-    background: #fafafa;
-    border: 1px solid var(--border);
-    border-radius: 10px;
+.header h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
     text-align: center;
+    letter-spacing: 1px;
 }
 
-.course-label {
-    margin: 28px 0 12px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-weight: 700;
+.header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    margin-top: 8px;
 }
 
-.course-label.exemple {
-    background: #fff7e6;
-    color: #b54708;
-    border-left: 4px solid var(--accent);
+/* ============================================================
+   CARTES DE SECTION & FOOTER (À AJOUTER)
+============================================================ */
+.section-card {
+    background: var(--bg-white);
+    padding: 24px 30px;
+    border-radius: var(--radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
 }
 
-.course-label.solution {
-    background: #ecfdf3;
-    color: #027a48;
-    border-left: 4px solid #12b76a;
+.section-card h2 {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
 }
 
-.course-label.application {
-    background: #eff8ff;
-    color: #175cd3;
-    border-left: 4px solid #2e90fa;
-}
-
-.course-label.correction {
-    background: #f9f5ff;
-    color: #6941c6;
-    border-left: 4px solid #9e77ed;
-}
-
-.course-label.remarque {
-    background: #fff1f3;
-    color: #c01048;
-    border-left: 4px solid #f0447a;
-}
-
-.course-footer {
+.footer {
     text-align: center;
-    padding: 25px 15px 40px;
-    color: var(--muted);
+    padding: 20px;
+    color: var(--text-muted);
     font-size: 0.9rem;
-}
-
-@media (max-width: 700px) {
-    .course-header {
-        padding: 32px 16px;
-    }
-
-    .course {
-        width: calc(100% - 20px);
-        margin: 10px auto 30px;
-        padding: 20px 16px;
-        border-radius: 8px;
-    }
-
-    .equation {
-        padding: 12px 8px;
-    }
-}
-
-@media print {
-    body {
-        background: white;
-    }
-
-    .course-header {
-        border: 0;
-        padding: 20px 0;
-    }
-
-    .course {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-    }
-
-    .course-label,
-    .equation {
-        break-inside: avoid;
-    }
+    margin-top: 40px;
+    border-top: 1px solid var(--border-light);
 }
