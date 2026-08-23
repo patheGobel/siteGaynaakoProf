@@ -18,11 +18,22 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Désactive le forçage automatique du mode sombre par Android */
+:root {
+    color-scheme: light;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: var(--font-sans);
+    background-color: #f1f5f9; /* Fallback direct */
     background: var(--bg-body);
+    color: #0f172a; /* Fallback direct */
     color: var(--text-dark);
     line-height: 1.8;
     padding: 30px 20px;
@@ -31,15 +42,20 @@ body {
 }
 
 /* ============================================================
-   EN-TÊTE
+   EN-TÊTE (Header)
 ============================================================ */
 .header {
+    background-color: #991b1b; /* Fallback Android si gradient non supporté */
+    background: linear-gradient(135deg, #991b1b, #dc2626);
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    color: white;
+    color: #ffffff;
     padding: 25px 30px;
     border-radius: var(--radius);
     margin-bottom: 35px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    /* Forcer le moteur de rendu Android à conserver les couleurs */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .header h1 {
@@ -47,6 +63,7 @@ body {
     font-weight: 800;
     text-align: center;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .header-meta {
@@ -55,25 +72,30 @@ body {
     justify-content: space-between;
     gap: 10px;
     font-size: 0.85rem;
-    opacity: 0.9;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.95;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
     padding-top: 10px;
     margin-top: 8px;
+    color: #ffffff;
 }
 
 /* ============================================================
-   CARTES DE SECTION & FOOTER (À AJOUTER)
+   CARTES DE SECTION & FOOTER
 ============================================================ */
 .section-card {
+    background-color: #ffffff; /* Fallback */
     background: var(--bg-white);
     padding: 24px 30px;
     border-radius: var(--radius);
     margin-bottom: 25px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-light);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .section-card h2 {
+    color: #991b1b; /* Fallback */
     color: var(--primary-dark);
     border-bottom: 2px solid var(--border-light);
     padding-bottom: 8px;
@@ -84,6 +106,7 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
+    color: #475569; /* Fallback */
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-top: 40px;
