@@ -1,0 +1,218 @@
+/* =========================================================
+   Cours de mathématiques — 1ère S2
+   Équations — Inéquations — Systèmes
+   ========================================================= */
+
+:root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #20242a;
+    --muted: #667085;
+    --primary: #b42318;
+    --primary-light: #fff1f0;
+    --accent: #f59e0b;
+    --border: #e4e7ec;
+    --shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.75;
+}
+
+.course-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 20px 42px;
+    text-align: center;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.school {
+    margin: 0 0 4px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+}
+
+.level {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.course-header h1 {
+    margin: 12px 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    color: #101828;
+}
+
+.teacher {
+    margin: 0;
+    color: var(--muted);
+}
+
+.course {
+    width: min(1000px, calc(100% - 32px));
+    margin: 32px auto 60px;
+    background: var(--surface);
+    padding: clamp(24px, 5vw, 56px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    margin: 48px 0 28px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+h2 {
+    margin: 38px 0 18px;
+    padding-left: 14px;
+    border-left: 5px solid var(--primary);
+    color: #344054;
+    font-size: 1.45rem;
+}
+
+h3 {
+    margin: 30px 0 14px;
+    color: #475467;
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 12px 0;
+}
+
+ul {
+    margin: 12px 0 20px;
+    padding-left: 28px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+u {
+    text-underline-offset: 3px;
+}
+
+.equation {
+    overflow-x: auto;
+    margin: 22px 0;
+    padding: 18px 16px;
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.course-label {
+    margin: 28px 0 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.course-label.exemple {
+    background: #fff7e6;
+    color: #b54708;
+    border-left: 4px solid var(--accent);
+}
+
+.course-label.solution {
+    background: #ecfdf3;
+    color: #027a48;
+    border-left: 4px solid #12b76a;
+}
+
+.course-label.application {
+    background: #eff8ff;
+    color: #175cd3;
+    border-left: 4px solid #2e90fa;
+}
+
+.course-label.correction {
+    background: #f9f5ff;
+    color: #6941c6;
+    border-left: 4px solid #9e77ed;
+}
+
+.course-label.remarque {
+    background: #fff1f3;
+    color: #c01048;
+    border-left: 4px solid #f0447a;
+}
+
+.course-footer {
+    text-align: center;
+    padding: 25px 15px 40px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+    .course-header {
+        padding: 32px 16px;
+    }
+
+    .course {
+        width: calc(100% - 20px);
+        margin: 10px auto 30px;
+        padding: 20px 16px;
+        border-radius: 8px;
+    }
+
+    .equation {
+        padding: 12px 8px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .course-header {
+        border: 0;
+        padding: 20px 0;
+    }
+
+    .course {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .course-label,
+    .equation {
+        break-inside: avoid;
+    }
+}
