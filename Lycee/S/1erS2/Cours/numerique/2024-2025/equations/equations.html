@@ -475,7 +475,7 @@
             <ol>
 
                 <li>
-                    <p>Inéquations du type $\sqrt{f(x)} \le ax + b$</p>
+                    <h3>Inéquations du type $\sqrt{f(x)} \le ax + b$</h3>
                     <p>
                     <p class="text-red"><b>Méthode de Résolution</b></p>
                     </p>
@@ -605,8 +605,99 @@
 
                 </li>
 
-                <li>Inéquations du type $\sqrt{f(x)} \ge ax + b$</li>
-                <li>Inéquations du type $\sqrt{f(x)} \le \sqrt{g(x)}$</li>
+                <li>
+                    <h3>Inéquations du type $\sqrt{f(x)} \ge ax + b$</h3>
+                    <p class="text-red"><b>Méthode de Résolution</b></p>
+                    <p>On a les équivalences suivantes :</p>
+                    <p>$\begin{aligned}
+                        \sqrt{f(x)} \geq g(x)
+                        &\Leftrightarrow
+                        \begin{cases}
+                        f(x) \geq 0\\[3mm]
+                        g(x) \geq 0\\[3mm]
+                        f(x) \geq g(x)^2
+                        \end{cases}
+                        \quad \textbf{ou} \quad
+                        \begin{cases}
+                        f(x) \geq 0\\[3mm]
+                        g(x) \leq 0
+                        \end{cases}\\
+                        &\Leftrightarrow
+                        \boxed{
+                        \begin{cases}
+                        g(x) \geq 0\\[3mm]
+                        f(x) \geq g(x)^2
+                        \end{cases}
+                        \quad \textbf{ou} \quad
+                        \begin{cases}
+                        f(x) \geq 0\\[3mm]
+                        g(x) \leq 0
+                        \end{cases}}
+                        \end{aligned}$</p>
+
+
+                    <p class="text-redd">Explication :</p>
+
+                    <ul>
+
+                        <li>
+                            <p>\( f(x) \geq 0 \) : Comme la racine carrée\( \sqrt{f(x)} \) doit être définie, il
+                                est nécessaire que
+                                l'expression sous la racine soit positive ou nulle.</p>
+                        </li>
+
+                        <li>
+                            <p><b>Premier cas : \( g(x) \geq 0 \) :</b>Les deux membres sont alors positifs ou
+                                nuls. On peut donc élever les deux membres au carré sans changer le sens de
+                                l'inégalité :</p>
+                            <p>$\sqrt{f(x)} \geq g(x)
+                                \Leftrightarrow
+                                f(x) \geq g(x)^2.$</p>
+                        </li>
+
+                        <li>
+                            <p><b>Deuxième cas : \( g(x) \leq 0 \) :</b>Comme une racine carrée est toujours
+                                positive ou nulle, on a automatiquement </p>
+                            <p>$\sqrt{f(x)} \geq 0 \geq g(x)$</p>
+                            <p>Ainsi, dans ce cas, il suffit d'avoir $f(x) \geq 0.$</p>
+                        </li>
+
+                    </ul>
+
+                    <p><b>En simplifiant, on obtient :</b></p>
+                    <p>$\boxed{
+                        \sqrt{f(x)} \geq g(x)
+                        \Leftrightarrow
+                        \left[
+                        \begin{array}{l}
+                        g(x)\geq0\\
+                        f(x)\geq g(x)^2
+                        \end{array}
+                        \right]
+                        \quad\textbf{ou}\quad
+                        \left[
+                        \begin{array}{l}
+                        f(x)\geq0\\
+                        g(x)\leq0
+                        \end{array}
+                        \right]
+                        }$</p>
+                    <p>Dans le cas particulier où \(g(x)=ax+b\), on résout donc
+                        séparément les deux systèmes :</p>
+                    <p>$\begin{cases}
+                        f(x)\geq0\\
+                        ax+b\leq0
+                        \end{cases}$ et $\begin{cases}
+                        ax+b\geq0\\
+                        f(x)\geq(ax+b)^2.
+                        \end{cases}$</p>
+                    <p><b>L'ensemble solution de l'inéquation est l'union des
+                            solutions de ces deux systèmes.</b></p>
+                </li>
+
+                <li>
+                    <h3>Inéquations du type $\sqrt{f(x)} \le \sqrt{g(x)}$</h3>
+                </li>
             </ol>
         </section>
 
