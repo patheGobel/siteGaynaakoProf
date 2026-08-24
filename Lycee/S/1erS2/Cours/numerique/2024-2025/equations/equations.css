@@ -101,16 +101,7 @@ p {
     color: #1f4e79;
 }
 
-/* ============================================================
-   Exo Application
-============================================================ */
 
-.exo-content {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0 0 10px 0;
-    color: #1f4e79;
-}
 /* ============================================================
    CASE À COCHER
 ============================================================ */
@@ -167,6 +158,16 @@ p {
 
 .solution-checkbox:checked ~ .solution-content {
     display: block;
+}
+/* ============================================================
+   Exo Application
+============================================================ */
+
+.exo-content {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #1f4e79;
 }
 .footer {
     text-align: center;
