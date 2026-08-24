@@ -694,13 +694,97 @@
                         \end{cases}$</p>
                     <p><b>L'ensemble solution de l'inéquation est l'union des
                             solutions de ces deux systèmes.</b></p>
+
+                    <!--Exemple 5-->
+                    <div class="exemple-box">
+
+                        <p class="exemple-content">Exemple 5</p>
+                        <p>Résoudre l'inéquation:</p>
+                        <p>$\sqrt{2x+1}\geq x+3$</p>
+                        <!-- Bouton Solution -->
+                        <input type="checkbox" id="solution5" class="solution-checkbox">
+
+                        <label for="solution5" class="solution-btn">
+                            Solution
+                        </label>
+
+
+                        <!-- Solution cachée -->
+                        <div class="solution-content">
+
+                            <ul>
+                                <li>
+                                    <p><b>Étape 1 : Conditions de validité $D_v$</b></p>
+                                    <p>L'inéquation est définie ssi $
+                                        \sqrt{2x+1}\geq x+3
+                                        \Leftrightarrow
+                                        \left[
+                                        \begin{array}{l}
+                                        2x+1 \geq 0\\[3mm]
+                                        x+3 \leq 0
+                                        \end{array}
+                                        \right]
+                                        \quad\textbf{ou}\quad
+                                        \left[
+                                        \begin{array}{l}
+                                        x+3 \geq 0\\[3mm]
+                                        2x+1\geq (x+3)^2
+                                        \end{array}
+                                        \right]
+                                        $</p>
+                                </li>
+
+                                <li>
+                                    <p><b>Étape 2 : Résolution de l'équation </b></p>
+                                    \[
+                                    \textbf{Posons }
+                                    S_{1}:
+                                    \begin{cases}
+                                    2x+1 \geq 0\\[3mm]
+                                    x+3 \leq 0
+                                    \end{cases}\qquad
+                                    \textbf{Posons }
+                                    S_{2}:
+                                    \begin{cases}
+                                    x+3 \geq 0\\[3mm]
+                                    2x+1 \geq (x+3)^2
+                                    \end{cases}
+                                    \]
+
+                                    <ul>
+
+                                        <li>
+                                            <p><b>Pour </b>$S_{1}:
+                                                \begin{cases}
+                                                2x+1 = 0\\[3mm]
+                                                x+3 = 0
+                                                \end{cases}$</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Pour </b>$S_{2}:
+                                                \begin{cases}
+                                                x+3 = 0\\[3mm]
+                                                2x+1 = (x+3)^2
+                                                \end{cases}$</p>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
                 </li>
 
                 <li>
                     <h3>Inéquations du type $\sqrt{f(x)} \le \sqrt{g(x)}$</h3>
                 </li>
             </ol>
-            
+
         </section>
 
         <section class="section-card">
