@@ -169,6 +169,19 @@ p {
     margin: 0 0 10px 0;
     color: #1f4e79;
 }
+/* ============================================================
+   TabSigne
+============================================================ */
+.image-container img {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
 .footer {
     text-align: center;
     padding: 20px;
