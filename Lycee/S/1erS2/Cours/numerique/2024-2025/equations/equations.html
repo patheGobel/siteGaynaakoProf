@@ -810,8 +810,8 @@
                                         </li>
                                         <p>$
                                             \begin{aligned}
-                                            S &= S_1 \cap S_2\\
-                                            &= \varnothing \cap \varnothing
+                                            S &= S_1 \cup S_2\\
+                                            &= \varnothing \cup \varnothing
                                             \end{aligned}
                                             $</p>
                                         <p>$\boxed{S=\varnothing}$</p>
@@ -829,14 +829,86 @@
                 <li>
                     <h3>Inéquations du type $\sqrt{f(x)} \le \sqrt{g(x)}$</h3>
                     <p class="text-red"><b>Méthode de Résolution</b></p>
-                    <p>On a : 
+                    <p>On a :
                         $
-                        \sqrt{f(x)}\leq\sqrt{g(x)}\;\Leftrightarrow 
+                        \sqrt{f(x)}\leq\sqrt{g(x)}\;\Leftrightarrow
                         \begin{cases}
                         f(x) \geq 0\\[3mm]
-                        g(x)\geq 0\\[3mm] 
+                        g(x)\geq 0\\[3mm]
                         f(x)\leq g(x)
                         \end{cases}$</p>
+
+                    <!--Exemple 6-->
+                    <div class="exemple-box">
+
+                        <p class="exemple-content">Exemple 6</p>
+                        <p>Résoudre l'inéquation:</p>
+                        <p>$\sqrt{2x+3}\leq\sqrt{x+5}$</p>
+                        <!-- Bouton Solution -->
+                        <input type="checkbox" id="solution6" class="solution-checkbox">
+
+                        <label for="solution6" class="solution-btn">
+                            Solution
+                        </label>
+
+                        <!-- Solution cachée -->
+                        <div class="solution-content">
+
+                            <ul>
+                                <li>
+                                    <p><b>Étape 1 : Conditions de validité $D_v$</b></p>
+                                    <p>L'inéquation n'a de sense que ssi $
+                                        \begin{cases}
+                                        2x+3\geq0 \\[3mm]
+                                        x+5\geq0
+                                        \end{cases}
+                                        $</p>
+                                    <p>$
+                                        \textbf{Posons }
+                                        S_{1}:\begin{cases}
+                                        2x+3 = 0 \\[3mm]
+                                        x+5 = 0
+                                        \end{cases}
+                                        $</p>
+
+
+                                    <p><b>Pour </b>$S_{1}:$</p>
+                                    <p>$S_{1}:
+                                        \begin{cases}
+                                        x = \dfrac{-3}{2} \\[3mm]
+                                        x = -5
+                                        \end{cases} $</p>
+
+                                    <div class="image-container">
+                                        <img src="images/tabSignes3.png" alt="Tableau de signe de">
+                                    </div>
+
+                                    <p>\(
+                                        D_v=\left[-\frac{3}{2},+\infty\right[.
+                                        \)</p>
+                                </li>
+
+                                <li>
+                                    <p><b>Étape 2 : Résolution de l'équation </b></p>
+
+
+
+
+                                    <p>$
+                                        \begin{aligned}
+                                        S &= S_1 \cap S_2\\
+                                        &= \varnothing \cap \varnothing
+                                        \end{aligned}
+                                        $</p>
+                                    <p>$\boxed{S=\varnothing}$</p>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
                 </li>
             </ol>
 
