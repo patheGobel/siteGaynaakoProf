@@ -979,6 +979,105 @@
 
                         <li>
                             <h4>Méthode du pivot de Gauss</h4>
+                            <!--Exemple 7-->
+                            <div class="exemple-box">
+
+                                <p class="exemple-content">Exemple 7</p>
+
+                                <p>Résolvons dans $\mathbb{R}^3$ le système suivant par la méthode du pivot de Gauss :
+                                </p>
+                                <p>$(S) : \begin{cases}
+                                    x + 10y - 3z = 5 & (L_1) \\[3mm]
+                                    2x - y + 2z = 2 & (L_2) \\[3mm]
+                                    -x + y + z = -3 & (L_3)
+                                    \end{cases}$</p>
+
+                                <!-- Bouton Solution -->
+                                <input type="checkbox" id="solution7" class="solution-checkbox">
+
+                                <label for="solution7" class="solution-btn">
+                                    Solution
+                                </label>
+
+
+                                <!-- Solution cachée -->
+                                <div class="solution-content">
+                                    <p><b>Méthode de résolution pas à pas :</b></p>
+                                    <ul>
+                                        <li>
+                                            <p><b>Étape 1 : Élimination de $x$ dans $(L_2)$</b></p>
+                                            <p>On garde la ligne pivot $(L_1)$ et on remplace $(L_2)$ par $L_2 - 2L_1$ :
+                                            </p>
+                                            <p>$\begin{array}{rcc l}
+                                                L_2 : & 2x - y + 2z & = & 2 \\
+                                                -2L_1 : & -2x - 20y + 6z & = & -10 \\
+                                                \hline
+                                                L'_2 : & -21y + 8z & = & -8
+                                                \end{array}$</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Étape 2 : Élimination de $x$ dans $(L_3)$</b></p>
+                                            <p>On conserve $(L_1)$ et on remplace $(L_3)$ par $L_3 + L_1$ :</p>
+                                            <p>$\begin{array}{rcc l}
+                                                L_3 : & -x + y + z & = & -3 \\
+                                                + L_1 : & x + 10y - 3z & = & 5 \\
+                                                \hline
+                                                L'_3 : & 11y - 2z & = & 2
+                                                \end{array}$</p>
+                                            <p>À ce stade, on obtient le système équivalent réduit :</p>
+                                            <p>$\begin{cases}
+                                                x + 10y - 3z = 5 & (L_1) \\
+                                                -21y + 8z = -8 & (L'_2) \\
+                                                11y - 2z = 2 & (L'_3)
+                                                \end{cases}$</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Étape 3 : Élimination de $y$ dans $(L'_3)$</b></p>
+                                            <p>On fixe la ligne $(L'_2)$ comme nouveau pivot et on élimine $y$ en
+                                                remplaçant $(L'_3)$ par $21L'_3 + 11L'_2$ :</p>
+                                            <p>$\begin{array}{rcc l}
+                                                21L'_3 : & 231y - 42z & = & 42 \\
+                                                + 11L'_2 : & -231y + 88z & = & -88 \\
+                                                \hline
+                                                L''_3 : & 46z & = & -46
+                                                \end{array}$</p>
+                                            <p>On obtient alors le <b>système triangulaire</b> équivalent :</p>
+                                            <p>$\begin{cases}
+                                                x + 10y - 3z = 5 & (L_1) \\
+                                                -21y + 8z = -8 & (L'_2) \\
+                                                46z = -46 & (L''_3)
+                                                \end{cases}$</p>
+                                        </li>
+
+                                        <li>
+                                            <p><b>Étape 4 : Remontée (détermination des inconnues)</b></p>
+                                            <ul>
+                                                <li>
+                                                    <p>D'après $(L''_3)$ : $46z = -46 \implies z = -1$</p>
+                                                </li>
+
+                                                <li>
+                                                    <p>En remplaçant $z$ dans $(L'_2)$ :</p>
+                                                    <p>$-21y + 8(-1) = -8 \implies -21y - 8 = -8 \implies -21y = 0
+                                                        \implies y = 0$</p>
+                                                </li>
+                                                <li>
+                                                    <p>En remplaçant $y$ et $z$ dans $(L_1)$ :</p>
+                                                    <p>$x + 10(0) - 3(-1) = 5 \implies x + 3 = 5 \implies x = 2$</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    L'ensemble des solutions du système dans $\mathbb{R}^3$ est :
+                                    \[
+                                    \boxed{S = \{(2 \;;\; 0 \;;\; -1)\}}
+                                    \]
+                                </div>
+
+                            </div>
+
                         </li>
                     </ol>
                 </li>
