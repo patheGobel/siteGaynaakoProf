@@ -236,6 +236,88 @@
                                         <!-- Solution cachée -->
                                         <div class="solution-content">
 
+                                            <ol type="a">
+                                                <li>
+                                                    <p>Montrons que 0 n'est pas solution de $f(x)=0$</p>
+                                                    <p>On a $f(0)=6\neq 0$ donc 0 n'est pas solution de $f(x)=0$
+                                                    </p>
+                                                </li>
+
+                                                <li>
+                                                    <p>Déterminons $g(x)$ pour que $f(x)=x^{2}.g(x)$</p>
+                                                    <p>Nous avons :</p>
+                                                    <p>$
+                                                        \begin{aligned}
+                                                        f(x) &= 6x^{4}-5x^{3}-38x^{2}-5x+6 \\
+                                                        &=x^{2}\left(6x^{2}-5x-38-\dfrac{5}{x}+\dfrac{6}{x^{2}}\right)
+                                                        \\
+                                                        &=x^{2}.g(x)
+                                                        \end{aligned}
+                                                        $</p>
+                                                    <p>avec $g(x)=6x^{2}-5x-38-\dfrac{5}{x}+\dfrac{6}{x^{2}}$</p>
+                                                </li>
+
+                                                <li>
+                                                    <p>Montrons que $f(x)=0$ si, et seulement si, $g(x)=0$</p>
+
+                                                    <ul>
+
+                                                        <li>
+                                                            <p>si $g(x)=0$ alors $f(x)=x^{2}.0=0$.</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <p>si $f(x)=0$ montons que $g(x)=0$. Soit $f(x)=0$ alors
+                                                                $x^{2}.g(x)=0$. Et donc, $x^{2}=0\ $ ou $\ g(x)=0$</p>
+                                                        </li>
+
+                                                    </ul>
+                                                    <p>Ce qui revient à dire $x=0\ $ ou $\ g(x)=0\ \ $ or $x\neq 0\ $
+                                                        car 0 n'est pas solution, donc $g(x)=0$</p>
+                                                </li>
+
+                                                <li>
+                                                    <p>Résolvons dans $\mathbb{R}\ \ g(x)=0$.</p>
+                                                    <p>On a $g(x)=6x^{2}-5x-38-\dfrac{5}{x}+\dfrac{6}{x^{2}}$.</p>
+                                                    <p>Posons $X=x+\dfrac{1}{x}$</p>
+                                                    <p>Alors, on a $\ x^{2}+\dfrac{1}{x^{2}}=X^{2}-2$</p>
+                                                    <p>Ainsi,</p>
+                                                    <p>$
+                                                        \begin{aligned}
+                                                        g(x) &=6x^{2}-5x-38-\dfrac{5}{x}+\dfrac{6}{x^{2}} \\
+                                                        &=6\left(x^{2}+\dfrac{1}{x^{2}}\right)-5\left(x+\dfrac{1}{x}\right)-38
+                                                        \\
+                                                        &=6(X^{2}-2)-5X-38 \\
+                                                        &=6X^{2}-12-5X-38 \\
+                                                        &=6X^{2}-5X-50
+                                                        \end{aligned}
+                                                        $</p>
+                                                    <p>Soit $\Delta=(-5)^{2}-4(6)(-50)=25+1200=1225$, et donc
+                                                        $\sqrt{\Delta}=35$</p>
+                                                    <p>$\Rightarrow\ X_{1}=\dfrac{5-35}{12}\quad\text{ et }\quad
+                                                        X_{2}=\dfrac{5+35}{12}$</p>
+                                                    <p>$\Rightarrow\ X_{1}=-\dfrac{5}{2}\quad\text{ et }\quad
+                                                        X_{2}=\dfrac{10}{3}$</p>
+                                                    <p>En faisant un retour sur le changement de variable, on obtient :
+                                                    </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>$-\dfrac{5}{2}=x+\dfrac{1}{x}\ \Rightarrow\
+                                                                -\dfrac{5}{2}=\dfrac{x^{2}+1}{x}$</p>
+                                                            <p>Ce qui donne $-5x=2x^{2}+2\ \Rightarrow\ 2x^{2}+5x+2=0$
+                                                            </p>
+                                                            <p>Soit $\Delta=25-16=9\ \Rightarrow\ \sqrt{\Delta}=3$</p>
+                                                            <p>Ainsi, $x_{1}=\dfrac{-5-3}{4}\quad\text{ et }\quad
+                                                                x_{2}=\dfrac{-5+3}{4}$</p>
+                                                            <p>$\Rightarrow\ x_{1}=-2\quad\text{ et }\quad
+                                                                x_{2}=-\dfrac{1}{2}$</p>
+                                                        </li>
+                                                        <li>$\dfrac{10}{3}=x+\dfrac{1}{x}\ \Rightarrow\
+                                                            \dfrac{10}{3}=\dfrac{x^{2}+1}{x}$</li>
+                                                    </ul>
+                                                </li>
+                                            </ol>
+
                                         </div>
 
                                     </div>
