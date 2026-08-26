@@ -205,8 +205,15 @@ b {
     padding-left: 20px;
 }
 
+.liste ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
 .liste ul li::before {
-    content: "- ";
+    content: "-";
+    position: absolute;
+    left: 0;
 }
 /* ============================================================
    FOOTER
