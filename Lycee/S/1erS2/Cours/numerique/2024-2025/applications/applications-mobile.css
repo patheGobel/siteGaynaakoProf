@@ -1,0 +1,22 @@
+/* ================================
+   INTRODUCTION - MOBILE
+   ================================ */
+
+.introduction-card {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-left-width: 4px;
+    border-radius: 8px;
+}
+
+.introduction-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.introduction-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 13px;
+}
