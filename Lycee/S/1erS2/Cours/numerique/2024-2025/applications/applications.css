@@ -1,3 +1,94 @@
+:root {
+    --primary: #dc2626;
+    --primary-light: #ef4444;
+    --primary-dark: #991b1b;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --radius: 16px;
+    --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/*Colorier les texte*/
+.text-red {
+    color: #e64c4e;
+}
+
+.text-green {
+    color:#10ac42;
+}
+
+.text-redd {
+    color:#cb3a3a;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 25px 30px;
+    border-radius: var(--radius);
+    margin-bottom: 35px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.header-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.85rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    margin-top: 8px;
+}
+
+.section-card {
+    background: var(--bg-white);
+    padding: 24px 30px;
+    border-radius: var(--radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+
+
+.section-card h2 {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+}
 /* ================================
    INTRODUCTION
    ================================ */
@@ -29,4 +120,128 @@
 
 .introduction-card strong {
     font-weight: 600;
+}
+/* ============================================================
+   Exemple Solution
+============================================================ */
+
+.exemple-content {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #1f4e79;
+}
+
+
+/* ============================================================
+   CASE À COCHER
+============================================================ */
+
+.solution-checkbox {
+    display: none;
+}
+
+
+/* ============================================================
+   BOUTON SOLUTION
+============================================================ */
+
+.solution-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 16px;
+
+    background-color: #2c3e50;
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.solution-btn:hover {
+    background-color: #34495e;
+}
+
+
+/* ============================================================
+   SOLUTION
+============================================================ */
+
+.solution-content {
+    display: none;
+
+    margin-top: 15px;
+    padding: 10px 0 10px 25px;
+
+    border-left: 4px solid #2c3e50;
+    background-color: #f5f5f5;
+}
+
+
+/* ============================================================
+   AFFICHER LA SOLUTION
+============================================================ */
+
+.solution-checkbox:checked ~ .solution-content {
+    display: block;
+}
+/* ============================================================
+   Exo Application
+============================================================ */
+
+.exo-content {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #1f4e79;
+}
+/* ============================================================
+   TabSigne
+============================================================ */
+.image-container img {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+/* ============================================================
+   Liste
+============================================================ */
+.liste {
+    list-style-type: square;
+}
+
+.liste ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.liste ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.liste ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+/* ============================================================
+   FOOTER
+============================================================ */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-light);
 }
