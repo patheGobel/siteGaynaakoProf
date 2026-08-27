@@ -469,6 +469,55 @@ b {
     }
 
 }
+/* =================================
+   DEUX DIAGRAMMES
+   ================================= */
+
+.diagrammes-restriction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin: 30px auto;
+}
+
+
+/* Espace entre les deux diagrammes */
+
+.diagramme-separation {
+    height: 30px;
+}
+
+
+/* Taille des diagrammes */
+
+.diagrammes-restriction .diagramme-bloc {
+    width: 500px;
+    max-width: 100%;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media screen and (max-width: 768px) {
+
+    .diagrammes-restriction {
+        margin: 20px auto;
+    }
+
+    .diagrammes-restriction .diagramme-bloc {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .diagramme-separation {
+        height: 15px;
+    }
+
+}
 /* ============================================================
    FOOTER
 ============================================================ */
