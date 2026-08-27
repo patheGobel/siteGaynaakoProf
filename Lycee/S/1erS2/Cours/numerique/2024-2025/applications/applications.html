@@ -278,10 +278,151 @@
                                 </div>
 
                             </div>
+
                             <p>A tout élément de <strong class="text-red">$A$</strong> on associe au plus un élément de
-                                <strong class="text-red">$B$</strong>. Donc, la relation <strong class="text-red">$f$</strong> ainsi
+                                <strong class="text-red">$B$</strong>. Donc, la relation <strong
+                                    class="text-red">$f$</strong> ainsi
                                 définie est une <strong class="text-red">fonction</strong>
-                                .</p>
+                                .
+                            </p>
+
+                            <div class="diagramme-bloc">
+
+                                <div class="diagramme-label">
+                                    diagramme
+                                </div>
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+
+                                    <!-- ==========================
+             FLÈCHES
+             ========================== -->
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="arrow-red-2" markerWidth="10" markerHeight="10" refX="8" refY="3"
+                                            orient="auto">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+
+                                        <!-- Flèche verte -->
+                                        <marker id="arrow-green-2" markerWidth="10" markerHeight="10" refX="8" refY="3"
+                                            orient="auto">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- ==========================
+             ENSEMBLES E ET F
+             ========================== -->
+
+                                    <text x="120" y="55" class="nom-ensemble">
+                                        E
+                                    </text>
+
+                                    <text x="400" y="55" class="nom-ensemble">
+                                        F
+                                    </text>
+
+
+                                    <!-- ==========================
+             FLÈCHE g DE E VERS F
+             ========================== -->
+
+                                    <line x1="145" y1="55" x2="375" y2="55" class="fleche-f"
+                                        marker-end="url(#arrow-red-2)">
+                                    </line>
+
+                                    <text x="260" y="45" class="lettre-f">
+                                        g
+                                    </text>
+
+
+                                    <!-- ==========================
+             ENSEMBLE E
+             ========================== -->
+
+                                    <ellipse cx="120" cy="220" rx="55" ry="145" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- ==========================
+             ENSEMBLE F
+             ========================== -->
+
+                                    <ellipse cx="400" cy="220" rx="45" ry="145" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- ==========================
+             ÉLÉMENTS DE E
+             ========================== -->
+
+                                    <text x="120" y="145" class="element">a</text>
+                                    <text x="120" y="190" class="element">b</text>
+                                    <text x="120" y="235" class="element">c</text>
+                                    <text x="120" y="280" class="element">d</text>
+                                    <text x="120" y="325" class="element">e</text>
+
+
+                                    <!-- ==========================
+             ÉLÉMENTS DE F
+             ========================== -->
+
+                                    <text x="400" y="145" class="element">1</text>
+                                    <text x="400" y="190" class="element">2</text>
+                                    <text x="400" y="235" class="element">3</text>
+                                    <text x="400" y="280" class="element">4</text>
+                                    <text x="400" y="325" class="element">5</text>
+
+
+                                    <!-- ==========================
+             CORRESPONDANCES
+             ========================== -->
+
+                                    <!-- a -> 1 -->
+                                    <line x1="135" y1="145" x2="385" y2="145" class="fleche-correspondance"
+                                        marker-end="url(#arrow-green-2)">
+                                    </line>
+
+
+                                    <!-- a -> 3 -->
+                                    <line x1="135" y1="145" x2="385" y2="235" class="fleche-correspondance"
+                                        marker-end="url(#arrow-green-2)">
+                                    </line>
+
+
+                                    <!-- b -> 2 -->
+                                    <line x1="135" y1="190" x2="385" y2="190" class="fleche-correspondance"
+                                        marker-end="url(#arrow-green-2)">
+                                    </line>
+
+
+                                    <!-- c -> 4 -->
+                                    <line x1="135" y1="235" x2="385" y2="280" class="fleche-correspondance"
+                                        marker-end="url(#arrow-green-2)">
+                                    </line>
+
+
+                                    <!-- e -> 5 -->
+                                    <line x1="135" y1="325" x2="385" y2="325" class="fleche-correspondance"
+                                        marker-end="url(#arrow-green-2)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
+                            
                         </li>
                     </ol>
                 </li>
