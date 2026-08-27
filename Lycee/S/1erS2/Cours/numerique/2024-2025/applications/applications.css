@@ -234,99 +234,178 @@ p {
     position: absolute;
     left: 0;
 }
-/* ================================
+/* =========================================
    DIAGRAMME DE FONCTION
-   ================================ */
+   ========================================= */
 
-.diagramme-container {
+.fonction-diagramme {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    gap: 50px;
+
     width: 100%;
-    margin: 30px auto;
+    max-width: 900px;
+
+    margin: 40px auto;
 }
 
 
-/* Étiquette "diagramme" */
+/* =========================================
+   BLOC DU DIAGRAMME
+   ========================================= */
 
-.diagramme-label {
-    position: absolute;
-    left: calc(50% - 250px);
-    top: 20px;
+.diagramme-bloc {
+    position: relative;
 
-    color: darkred;
-    font-weight: bold;
-    font-size: 1rem;
-
-    transform: rotate(-45deg);
-    transform-origin: center;
+    width: 500px;
+    flex-shrink: 0;
 }
 
 
 /* SVG */
 
-.diagramme-fonction {
-    width: 500px;
-    max-width: 100%;
+.diagramme-svg {
+    display: block;
+
+    width: 100%;
     height: auto;
 }
 
 
-/* Noms des ensembles */
+/* =========================================
+   TEXTE "diagramme"
+   ========================================= */
+
+.diagramme-label {
+    position: absolute;
+
+    left: -25px;
+    top: 100px;
+
+    color: darkred;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================
+   NOMS DES ENSEMBLES
+   ========================================= */
 
 .nom-ensemble {
     fill: darkred;
+
     font-size: 24px;
     font-weight: bold;
+
     text-anchor: middle;
 }
 
 
-/* Lettre f */
+/* =========================================
+   LETTRE f
+   ========================================= */
 
 .lettre-f {
     fill: darkred;
+
     font-size: 20px;
     font-weight: bold;
+
     text-anchor: middle;
 }
 
 
-/* Enveloppes des ensembles */
+/* =========================================
+   ENSEMBLES
+   ========================================= */
 
 .ensemble {
     fill: none;
+
     stroke: gray;
     stroke-width: 3;
 }
 
 
-/* Éléments */
+/* =========================================
+   ÉLÉMENTS
+   ========================================= */
 
 .element {
     fill: #222;
+
     font-size: 19px;
+
     text-anchor: middle;
+
     dominant-baseline: middle;
 }
 
 
-/* Flèche f */
+/* =========================================
+   FLÈCHE f
+   ========================================= */
 
 .fleche-f {
     stroke: darkred;
+
     stroke-width: 3;
+
     fill: none;
 }
 
 
-/* Flèches de correspondance */
+/* =========================================
+   FLÈCHES DE CORRESPONDANCE
+   ========================================= */
 
 .fleche-correspondance {
     stroke: darkgreen;
+
     stroke-width: 2.5;
+
     fill: none;
+}
+
+
+/* =========================================
+   BLOC DES RÉSULTATS
+   ========================================= */
+
+.fonction-resultats {
+    width: 260px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   ÉQUATIONS
+   ========================================= */
+
+.fonction-equations {
+    text-align: left;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   REMARQUE
+   ========================================= */
+
+.fonction-remarque {
+    margin-top: 20px;
+
+    line-height: 1.6;
+
+    font-size: 1rem;
 }
 
 /* ============================================================
