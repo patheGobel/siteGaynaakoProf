@@ -456,6 +456,139 @@
                         </li>
                     </ol>
                 </li>
+
+                <li>
+                    <h3>Ensemble de définition</h3>
+                    <p>
+                        Soit <strong class="text-red">\(f\)</strong> une fonction
+                    </p>
+
+                    <p>\(
+                        \begin{aligned}
+                        f : A &\rightarrow B \\
+                        x &\mapsto y = f(x)
+                        \end{aligned}
+                        \)</p>
+
+                    <p>
+                        L'<strong class="text-red">ensemble de définition</strong> de
+                        <strong class="text-red">\(f\)</strong>, noté
+                        <strong class="text-red">\(\mathcal{D}_f\)</strong>, est l'ensemble
+                        des éléments de <strong class="text-red">\(A\)</strong> qui ont une
+                        image par <strong class="text-red">\(f\)</strong> dans
+                        <strong class="text-red">\(B\)</strong>.
+                    </p>
+                    <!--Exemple-->
+                    <div class="exo-box">
+                        <p class="exo-content">Exemple 1</p>
+                        <ul>
+
+                            <li>
+                                <p>Dans le \(1^{\text{er}}\) diagramme, l'ensemble de définition de
+                                    \(f\) est :
+                                    \(
+                                    \boxed{\mathcal{D}_f = \{a\,;\,b\,;\,c\,;\,d\}}
+                                    \)</p>
+                            </li><br>
+
+                            <li>
+                                <p>\(
+                                    \begin{aligned}
+                                    f : \mathbb{R} &\rightarrow \mathbb{R} \\
+                                    x &\mapsto 2x^3 - 5x + 3
+                                    \end{aligned}
+                                    \)</p>
+
+                                <strong class="text-red">
+                                    \(\mathcal{D}_f = \mathbb{R}\)
+                                </strong>
+                            </li><br>
+
+                            <li>
+                                <p>\(
+                                    \begin{aligned}
+                                    f : \mathbb{R} &\rightarrow \mathbb{R} \\
+                                    x &\mapsto \frac{2x+5}{x^2-4}
+                                    \end{aligned}
+                                    \) </p>
+                                <p>\(f \text{ existe ssi } x^2-4 \neq 0\)</p>
+                                <p>Posons :
+                                    \(
+                                    x^2-4=0
+                                    \)
+
+                                    \(
+                                    x=\pm2
+                                    \)</p>
+
+
+                                <strong class="text-red">
+                                    \(
+                                    \mathcal{D}_f
+                                    =\mathbb{R}\setminus\{-2\,;\,2\}
+                                    =]-\infty\,;\,-2[
+                                    \cup]-2\,;\,2[
+                                    \cup]2\,;\,+\infty[
+                                    \)
+                                </strong>
+                            </li><br>
+
+                            <li>
+                                <p>\(
+                                    \begin{aligned}
+                                    f : \mathbb{R} &\rightarrow \mathbb{R} \\
+                                    x &\mapsto \sqrt{x-1}
+                                    \end{aligned}
+                                    \)</p>
+
+                                <p>\(
+                                    f \text{ existe ssi } x-1\geq0
+                                    \implies x\geq1
+                                    \)</p>
+
+                                <strong class="text-red">
+                                    \(
+                                    \mathcal{D}_f=[1\,;\,+\infty[
+                                    \)
+                                </strong>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>Restriction - prolongement d'une fonction</h4>
+                    <ol type="a">
+                        <li>
+                            <h4>Définition :</h4>
+                            <p>
+                                Soit \(f\) une fonction définie de \(A\) vers \(B\).
+                            </p>
+
+                            <p>
+                                Étant donné que <strong class="text-red">\(D \subset A\)</strong>,
+                                la <strong class="text-red">restriction</strong> de \(f\) à \(D\),
+                                notée <strong class="text-red">\(f_{|D}\)</strong>, est la fonction :
+                            </p>
+
+                            <div class="fonction-notation">
+                                \[
+                                \begin{aligned}
+                                f_{|D} : D &\rightarrow B \\
+                                x &\mapsto y = f(x)
+                                \end{aligned}
+                                \]
+                            </div>
+
+                            <p>
+                                <strong class="text-red">\(f\)</strong> est alors appelée le
+                                <strong class="text-red">prolongement</strong> de
+                                \(f_{|D}\) à \(A\).
+                            </p>
+                        </li>
+                    </ol>
+                </li>
             </ol>
         </section>
 
