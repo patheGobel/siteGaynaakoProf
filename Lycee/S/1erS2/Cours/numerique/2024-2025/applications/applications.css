@@ -234,6 +234,123 @@ p {
     position: absolute;
     left: 0;
 }
+/* ================================
+   DIAGRAMME DE FONCTION
+   ================================ */
+
+.diagramme-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+}
+
+
+/* Étiquette "diagramme" */
+
+.diagramme-label {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 20px;
+
+    color: darkred;
+    font-weight: bold;
+    font-size: 1rem;
+
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+
+/* SVG */
+
+.diagramme-fonction {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Noms des ensembles */
+
+.nom-ensemble {
+    fill: darkred;
+    font-size: 24px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+
+/* Lettre f */
+
+.lettre-f {
+    fill: darkred;
+    font-size: 20px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+
+/* Enveloppes des ensembles */
+
+.ensemble {
+    fill: none;
+    stroke: gray;
+    stroke-width: 3;
+}
+
+
+/* Éléments */
+
+.element {
+    fill: #222;
+    font-size: 19px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+
+/* Flèche f */
+
+.fleche-f {
+    stroke: darkred;
+    stroke-width: 3;
+    fill: none;
+}
+
+
+/* Flèches de correspondance */
+
+.fleche-correspondance {
+    stroke: darkgreen;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+
+/* ================================
+   VERSION MOBILE
+   ================================ */
+
+@media screen and (max-width: 768px) {
+
+    .diagramme-container {
+        margin: 25px auto;
+    }
+
+    .diagramme-fonction {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .diagramme-label {
+        left: calc(50% - 210px);
+        font-size: 0.85rem;
+    }
+
+}
 /* ============================================================
    FOOTER
 ============================================================ */
