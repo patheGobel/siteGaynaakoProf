@@ -329,28 +329,6 @@ p {
     fill: none;
 }
 
-
-/* ================================
-   VERSION MOBILE
-   ================================ */
-
-@media screen and (max-width: 768px) {
-
-    .diagramme-container {
-        margin: 25px auto;
-    }
-
-    .diagramme-fonction {
-        width: 100%;
-        max-width: 430px;
-    }
-
-    .diagramme-label {
-        left: calc(50% - 210px);
-        font-size: 0.85rem;
-    }
-
-}
 /* ============================================================
    FOOTER
 ============================================================ */
