@@ -2777,21 +2777,107 @@
                         On note :
                     </p>
 
-                    $$
-                    \boxed{
-                    D_{g\circ f}=\{x\in D_f\mid f(x)\in D_g\}
-                    }
-                    $$
+                    <p>$
+                        \boxed{
+                        D_{g\circ f}=\{x\in D_f\mid f(x)\in D_g\}
+                        }
+                        $</p>
 
                     <p>
                         De même :
                     </p>
 
-                    $$
-                    \boxed{
-                    D_{f\circ g}=\{x\in D_g\mid g(x)\in D_f\}
-                    }
-                    $$
+                    <p>$
+                        \boxed{
+                        D_{f\circ g}=\{x\in D_g\mid g(x)\in D_f\}
+                        }
+                        $</p>
+                    <!--Exemple 4-->
+                    <div class="exemple-box">
+
+                        <p class="exemple-content">Exemple 4</p>
+                        <p>On donne</p>
+                        <p>$f(x)=\frac{2x-5}{x-1}
+                            \qquad\text{et}\qquad
+                            g(x)=\sqrt{x+1}.$</p>
+                        <ul>
+                            <li>Déterminer $D_f$, $D_g$, $D_{f\circ g}$, $D_{g\circ f}$.</li>
+                            <li>Exprimer $g\circ f(x)$.</li>
+                            <li>Calculer l'image des réels suivants par $f\circ g$ si possible : $0$ et $2$.</li>
+                        </ul>
+                        <!-- Bouton Solution -->
+                        <input type="checkbox" id="solution4" class="solution-checkbox">
+
+                        <label for="solution4" class="solution-btn">
+                            Solution
+                        </label>
+
+
+                        <!-- Solution cachée -->
+                        <div class="solution-content">
+
+                            <ol>
+
+                                <li>
+                                    <p>Déterminons :</p>
+                                    <p>$\begin{aligned}
+                                        *\,D_f &: \quad f\text{ existe si }x-1\neq0\\
+                                        &\quad\Longrightarrow x\neq1
+                                        \end{aligned}$</p>
+                                    <p>$\boxed{D_f=\mathbb{R}\setminus\{1\}}$</p>
+                                    <p>$\begin{aligned}
+                                        *\,D_g &: \quad g\text{ existe si }x+1\geq0\\
+                                        &\quad\Longrightarrow x\geq-1
+                                        \end{aligned}$</p>
+                                    <p>$\boxed{D_g=[-1\,;\,+\infty[}$</p>
+                                    <p>$\begin{aligned}
+                                        D_{f\circ g}
+                                        &=
+                                        \{x\in D_g\mid g(x)\in D_f\}\\
+                                        &=
+                                        \{x\in[-1\,;\,+\infty[
+                                        \mid
+                                        \sqrt{x+1}\in\mathbb{R}\setminus\{1\}\}\\
+                                        &=
+                                        \{x\geq -1\mid \sqrt{x+1}\neq1\}\\
+                                        &=
+                                        \{x\geq -1\mid x\neq0\}
+                                        \end{aligned}$</p>
+                                    <p>$\boxed{
+                                        D_{f\circ g}
+                                        =
+                                        [-1\,;\,0[\cup]0\,;\,+\infty[
+                                        }$</p>
+
+
+                                    <p>$*D_{g\circ f}$ :</p>
+                                    <p>$\begin{aligned}
+                                        D_{g\circ f}
+                                        &=
+                                        \{x\in\mathbb{R}\setminus\{1\}\mid f(x)\in[-1\,;\,+\infty[\}\\
+                                        &=
+                                        \left\{x\neq1\mid
+                                        \frac{2x-5}{x-1}\geq-1\right\}
+                                        \end{aligned}$</p>
+                                    <p>Or</p>
+                                    <p>$
+                                        \begin{aligned}
+                                        \dfrac{2x-5}{x-1}\geq-1
+                                        &\Longrightarrow
+                                        \dfrac{2x-5}{x-1}+1\geq0\\
+                                        &\Longrightarrow
+                                        \dfrac{3x-6}{x-1}\geq0
+                                        \end{aligned}$</p>
+                                    <p>Posons $3x-6=0\Longrightarrow x=2$ et $x\neq1$.</p>
+
+                                </li>
+
+                                <li></li>
+                            </ol>
+
+                        </div>
+
+                    </div>
                 </li>
 
             </ol>
