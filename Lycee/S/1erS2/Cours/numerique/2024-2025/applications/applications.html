@@ -846,6 +846,7 @@
         <section class="section-card">
             <h2>II. Notion d'application</h2>
             <ol>
+
                 <li>
                     <h3>Définition et exemples</h3>
                     <ol type="a">
@@ -1221,6 +1222,181 @@
                             <p>
                                 La restriction d'une fonction à son ensemble de définition est une
                                 <strong class="text-red">application</strong>.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <h3>Application bijective ou bijection</h3>
+
+                    <ol type="a">
+
+                        <li>
+                            <h4>Définition :</h4>
+                            <p>
+                                Une application définie de \(A\) vers \(B\) est
+                                <strong class="text-red">bijective</strong>
+                                si tout élément de \(B\) admet un et un seul antécédent dans \(A\).
+                            </p>
+
+                            <p>
+                                Ainsi, $\forall y\in B,\quad \exists! x\in A\mid f(x)=y.$
+                            </p>
+
+                            <p>
+                                C'est-à-dire que pour tout \(y\in B\), l'équation $f(x)=y$
+                            </p>
+
+                            <p>
+                                admet une unique solution.
+                            </p>
+                        </li>
+
+                        <li>
+                            <h4>Exemple :</h4>
+                            <b>Illustration graphique :</b>
+                            <!-- =========================================
+     DIAGRAMME : f : A → B
+     ========================================= -->
+
+                            <div class="diagramme-application">
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="fleche-rouge-bijection" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+
+                                        <!-- Flèche verte -->
+                                        <marker id="fleche-verte-bijection" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- =================================
+             ENSEMBLES A ET B
+             ================================= -->
+
+                                    <text x="150" y="50" class="nom-ensemble">
+                                        A
+                                    </text>
+
+                                    <text x="350" y="50" class="nom-ensemble">
+                                        B
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHE DE L'APPLICATION f
+             ================================= -->
+
+                                    <line x1="175" y1="50" x2="325" y2="50" class="fleche-f"
+                                        marker-end="url(#fleche-rouge-bijection)">
+                                    </line>
+
+                                    <text x="250" y="38" class="lettre-f">
+                                        f
+                                    </text>
+
+
+                                    <!-- =================================
+             ENSEMBLE A
+             ================================= -->
+
+                                    <ellipse cx="150" cy="220" rx="55" ry="115" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ENSEMBLE B
+             ================================= -->
+
+                                    <ellipse cx="350" cy="220" rx="45" ry="115" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE A
+             ================================= -->
+
+                                    <text x="150" y="145" class="element">a</text>
+                                    <text x="150" y="185" class="element">b</text>
+                                    <text x="150" y="225" class="element">d</text>
+                                    <text x="150" y="265" class="element">c</text>
+                                    <text x="150" y="305" class="element">e</text>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE B
+             ================================= -->
+
+                                    <text x="350" y="145" class="element">1</text>
+                                    <text x="350" y="185" class="element">2</text>
+                                    <text x="350" y="225" class="element">3</text>
+                                    <text x="350" y="265" class="element">4</text>
+                                    <text x="350" y="305" class="element">5</text>
+
+
+                                    <!-- =================================
+             FLÈCHES
+             ================================= -->
+
+                                    <!-- a → 3 -->
+                                    <line x1="165" y1="145" x2="335" y2="225" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-bijection)">
+                                    </line>
+
+
+                                    <!-- b → 4 -->
+                                    <line x1="165" y1="185" x2="335" y2="265" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-bijection)">
+                                    </line>
+
+
+                                    <!-- d → 1 -->
+                                    <line x1="165" y1="225" x2="335" y2="145" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-bijection)">
+                                    </line>
+
+
+                                    <!-- c → 2 -->
+                                    <line x1="165" y1="265" x2="335" y2="185" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-bijection)">
+                                    </line>
+
+
+                                    <!-- e → 5 -->
+                                    <line x1="165" y1="305" x2="335" y2="305" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-bijection)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
+
+
+                            <p>
+                                Chaque élément de \(B\) a un et un seul antécédent par \(f\) dans \(A\).
+                            </p>
+
+                            <p>
+                                Donc \(f\) est une <strong class="text-red">application bijective</strong>
+                                ou une <strong class="text-red">bijection</strong>.
                             </p>
                         </li>
                     </ol>
