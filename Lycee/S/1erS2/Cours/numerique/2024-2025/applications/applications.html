@@ -2134,6 +2134,139 @@
                             <p>
                                 Par suite, \(h\) est une <strong class="text-red">injection</strong>.
                             </p>
+
+                            <!-- =========================================
+     DIAGRAMME 2 : f : A → B
+     ========================================= -->
+
+                            <div class="diagramme-application">
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="fleche-rouge-f-inj" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+                                        <!-- Flèche verte -->
+                                        <marker id="fleche-verte-f-inj" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- =================================
+             ENSEMBLES A ET B
+             ================================= -->
+
+                                    <text x="150" y="50" class="nom-ensemble">
+                                        A
+                                    </text>
+
+                                    <text x="350" y="50" class="nom-ensemble">
+                                        B
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHE DE L'APPLICATION f
+             ================================= -->
+
+                                    <line x1="175" y1="50" x2="325" y2="50" class="fleche-f"
+                                        marker-end="url(#fleche-rouge-f-inj)">
+                                    </line>
+
+                                    <text x="250" y="38" class="lettre-f">
+                                        f
+                                    </text>
+
+
+                                    <!-- =================================
+             ENSEMBLE A
+             ================================= -->
+
+                                    <ellipse cx="150" cy="220" rx="55" ry="110" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ENSEMBLE B
+             ================================= -->
+
+                                    <ellipse cx="350" cy="220" rx="40" ry="95" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE A
+             ================================= -->
+
+                                    <text x="150" y="150" class="element">a</text>
+                                    <text x="150" y="190" class="element">b</text>
+                                    <text x="150" y="230" class="element">c</text>
+                                    <text x="150" y="275" class="element">d</text>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE B
+             ================================= -->
+
+                                    <text x="350" y="160" class="element">1</text>
+                                    <text x="350" y="210" class="element">2</text>
+                                    <text x="350" y="265" class="element">3</text>
+
+
+                                    <!-- =================================
+             FLÈCHES DE CORRESPONDANCE
+             ================================= -->
+
+                                    <!-- a → 1 -->
+
+                                    <line x1="165" y1="150" x2="335" y2="160" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-f-inj)">
+                                    </line>
+
+
+                                    <!-- b → 2 -->
+
+                                    <line x1="165" y1="190" x2="335" y2="210" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-f-inj)">
+                                    </line>
+
+
+                                    <!-- c → 1 -->
+
+                                    <line x1="165" y1="230" x2="335" y2="160" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-f-inj)">
+                                    </line>
+
+
+                                    <!-- d → 3 -->
+
+                                    <line x1="165" y1="275" x2="335" y2="265" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-f-inj)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
+
+
+                            <p>
+                                Comme \(f(a)=f(c)=1\), donc \(f\) n'est pas une
+                                <strong class="text-red">injection</strong>.
+                            </p>
                         </li>
                     </ol>
                 </li>
