@@ -2386,10 +2386,10 @@
                 <li>
                     <h3>Application surjective ou surjection</h3>
 
-                    <ol>
+                    <ol type="a">
 
                         <li>
-                            <p>Définition</p>
+                            <h4>Définition</h4>
                             <p>
                                 Une application \(f\) définie de \(A\) vers \(B\) est dite
                                 <strong class="text-red">surjective</strong>
@@ -2404,10 +2404,145 @@
                         </li>
 
                         <li>
-                            <p>Propriété</p>
+                            <h4>Propriété</h4>
                             <p>Pour montrer que l'application $f$ n'est pas surjective, il suffit de trouver
                                 un $y\in B$ qui n'a pas d'antécédent dans $A$.</p>
 
+                            <!-- =========================================
+     DIAGRAMME 1 : f : A → B
+     ========================================= -->
+
+                            <div class="diagramme-application">
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="fleche-rouge-surjective" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+                                        <!-- Flèche verte -->
+                                        <marker id="fleche-verte-surjective" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- =================================
+             ENSEMBLES A ET B
+             ================================= -->
+
+                                    <text x="150" y="50" class="nom-ensemble">
+                                        A
+                                    </text>
+
+                                    <text x="350" y="50" class="nom-ensemble">
+                                        B
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHE DE L'APPLICATION f
+             ================================= -->
+
+                                    <line x1="175" y1="50" x2="325" y2="50" class="fleche-f"
+                                        marker-end="url(#fleche-rouge-surjective)">
+                                    </line>
+
+                                    <text x="250" y="38" class="lettre-f">
+                                        f
+                                    </text>
+
+
+                                    <!-- =================================
+             ENSEMBLE A
+             ================================= -->
+
+                                    <ellipse cx="150" cy="220" rx="55" ry="110" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ENSEMBLE B
+             ================================= -->
+
+                                    <ellipse cx="350" cy="220" rx="40" ry="95" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE A
+             ================================= -->
+
+                                    <text x="150" y="150" class="element">x</text>
+                                    <text x="150" y="190" class="element">p</text>
+                                    <text x="150" y="230" class="element">t</text>
+                                    <text x="150" y="270" class="element">u</text>
+                                    <text x="150" y="310" class="element">v</text>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE B
+             ================================= -->
+
+                                    <text x="350" y="150" class="element">1</text>
+                                    <text x="350" y="195" class="element">2</text>
+                                    <text x="350" y="240" class="element">3</text>
+                                    <text x="350" y="285" class="element">4</text>
+
+
+                                    <!-- =================================
+             FLÈCHES DE CORRESPONDANCE
+             ================================= -->
+
+                                    <!-- x → 1 -->
+
+                                    <line x1="165" y1="150" x2="335" y2="150" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-surjective)">
+                                    </line>
+
+
+                                    <!-- p → 2 -->
+
+                                    <line x1="165" y1="190" x2="335" y2="195" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-surjective)">
+                                    </line>
+
+
+                                    <!-- t → 3 -->
+
+                                    <line x1="165" y1="230" x2="335" y2="240" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-surjective)">
+                                    </line>
+
+
+                                    <!-- u → 4 -->
+
+                                    <line x1="165" y1="270" x2="335" y2="285" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-surjective)">
+                                    </line>
+
+
+                                    <!-- v → 4 -->
+
+                                    <line x1="165" y1="310" x2="335" y2="285" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-surjective)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
                             <p>Chaque élément de $B$ admet au moins un antécédent dans $A$.</p>
 
                             <p>Donc $f$ est une <strong class="text-red">surjection</strong></p>
