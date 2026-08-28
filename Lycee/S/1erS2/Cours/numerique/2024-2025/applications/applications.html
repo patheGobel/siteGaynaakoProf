@@ -2800,11 +2800,11 @@
                         <p>$f(x)=\frac{2x-5}{x-1}
                             \qquad\text{et}\qquad
                             g(x)=\sqrt{x+1}.$</p>
-                        <ul>
+                        <ol>
                             <li>Déterminer $D_f$, $D_g$, $D_{f\circ g}$, $D_{g\circ f}$.</li>
                             <li>Exprimer $g\circ f(x)$.</li>
                             <li>Calculer l'image des réels suivants par $f\circ g$ si possible : $0$ et $2$.</li>
-                        </ul>
+                        </ol>
                         <!-- Bouton Solution -->
                         <input type="checkbox" id="solution4" class="solution-checkbox">
 
@@ -2881,7 +2881,38 @@
                                         }$</p>
                                 </li>
 
-                                <li></li>
+                                <li>
+                                    <p>Exprimons $g\circ f(x)$ :</p>
+                                    <p>$\begin{aligned}
+                                        g\circ f(x)
+                                        &=g(f(x))\\
+                                        &=\sqrt{f(x)+1}\\
+                                        &=\sqrt{\frac{2x-5}{x-1}+1}\\
+                                        &=\sqrt{\frac{2x-5+x-1}{x-1}}\\
+                                        &=\sqrt{\frac{3x-6}{x-1}}
+                                        \end{aligned}$</p>
+                                    <p>$\boxed{
+                                        g\circ f(x)=\sqrt{\frac{3x-6}{x-1}}
+                                        }$</p>
+                                </li>
+
+                                <li>
+                                    <p>Calculons l'image de $0$ et $2$</p>
+                                    <p>$0\notin D_{f\circ g}$ donc, l'image par $f\circ g$ de $0$ n'existe pas.</p>
+                                    <p>$2\in D_{f\circ g}$ et $ f\circ g(2)=f(g(2)) $</p>
+                                    <p>$\begin{aligned}
+                                        g(2)&=\sqrt{3}
+                                        \Longrightarrow
+                                        f\circ g(2)=\frac{2\sqrt{3}-5}{\sqrt{3}-1}\\
+                                        f\circ g(2)
+                                        &=\frac{(2\sqrt{3}-5)(\sqrt{3}+1)}
+                                        {3-1}
+                                        \end{aligned}$</p>
+                                    <p>$\boxed{
+                                        f\circ g(2)=\frac{1-3\sqrt{3}}{2}
+                                        }$</p>
+                                </li>
+
                             </ol>
 
                         </div>
