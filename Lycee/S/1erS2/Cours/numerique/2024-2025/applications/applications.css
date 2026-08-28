@@ -435,6 +435,110 @@ p {
     max-width: 100%;
 }
 
+/* =================================
+   DIAGRAMME D'APPLICATION
+   ================================= */
+
+.diagramme-application {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 30px auto;
+}
+
+
+/* SVG */
+
+.diagramme-application .diagramme-svg {
+    display: block;
+
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =================================
+   NOMS DES ENSEMBLES
+   ================================= */
+
+.diagramme-application .nom-ensemble {
+    fill: darkred;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    text-anchor: middle;
+}
+
+
+/* =================================
+   LETTRE f
+   ================================= */
+
+.diagramme-application .lettre-f {
+    fill: darkred;
+
+    font-size: 20px;
+    font-style: italic;
+
+    text-anchor: middle;
+}
+
+
+/* =================================
+   ENSEMBLES
+   ================================= */
+
+.diagramme-application .ensemble {
+    fill: none;
+
+    stroke: gray;
+    stroke-width: 2;
+}
+
+
+/* =================================
+   ÉLÉMENTS
+   ================================= */
+
+.diagramme-application .element {
+    fill: #222;
+
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    font-style: italic;
+
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+
+/* =================================
+   FLÈCHE f
+   ================================= */
+
+.diagramme-application .fleche-f {
+    stroke: darkred;
+    stroke-width: 2;
+
+    fill: none;
+}
+
+
+/* =================================
+   FLÈCHES VERTES
+   ================================= */
+
+.diagramme-application .fleche-correspondance {
+    stroke: darkgreen;
+    stroke-width: 2;
+
+    fill: none;
+}
+
 /* ============================================================
    FOOTER
 ============================================================ */
