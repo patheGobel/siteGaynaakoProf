@@ -527,10 +527,10 @@ p {
     fill: none;
 }
 /* =================================
-   TABLEAU DE SIGNES
+   IMAGE DU TABLEAU DE SIGNES
    ================================= */
 
-.tableau-signe {
+.tableau-signe-image {
     display: flex;
     justify-content: center;
 
@@ -538,64 +538,13 @@ p {
     margin: 25px auto;
 }
 
+.tableau-signe-image img {
+    display: block;
 
-/* Tableau */
-
-.tableau-signe table {
-    border-collapse: collapse;
-
-    min-width: 500px;
-
-    text-align: center;
-
-    font-size: 1rem;
+    width: 560px;
+    max-width: 100%;
+    height: auto;
 }
-
-
-/* Cellules */
-
-.tableau-signe th,
-.tableau-signe td {
-    border: 1px solid #333;
-
-    padding: 8px 20px;
-
-    height: 35px;
-}
-
-
-/* Première colonne */
-
-.tableau-signe .ligne-expression {
-    color: darkred;
-    font-weight: bold;
-
-    min-width: 90px;
-}
-
-
-/* Ligne x */
-
-.tableau-signe tr:first-child th {
-    font-weight: normal;
-}
-
-
-/* Valeur 0 */
-
-.tableau-signe .zero {
-    color: darkred;
-    font-weight: bold;
-}
-
-
-/* Signe + */
-
-.tableau-signe .positif {
-    color: darkgreen;
-    font-weight: bold;
-}
-
 /* ============================================================
    FOOTER
 ============================================================ */
