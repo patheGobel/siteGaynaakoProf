@@ -2546,6 +2546,155 @@
                             <p>Chaque élément de $B$ admet au moins un antécédent dans $A$.</p>
 
                             <p>Donc $f$ est une <strong class="text-red">surjection</strong></p>
+
+                            <!-- =========================================
+     DIAGRAMME 2 : g : D → C
+     ========================================= -->
+
+                            <div class="diagramme-application">
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="fleche-rouge-g-surj" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+                                        <!-- Flèche verte -->
+                                        <marker id="fleche-verte-g-surj" markerWidth="9" markerHeight="9" refX="8"
+                                            refY="3" orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- =================================
+             ENSEMBLES D ET C
+             ================================= -->
+
+                                    <text x="150" y="50" class="nom-ensemble">
+                                        D
+                                    </text>
+
+                                    <text x="350" y="50" class="nom-ensemble">
+                                        C
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHE DE L'APPLICATION g
+             ================================= -->
+
+                                    <line x1="175" y1="50" x2="325" y2="50" class="fleche-f"
+                                        marker-end="url(#fleche-rouge-g-surj)">
+                                    </line>
+
+                                    <text x="250" y="38" class="lettre-f">
+                                        g
+                                    </text>
+
+
+                                    <!-- =================================
+             ENSEMBLE D
+             ================================= -->
+
+                                    <ellipse cx="150" cy="220" rx="55" ry="95" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ENSEMBLE C
+             ================================= -->
+
+                                    <ellipse cx="350" cy="220" rx="40" ry="115" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE D
+             ================================= -->
+
+                                    <text x="150" y="175" class="element">
+                                        a
+                                    </text>
+
+                                    <text x="150" y="220" class="element">
+                                        b
+                                    </text>
+
+                                    <text x="150" y="265" class="element">
+                                        c
+                                    </text>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE C
+             ================================= -->
+
+                                    <text x="350" y="155" class="element">
+                                        5
+                                    </text>
+
+                                    <text x="350" y="195" class="element">
+                                        6
+                                    </text>
+
+                                    <text x="350" y="235" class="element">
+                                        7
+                                    </text>
+
+                                    <text x="350" y="275" class="element">
+                                        8
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHES DE CORRESPONDANCE
+             ================================= -->
+
+                                    <!-- a → 5 -->
+
+                                    <line x1="165" y1="175" x2="335" y2="155" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-g-surj)">
+                                    </line>
+
+
+                                    <!-- b → 6 -->
+
+                                    <line x1="165" y1="220" x2="335" y2="195" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-g-surj)">
+                                    </line>
+
+
+                                    <!-- c → 8 -->
+
+                                    <line x1="165" y1="265" x2="335" y2="275" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-g-surj)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
+
+
+                            <p>
+                                \(7\) n'a pas d'antécédent dans \(D\) par \(g\).
+                            </p>
+
+                            <p>
+                                Par conséquent, \(g\) n'est pas une
+                                <strong class="text-red">surjection</strong>.
+                            </p>
                         </li>
 
                     </ol>
