@@ -1537,6 +1537,162 @@
                                 <strong class="text-red">application bijective</strong>.
                             </p>
 
+                            <!-- =========================================
+     DIAGRAMME 3 : h : M → N
+     ========================================= -->
+
+                            <div class="diagramme-application">
+
+                                <svg class="diagramme-svg" viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+
+                                        <!-- Flèche rouge -->
+                                        <marker id="fleche-rouge-h" markerWidth="9" markerHeight="9" refX="8" refY="3"
+                                            orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkred">
+                                            </path>
+
+                                        </marker>
+
+
+                                        <!-- Flèche verte -->
+                                        <marker id="fleche-verte-h" markerWidth="9" markerHeight="9" refX="8" refY="3"
+                                            orient="auto" markerUnits="strokeWidth">
+
+                                            <path d="M0,0 L0,6 L9,3 Z" fill="darkgreen">
+                                            </path>
+
+                                        </marker>
+
+                                    </defs>
+
+
+                                    <!-- =================================
+             ENSEMBLES M ET N
+             ================================= -->
+
+                                    <text x="150" y="50" class="nom-ensemble">
+                                        M
+                                    </text>
+
+                                    <text x="350" y="50" class="nom-ensemble">
+                                        N
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHE DE L'APPLICATION h
+             ================================= -->
+
+                                    <line x1="175" y1="50" x2="325" y2="50" class="fleche-f"
+                                        marker-end="url(#fleche-rouge-h)">
+                                    </line>
+
+                                    <text x="250" y="38" class="lettre-f">
+                                        h
+                                    </text>
+
+
+                                    <!-- =================================
+             ENSEMBLE M
+             ================================= -->
+
+                                    <ellipse cx="150" cy="220" rx="55" ry="110" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ENSEMBLE N
+             ================================= -->
+
+                                    <ellipse cx="350" cy="220" rx="40" ry="105" class="ensemble">
+                                    </ellipse>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE M
+             ================================= -->
+
+                                    <text x="150" y="150" class="element">
+                                        m
+                                    </text>
+
+                                    <text x="150" y="190" class="element">
+                                        n
+                                    </text>
+
+                                    <text x="150" y="230" class="element">
+                                        o
+                                    </text>
+
+                                    <text x="150" y="275" class="element">
+                                        p
+                                    </text>
+
+
+                                    <!-- =================================
+             ÉLÉMENTS DE N
+             ================================= -->
+
+                                    <text x="350" y="150" class="element">
+                                        α
+                                    </text>
+
+                                    <text x="350" y="195" class="element">
+                                        β
+                                    </text>
+
+                                    <text x="350" y="245" class="element">
+                                        γ
+                                    </text>
+
+
+                                    <!-- =================================
+             FLÈCHES DE CORRESPONDANCE
+             ================================= -->
+
+                                    <!-- m → α -->
+
+                                    <line x1="165" y1="150" x2="335" y2="150" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-h)">
+                                    </line>
+
+
+                                    <!-- n → β -->
+
+                                    <line x1="165" y1="190" x2="335" y2="195" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-h)">
+                                    </line>
+
+
+                                    <!-- o → γ -->
+
+                                    <line x1="165" y1="230" x2="335" y2="245" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-h)">
+                                    </line>
+
+
+                                    <!-- p → γ -->
+
+                                    <line x1="165" y1="275" x2="335" y2="245" class="fleche-correspondance"
+                                        marker-end="url(#fleche-verte-h)">
+                                    </line>
+
+                                </svg>
+
+                            </div>
+
+
+                            <p>
+                                \(\gamma\) n'a pas d'antécédent par \(h\).
+                            </p>
+
+                            <p>
+                                Donc, \(h\) n'est pas une <strong class="text-red">bijection</strong>.
+                            </p>
+
                         </li>
 
 
