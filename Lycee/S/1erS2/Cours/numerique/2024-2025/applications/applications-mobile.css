@@ -46,6 +46,9 @@ p {
     margin-bottom: 12px;
 }
 
+ul li {
+    margin-bottom: 20px;
+}
 /*Colorier les texte*/
 .text-red {
     color: #e64c4e;
