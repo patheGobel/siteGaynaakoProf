@@ -2993,10 +2993,80 @@
                     <ol type="a">
                         <li>
                             <h4>Définition :</h4>
-                            <p>Soit $f$ une fonction définie de $E$ vers $F$, d'ensemble de définition
-                                $D_f$ et $B$ une partie de $F$.</p>
-                            <p>On appelle \textcolor{darkred}{\textbf{image réciproque de $B$ par $f$}},
-                                notée $f^{-1}(B)$, l'ensemble des antécédents par $f$ de tous les éléments de $B$.</p>
+                            <p>
+                                Soit \(f\) une fonction définie de \(E\) vers \(F\), d'ensemble de définition
+                                \(D_f\) et \(B\) une partie de \(F\).
+                            </p>
+
+                            <p>
+                                On appelle
+                                <strong class="text-red">image réciproque de \(B\) par \(f\)</strong>,
+                                notée \(f^{-1}(B)\), l'ensemble des antécédents par \(f\) de tous les éléments de \(B\).
+                            </p>
+                        </li>
+
+                        <li>
+                            <h4>Remarque : Comment trouver l'image réciproque ?</h4>
+                            <p>Pour trouver l'image réciproque d'un intervalle $B$ dans $\mathbb{R}$ par une
+                                fonction $f$ d'ensemble de définition $D_f$, on résout par des systèmes
+                                d'inconnues suivants :</p>
+                            <ul>
+                                <li>
+                                    Si \(B=[a\,;\,b]\), alors on résout :
+                                    $
+                                    \begin{cases}
+                                    x\in D_f\\[3mm]
+                                    a\leq f(x)\leq b
+                                    \end{cases}
+                                    $
+                                </li>
+
+                                <li>
+                                    <p>Si \(B=]a\,;\,b[\), alors on résout :
+                                        $
+                                        \begin{cases}
+                                        x\in D_f\\[3mm]
+                                        a < f(x) < b \end{cases} $</p>
+                                </li>
+
+                                <li>
+                                    <p>Si \( B=[a\,;\,b[ \), alors on résout :
+                                        $
+                                        \begin{cases}
+                                        x\in D_f\\[3mm]
+                                        a\leq f(x) < b \end{cases} $ </p>
+                                </li>
+
+                                <li>
+                                    <p>Si \(B=]-\infty\,;\,b]\), alors on résout :
+                                        $
+                                        \begin{cases}
+                                        x\in D_f\\[3mm]
+                                        f(x)\leq b
+                                        \end{cases}
+                                        $</p>
+                                </li>
+
+                                <li>
+                                    <p>Si \(B=[a\,;\,+\infty[\), alors on résout :
+                                        $
+                                        \begin{cases}
+                                        x\in D_f\\[3mm]
+                                        f(x)\geq a
+                                        \end{cases}
+                                        $</p>
+                                </li>
+
+                                <li>
+                                    <p>Si \(B=\{b\}\), alors on résout :
+                                        $
+                                        \begin{cases}
+                                        x\in D_f\\[3mm]
+                                        f(x)=b
+                                        \end{cases}
+                                        $</p>
+                                </li>
+                            </ul>
                         </li>
                     </ol>
                 </li>
