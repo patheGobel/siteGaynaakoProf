@@ -438,3 +438,75 @@ mjx-container[display="true"] {
 .activite-introduction>p:not(.question-introduction) {
     text-align: justify;
 }
+
+/* =========================================================
+   ACTIVITÉ — APPROCHE INTUITIVE DE LA LIMITE
+   ========================================================= */
+
+.tableaux-limites {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 45px 0 55px;
+}
+
+/* =========================================================
+   TABLEAUX
+   ========================================================= */
+
+.tableau-valeurs {
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.tableau-valeurs th,
+.tableau-valeurs td {
+    border: 1px solid #444;
+    padding: 4px 12px;
+    text-align: center;
+}
+
+.tableau-valeurs th {
+    font-weight: normal;
+    font-style: italic;
+    background: #fafafa;
+}
+
+/* =========================================================
+   GRAPHIQUES
+   ========================================================= */
+
+.graphiques-limites {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    gap: 35px;
+
+    margin: 35px 0 40px;
+}
+
+.graphique-limite {
+    width: 46%;
+    margin: 0;
+    text-align: center;
+}
+
+.graphique-limite svg {
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    margin: auto;
+}
+
+.graphique-limite figcaption {
+    margin-top: 8px;
+
+    font-size: 1rem;
+    font-style: normal;
+}
