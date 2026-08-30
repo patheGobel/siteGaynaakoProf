@@ -30,35 +30,74 @@ body {
    ========================================================= */
 
 .header {
-    padding: 20px 16px 18px;
+    width: 100%;
 
     background: #1f3c88;
     color: white;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 25px 18px 22px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.header h1 {
-    margin: 0 0 15px;
 
-    font-size: 1.45rem;
+/* ---------------------------------------------------------
+   TITRE
+   --------------------------------------------------------- */
+
+.header h1 {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 1.9rem;
+    font-weight: 700;
+
     line-height: 1.3;
 }
 
+
+/* ---------------------------------------------------------
+   INFORMATIONS
+   --------------------------------------------------------- */
+
 .header-meta {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
 
-    font-size: 0.88rem;
+    margin-top: 14px;
+    padding-top: 12px;
+
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+
+    font-size: 0.95rem;
 }
+
 
 .header-meta span {
-    white-space: normal;
+    white-space: nowrap;
 }
 
-.header-meta .left {
-    margin-left: 0;
+
+/* ---------------------------------------------------------
+   ALIGNEMENT DES INFORMATIONS
+   --------------------------------------------------------- */
+
+.header-meta span:nth-child(1) {
+    text-align: left;
+}
+
+.header-meta span:nth-child(2) {
+    text-align: right;
+}
+
+.header-meta span:nth-child(3) {
+    text-align: left;
+}
+
+.header-meta span:nth-child(4) {
+    text-align: right;
 }
 
 
@@ -269,15 +308,16 @@ mjx-container[display="true"] {
     }
 
     .header {
-        padding: 18px 13px 16px;
+        padding: 16px 11px 14px;
     }
 
     .header h1 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
 
     .header-meta {
-        font-size: 0.82rem;
+        font-size: 0.76rem;
+        gap: 6px 10px;
     }
 
     main {
