@@ -510,3 +510,32 @@ mjx-container[display="true"] {
     font-size: 1rem;
     font-style: normal;
 }
+/* =========================================================
+   FORMULE DE LIMITE
+   ========================================================= */
+/* =========================================================
+   QUESTIONS
+   ========================================================= */
+
+.question-introduction {
+    margin-top: 35px !important;
+
+    font-style: italic;
+}
+
+.questions {
+    margin: 20px 0 30px;
+
+    padding-left: 35px;
+
+    font-style: italic;
+}
+
+.questions li {
+    margin-bottom: 14px;
+}
+.formule-limite {
+    text-align: center;
+
+    margin: 25px 0;
+}
