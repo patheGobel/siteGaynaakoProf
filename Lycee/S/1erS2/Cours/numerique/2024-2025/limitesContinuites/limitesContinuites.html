@@ -25,8 +25,7 @@
         };
     </script>
 
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 </head>
 
@@ -53,10 +52,108 @@
         <!-- ================================================== -->
 
         <section class="introduction-card">
+            <!-- =========================================================
+     INTRODUCTION
+     ========================================================= -->
 
-            <h2>Introduction</h2>
+            <section class="introduction-card">
 
-            <!-- Activité introductive -->
+                <h2>INTRODUCTION</h2>
+
+                <div class="activite-introduction">
+
+                    <p>
+                        La courbe ci-dessous représente une fonction
+                        \( f : x \mapsto f(x) \).
+                    </p>
+
+
+                    <!-- Courbe -->
+                    <div class="graphique">
+
+                        <svg viewBox="0 0 700 400" role="img" aria-label="Représentation graphique de la fonction f">
+
+                            <!-- Axe des abscisses -->
+                            <line x1="100" y1="320" x2="650" y2="320" stroke="black" stroke-width="1.5" />
+
+                            <!-- Axe des ordonnées -->
+                            <line x1="100" y1="320" x2="100" y2="60" stroke="black" stroke-width="1.5" />
+
+                            <!-- Courbe -->
+                            <path d="M 115 65
+               C 120 120, 125 190, 155 230
+               C 190 275, 260 295, 350 305
+               C 450 315, 550 317, 620 318" fill="none" stroke="#5555ff" stroke-width="2" />
+
+                            <!-- Points I et J -->
+                            <circle cx="100" cy="230" r="4" fill="black" />
+                            <circle cx="160" cy="320" r="4" fill="black" />
+
+                            <!-- Étiquettes -->
+                            <text x="82" y="345" font-size="20">O</text>
+                            <text x="82" y="235" font-size="20" font-style="italic">I</text>
+                            <text x="158" y="345" font-size="20" font-style="italic">J</text>
+
+                        </svg>
+
+                    </div>
+
+
+                    <p class="question-introduction">
+                        Considérons la fonction \( f \) représentée ci-dessus et
+                        posons-nous les questions suivantes :
+                    </p>
+
+
+                    <ul class="questions">
+
+                        <li>
+                            Que devient \( f(x) \) lorsque la variable \( x \)
+                            s'éloigne vers \( +\infty \) ?
+                        </li>
+
+                        <li>
+                            Que devient \( f(x) \) lorsque la variable \( x \)
+                            se rapproche de \( 0 \) ?
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        C'est en essayant de répondre à ce type de question que
+                        la notion de limite a été définie.
+                    </p>
+
+
+                    <p>
+                        Ainsi, si on observe la courbe de \( f \), on voit que
+                        lorsque \( x \) s'éloigne vers \( +\infty \),
+                        \( f(x) \) se rapproche de \( 0 \) ;
+                    </p>
+
+
+                    <p>
+                        on dit que la limite lorsque \( x \) tend vers \( +\infty \)
+                        de \( f \) est égale à \( 0 \).
+                    </p>
+
+
+                    <p>
+                        De même, si on observe la courbe, on voit que lorsque
+                        \( x \) se rapproche de \( 0 \) tout en restant à droite
+                        de \( 0 \), \( f(x) \) tend vers \( +\infty \) ;
+                    </p>
+
+
+                    <p>
+                        on dit que la limite à droite de \( 0 \) de \( f \)
+                        est égale à \( +\infty \).
+                    </p>
+
+                </div>
+
+            </section>
 
         </section>
 
