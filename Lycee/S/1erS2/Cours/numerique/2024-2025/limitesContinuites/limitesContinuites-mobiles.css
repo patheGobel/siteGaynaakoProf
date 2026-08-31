@@ -447,6 +447,137 @@ li {
     display: block;
 }
 
+/* =========================================================
+   EXERCICE
+   ========================================================= */
+
+.exercice-toggle,
+.solution-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* ---------------------------------------------------------
+   FLÈCHE DE L'EXERCICE
+   --------------------------------------------------------- */
+
+.exercice-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exercice-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE L'EXERCICE
+   ========================================================= */
+
+.exercice-contenu {
+    display: none;
+}
+
+.exercice-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   FLÈCHE DE LA CORRECTION
+   ========================================================= */
+
+.solution-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.solution-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE LA CORRECTION
+   ========================================================= */
+
+.solution-contenu {
+    display: none;
+}
+
+.solution-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   QUESTIONS
+   ========================================================= */
+
+.exercice-limites,
+.solution-limites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+    row-gap: 25px;
+
+    margin: 25px 0 30px;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite > span {
+    display: inline-block;
+    width: 32px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .exercice-limites,
+    .solution-limites {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .question-limite {
+        font-size: 1rem;
+    }
+
+    .question-limite > span {
+        width: 25px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .exercice-limites,
+    .solution-limites {
+        row-gap: 16px;
+    }
+
+    .question-limite {
+        font-size: 0.92rem;
+    }
+
+}
 
 /* =========================================================
    EXERCICES
