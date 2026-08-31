@@ -817,10 +817,73 @@
                 <li>
 
                     <h3>Limite en un point</h3>
-
-                    <p class="text-red">
-                        <b>Exemple</b>
+                    <p>Pour calculer la limite en un point $x_0$ d'une fonction $f$, on remplace $x_0$ par $x$ sur
+                        l'expression de $f$.</p>
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 3</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <p>
+                            Calculer les limites suivantes :
+                        </p>
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <span>1)</span>
+                                \( \displaystyle \lim_{x \to 2} x^2 - 3x \)
+                            </div>
+
+                            <div class="question-limite">
+                                <span>2)</span>
+                                \( \displaystyle \lim_{x\to 0} \dfrac{x+2}{x-1} \)
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================================
+         SOLUTION
+         ===================================================== -->
+
+                        <p class="text-red solution-toggle" onclick="toggleSolution(this)">
+                            <b>Solution 3</b>
+                        </p>
+
+                        <div class="solution-contenu">
+
+                            <div class="solution-limites">
+
+                                <div class="question-limite">
+                                    <span>1)</span><br>
+                                    \(\begin{aligned}
+                                    \displaystyle
+                                    \lim_{x \to 2} x^2 - 3x &= (2)^2 - 3(2) \\
+                                    &= 4 - 6 \\
+                                    &= -2 \\
+                                    \end{aligned}\)<br>
+                                    
+                                    $\boxed{\lim_{x \to 2} x^2 - 3x = -2}$
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>2)</span><br>
+                                    \(\displaystyle \begin{aligned}
+                                    \displaystyle \lim_{x \to 0} \dfrac{x+2}{x-1} = \dfrac{0+2}{0-1}
+                                    &= \dfrac{2}{-1} = -2 \\
+                                    &= -2 \\
+                                    \end{aligned}\)<br>
+
+                                    $ \boxed{\lim_{x \to 0} \frac{x+2}{x-1} = -2} $ 
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <p class="text-red">
                         <b>Exercice</b>
