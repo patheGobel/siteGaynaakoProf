@@ -1193,11 +1193,38 @@
                     <h3>
                         Existence de la limite d'une fonction en un point $x_0$
                     </h3>
-
-                    <p class="text-red">
-                        <b>Propriété</b>
-                    </p>
-
+                    <!--Propriété-->
+                    <div>
+                        <p class="text-red">
+                            <b>Propriété</b>
+                        </p>
+                        <p>Soit $f$ une fonction et $x_0 \in \mathbb{R}$. La fonction $f$ admet une limite $l$ en $x_0$
+                            si
+                            et seulement si on a :</p>
+                        <p>\(\displaystyle \lim\limits_{x \to x_0^+} f(x) = \lim_{x \to x_0^-} f(x) = l \)</p>
+                    </div>
+                    <!--Méthode-->
+                    <div>
+                        <p class="text-red">
+                            <b>Méthode</b>
+                        </p>
+                        <p>Pour déterminer si une fonction $f$ admet ou non une limite en un point $x_0$, on calcule la
+                            limite à gauche en $x_0$ et la limite à droite en $x_0$ de $f$, puis on compare les
+                            résultats.</p>
+                        <ul>
+                            <li>
+                                <p>Si $\displaystyle \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0^-} f(x)$, alors $f$ admet
+                                    une limite $l$ en $x_0$ vérifiant :</p>
+                                <p>\(\displaystyle l = \lim\limits_{x \to x_0^+} f(x) = \lim\limits_{x \to x_0^-}
+                                    f(x).\)
+                                </p>
+                            </li>
+                            <li>
+                                <p>Si $\displaystyle \lim_{x \to x_0^+} f(x) \neq \lim_{x \to x_0^-} f(x)$, alors $f$
+                                    n'admet pas de limite en $x_0$.</p>
+                            </li>
+                        </ul>
+                    </div>
                     <p class="text-red">
                         <b>Exemple</b>
                     </p>
