@@ -842,3 +842,59 @@ mjx-container[display="true"] {
     }
 
 }
+/* =========================================================
+   ++++
+   ========================================================= */
+
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* Styles pour les tableaux de signes */
+    .tab-signes {
+      border-collapse: collapse;
+      border: 1px solid #000;
+      margin: 15px auto;
+      font-size: 1em;
+    }
+
+    .tab-signes td {
+      border: 1px solid #000;
+      padding: 3px 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .tab-signes .label {
+      width: 60px;
+    }
+
+    .dotted-cell {
+      border-left: 1px dotted #000 !important;
+      border-right: 1px dotted #000 !important;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    .math-block {
+      text-align: center;
+      margin-top: 8px;
+    }
