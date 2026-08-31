@@ -393,3 +393,100 @@ li {
     }
 
 }
+/* =========================================================
+   EXEMPLE
+   ========================================================= */
+
+.exemple-toggle,
+.solution-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.exemple-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exemple-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE L'EXEMPLE
+   ========================================================= */
+
+.exemple-contenu {
+    display: none;
+}
+
+.exemple-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   CONTENU DE LA SOLUTION
+   ========================================================= */
+
+.solution-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.solution-toggle.ouvert::after {
+    content: " ▲";
+}
+
+.solution-contenu {
+    display: none;
+}
+
+.solution-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   EXERCICES
+   ========================================================= */
+
+.exemple-limites,
+.solution-limites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+    row-gap: 25px;
+
+    margin: 25px 0;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite > span {
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .exemple-limites,
+    .solution-limites {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .question-limite {
+        font-size: 1rem;
+    }
+
+}
