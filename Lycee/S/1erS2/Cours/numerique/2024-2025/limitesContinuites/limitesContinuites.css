@@ -511,5 +511,27 @@ mjx-container[display="true"] {
     font-style: normal;
 }
 /* =========================================================
-   FORMULE DE LIMITE
+   Pour reproduire la disposition en deux colonnes
    ========================================================= */
+   .proprietes-limites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 30px;
+
+    margin: 35px 0;
+    font-size: 1.15rem;
+}
+
+.proprietes-limites div {
+    min-height: 45px;
+}
+@media screen and (max-width: 768px) {
+
+    .proprietes-limites {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        font-size: 1rem;
+    }
+
+}
