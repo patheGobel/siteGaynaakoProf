@@ -27,6 +27,7 @@
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
+    <script src="limitesContinuites.js"></script>
 </head>
 
 <body>
@@ -476,50 +477,107 @@
 
                     <h3>Limites à l'infini des fonctions usuelles</h3>
 
-                    <p class="text-red">
-                        <b>Propriété</b>
-                    </p>
-                    <p>
-                        <i>Soient \(a \in \mathbb{R}\) et \(n \in \mathbb{N}\setminus\{0\}\), on a :</i>
-                    </p>
+                    <div>
+                        <p class="text-red">
+                            <b>Propriété</b>
+                        </p>
+                        <p>
+                            <i>Soient \(a \in \mathbb{R}\) et \(n \in \mathbb{N}\setminus\{0\}\), on a :</i>
+                        </p>
 
-                    <div class="proprietes-limites">
+                        <div class="proprietes-limites">
 
-                        <div>
-                            \(1)\quad \displaystyle \lim_{x\to+\infty} a=a\)
+                            <div>
+                                \(1)\quad \displaystyle \lim_{x\to+\infty} a=a\)
+                            </div>
+
+                            <div>
+                                \(2)\quad \displaystyle \lim_{x\to+\infty} x^n=+\infty\)
+                            </div>
+
+                            <div>
+                                \(3)\quad \displaystyle \lim_{x\to+\infty}\frac{1}{x^n}=0\)
+                            </div>
+
+                            <div>
+                                \(4)\quad \displaystyle \lim_{x\to-\infty} a=a\)
+                            </div>
+
+                            <div>
+                                \(5)\quad
+                                \displaystyle
+                                \lim_{x\to-\infty}x^n=
+                                \begin{cases}
+                                +\infty & \text{si \(n\) est pair},\\
+                                -\infty & \text{si \(n\) est impair}
+                                \end{cases}\)
+                            </div>
+
+                            <div>
+                                \( 6)\quad \displaystyle \lim_{x\to-\infty}\frac{1}{x^n}=0 \)
+                            </div>
+
                         </div>
-
-                        <div>
-                            \(2)\quad \displaystyle \lim_{x\to+\infty} x^n=+\infty\)
-                        </div>
-
-                        <div>
-                            \(3)\quad \displaystyle \lim_{x\to+\infty}\frac{1}{x^n}=0\)
-                        </div>
-
-                        <div>
-                            \(4)\quad \displaystyle \lim_{x\to-\infty} a=a\)
-                        </div>
-
-                        <div>
-                            \(5)\quad
-                            \displaystyle
-                            \lim_{x\to-\infty}x^n=
-                            \begin{cases}
-                            +\infty & \text{si \(n\) est pair},\\
-                            -\infty & \text{si \(n\) est impair}
-                            \end{cases}\)
-                        </div>
-
-                        <div>
-                            \( 6)\quad \displaystyle \lim_{x\to-\infty}\frac{1}{x^n}=0 \)
-                        </div>
-
                     </div>
-                    
-                    <p class="text-red">
-                        <b>Exemple</b>
-                    </p>
+
+                    <div>
+                        <p class="text-red exemple-toggle" onclick="toggleExemple(this)">
+                            <b>Exemple 1</b>
+                        </p>
+
+                        <div class="exemple-contenu">
+
+                            <div class="exemple-limites">
+
+                                <div class="question-limite">
+                                    <span>1)</span>
+                                    \(\displaystyle \lim_{x\to+\infty} 2=2\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>2)</span>
+                                    \(\displaystyle \lim_{x\to+\infty} x=+\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>3)</span>
+                                    \(\displaystyle \lim_{x\to-\infty} x=-\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>4)</span>
+                                    \(\displaystyle \lim_{x\to-\infty} 3=3\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>5)</span>
+                                    \(\displaystyle \lim_{x\to-\infty}x^2=+\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>6)</span>
+                                    \(\displaystyle \lim_{x\to+\infty}x^2=+\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>7)</span>
+                                    \(\displaystyle \lim_{x\to-\infty}x^3=-\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>8)</span>
+                                    \(\displaystyle \lim_{x\to+\infty}x^3=+\infty\)
+                                </div>
+
+                                <div class="question-limite">
+                                    <span>9)</span>
+                                    \(\displaystyle \lim_{x\to+\infty}\frac{1}{x^2}=0\)
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
 
                 </li>
 

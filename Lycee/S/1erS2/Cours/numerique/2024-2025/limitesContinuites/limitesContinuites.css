@@ -535,3 +535,58 @@ mjx-container[display="true"] {
     }
 
 }
+/* =========================================================
+   EXEMPLE
+   ========================================================= */
+
+.exemple-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.exemple-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exemple-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU DE L'EXEMPLE
+   --------------------------------------------------------- */
+
+.exemple-contenu {
+    display: none;
+    margin-top: 20px;
+}
+
+.exemple-contenu.visible {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   DISPOSITION DES QUESTIONS
+   --------------------------------------------------------- */
+
+.exemple-limites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 50px;
+    row-gap: 25px;
+
+    margin: 25px 0;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite span {
+    margin-right: 8px;
+}

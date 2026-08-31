@@ -69,13 +69,21 @@ li {
     margin-bottom: 6px;
 }
 
+/* =========================================================
+   TEXTES
+   ========================================================= */
 
-strong,
-b {
-    font-weight: 600;
-    color: var(--text-dark);
+.section-card p {
+    margin: 8px 0;
 }
 
+.text-red {
+    color: #b3261e;
+}
+
+.text-red b {
+    font-weight: 650;
+}
 /* ============================================================
    EN-TÊTE
 ============================================================ */
@@ -311,4 +319,77 @@ b {
 
 .proprietes-limites div {
     min-height: 45px;
+}
+/* =========================================================
+   EXEMPLE
+   ========================================================= */
+
+.exemple-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.exemple-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exemple-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU DE L'EXEMPLE
+   --------------------------------------------------------- */
+
+.exemple-contenu {
+    display: none;
+    margin-top: 20px;
+}
+
+.exemple-contenu.visible {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   DISPOSITION DES QUESTIONS
+   --------------------------------------------------------- */
+
+.exemple-limites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 50px;
+    row-gap: 25px;
+
+    margin: 25px 0;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite span {
+    margin-right: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .exemple-limites {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .question-limite {
+        font-size: 1rem;
+    }
+
 }
