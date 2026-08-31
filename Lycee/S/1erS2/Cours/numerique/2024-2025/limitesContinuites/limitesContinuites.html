@@ -1224,9 +1224,63 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="text-red">
-                        <b>Exemple</b>
+
+                    <!--Exemple 6-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 6</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1. Soit $f$ la fonction définie par :</span></p>
+
+                                \( \displaystyle \begin{cases} f(x) = x - 1 & \text{si } x > 0 \\ f(x) = x^2 +
+                                1 & \text{si } x \leq 0 \end{cases} \)<br>
+
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2. Soit $g$ la fonction définie par :</span></p>
+
+                                \( \displaystyle \begin{cases} g(x) = x - 1 & \text{si } x > 1 \\ g(x) = x^2 +
+                                x - 2 & \text{si } x \leq 1 \end{cases} \)<br>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================================
+         SOLUTION
+         ===================================================== -->
+
+                        <p class="text-red solution-toggle" onclick="toggleSolution(this)">
+                            <b>Solution 6</b>
+                        </p>
+
+                        <div class="solution-contenu">
+
+                            <div class="solution-limites">
+
+                                <div class="question-limite">
+                                    <span>.</span><br>
+                                    \( \begin{aligned}
+                                    \displaystyle \lim_{x \to 1^-} f(x) &= \lim_{x \to 1^-} x^2 + x + 1
+                                    \\
+                                    &= (1)^2 + (1) + 1 \\
+                                    &= 3
+                                    \end{aligned} \)<br>
+                                    $\boxed{\lim_{x \to 1^-} f(x) = 3}$
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <p class="text-red">
                         <b>Exercice</b>
