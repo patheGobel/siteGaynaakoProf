@@ -1239,6 +1239,7 @@
 
                                 \( \displaystyle \begin{cases} f(x) = x - 1 & \text{si } x > 0 \\ f(x) = x^2 +
                                 1 & \text{si } x \leq 0 \end{cases} \)<br>
+                                <p>La fonction $f$ admet-elle une limite en $0$ ?</p>
 
                             </div>
 
@@ -1247,7 +1248,7 @@
 
                                 \( \displaystyle \begin{cases} g(x) = x - 1 & \text{si } x > 1 \\ g(x) = x^2 +
                                 x - 2 & \text{si } x \leq 1 \end{cases} \)<br>
-
+                                <p>La fonction $g$ admet-elle une limite en $1$ ?</p>
                             </div>
 
                         </div>
@@ -1266,16 +1267,34 @@
                             <div class="solution-limites">
 
                                 <div class="question-limite">
-                                    <span>.</span><br>
-                                    \( \begin{aligned}
-                                    \displaystyle \lim_{x \to 1^-} f(x) &= \lim_{x \to 1^-} x^2 + x + 1
-                                    \\
-                                    &= (1)^2 + (1) + 1 \\
-                                    &= 3
-                                    \end{aligned} \)<br>
-                                    $\boxed{\lim_{x \to 1^-} f(x) = 3}$
+                                    <p><span>1. Soit $f$ la fonction définie par :</span></p>
+
+                                    \( \displaystyle \begin{cases} f(x) = x - 1 & \text{si } x > 0 \\ f(x) = x^2 +
+                                    1 & \text{si } x \leq 0 \end{cases} \)<br>
+                                    <p>On a :</p>
+                                    <ul>
+                                        <li>$\displaystyle \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} x^2 + 1 = (0)^2 + 1
+                                            = 1$</li>
+                                        <li>$\displaystyle \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x - 1 = (0) - 1 =
+                                            -1$</li>
+                                    </ul>
+                                    <p>Ainsi, $\displaystyle \lim_{x \to 0^+} f(x) \neq \lim_{x \to 0^-} f(x)$, donc $f$
+                                        n'admet pas de limite en $0$.</p>
                                 </div>
 
+                                <div class="question-limite"></div>
+                                <p><span>2. Soit $g$ la fonction définie par :</span></p>
+                                <p>$\begin{cases} g(x) = x - 1 & \text{si } x > 1 \\ g(x) = x^2 + x - 2 &
+                                    \text{si } x \leq 1 \end{cases}.$</p>
+                                <ul>
+                                    <li>$\displaystyle \lim_{x \to 1^-} g(x) = \lim_{x \to 1^-} x^2 + x - 2 = (1)^2 +
+                                        (1) - 2 = 0$</li>
+                                    <li>$\displaystyle \lim_{x \to 1^+} g(x) = \lim_{x \to 1^+} x - 1 = (1) - 1 = 0$
+                                    </li>
+                                </ul>
+                                <p>Ainsi, $\displaystyle \lim_{x \to 1^+} g(x) = \lim_{x \to 1^-} g(x) = 0$, d'où $g$
+                                    admet une limite en $1$ et on a :</p>
+                                <p>\(\displaystyle \lim_{x \to 1} g(x) = 0. \)</p>
                             </div>
 
                         </div>
