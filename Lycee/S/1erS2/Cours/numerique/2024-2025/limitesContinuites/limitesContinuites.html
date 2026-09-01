@@ -1583,7 +1583,8 @@
                                 </div>
 
                                 <div class="question-limite">
-                                    <p><span>4)</span>Calculons $\displaystyle \lim\limits_{x \to +\infty} (x^2 + 3x - 1)$ :
+                                    <p><span>4)</span>Calculons $\displaystyle \lim\limits_{x \to +\infty} (x^2 + 3x -
+                                        1)$ :
                                     </p><br>
                                     $ \lim\limits_{x \to +\infty} (x^2 + 3x - 1) :
                                     \begin{cases}
@@ -1611,7 +1612,49 @@
                     <p class="text-red">
                         <b>Propriété</b>
                     </p>
+                    <p>Soit $x_0 \in \mathbb{R}$, $f$ et $g$ deux fonctions dont chacune admet une limite en $x_0$. Le
+                        tableau suivant donne les limites en $x_0$ de la fonction $fg$</p>
+                    <table>
+                        <!-- Ligne 1 : Limite de f(x) -->
+                        <tr>
+                            <td>$$\lim_{x \to x_0} f(x)$$</td>
+                            <td>$$l$$</td>
+                            <td>$$+\infty$$</td>
+                            <td>$$-\infty$$</td>
+                            <td>$$-\infty$$</td>
+                            <td>$$+\infty$$</td>
+                            <td>$$+\infty$$</td>
+                            <td>$$\infty$$</td>
+                        </tr>
 
+                        <!-- Ligne 2 : Limite de g(x) -->
+                        <tr>
+                            <td>$$\lim_{x \to x_0} g(x)$$</td>
+                            <td>$$l'$$</td>
+                            <td>$$l' \neq 0$$</td>
+                            <td>$$l' \neq 0$$</td>
+                            <td>$$-\infty$$</td>
+                            <td>$$+\infty$$</td>
+                            <td>$$-\infty$$</td>
+                            <td>$$0$$</td>
+                        </tr>
+
+                        <!-- Ligne 3 : Limite du produit f(x)g(x) -->
+                        <tr>
+                            <td>$$\lim_{x \to x_0} f(x)g(x)$$</td>
+                            <td>$$ll'$$</td>
+                            <td>
+                                $$\begin{array}{ccc} +\infty & \text{si} & l' > 0 \\ -\infty &
+                                \text{si} & l' < 0 \end{array}$$ </td>
+                            <td>
+                                $$\begin{array}{ccc} -\infty & \text{si} & l' > 0 \\ +\infty &
+                                \text{si} & l' < 0 \end{array}$$ </td>
+                            <td>$$+\infty$$</td>
+                            <td>$$+\infty$$</td>
+                            <td>$$-\infty$$</td>
+                            <td>$$F.I$$</td>
+                        </tr>
+                    </table>
                     <p class="text-red">
                         <b>Exemple</b>
                     </p>
