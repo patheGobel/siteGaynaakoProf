@@ -1866,13 +1866,147 @@
                         </tr>
                     </table>
 
-                    <p class="text-red">
-                        <b>Exemple</b>
+                    <!--Exemple 9-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 9</b>
                     </p>
 
-                    <p class="text-red">
-                        <b>Exercice</b>
+                    <div class="exercice-contenu">
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1.</span>Soit \(l\) la fonction définie par :</p>
+                                <p>$l(x)=\frac{x^2-1}{x^2-x+2}.$</p>
+                                <p>Calculons \(\displaystyle\lim_{x\to1}l(x)\).</p>
+                                <p>On a :</p>
+                                <p>$ \lim\limits_{x\to1}\frac{x^2-1}{x^2-x+2}
+                                    =\left\langle\frac{0}{0}\right\rangle$</p>
+                                <p>est une forme indéterminée ; on ne peut conclure directement.</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2.</span>Soit \(f\) la fonction définie par :
+                                </p>
+                                <p>$f(x)=\frac{x+3}{x-1}.$</p>
+                                <p>Calculons \(\displaystyle\lim_{x\to1^+}f(x)\).</p>
+                                <p>On a :</p>
+                                <p>$ \lim\limits_{x\to1^+}f(x)
+                                    =
+                                    \lim\limits_{x\to1^+}\frac{x+3}{x-1}
+                                    =
+                                    \left\langle\frac{4}{0}\right\rangle.$</p>
+                                <p>Étudions le signe de \(x-1\).</p>
+                                <p>$x-1=0\quad\Longrightarrow\quad x=1$</p>
+                                <div class="img-container">
+                                    <img src="images/tabSignes4.png" alt="Tableau de signe de \(x-1\)">
+                                </div>
+                                <p>\(x-1\) est positif à droite de \(1\). Donc</p>
+                                <p>$ \lim\limits_{x\to1^+}f(x)
+                                    =
+                                    \left\langle\frac{4}{0^+}\right\rangle
+                                    =+\infty.$</p>
+                                <p>$\boxed{\displaystyle\lim_{x\to1^+}f(x)=+\infty}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3.</span>Soit \(g\) la fonction définie par :
+                                </p>
+                                <p>$g(x)=\dfrac{x-5}{x^2-3x+2}.$</p>
+                                <p>Calculons \(\displaystyle \lim\limits_{x\to2^-}g(x)\).</p>
+                                <p>On a :</p>
+                                <p>$ \lim\limits_{x\to2^-}g(x)
+                                    =
+                                    \lim\limits_{x\to2^-}\frac{x-5}{x^2-3x+2}
+                                    =
+                                    \left\langle\frac{-3}{0}\right\rangle.$</p>
+                                <p>Étudions le signe de \(x^2-3x+2\).</p>
+                                <p>$ x^2-3x+2=0
+                                    \quad\Longrightarrow\quad
+                                    x=1\text{ ou }x=2$</p>
+                                <div class="img-container">
+                                    <img src="images/tabSignes5.png" alt="Tableau de signe de \(x^2-3x+2\)">
+                                </div>
+                                <p>\(x^2-3x+2\) est négatif à gauche de \(2\).</p>
+                                <p>Donc,</p>
+                                <p>$ \lim\limits_{x\to2^-}g(x)
+                                    =
+                                    \left\langle\frac{-3}{0^-}\right\rangle
+                                    =+\infty.$</p>
+                                <p>$\boxed{\displaystyle\lim\limits_{x\to2^-}g(x)=+\infty}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>4.</span>Soit \(h\) la fonction définie par :</p>
+                                <p>$h(x)=\frac{5}{x-1}.$</p>
+                                <p>Calculons \(\displaystyle\lim\limits_{x\to-\infty}h(x)\).</p>
+                                <p>On a :</p>
+                                <p>$ \lim\limits_{x\to-\infty}h(x)
+                                    =
+                                    \lim\limits_{x\to-\infty}\frac{5}{x-1}
+                                    =
+                                    \left\langle\frac{5}{-\infty}\right\rangle
+                                    =0.$</p>
+                                <p>$\boxed{\displaystyle\lim\limits_{x\to-\infty}h(x)=0}$</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--Exercice 9-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exercice 9</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <p>
+                            Calculer les limites suivantes :
+                        </p>
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1)</span></p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2)</span></p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3)</span></p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>4)</span></p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================================
+         SOLUTION
+         ===================================================== -->
+
+                        <p class="text-red solution-toggle" onclick="toggleSolution(this)">
+                            <b>Correction 9</b>
+                        </p>
+
+                        <div class="solution-contenu">
+
+                            <div class="solution-limites">
+
+                                <div class="question-limite">
+                                    <p><span>1)</span>...</p><br>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </li>
 
