@@ -2162,7 +2162,8 @@
                             <div class="solution-limites">
 
                                 <div class="question-limite">
-                                    <p><span>1)</span>Calculons $\displaystyle \lim\limits_{x \to -\infty} \sqrt{x^2 + 1}$ :
+                                    <p><span>1)</span>Calculons $\displaystyle \lim\limits_{x \to -\infty} \sqrt{x^2 +
+                                        1}$ :
                                     </p><br>
                                     <p>On a : $\displaystyle \lim\limits_{x \to -\infty} (x^2 + 1) = +\infty$ donc
                                         $\displaystyle \lim\limits_{x
@@ -2171,7 +2172,8 @@
                                 </div>
 
                                 <div class="question-limite">
-                                    <p><span>2)</span>Calculons $\displaystyle \lim\limits_{x \to 1} \sqrt{x - 1}$ :</p><br>
+                                    <p><span>2)</span>Calculons $\displaystyle \lim\limits_{x \to 1} \sqrt{x - 1}$ :</p>
+                                    <br>
                                     <p>On a : $\displaystyle \lim\limits_{x \to 1} (x - 1) = 0$</p>
                                     <p>Donc $\displaystyle \lim\limits_{x \to 1} \sqrt{x - 1} = 0$</p>
                                     <p>$\boxed{\lim\limits_{x \to 1} \sqrt{x - 1} = 0}$</p>
@@ -2185,7 +2187,8 @@
                                 </div>
 
                                 <div class="question-limite">
-                                    <p><span>4)</span>Calculons $\displaystyle \lim\limits_{x \to +\infty} |1 - x|$ :</p><br>
+                                    <p><span>4)</span>Calculons $\displaystyle \lim\limits_{x \to +\infty} |1 - x|$ :
+                                    </p><br>
                                     <p>On a : $\displaystyle \lim\limits_{x \to +\infty} (1 - x) = -\infty$</p>
                                     <p>donc $\displaystyle \lim\limits_{x \to +\infty} |1 - x| = +\infty$.</p>
                                     <p>$\boxed{\lim\limits_{x \to +\infty} |1 - x| = +\infty}$</p>
@@ -2220,9 +2223,27 @@
                         Limites à l'infini des fonctions polynômes
                     </h3>
 
-                    <p class="text-red">
-                        <b>Propriété</b>
-                    </p>
+                    <div>
+                        <p class="text-red">
+                            <b>Propriété</b>
+                        </p>
+                        <p>La limite à l'infini d'une fonction polynôme est égale à la limite de son monôme du plus haut
+                            degré.</p>
+                        <p>En effet, on a $f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$, avec $a_n$, $a_{n-1}$,
+                            \dots, $a_0$ des réels tels que $a_n \neq 0$.</p>
+                        $\begin{aligned}
+                        \lim_{x \to \pm\infty} f(x) &= \lim_{x \to \pm\infty} (a_n x^n + a_{n-1} x^{n-1} + \dots + a_0)
+                        \\
+                        &= \lim_{x \to \pm\infty} a_n x^n \left(1 + \frac{a_{n-1}}{a_n x} + \dots + \frac{a_0}{a_n
+                        x^n}\right) \\
+                        &= \lim_{x \to \pm\infty} a_n x^n \times \lim_{x \to \pm\infty} \left(1 + \frac{a_{n-1}}{a_n x}
+                        + \dots + \frac{a_0}{a_n x^n}\right) \\
+                        &= \lim_{x \to \pm\infty} a_n x^n \quad \text{car} \quad \lim_{x \to \pm\infty} \left(1 +
+                        \frac{a_{n-1}}{a_n x} + \dots + \frac{a_0}{a_n x^n}\right)\\
+                        &= 1
+                        \end{aligned}$
+                        <p>Donc $\displaystyle \lim_{x \to \pm\infty} f(x) = \lim_{x \to \pm\infty} a_n x^n$.</p>
+                    </div>
 
                     <p class="text-red">
                         <b>Méthode</b>
