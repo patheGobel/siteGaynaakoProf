@@ -2690,6 +2690,165 @@
 
                     </div>
 
+                    <!--Exercice 13-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exercice 13</b>
+                    </p>
+
+                    <div class="exercice-contenu">
+
+                        <p>
+                            Calculer les limites suivantes :
+                        </p>
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1)</span>$\displaystyle \lim_{x \to 2} \frac{x^2 - x - 2}{x^2 - 5x + 6}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2)</span>$\displaystyle \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x - 1}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3)</span>$\displaystyle \lim_{x \to 0^+} \frac{x - \sqrt{x}}{x}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>4)</span>$\displaystyle \lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}$</p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================================
+         SOLUTION
+         ===================================================== -->
+
+                        <p class="text-red solution-toggle" onclick="toggleSolution(this)">
+                            <b>Correction 13</b>
+                        </p>
+
+                        <div class="solution-contenu">
+
+                            <div class="solution-limites">
+
+                                <div class="question-limite">
+                                    <p><span>1)</span></p><br>
+                                    $
+                                    \displaystyle \lim_{x \to 2} \frac{x^2 - x - 2}{x^2 - 5x + 6}:
+                                    \begin{cases}
+                                    \displaystyle \lim_{x \to 2} (x^2 - x - 2) = 0\\[3mm]
+                                    &\textit{donc le quotient est une F.I.}\\
+                                    \displaystyle \lim_{x \to 2} (x^2 - 5x + 6) = 0
+                                    \end{cases}
+                                    $
+                                    <p>Levons l'indétermination :</p>
+                                    <p>Factorisons $x^2 - x - 2$ et $x^2 - 5x + 6$ :</p>
+                                    <p>On a : $x^2 - x - 2 = (x - 2)(x + 1)$ et $x^2 - 5x + 6 = (x - 2)(x - 3)$.</p>
+                                    $
+                                    \begin{aligned}
+                                    \displaystyle \lim_{x \to 2} \frac{x^2 - x - 2}{x^2 - 5x + 6} &= \displaystyle
+                                    \lim_{x \to 2} \frac{(x - 2)(x + 1)}{(x - 2)(x - 3)}\\
+                                    &= \displaystyle \lim_{x \to 2} \frac{x + 1}{x - 3}\\
+                                    &= \frac{2 + 1}{2 - 3}\\
+                                    &= -3
+                                    \end{aligned}
+                                    $
+                                    <p>Donc, $\boxed{\lim_{x \to 2} \frac{x^2 - x - 2}{x^2 - 5x + 6} = -3}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>2)</span></p><br>
+                                    $
+                                    \displaystyle \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x - 1}:
+                                    \begin{cases}
+                                    \displaystyle \lim_{x \to 1} (\sqrt{x + 3} - \sqrt{2x + 2}) = 0\\[3mm]
+                                    &\textit{donc le quotient est une F.I}\\
+                                    \displaystyle \lim_{x \to 1} (x - 1) = 0
+                                    \end{cases}
+                                    $
+                                    <p>Levons l'indétermination :</p>
+                                    <p>Utilisons l'expression conjuguée du numérateur :</p>
+                                    $
+                                    \begin{aligned}
+                                    \displaystyle \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x - 1} &=
+                                    \displaystyle \lim_{x \to 1} \frac{(\sqrt{x + 3} - \sqrt{2x + 2})(\sqrt{x + 3} +
+                                    \sqrt{2x + 2})}{(x - 1)(\sqrt{x + 3} + \sqrt{2x + 2})}\\
+                                    &= \displaystyle \lim_{x \to 1} \frac{(\sqrt{x + 3})^2 - (\sqrt{2x + 2})^2}{(x -
+                                    1)(\sqrt{x + 3} + \sqrt{2x + 2})}\\
+                                    &= \displaystyle \lim_{x \to 1} \frac{(x + 3) - (2x + 2)}{(x - 1)(\sqrt{x + 3} +
+                                    \sqrt{2x + 2})}\\
+                                    &= \displaystyle \lim_{x \to 1} \frac{-x + 1}{(x - 1)(\sqrt{x + 3} + \sqrt{2x +
+                                    2})}\\
+                                    &= \displaystyle \lim_{x \to 1} \frac{-(x - 1)}{(x - 1)(\sqrt{x + 3} + \sqrt{2x +
+                                    2})}\\
+                                    &= \displaystyle \lim_{x \to 1} \frac{-1}{\sqrt{x + 3} + \sqrt{2x + 2}}\\
+                                    &= \frac{-1}{\sqrt{1 + 3} + \sqrt{2 + 2}}\\
+                                    &= -\frac{1}{4}
+                                    \end{aligned}
+                                    $
+                                    <p>Donc, $\boxed{\lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x - 1} =
+                                        -\frac{1}{4}}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>3)</span></p><br>
+                                    $
+                                    \displaystyle \lim_{x \to 0^+} \frac{x - \sqrt{x}}{x}:
+                                    \begin{cases}
+                                    \displaystyle \lim_{x \to 0^+} (x - \sqrt{x}) = 0\\[3mm]
+                                    &\textit{donc le quotient est une F.I.}\\
+                                    \displaystyle \lim_{x \to 0^+} x = 0
+                                    \end{cases}
+                                    $
+                                    <p>Levons l'indétermination :</p>
+                                    <p>Mettons $\sqrt{x}$ ou $x$ en facteur au numérateur (on sait que $x =
+                                        (\sqrt{x})^2$ pour $x > 0$) :</p>
+                                    $
+                                    \begin{aligned}
+                                    \displaystyle \lim_{x \to 0^+} \frac{x - \sqrt{x}}{x} &= \displaystyle \lim_{x \to
+                                    0^+} \left( \frac{x}{x} - \frac{\sqrt{x}}{x} \right)\\
+                                    &= \displaystyle \lim_{x \to 0^+} \left( 1 - \frac{1}{\sqrt{x}} \right)
+                                    \end{aligned}
+                                    $
+                                    <p>Or $\displaystyle \lim_{x \to 0^+} \sqrt{x} = 0^+$, donc $\displaystyle \lim_{x
+                                        \to 0^+} \frac{1}{\sqrt{x}} = +\infty$.</p>
+                                    <p>Donc, $\boxed{\lim_{x \to 0^+} \frac{x - \sqrt{x}}{x} = -\infty}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>4)</span></p><br>
+                                    $
+                                    \displaystyle \lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}:
+                                    \begin{cases}
+                                    \displaystyle \lim_{x \to 4} (\sqrt{x} - 2) = 0\\[3mm]
+                                    &\textit{donc le quotient est une F.I.}\\
+                                    \displaystyle \lim_{x \to 4} (x - 4) = 0
+                                    \end{cases}
+                                    $
+                                    <p>Levons l'indétermination :</p>
+                                    <p>Utilisons l'expression conjuguée du numérateur :</p>
+                                    $
+                                    \begin{aligned}
+                                    \displaystyle \lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4} &= \displaystyle \lim_{x \to
+                                    4} \frac{(\sqrt{x} - 2)(\sqrt{x} + 2)}{(x - 4)(\sqrt{x} + 2)}\\
+                                    &= \displaystyle \lim_{x \to 4} \frac{x - 4}{(x - 4)(\sqrt{x} + 2)}\\
+                                    &= \displaystyle \lim_{x \to 4} \frac{1}{\sqrt{x} + 2}\\
+                                    &= \frac{1}{\sqrt{4} + 2}\\
+                                    &= \frac{1}{4}
+                                    \end{aligned}
+                                    $
+                                    <p>Donc, $\boxed{\lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4} = \frac{1}{4}}$</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </li>
 
 
