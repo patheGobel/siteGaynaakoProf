@@ -3401,7 +3401,8 @@
                                     \frac{1}{x} - \frac{1}{x^2}}\right) = 1 + 1 = 2
                                     \end{cases}
                                     \end{align*}
-                                    <p>$$\boxed{\lim_{x \to +\infty} \frac{\sqrt{x^2 + 1} + \sqrt{x^2 + 2x + 3}}{\sqrt{x^2 - 1} + \sqrt{x^2 + x - 1}} = 1}$$</p>
+                                    <p>$$\boxed{\lim_{x \to +\infty} \frac{\sqrt{x^2 + 1} + \sqrt{x^2 + 2x +
+                                        3}}{\sqrt{x^2 - 1} + \sqrt{x^2 + x - 1}} = 1}$$</p>
                                 </div>
 
                             </div>
@@ -3419,13 +3420,57 @@
                         Limite et comparaison de fonctions
                     </h3>
 
-                    <p class="text-red">
-                        <b>Propriété : Théorème des gendarmes</b>
-                    </p>
+                    <div>
+                        <p class="text-red">
+                            <b>Propriété : Théorème des gendarmes</b>
+                        </p>
+                        <p>Soient $f$, $g$ et $h$ des fonctions définies sur un intervalle ouvert $I$ et $x_0 \in I$.
+                        </p>
+                        <p>Si pour tout $x \in I$, on a : $g(x) \le f(x) \le h(x)$ et que $\displaystyle \lim_{x \to
+                            x_0} g(x) = \lim_{x \to x_0} h(x) = l$, alors $\displaystyle \lim_{x \to x_0} f(x) = l$</p>
+                    </div>
 
-                    <p class="text-red">
-                        <b>Exemple</b>
-                    </p>
+                    <div> <!--Exemple 16-->
+                        <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                            <b>Exemple 16</b>
+                        </p>
+
+                        <div class="exercice-contenu">
+
+                            <div class="exercice-limites">
+
+                                <div class="question-limite">
+                                    <p><span>1.</span>Soit $f(x) = \dfrac{\sin 3x + 4}{x}$.</p>
+                                    <p>Calculons : $\displaystyle \lim_{x \to +\infty} f(x)$.</p>
+                                    <p>Soit $x \in ]0 \,;\, +\infty[$, on a :</p>
+                                    \begin{align*}
+                                    -1 \le \sin 3x \le 1 &\implies 3 \le \sin 3x + 4 \le 5 \implies \frac{3}{x} \le
+                                    \frac{\sin 3x + 4}{x} \le \frac{5}{x} \\
+                                    &\implies \frac{3}{x} \le f(x) \le \frac{5}{x}.
+                                    \end{align*}
+                                    <p>Or, $\displaystyle \lim_{x \to +\infty} \frac{3}{x} = \lim_{x \to +\infty}
+                                        \frac{5}{x} = 0$.</p>
+                                    <p>Donc d'après le théorème des gendarmes, $\displaystyle \lim_{x \to
+                                        +\infty} f(x) = 0$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>2.</span>Soit $g(x) = \dfrac{E(x)}{x}$.
+                                    </p>
+                                    <p>Calculons : $\displaystyle \lim_{x \to +\infty} g(x)$.</p>
+                                    <p>Soit $x \in ]0 \,;\, +\infty[$, on a :</p>
+                                    \begin{align*}
+                                    E(x) \le x < E(x) + 1 &\implies x - 1 < E(x) \le x \implies \frac{x - 1}{x} <
+                                        \frac{E(x)}{x} \le 1 \\ &\implies \frac{x - 1}{x} < g(x) \le 1. \end{align*} <p>
+                                        Or, $\displaystyle \lim_{x \to +\infty} \frac{x - 1}{x} = 1$.</p>
+                                        <p><b>Donc d'après le théorème de gendarme</b> $\displaystyle \lim_{x \to
+                                            +\infty} g(x) = 1$.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
 
                     <p class="text-red">
                         <b>Propriété : Théorème de majoration</b>
