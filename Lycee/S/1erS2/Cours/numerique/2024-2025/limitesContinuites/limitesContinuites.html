@@ -2708,7 +2708,8 @@
                             </div>
 
                             <div class="question-limite">
-                                <p><span>2)</span>$\displaystyle \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x - 1}$</p>
+                                <p><span>2)</span>$\displaystyle \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{2x + 2}}{x -
+                                    1}$</p>
                             </div>
 
                             <div class="question-limite">
@@ -2860,9 +2861,24 @@
                         où $p$ et $q$ sont des polynômes
                     </h3>
 
-                    <p class="text-red">
-                        <b>Méthode</b>
-                    </p>
+                    <div>
+                        <p class="text-red">
+                            <b>Méthode</b>
+                        </p>
+                        <p>Soit $f$ une fonction du type : $f = \sqrt{p} + q$, avec $p$ et $q$ des fonctions polynômes
+                        </p>
+                        <ul>
+                            <li>Si le calcul direct de la limite de $f$ donne une forme indéterminée, alors on peut
+                                lever l'indétermination en réécrivant $f$ sous la forme : $f(x) =
+                                |x|\sqrt{\dfrac{p(x)}{x^2}} + q(x)$, ensuite mettre $x$ en facteur puis calculer la
+                                limite du produit obtenu.</li>
+                            <li>Si on voit qu'en mettant $x$ en facteur, le calcul de la limite du produit donnerait une
+                                forme indéterminée, alors on peut réécrire $f$ sous la forme :\\
+                                $f(x) = \dfrac{(\sqrt{p} + q)(\sqrt{p} - q)}{\sqrt{p} - q}$, ensuite mettre $x$ en
+                                facteur au numérateur et au dénominateur, puis simplifier $x$, si nécessaire, avant de
+                                calculer la limite du quotient obtenu.</li>
+                        </ul>
+                    </div>
 
                     <p class="text-red">
                         <b>Exemple</b>
