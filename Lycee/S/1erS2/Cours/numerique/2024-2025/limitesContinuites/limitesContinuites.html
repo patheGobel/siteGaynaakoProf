@@ -3547,21 +3547,42 @@
                                     x \to +\infty \iff X \to 0 \\
                                     X = \dfrac{1}{x} \iff x = \dfrac{1}{X}
                                     \end{cases}.$</p>
+                                <p>Donc : $\displaystyle \lim_{x \to +\infty} f(x) = \lim_{X \to 0}
+                                    f\left(\frac{1}{X}\right)$.</p>
                             </li>
                         </ul>
                     </div>
 
-                    <p class="text-red">
-                        <b>Méthode</b>
+                    <!--Exemple 18-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 18</b>
                     </p>
 
-                    <p class="text-red">
-                        <b>Exemple</b>
-                    </p>
+                    <div class="exercice-contenu">
 
-                    <p class="text-red">
-                        <b>Exercice</b>
-                    </p>
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1.</span>Calculons : $\displaystyle \lim_{x \to 1} \frac{1}{\sqrt{x - 1}}$.</p>
+                                <p>En posant $X = x - 1$, on a :</p>
+                                <p>$\displaystyle \lim_{x \to 1} \frac{1}{\sqrt{x - 1}} = \lim_{X \to 0}
+                                    \frac{1}{\sqrt{X}} = \ll \frac{1}{0^+} \gg = +\infty$.</p>
+                                <p>$$\boxed{\lim_{x \to 1} \frac{1}{\sqrt{x - 1}} = +\infty}$$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2.</span>Calculons : $\displaystyle \lim_{x \to +\infty} \frac{1}{x}
+                                    E\left(\frac{1}{x}\right)$.
+                                </p>
+                                <p>En posant $X = \dfrac{1}{x}$, on a :</p>
+                                <p>$\displaystyle \lim_{x \to +\infty} \frac{1}{x} E\left(\frac{1}{x}\right) = \lim_{X
+                                    \to 0} X E(X) = 0 \times E(0) = 0$.</p>
+                                <p>$$\boxed{\lim_{x \to +\infty} \frac{1}{x} E\left(\frac{1}{x}\right) = 0}$$</p>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </li>
 
