@@ -3476,11 +3476,46 @@
                         <p class="text-red">
                             <b>Propriété : Théorème de majoration</b>
                         </p>
+                        <p>Soient $f$ et $g$ deux fonctions définies sur un intervalle ouvert $I$ et $x_0 \in I$.</p>
+                        <p>Si pour tout $x \in I$, on a : $|f(x) - l| \le g(x)$ et $\displaystyle \lim_{x \to x_0} g(x)
+                            = 0$, alors $\displaystyle \lim_{x \to x_0} f(x) = l$</p>
                     </div>
 
-                    <p class="text-red">
-                        <b>Exemple</b>
+                    <!--Exemple 17-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 17</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1.</span>Soit $f(x) = \dfrac{\cos 2x}{x^2}$.</p>
+                                <p>Calculons : $\displaystyle \lim_{x \to +\infty} f(x)$.</p>
+                                <p>Soit $x \in ]0 \,;\, +\infty[$, on a :</p>
+                                \begin{align*}
+                                |\cos 2x| \le 1 &\implies \frac{|\cos 2x|}{x^2} \le \frac{1}{x^2} \implies
+                                \left|\frac{\cos 2x}{x^2}\right| \le \frac{1}{x^2} \implies |f(x)| \le \frac{1}{x^2}.
+                                \end{align*}
+                                <p>Or, $\displaystyle \lim_{x \to +\infty} \frac{1}{x^2} = 0$.</p>
+                                <p>Donc d'après le théorème des majoration, $\displaystyle \lim_{x \to +\infty} f(x) = 0$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2.</span> </p>
+
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3.</span>Soit $h$ la fonction définie par : $h(x) = x^3 + x^2$.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <p class="text-red">
                         <b>Exercice</b>
