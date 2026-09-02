@@ -2880,9 +2880,81 @@
                         </ul>
                     </div>
 
-                    <p class="text-red">
-                        <b>Exemple</b>
+                    <!--Exemple 14-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exemple 14</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1.</span>Soit $f$ la fonction définie par $f(x) = \sqrt{4x^2 - 3x + 1} + x +
+                                    2$.</p>
+                                <p>Calculons $\displaystyle \lim_{x \to -\infty} f(x)$.</p>
+                                $
+                                \displaystyle \lim_{x \to -\infty} f(x):
+                                \begin{cases}
+                                \displaystyle \lim_{x \to -\infty} \sqrt{4x^2 - 3x + 1} = +\infty\\[3mm]
+                                &\textit{donc la somme est une forme indéterminée.}\\
+                                \displaystyle \lim_{x \to -\infty} (x + 2) = -\infty
+                                \end{cases}
+                                $
+                                <p>Levons l'indétermination :</p>
+                                <p>On a :</p>
+                                \begin{align*}
+                                \displaystyle \lim_{x \to -\infty} \sqrt{4x^2 - 3x + 1} + x + 2 &= \lim_{x \to -\infty}
+                                |x|\sqrt{4 - \frac{3}{x} + \dfrac{1}{x^2}} + x + 2 \\
+                                &=\lim_{x \to -\infty} -x\sqrt{4 - \frac{3}{x} + \frac{1}{x^2}} + x + 2 \quad (|x| = -x
+                                \text{ car } x < 0) \\ &=\lim_{x \to -\infty} x \left( -\sqrt{4 - \dfrac{3}{x} +
+                                    \dfrac{1}{x^2}} + 1 + \dfrac{2}{x} \right)\\ &=\begin{cases} \displaystyle \lim_{x
+                                    \to -\infty} x=-\infty \\[3mm] &\text{ Par produit }\\ \displaystyle \lim_{x \to
+                                    -\infty} \left( -\sqrt{4 - \frac{3}{x} + \frac{1}{x^2}} + 1 + \frac{2}{x} \right)=-1
+                                    \end{cases} \end{align*} <p>Donc, \boxed{\lim_{x \to -\infty} f(x) = +\infty}</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2.</span>Soit $g$ la fonction définie par $g(x) = \sqrt{x^2 + 1} - x - 1$.
+                                </p>
+                                <p>Calculons $\displaystyle \lim_{x \to +\infty} g(x)$.</p>
+                                $
+                                \displaystyle \lim_{x \to +\infty} g(x):
+                                \begin{cases}
+                                \displaystyle \lim_{x \to +\infty} \sqrt{x^2 + 1} = +\infty\\[3mm]
+                                &\textit{donc la somme est une forme indéterminée.}\\
+                                \displaystyle \lim_{x \to +\infty} (-x - 1) = -\infty
+                                \end{cases}
+                                $
+                                <p>Levons l'indétermination :</p>
+                                <p>On a:</p>
+                                \begin{align*}
+                                \displaystyle \lim_{x \to +\infty} \sqrt{x^2 + 1} - x - 1 &= \lim_{x \to +\infty}
+                                \frac{(\sqrt{x^2 + 1} - (x + 1))(\sqrt{x^2 + 1} + (x + 1))}{\sqrt{x^2 + 1} + x + 1} \\
+                                &= \lim_{x \to +\infty} \frac{(\sqrt{x^2 + 1})^2 - (x + 1)^2}{\sqrt{x^2 + 1} + x + 1} \\
+                                &= \lim_{x \to +\infty} \frac{-2x}{\sqrt{x^2 + 1} + x + 1} \\
+                                &= \lim_{x \to +\infty} \frac{-2x}{x \left( \sqrt{1 + \dfrac{1}{x^2}} + 1 + \dfrac{1}{x}
+                                \right)} \quad (|x| = x \text{ car } x > 0) \\
+                                &= \lim_{x \to +\infty} \frac{-2}{\sqrt{1 + \dfrac{1}{x^2}} + 1 + \dfrac{1}{x}} \\
+                                &= \begin{cases}
+                                \displaystyle \lim_{x \to +\infty} -2 = -2 \\[3mm]
+                                &\text{ Par quotient }\\
+                                \displaystyle \lim_{x \to +\infty} \left( \sqrt{1 + \frac{1}{x^2}} + 1 + \frac{1}{x}
+                                \right) = 2
+                                \end{cases}
+                                \end{align*}
+                                <p>Donc, $\boxed{\lim_{x \to +\infty} g(x) = -1}$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3.</span>Soit $h$ la fonction définie par : $h(x) = x^3 + x^2$.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <p class="text-red">
                         <b>Exercice</b>
