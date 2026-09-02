@@ -2287,9 +2287,95 @@
 
                     </div>
 
-                    <p class="text-red">
-                        <b>Exercice</b>
+                    <!--Exercice 11-->
+                    <p class="text-red exercice-toggle" onclick="toggleExercice(this)">
+                        <b>Exercice 11</b>
                     </p>
+
+                    <div class="exercice-contenu">
+
+                        <p>
+                            Calculer les limites suivantes :
+                        </p>
+
+                        <div class="exercice-limites">
+
+                            <div class="question-limite">
+                                <p><span>1)</span>$\lim\limits_{x \to -\infty} (3x^3 + 2x^2 - 1)$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>2)</span>$\lim\limits_{x \to +\infty} (-2x^2 + x - 4)$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>3)</span>$\lim\limits_{x \to -\infty} (-x^3 + x + 2)$</p>
+                            </div>
+
+                            <div class="question-limite">
+                                <p><span>4)</span>$\lim\limits_{x \to +\infty} (5x^3 + 3x - 4)$</p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================================
+         SOLUTION
+         ===================================================== -->
+
+                        <p class="text-red solution-toggle" onclick="toggleSolution(this)">
+                            <b>Correction 11</b>
+                        </p>
+
+                        <div class="solution-contenu">
+
+                            <div class="solution-limites">
+
+                                <div class="question-limite">
+                                    <p><span>1)</span></p><br>
+                                    $\begin{aligned}[t]
+                                    \lim_{x \to -\infty} (3x^3 + 2x^2 - 1) &= \lim_{x \to -\infty} 3x^3 \\
+                                    &= 3(-\infty) \\
+                                    &= -\infty
+                                    \end{aligned}$
+                                    <p>$\boxed{\lim_{x \to -\infty} (3x^3 + 2x^2 - 1) = -\infty}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>2)</span></p><br>
+                                    $\begin{aligned}[t]
+                                    \lim_{x \to +\infty} (-2x^2 + x - 4) &= \lim_{x \to +\infty} -2x^2 \\
+                                    &= -2(+\infty) \\
+                                    &= -\infty
+                                    \end{aligned}$
+                                    <p>$\boxed{\lim_{x \to +\infty} (-2x^2 + x - 4) = -\infty}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>3)</span></p><br>
+                                    $\begin{aligned}[t]
+                                    \lim_{x \to -\infty} (-x^3 + x + 2) &= \lim_{x \to -\infty} -x^3 \\
+                                    &= -(-\infty) \\
+                                    &= +\infty
+                                    \end{aligned}$
+                                    <p>$\boxed{\lim_{x \to -\infty} (-x^3 + x + 2) = +\infty}$</p>
+                                </div>
+
+                                <div class="question-limite">
+                                    <p><span>4)</span></p><br>
+                                    $\begin{aligned}[t]
+                                    \lim_{x \to +\infty} (5x^3 + 3x - 4) &= \lim_{x \to +\infty} 5x^3 \\
+                                    &= 5(+\infty) \\
+                                    &= +\infty
+                                    \end{aligned}$
+                                    <p>$\boxed{\lim_{x \to +\infty} (5x^3 + 3x - 4) = +\infty}$</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </li>
 
