@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dérivabilité</title>
+
+    <!-- CSS pour Ordinateur (écrans > 768px) -->
+    <link rel="stylesheet" href="derivabilites.css" media="screen and (min-width: 769px)" />
+
+    <!-- CSS pour Android / Mobile (écrans <= 768px) -->
+    <link rel="stylesheet" href="derivabilites-mobiles.css" media="screen and (max-width: 768px)" />
+
+    <!-- Configuration MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <script src="derivabilites.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>📖 Dérivabilité</h1>
+
+        <div class="header-meta">
+            <span>👨‍🏫 Prof : M. BA</span>
+            <span class="left">🏫 Lycée de Dindéfélo</span>
+            <span>📚 Classe : 1er S2</span>
+            <span>📅 Année : 2025 – 2026</span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- ================================================== -->
+        <!-- INTRODUCTION -->
+        <!-- ================================================== -->
+
+        <section class="introduction-card">
+            <!-- =========================================================
+     INTRODUCTION
+     ========================================================= -->
+
+            <section class="introduction-card">
+
+                <h2>INTRODUCTION</h2>
+
+                <div class="activite-introduction">
+
+                    <p>
+                        La courbe ci-dessous représente une fonction
+                        \( f : x \mapsto f(x) \).
+                    </p>
+
+                    <p class="question-introduction">
+                        Considérons la fonction \( f \) représentée ci-dessus et
+                        posons-nous les questions suivantes :
+                    </p>
+
+
+                    <ul class="questions">
+
+                        <li>
+                            Que devient \( f(x) \) lorsque la variable \( x \)
+                            s'éloigne vers \( +\infty \) ?
+                        </li>
+
+                        <li>
+                            Que devient \( f(x) \) lorsque la variable \( x \)
+                            se rapproche de \( 0 \) ?
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        C'est en essayant de répondre à ce type de question que
+                        la notion de limite a été définie.
+                    </p>
+
+
+                    <p>
+                        Ainsi, si on observe la courbe de \( f \), on voit que
+                        lorsque \( x \) s'éloigne vers \( +\infty \),
+                        \( f(x) \) se rapproche de \( 0 \) ;
+                    </p>
+
+
+                    <p>
+                        on dit que la limite lorsque \( x \) tend vers \( +\infty \)
+                        de \( f \) est égale à \( 0 \).
+                    </p>
+
+
+                    <p>
+                        De même, si on observe la courbe, on voit que lorsque
+                        \( x \) se rapproche de \( 0 \) tout en restant à droite
+                        de \( 0 \), \( f(x) \) tend vers \( +\infty \) ;
+                    </p>
+
+
+                    <p>
+                        on dit que la limite à droite de \( 0 \) de \( f \)
+                        est égale à \( +\infty \).
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================================== -->
+        <!-- I. NOTION DE LIMITE -->
+        <!-- ================================================== -->
+
+        <section class="section-card">
+
+            <h2>I. Fonction dérivable en un point</h2>
+
+            <ol>
+
+                <li>
+
+                    <h3>Définition du nombre dérivé</h3>
+                    <p>Soit $f$ une fonction numérique et $a$ un nombre réel tel que $f$
+                        est définie sur un intervalle $I$ contenant $a$.</p>
+                    <p>On dit que $f$ est dérivable en $a$ si :</p>
+                    <p>$\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}=\ell\in\mathbb{R}$</p>
+                    <p>$\ell$ est appelé nombre dérivé de $f$ en $a$ que l'on note $f'(a)=\ell$.</p>
+
+                    <div>
+                        <p class="text-red">
+                            <b>Exemple</b>
+                        </p>
+                        <p>Les fonctions suivantes sont-elles dérivables aux points indiqués ?</p>
+                        <p>$f(x)=x^2 \quad \text{en } a=-1 \qquad\qquad g(x)=2x^3-1 \quad \text{en } a=2$</p>
+                    </div>
+
+                    <div>
+                        <p class="text-red">
+                            <b>Contre exemple :</b>
+                        </p>
+                        <P>$f(x)=|x-1|$ et $f(1)=0$.</P>
+                        <P>$f$ est-elle dérivable en $1$ ?</P>
+                    </div>
+                </li>
+
+
+
+            </ol>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 - Dérivabilité - 1er S2 - Lycée de Dindéfélo
+        </p>
+
+        <p style="font-size:0.8rem; margin-top:4px;">
+            Discipline : Mathématiques - Pathé Gobel BA
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
