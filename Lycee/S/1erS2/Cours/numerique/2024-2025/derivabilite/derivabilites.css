@@ -1,121 +1,914 @@
+/* =========================================================
+   RÉGLAGES GÉNÉRAUX
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+
+    background: #f4f6f8;
+    color: #202124;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+
+    overflow-x: hidden;
 }
 
-/* Boîte principale (tcolorbox) */
-.summary-card {
-    border: 1.5px solid #2e7d32;
-    background-color: #f1f8e9;
-    border-radius: 2px;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-}
+/* =========================================================
+   EN-TÊTE
+   ========================================================= */
 
-.summary-title {
-    background-color: #2e7d32;
+.header {
+    width: 100%;
+
+    background: #1f3c88;
     color: white;
-    font-weight: bold;
-    padding: 8px 12px;
-    font-size: 1.1rem;
-    display: inline-block;
+
+    padding: 25px 18px 22px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.summary-content {
-    padding: 20px;
+
+/* ---------------------------------------------------------
+   TITRE
+   --------------------------------------------------------- */
+
+.header h1 {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 1.9rem;
+    font-weight: 700;
+
+    line-height: 1.3;
 }
 
-.summary-line {
-    border: 0;
-    border-top: 1px solid #000;
+
+/* ---------------------------------------------------------
+   INFORMATIONS
+   --------------------------------------------------------- */
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 14px;
+    padding-top: 12px;
+
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+
+    font-size: 0.95rem;
+}
+
+
+.header-meta span {
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   ALIGNEMENT DES INFORMATIONS
+   --------------------------------------------------------- */
+
+.header-meta span:nth-child(1) {
+    text-align: left;
+}
+
+.header-meta span:nth-child(2) {
+    text-align: right;
+}
+
+.header-meta span:nth-child(3) {
+    text-align: left;
+}
+
+.header-meta span:nth-child(4) {
+    text-align: right;
+}
+
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
+main {
+    width: 100%;
+    margin: 20px 0 35px;
+    padding: 0 10px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.introduction-card {
+    margin-bottom: 20px;
+    padding: 18px 16px;
+
+    background: white;
+
+    border-left: 4px solid #1f3c88;
+    border-radius: 7px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+.introduction-card h2 {
+    margin: 0;
+
+    color: #1f3c88;
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section-card {
+    margin-bottom: 22px;
+    padding: 20px 16px;
+
+    background: white;
+
+    border-radius: 7px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   TITRES DE SECTION
+   ========================================================= */
+
+.section-card>h2 {
+    margin: -20px -16px 20px;
+    padding: 13px 16px;
+
+    color: #1f3c88;
+
+    font-size: 1.3rem;
+    line-height: 1.4;
+
+    border-bottom: 2px solid #dce3f2;
+}
+
+
+/* =========================================================
+   LISTE PRINCIPALE
+   ========================================================= */
+
+.section-card>ol {
+    margin: 0;
+    padding-left: 27px;
+}
+
+.section-card>ol>li {
+    padding-left: 3px;
     margin-bottom: 25px;
 }
 
-/* Style des nœuds / boîtes rouges */
-.redbox {
-    border: 1px solid #800020;
-    background-color: #ffffff;
-    padding: 8px 12px;
+.section-card>ol>li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TITRES DES PARTIES
+   ========================================================= */
+
+.section-card h3 {
+    margin: 0 0 10px;
+
+    color: #0b3fb0;
+
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 650;
+
+    overflow-wrap: anywhere;
+}
+
+.section-card h4 {
+    margin: 10px 0 7px;
+
+    color: #3d4f75;
+
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   SOUS-LISTES
+   ========================================================= */
+
+.section-card ol ol {
+    margin-top: 8px;
+    padding-left: 24px;
+}
+
+.section-card ol ol>li {
+    padding-left: 3px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   TEXTES
+   ========================================================= */
+
+.section-card p {
+    margin: 8px 0;
+}
+
+.text-red {
+    color: #b3261e;
+}
+
+.text-red b {
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   MATHJAX
+   ========================================================= */
+
+mjx-container {
+    max-width: 100% !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+mjx-container[display="true"] {
+    margin: 15px 0 !important;
+}
+
+
+/* =========================================================
+   PIED DE PAGE
+   ========================================================= */
+
+.footer {
+    margin-top: 35px;
+    padding: 20px 15px;
+
+    background: #1f3c88;
+    color: white;
+
     text-align: center;
-    font-size: 0.95rem;
-    line-height: 1.3;
-    border-radius: 2px;
+
+    font-size: 0.82rem;
+    line-height: 1.5;
 }
 
-/* Structure de l'arbre (Diagrammes TikZ) */
-.tree-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.left-col {
-    display: flex;
-    align-items: center;
-}
-
-/* Ligne connectrice d'embranchement */
-.fork-connector {
-    display: flex;
-    align-items: center;
-}
-
-.fork-line-horizontal {
-    width: 25px;
-    height: 2px;
-    background-color: #333;
-}
-
-.branch-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-left: 2px solid #333;
-    padding-left: 0;
+.footer p {
     margin: 0;
-    list-style: none;
 }
 
-.branch-item {
+.footer p+p {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   SÉLECTION
+   ========================================================= */
+
+::selection {
+    background: #cdd8f3;
+    color: #111;
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .header {
+        padding: 16px 11px 14px;
+    }
+
+    .header h1 {
+        font-size: 1.25rem;
+    }
+
+    .header-meta {
+        font-size: 0.76rem;
+        gap: 6px 10px;
+    }
+
+    main {
+        padding: 0 7px;
+    }
+
+    .section-card {
+        padding: 17px 13px;
+    }
+
+    .section-card>h2 {
+        margin: -17px -13px 17px;
+        padding: 12px 13px;
+
+        font-size: 1.2rem;
+    }
+
+    .section-card>ol {
+        padding-left: 24px;
+    }
+
+    .section-card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.introduction-card {
+    margin-bottom: 25px;
+    padding: 5px;
+
+    background: white;
+}
+
+
+/* ---------------------------------------------------------
+   TITRE INTRODUCTION
+   --------------------------------------------------------- */
+
+.introduction-card h2 {
+    margin: 0 0 25px;
+
+    color: #1f3c88;
+
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+
+.activite-introduction {
+    padding: 0 20px;
+}
+
+
+/* ---------------------------------------------------------
+   PARAGRAPHES
+   --------------------------------------------------------- */
+
+.activite-introduction p {
+    margin: 16px 0;
+}
+
+
+/* ---------------------------------------------------------
+   GRAPHIQUE
+   --------------------------------------------------------- */
+
+.graphique {
+    width: 100%;
+    min-height: 350px;
+
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative;
+
+    margin: 20px 0 35px;
 }
 
-/* Petite branche horizontale partant de la ligne verticale */
-.branch-item::before {
-    content: "";
-    width: 20px;
-    height: 2px;
-    background-color: #333;
-    display: inline-block;
+
+/* ---------------------------------------------------------
+   PHRASE INTRODUCTIVE AUX QUESTIONS
+   --------------------------------------------------------- */
+
+.question-introduction {
+    font-style: italic;
 }
 
-/* Flèche de liaison */
-.arrow-connector {
+
+/* ---------------------------------------------------------
+   QUESTIONS
+   --------------------------------------------------------- */
+
+.questions {
+    margin: 15px 0 20px;
+    padding-left: 30px;
+
+    font-style: italic;
+}
+
+.questions li {
+    margin-bottom: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTE EXPLICATIF
+   --------------------------------------------------------- */
+
+.activite-introduction>p:not(.question-introduction) {
+    text-align: justify;
+}
+
+/* =========================================================
+   ACTIVITÉ — APPROCHE INTUITIVE DE LA LIMITE
+   ========================================================= */
+
+.tableaux-limites {
     display: flex;
-    align-items: center;
-    margin: 0 10px;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 45px 0 55px;
 }
 
-.arrow-line {
-    width: 30px;
-    height: 2px;
-    background-color: #333;
+/* =========================================================
+   TABLEAUX
+   ========================================================= */
+
+.tableau-valeurs {
+    border-collapse: collapse;
+    font-size: 1rem;
 }
 
-.arrow-head {
-    width: 0;
-    height: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 6px solid #333;
-}
-
-.right-box {
-    min-width: 320px;
+.tableau-valeurs th,
+.tableau-valeurs td {
+    border: 1px solid #444;
+    padding: 4px 12px;
     text-align: center;
+}
+
+.tableau-valeurs th {
+    font-weight: normal;
+    font-style: italic;
+    background: #fafafa;
+}
+
+/* =========================================================
+   GRAPHIQUES
+   ========================================================= */
+
+.graphiques-limites {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    gap: 35px;
+
+    margin: 35px 0 40px;
+}
+
+.graphique-limite {
+    width: 46%;
+    margin: 0;
+    text-align: center;
+}
+
+.graphique-limite svg {
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    margin: auto;
+}
+
+.graphique-limite figcaption {
+    margin-top: 8px;
+
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/* =========================================================
+   Pour reproduire la disposition en deux colonnes
+   ========================================================= */
+.proprietes-limites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 30px;
+
+    margin: 35px 0;
+    font-size: 1.15rem;
+}
+
+.proprietes-limites div {
+    min-height: 45px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .proprietes-limites {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        font-size: 1rem;
+    }
+
+}
+
+/* =========================================================
+   EXEMPLE
+   ========================================================= */
+
+.exemple-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.exemple-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exemple-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU DE L'EXEMPLE
+   --------------------------------------------------------- */
+
+.exemple-contenu {
+    display: none;
+    margin-top: 20px;
+}
+
+.exemple-contenu.visible {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   DISPOSITION DES QUESTIONS
+   --------------------------------------------------------- */
+
+.exemple-limites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 50px;
+    row-gap: 25px;
+
+    margin: 25px 0;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite span {
+    margin-right: 8px;
+}
+
+/* =========================================================
+   EXEMPLE
+   ========================================================= */
+
+.exemple-toggle,
+.solution-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.exemple-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exemple-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE L'EXEMPLE
+   ========================================================= */
+
+.exemple-contenu {
+    display: none;
+}
+
+.exemple-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   CONTENU DE LA SOLUTION
+   ========================================================= */
+
+.solution-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.solution-toggle.ouvert::after {
+    content: " ▲";
+}
+
+.solution-contenu {
+    display: none;
+}
+
+.solution-contenu.visible {
+    display: block;
+}
+
+/* =========================================================
+   EXERCICE
+   ========================================================= */
+
+.exercice-toggle,
+.solution-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* ---------------------------------------------------------
+   FLÈCHE DE L'EXERCICE
+   --------------------------------------------------------- */
+
+.exercice-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.exercice-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE L'EXERCICE
+   ========================================================= */
+
+.exercice-contenu {
+    display: none;
+}
+
+.exercice-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   FLÈCHE DE LA CORRECTION
+   ========================================================= */
+
+.solution-toggle::after {
+    content: " ▼";
+    font-size: 0.75em;
+}
+
+.solution-toggle.ouvert::after {
+    content: " ▲";
+}
+
+
+/* =========================================================
+   CONTENU DE LA CORRECTION
+   ========================================================= */
+
+.solution-contenu {
+    display: none;
+}
+
+.solution-contenu.visible {
+    display: block;
+}
+
+
+/* =========================================================
+   QUESTIONS
+   ========================================================= */
+
+.exercice-limites,
+.solution-limites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+    row-gap: 25px;
+
+    margin: 25px 0 30px;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite>span {
+    display: inline-block;
+    width: 32px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .exercice-limites,
+    .solution-limites {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .question-limite {
+        font-size: 1rem;
+    }
+
+    .question-limite>span {
+        width: 25px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .exercice-limites,
+    .solution-limites {
+        row-gap: 16px;
+    }
+
+    .question-limite {
+        font-size: 0.92rem;
+    }
+
+}
+
+/* =========================================================
+   EXERCICES
+   ========================================================= */
+
+.exemple-limites,
+.solution-limites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+    row-gap: 25px;
+
+    margin: 25px 0;
+}
+
+.question-limite {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.question-limite>span {
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .exemple-limites,
+    .solution-limites {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .question-limite {
+        font-size: 1rem;
+    }
+
+}
+
+.img-container {
+    width: 100%;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.img-container img {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .img-container img {
+        width: 100%;
+    }
+
+}
+
+/* =========================================================
+   ++++
+   ========================================================= */
+
+.container {
+    display: flex;
+    gap: 40px;
+}
+
+.column {
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Styles pour les tableaux de signes */
+.tab-signes {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    margin: 15px auto;
+    font-size: 1em;
+}
+
+.tab-signes td {
+    border: 1px solid #000;
+    padding: 3px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tab-signes .label {
+    width: 60px;
+}
+
+.dotted-cell {
+    border-left: 1px dotted #000 !important;
+    border-right: 1px dotted #000 !important;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.math-block {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   Limite d'une somme de deux fonctions
+   ========================================================= */
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 12px 18px;
 }
