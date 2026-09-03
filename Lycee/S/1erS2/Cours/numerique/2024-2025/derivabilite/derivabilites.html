@@ -550,6 +550,7 @@
                 </li>
 
                 <li>
+
                     <h3>Dérivée des fonctions usuelles</h3>
                     <p>Le tableau ci-dessous nous donne la dérivée de fonctions usuelles.</p>
                     <div class="table-container">
@@ -613,8 +614,117 @@
                             <li>$f(x)=-5x^4+9 \quad\Longrightarrow\quad f'(x)=-20x^3$</li>
                         </ul>
                     </div>
+
+                    <div>
+                        <p class="text-red"><b>Remarque :</b></p>
+                        <p>Les fonctions numériques sont dérivables sur l'ouvert de leur
+                            ensemble de définition.</p>
+                    </div>
+
+                    <div>
+                        <p class="text-red"><b>Exemple :</b></p>
+                        $
+                        \begin{aligned}
+                        f(x)&=\sqrt{x}
+                        &\quad\Longrightarrow\quad&
+                        f\text{ existe ssi }x\geq0
+                        &\quad\Longrightarrow\quad&
+                        D_f=[0,+\infty[
+                        \\[2mm]
+                        f(x)&=\sqrt{x}
+                        &\quad\Longrightarrow\quad&
+                        f'(x)=\dfrac{1}{2\sqrt{x}}
+                        &\quad&
+                        f'\text{ existe ssi }x>0
+                        &\quad\Longrightarrow\quad&
+                        \boxed{D_{f'}=]0,+\infty[}
+                        \end{aligned}
+                        $
+                    </div>
+
                 </li>
 
+                <li>
+                    <h3>Opérations sur les dérivées</h3>
+                    <p>Soit $u$ et $v$ deux fonctions numériques dérivables sur un intervalle
+                        $I$. Pour obtenir la dérivée de la somme, du produit, du quotient et
+                        de la composée, on se réfère au tableau suivant :</p>
+
+                    <div class="tables-wrapper">
+
+                        <!-- Premier Tableau (1 à 5) -->
+                        <div class="table-container">
+                            <table class="latex-table">
+                                <thead>
+                                    <tr>
+                                        <th class="first-col" style="border: 1px solid #000; background: transparent;">
+                                        </th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="first-col">\(f\) définie par</td>
+                                        <td>\(k u \ (k \in \mathbb{R}^*)\)</td>
+                                        <td>\(u + v\)</td>
+                                        <td>\(u \cdot v\)</td>
+                                        <td>\(\dfrac{u}{v}\)</td>
+                                        <td>\(\dfrac{1}{v}\)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-col">dérivée de \(f\)</td>
+                                        <td>\(k u'\)</td>
+                                        <td>\(u' + v'\)</td>
+                                        <td>\(u' v + v' u\)</td>
+                                        <td>\(\dfrac{u' v - v' u}{v^2}\)</td>
+                                        <td>\(-\dfrac{v'}{v^2}\)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Second Tableau (6 à 10) -->
+                        <div class="table-container">
+                            <table class="latex-table table-2">
+                                <thead>
+                                    <tr>
+                                        <th class="first-col" style="border: 1px solid #000; background: transparent;">
+                                        </th>
+                                        <th>6</th>
+                                        <th>7</th>
+                                        <th>8</th>
+                                        <th>9</th>
+                                        <th>10</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="first-col"></td>
+                                        <td>\(\sqrt{u}\)</td>
+                                        <td>\(u^n\)</td>
+                                        <td>\(u \circ v\)</td>
+                                        <td>\(\cos(u)\)</td>
+                                        <td>\(\sin(u)\)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-col"></td>
+                                        <td>\(\dfrac{u'}{2\sqrt{u}}\)</td>
+                                        <td>\(n u' u^{n-1}\)</td>
+                                        <td>\(v' \times u' \circ v\)</td>
+                                        <td>\(-u' \sin(u)\)</td>
+                                        <td>\(u' \cos(u)\)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </li>
             </ol>
 
         </section>
